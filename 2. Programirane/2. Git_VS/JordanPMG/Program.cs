@@ -14,6 +14,7 @@ namespace JordanPMG
             Console.WriteLine("email:dancho931");
             Console.WriteLine("facebook:redmi");
             Console.WriteLine("iq:150");
+            Console.WriteLine("iq:150");
         }
     }
 }
