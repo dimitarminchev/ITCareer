@@ -10,7 +10,7 @@ namespace BojidarMarkov
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bojidar Markov's E-mail: bojidar1308@abv.bg");
+            Console.WriteLine("Bojidar Markov's E-mail is: bojidar1308@abv.bg");
         }
     }
 }
