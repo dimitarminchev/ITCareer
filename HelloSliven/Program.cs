@@ -10,7 +10,7 @@ namespace HelloSliven
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("GIT Test App...");
+            Console.WriteLine("Здравейте!");
         }
     }
 }
