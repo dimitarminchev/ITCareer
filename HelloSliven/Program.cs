@@ -10,7 +10,8 @@ namespace HelloSliven
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Здравейте!");
+            Console.WriteLine("Name: Dimitar Minchev");
+            Console.WriteLine("Email: dimitar.minchev@gmail.com");
         }
     }
 }
