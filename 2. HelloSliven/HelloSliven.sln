@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Christian Neykov", "Christi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pavel Nedkov", "Pavel Nedkov\Pavel Nedkov.csproj", "{0B984530-253E-462A-A33C-05CBCEB7E6C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bojidar Markov", "Bojidar Markov\Bojidar Markov.csproj", "{0274BD4B-0E79-40B0-97B7-3AA1997C08D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{0B984530-253E-462A-A33C-05CBCEB7E6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B984530-253E-462A-A33C-05CBCEB7E6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B984530-253E-462A-A33C-05CBCEB7E6C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0274BD4B-0E79-40B0-97B7-3AA1997C08D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0274BD4B-0E79-40B0-97B7-3AA1997C08D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0274BD4B-0E79-40B0-97B7-3AA1997C08D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0274BD4B-0E79-40B0-97B7-3AA1997C08D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
