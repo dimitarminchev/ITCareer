@@ -1,2 +1,5 @@
 Jordan PMG 
 grad sliven
+uchilishte:sliven
+EGN:123456789
+telefon:12345466
