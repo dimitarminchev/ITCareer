@@ -12,6 +12,7 @@ namespace HelloSliven
         {
             Console.WriteLine("Name: Dimitar Minchev");
             Console.WriteLine("Email: dimitar.minchev@gmail.com");
+            Console.WriteLine("Phone: +359 899 148 872");
         }
     }
 }
