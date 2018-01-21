@@ -49,14 +49,14 @@ namespace Task_1
         // Конвертиране от двоично в десетично
         static int bin2dec(string bin)
         {
-            int sum = 0, pow = 0;
+            int result = 0, pow = 0;
             for (int i = bin.Length - 1; i >= 0; i--)
             {
                 var A = int.Parse(bin[i].ToString());
-                sum += (int)(A * Math.Pow(10f, pow));
+                result += (int)(A * Math.Pow(10f, pow));
                 pow++;
             }
-            return sum;
+            return result;
         }
 
         // Конвертиране от двоично в шестнадесетично
