@@ -23,7 +23,7 @@ namespace Task_1
                 number /= 2;
                 binary += reminder;
             }
-            // Reverse
+            // Обръщане
             char[] reverse = binary.ToCharArray();
             Array.Reverse(reverse);
             return new string(reverse);
@@ -40,7 +40,7 @@ namespace Task_1
                 if (reminder < 10) hex += reminder.ToString();
                 else hex += (char)(reminder + 55);
             }
-            // Reverse
+            // Обръщане
             char[] reverse = hex.ToCharArray();
             Array.Reverse(reverse);
             return new string(reverse);
@@ -53,7 +53,7 @@ namespace Task_1
             for (int i = bin.Length - 1; i >= 0; i--)
             {
                 var A = int.Parse(bin[i].ToString());
-                result += (int)(A * Math.Pow(10f, pow));
+                result += (int)(A * Math.Pow(2, pow));
                 pow++;
             }
             return result;
@@ -62,27 +62,12 @@ namespace Task_1
         // Конвертиране от двоично в шестнадесетично
         static string bin2hex(string bin)
         {
-            // Цепим двоичното число на по четири бита
-            List<string> list = new List<string>();
+            string hex = String.Empty;
+            // Цепим двоичното число на по четири бита            
             while (bin.Length >= 4)
             {
                 string sub = bin.Substring(bin.Length - 4, 4);
-                list.Add(sub);
-                bin = bin.Substring(0, bin.Length - 4);
-            }
-            // На остатък след цепенето добавяме нужния брой нули отпред
-            switch (bin.Length)
-            {
-                case 0: bin = "0000"; break;
-                case 1: bin = "000" + bin; break;
-                case 2: bin = "00" + bin; break;
-                case 3: bin = "0" + bin; break;
-            }
-            list.Add(bin);
-            // Формиране на шестнадесетично число от четворките
-            String hex = String.Empty;
-            foreach (var item in list)
-                switch (item)
+                switch (sub)
                 {
                     case "0000": hex += "0"; break;
                     case "0001": hex += "1"; break;
@@ -101,7 +86,36 @@ namespace Task_1
                     case "1110": hex += "E"; break;
                     case "1111": hex += "F"; break;
                 }
-            // Reverse
+                bin = bin.Substring(0, bin.Length - 4);
+            }
+            // На остатък след цепенето добавяме нужния брой нули отпред
+            switch (bin.Length)
+            {
+                case 0: bin = "0000"; break;
+                case 1: bin = "000" + bin; break;
+                case 2: bin = "00" + bin; break;
+                case 3: bin = "0" + bin; break;
+            }
+            switch (bin)
+            {
+                case "0000": hex += "0"; break;
+                case "0001": hex += "1"; break;
+                case "0010": hex += "2"; break;
+                case "0011": hex += "3"; break;
+                case "0100": hex += "4"; break;
+                case "0101": hex += "5"; break;
+                case "0110": hex += "6"; break;
+                case "0111": hex += "7"; break;
+                case "1000": hex += "8"; break;
+                case "1001": hex += "9"; break;
+                case "1010": hex += "A"; break;
+                case "1011": hex += "B"; break;
+                case "1100": hex += "C"; break;
+                case "1101": hex += "D"; break;
+                case "1110": hex += "E"; break;
+                case "1111": hex += "F"; break;
+            }
+            // Обръщане
             char[] reverse = hex.ToCharArray();
             Array.Reverse(reverse);
             return new string(reverse);
