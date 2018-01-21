@@ -14,6 +14,12 @@ namespace Task_4
     {
         static void Main(string[] args)
         {
+            Console.Write("System = ");
+            int P = int.Parse(Console.ReadLine());
+            var MIN = P;
+            var MAX = Math.Pow(P, 2f) - 1f;
+            var COUNT = MAX - MIN;
+            Console.WriteLine("COUNT = {0}", COUNT);
         }
     }
 }

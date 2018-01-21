@@ -70,7 +70,31 @@ namespace Task_3
         // Удвоява числото
         static string DoubleIt(string bin)
         {
-            return bin;
+            int EXTRA = 0;
+            String RES = String.Empty;
+            for (int i = bin.Length - 1; i >= 0; i--)
+            {
+                // първи символ
+                if (i == bin.Length - 1)
+                {
+                    RES += '0';
+                    if (bin[i] == '1')  EXTRA = 1;
+                    else EXTRA = 0;
+                }
+                // всеки следващ символ
+                else
+                {
+                    RES += EXTRA.ToString();
+                    if (bin[i] == '1') EXTRA = 1;
+                    else EXTRA = 0;
+                }
+            }
+            if (EXTRA == 1) RES += '1';
+
+            // Обръщане
+            char[] reverse = RES.ToCharArray();
+            Array.Reverse(reverse);
+            return new string(reverse);
         }
 
         // Главна Функция
@@ -78,9 +102,9 @@ namespace Task_3
         {
             Console.WriteLine("Enter Binary: ");
             String bin = Console.ReadLine();
-            Console.WriteLine("Minus 10:\n{0}", Minus10(bin));
-            Console.WriteLine("Plus 10:\n{0}", Plus10(bin));
-            Console.WriteLine("Double:\n{0}", DoubleIt(bin));
+            Console.WriteLine("\nMinus 10:\n{0}", Minus10(bin));
+            Console.WriteLine("\nPlus 10:\n{0}", Plus10(bin));
+            Console.WriteLine("\nDouble:\n{0}", DoubleIt(bin));
         }
     }
 }
