@@ -46,6 +46,19 @@ namespace Task_1
             return new string(reverse);
         }
 
+        // Конвертиране от двоично в десетично
+        static int bin2dec(string bin)
+        {
+            int sum = 0, pow = 0;
+            for (int i = bin.Length - 1; i >= 0; i--)
+            {
+                var A = int.Parse(bin[i].ToString());
+                sum += (int)(A * Math.Pow(10f, pow));
+                pow++;
+            }
+            return sum;
+        }
+
         // Конвертиране от двоично в шестнадесетично
         static string bin2hex(string bin)
         {
@@ -102,8 +115,12 @@ namespace Task_1
             Console.WriteLine("{0} (10) = {1} (16)", 1234, dec2hex(1234));
 
             // (2) -> (10), (2) -> (16)
-            // Console.WriteLine("{0} (2) = {1} (10)", "1100101", bin2dec("1100101"));
+            Console.WriteLine("{0} (2) = {1} (10)", "1100101", bin2dec("1100101"));
             Console.WriteLine("{0} (2) = {1} (16)", "1100101", bin2hex("1100101"));
+
+            // (16) -> (10), (16) -> (2)
+            // Console.WriteLine("{0} (16) = {1} (10)", "ABC", hex2dec("ABC"));
+            // Console.WriteLine("{0} (16) = {1} (2)", "ABC", hex2bin("ABC"));
         }
     }
 }
