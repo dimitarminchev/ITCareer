@@ -13,11 +13,9 @@ namespace Task_1
     */
     class Program
     {
-        static void Main(string[] args)
+        // Конвертор от десетично в двоично
+        static string dec2bin(int number)
         {
-            // Десетично > Двоично            
-            int number = 1234;
-            Console.Write("{0} (10) = ", number);
             string binary = "";
             while (number > 0)
             {
@@ -25,9 +23,27 @@ namespace Task_1
                 number /= 2;
                 binary += reminder;
             }
-            for(int i=binary.Length - 1;i>=0;i--)
-            Console.Write(binary[i]);
-            Console.WriteLine(" (2)");
+            return new String(binary.ToCharArray());
+        }
+
+        // Конвертор от десетично в шестнадесетично
+        static string dec2hex(int number)
+        {
+            string hex = "";
+            while (number > 0)
+            {
+                int reminder = number % 16;
+                number /= 16;
+                hex += reminder;
+            }
+            return new String(hex.ToCharArray());
+        }
+
+        // Главен метод
+        static void Main(string[] args)
+        {
+            Console.WriteLine("{0} (10) = {1} (2)",  1234, dec2bin(1234));
+            Console.WriteLine("{0} (10) = {1} (16)", 1234, dec2hex(1234));
         }
     }
 }
