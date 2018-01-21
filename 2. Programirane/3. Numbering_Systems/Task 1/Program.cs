@@ -16,27 +16,34 @@ namespace Task_1
         // Конвертор от десетично в двоично
         static string dec2bin(int number)
         {
-            string binary = "";
+            string binary = String.Empty;
             while (number > 0)
             {
                 int reminder = number % 2;
                 number /= 2;
                 binary += reminder;
             }
-            return new String(binary.ToCharArray());
+            // Reverse
+            char[] reverse = binary.ToCharArray();
+            Array.Reverse(reverse);
+            return new string(reverse);
         }
 
         // Конвертор от десетично в шестнадесетично
         static string dec2hex(int number)
         {
-            string hex = "";
+            string hex = String.Empty;
             while (number > 0)
             {
                 int reminder = number % 16;
                 number /= 16;
-                hex += reminder;
+                if (reminder < 10) hex += reminder.ToString();
+                else hex += (char)(reminder + 55);
             }
-            return new String(hex.ToCharArray());
+            // Reverse
+            char[] reverse = hex.ToCharArray();
+            Array.Reverse(reverse);
+            return new string(reverse);
         }
 
         // Главен метод
