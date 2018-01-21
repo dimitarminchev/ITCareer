@@ -19,7 +19,45 @@ namespace Task_3
         // Изважда 2
         static string Minus10(string bin)
         {
-            return bin;
+            int MIN = 0;
+            String MIN10 = bin.Substring(bin.Length - 1, 1);
+            for (int i = bin.Length - 2; i >= 0; i--)
+            {
+                // първи символ
+                if (i == bin.Length - 2)
+                {
+                    if (bin[i] == '1')
+                    {
+                        MIN10 += '0';
+                        MIN = 0;
+                    }
+                    else
+                    {
+                        MIN10 += '1';
+                        MIN = 1;
+                    }
+                }
+                // всеки следващ символ
+                else
+                {
+                    if (MIN == 0) MIN10 += bin[i];
+                    else if (bin[i] == '1')
+                    {
+                        MIN10 += '0';
+                        MIN = 0;
+                    }
+                    else
+                    {
+                        MIN10 += '1';
+                        MIN = 1;
+                    }
+                }
+            }
+
+            // Обръщане
+            char[] reverse = MIN10.ToCharArray();
+            Array.Reverse(reverse);
+            return new string(reverse);
         }
 
         // Добавя 2
