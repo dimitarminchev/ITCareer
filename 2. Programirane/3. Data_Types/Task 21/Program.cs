@@ -9,7 +9,7 @@ namespace Task_21
 */
     class Program
     {
-        // Решение: Павел Недков
+        // Решение: Павел Недков 
         static void Main(string[] args)
         {
             var Lenght = double.Parse(Console.ReadLine());
