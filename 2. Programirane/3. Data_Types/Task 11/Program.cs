@@ -8,7 +8,7 @@ namespace Task_11
 */
     class Program
     {
-        // Решение: Колективно
+        // Решение: Колективно 
         static void Main(string[] args)
         {
             var n = double.Parse(Console.ReadLine());
