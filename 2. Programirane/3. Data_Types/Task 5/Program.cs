@@ -11,7 +11,7 @@ namespace Task_5
 */
     class Program
     {
-        // Решение: Божидар Андонов
+        // Решение: Божидар Андонов 
         static void Main(string[] args)
         {
             var a = int.Parse(Console.ReadLine());
