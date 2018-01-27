@@ -7,7 +7,7 @@ namespace Task_3
 */
     class Program
     {
-        // Решение: Йордан Йорданов
+        // Решение: Йордан Йорданов 
         static void Main(string[] args)
         {
             string a = Console.ReadLine();
