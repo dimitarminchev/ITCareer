@@ -14,7 +14,7 @@ namespace Task_9
             var n2 = decimal.Parse(Console.ReadLine());
             var n3 = decimal.Parse(Console.ReadLine());
             var n4 = decimal.Parse(Console.ReadLine());
-            Console.WriteLine(n1 + n2 + n3 + n4);
+            Console.WriteLine(n1 + n2 + n3 + n4); 
         }
     }
 }
