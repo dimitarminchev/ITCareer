@@ -8,7 +8,7 @@ namespace Task_4
 */
     class Program
     {
-        // Решение: Живко Колев
+        // Решение: Живко Колев 
         static void Main(string[] args)
         {
             int a = int.Parse(Console.ReadLine());
