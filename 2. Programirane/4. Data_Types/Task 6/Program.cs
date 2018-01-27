@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Task_6
 {
+/*
+*/
     class Program
     {
+        // Решение: Божидар Андонов
         static void Main(string[] args)
         {
         }
