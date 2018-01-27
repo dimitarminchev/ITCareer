@@ -7,7 +7,7 @@ namespace Task_16
 */
     class Program
     {
-        // Решение: Христо Димитров
+        // Решение: Христо Димитров 
         static void Main(string[] args)
         {
             string name = Console.ReadLine();
