@@ -9,7 +9,7 @@ namespace Task_18
 */
     class Program
     {
-        // Решение: Христо Димитров
+        // Решение: Христо Димитров 
         static void Main(string[] args)
         {
             string lineI = Console.ReadLine();
