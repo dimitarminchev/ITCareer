@@ -7,7 +7,7 @@ namespace Task_10
 */
     class Program
     {
-        // Решение: Петко Люцканов  
+        // Решение: Петко Люцканов 
         static void Main(string[] args)
         {
             double a = double.Parse(Console.ReadLine());
