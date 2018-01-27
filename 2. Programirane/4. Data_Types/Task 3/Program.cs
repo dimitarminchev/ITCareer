@@ -13,8 +13,11 @@ namespace Task_3
 */
     class Program
     {
+        // Решение: Йордан Йорданов
         static void Main(string[] args)
         {
+            string a = Console.ReadLine();
+            Console.WriteLine(Convert.ToInt32(a, 16));
         }
     }
 }
