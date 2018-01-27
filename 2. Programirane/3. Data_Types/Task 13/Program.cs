@@ -14,7 +14,7 @@ namespace Task_13
             int n = int.Parse(Console.ReadLine());
             for (int num = 1; num <= n; num++)
             {
-                int sumOfDigits = 0;
+                int sumOfDigits = 0; 
                 int digits = num;
                 while (digits > 0)
                 {
