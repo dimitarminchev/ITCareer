@@ -6,7 +6,7 @@ namespace Task_15
  */
     class Program
     {
-        // Решение: Димитър Минчев
+        // Решение: Димитър Минчев 
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
