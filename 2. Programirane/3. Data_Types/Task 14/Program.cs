@@ -12,7 +12,7 @@ namespace Task_14
                 string n = Console.ReadLine();
                 Convert.ToBoolean(n);
                 if (n == "True") Console.WriteLine("Yes");
-                else Console.WriteLine("No");
+                else Console.WriteLine("No"); 
             }
         }
 }
