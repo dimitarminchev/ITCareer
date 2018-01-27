@@ -8,7 +8,7 @@ namespace Task_1
 */
     class Program
     {
-        // Решение: Божидар Марков
+        // Решение: Божидар Марков 
         static void Main(string[] args)
         {
             Console.WriteLine("Enter centuries:");
