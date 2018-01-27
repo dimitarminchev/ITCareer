@@ -10,7 +10,7 @@ namespace Task_7
 */
     class Program
     {
-        // Решение: Петко Люцканов
+        // Решение: Петко Люцканов 
         static void Main(string[] args)
         {
             decimal a = 3.141592653589793238m;
