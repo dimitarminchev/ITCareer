@@ -9,7 +9,7 @@ namespace Task_2
 */
     class Program
     {
-        // Решение: Божидар Андонов 
+        // Решение: Божидар Андонов  
         static void Main(string[] args)
         {
             sbyte num1 = -100;
