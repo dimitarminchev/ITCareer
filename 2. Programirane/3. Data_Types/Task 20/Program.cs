@@ -32,7 +32,7 @@ namespace Task_20
             {
                 Console.WriteLine($"Gender : f ");
             }
-            else if (gender == "m")
+            else if (gender == "m") 
             {
                 Console.WriteLine($"Gender : m ");
             }
