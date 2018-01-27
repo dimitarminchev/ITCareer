@@ -15,7 +15,7 @@ namespace Task_12
             int p = int.Parse(Console.ReadLine());
             int courses = (int)Math.Ceiling((double)n / p);
             Console.WriteLine(courses);
-            string Pause = Console.ReadLine();
+            string Pause = Console.ReadLine(); 
         }
     }
 }
