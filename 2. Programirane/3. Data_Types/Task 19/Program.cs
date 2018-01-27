@@ -7,7 +7,7 @@ namespace Task_19
 */
     class Program
     {
-        // Решение: Павел Недков
+        // Решение: Павел Недков 
         static void Main(string[] args)
         {
             string symbol1 = Console.ReadLine();
