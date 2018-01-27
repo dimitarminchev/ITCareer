@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Task_1
 {
 /* 1. Векове към минути
