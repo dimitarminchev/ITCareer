@@ -8,7 +8,7 @@ namespace Task_8
 */
     class Program
     {
-        // Решение: Живко Колев 
+        // Решение: Живко Колев  
         static void Main(string[] args)
         {
             var r = double.Parse(Console.ReadLine());
