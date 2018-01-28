@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Task_09
 {
-    class Program
-    {
 /* 9. Въвеждане на списък от конзолата
 Въведете списък от цели числа и го изведете в конзолата:
 */
-        // Решение: Димитър Минчев
+    class Program
+    {
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
