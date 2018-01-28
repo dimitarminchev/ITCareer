@@ -6,10 +6,11 @@ namespace Task_11
 */
     class Program
     {
-        // Решение: 
+        // Решение: Димитър Минчев
         static void Main(string[] args)
         {
-
+            var names = Console.ReadLine().Split(' ');
+            Console.WriteLine(String.Join("; ", names));
         }
     }
 }

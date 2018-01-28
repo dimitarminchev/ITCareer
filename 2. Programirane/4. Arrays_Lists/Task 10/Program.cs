@@ -22,7 +22,6 @@ namespace Task_10
             // Отпечатване на списък от цели числа
             for (int index = 0; index < nums.Count; index++)
             Console.WriteLine("nums[{0}] = {1}", index, nums[index]);
-            // Console.WriteLine(String.Join("; ", nums));
         }
     }
 }
