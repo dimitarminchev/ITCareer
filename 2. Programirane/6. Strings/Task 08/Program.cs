@@ -12,11 +12,9 @@ namespace Task_08
 */
     class Program
     {
-        static void Main(string[] args)
+        // Сума на две числа
+        static String Sum(String A, String B)
         {
-            // Входни данни
-            String A = Console.ReadLine();
-            String B = Console.ReadLine();
             String C = String.Empty;
 
             // Уеднаквяване чрез добавяне на нули
@@ -30,8 +28,6 @@ namespace Task_08
             for (int i = A.Length - 1; i >= 0; i--)
             {
                 int SUM = (int)A[i] + (int)B[i] - 96; // ASCII
-                // Console.WriteLine("sum={0}", SUM);
-
                 if (PART > 0)
                 {
                     SUM += PART;
@@ -46,8 +42,18 @@ namespace Task_08
                 j++;
             }
 
+            // Връщаме резултата
+            return string.Join("", C.Reverse());
+        }
+
+        static void Main(string[] args)
+        {
+            // Входни данни
+            String A = Console.ReadLine();
+            String B = Console.ReadLine();
+
             // Отпечатваме резултата
-            Console.Write(string.Join("", C.Reverse()));
+            Console.Write( Sum(A,B) );
         }
     }
 }
