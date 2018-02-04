@@ -12,9 +12,55 @@ namespace Task_07
 */
     class Program
     {
+        static bool MagicWords(char[] letters1, char[] letters2)
+        {
+            var matches = new Dictionary<char, char>();
+            var smallerArr = letters1.Length == (Math.Min(letters1.Length, letters2.Length)) ? letters1 : letters2;
+            var biggerArr = letters1.Length == (Math.Min(letters1.Length, letters2.Length)) ? letters2 : letters1;
+
+            for (int i = 0; i < smallerArr.Length; i++)
+            {
+                if (!matches.ContainsKey(smallerArr[i]))
+                {
+                    matches.Add(smallerArr[i], biggerArr[i]);
+                }
+                else
+                {
+                    if (matches[smallerArr[i]] == biggerArr[i])
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            for (int i = smallerArr.Length; i < biggerArr.Length; i++)
+            {
+                if (matches.ContainsValue(biggerArr[i]))
+                {
+                    continue;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         static void Main(string[] args)
         {
-           
+            string[] BothWords = Console.ReadLine().Split(' ').ToArray();
+            string FirstWord = BothWords[0];
+            string SecondWord = BothWords[1];
+
+            char[] LettersFirstWord = FirstWord.ToCharArray();
+            char[] LettersSecondWord = SecondWord.ToCharArray();
+            var isMagic = MagicWords(LettersFirstWord, LettersSecondWord);
+            Console.WriteLine(isMagic.ToString().ToLower());
         }
     }
 }
