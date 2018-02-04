@@ -12,48 +12,39 @@ namespace Task_09
 */
     class Program
     {
-        // Сума на две числа
-        static String Sum(String A, String B)
+        // Умножение
+        static String Multiply(String BigNumber, int Multiplyer)
         {
-            String C = String.Empty;
-
-            // Уеднаквяване чрез добавяне на нули
-            if (A.Length < B.Length) A = new String('0', B.Length - A.Length) + A;
-            else B = new String('0', A.Length - B.Length) + B;
-
-            // Индекси
-            int j = 0, PART = 0;
-
-            // Обхождаме низовете отзад напред и намираме сумата
-            for (int i = A.Length - 1; i >= 0; i--)
+            String Result = String.Empty;
+            int j = 0, Reminder = 0;
+            for (int i = BigNumber.Length - 1; i >= 0; i--)
             {
-                int SUM = (int)A[i] + (int)B[i] - 96; // ASCII
-                if (PART > 0)
+                int Current = Multiplyer * ((int)BigNumber[i] - 48); // ASCII
+                if (Reminder > 0)
                 {
-                    SUM += PART;
-                    PART = 0;
+                    Current += Reminder;
+                    Reminder = 0;
                 }
-                if (SUM > 9)
+                if (Current > 9)
                 {
-                    PART = SUM / 10;
-                    SUM = SUM % 10;
+                    Reminder = Current / 10;
+                    Current = Current % 10;
                 }
-                C += SUM.ToString();
+                Result += Current.ToString();
                 j++;
             }
 
-            // Връщаме резултата
-            return string.Join("", C.Reverse());
+            // За големи числа този код не е достатъчен!
+            if(Reminder > 0) Result += string.Join("", Reminder.ToString().Reverse());
+
+            return string.Join("", Result.Reverse());
         }
 
         static void Main(string[] args)
         {
-            // Входни данни
-            String A = Console.ReadLine();
-            String B = Console.ReadLine();
-
-            // Отпечатваме резултата
-            Console.Write(Sum(A, B));
+            String BigNumber = Console.ReadLine();
+            int Multiplyer = int.Parse(Console.ReadLine());
+            Console.Write( Multiply(BigNumber,Multiplyer));
         }
     }
 }
