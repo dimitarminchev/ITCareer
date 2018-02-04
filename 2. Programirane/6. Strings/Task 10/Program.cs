@@ -12,8 +12,32 @@ namespace Task_10
 */
     class Program
     {
+/*      // v1
         static void Main(string[] args)
         {
+                    Console.WriteLine(Console.ReadLine().Split(' ').Select(a => 
+                        double.Parse(a.Substring(1, a.Length - 2)) 
+                        * (Char.IsLower(a.First()) ? 
+                            a.ToLower().First() - 96 : 
+                         1/(a.ToLower().First() - 96)) 
+                        + (Char.IsLower(a.Last()) ? 
+                            a.ToLower().Last() - 96 : 
+                          -(a.ToLower().Last() - 96)))
+                    .Sum());
+                }
+         }
+*/
+        // v2
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Console.ReadLine().Split(' ').Select(a => {
+                var b = double.Parse(a.Substring(1, a.Length - 2));
+                var l1 = Char.IsLower(a.First());
+                var l2 = Char.IsLower(a.Last());
+
+                return b * (l1 ? a.ToLower().First() - 96 : 1 / (a.ToLower().First() - 96)) +
+                    (l2 ? a.ToLower().Last() - 96 : -(a.ToLower().Last() - 96));
+            }).Sum());
         }
     }
 }
