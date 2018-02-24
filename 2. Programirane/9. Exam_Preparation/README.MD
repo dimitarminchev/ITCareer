@@ -1,11 +1,11 @@
 # Подготовка за изпит
 ## 01. Resurrection
-вход
+Вход
 - n = броя на фенкците
 - totalLength = дължина на тялото на феникса 
 - totalWidth = широчина на тялото на феникса
 - wingLength = дължина на едно крило
-- изход
+Изход
 - За всеки феникс да се сметне годината на възкръсване по формулата:
 ```
 totalYears = {totalLength} ^ 2 * ({totalWidth} + 2 * {wingLength})
@@ -14,7 +14,15 @@ totalYears = {totalLength} ^ 2 * ({totalWidth} + 2 * {wingLength})
 https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-I
 
 ## 02. Icarus 
+Вход
+- Първи ред е последователност от цели числа отделени с интервал
+- Втори ред е началната позиция
+- Следващите редове съдържат командите
+Изход
+- Един ред съдържащ оставащите елементи отделени с интервал
+
 Тествайте решението:
+https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-I
 
 ## 03. Phoenix Grid 
 Тествайте решението:
