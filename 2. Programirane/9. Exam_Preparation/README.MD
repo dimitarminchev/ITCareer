@@ -27,7 +27,10 @@ https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-20
 https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-I
 
 ## 03. Phoenix Grid 
-
+Вход
+- Кодирани съобщения състоящи се от по 3 символа разделени с точка
+- Невалидни символи в тройките ' ', '\t' и '-' 
+- Палиндром ли е съобщението
 Тествайте решението: 
 https://judge.softuni.bg/Contests/761/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-II
 
