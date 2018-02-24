@@ -19,27 +19,28 @@ namespace Task_04
                 var Creature = Parts[0].Trim(' ').Trim('-'); // Creature
                 var SquadMate = Parts[1].Trim(' '); // SquadMate 
 
-                // New
+                // New Creature
                 if (!dict.ContainsKey(Creature))
                 {
-                    var list = new List<String>();
-                    list.Add(SquadMate);
-                    dict.Add(Creature, list);
+                    var mates = new List<String>();
+                    mates.Add(SquadMate);
+                    dict.Add(Creature, mates);
                 }
-
-                // Exist
-                if (dict.ContainsKey(Creature))
+                // Existing Creature
+                else
                 {
-                    var list = dict[Creature];
-                    if(list.IndexOf(SquadMate) == -1)
-                    list.Add(SquadMate);
+                    var mates = dict[Creature];
+                    if(mates.IndexOf(SquadMate) == -1)
+                    mates.Add(SquadMate);
                 }
 
+                // Next
                 line = Console.ReadLine();
             }
-            // print
-            foreach(var item in dict)
-            Console.WriteLine("{0} -> {1}", item.Key, item.Value.Count);
+
+            // Print
+            foreach (var item in dict)
+            Console.WriteLine("{0} : {1}", item.Key, item.Value.Count);
         }
     }
 }

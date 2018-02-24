@@ -35,6 +35,7 @@ https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-20
 https://judge.softuni.bg/Contests/761/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-II
 
 ## 04. CODE_ Phoenix Oscar Romeo November 
+Предлагам изпозлване на речници!
 
 Тествайте решението: 
 https://judge.softuni.bg/Contests/761/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-II
