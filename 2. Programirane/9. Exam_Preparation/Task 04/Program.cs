@@ -11,12 +11,12 @@ namespace Task_04
     {
         static void Main(string[] args)
         {
-            var dict = new Dictionary<string, List<String>>();
+            var dict = new Dictionary<String, List<String>>();
             string line = Console.ReadLine();
             while (line != "Blaze it!")
             {
                 var Parts = line.Split('>');
-                var Creature = Parts[0].Trim(' ').Trim('-'); // Creature
+                var Creature = (Parts[0].Trim('-')).Trim(' '); // Creature
                 var SquadMate = Parts[1].Trim(' '); // SquadMate 
 
                 // New Creature
@@ -27,17 +27,31 @@ namespace Task_04
                     dict.Add(Creature, mates);
                 }
                 // Existing Creature
-                else
+                else 
                 {
                     var mates = dict[Creature];
-                    if(mates.IndexOf(SquadMate) == -1)
                     mates.Add(SquadMate);
                 }
 
-                // Next
+                // Next Line
                 line = Console.ReadLine();
             }
 
+/*
+            // TODO: Remove Duplicates
+            var noDupl = new Dictionary<String, List<String>>();
+            foreach (var creature in dict)
+            {
+                List<String> NewMates = new List<String>();
+                var exclude = dict.Keys.Where(x => x != creature.Key).ToList();
+                foreach (var mate in creature.Value)
+                  foreach(var item in exclude)
+                        if(mate != item && !NewMates.Contains(mate))
+                            NewMates.Add(mate);
+                // No Duplicates
+                noDupl.Add(creature.Key, NewMates);
+            }
+*/
             // Print
             foreach (var item in dict)
             Console.WriteLine("{0} : {1}", item.Key, item.Value.Count);
