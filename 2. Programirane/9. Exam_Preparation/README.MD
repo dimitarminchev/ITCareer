@@ -5,6 +5,7 @@
 - totalLength = дължина на тялото на феникса 
 - totalWidth = широчина на тялото на феникса
 - wingLength = дължина на едно крило
+
 Изход
 - За всеки феникс да се сметне годината на възкръсване по формулата:
 ```
@@ -18,6 +19,7 @@ https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-20
 - Първи ред е последователност от цели числа отделени с интервал
 - Втори ред е началната позиция
 - Следващите редове съдържат командите
+
 Изход
 - Един ред съдържащ оставащите елементи отделени с интервал
 
@@ -25,10 +27,14 @@ https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-20
 https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-I
 
 ## 03. Phoenix Grid 
-Тествайте решението:
+
+Тествайте решението: 
+https://judge.softuni.bg/Contests/761/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-II
 
 ## 04. CODE_ Phoenix Oscar Romeo November 
-Тествайте решението:
+
+Тествайте решението: 
+https://judge.softuni.bg/Contests/761/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-II
 
 ## 05. Anonymous Downsite 
 Тествайте решението:
