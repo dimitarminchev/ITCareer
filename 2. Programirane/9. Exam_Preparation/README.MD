@@ -235,7 +235,7 @@ Console.WriteLine("{0:f3}", total / density);
 ```
 Test: https://judge.softuni.bg/Contests/869/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-I
 
-## Task 10. Rainer 
+## Task 10. Rainer (Result: 100/100)
 ```
 var input = Console.ReadLine().Split().Select(int.Parse).ToList();
 input.RemoveAt(input.Count - 1);
@@ -260,7 +260,7 @@ while (true)
 ```
 Test: https://judge.softuni.bg/Contests/869/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-I
 
-## Task 11. Raincast
+## Task 11. Raincast (Result: 0/100)
 Test: https://judge.softuni.bg/Contests/881/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-II
 
 ## Task 12. RainAir 

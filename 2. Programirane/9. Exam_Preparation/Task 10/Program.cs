@@ -5,7 +5,7 @@ using System.Linq;
 namespace Task_10
 {
     /// <summary>
-    /// Task 10. Rainer (Result: 0/100)
+    /// Task 10. Rainer (Result: 100/100)
     /// </summary>
     class Program
     {
