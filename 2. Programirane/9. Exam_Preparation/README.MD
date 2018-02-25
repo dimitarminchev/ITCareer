@@ -183,7 +183,41 @@ Test: https://judge.softuni.bg/Contests/834/Programming-Fundamentals-Exam-05-Nov
 ## Task 07. Anonymous Vox 
 Test: https://judge.softuni.bg/Contests/835/Programming-Fundamentals-Exam-05-November-2017-Part-II
 
-## Task 08. Anonymous Cache 
+## Task 08. Anonymous Cache (Result: 70/100)
+```
+var data = new Dictionary<String, Dictionary<String, int>>();
+var cache = new Dictionary<String, Dictionary<String, int>>();
+string line = Console.ReadLine();
+while (line != "thetinggoesskrra")
+{
+    var parts = line.Replace(" -> ", ";").Replace(" | ", ";").Split(';');
+    if (parts.Count() > 1)
+    {
+        String dataKey = parts[0], dataSet = parts[2];
+        int dataSize = int.Parse(parts[1]);
+        if (data.ContainsKey(dataSet)) data[dataSet].Add(dataKey, dataSize);
+        else if (!cache.ContainsKey(dataSet)) cache.Add(dataSet, new Dictionary<string, int>() { { dataKey, dataSize } });
+        else cache[dataSet].Add(dataKey, dataSize);
+    }
+    else if(parts[0] != "thetinggoesskrra")
+    {
+        String dataSet = parts[0];
+        if (cache.ContainsKey(dataSet))
+        {
+           data.Add(dataSet, cache[dataSet]);
+           cache.Remove(dataSet);
+        }
+        else data.Add(dataSet, new Dictionary<string, int>());
+    }
+    line = Console.ReadLine();
+}
+foreach(var dataSet in data)
+if (dataSet.Value.Sum(x => x.Value) == data.Values.Max(x => x.Values.Sum()))
+{
+   Console.WriteLine("Data Set: {0}, Total Size: {1}", dataSet.Key, dataSet.Value.Sum(x => x.Value));
+   foreach (var dataKey in dataSet.Value) Console.WriteLine("$.{0}", dataKey.Key);
+}
+```
 Test: https://judge.softuni.bg/Contests/835/Programming-Fundamentals-Exam-05-November-2017-Part-II
 
 ## Task 09. Raindrops  
