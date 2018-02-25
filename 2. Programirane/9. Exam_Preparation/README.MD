@@ -1,78 +1,183 @@
-# Подготовка за изпит
-## 01. Resurrection
-Вход
-- n = броя на фениксите
-- totalLength = дължина на тялото на феникса 
-- totalWidth = широчина на тялото на феникса
-- wingLength = дължина на едно крило
-
-Изход
-- За всеки феникс да се сметне годината на възкръсване по формулата:
+# Пподготовка за изпит
+## 01. Resurrection (Result: 100/100)
 ```
-totalYears = {totalLength} ^ 2 * ({totalWidth} + 2 * {wingLength})
+int n = int.Parse(Console.ReadLine());
+while (n > 0)
+{
+   long totalLength = int.Parse(Console.ReadLine());
+   decimal totalWidth = decimal.Parse(Console.ReadLine());
+   long wingLength = int.Parse(Console.ReadLine());
+   decimal totalYears = (totalLength * totalLength) * (totalWidth + 2 * wingLength);
+   Console.WriteLine(totalYears);
+   n--;
+}
 ```
-Тествайте решението:
 https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-I
 
-## 02. Icarus 
-Вход
-- Първи ред е последователност от цели числа отделени с интервал
-- Втори ред е началната позиция
-- Следващите редове съдържат командите
-
-Изход
-- Един ред съдържащ оставащите елементи отделени с интервал
-
-Тествайте решението:
+## 02. Icarus (Result: 100/100)
+```
+var nums = Console.ReadLine().Split().Select(int.Parse).ToArray();
+   int start = int.Parse(Console.ReadLine());
+   int pos = start, minus = 1;
+   string line = Console.ReadLine();
+   do
+   {
+    var parts = line.Split(' ');
+    String command = parts[0];
+    int steps = int.Parse(parts[1]);    
+    switch (command)
+    {
+     case "left":
+     {
+       while(steps>0)
+       {
+        pos--;
+        if (pos < 0)
+        {
+         pos = nums.Length - 1;
+         minus++;
+        }
+        nums[pos] -= minus;
+        steps--;
+       }
+       break;
+     }
+     case "right":
+     {
+       while (steps > 0)
+       {        
+        pos++;
+        if (pos > nums.Length - 1)
+        {
+         pos = 0;
+         minus++;
+        }
+        nums[pos] -= minus;
+        steps--;
+       }
+       break;
+     }
+    }
+    line = Console.ReadLine();
+   }
+   while(line != "Supernova");
+   Console.WriteLine(String.Join(" ", nums));
+```
 https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-I
 
-## 03. Phoenix Grid 
-Вход
-- Кодирани съобщения състоящи се от по 3 символа разделени с точка
-- Невалидни символи в тройките ' ', '\t' и '-' 
-- Палиндром ли е съобщението?
+## 03. Phoenix Grid (Result: 100/100)
+```
+string message = Console.ReadLine();
+while (message != "ReadMe")
+  {
+  bool IsAPalindrome = true;
+  for (int i = 3; i <= message.Length - 1; i += 4)
+   if (message[i] != '.') IsAPalindrome = false;
 
-Тествайте решението: 
+  if (message.Contains(' ') || message.Contains('_') || message.Contains('\t')) IsAPalindrome = false;
+
+  for (int i = 0; i <= message.Length / 2; i++)
+   if (message[i] != message[message.Length - 1 - i])
+    IsAPalindrome = false;
+
+  if (IsAPalindrome == true) Console.WriteLine("YES");
+  else Console.WriteLine("NO");
+  message = Console.ReadLine();
+}
+```
 https://judge.softuni.bg/Contests/761/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-II
 
-## 04. CODE: Phoenix Oscar Romeo November 
-Предлагам изпозлване на речник!
-
-Тествайте решението: 
+## 04. CODE: Phoenix Oscar Romeo November (Result: 100/100)
+```
+var dict = new Dictionary<String, List<String>>();
+string line = Console.ReadLine();
+while (line != "Blaze it!")
+{
+  var Parts = line.Split('>');
+  var Creature = Parts[0].Trim('-').Trim(' '); 
+  var SquadMate = Parts[1].Trim(' ');
+  if (Creature != SquadMate)
+  {
+   if (!dict.ContainsKey(Creature)) dict.Add(Creature, new List<String>() { SquadMate });
+   else if(!dict[Creature].Contains(SquadMate)) dict[Creature].Add(SquadMate);
+  }
+  line = Console.ReadLine();
+}
+var nope = new Dictionary<String, List<String>>(); 
+foreach (var creature in dict)
+{
+  var list = new List<String>();
+  foreach (var mate in creature.Value)
+  {
+   if (dict.ContainsKey(mate))
+   if (dict[mate].Contains(creature.Key)) continue;
+   list.Add(mate);
+  }
+  nope.Add(creature.Key, list);
+}
+var sorted = nope.OrderByDescending(x => x.Value.Count);
+foreach (var item in sorted) Console.WriteLine("{0} : {1}", item.Key, item.Value.Count);
+```
 https://judge.softuni.bg/Contests/761/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-II
 
-## 05. Anonymous Downsite 
-Вход
-- N = броя на свалени сайтове
-- Key = ключ за сигурност
-- N на брой реда с информацията за всеки сайт във формат:
+## 05. Anonymous Downsite (Result: 90/100)
 ```
-{siteName} {siteVisits} {siteCommercialPricePerVisit}
+int n = int.Parse(Console.ReadLine());
+int key = int.Parse(Console.ReadLine());
+decimal totalLoss = 0;
+double securityToken = Math.Pow(key, n);
+for (int i=0;i<n;i++)
+{
+    var parts = Console.ReadLine().Split(' ');
+    String siteName = parts[0];
+    decimal siteVisits = decimal.Parse(parts[1]);
+    decimal siteCommercialPricePerVisit = decimal.Parse(parts[2]);
+    decimal loss = siteVisits * siteCommercialPricePerVisit;
+    totalLoss += loss;
+    Console.WriteLine("{0}", siteName);
+}
+Console.WriteLine("Total Loss: {0:f20}", totalLoss);
+Console.WriteLine("Security Token: {0}", securityToken);
 ```
-Изход
-- Списък на свалени сайтовете
-- Total Loss: {totalLoss}
-- Security Token: {securityToken}
-```
-securityToken = Key ^ N
-```
-Тествайте решението:
 https://judge.softuni.bg/Contests/834/Programming-Fundamentals-Exam-05-November-2017-Part-I
 
-## 06. Anonymous Threat 
-Вход
-- Първи ред текстови низове отделени с интервали.
-- Команди
+## 06. Anonymous Threat  (Result: 20/100)
 ```
-merge {startIndex} {endIndex}
-divide {index} {partitions}
+String[] command, dummy = Console.ReadLine().Split(' ');
+while(true)
+{
+  command = Console.ReadLine().Split(' ');
+  switch (command[0])
+  {
+    case "merge": // сливане
+    {
+      int startIndex = int.Parse(command[1]) < 0 ? 0 : int.Parse(command[1]);
+      int endIndex = int.Parse(command[2]) > dummy.Length - 1 ? dummy.Length - 1 : int.Parse(command[2]);
+      String[] left = dummy.Take(startIndex).ToArray();
+      String[] middle = new String[1] { String.Join("", dummy.Skip(startIndex).Take(endIndex - startIndex).ToArray()) };
+      String[] right = dummy.Skip(endIndex).Take(dummy.Length - endIndex).ToArray();
+      dummy = left.Union(middle).Union(right).ToArray();
+      break;
+    }
+    case "divide": // разделяне
+    {
+      int index = int.Parse(command[1]);
+      float partitions = float.Parse(command[2]);
+      int parts = (int)Math.Ceiling(dummy[index].Length / partitions);
+      String[] left = dummy.Take(index).ToArray();
+      String[] middle = Enumerable.Range(0, dummy[index].Length / parts).Select(i => dummy[index].Substring(i * parts, parts)).ToArray();
+      String[] right = dummy.Skip(index+1).Take(dummy.Length - index).ToArray();
+      dummy = left.Union(middle).Union(right).ToArray();
+      break;
+    }
+    case "3:1": // край
+    {
+      Console.WriteLine(String.Join(" ", dummy));
+      return;    
+    }
+  }
+}
 ```
-- Край 3:1
-
-Изход
-- Получения израз
-
-Тествайте решението:
 https://judge.softuni.bg/Contests/834/Programming-Fundamentals-Exam-05-November-2017-Part-I
 
 ## 07. Anonymous Vox 
