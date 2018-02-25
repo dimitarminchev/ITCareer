@@ -1,24 +1,34 @@
 ﻿using System;
+using System.Linq;
 
 namespace Task_09
 {
     /// <summary>
-    /// Task 09. Raindrops (Result: 90/100)
+    /// Task 09. Raindrops (Result: 100/100)
     /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            decimal density = decimal.Parse(Console.ReadLine()), total = 0;
-            for (; n > 0; n--)
+            int amountOfRegions = int.Parse(Console.ReadLine());
+            decimal density = decimal.Parse(Console.ReadLine());
+            uint[] regionInformation = new uint[1];
+            decimal sumregionalcoefficient = 0;
+            for (int i = 0; i < amountOfRegions; i++)
             {
-                var parts = Console.ReadLine().Split();
-                decimal reindropsCount = decimal.Parse(parts[0]);
-                int squareMeters = int.Parse(parts[1]);
-                total += (reindropsCount / squareMeters);
+                regionInformation = Console.ReadLine().Split(' ').Select(uint.Parse).ToArray();
+                uint raindropsCount = regionInformation[0];
+                uint squareMeters = regionInformation[1];
+                decimal regionalCoefficient = (decimal)raindropsCount / squareMeters;
+                sumregionalcoefficient = sumregionalcoefficient + regionalCoefficient;
             }
-            Console.WriteLine("{0:f3}", total / density);
+            if (density > sumregionalcoefficient)  Console.WriteLine("{0:f3}", sumregionalcoefficient);
+            else if (density == 0) Console.WriteLine("{0:f3}", sumregionalcoefficient);
+            else
+            {
+                decimal output = sumregionalcoefficient / density;
+                Console.WriteLine("{0:f3}", output);
+            }
         }
     }
 }

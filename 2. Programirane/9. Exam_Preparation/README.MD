@@ -120,62 +120,67 @@ foreach (var item in sorted) Console.WriteLine("{0} : {1}", item.Key, item.Value
 ```
 Test: https://judge.softuni.bg/Contests/761/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-II
 
-## Task 05. Anonymous Downsite (Result: 90/100)
+## Task 05. Anonymous Downsite (Result: 100/100)
 ```
-int n = int.Parse(Console.ReadLine());
-int key = int.Parse(Console.ReadLine());
-decimal totalLoss = 0;
-double securityToken = Math.Pow(key, n);
-for (int i=0;i<n;i++)
+double n = double.Parse(Console.ReadLine());
+double security = double.Parse(Console.ReadLine());
+decimal SiteLossSum = 0;
+for (int i = 1; i <= n; i++)
 {
-    var parts = Console.ReadLine().Split(' ');
-    String siteName = parts[0];
-    decimal siteVisits = decimal.Parse(parts[1]);
-    decimal siteCommercialPricePerVisit = decimal.Parse(parts[2]);
-    decimal loss = siteVisits * siteCommercialPricePerVisit;
-    totalLoss += loss;
-    Console.WriteLine("{0}", siteName);
+   string[] site = Console.ReadLine().Split(' ').ToArray();
+   decimal Loss = uint.Parse(site[1]) * decimal.Parse(site[2]);
+   SiteLossSum += Loss;
+   Console.WriteLine(site[0]);
 }
-Console.WriteLine("Total Loss: {0:f20}", totalLoss);
-Console.WriteLine("Security Token: {0}", securityToken);
+Console.WriteLine($"Total Loss: {SiteLossSum:f20}");
+BigInteger SecurityToken=1;
+for(int i=1;i<=n;i++) SecurityToken=SecurityToken*(BigInteger) security;
+Console.WriteLine($"Security Token: {SecurityToken} ");n);
 ```
 Test: https://judge.softuni.bg/Contests/834/Programming-Fundamentals-Exam-05-November-2017-Part-I
 
-## Task 06. Anonymous Threat  (Result: 20/100)
+## Task 06. Anonymous Threat  (Result: 100/100)
 ```
-String[] command, dummy = Console.ReadLine().Split(' ');
-while(true)
+// Сливане
+private static void Merge(List<string> strings, int startIndex, int endIndex)
 {
-  command = Console.ReadLine().Split(' ');
-  switch (command[0])
-  {
-    case "merge": // сливане
+    var denyStart = startIndex < 0;
+    var denyEnd = endIndex >= strings.Count;
+    if (denyStart) startIndex = 0;
+    if (denyEnd) endIndex = strings.Count - 1;
+    for (int i = startIndex; i < endIndex; endIndex--)
     {
-      int startIndex = int.Parse(command[1]) < 0 ? 0 : int.Parse(command[1]);
-      int endIndex = int.Parse(command[2]) > dummy.Length - 1 ? dummy.Length - 1 : int.Parse(command[2]);
-      String[] left = dummy.Take(startIndex).ToArray();
-      String[] middle = new String[1] { String.Join("", dummy.Skip(startIndex).Take(endIndex - startIndex).ToArray()) };
-      String[] right = dummy.Skip(endIndex).Take(dummy.Length - endIndex).ToArray();
-      dummy = left.Union(middle).Union(right).ToArray();
-      break;
+      strings[i] = strings[i] + strings[i + 1];
+      strings.RemoveAt(i + 1);
     }
-    case "divide": // разделяне
+}
+// Разделяне
+private static void Divide(List<string> strings, int index, int partitions)
+{
+    string currentString = strings[index];
+    var lenghtOfPartitions = currentString.Length / partitions;
+    var additions = new List<string>(partitions);
+    for (int i = 0; i < partitions - 1; i++)
     {
-      int index = int.Parse(command[1]);
-      float partitions = float.Parse(command[2]);
-      int parts = (int)Math.Ceiling(dummy[index].Length / partitions);
-      String[] left = dummy.Take(index).ToArray();
-      String[] middle = Enumerable.Range(0, dummy[index].Length / parts).Select(i => dummy[index].Substring(i * parts, parts)).ToArray();
-      String[] right = dummy.Skip(index+1).Take(dummy.Length - index).ToArray();
-      dummy = left.Union(middle).Union(right).ToArray();
-      break;
+      string currentAdition = currentString.Substring(0, lenghtOfPartitions);
+      additions.Add(currentAdition);
+      currentString = currentString.Substring(lenghtOfPartitions);
     }
-    case "3:1": // край
+    additions.Add(currentString);
+    strings.RemoveAt(index);
+    strings.InsertRange(index, additions);
+}
+// Главен метод
+static void Main(string[] args)
+{
+    var strings = Console.ReadLine().Split(' ').ToList();
+    var input = new string[4];
+    while ((input = Console.ReadLine().Split(' ')).First() != "3:1")
     {
-      Console.WriteLine(String.Join(" ", dummy));
-      return;    
+      if (input.First() == "merge") Merge(strings, int.Parse(input[1]), int.Parse(input[2]));
+      else if (input.First() == "divide") Divide(strings, int.Parse(input[1]), int.Parse(input[2]));
     }
-  }
+    Console.WriteLine(String.Join(" ", strings));
 }
 ```
 Test: https://judge.softuni.bg/Contests/834/Programming-Fundamentals-Exam-05-November-2017-Part-I
@@ -183,7 +188,7 @@ Test: https://judge.softuni.bg/Contests/834/Programming-Fundamentals-Exam-05-Nov
 ## Task 07. Anonymous Vox 
 Test: https://judge.softuni.bg/Contests/835/Programming-Fundamentals-Exam-05-November-2017-Part-II
 
-## Task 08. Anonymous Cache (Result: 70/100)
+## Task 08. Anonymous Cache (Result: 80/100)
 ```
 var data = new Dictionary<String, Dictionary<String, long>>();
 var cache = new Dictionary<String, Dictionary<String, long>>();
@@ -220,18 +225,27 @@ if (dataSet.Value.Sum(x => x.Value) == data.Values.Max(x => x.Values.Sum()))
 ```
 Test: https://judge.softuni.bg/Contests/835/Programming-Fundamentals-Exam-05-November-2017-Part-II
 
-## Task 09. Raindrops (Result: 90/100)
+## Task 09. Raindrops (Result: 100/100)
 ```
-int n = int.Parse(Console.ReadLine());
-decimal density = decimal.Parse(Console.ReadLine()), total = 0;
-for (; n > 0; n--)
+int amountOfRegions = int.Parse(Console.ReadLine());
+decimal density = decimal.Parse(Console.ReadLine());
+uint[] regionInformation = new uint[1];
+decimal sumregionalcoefficient = 0;
+for (int i = 0; i < amountOfRegions; i++)
 {
-  var parts = Console.ReadLine().Split();
-  decimal reindropsCount = decimal.Parse(parts[0]);
-  int squareMeters = int.Parse(parts[1]);
-  total += (reindropsCount / squareMeters);
+   regionInformation = Console.ReadLine().Split(' ').Select(uint.Parse).ToArray();
+   uint raindropsCount = regionInformation[0];
+   uint squareMeters = regionInformation[1];
+   decimal regionalCoefficient = (decimal)raindropsCount / squareMeters;
+   sumregionalcoefficient = sumregionalcoefficient + regionalCoefficient;
 }
-Console.WriteLine("{0:f3}", total / density);
+if (density > sumregionalcoefficient)  Console.WriteLine("{0:f3}", sumregionalcoefficient);
+else if (density == 0) Console.WriteLine("{0:f3}", sumregionalcoefficient);
+else
+{
+   decimal output = sumregionalcoefficient / density;
+   Console.WriteLine("{0:f3}", output);
+}
 ```
 Test: https://judge.softuni.bg/Contests/869/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-I
 
@@ -260,8 +274,73 @@ while (true)
 ```
 Test: https://judge.softuni.bg/Contests/869/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-I
 
-## Task 11. Raincast (Result: 0/100)
+## Task 11. Raincast (Result: 50/100)
+```
+String line = Console.ReadLine();
+String[] ValidForecast = new String[3];
+while (line != "Davai Emo")
+{
+    var parts = line.Split(':');
+    switch (parts[0])
+    {
+        case "Type":
+        {
+           var type = parts[1].Trim(' ');
+           if (type == "Normal" || type == "Warning" || type == "Danger" && String.IsNullOrEmpty(ValidForecast[0])) ValidForecast[0] = type;
+           break;
+        }
+        case "Source":
+        {
+           var src = parts[1].Trim(' ');
+           if (!String.IsNullOrEmpty(ValidForecast[0])) ValidForecast[1] = src;
+           break;
+        }
+        case "Forecast":
+        {
+           var frc = parts[1].Trim(' ');
+           if (!String.IsNullOrEmpty(ValidForecast[0]) && !String.IsNullOrEmpty(ValidForecast[1]))
+           {
+             ValidForecast[2] = frc;
+             Console.WriteLine("({0}) {1} ~ {2}", ValidForecast[0], ValidForecast[2], ValidForecast[1]);
+             ValidForecast = new String[3];
+           }
+           break;
+        }
+    }
+    line = Console.ReadLine();
+}
+```
 Test: https://judge.softuni.bg/Contests/881/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-II
 
-## Task 12. RainAir 
+## Task 12. RainAir (Result: 20/100)
+```
+var RainAir = new SortedDictionary<String, List<int>>();
+var line = Console.ReadLine();
+while (line != "I believe I can fly!")
+{
+    if (line.IndexOf('=') == -1)
+    {
+        var parts = line.Split(' ');
+        String customerName = parts[0].ToString();
+        List<int> customerFlights;
+        if (RainAir.ContainsKey(customerName)) customerFlights = RainAir[customerName];
+        else customerFlights = new List<int>();
+        for (int i = 1; i < parts.Count(); i++) customerFlights.Add(int.Parse(parts[i]));
+        customerFlights.Sort();
+        if (RainAir.ContainsKey(customerName)) RainAir[customerName] = customerFlights;
+        else RainAir.Add(customerName, customerFlights);
+    }
+    else
+    {
+        var parts = line.Replace(" = ", "=").Split('=');
+        if (RainAir.ContainsKey(parts[0])) RainAir[parts[0]] = RainAir[parts[1]];
+    }
+    line = Console.ReadLine();
+}
+foreach (var customer in RainAir)
+{
+    Console.Write("#{0} ::: ", customer.Key);
+    Console.WriteLine(String.Join(", ", customer.Value));
+}
+```
 Test: https://judge.softuni.bg/Contests/881/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-II

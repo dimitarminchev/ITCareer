@@ -1,49 +1,56 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Task_06
 {
     /// <summary>
-    /// Task 06. Anonymous Threat (Result: 20/100)
+    /// Task 06. Anonymous Threat (Result: 100/100)
     /// </summary>
     class Program
     {
+        // Сливане
+        private static void Merge(List<string> strings, int startIndex, int endIndex)
+        {
+            var denyStart = startIndex < 0;
+            var denyEnd = endIndex >= strings.Count;
+            if (denyStart) startIndex = 0;
+            if (denyEnd) endIndex = strings.Count - 1;
+            for (int i = startIndex; i < endIndex; endIndex--)
+            {
+                strings[i] = strings[i] + strings[i + 1];
+                strings.RemoveAt(i + 1);
+            }
+        }
+
+        // Разделяне
+        private static void Divide(List<string> strings, int index, int partitions)
+        {
+            string currentString = strings[index];
+            var lenghtOfPartitions = currentString.Length / partitions;
+            var additions = new List<string>(partitions);
+            for (int i = 0; i < partitions - 1; i++)
+            {
+                string currentAdition = currentString.Substring(0, lenghtOfPartitions);
+                additions.Add(currentAdition);
+                currentString = currentString.Substring(lenghtOfPartitions);
+            }
+            additions.Add(currentString);
+            strings.RemoveAt(index);
+            strings.InsertRange(index, additions);
+        }
+
+        // Главен метод
         static void Main(string[] args)
         {
-            String[] command, dummy = Console.ReadLine().Split(' ');
-            while(true)
+            var strings = Console.ReadLine().Split(' ').ToList();
+            var input = new string[4];
+            while ((input = Console.ReadLine().Split(' ')).First() != "3:1")
             {
-                command = Console.ReadLine().Split(' ');
-                switch (command[0])
-                {
-                    case "merge":
-                    {
-                            int startIndex = int.Parse(command[1]) < 0 ? 0 : int.Parse(command[1]);
-                            int endIndex = int.Parse(command[2]) > dummy.Length - 1 ? dummy.Length - 1 : int.Parse(command[2]);
-                            String[] left = dummy.Take(startIndex).ToArray();
-                            String[] middle = new String[1] { String.Join("", dummy.Skip(startIndex).Take(endIndex - startIndex).ToArray()) };
-                            String[] right = dummy.Skip(endIndex).Take(dummy.Length - endIndex).ToArray();
-                            dummy = left.Union(middle).Union(right).ToArray();
-                            break;
-                    }
-                    case "divide":
-                    {
-                            int index = int.Parse(command[1]);
-                            float partitions = float.Parse(command[2]);
-                            int parts = (int)Math.Ceiling(dummy[index].Length / partitions);
-                            String[] left = dummy.Take(index).ToArray();
-                            String[] middle = Enumerable.Range(0, dummy[index].Length / parts).Select(i => dummy[index].Substring(i * parts, parts)).ToArray();
-                            String[] right = dummy.Skip(index+1).Take(dummy.Length - index).ToArray();
-                            dummy = left.Union(middle).Union(right).ToArray();
-                            break;
-                    }
-                    case "3:1":
-                    {
-                            Console.WriteLine(String.Join(" ", dummy));
-                            return;                            
-                    }
-                }
-            } 
-        }
+                if (input.First() == "merge") Merge(strings, int.Parse(input[1]), int.Parse(input[2]));
+                else if (input.First() == "divide") Divide(strings, int.Parse(input[1]), int.Parse(input[2]));
+            }
+            Console.WriteLine(String.Join(" ", strings));
+        }       
     }
 }
