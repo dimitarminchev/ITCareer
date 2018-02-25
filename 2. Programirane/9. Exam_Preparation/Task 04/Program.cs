@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task_04
 {
-    // 04. CODE: Phoenix Oscar Romeo November (Result: 100/100)
+    /// <summary>
+    /// Task 04. CODE: Phoenix Oscar Romeo November (Result: 100/100)
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

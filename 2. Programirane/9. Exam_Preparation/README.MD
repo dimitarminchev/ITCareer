@@ -1,5 +1,5 @@
 # Пподготовка за изпит
-## 01. Resurrection (Result: 100/100)
+## Task 01. Resurrection (Result: 100/100)
 ```
 int n = int.Parse(Console.ReadLine());
 while (n > 0)
@@ -12,9 +12,9 @@ while (n > 0)
    n--;
 }
 ```
-https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-I
+Test: https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-I
 
-## 02. Icarus (Result: 100/100)
+## Task 02. Icarus (Result: 100/100)
 ```
 var nums = Console.ReadLine().Split().Select(int.Parse).ToArray();
    int start = int.Parse(Console.ReadLine());
@@ -63,9 +63,9 @@ var nums = Console.ReadLine().Split().Select(int.Parse).ToArray();
    while(line != "Supernova");
    Console.WriteLine(String.Join(" ", nums));
 ```
-https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-I
+Test: https://judge.softuni.bg/Contests/760/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-I
 
-## 03. Phoenix Grid (Result: 100/100)
+## Task 03. Phoenix Grid (Result: 100/100)
 ```
 string message = Console.ReadLine();
 while (message != "ReadMe")
@@ -85,9 +85,9 @@ while (message != "ReadMe")
   message = Console.ReadLine();
 }
 ```
-https://judge.softuni.bg/Contests/761/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-II
+Test: https://judge.softuni.bg/Contests/761/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-II
 
-## 04. CODE: Phoenix Oscar Romeo November (Result: 100/100)
+## Task 04. CODE: Phoenix Oscar Romeo November (Result: 100/100)
 ```
 var dict = new Dictionary<String, List<String>>();
 string line = Console.ReadLine();
@@ -118,9 +118,9 @@ foreach (var creature in dict)
 var sorted = nope.OrderByDescending(x => x.Value.Count);
 foreach (var item in sorted) Console.WriteLine("{0} : {1}", item.Key, item.Value.Count);
 ```
-https://judge.softuni.bg/Contests/761/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-II
+Test: https://judge.softuni.bg/Contests/761/Progr-Fund-Extended-Retake-Exam-04-Sept-2017-Part-II
 
-## 05. Anonymous Downsite (Result: 90/100)
+## Task 05. Anonymous Downsite (Result: 90/100)
 ```
 int n = int.Parse(Console.ReadLine());
 int key = int.Parse(Console.ReadLine());
@@ -139,9 +139,9 @@ for (int i=0;i<n;i++)
 Console.WriteLine("Total Loss: {0:f20}", totalLoss);
 Console.WriteLine("Security Token: {0}", securityToken);
 ```
-https://judge.softuni.bg/Contests/834/Programming-Fundamentals-Exam-05-November-2017-Part-I
+Test: https://judge.softuni.bg/Contests/834/Programming-Fundamentals-Exam-05-November-2017-Part-I
 
-## 06. Anonymous Threat  (Result: 20/100)
+## Task 06. Anonymous Threat  (Result: 20/100)
 ```
 String[] command, dummy = Console.ReadLine().Split(' ');
 while(true)
@@ -178,26 +178,22 @@ while(true)
   }
 }
 ```
-https://judge.softuni.bg/Contests/834/Programming-Fundamentals-Exam-05-November-2017-Part-I
+Test: https://judge.softuni.bg/Contests/834/Programming-Fundamentals-Exam-05-November-2017-Part-I
 
-## 07. Anonymous Vox 
+## Task 07. Anonymous Vox 
+Test: https://judge.softuni.bg/Contests/835/Programming-Fundamentals-Exam-05-November-2017-Part-II
 
-Тествайте решението:
-https://judge.softuni.bg/Contests/835/Programming-Fundamentals-Exam-05-November-2017-Part-II
+## Task 08. Anonymous Cache 
+Test: https://judge.softuni.bg/Contests/835/Programming-Fundamentals-Exam-05-November-2017-Part-II
 
-## 08. Anonymous Cache 
+## Task 09. Raindrops  
+Test: https://judge.softuni.bg/Contests/869/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-I
 
-Тествайте решението:
-https://judge.softuni.bg/Contests/835/Programming-Fundamentals-Exam-05-November-2017-Part-II
+## Task 10. Rainer 
+Test: https://judge.softuni.bg/Contests/869/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-I
 
-## 09. Raindrops  
-Тествайте решението:
+## Task 11. Raincast
+Test: https://judge.softuni.bg/Contests/881/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-II
 
-## 10. Rainer 
-Тествайте решението:
-
-## 11. Raincast
-Тествайте решението:
-
-## 12. RainAir 
-Тествайте решението:
+## Task 12. RainAir 
+Test: https://judge.softuni.bg/Contests/881/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-II

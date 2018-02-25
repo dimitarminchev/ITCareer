@@ -2,7 +2,9 @@
 
 namespace Task_01
 {
-    // 01. Resurrection (Result: 100/100)
+    /// <summary>
+    /// Task 01. Resurrection (Result: 100/100)
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

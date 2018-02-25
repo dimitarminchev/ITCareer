@@ -3,7 +3,9 @@ using System.Linq;
 
 namespace Task_02
 {
-    // 02. Icarus (Result: 100/100)
+    /// <summary>
+    /// Task 02. Icarus (Result: 100/100)
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

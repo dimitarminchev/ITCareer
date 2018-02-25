@@ -2,7 +2,9 @@
 
 namespace Task_03
 {
-    // 03. Phoenix Grid (Result: 100/100)
+    /// <summary>
+    /// Task 03. Phoenix Grid (Result: 100/100)
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

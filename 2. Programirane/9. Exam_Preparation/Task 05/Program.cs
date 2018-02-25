@@ -2,7 +2,9 @@
 
 namespace Task_05
 {
-    // 05. Anonymous Downsite (Result: 90/100)
+    /// <summary>
+    /// Task 05. Anonymous Downsite (Result: 90/100)
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

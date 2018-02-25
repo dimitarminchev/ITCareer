@@ -3,7 +3,9 @@ using System.Linq;
 
 namespace Task_06
 {
-    // 06. Anonymous Threat (Result: 20/100)
+    /// <summary>
+    /// Task 06. Anonymous Threat (Result: 20/100)
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
