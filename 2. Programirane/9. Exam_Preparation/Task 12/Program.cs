@@ -5,14 +5,14 @@ using System.Linq;
 namespace Task_12
 {
     /// <summary>
-    /// Task 12. RainAir (Result: 0/100)
+    /// Task 12. RainAir (Result: 70/100)
     /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
             // Input
-            var RainAir = new SortedDictionary<String, List<int>>();
+            var RainAir = new Dictionary<String, List<int>>();
             var line = Console.ReadLine();
             while (line != "I believe I can fly!")
             {
@@ -20,14 +20,13 @@ namespace Task_12
                 {
                     // Add customer flights
                     var parts = line.Split(' ');
-                    String customerName = parts[0].ToString();
+                    string customerName = parts[0];
                     List<int> customerFlights;
 
                     if (RainAir.ContainsKey(customerName)) customerFlights = RainAir[customerName];
                     else customerFlights = new List<int>();
 
                     for (int i = 1; i < parts.Count(); i++) customerFlights.Add(int.Parse(parts[i]));
-                    customerFlights.Sort();
 
                     if (RainAir.ContainsKey(customerName)) RainAir[customerName] = customerFlights;
                     else RainAir.Add(customerName, customerFlights);
@@ -42,10 +41,10 @@ namespace Task_12
                 line = Console.ReadLine();
             }
             // Print
-            foreach (var customer in RainAir)
+            foreach (var customer in RainAir.OrderByDescending(c=>c.Value.Count).ThenBy(c=>c.Key))
             {
                 Console.Write("#{0} ::: ", customer.Key);
-                Console.WriteLine(String.Join(", ", customer.Value));
+                Console.WriteLine(String.Join(", ", customer.Value.OrderBy(a=>a)));
             }
         }
     }

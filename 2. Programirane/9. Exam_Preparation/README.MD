@@ -312,21 +312,20 @@ while (line != "Davai Emo")
 ```
 Test: https://judge.softuni.bg/Contests/881/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-II
 
-## Task 12. RainAir (Result: 20/100)
+## Task 12. RainAir (Result: 70/100)
 ```
-var RainAir = new SortedDictionary<String, List<int>>();
+var RainAir = new Dictionary<String, List<int>>();
 var line = Console.ReadLine();
 while (line != "I believe I can fly!")
 {
     if (line.IndexOf('=') == -1)
     {
         var parts = line.Split(' ');
-        String customerName = parts[0].ToString();
+        string customerName = parts[0];
         List<int> customerFlights;
         if (RainAir.ContainsKey(customerName)) customerFlights = RainAir[customerName];
         else customerFlights = new List<int>();
         for (int i = 1; i < parts.Count(); i++) customerFlights.Add(int.Parse(parts[i]));
-        customerFlights.Sort();
         if (RainAir.ContainsKey(customerName)) RainAir[customerName] = customerFlights;
         else RainAir.Add(customerName, customerFlights);
     }
@@ -337,10 +336,10 @@ while (line != "I believe I can fly!")
     }
     line = Console.ReadLine();
 }
-foreach (var customer in RainAir)
+foreach (var customer in RainAir.OrderByDescending(c=>c.Value.Count).ThenBy(c=>c.Key))
 {
     Console.Write("#{0} ::: ", customer.Key);
-    Console.WriteLine(String.Join(", ", customer.Value));
+    Console.WriteLine(String.Join(", ", customer.Value.OrderBy(a=>a)));
 }
 ```
 Test: https://judge.softuni.bg/Contests/881/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-II
