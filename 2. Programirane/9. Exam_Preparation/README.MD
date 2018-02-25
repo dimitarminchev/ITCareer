@@ -1,4 +1,4 @@
-# Пподготовка за изпит
+# Подготовка за изпит
 ## Task 01. Resurrection (Result: 100/100)
 ```
 int n = int.Parse(Console.ReadLine());
@@ -220,7 +220,19 @@ if (dataSet.Value.Sum(x => x.Value) == data.Values.Max(x => x.Values.Sum()))
 ```
 Test: https://judge.softuni.bg/Contests/835/Programming-Fundamentals-Exam-05-November-2017-Part-II
 
-## Task 09. Raindrops  
+## Task 09. Raindrops (Result: 90/100)
+```
+int n = int.Parse(Console.ReadLine());
+decimal density = decimal.Parse(Console.ReadLine()), total = 0;
+for (; n > 0; n--)
+{
+  var parts = Console.ReadLine().Split();
+  decimal reindropsCount = decimal.Parse(parts[0]);
+  int squareMeters = int.Parse(parts[1]);
+  total += (reindropsCount / squareMeters);
+}
+Console.WriteLine("{0:f3}", total / density);
+```
 Test: https://judge.softuni.bg/Contests/869/Programming-Fundamentals-Extended-Exam-10-December-2017-Part-I
 
 ## Task 10. Rainer 
