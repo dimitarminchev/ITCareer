@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D2F1ED2E-EE9A-4CEB-AA8A-A77857A72592}</ProjectGuid>
+    <ProjectGuid>{5228509F-1E57-4004-92CA-72FAE680F28A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>App2</RootNamespace>
     <AssemblyName>App2</AssemblyName>
@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountManager.cs" />
+    <Compile Include="BankAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
