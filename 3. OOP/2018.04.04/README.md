@@ -23,6 +23,6 @@ class Family
 ## App4
 Тема 4. Методи. Зад 4. Разликата в дни между две дати
 ```
-class Date
+class DateModifier
 ```
 
