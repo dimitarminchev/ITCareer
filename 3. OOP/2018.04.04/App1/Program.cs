@@ -11,14 +11,21 @@ namespace App1
         // Главен метод
         static void Main(string[] args)
         {
-            BankAccount acc = new BankAccount()
+            // Създаване на обект инстанция на класа
+            BankAccount account = new BankAccount()
             {
-                Id = 12,
-                Balance = 123.45
+                Id = 42, // идентификатор на сметка
+                Balance = 123.45 // първоначална сума
             };
-            acc.Deposit(23);
-            acc.Withdraw(100);
-            Console.WriteLine(acc.ToString());
+
+            // Внасяне на пари 
+            account.Deposit(12.34);
+
+            // Теглене на пари 
+            account.Withdraw(100);
+
+            // Отпечавтване на състоянието
+            Console.WriteLine(account.ToString());
         }
     }
 }
