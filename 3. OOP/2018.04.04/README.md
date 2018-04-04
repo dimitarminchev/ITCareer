@@ -29,10 +29,8 @@ class DateModifier
 ## App5
 Тема 5. Конструктори. Зад 1. Дефиниране на класа Човек + Зад 2. Конструктори за класа Човек
 ```
-```
 class Person
 class BankAccount
-```
 ```
 
 ## App6
