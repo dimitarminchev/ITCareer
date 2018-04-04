@@ -10,11 +10,19 @@ class BankAccount
 Тема 2. Дефиниране на класове. Зад 4. Тестов Клиент 
 ```
 class BankAccount
+class AccountManager
 ```
 
 ## App3
 Тема 4. Методи. Зад 3. Статистическо проучване
-
+```
+class Person
+class Family
+```
 
 ## App4
 Тема 4. Методи. Зад 4. Разликата в дни между две дати
+```
+class Date
+```
+
