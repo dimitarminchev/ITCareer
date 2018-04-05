@@ -21,5 +21,5 @@ class Person
 ## App4
 Тема 8. Модификатори за достъп. Зад 2. Ферма за животни
 ```
-class AmimalFarm
+class Chicken
 ```
