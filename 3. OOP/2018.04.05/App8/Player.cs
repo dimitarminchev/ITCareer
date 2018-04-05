@@ -58,7 +58,7 @@ namespace App8
             set
             {
                 if (value > 100 || value < 0)
-                {
+                {                    
                     Console.WriteLine("Durability should be between 0 and 100");
                 }
                 else
