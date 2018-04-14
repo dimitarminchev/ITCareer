@@ -27,22 +27,28 @@ namespace App6
 
         // Списък с товари
         private List<Freight> freights = new List<Freight>();
-        public List<Freight> Freights
-        {
-            get { return this.freights;  }
-            set { this.freights = value;  }
-        }
 
-        // Добавяне на товари
-        public void Add(Freight item)
+        // Добавяне на товар
+        public void Add(Freight freight)
         {
-            if (this.capacity < item.Weight)
-                Console.WriteLine($"{this.name} can't loaded {item.Name}");
+            var cargo = this.freights.Sum(x => x.Weight);
+            if (this.capacity < freight.Weight + cargo)
+            {
+                Console.WriteLine($"{this.name} can not loaded {freight.Name}");
+            }
             else
             {
-                Console.WriteLine($"{this.name} loaded {item.Name}");
-                freights.Add(item);
+                Console.WriteLine($"{this.name} loaded {freight.Name}");
+                freights.Add(freight);
             }
+        }
+
+        // Печат на товари
+        public void Print()
+        {
+            var cargo = String.Join(", ", this.freights.Select(x => x.Name).ToList());
+            if (String.IsNullOrEmpty(cargo)) cargo = "Nothing loaded";
+            Console.WriteLine($"{this.Name} - {cargo}");
         }
     }
 }

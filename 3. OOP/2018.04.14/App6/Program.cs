@@ -17,14 +17,7 @@ namespace App6
             if(!String.IsNullOrEmpty(item))
             {
                 var parts = item.Split('=');
-                trucks.Add
-                (
-                    new Truck()
-                    {
-                        Name = parts[0],
-                        Capacity = int.Parse(parts[1])
-                    }
-                );
+                trucks.Add( new Truck() { Name = parts[0], Capacity = int.Parse(parts[1]) });
             }
 
             // Товари
@@ -34,7 +27,7 @@ namespace App6
             if (!String.IsNullOrEmpty(item))
             {
                 var parts = item.Split('=');
-                freights.Add(new Freight(parts[0], int.Parse(parts[1])));
+                freights.Add(new Freight() { Name = parts[0], Weight = int.Parse(parts[1]) });
             }
 
             // Товарене на камионите
@@ -45,21 +38,15 @@ namespace App6
                 if (cmd != "END")
                 {
                     var parts = cmd.Split(' ');
-                    var FindTruck = trucks.Where(x => x.Name == parts[0]).First();
-                    var FindFreight = freights.Where(x => x.Name == parts[1]).First();
-                    FindTruck.Add(FindFreight);
+                    var truck = trucks.Where(x => x.Name == parts[0]).First();
+                    var treight = freights.Where(x => x.Name == parts[1]).First();
+                    truck.Add(treight);
                 }
             }
             while (cmd != "END");
 
             // Печат
-            foreach (var item in trucks)
-            {
-                var list = "";
-                foreach (var name in item.Freights) list += name.Name + ",";
-                Console.WriteLine($"{item.Name} - {list}");
-            }
-
+            foreach (var truck in trucks) truck.Print();
         }
     }
 }
