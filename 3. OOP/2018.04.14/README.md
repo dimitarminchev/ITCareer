@@ -29,3 +29,16 @@ class Product
 ```
 class BankAccount
 ```
+
+| Вход               | Изход                                                   |
+| ------------------ | ------------------------------------------------------- |
+| Create 12 502.13   | The requested sum is not available in the bank account. |
+| Withdraw 12 402.13 | Account with an ID of 21 does not exist.                |
+| Create 15 20.00    | Account with an ID of 16 does not exist.                |
+| Withdraw 12 100.01 | 15 -> 2.50                                              |
+| Deposit 12 1.00    | 12 -> 0.99                                              |
+| Withdraw 12 100.01 |                                                         |
+| Withdraw 21 13.69  |                                                         |
+| Deposit 16 201.00  |                                                         |
+| Withdraw 15 17.50  |                                                         |
+| End                |                                                         |
