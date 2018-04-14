@@ -42,3 +42,10 @@ class BankAccount
 | Deposit 16 201.00  |                                                         |
 | Withdraw 15 17.50  |                                                         |
 | End                |                                                         |
+
+## App6
+Тема 13. Зад.1. Превоз на товари
+```
+class Truck 
+class Freight
+```
