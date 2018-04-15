@@ -8,5 +8,5 @@ class Driver
 class RaceTower
 ```
 
-![output](iutput.png)
+![output](output.png)
 
