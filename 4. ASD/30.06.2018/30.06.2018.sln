@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem3", "Problem3\Proble
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem4", "Problem4\Problem4.csproj", "{8C9F562A-F0D0-4EC6-9FE4-133870A41B30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem7", "Project7\Problem7.csproj", "{CB7A22A8-0F76-4C6C-BB52-EECECB609146}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem7", "Problem7\Problem7.csproj", "{CB7A22A8-0F76-4C6C-BB52-EECECB609146}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
