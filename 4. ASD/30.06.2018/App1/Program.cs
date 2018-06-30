@@ -18,7 +18,7 @@ namespace App1
             for (int k = 2; k <= n; k++)
             {
                 bool prime = true;
-                for (int j = 2; j <= k; j++) if (k % j == 0) prime = false;
+                for (int j = 2; j <= Math.Sqrt(k); j++) if (k % j == 0) prime = false;
                 if (prime) Console.Write(k + " ");
             }
 
