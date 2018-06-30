@@ -8,7 +8,7 @@ namespace App1
 {
     class Program
     {
-        // Алгоритъм за намиране на прости числа
+        /* Алгоритъм за намиране на прости числа */
         static void Main(string[] args)
         {
             Console.Write("n=");
