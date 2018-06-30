@@ -8,18 +8,25 @@ namespace App1
 {
     class Program
     {
-        // Алгоритъм за "Прости" числа
+        // Алгоритъм за намиране на прости числа
         static void Main(string[] args)
         {
             Console.Write("n=");
             int n = int.Parse(Console.ReadLine());
 
-            // Алгоритъм за намиране на прости числа
-            for(int k=2;k<=n;k++)
+            // v1 = О(N^2)
+            for (int k = 2; k <= n; k++)
             {
-                bool prime = true; // Първоначална хипотеза: К е просто!
+                bool prime = true;
+                for (int j = 2; j <= k; j++) if (k % j == 0) prime = false;
+                if (prime) Console.Write(k + " ");
+            }
+
+            // v2 = O(N*sqrt(N)) 
+            for (int k=2;k<=n;k++)
+            {
+                bool prime = true; 
                 for (int j = 2; j <= Math.Sqrt(k); j++) if (k % j == 0) prime = false;
-                // Проверка?
                 if (prime) Console.Write(k + " ");
             }
             
