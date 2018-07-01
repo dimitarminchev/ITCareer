@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Problem23
+namespace Problem22
 {
     class Program
     {
-        /* Problem 23. CircularQueue */
+        /* 1. Статична реализация на списък */
         static void Main(string[] args)
         {
-            CircularQueue q = new CircularQueue();
         }
     }
 }

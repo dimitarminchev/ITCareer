@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{32ABEF2A-BF92-432E-BEB1-396E17C2964B}</ProjectGuid>
+    <ProjectGuid>{09D09FCD-2337-4221-8025-20286A15AEB6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Problem23</RootNamespace>
-    <AssemblyName>Problem23</AssemblyName>
+    <RootNamespace>Problem22</RootNamespace>
+    <AssemblyName>Problem22</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,13 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CircularQueue.cs" />
+    <Compile Include="CustomArrayList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
