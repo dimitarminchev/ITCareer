@@ -83,12 +83,6 @@ namespace Problem22
             return temp;
         }
 
-        // TODO: Премахване по обект
-        public int Remove(object item)
-        {
-            return 42;
-        }
-
         // Добавяне 
         public void Insert(int index, object item)
         {
@@ -105,12 +99,6 @@ namespace Problem22
 
         }
 
-        // TODO
-        public int IndexOf(object item)
-        {
-            return 42;
-        }
-
         // Изистване 
         public void Clear() 
         {
@@ -119,18 +107,30 @@ namespace Problem22
             return;
         }
 
-        // TODO
+        // Проверка дали сме в границите
+        private void OutOfRange(int index)
+        {
+            if (index < 0 || index > count)
+                throw new IndexOutOfRangeException();
+        }
+
+        // TODO: Премахване по обект
+        public int Remove(object item)
+        {
+            return 42;
+        }
+
+        // TODO:  Съдържа ли?
         public bool Contains(object item)
         {
             return true;
         }
 
-
-        // Проверка дали сме в границите
-        private void OutOfRange(int index)
+        // TODO: Индекс на елемент
+        public int IndexOf(object item)
         {
-            if (index < 0 || index > count)
-            throw new IndexOutOfRangeException();
+            return 42;
         }
+        
     }
 }
