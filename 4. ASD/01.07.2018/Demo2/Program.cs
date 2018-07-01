@@ -12,21 +12,24 @@ namespace Demo2
         static void Main(string[] args)
         {
             DinamicList list = new DinamicList();
+            // Console.WriteLine("Count = {0}", list.Count);
+
+            list.Add(42); // 0
+            list.Add(23); // 1
+            list.Add(61); // 2
             Console.WriteLine("Count = {0}", list.Count);
 
-            // Search
-            Console.WriteLine("Index = {0}", list.IndexOf(42)); // -1
-            list.Add(42);
-            Console.WriteLine("Index = {0}", list.IndexOf(42)); // 1
-            list.Add(23);
-            Console.WriteLine("Index = {0}", list.IndexOf(66)); // -1
+            Console.WriteLine("Removed = {0}", list.Remove(0));
+            Console.WriteLine("Count = {0}", list.Count);
 
-            //list.Add(42);
-            //list.Add(23);
-            //list.Add(61);
-            //Console.WriteLine("Count = {0}", list.Count);
+            Console.WriteLine("Removed = {0}", list.Remove(1));
+            Console.WriteLine("Count = {0}", list.Count);
 
+            Console.WriteLine("Removed = {0}", list.Remove(0));
+            Console.WriteLine("Count = {0}", list.Count);
 
+            Console.WriteLine("Removed = {0}", list.Remove(0));
+            Console.WriteLine("Count = {0}", list.Count);
 
         }
     }

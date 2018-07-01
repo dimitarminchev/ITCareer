@@ -51,10 +51,32 @@ namespace Demo2
             return -1; // Not Found
         }
 
+        // Премахване
+        public object Remove(int index)
+        {
+            int currentIndex = 0;
+            Node current = head;
+            Node previous = null;
+            while (current != null)
+            {
+                if (currentIndex == index) 
+                {
+                    if (previous != null) previous.Next = current.Next;
+                    else this.head = current.Next;
+                    count--;
+                    return current.Element;
+                }
+                previous = current;
+                currentIndex++;
+                current = current.Next;
+            }
+            return null;
+        }
+
         /*
           public DynamicList() {…}
 
-          public object Remove(int index) { … }
+          
         public int Remove(object item) { … }
          
          
