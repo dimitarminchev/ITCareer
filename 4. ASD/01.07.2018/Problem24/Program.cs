@@ -11,7 +11,7 @@ namespace Problem24
         /* Problem 24. ArrayStack */
         static void Main(string[] args)
         {
-            // Статична имплементация на стек
+            ArrayStack stack = new ArrayStack();
         }
     }
 }

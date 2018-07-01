@@ -8,9 +8,10 @@ namespace Problem22
 {
     class Program
     {
-        /* 1. Статична реализация на списък */
+        /* Problem 22. Статична реализация на списък */
         static void Main(string[] args)
         {
+            CustomArrayList list = new CustomArrayList();
         }
     }
 }
