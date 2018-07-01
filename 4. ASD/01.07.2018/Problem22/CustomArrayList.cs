@@ -89,7 +89,7 @@ namespace Problem22
             return 42;
         }
 
-        // Добавяне // TO TEST
+        // Добавяне 
         public void Insert(int index, object item)
         {
             OutOfRange(index);
@@ -105,18 +105,21 @@ namespace Problem22
 
         }
 
+        // TODO
         public int IndexOf(object item)
         {
             return 42;
         }
 
         // Изистване 
-        public void Clear()
+        public void Clear() 
         {
-            while (count > 0) Remove(0);
+            // while (count > 0) Remove(0); // O(N)
+            arr = new object[capacity];     // O(1)
             return;
         }
 
+        // TODO
         public bool Contains(object item)
         {
             return true;
