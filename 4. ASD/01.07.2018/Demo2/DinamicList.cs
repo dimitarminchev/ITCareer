@@ -18,14 +18,46 @@ namespace Demo2
             set { count = value;  }
         }
 
-        // public void Add(object item) { … }
+        // Добавяне на елементи
+        public void Add(object item)
+        {
+            if (count == 0) 
+            {
+                Node current = new Node(item); // Първи
+                head = current;
+                tail = current;
+            }
+            else 
+            {
+                Node current = new Node(item, tail); // Следащ
+                tail = current;
+            }
+            count++;
+        }
+
+        // Индекса на елемент
+        public int IndexOf(object item)
+        {
+            Node current = head;
+            int index = 0;
+            while(true)
+            {
+                if (current == null) break;
+                if (current.Element.Equals(item)) return index;
+                if (current == tail) break;
+                current = current.Next;
+                index++;
+            }
+            return -1; // Not Found
+        }
 
         /*
           public DynamicList() {…}
+
+          public object Remove(int index) { … }
+        public int Remove(object item) { … }
          
-         public object Remove(int index) { … }
-         public int Remove(object item) { … }
-         public int IndexOf(object item) { … }
+         
          public bool Contains(object item) { … }
          public object this[int index] { …}
           */

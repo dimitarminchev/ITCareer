@@ -25,12 +25,14 @@ namespace Demo2
             set { next = value; }
         }
 
-        // Конструктор
+        // Конструктор за слеващ елемент
         public Node(object element, Node prevNode)
         {
             this.element = element;
             prevNode.next = this;
         }
+
+        // Конструктор за първи елемент
         public Node(object element)
         {
             this.element = element;
