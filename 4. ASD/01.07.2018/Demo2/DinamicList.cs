@@ -18,14 +18,16 @@ namespace Demo2
                 get { return element;  }
                 set { element = value; }
             }
+
             // Следващ елемент от списъка
             private Node next;
-            public object Next
+            public Node Next
             {
-                get { return element; }
-                set { element = value; }
+                get { return next; }
+                set { next = value; }
             }
-            //TODO: Добавете свойства за Element и Next с публични get и set
+
+            // Конструктор
             public Node(object element, Node prevNode)
             {
                 this.element = element;
