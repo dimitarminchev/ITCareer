@@ -11,7 +11,19 @@ namespace Problem24
         /* Problem 24. ArrayStack */
         static void Main(string[] args)
         {
-            ArrayStack stack = new ArrayStack();
+            // Създаване на стека
+            ArrayStack<int> stack = new ArrayStack<int>();
+
+            // Добаване на елементи
+            stack.Push(300);
+            stack.Push(4400);
+            stack.Push(100);
+
+            // Информация
+            Console.WriteLine("Count = {0}", stack.Count);
+            Console.WriteLine("Remove = {0}", stack.Pop());
+            Console.WriteLine("Count = {0}", stack.Count);
+
         }
     }
 }
