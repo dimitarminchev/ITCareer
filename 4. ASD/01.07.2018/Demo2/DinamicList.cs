@@ -18,6 +18,14 @@ namespace Demo2
             set { count = value;  }
         }
 
+        // Конструктор
+        public DinamicList()
+        {
+            this.head = null;
+            this.tail = null;
+            this.count = 0;
+        }
+
         // Добавяне на елементи
         public void Add(object item)
         {
@@ -73,9 +81,15 @@ namespace Demo2
             return null;
         }
 
+        // Търсене
+        public bool Contains(object item)
+        {
+            if (IndexOf(item) != -1) return true;
+            else return false;
+        }
+
         // TODO
         // public int Remove(object item) { … }
-        // public bool Contains(object item) { … }
         // public object this[int index] { … }
 
     }
