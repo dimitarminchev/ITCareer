@@ -8,48 +8,27 @@ namespace Demo2
 {
     public class DinamicList
     {
-        // Елемент
-        public class Node
-        {
-            // Елемент от списъка
-            private object element;
-            public object Element
-            {
-                get { return element;  }
-                set { element = value; }
-            }
-
-            // Следващ елемент от списъка
-            private Node next;
-            public Node Next
-            {
-                get { return next; }
-                set { next = value; }
-            }
-
-            // Конструктор
-            public Node(object element, Node prevNode)
-            {
-                this.element = element;
-                prevNode.next = this;
-            }
-            public Node(object element)
-            {
-                this.element = element;
-                next = null;
-            }
-        }
         // Списък
         private Node head;
         private Node tail;
         private int count;
-        public DynamicList() {…}
-        public void Add(object item) { … }
-        public object Remove(int index) { … }
-        public int Remove(object item) { … }
-        public int IndexOf(object item) { … }
-        public bool Contains(object item) { … }
-        public object this[int index] { …}
+        public int Count // O(1)
+        {
+            get { return count; }
+            set { count = value;  }
+        }
+
+        // public void Add(object item) { … }
+
+        /*
+          public DynamicList() {…}
+         
+         public object Remove(int index) { … }
+         public int Remove(object item) { … }
+         public int IndexOf(object item) { … }
+         public bool Contains(object item) { … }
+         public object this[int index] { …}
+          */
 
     }
 }

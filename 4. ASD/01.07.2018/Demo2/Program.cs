@@ -11,7 +11,8 @@ namespace Demo2
         /* Свързан списък */
         static void Main(string[] args)
         {
-
+            DinamicList list = new DinamicList();
+            Console.WriteLine("Count = {0}", list.Count);
         }
     }
 }
