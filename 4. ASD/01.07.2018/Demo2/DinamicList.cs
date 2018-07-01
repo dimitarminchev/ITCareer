@@ -48,13 +48,11 @@ namespace Demo2
         {
             Node current = head;
             int index = 0;
-            while(true)
+            while (current != null)
             {
-                if (current == null) break;
                 if (current.Element.Equals(item)) return index;
-                if (current == tail) break;
-                current = current.Next;
                 index++;
+                current = current.Next;
             }
             return -1; // Not Found
         }
@@ -67,18 +65,29 @@ namespace Demo2
             Node previous = null;
             while (current != null)
             {
-                if (currentIndex == index) 
+                if (currentIndex == index)
                 {
                     if (previous != null) previous.Next = current.Next;
                     else this.head = current.Next;
+                    if (current.Next == null) this.tail = previous;
                     count--;
                     return current.Element;
                 }
-                previous = current;
-                currentIndex++;
-                current = current.Next;
+                else
+                {
+                    previous = current;
+                    current = current.Next;
+                    currentIndex++;
+                }
             }
             return null;
+        }
+        public int Remove(object element)
+        {
+            int index = this.IndexOf(element);
+            object removed = this.Remove(index);
+            if (removed == null) return -1;
+            else return index;
         }
 
         // Търсене
@@ -88,9 +97,46 @@ namespace Demo2
             else return false;
         }
 
-        // TODO
-        // public int Remove(object item) { … }
-        // public object this[int index] { … }
+        // Итератор
+        public object this[int index]
+        {
+            get
+            {
+                int currentIndex = 0;
+                Node current = head;
+                Node returnNode = null;
+                while (current != null)
+                {
+                    if (currentIndex == index)
+                    {
+                        returnNode = current;
+                        break;
+                    }
+                    current = current.Next;
+                    currentIndex++;
+                }
+                if (returnNode != null) return returnNode.Element;
+                throw new IndexOutOfRangeException();
+            }
+            set
+            {
+                int currentIndex = 0;
+                Node current = head;
+                Node changedNode = null;
+                while (current != null)
+                {
+                    if (currentIndex == index)
+                    {
+                        changedNode = current;
+                        break;
+                    }
+                    current = current.Next;
+                    currentIndex++;
+                }
+                if (changedNode != null) changedNode.Element = value;
+                throw new IndexOutOfRangeException();
+            }
+        }
 
     }
 }

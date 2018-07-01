@@ -90,7 +90,7 @@ namespace Demo1
             return temp;
         }
 
-        // Проверка дали сме границите
+        // Проверка дали сме в границите
         private void OutOfRange(int index)
         {
             if (index < 0 || index > length)

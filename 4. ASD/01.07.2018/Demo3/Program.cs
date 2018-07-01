@@ -8,7 +8,7 @@ namespace Demo3
 {
     class Program
     {
-        /* Опашка и стек */
+        /* Опашка и Стек */
         static void Main(string[] args)
         {
             // FIFO = LILO            

@@ -26,10 +26,10 @@ namespace Demo2
         }
 
         // Конструктор за слеващ елемент
-        public Node(object element, Node prevNode)
+        public Node(object element, Node previous)
         {
             this.element = element;
-            prevNode.next = this;
+            previous.next = this;
         }
 
         // Конструктор за първи елемент

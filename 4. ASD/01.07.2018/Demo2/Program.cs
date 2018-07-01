@@ -11,25 +11,24 @@ namespace Demo2
         /* Свързан списък */
         static void Main(string[] args)
         {
+            // Създаваме свързан списък
             DinamicList list = new DinamicList();
-            // Console.WriteLine("Count = {0}", list.Count);
 
-            list.Add(42); // 0
-            list.Add(23); // 1
-            list.Add(61); // 2
-            Console.WriteLine("Count = {0}", list.Count);
+            // Зареждаме съдържание
+            list.Add("zero");
+            list.Add("one");
+            list.Add("two");
+            list.Add("three");
 
-            Console.WriteLine("Removed = {0}", list.Remove(0));
-            Console.WriteLine("Count = {0}", list.Count);
-
-            Console.WriteLine("Removed = {0}", list.Remove(1));
-            Console.WriteLine("Count = {0}", list.Count);
-
-            Console.WriteLine("Removed = {0}", list.Remove(0));
-            Console.WriteLine("Count = {0}", list.Count);
-
-            Console.WriteLine("Removed = {0}", list.Remove(0));
-            Console.WriteLine("Count = {0}", list.Count);
+            // Тестваме списъка
+            Console.WriteLine(list.Count);           // 4
+            Console.WriteLine(list[0]);              // zero
+            Console.WriteLine(list.IndexOf("two"));  // 2
+            Console.WriteLine(list.Remove(1));       // one
+            Console.WriteLine(list.Count);           // 3
+            Console.WriteLine(list.Remove("three")); // 2 
+            Console.WriteLine(list.Count);           // 2
+            Console.WriteLine(list.Remove("four"));	 // -1
 
         }
     }
