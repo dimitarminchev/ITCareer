@@ -73,16 +73,10 @@ namespace Demo2
             return null;
         }
 
-        /*
-          public DynamicList() {…}
-
-          
-        public int Remove(object item) { … }
-         
-         
-         public bool Contains(object item) { … }
-         public object this[int index] { …}
-          */
+        // TODO
+        // public int Remove(object item) { … }
+        // public bool Contains(object item) { … }
+        // public object this[int index] { … }
 
     }
 }
