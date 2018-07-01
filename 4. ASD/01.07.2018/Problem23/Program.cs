@@ -11,7 +11,18 @@ namespace Problem23
         /* Problem 23. CircularQueue */
         static void Main(string[] args)
         {
-            CircularQueue q = new CircularQueue();
+            // Създаване на циркулярна опашка
+            CircularQueue<int> q = new CircularQueue<int>();
+
+            // Добаване на елементи
+            q.Enqueue(1);
+            q.Enqueue(2);
+            q.Enqueue(3);
+
+            // Информация
+            Console.WriteLine("Count = {0}",q.Count);
+            Console.WriteLine("Remove = {0}", q.Dequeue());
+            Console.WriteLine("Count = {0}", q.Count);
         }
     }
 }
