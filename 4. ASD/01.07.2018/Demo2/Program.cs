@@ -12,7 +12,7 @@ namespace Demo2
         static void Main(string[] args)
         {
             // Създаваме свързан списък
-            DinamicList list = new DinamicList();
+            DynamicList list = new DynamicList();
 
             // Зареждаме съдържание
             list.Add("zero");

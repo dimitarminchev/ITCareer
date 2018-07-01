@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo2
 {
-    public class DinamicList
+    public class DynamicList
     {
         // Списък
         private Node head;
@@ -14,12 +14,12 @@ namespace Demo2
         private int count;
         public int Count // O(1)
         {
-            get { return count; }
+            get { return count; } 
             set { count = value;  }
         }
 
         // Конструктор
-        public DinamicList()
+        public DynamicList() 
         {
             this.head = null;
             this.tail = null;
