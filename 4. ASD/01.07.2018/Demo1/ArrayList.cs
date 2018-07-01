@@ -36,27 +36,65 @@ namespace Demo1
         }
 
         // Итератор
-        public T this[int index]
+        private T this[int index]
         {
             get
             {
-                if (index < 0 || index > length)
-                throw new IndexOutOfRangeException();
+                OutOfRange(index);
                 return this.items[index];
             }
             set
             {
-                if (index < 0 || index > length)
-                throw new IndexOutOfRangeException();
+                OutOfRange(index);
                 this.items[index] = value;
                 this.length++;
             }
         }
-/*
-        public void Add(T item) { }
-        public T Get(int index) { }
-        public void Set(int index, T item) { }
-        public T RemoveAt(int index) { }
-*/
+
+        // Добавяне
+        public void Add(T item)
+        {
+            if (capacity == length)
+            {
+                capacity *= 2; // Разтягане
+                T[] temp = items;
+                items = new T[capacity];
+                for (int i = 0; i < temp.Length; i++) items[i] = temp[i];
+                items[length] = item;
+            }
+            else items[length] = item;
+            length++;
+        }
+
+        // Връща елемент
+        public T Get(int index)
+        {
+            OutOfRange(index);
+            return items[index];
+        }
+
+        // Промяна на елемент
+        public void Set(int index, T item)
+        {
+            OutOfRange(index);
+            items[index] = item;
+        }
+
+        // Премахване
+        public T RemoveAt(int index)
+        {
+            OutOfRange(index);
+            var temp = items[index];
+            items = items.Take(index).Concat(items.Skip(index + 1)).ToArray();
+            length--;
+            return temp;
+        }
+
+        // Проверка дали сме границите
+        private void OutOfRange(int index)
+        {
+            if (index < 0 || index > length)
+            throw new IndexOutOfRangeException();
+        }
     }
 }

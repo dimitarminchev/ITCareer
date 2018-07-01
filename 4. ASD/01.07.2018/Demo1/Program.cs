@@ -13,11 +13,21 @@ namespace Demo1
         {
             ArrayList<string> list = new ArrayList<string>();
 
-            Console.WriteLine("Length = {0}",list.Length);
-            Console.WriteLine("Capacity = {0}", list.Capacity);
+            Console.WriteLine("Length = {0}",list.Length);      // 0
+            Console.WriteLine("Capacity = {0}", list.Capacity); // 2
 
-            list[0] = "Иванчо";
-            list[1] = "Марийка";
+            list.Add("Иванчо");
+            list.Add("Марийка");
+            list.Add("Петкан");
+
+            for (int i = 0; i < list.Length; i++) Console.WriteLine(list.Get(i));
+
+            Console.WriteLine("Remove = {0}",list.RemoveAt(1));
+
+            for (int i = 0; i < list.Length; i++) Console.WriteLine(list.Get(i));
+
+            Console.WriteLine("Length = {0}", list.Length);     // 3
+            Console.WriteLine("Capacity = {0}", list.Capacity); // 4
         }
     }
 }
