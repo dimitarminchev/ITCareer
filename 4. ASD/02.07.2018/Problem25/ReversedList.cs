@@ -54,9 +54,13 @@ namespace Problem25
         {
             OutOfRange(index);
             T element = this.Items[index];
-            Items = Items.Take(index).Concat(Items.Skip(index + 1)).ToArray();
-            this.Count--;
-            // TODO: Additionn Feature: Shrink
+
+            // MEGA MAGIC
+            var step1 = Items.Take(Count).Reverse().Concat(new T[Capacity - Count]);
+            var step2 = step1.Take(index).Concat(step1.Skip(index + 1)).ToArray().Concat(new T[Capacity - Count]);
+            var step3 = step2.Take(--Count).Reverse().Concat(new T[Capacity - Count]);
+
+            this.Items = step3.ToArray();
             return element;
         }
 
@@ -70,7 +74,7 @@ namespace Problem25
         // Нумератор
         public IEnumerator<T> GetEnumerator()
         {
-            for (int i = 0; i < Count; i++)
+            for (int i = Count - 1; i >= 0; i--)
             yield return Items[i]; 
         }
         IEnumerator IEnumerable.GetEnumerator()

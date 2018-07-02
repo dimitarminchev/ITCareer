@@ -25,7 +25,7 @@ namespace Problem25
             Console.WriteLine("Count = {0}", list.Count);       // 3
             Console.WriteLine("Capacity = {0}", list.Capacity); // 4
 
-            Console.WriteLine("Remove {0}", list.RemoveAt(0));  // 7
+            Console.WriteLine("Remove {0}", list.RemoveAt(1));  // 7
 
             Console.WriteLine("Count = {0}", list.Count);       // 2
             Console.WriteLine("Capacity = {0}", list.Capacity); // 4 
