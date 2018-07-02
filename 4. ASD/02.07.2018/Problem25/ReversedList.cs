@@ -54,12 +54,9 @@ namespace Problem25
         {
             OutOfRange(index);
             T element = this.Items[index];
-
-            // MEGA MAGIC
             var step1 = Items.Take(Count).Reverse().Concat(new T[Capacity - Count]);
             var step2 = step1.Take(index).Concat(step1.Skip(index + 1)).ToArray().Concat(new T[Capacity - Count]);
             var step3 = step2.Take(--Count).Reverse().Concat(new T[Capacity - Count]);
-
             this.Items = step3.ToArray();
             return element;
         }
