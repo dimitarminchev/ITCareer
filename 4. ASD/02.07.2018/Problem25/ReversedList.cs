@@ -56,7 +56,6 @@ namespace Problem25
             T element = this.Items[index];
             var temp = Items.Take(Count).Reverse();
             Items = temp.Take(index).Concat(temp.Skip(index + 1)).Reverse().Concat(new T[Capacity - Count + 1]).ToArray();
-            this.Items = step3.ToArray();
             return element;
         }
 
