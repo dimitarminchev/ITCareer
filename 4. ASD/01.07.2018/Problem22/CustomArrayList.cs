@@ -111,7 +111,7 @@ namespace Problem22
         private void OutOfRange(int index)
         {
             if (index < 0 || index > count)
-                throw new IndexOutOfRangeException();
+            throw new IndexOutOfRangeException();
         }
 
         // TODO: Премахване по обект
