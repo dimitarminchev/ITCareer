@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Problem25
 {
-    class ReversedList<T>
+    class ReversedList<T> : IEnumerable<T>
     {
         private const int INITAL_CAPACITY = 2;
         public int Count { get; private set; }
@@ -40,7 +41,7 @@ namespace Problem25
         {
             if (this.Capacity == this.Count)
             {
-                Capacity *= 2; // Разширяване
+                Capacity *= 2; // Expand
                 T[] temp = new T[Capacity];
                 for (int i = 0; i < this.Count; i++) temp[i] = this.Items[i];
                 this.Items = temp;
@@ -49,8 +50,14 @@ namespace Problem25
         }
 
         // Изтриване
-        public T RemoveAt()
+        public T RemoveAt(int index)
         {
+            OutOfRange(index);
+            T element = this.Items[index];
+            Items = Items.Take(index).Concat(Items.Skip(index + 1)).ToArray();
+            this.Count--;
+            // TODO: Additionn Feature: Shrink
+            return element;
         }
 
         // Проверка на индекса
@@ -58,6 +65,17 @@ namespace Problem25
         {
             if (index < 0 || index > Count)
             throw new IndexOutOfRangeException();
+        }
+
+        // Нумератор
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < Count; i++)
+            yield return Items[i]; 
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
