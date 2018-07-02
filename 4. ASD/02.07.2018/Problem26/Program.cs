@@ -11,7 +11,22 @@ namespace Problem26
         /* Problem 26. DoublyLinkedList */
         static void Main(string[] args)
         {
-            DoublyLinkedList list = new DoublyLinkedList();
+            DoublyLinkedList<int> list = new DoublyLinkedList<int>();
+
+            // Input
+            list.AddFirst(10);
+            list.AddFirst(23);
+            list.AddFirst(14);
+
+            // Remove First
+            //Console.WriteLine(list.RemoveFirst());
+
+            // Remove Last
+            //Console.WriteLine(list.RemoveLast());
+
+            // Print
+            Console.WriteLine(string.Join(", ",list.ToArray()));
+
         }
     }
 }
