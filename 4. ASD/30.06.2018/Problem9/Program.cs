@@ -28,7 +28,7 @@ namespace Problem9
  
             Console.WriteLine(String.Join(" ", NumbersList));
 
-            // Total: O(N)
+            // Total: O(N*ln(N))
         }
     }
 }
