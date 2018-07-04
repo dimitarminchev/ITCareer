@@ -23,10 +23,10 @@ namespace Sorting
         }
 
         // 3. Проверка дали структурата е сортирана = O(N)
-        public static bool IsSorted<T> (T[] array) where T : IComparable
+        public static bool IsSorted<T>(T[] array) where T : IComparable
         {
             for (int i = 1; i < array.Length; i++)
-            if (!IsLess(array[i-1],array[i])) return false;
+                if (!IsLess(array[i - 1], array[i])) return false;
             return true;
         }
 
@@ -42,7 +42,7 @@ namespace Sorting
         }
 
         // 5. Сортиране по метода на пряката селеция = O(N^2)
-        public static void SelectionSort<T> (T[] array) where T : IComparable
+        public static void SelectionSort<T>(T[] array) where T : IComparable
         {
             for (int i = 0; i < array.Length; i++)
             {
@@ -57,12 +57,27 @@ namespace Sorting
         // 6. Сортиране по метода на мехурчето = O(N^2)
         public static void BubbleSort<T>(T[] array) where T : IComparable
         {
-            for (int i = 0; i < array.Length; i++)           
-                for (int j = 0; j < array.Length; j++)              
+            for (int i = 0; i < array.Length; i++)
+                for (int j = 0; j < array.Length; j++)
                     if (IsLess(array[i], array[j]))
                         Swap(array, i, j);
         }
 
-
+        // 7. Сортиране чрез вмъкване = O(N^2)
+        public static void InsertionSort<T>(T[] array) where T : IComparable
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                int prev = i - 1;
+                int curr = i;
+                while (true)
+                {
+                    if (prev < 0 || IsLess(array[prev], array[curr])) break;
+                    Swap(array, curr, prev);
+                    prev--;
+                    curr--;
+                }
+            }
+        }
     }
 }

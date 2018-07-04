@@ -46,6 +46,20 @@ namespace Sorting
             timer.Stop();
             Console.WriteLine("BubbleSort...\n{0}", string.Join(",", numbers));
             Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
+
+            // 5. Shifting = O(N)
+            timer.Start();
+            Sorting.Shifting(numbers);
+            timer.Stop();
+            Console.WriteLine("Shifting...\n{0}", string.Join(",", numbers));
+            Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
+
+            // 6. MergeSort = O(N^2)
+            timer.Start();
+            Sorting.InsertionSort(numbers);
+            timer.Stop();
+            Console.WriteLine("InsertionSort...\n{0}", string.Join(",", numbers));
+            Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
         }
     }
 }
