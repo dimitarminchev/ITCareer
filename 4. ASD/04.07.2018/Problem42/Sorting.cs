@@ -17,12 +17,12 @@ namespace Problem42 {
         }
 
         public static void SortByDescending<T>(T[] arr) where T : IComparable<T> {
-            for (int i = 0; i < array.Length; i++) {
+            for (int i = 0; i < arr.Length; i++) {
                 int min = i;
-                for (int j = i + 1; j < array.Length; j++)
-                    if (!Less(array[j], array[min]))
+                for (int j = i + 1; j < arr.Length; j++)
+                    if (!Less(arr[j], arr[min]))
                         min = j;
-                Swap(array, i, min);
+                Swap(arr, i, min);
             }
         }
 
