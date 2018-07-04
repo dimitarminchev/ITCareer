@@ -10,7 +10,7 @@ namespace Problem33
     {
         static void Main(string[] args)
         {
-            // Упражнение
+            // Упражнениe върху върху линейни структури от данни
         }
     }
 }
