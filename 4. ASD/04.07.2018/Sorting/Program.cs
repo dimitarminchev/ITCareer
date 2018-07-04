@@ -14,32 +14,38 @@ namespace Sorting
 
         static void Main(string[] args)
         {
-            const int SIZE = 100000;
+            // 0. Data Structure
+            const int SIZE = 20;
             int[] numbers = new int[SIZE];
             for (int i = 0; i < SIZE; i++) numbers[i] = i;
-            // Console.WriteLine(string.Join(",", numbers));
 
-            // 1. Shifting
+            // 1. Shifting = O(N)
             timer.Start();
             Sorting.Shifting(numbers);
             timer.Stop();
-            //Console.WriteLine("Shifting...\n{0}",string.Join(",", numbers));          
+            Console.WriteLine("Shifting...\n{0}",string.Join(",", numbers));          
             Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
 
             // 2. SelectionSort = O(N^2)
             timer.Start();
             Sorting.SelectionSort(numbers);
             timer.Stop();
-            //Console.WriteLine("SelectionSort...\n{0}", string.Join(",", numbers));
+            Console.WriteLine("SelectionSort...\n{0}", string.Join(",", numbers));
             Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
 
-            // 3. Shifting
+            // 3. Shifting = O(N)
             timer.Start();
             Sorting.Shifting(numbers);
             timer.Stop();
-            //Console.WriteLine("Shifting...\n{0}", string.Join(",", numbers));
+            Console.WriteLine("Shifting...\n{0}", string.Join(",", numbers));
             Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
 
+            // 4. BubbleSort = O(N^2)
+            timer.Start();
+            Sorting.BubbleSort(numbers);
+            timer.Stop();
+            Console.WriteLine("BubbleSort...\n{0}", string.Join(",", numbers));
+            Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
         }
     }
 }

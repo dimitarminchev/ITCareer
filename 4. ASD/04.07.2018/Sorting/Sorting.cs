@@ -17,7 +17,7 @@ namespace Sorting
         }
 
         // 2. Сравнение на два елемента
-        public static bool Less(IComparable first, IComparable second)
+        public static bool IsLess(IComparable first, IComparable second)
         {
             return first.CompareTo(second) < 0;
         }
@@ -26,7 +26,7 @@ namespace Sorting
         public static bool IsSorted<T> (T[] array) where T : IComparable
         {
             for (int i = 1; i < array.Length; i++)
-            if (!Less(array[i-1],array[i])) return false;
+            if (!IsLess(array[i-1],array[i])) return false;
             return true;
         }
 
@@ -48,11 +48,21 @@ namespace Sorting
             {
                 int min = i;
                 for (int j = i + 1; j < array.Length; j++)
-                    if (Less(array[j], array[min]))
+                    if (IsLess(array[j], array[min]))
                         min = j;
                 Swap(array, i, min);
             }
         }
+
+        // 6. Сортиране по метода на мехурчето = O(N^2)
+        public static void BubbleSort<T>(T[] array) where T : IComparable
+        {
+            for (int i = 0; i < array.Length; i++)           
+                for (int j = 0; j < array.Length; j++)              
+                    if (IsLess(array[i], array[j]))
+                        Swap(array, i, j);
+        }
+
 
     }
 }
