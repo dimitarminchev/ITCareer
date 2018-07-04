@@ -10,6 +10,13 @@ namespace Problem43
     {
         static void Main(string[] args)
         {
+            // Problem 3. Визуализация на сортирането
+            int[] elements = new int[] { 1, 7, 4, 10, 5, 45, 12, 18, 3, 8, 1 };
+            Console.WriteLine("Start array: " + String.Join(" ", elements));
+            Console.WriteLine();
+            Sorter.BubbleSort(elements);
+            Sorter.InsertionSort(elements);
+
             // Problem 4. Брой на инверсиите
 
             // Problem 5. Най-често срещано число
