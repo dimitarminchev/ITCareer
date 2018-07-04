@@ -9,37 +9,70 @@ namespace Sorting
 {
     class Program
     {
+        // Измерване на време на работа на алгоритъма
+        private static Stopwatch timer;
 
         static void Main(string[] args)
         {
             // 0. Data Structure
-            const int SIZE = 100;
+            const int SIZE = 1000;
             int[] numbers = new int[SIZE];
             for (int i = 0; i < SIZE; i++) numbers[i] = i;
 
             // 1. Shifting = O(N)
+            timer = new Stopwatch();
+            timer.Start();
             Sorting.Shifting(numbers);
-            Console.WriteLine("Shifting...\n{0}",string.Join(",", numbers));          
+            timer.Stop();
+            Console.WriteLine("Shifting ... ");
+            // Console.WriteLine(string.Join(",", numbers));
+            Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
 
             // 2. SelectionSort = O(N^2)
+            timer = new Stopwatch();
+            timer.Start();
             Sorting.SelectionSort(numbers);
-            Console.WriteLine("SelectionSort...\n{0}", string.Join(",", numbers));
+            timer.Stop();
+            Console.WriteLine("SelectionSort ... ");
+            // Console.WriteLine(string.Join(",", numbers));
+            Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
 
             // 3. BubbleSort = O(N^2)
+            timer = new Stopwatch();
+            timer.Start();
             Sorting.BubbleSort(numbers);
-            Console.WriteLine("BubbleSort...\n{0}", string.Join(",", numbers));
+            timer.Stop();
+            Console.WriteLine("BubbleSort ... ");
+            // Console.WriteLine(string.Join(",", numbers));
+            Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
 
             // 4. InsertionSort = O(N^2)
+            timer = new Stopwatch();
+            timer.Start();
             Sorting.InsertionSort(numbers);
-            Console.WriteLine("InsertionSort...\n{0}", string.Join(",", numbers));
+            timer.Stop();
+            Console.WriteLine("InsertionSort ... ");
+            // Console.WriteLine(string.Join(",", numbers));
+            Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
 
             // 5. MergeSort = O(N * log(N))
+            timer = new Stopwatch();
+            timer.Start();
             Sorting.MergeSort(numbers);
-            Console.WriteLine("MergeSort...\n{0}", string.Join(",", numbers));
+            timer.Stop();
+            Console.WriteLine("MergeSort ... ");
+            // Console.WriteLine(string.Join(",", numbers));
+            Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
 
             // 6. QuickSort = O(N * log(N))
+            timer = new Stopwatch();
+            timer.Start();
             Sorting.QuickSort(numbers);
-            Console.WriteLine("QuickSort...\n{0}", string.Join(",", numbers));
+            timer.Stop();
+            Console.WriteLine("QuickSort ... ");
+            // Console.WriteLine(string.Join(",", numbers));
+            Console.WriteLine("Time = {0} ms\n", timer.Elapsed.TotalMilliseconds);
+
         }
     }
 }
