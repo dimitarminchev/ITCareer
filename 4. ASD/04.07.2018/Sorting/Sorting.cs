@@ -79,5 +79,33 @@ namespace Sorting
                 }
             }
         }
+
+        // 7. Сортиране чрез смесване = O(N * log(N))
+        public static void MergeSort<T>(T[] array) where T : IComparable
+        {
+            MergeAlgo(array, 0, array.Length);
+        }
+        private static void MergeAlgo<T> (T[] array, int left, int right) where T : IComparable
+        {
+            int N = right - left;
+            if (N <= 1) return; // Условие за изход от рекурсията
+            int mid = left + N / 2; // Среда
+
+            // Рекурсия
+            MergeAlgo(array, left, mid);  
+            MergeAlgo(array, mid, right);
+
+            // Обратен ход на рекурсията
+            T[] temp = new T[N];
+            int i = left, j = mid;
+            for(int k = 0;k < N;k++)
+            {
+                if (i == mid) temp[k] = array[j++];
+                else if (j == right) temp[k] = array[i++];
+                else if (IsLess(array[j], array[i])) temp[k] = array[j++];
+                else temp[k] = array[i++];
+            }
+            for (int k = 0; k < N; k++) array[left + k] = temp[k];
+        }
     }
 }
