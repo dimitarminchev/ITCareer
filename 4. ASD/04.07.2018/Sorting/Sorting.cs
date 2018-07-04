@@ -107,5 +107,34 @@ namespace Sorting
             }
             for (int k = 0; k < N; k++) array[left + k] = temp[k];
         }
+
+        // 8. Бързо сортиране = O(N * log(N))
+        public static void QuickSort<T>(T[] array) where T : IComparable
+        {
+            QuickAlgo(array, 0, array.Length - 1);
+        }
+        private static void QuickAlgo<T>(T[] array, int left, int right) where T : IComparable
+        {
+            if (left > right || left < 0 || right < 0) return; // Изход
+            int pivot = QuickPart(array, left, right);
+            if (pivot != -1)
+            {
+                QuickAlgo(array, left, pivot - 1); // 1
+                QuickAlgo(array, pivot + 1, right); // 2
+            }
+        }
+        private static int QuickPart<T>(T[] array, int left, int right) where T : IComparable
+        {
+            if (left > right) return -1;
+            int end = left;
+            T pivot = array[right];
+            for (int i = left; i < right; i++)
+                if (IsLess(array[i], pivot))
+                {
+                    Swap(array, i, end);
+                    end++;
+                }
+            return end;
+        }
     }
 }
