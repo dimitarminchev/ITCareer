@@ -10,6 +10,9 @@ namespace Problem42
     {
         static void Main(string[] args)
         {
+            // Problem 4. Уравновесен масив
+
+            // Problem 5. Сортиране по произволна колона
         }
     }
 }
