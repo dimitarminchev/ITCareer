@@ -52,6 +52,12 @@ namespace Demo1
             MesureTime(() => index = Search.InterpolationSearch(sorted, key));
             if (index == -1) Console.WriteLine("Not Found\n");
             else Console.WriteLine("Index = {0}\n", index);
+
+            // 5. Good search
+            Console.WriteLine("5. Good search");
+            MesureTime(() => index = Search.MySearch(sorted, key));
+            if (index == -1) Console.WriteLine("Not Found\n");
+            else Console.WriteLine("Index = {0}\n", index);
         }
     }
 }
