@@ -59,7 +59,7 @@ namespace Demo1
             return -1; 
         }
 		
-		// 5. GoodSearch = O(N)
+		// 5. EasySearch = O(N)
         public static int EasySearch<T>(T[] array, T key) where T : IComparable
         {
             for (int index = array.Length - 1; index != 0; index--)
