@@ -55,11 +55,10 @@ namespace Demo1
             if (index == -1) Console.WriteLine("Not Found\n");
             else Console.WriteLine("Index = {0}\n", index);
 
-            // 5. GoodSearch = O(N)
-            Console.WriteLine("5. GoodSearch");
-            MesureTime(() => index = Search.MySearch(sorted, key));
-            if (index == -1) Console.WriteLine("Not Found\n");
-            else Console.WriteLine("Index = {0}\n", index);
+            // 5. EasySearch = O(N)
+            Console.WriteLine("5. EasySearch = O(N)");
+            MesureTime(() => index = Search.EasySearch(sorted, key));
+            Console.WriteLine(index == -1 ? "Not Found\n" : $"Index = {index}\n");
         }
     }
 }
