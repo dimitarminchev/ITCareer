@@ -43,5 +43,20 @@ namespace Demo1
             }
             return -1; 
         }
+
+        // 4. InterpolationSearch = O(log(log(N)))
+        public static int InterpolationSearch(int[] array, int key)
+        {
+            int low = 0;
+            int high = array.Length - 1;
+            while (array[low] <= key && array[high] >= key)
+            {
+                int mid = low + ((key - array[low]) * (high - low)) / (array[high] - array[low]);
+                if (array[mid] < key) low = mid + 1;
+                else if (array[mid] > key) high = mid - 1;
+                else return mid; 
+            }
+            return -1; 
+        }
     }
 }

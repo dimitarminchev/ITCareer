@@ -45,6 +45,12 @@ namespace Demo1
             MesureTime(() => index = Search.BinarySearch(sorted, key, 0, array.Count() - 1));
             if (index == -1) Console.WriteLine("Not Found\n");
             else Console.WriteLine("Index = {0}\n", index);
+
+            // 4. InterpolationSearch = O(log(log(N)))
+            Console.WriteLine("4. InterpolationSearch = O(log(log(N)))");
+            MesureTime(() => index = Search.InterpolationSearch(sorted, key));
+            if (index == -1) Console.WriteLine("Not Found\n");
+            else Console.WriteLine("Index = {0}\n", index);
         }
     }
 }
