@@ -48,7 +48,7 @@ namespace TrainsSkeleton {
         }
 
         internal T RemoveFront() {
-            var item = list[Count--];
+            var item = list[--Count];
             list = list.Take(Count).Concat(list.Skip(Count + 1).Concat(new T[1])).ToArray();
             return item;
         }
