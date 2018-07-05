@@ -44,7 +44,7 @@ namespace Demo1
             return -1; 
         }
 
-        // 4. InterpolationSearch = O(log(log(N)))
+        // 4. TODO: InterpolationSearch = O(log(log(N)))
         public static int InterpolationSearch(int[] array, int key)
         {
             int low = 0;

@@ -25,6 +25,7 @@ namespace Demo1
             // 0. Data Structure
             int[] array = new int[] { 5, -5, 4, -4, 3, -3, 2, -2, 1, -1 };
             int[] sorted = array.ToArray();
+            // char[] array = new char[] { 'm', 'a', 'g', 'i', 'c', 'h', 'a', 'p', 'p', 'e', 'n', 'd', 's', 'h', 'e', 'r', 'e' };
             Array.Sort(sorted);
             int index = 0, key = 2;
 
