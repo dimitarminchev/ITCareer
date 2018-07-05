@@ -22,12 +22,14 @@ namespace Demo1
         // Алгоритми за търсене
         static void Main(string[] args)
         {
-            // 0. Data Structure
-            int[] array = new int[] { 5, -5, 4, -4, 3, -3, 2, -2, 1, -1 };
-            int[] sorted = array.ToArray();
-            // char[] array = new char[] { 'm', 'a', 'g', 'i', 'c', 'h', 'a', 'p', 'p', 'e', 'n', 'd', 's', 'h', 'e', 'r', 'e' };
+            // 0. Data Structure            
+            char[] array = new char[] { 'm', 'a', 'g', 'i', 'c', 'h', 'a', 'p', 'p', 'e', 'n', 'd', 's', 'h', 'e', 'r', 'e' };
+            char[] sorted = array.ToArray();
+            // int[] array = new int[] { 5, -5, 4, -4, 3, -3, 2, -2, 1, -1 };
+            // int[] sorted = array.ToArray();
             Array.Sort(sorted);
-            int index = 0, key = 2;
+            int index = 0;
+            char key = 'p';
 
             // 1. LinearSearch = O(N)
             Console.WriteLine("1. LinearSearch = O(N)");
@@ -53,8 +55,8 @@ namespace Demo1
             if (index == -1) Console.WriteLine("Not Found\n");
             else Console.WriteLine("Index = {0}\n", index);
 
-            // 5. Good search
-            Console.WriteLine("5. Good search");
+            // 5. GoodSearch = O(N)
+            Console.WriteLine("5. GoodSearch");
             MesureTime(() => index = Search.MySearch(sorted, key));
             if (index == -1) Console.WriteLine("Not Found\n");
             else Console.WriteLine("Index = {0}\n", index);

@@ -44,25 +44,31 @@ namespace Demo1
             return -1; 
         }
 
-        // 4. TODO: InterpolationSearch = O(log(log(N)))
-        public static int InterpolationSearch(int[] array, int key)
+        // 4. InterpolationSearch = O(log(log(N)))
+        public static int InterpolationSearch<T>(T[] array, T key) where T : IComparable
         {
             int low = 0;
             int high = array.Length - 1;
-            while (array[low] <= key && array[high] >= key)
+            while (array[low].CompareTo(key) <= 0 && array[high].CompareTo(key) >= 0)
             {
-                int mid = low + ((key - array[low]) * (high - low)) / (array[high] - array[low]);
-                if (array[mid] < key) low = mid + 1;
-                else if (array[mid] > key) high = mid - 1;
+                int mid = low + (((dynamic)key - (dynamic)array[low]) * (high - low)) / ((dynamic)array[high] - (dynamic)array[low]);
+                if (array[mid].CompareTo(key) < 0) low = mid + 1;
+                else if (array[mid].CompareTo(key) > 0) high = mid - 1;
                 else return mid; 
             }
             return -1; 
         }
 		
-		//5. Good search
-        public static int MySearch<T>(T[] arr, T key) where T : IEquatable<T>{
-            for (int i = arr.Length - 1; i != 0; i--)
-                if (arr[i].CompareTo(key) == 0) return i;
+		// 5. GoodSearch = O(N)
+        public static int MySearch<T>(T[] array, T key) where T : IComparable
+        {
+            for (int index = array.Length - 1; index != 0; index--)
+            {
+                if (array[index].CompareTo(key) == 0)
+                {
+                    return index;
+                }
+            }
             return -1;
         }
     }
