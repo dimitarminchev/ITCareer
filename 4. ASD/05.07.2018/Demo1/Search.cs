@@ -64,7 +64,7 @@ namespace Demo1
         {
             for (int index = array.Length - 1; index != 0; index--)
             {
-                if (array[index].CompareTo(key) == 0)
+                if (array[index].Equals(key) == 0)
                 {
                     return index;
                 }
