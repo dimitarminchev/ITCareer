@@ -22,15 +22,26 @@ namespace Demo1
         }
 
         // 2. RecursiveBinarySearch = O(log(N))
-        public static int RecursiveBinarySearch(int[] array, int key, int start, int end)
+        public static int RecursiveBinarySearch<T>(T[] array, T key, int start, int end) where T : IComparable
         {
             if (end < start) return -1; 
             int mid = (start + end) / 2;
-            if (array[mid] < key) return RecursiveBinarySearch(array, key, start, mid - 1);
-            else if (array[mid] > key) return RecursiveBinarySearch(array, key, mid + 1, end);
+            if (array[mid].CompareTo(key) > 0) return RecursiveBinarySearch(array, key, start, mid - 1);
+            else if (array[mid].CompareTo(key) < 0) return RecursiveBinarySearch(array, key, mid + 1, end);
             else return mid; 
         }
 
         // 3. BinarySearch = O(log(N))
+        public static int BinarySearch<T>(T[] array, T key, int start, int end) where T : IComparable
+        {
+            while (end >= start)
+            {
+                int mid = (start + end) / 2;
+                if (array[mid].CompareTo(key) > 0)  end = mid - 1;
+                else if (array[mid].CompareTo(key) < 0) start = mid + 1;
+                else return mid; 
+            }
+            return -1; 
+        }
     }
 }
