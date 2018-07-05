@@ -50,5 +50,50 @@ namespace Labyrinth
             }
             path.RemoveAt(path.Count - 1); // remove drom path
         }
+
+        // Валидиране дали сме в границите на лабиринта
+        public static bool IsInBound(int row, int col)
+        {
+            return row >= 0 && row < lab.GetLength(0) &&
+                   col >= 0 && col < lab.GetLength(1) &&
+                   lab[row, col] != '*';
+        }
+
+        // Проверка дали е изход
+        public static bool IsExit(int row, int col)
+        {
+            return lab[row, col] == 'e';
+        }
+
+        // Отпечатване на пътя
+        public static void PrintPath()
+        {
+            var result = string.Join("", path);
+            Console.WriteLine(result.Substring(1,result.Length-1));
+        }
+
+        // Дали дадена клетка е посетена
+        public static bool IsVisited(int row, int col)
+        {
+            return lab[row,col] == 'v';
+        }
+
+        // Проверка дали дадена клетка
+        public static bool IsFree(int row, int col)
+        {
+            return lab[row,col] == '-';
+        }
+
+        // Маркираме клетка като посетена
+        public static void Mark(int row, int col)
+        {
+            lab[row, col] = 'v'; // visited
+        }
+
+        // Маркиртаме клетка като непосетена
+        public static void Unmark(int row, int col)
+        {
+            lab[row, col] = '-';
+        }
     }
 }
