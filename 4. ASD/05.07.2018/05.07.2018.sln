@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem515", "Problem515\Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labyrinth", "Labyrinth\Labyrinth.csproj", "{02C621C8-1B35-4B9C-832C-3336DA1F1F80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queens", "Queens\Queens.csproj", "{30EB17DA-B596-4106-AFBC-9C73F47FA44E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{02C621C8-1B35-4B9C-832C-3336DA1F1F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02C621C8-1B35-4B9C-832C-3336DA1F1F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02C621C8-1B35-4B9C-832C-3336DA1F1F80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30EB17DA-B596-4106-AFBC-9C73F47FA44E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30EB17DA-B596-4106-AFBC-9C73F47FA44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30EB17DA-B596-4106-AFBC-9C73F47FA44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30EB17DA-B596-4106-AFBC-9C73F47FA44E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
