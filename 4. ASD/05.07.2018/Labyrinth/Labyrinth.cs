@@ -33,7 +33,7 @@ namespace Labyrinth
             return lab; // Lab is Ready!
         }
 
-        // Намиране на пътя
+        // Рекурсивно намиране на пътя
         public static void FindPaths(int row, int col, char direction)
         {
             if (!IsInBound(row, col)) return;
@@ -75,7 +75,7 @@ namespace Labyrinth
         // Дали дадена клетка е посетена
         public static bool IsVisited(int row, int col)
         {
-            return lab[row,col] == 'v';
+            return lab[row,col] == 'v'; // v = visited
         }
 
         // Проверка дали дадена клетка
@@ -87,7 +87,7 @@ namespace Labyrinth
         // Маркираме клетка като посетена
         public static void Mark(int row, int col)
         {
-            lab[row, col] = 'v'; // visited
+            lab[row, col] = 'v'; // v = visited
         }
 
         // Маркиртаме клетка като непосетена
