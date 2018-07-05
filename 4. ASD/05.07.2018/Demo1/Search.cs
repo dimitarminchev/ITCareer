@@ -60,7 +60,7 @@ namespace Demo1
         }
 		
 		//5. Good search
-        public static int MySearch<T>(T[] arr, T key) where T : IComparable<T> {
+        public static int MySearch<T>(T[] arr, T key) where T : IEquatable<T>{
             for (int i = arr.Length - 1; i != 0; i--)
                 if (arr[i].CompareTo(key) == 0) return i;
             return -1;
