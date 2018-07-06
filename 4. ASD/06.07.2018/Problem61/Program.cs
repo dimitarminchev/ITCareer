@@ -17,14 +17,9 @@ namespace Problem61
         }
 
         // 2. Вложени цикли и рекурсия
-        private static void NestedLoops(int loop, int n)
+        private static void NestedLoops(int n)
         {
-            if (loop == n+1) return;
-            for (int counter = 1; counter <= n; counter++)
-            {
-                Console.WriteLine("{0} {1}", loop, counter);
-                NestedLoops(loop + 1, n); 
-            }
+            Console.WriteLine("NO SOLUTION");
         }
 
         // Problem 6.1
@@ -51,7 +46,7 @@ namespace Problem61
             if (selection == 2)
             {
                 int n = int.Parse(Console.ReadLine());
-                NestedLoops(1,n);
+                NestedLoops(n);
             }
 
             // 3. Комбинация с повторения
