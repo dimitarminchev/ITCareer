@@ -16,10 +16,56 @@ namespace Problem61
             Console.Write("{0} ",array[pos -1]);
         }
 
-        // 2. Вложени цикли и рекурсия
-        private static void NestedLoops(int n)
+        // 3. Комбинации с повторения
+        public static void CombinationRepeat<T>(T[] array, int k)
         {
-            Console.WriteLine("NO SOLUTION");
+            T[] vector = new T[k];
+            CombinationRepeatAlgo(array, vector, 0, 0);
+        }
+        private static void CombinationRepeatAlgo<T>(T[] array, T[] vector, int index, int start)
+        {
+            if (index >= vector.Length)
+            {
+                Console.WriteLine(string.Join(" ", vector));
+            }
+            else
+            {
+                for (int i = start; i < array.Length; i++)
+                {
+                    vector[index] = array[i];
+                    CombinationAlgo(array, vector, index + 1, i);
+                }
+            }
+        }
+
+        // 5. Комбинация без повторения
+        public static void Combination<T>(T[] array, int k)
+        {
+            T[] vector = new T[k];
+            CombinationAlgo(array, vector, 0, 0);
+        }
+        private static void CombinationAlgo<T>(T[] array, T[] vector, int index, int start)
+        {
+            if (index >= vector.Length)
+            {
+                Console.WriteLine(string.Join(" ", vector));
+            }
+            else
+            {
+                for (int i = start; i < array.Length; i++)
+                {
+                    vector[index] = array[i];
+                    CombinationAlgo(array, vector, index + 1, i + 1);
+                }
+            }
+        }
+        
+        // Размяна на елементи
+        public static void Swap<T>(T[] array, int first, int second)
+        {
+            T temp = array[first];
+            array[first] = array[second];
+            array[second] = temp;
         }
 
         // Problem 6.1
@@ -45,32 +91,40 @@ namespace Problem61
             // 2. Вложени цикли и рекурсия
             if (selection == 2)
             {
-                int n = int.Parse(Console.ReadLine());
-                NestedLoops(n);
+                 Console.WriteLine("Not Implemented Yet!");
             }
 
             // 3. Комбинация с повторения
             if (selection == 3)
             {
-                // TODO
-            }
+                int n = int.Parse(Console.ReadLine());
+                int k = int.Parse(Console.ReadLine());
+                int[] array = new int[n];
+                for (int i = 1; i <= n; i++) array[i - 1] = i;
+                CombinationRepeat(array, k);
+            } 
 
             // 4. Ханойски кули
             if (selection == 4)
             {
-                // TODO
+                Console.WriteLine("Not Implemented Yet!");
             }
 
             // 5. Комбинации без повторения
             if (selection == 5)
             {
-                // TODO
+                int n = int.Parse(Console.ReadLine());
+                int k = int.Parse(Console.ReadLine());
+                int[] array = new int[n];
+                for (int i = 1; i <= n; i++) array[i - 1] = i;
+                Combination(array, k);
+                
             }
 
             // 6. Свързани масиви в матрица
             if (selection == 6)
             {
-                // TODO
+                Console.WriteLine("Not Implemented Yet!");
             }
         }
     }
