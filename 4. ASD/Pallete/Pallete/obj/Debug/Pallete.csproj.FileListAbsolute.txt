@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\Pallete\Pallete\bin\Debug\Pallete.exe.config
+C:\Users\user\source\repos\Pallete\Pallete\bin\Debug\Pallete.exe
+C:\Users\user\source\repos\Pallete\Pallete\bin\Debug\Pallete.pdb
+C:\Users\user\source\repos\Pallete\Pallete\obj\Debug\Pallete.csprojResolveAssemblyReference.cache
+C:\Users\user\source\repos\Pallete\Pallete\obj\Debug\Pallete.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Pallete\Pallete\obj\Debug\Pallete.exe
+C:\Users\user\source\repos\Pallete\Pallete\obj\Debug\Pallete.pdb
