@@ -24,8 +24,10 @@ namespace TrainsSkeleton {
             Count++;
         }
 
-        internal void AddFront(T item) {
-            if (Capacity == Count) {
+        internal void AddFront(T item)
+        {
+            if (Capacity == Count)
+            {
                 Capacity *= 2;
                 Array.Resize(ref list, Capacity);
             }
