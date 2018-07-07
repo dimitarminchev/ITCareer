@@ -122,17 +122,16 @@ namespace Problem61
         }
 
         private static void Loop() {
-            for (int i = 1; i <= num; i++) {
-                arr[cNum] = i;
-                if (cNum == num - 1) {
-                    Console.WriteLine(string.Join(" ", arr));
-                }
-                else {
-                    cNum++;
-                    Loop();
-                }
+            if (arr[cNum] < 1 || arr[cNum] > num) arr[cNum] = 1;
+            if (cNum == num - 1)
+                Console.WriteLine(string.Join(" ", arr));
+            else {
+                cNum++;
+                Loop();
             }
-            cNum--;
+            arr[cNum]++;
+            if (arr[cNum] <= num) Loop();
+            else cNum--;
         }
     }
 }
