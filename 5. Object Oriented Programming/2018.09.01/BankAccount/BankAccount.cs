@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Demo1
+﻿namespace Bank
 {
+    // Банкова сметка
     public class BankAccount
     {
         // Сметка
@@ -15,11 +10,13 @@ namespace Demo1
             get { return this.balance; }
             set { this.balance = value; }
         }
+
         // Конструктор
         public BankAccount(decimal amount = 0)
         {
             this.balance = amount;
         }
+
         // Внасяне на пари по сметка
         public void Deposit(decimal cash)
         {
