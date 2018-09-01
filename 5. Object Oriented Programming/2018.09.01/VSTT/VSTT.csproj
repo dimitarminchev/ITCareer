@@ -4,12 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D60C2510-342A-47D8-8784-DD173FF1F0E7}</ProjectGuid>
+    <ProjectGuid>{2540E01E-7A58-48F2-AAC8-BBFBB2DCE475}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>VisualStudioTeamTests</RootNamespace>
-    <AssemblyName>VisualStudioTeamTests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>VSTT</RootNamespace>
+    <AssemblyName>VSTT</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

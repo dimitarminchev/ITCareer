@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VisualStudioTeamTests
+namespace VSTT
 {
     // Банкова сметка
     public class Account
@@ -13,7 +13,7 @@ namespace VisualStudioTeamTests
         private decimal balance;
         public decimal Balance
         {
-            get { return this.balance;  }
+            get { return this.balance; }
             set { this.balance = value; }
         }
 
@@ -33,7 +33,7 @@ namespace VisualStudioTeamTests
         public void Transfer(Account destination, decimal amount)
         {
             this.balance -= amount;
-            destination.balance += amount; 
+            destination.balance += amount;
         }
     }
 }
