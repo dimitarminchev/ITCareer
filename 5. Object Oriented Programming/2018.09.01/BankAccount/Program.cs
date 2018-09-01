@@ -7,7 +7,7 @@ namespace Bank
         // Пример за компонентно тестване
         static void Main(string[] args)
         {
-            Console.WriteLine("Unit Test Sample");           
+            Console.WriteLine("NUnit Test Sample");           
         }
     }
 }
