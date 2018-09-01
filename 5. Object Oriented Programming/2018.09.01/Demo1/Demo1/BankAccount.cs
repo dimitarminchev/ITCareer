@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo1
+{
+    public class BankAccount
+    {
+        // Сметка
+        private decimal balance;
+        public decimal Balance
+        {
+            get { return this.balance; }
+            set { this.balance = value; }
+        }
+        // Конструктор
+        public BankAccount(decimal amount = 0)
+        {
+            this.balance = amount;
+        }
+        // Внасяне на пари по сметка
+        public void Deposit(decimal cash)
+        {
+            this.balance += cash;
+        }
+    }
+}
