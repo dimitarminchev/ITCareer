@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Axe
+namespace Axes
 {
     // Axe durability drop with 5 
     public class Axe
