@@ -42,6 +42,22 @@ public void TestInit() { ... }
 public void TestCleanUp() { ... }
 ```
 
+## AAA = Arrange + Act + Assert
+```
+[Test] 
+public void DespositMoneyTest()
+{
+	// Arrange
+	BankAccount bank = new BankAccount();
+
+	// Act
+	bank.Deposit(50);
+
+	// Assert
+	Assert.IsTrue(bank.Balance == 50);
+}
+```
+
 ## Твърдения
 1. Условно 
 ```
