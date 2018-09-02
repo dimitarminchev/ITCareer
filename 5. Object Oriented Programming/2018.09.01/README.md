@@ -59,27 +59,12 @@ public void DespositMoneyTest()
 ```
 
 ## Твърдения
-1. Условно 
-```
-Assert.IsTrue(bool condition, string message);
-```
-2. Сравнително 
-```
-Assert.AreEqual(expected value, actual value);
-```
-3. Проверка на изключение
-```
-Assert.Throws(Type expectedExceptionType, TestDelegate code);
-```
-4. Низово
-```
-StringAssert.Contains(string expected, string actual);
-```
-5. Колекция
-```
-CollectionAssert.Contains(IEnumerable expected, object actual);
-```
-6. Файлово 
-```
-FileAssert.AreEqual(FileInfo expected, FileInfo actual);
-```
+
+| № | Твърдениe    | Синтаксис                                                       |
+|---|--------------|-----------------------------------------------------------------|
+| 1 | Условно      | Assert.IsTrue(bool condition, string message);                  |
+| 2 | Сравнително  | Assert.AreEqual(expected value, actual value);                  |
+| 3 | Изключение   | Assert.Throws(Type expectedExceptionType, TestDelegate code);   |
+| 4 | Низово       | StringAssert.Contains(string expected, string actual);          |
+| 5 | Колекция     | CollectionAssert.Contains(IEnumerable expected, object actual); |
+| 6 | Файлово      | FileAssert.AreEqual(FileInfo expected, FileInfo actual);        |
