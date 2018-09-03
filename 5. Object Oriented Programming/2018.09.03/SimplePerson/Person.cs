@@ -28,7 +28,7 @@ namespace SimplePerson
         // Конструктор
         public Person(string name = "Никой", int age = 0)
         {
-            this.accounts =  new List<BankAccount>();
+            this.accounts = new List<BankAccount>();
             this.name = name;
             this.age = age;
         }
