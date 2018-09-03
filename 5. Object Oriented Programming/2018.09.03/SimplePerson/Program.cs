@@ -10,15 +10,12 @@ namespace SimplePerson
     {
         static void Main(string[] args)
         {
-            // Създаваме обект инстанция на класа "Човечето"
-            Person firstPerson = new Person();
-
-            // Задаваме свойствата на обекта
-            firstPerson.Name = "Гошо";
-            firstPerson.Age = 15;
-
-            // Изпълняваме метод от класа
-            firstPerson.IntroduceYourself();
+            Person person = new Person("Гошо", 18);
+            person.Accounts.Add(new BankAccount() { ID = 23, Balance = 10 } );
+            person.Accounts.Add(new BankAccount() { ID = 42, Balance = 25 });
+            person.Accounts.Add(new BankAccount() { ID = 32, Balance = 17 });
+            person.Introduce();
+            Console.WriteLine("Обща сума по банкови сметки = {0}", person.GetBalance());
         }
     }
 }

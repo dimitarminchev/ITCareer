@@ -6,32 +6,53 @@ using System.Threading.Tasks;
 
 namespace SimplePerson
 {
-    // Човечето
+    // Човек
     public class Person
     {
-        // Поле: Име
+        // Име
         private string name;
-        // реализираме свойство на полето name
         public String Name
         { 
             get { return name; }
             set { name = value; }
         }
 
-        // Поле: Възраст
+        // Възраст
         private int age;
-        // реализираме свойство на полето age
         public int Age
         { 
             get { return age; }
             set { age = value; }
         }
 
-        // Най-неввероятния начин да се представиш
-        public void IntroduceYourself()
+        // Конструктор
+        public Person(string name = "Никой", int age = 0)
+        {
+            this.accounts =  new List<BankAccount>();
+            this.name = name;
+            this.age = age;
+        }
+
+        // Представяне
+        public void Introduce()
         {
             Console.WriteLine("Здравейте! Аз съм {0} и съм на {1} години.", name, age);
         }
+
+        // Информация за банковите сметки
+        private List<BankAccount> accounts;
+        public List<BankAccount> Accounts
+        {
+            get { return this.accounts; }
+            set { this.accounts = value; }
+        }
+
+        // Информация за общата сума по банковите сметки 
+        public double GetBalance()
+        {
+            return accounts.Sum(element => element.Balance);
+        }
+
     }
 
 }
