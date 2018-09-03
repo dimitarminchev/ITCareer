@@ -15,4 +15,4 @@ Userfull Reading:
 Пример: App2Tests.UnitTest2
 
 # Дефиниране на класове
-Пример: [SimplePerson](SimplePerson)
+Примери: [SimplePerson](SimplePerson), [SimpleRational](SimpleRational)

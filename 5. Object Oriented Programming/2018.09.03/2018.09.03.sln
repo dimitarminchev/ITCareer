@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App2Tests", "App2Tests\App2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePerson", "SimplePerson\SimplePerson.csproj", "{719671ED-85DB-4239-A31C-93E669F09AD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRational", "SimpleRational\SimpleRational.csproj", "{74B405DA-2344-4CCB-B62A-3315BE92E283}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{719671ED-85DB-4239-A31C-93E669F09AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{719671ED-85DB-4239-A31C-93E669F09AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{719671ED-85DB-4239-A31C-93E669F09AD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74B405DA-2344-4CCB-B62A-3315BE92E283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74B405DA-2344-4CCB-B62A-3315BE92E283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74B405DA-2344-4CCB-B62A-3315BE92E283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74B405DA-2344-4CCB-B62A-3315BE92E283}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
