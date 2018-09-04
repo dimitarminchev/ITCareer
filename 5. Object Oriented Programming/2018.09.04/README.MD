@@ -11,7 +11,7 @@ class List<T>
 }
 ```
 Примери 3.1: 
-- Problem 1. Кутия с T
+- [Problem 1. Кутия с T](31_1)
 - Problem 2. Кутия за всичко
 - Problem 3. Универсална кутия за низове
 - Problem 4. Универсална кутия за цели числа
@@ -54,9 +54,9 @@ public void MyMethod<T>() where T : BaseClass
 public void MyMethod<T,U>() where T : U
 ```
 Примери 3.3: 
-Problem 1. Универсална везна
-Problem 2. Подобрен списък
-Problem 3. Сортиране на подобрения списък
-Problem 4. *Обхождане на подобрения списък
-Problem 11. Tuple
-Problem 12. Threeuple
+- Problem 1. Универсална везна
+- Problem 2. Подобрен списък
+- Problem 3. Сортиране на подобрения списък
+- Problem 4. *Обхождане на подобрения списък
+- Problem 11. Tuple
+- Problem 12. Threeuple
