@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorFiguresTests", "ColorF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figures", "Figures\Figures.csproj", "{71019F9D-89B6-4916-9950-8E4C98681EBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars", "Cars\Cars.csproj", "{D7899C40-B4C5-4179-AA07-6D8B6BC9EE31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{71019F9D-89B6-4916-9950-8E4C98681EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71019F9D-89B6-4916-9950-8E4C98681EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71019F9D-89B6-4916-9950-8E4C98681EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7899C40-B4C5-4179-AA07-6D8B6BC9EE31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7899C40-B4C5-4179-AA07-6D8B6BC9EE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7899C40-B4C5-4179-AA07-6D8B6BC9EE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7899C40-B4C5-4179-AA07-6D8B6BC9EE31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
