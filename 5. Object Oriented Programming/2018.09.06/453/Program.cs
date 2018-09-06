@@ -15,6 +15,7 @@ namespace _453
             Console.WriteLine(text);
             Console.ResetColor();
         }
+
         public static void Main()
         {
             var sAc = new SitesAndCalls();
