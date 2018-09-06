@@ -10,14 +10,28 @@ namespace _531
     {
         static void Main(string[] args)
         {
+            Shape circle = new Circle(2.2);
+            Shape rectangle = new Rectangle(2, 5);
+
+            var listOfShapes = new List<Shape>();
+            listOfShapes.Add(circle);
+            listOfShapes.Add(rectangle);
+
+            foreach (var shape in listOfShapes)
+            {
+                Console.WriteLine(shape.Draw());
+                Console.WriteLine(shape.CalculatePerimeter());
+                Console.WriteLine(shape.CalculateArea());
+            }
+/*
             // Circle
-            Circle circle = new Circle(15);
-            Console.WriteLine("Circle: Area = {0}, Perimeter = {1}",
-                                circle.CalculateArea(), circle.CalculatePerimeter());
+            Circle circle = new Circle(2.2);
+            Console.WriteLine("Circle: Area = {0}, Perimeter = {1}", circle.CalculateArea(), circle.CalculatePerimeter());
+            
             // Rectangle
-            Rectangle rectangle = new Rectangle(5,7);
-            Console.WriteLine("Rectangle: Area = {0}, Perimeter = {1}",
-                                rectangle.CalculateArea(), rectangle.CalculatePerimeter());
+            Rectangle rectangle = new Rectangle(2.5);
+            Console.WriteLine("Rectangle: Area = {0}, Perimeter = {1}",rectangle.CalculateArea(), rectangle.CalculatePerimeter());
+*/
         }
     }
 }

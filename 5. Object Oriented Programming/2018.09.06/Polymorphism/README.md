@@ -23,3 +23,5 @@ public class Student : Person
 # Примери:
 - [521](521) = MathOperations
 - [522](522) = Animals
+- [531](531) = Shapes
+- [541](541) = Animals 2

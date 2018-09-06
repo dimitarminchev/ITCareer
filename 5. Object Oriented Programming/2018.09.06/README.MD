@@ -32,3 +32,5 @@ public class Student : Person
 ## Примери:
 - [521](Polymorphism/521) = MathOperations
 - [522](Polymorphism/522) = Animals
+- [531](Polymorphism/531) = Shapes
+- [541](Polymorphism/541) = Animals 2
