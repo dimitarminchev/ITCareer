@@ -10,6 +10,11 @@ namespace _471
     {
         static void Main(string[] args)
         {
+            Animal cat = new Cat("Маца", 12);
+            Animal dog = new Dog("Шаро", 13);
+            Console.WriteLine(cat.MakeNoise());
+            Console.WriteLine(dog.MakeNoise());
         }
     }
+    
 }
