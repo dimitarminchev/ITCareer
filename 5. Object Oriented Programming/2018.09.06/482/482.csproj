@@ -43,8 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Citizen.cs" />
+    <Compile Include="IBirthday.cs" />
+    <Compile Include="IIdentifiable.cs" />
+    <Compile Include="Pet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Robot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

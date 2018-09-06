@@ -43,8 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Citizen.cs" />
+    <Compile Include="IBirthday.cs" />
+    <Compile Include="IBuyer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rebel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
