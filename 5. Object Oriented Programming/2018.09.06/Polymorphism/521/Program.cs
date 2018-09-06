@@ -10,6 +10,11 @@ namespace _521
     {
         static void Main(string[] args)
         {
+            MathOperations mo = new MathOperations();
+            Console.WriteLine("{0}", mo.Add(1, 2));
+            Console.WriteLine("{0}", mo.Add(1.1, 2.2, 3.3));
+            Console.WriteLine("{0}", mo.Add(1m, 2m, 3m));
         }
+
     }
 }
