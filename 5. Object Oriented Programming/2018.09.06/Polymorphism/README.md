@@ -21,5 +21,5 @@ public class Student : Person
 }
 ```
 # Примери:
-- 521. MathOperations
-- 522. Animals
+- [521](521) = MathOperations
+- [522](522) = Animals
