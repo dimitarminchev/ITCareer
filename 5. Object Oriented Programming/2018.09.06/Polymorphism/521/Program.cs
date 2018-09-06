@@ -11,9 +11,9 @@ namespace _521
         static void Main(string[] args)
         {
             MathOperations mo = new MathOperations();
-            Console.WriteLine("{0}", mo.Add(1, 2));
-            Console.WriteLine("{0}", mo.Add(1.1, 2.2, 3.3));
-            Console.WriteLine("{0}", mo.Add(1m, 2m, 3m));
+            Console.WriteLine(mo.Add(2, 3));
+            Console.WriteLine(mo.Add(2.2, 3.3, 5.5));
+            Console.WriteLine(mo.Add(2.2m, 3.3m, 4.4m));
         }
 
     }
