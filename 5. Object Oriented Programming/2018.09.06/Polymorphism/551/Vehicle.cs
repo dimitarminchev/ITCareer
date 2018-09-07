@@ -6,12 +6,38 @@ using System.Threading.Tasks;
 
 namespace _551
 {
-    public abstract class Vehicle
+    public class Vehicle : IVehicle
     {
-        public double fuel_quantity;
-        public double liters_per_km;
+        // Fuel Quantity
+        protected double fuel;
+        public double Fuel
+        {
+            get
+            {
+                return this.fuel;
+            }
+        }
 
-        public abstract void Drive(double distance);
-        public abstract void Refuel(double liters);
+        // Liters per km
+        protected double liters;
+        public double Liters
+        {
+            get
+            {
+                return this.liters;
+            }
+        }
+
+        // Implement Interface Method
+        public virtual void Drive(double distance)
+        {
+            this.fuel -= distance * this.liters;
+        }
+
+        // Implement Interface Method
+        public virtual void Refuel(double liters)
+        {
+            this.fuel += liters;
+        }
     }
 }

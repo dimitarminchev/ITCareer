@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace _551
 {
+    // Vehicle Interface
     public interface IVehicle
     {
         void Drive(double distance);

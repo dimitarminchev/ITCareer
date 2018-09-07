@@ -31,8 +31,8 @@ namespace _551
                     if (line[1] == "Truck") truck.Refuel(double.Parse(line[2]));
                 }
             }
-            Helper.WriteLine($"Car: {car.fuel_quantity:f2}");
-            Helper.WriteLine($"Truck: {truck.fuel_quantity:f2}");
+            Helper.WriteLine($"Car: {car.Fuel:f2}");
+            Helper.WriteLine($"Truck: {truck.Fuel:f2}");
         }
     }
 }

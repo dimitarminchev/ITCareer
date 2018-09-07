@@ -8,6 +8,7 @@ namespace _551
 {
     public static class Helper
     {
+        // Replaces Console.WriteLine
         public static void WriteLine(object text)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
