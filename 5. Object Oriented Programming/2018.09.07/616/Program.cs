@@ -18,9 +18,8 @@ namespace _616
             Lake lake = new Lake(rocks);
 
             // Output
-            foreach (var item in lake)
-                Console.Write($"{item} ");
-
+            Console.WriteLine(string.Join(", ", lake));
+            Console.ReadKey();
         }
     }
 }
