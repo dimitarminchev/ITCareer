@@ -35,3 +35,5 @@ public class Student : Person
 - [531](Polymorphism/531) = Shapes
 - [541](Polymorphism/541) = Animals 2
 - [551](Polymorphism/551) = Vehicle
+- [561](Polymorphism/561) = Превозни средства II
+- [571](Polymorphism/571) = Ферма за животни
