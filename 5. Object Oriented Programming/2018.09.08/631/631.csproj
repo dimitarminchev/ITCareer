@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01894108-9BF7-4E93-811A-F0C93A0F5693}</ProjectGuid>
+    <ProjectGuid>{44D16546-AF9B-45D5-A528-1EC0C03E7AA7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_631</RootNamespace>
     <AssemblyName>631</AssemblyName>
@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hacker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Spy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
