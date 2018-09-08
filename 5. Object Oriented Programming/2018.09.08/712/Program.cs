@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _712
 {
@@ -6,7 +7,9 @@ namespace _712
     {
         static void Main(string[] args)
         {
-            Console.ReadLine().Split(' ').Action(a => Console.WriteLine("Sir " + a));
+            Action<string> knight = n => Console.WriteLine($"Sir {n}");
+            string[] names = Console.ReadLine().Split().ToArray();
+            foreach (var name in names) knight(name);
         }
     }
 }
