@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _713
 {
@@ -6,7 +7,15 @@ namespace _713
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Console.ReadLine().Split(' ').Min(f => f));
+            Func<int[], int> Min = n =>
+            {
+                int min = n[0];
+                foreach (var number in n) if (number < min) min = number;
+                return min;
+            };
+
+            int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            Console.WriteLine(Min(numbers));
         }
     }
 }
