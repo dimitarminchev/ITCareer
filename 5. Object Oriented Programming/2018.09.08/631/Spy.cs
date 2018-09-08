@@ -16,8 +16,6 @@ namespace _631
 
             FieldInfo[] fields = investigatedClass.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static).ToArray();
             StringBuilder toReturn = new StringBuilder();
-
-            
             
             toReturn.AppendLine("Class under investigation: " + investigatedClass.Name);
             foreach (var field in fields.Where(f => fieldsToInvestigate.Contains(f.Name)))

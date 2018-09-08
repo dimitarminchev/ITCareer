@@ -12,8 +12,18 @@ namespace _631
         static void Main(string[] args)
         {
             Spy spy = new Spy();
-            Console.WriteLine(spy.StealFieldInfo("Hacker.Hacker", new string[] { "username", "password" }));
-
+            Console.WriteLine
+            (
+                spy.StealFieldInfo
+                (
+                    "Hacker.Hacker", 
+                    new string[] 
+                    {
+                        "username",
+                        "password"
+                    }
+                )
+            );
         }
     }
 }

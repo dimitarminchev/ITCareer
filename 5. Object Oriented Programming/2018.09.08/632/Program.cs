@@ -13,8 +13,6 @@ namespace _632
         {
             Spy spy = new Spy();
             Console.WriteLine(spy.AnalyzeAccessModifiers("Hacker.Hacker"));
-            
-           
         }
     }
 }

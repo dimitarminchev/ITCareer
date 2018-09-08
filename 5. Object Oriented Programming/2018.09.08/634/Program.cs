@@ -12,8 +12,7 @@ namespace _634
         static void Main(string[] args)
         {
             Spy spy = new Spy();
-            Console.WriteLine(spy.CollectGettersAndSetters("Hacker.Hacker"));
-           
+            Console.WriteLine(spy.CollectGettersAndSetters("Hacker.Hacker"));           
         }
     }
 }
