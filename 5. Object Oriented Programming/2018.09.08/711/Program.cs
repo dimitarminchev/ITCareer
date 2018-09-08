@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _711
 {
@@ -6,7 +7,9 @@ namespace _711
     {
         static void Main(string[] args)
         {
-            Console.ReadLine().Split(' ').Action(a => Console.WriteLine(a));
+            Action<string> printer = n => Console.WriteLine(n);
+            string[] names = Console.ReadLine().Split().ToArray();
+            foreach (var name in names) printer(name);
         }
     }
 }
