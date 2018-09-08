@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace _633
 {
@@ -10,6 +11,10 @@ namespace _633
     {
         static void Main(string[] args)
         {
+            Spy spy = new Spy();
+            Console.WriteLine(spy.AnalyzeAccessModifiers("Hacker.Hacker"));
+            
+           
         }
     }
 }
