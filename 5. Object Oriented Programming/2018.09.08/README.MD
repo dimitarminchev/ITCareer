@@ -99,6 +99,25 @@ msg => Console.WriteLine(msg);
 | () => 42      | static int Func() { return 42; }              |
 | (x, y) => x+y | static int Func(int x, int y) { return x+y; } |
 
+### LINQ & Collcetions
+```
+ToArray(), ToList()
+Select(), Where(), OrderBy()
+Min(), Max(), Sum(), Average(), Count()
+First(), Last() , Single()
+Skip(), Take()
+Distinct() 
+Reverse()
+Concat()
+```
+
+### Lab
+- [721](721) = Сортиране на нечетни числа
+- [722](722) = Сбор на числа
+- [723](723) = Брой думи  главна буква
+- [724](724) = Начисляване не  ДДС(VAT)
+- [725](725) = Филтриране по възраст
+
 ### Упражнение
 - [711](711) = Action 
 - [712](712) = Рицари на честта
