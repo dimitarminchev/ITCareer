@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _715
 {
@@ -6,25 +7,32 @@ namespace _715
     {
         static void Main(string[] args)
         {
-            var list = Console.ReadLine().Split(' ').Select(int.Parse);
-            string input;
-            while ((input = Console.ReadLine()) != "end")
+            int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
+            Func<int[], int[]> Add = n => n.Select(x => x += 1).ToArray();
+            Func<int[], int[]> Multiply = n => n.Select(x => x *= 2).ToArray();
+            Func<int[], int[]> Subtract = n => n.Select(x => x -= 1).ToArray();
+            Action<int[]> Print = n => Console.WriteLine(string.Join(" ", n));
+
+            string command = Console.ReadLine();
+            while (command != "end")
             {
-                switch (input)
+                switch (command)
                 {
-                    case "print":
-                        Console.WriteLine(string.Join(" ", list));
-                        break;
                     case "add":
-                        list = list.Select(s => ++s);
-                        break;
-                    case "substract":
-                        list = list.Select(s => --s);
+                        numbers = Add(numbers);
                         break;
                     case "multiply":
-                        list = list.Select(s => s *= 2);
+                        numbers = Multiply(numbers);
+                        break;
+                    case "subtract":
+                        numbers = Subtract(numbers);
+                        break;
+                    default:
+                        Print(numbers);
                         break;
                 }
+                command = Console.ReadLine();
             }
         }
     }
