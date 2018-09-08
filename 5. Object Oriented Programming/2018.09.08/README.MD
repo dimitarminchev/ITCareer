@@ -99,6 +99,18 @@ msg => Console.WriteLine(msg);
 | () => 42      | static int Func() { return 42; }              |
 | (x, y) => x+y | static int Func(int x, int y) { return x+y; } |
 
+### LINQ & Collcetions
+```
+ToArray(), ToList()
+Select(), Where(), OrderBy()
+Min(), Max(), Sum(), Average(), Count()
+First(), Last() , Single()
+Skip(), Take()
+Distinct() 
+Reverse()
+Concat()
+```
+
 ### Упражнение
 - [711](711) = Action 
 - [712](712) = Рицари на честта
