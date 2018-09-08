@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _714
 {
@@ -6,17 +7,17 @@ namespace _714
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine().Split(' ');
-            var oddEven = Console.ReadLine();
-            Console.WriteLine
-            (
-                string.Join(" ", Enumerable.Predicate
-                (
-                    int.Parse(input[0]),
-                    int.Parse(input[1]),
-                    f => f % 2 == (oddEven == "even" ? 0 : 1)
-                ))
-            );
+            int[] borders = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            string oddOrEven = Console.ReadLine();
+
+            Predicate<int> isOddOrEven = n => n % 2 == (oddOrEven == "Even" ? 0 : 1);
+
+
+            for (int i = borders[0]; i <= borders[1]; i++)
+            {
+                if (isOddOrEven(i)) Console.Write(i + " ");
+            }
+            Console.WriteLine();
         }
     }
 }
