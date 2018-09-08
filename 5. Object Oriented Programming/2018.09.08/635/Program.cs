@@ -14,7 +14,7 @@ namespace _635
             Type classToHarvest = typeof(RichSoilLands);
             FieldInfo[] fields;
             string command = Console.ReadLine();
-            while(command!="HARVEST")
+            while (command != "HARVEST")
             {
                 switch (command)
                 {
@@ -22,20 +22,20 @@ namespace _635
                         fields = classToHarvest.GetFields(BindingFlags.NonPublic | BindingFlags.Instance).Where(x => x.Attributes == FieldAttributes.Family).ToArray();
                         break;
                     case "private":
-                        fields = classToHarvest.GetFields(BindingFlags.NonPublic | BindingFlags.Instance).Where(x =>x.Attributes == FieldAttributes.Private).ToArray();
+                        fields = classToHarvest.GetFields(BindingFlags.NonPublic | BindingFlags.Instance).Where(x => x.Attributes == FieldAttributes.Private).ToArray();
                         break;
                     case "public":
-                        fields  = classToHarvest.GetFields(BindingFlags.Public | BindingFlags.Instance);
+                        fields = classToHarvest.GetFields(BindingFlags.Public | BindingFlags.Instance);
                         break;
                     default:
                         fields = classToHarvest.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Static);
                         break;
                 }
-                
-                foreach(var field in fields)
+
+                foreach (var field in fields)
                 {
                     string fieldAttribute = field.Attributes.ToString();
-                    if (field.Attributes == FieldAttributes.Family) fieldAttribute = "Protected"; 
+                    if (field.Attributes == FieldAttributes.Family) fieldAttribute = "Protected";
                     Console.WriteLine($"{fieldAttribute} {field.FieldType.Name} {field.Name}");
                 }
                 command = Console.ReadLine();

@@ -16,8 +16,8 @@ namespace _631
             (
                 spy.StealFieldInfo
                 (
-                    "Hacker.Hacker", 
-                    new string[] 
+                    "Hacker.Hacker",
+                    new string[]
                     {
                         "username",
                         "password"

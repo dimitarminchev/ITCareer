@@ -1,12 +1,17 @@
 ﻿using System;
 
-namespace _715 {
-    class Program {
-        static void Main(string[] args) {
+namespace _715
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
             var list = Console.ReadLine().Split(' ').Select(int.Parse);
             string input;
-            while((input = Console.ReadLine()) != "end")
-                switch(input) {
+            while ((input = Console.ReadLine()) != "end")
+            {
+                switch (input)
+                {
                     case "print":
                         Console.WriteLine(string.Join(" ", list));
                         break;
@@ -20,6 +25,7 @@ namespace _715 {
                         list = list.Select(s => s *= 2);
                         break;
                 }
+            }
         }
     }
 }

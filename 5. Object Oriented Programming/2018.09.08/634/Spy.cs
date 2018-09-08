@@ -16,7 +16,7 @@ namespace _634
 
             FieldInfo[] fields = investigatedClass.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static).ToArray();
             StringBuilder toReturn = new StringBuilder();
-            
+
             toReturn.AppendLine("Class under investigation: " + investigatedClass.Name);
             foreach (var field in fields.Where(f => fieldsToInvestigate.Contains(f.Name)))
             {
@@ -34,15 +34,15 @@ namespace _634
             MethodInfo[] publicSetters = analyzeClass.GetMethods(BindingFlags.Public | BindingFlags.Instance);
 
             StringBuilder toReturn = new StringBuilder();
-            foreach(var field in publicFields)
+            foreach (var field in publicFields)
             {
                 toReturn.AppendLine($"{field.Name} must be private!");
             }
-            foreach(var getter in privateGetters.Where(x => x.Name.StartsWith("get")))
+            foreach (var getter in privateGetters.Where(x => x.Name.StartsWith("get")))
             {
                 toReturn.AppendLine($"{getter.Name} have to be public!");
             }
-            foreach(var setter in publicSetters.Where(x=>x.Name.StartsWith("set")))
+            foreach (var setter in publicSetters.Where(x => x.Name.StartsWith("set")))
             {
                 toReturn.AppendLine($"{setter.Name} have to be private!");
             }
@@ -52,12 +52,12 @@ namespace _634
         public string RevealPrivateMethods(string className)
         {
             Type classToReveal = Type.GetType(className);
-            MethodInfo[] privateMethods = classToReveal.GetMethods(BindingFlags.Instance| BindingFlags.NonPublic);
+            MethodInfo[] privateMethods = classToReveal.GetMethods(BindingFlags.Instance | BindingFlags.NonPublic);
 
             StringBuilder toReturn = new StringBuilder();
             toReturn.AppendLine($"All Private Methods of Class: {classToReveal.Name}");
             toReturn.AppendLine($"Base class: {classToReveal.BaseType.Name}");
-            foreach(var method in privateMethods)
+            foreach (var method in privateMethods)
             {
                 toReturn.AppendLine(method.Name);
             }
@@ -74,11 +74,11 @@ namespace _634
             MethodInfo[] setters = gettersAndSetters.Where(x => x.Name.StartsWith("set")).ToArray();
 
             StringBuilder sb = new StringBuilder();
-            foreach(var getter in getters)
+            foreach (var getter in getters)
             {
                 sb.AppendLine($"{getter.Name} will return {getter.ReturnType}");
             }
-            foreach(var setter in setters)
+            foreach (var setter in setters)
             {
                 sb.AppendLine($"{setter.Name} will set field of {setter.GetParameters().First().ParameterType}");
             }

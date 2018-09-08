@@ -16,7 +16,7 @@ namespace _632
 
             FieldInfo[] fields = investigatedClass.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static).ToArray();
             StringBuilder toReturn = new StringBuilder();
-            
+
             toReturn.AppendLine("Class under investigation: " + investigatedClass.Name);
             foreach (var field in fields.Where(f => fieldsToInvestigate.Contains(f.Name)))
             {
@@ -36,15 +36,15 @@ namespace _632
             Object instance = Activator.CreateInstance(analyzeClass);
 
             StringBuilder toReturn = new StringBuilder();
-            foreach(var field in publicFields)
+            foreach (var field in publicFields)
             {
                 toReturn.AppendLine($"{field.Name} must be private!");
             }
-            foreach(var getter in privateGetters.Where(x => x.Name.StartsWith("get")))
+            foreach (var getter in privateGetters.Where(x => x.Name.StartsWith("get")))
             {
                 toReturn.AppendLine($"{getter.Name} have to be public!");
             }
-            foreach(var setter in publicSetters.Where(x=>x.Name.StartsWith("set")))
+            foreach (var setter in publicSetters.Where(x => x.Name.StartsWith("set")))
             {
                 toReturn.AppendLine($"{setter.Name} have to be private!");
             }

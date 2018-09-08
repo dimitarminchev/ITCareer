@@ -1,8 +1,11 @@
 ﻿using System;
 
-namespace _719 {
-    class Program {
-        static void Main(string[] args) {
+namespace _719
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
             var num = int.Parse(Console.ReadLine());
             var arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             var index = arr.Length - 1;
