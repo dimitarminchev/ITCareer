@@ -10,7 +10,7 @@
 - blog: http://www.minchev.eu
 
 ## Учебен план
-1. [Увод в програмирането](1. Introduction to Programming)
+1. [Увод в програмирането](1.%20Introduction%20to%20Programming)
 2. [Програмиране](2. Programming)
 3. [Увод в обектно-ориентирано програмиране](3. Introduction to Object Oriented Programming)
 4. [Увод в Алгоритмите и структурите от данни](4. Introduction to Algorithms and Data Structures)
