@@ -11,14 +11,12 @@
 
 ## Учебен план
 1. [Увод в програмирането](1.%20Introduction%20to%20Programming)
-2. [Програмиране](2. Programming)
-3. [Увод в обектно-ориентирано програмиране](3. Introduction to Object Oriented Programming)
-4. [Увод в Алгоритмите и структурите от данни](4. Introduction to Algorithms and Data Structures)
-5. [Обектно-ориентирано програмиране](5. Object Oriented Programming)
-6. [Бази данни](6. Databases)
+2. [Програмиране](2.%20Programming)
+3. [Увод в обектно-ориентирано програмиране](3.%20Introduction%20to%20Object%20Oriented%20Programming)
+4. [Увод в Алгоритмите и структурите от данни](4.%20Introduction%20to%20Algorithms%20and%20Data%20Structures)
+5. [Обектно-ориентирано програмиране](5.%20Object%20Oriented%20Programming)
+6. [Бази данни](6.%20Databases)
 
 ## Допълнително информация
 Фондация "Софтуерен университет": http://softuni.foundation/projects/applied-software-developer-profession/
-
-
 
