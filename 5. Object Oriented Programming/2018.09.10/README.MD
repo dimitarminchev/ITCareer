@@ -70,15 +70,16 @@ int readByte = memoryStream.ReadByte();
 ```
 **Network Stream**
 ```
-var tcpListener = new TcpListener(IPAddress.Any, PortNumber);
+var tcpListener = new TcpListener(IPAddress.Parse("127.0.0.1"), 22);
 tcpListener.Start();
+NetworkStream stream = tcpListener.AcceptTcpClient().GetStream();
 
-NetworkStream stream = tcpListener.AcceptTcpClient().GetStream()
-stream.Read(request, 0, 4096);
+byte[] request = new byte[1024];
+stream.Read(request, 0, request.Length);
 Console.WriteLine(Encoding.UTF8.GetString(request));
 
-byte[] html = Encoding.UTF8.GetBytes("Hello World");
-stream.Write(html, 0, html.Length);
+byte[] response = Encoding.UTF8.GetBytes("Hello World");
+stream.Write(response, 0, response.Length);
 ```
 ## Упражнения
 - [1021](1021) = Копиране на двоичен файл
