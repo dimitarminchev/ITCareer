@@ -44,7 +44,6 @@ namespace _1022
                         byte[] buffer = new byte[destination.Length];
                         destination.Read(buffer, 0, buffer.Length);
                         source.Write(buffer, 0, buffer.Length);
-                        destination.Flush();
                     }
                     Console.WriteLine($"Part [{part}/{parts}]");
                 }
@@ -55,8 +54,8 @@ namespace _1022
         static void Main(string[] args)
         {
             var dir = Environment.CurrentDirectory;
-            var names = Slice("SurfaceBook2.mp4", dir, 5);
-            Assemble(names, $"{dir}\\SurfaceBook2Copy.mp4");
+            var names = Slice("..\\..\\..\\video.mp4", dir, 5);
+            Assemble(names, $"{dir}\\SurfaceBook2.mp4");
         }
     }
 }

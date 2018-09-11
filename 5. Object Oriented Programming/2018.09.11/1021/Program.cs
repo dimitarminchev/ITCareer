@@ -48,7 +48,7 @@ namespace _1021
         // Main
         static void Main(string[] args)
         {
-            if (Copy1("LoremIpsum.txt", "LoremIpsumCopy.txt"))
+            if (Copy1("..\\..\\..\\text.txt", "LoremIpsum.txt"))
             {
                 Console.WriteLine("File Copy Sucesefful.");
             }
