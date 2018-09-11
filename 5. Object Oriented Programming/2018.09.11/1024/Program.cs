@@ -9,16 +9,32 @@ namespace _1024
 {
     class Program
     {
-        // TODO: Fix The Output
+        // Append To Report File
+        static public void AppendToReport(string line)
+        {
+            using (StreamWriter writer = new StreamWriter("report.txt", true))
+            {
+                Console.WriteLine(line);
+                writer.WriteLine(line);
+            }
+        }
+
+        // Directory Listing
         static void Main(string[] args)
         {
             var dir = Environment.CurrentDirectory;
-            DirectoryInfo d = new DirectoryInfo($"{dir}\\..\\..\\..\\");
-            FileInfo[] Files = d.GetFiles("*.*"); 
-            foreach (FileInfo file in Files)
+            DirectoryInfo dirinfo = new DirectoryInfo($"{dir}\\..\\..\\..\\");
+            List<FileInfo> files = dirinfo.GetFiles("*.*").ToList();
+            files = files.OrderBy(file => file.Extension).ThenBy(file => file.Length).ToList();
+            string ext = null;
+            foreach (FileInfo file in files)
             {
-                Console.WriteLine("Name: {0}, Size: {1} KB, Ext: {2}",
-                                  file.Name, file.Length / 1024, file.Extension);
+                if (file.Extension != ext)
+                {
+                    AppendToReport($"{file.Extension}");
+                    ext = file.Extension;
+                }
+                AppendToReport($"--{file.Name} - {file.Length/1024}kb");
             }
         }
     }
