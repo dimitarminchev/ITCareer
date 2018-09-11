@@ -1,16 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _1021
 {
     class Program
     {
-        // Copy
-        public static bool Copy(string _source, string _destination)
+        // File Copy 1
+        public static bool Copy1(String _source, String _destination)
+        {
+            try
+            {
+                using (FileStream source = new FileStream(_source, FileMode.Open))
+                using (FileStream destination = new FileStream(_destination, FileMode.Create))
+                {
+                    byte[] one = new byte[source.Length];
+                    int readed = source.Read(one, 0, one.Length);
+                    destination.Write(one, 0, one.Length);
+                    source.Flush();
+                    destination.Flush();
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        // File Copy 2
+        public static bool Copy2(String _source, String _destination)
         {
             try
             {
@@ -30,13 +48,13 @@ namespace _1021
         // Main
         static void Main(string[] args)
         {
-            if (Copy("LoremIpsum.txt", "LoremIpsum2.txt"))
+            if (Copy1("LoremIpsum.txt", "LoremIpsumCopy.txt"))
             {
-                Console.WriteLine("File Copy Successful");
+                Console.WriteLine("File Copy Sucesefful.");
             }
             else
             {
-                Console.WriteLine("File Copy Error");
+                Console.WriteLine("File Copy Error.");
             }
         }
     }
