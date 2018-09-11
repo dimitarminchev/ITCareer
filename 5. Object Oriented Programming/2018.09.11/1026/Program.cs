@@ -12,30 +12,65 @@ namespace _1026
 {
     class Program
     {
-        // TODO
         static void Main(string[] args)
         {
-            // Transmission Control Protocol Server
             TcpListener server = new TcpListener(IPAddress.Loopback, 8081);
             server.Start();
             while (true)
             {
-                // Transmission Control Protocol Client
                 using (TcpClient client = server.AcceptTcpClient())
-                {
-                    // If Client Connects ...
-                    Console.WriteLine("Connected!");
+                {                    
                     NetworkStream stream = client.GetStream();
-
-                    // Send HTML Page to the Client
                     StreamReader reader = new StreamReader("page.html");
                     byte[] html = Encoding.Unicode.GetBytes(reader.ReadToEnd());
                     stream.Write(html, 0, html.Length);
-
-                    // 500 ms wait
                     Thread.Sleep(500);
                 }
             }         
         }
+        /*   // V2
+             static void Main(string[] args)
+             {
+                 TcpListener server = new TcpListener(IPAddress.Loopback, 8081);
+                 server.Start();
+                 while (true)
+                 {
+                     using (TcpClient client = server.AcceptTcpClient())
+                     {
+                         Console.WriteLine("Connected!");
+                         NetworkStream stream = client.GetStream();
+                         byte[] bytes = new byte[256];
+                         int i = stream.Read(bytes, 0, bytes.Length);
+                         List<string> data = Encoding.ASCII.GetString(bytes, 0, bytes.Length).Split('\n').ToList();
+                         string page = data[0].Split()[1];
+                         switch (page)
+                         {
+                             case "/":
+                                 {
+                                     StreamReader reader = new StreamReader("page.html");
+                                     byte[] html = Encoding.Unicode.GetBytes(reader.ReadToEnd());
+                                     stream.Write(html, 0, html.Length);
+                                     break;
+                                 }
+                             case "/info":
+                                 {
+                                     StreamReader reader = new StreamReader("info.html");
+                                     byte[] html = Encoding.Unicode.GetBytes(reader.ReadToEnd());
+                                     stream.Write(html, 0, html.Length);
+                                     break;
+                                 }
+                             default:
+                                 {
+                                     StreamReader reader = new StreamReader("error.html");
+                                     byte[] html = Encoding.Unicode.GetBytes(reader.ReadToEnd());
+                                     stream.Write(html, 0, html.Length);
+                                     break;
+                                 }
+                         }
+                         Thread.Sleep(500);
+                     }
+                 }         
+             }    
+              */
     }
 }
