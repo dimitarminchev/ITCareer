@@ -14,6 +14,15 @@
 11. [Threeuple](Threeuple.zip)
 
 ## [Iterators and Comparators](https://judge.softuni.bg/Contests/253/Iterators-and-Comparators-Exercise)
+1. [ListyIterator](ListyIterator.zip)
+2. [Collection](Collection.zip)
+3. [Stack](Stack.zip)
+4. [Froggy](Froggy.zip)
+5. ComparingObjects
+6. StrategyPattern
+7. EqualityLogic
+8. PetClinics
+9. [LinkedListTraversal](LinkedListTraversal.zip)
 
 
 ## [Reflection and Attributes](https://judge.softuni.bg/Contests/263/Reflection-and-Attributes-Exercise)
