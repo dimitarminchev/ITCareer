@@ -1,5 +1,22 @@
 # OOP Advanced  Exercises
-1. [Generics](https://judge.softuni.bg/Contests/248/Generics-Exercise)
-2. [Iterators and Comparators](https://judge.softuni.bg/Contests/253/Iterators-and-Comparators-Exercise)
-3. [Reflection and Attributes](https://judge.softuni.bg/Contests/263/Reflection-and-Attributes-Exercise)
-4. [Object Communication and Events](https://judge.softuni.bg/Contests/257/Object-Communication-and-Events-Exercise)
+
+## [Generics](https://judge.softuni.bg/Contests/248/Generics-Exercise)
+1. [GenericBoxOfString](GenericBoxOfString.zip)
+2. [GenericBoxofInteger](GenericBoxofInteger.zip)
+3. [GenericSwapMethodString](GenericSwapMethodString.zip)
+4. [GenericSwapMethodInteger](GenericSwapMethodInteger.zip)
+5. [GenericCountMethodStrings](GenericCountMethodStrings.zip)
+6. [GenericCountMethodDoubles](GenericCountMethodDoubles.zip)
+7. [CustomList](CustomList.zip)
+8. [CustomListSorter](CustomListSorter.zip)
+9. [CustomListIterator](CustomListIterator.zip)
+10. [Tuple](Tuple.zip)
+11. [Threeuple](Threeuple.zip)
+
+## [Iterators and Comparators](https://judge.softuni.bg/Contests/253/Iterators-and-Comparators-Exercise)
+
+
+## [Reflection and Attributes](https://judge.softuni.bg/Contests/263/Reflection-and-Attributes-Exercise)
+
+
+## [Object Communication and Events](https://judge.softuni.bg/Contests/257/Object-Communication-and-Events-Exercise)
