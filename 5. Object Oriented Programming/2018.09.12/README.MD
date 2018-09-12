@@ -28,8 +28,8 @@
 1. [Harvesting Fields](HarvestingFields.zip)
 2. [Black Box Integer](BlackBoxInteger.zip)
 3. [BarrackWars - A New Factory](BarracksWarsANewFactory.zip)
-4. BarrackWars - The Commands Strike Back
-5. BarrackWars - Return of the Dependencies
+4. [BarrackWars - The Commands Strike Back](BarracksWarsTheCommandsStrikeBack.zip)
+5. [BarrackWars - Return of the Dependencies](BarracksWarsReturnOfTheDependencies.zip)
 6. Traffic Lights
 7. Inferno Infinity
 8. Create Custom Class Attribute
