@@ -1,6 +1,6 @@
-# OOP Advanced  Exercises
+# Упражнения
 
-## [Generics](https://judge.softuni.bg/Contests/248/Generics-Exercise)
+## I. [Generics](https://judge.softuni.bg/Contests/248/Generics-Exercise)
 1. [GenericBoxOfString](GenericBoxOfString.zip)
 2. [GenericBoxofInteger](GenericBoxofInteger.zip)
 3. [GenericSwapMethodString](GenericSwapMethodString.zip)
@@ -13,7 +13,7 @@
 10. [Tuple](Tuple.zip)
 11. [Threeuple](Threeuple.zip)
 
-## [Iterators and Comparators](https://judge.softuni.bg/Contests/253/Iterators-and-Comparators-Exercise)
+## II. [Iterators and Comparators](https://judge.softuni.bg/Contests/253/Iterators-and-Comparators-Exercise)
 1. [ListyIterator](ListyIterator.zip)
 2. [Collection](Collection.zip)
 3. [Stack](Stack.zip)
@@ -25,7 +25,7 @@
 9. [LinkedListTraversal](LinkedListTraversal.zip)
 
 
-## [Reflection and Attributes](https://judge.softuni.bg/Contests/263/Reflection-and-Attributes-Exercise)
+## III. [Reflection and Attributes](https://judge.softuni.bg/Contests/263/Reflection-and-Attributes-Exercise)
 1. Harvesting Fields
 2. Black Box Integer
 3. BarrackWars - A New Factory
@@ -35,7 +35,7 @@
 7. Inferno Infinity
 8. Create Custom Class Attribute
 
-## [Object Communication and Events](https://judge.softuni.bg/Contests/257/Object-Communication-and-Events-Exercise)
+## IV. [Object Communication and Events](https://judge.softuni.bg/Contests/257/Object-Communication-and-Events-Exercise)
 1. Event Implementation
 2. Kings Gambit
 3. Dependency Inversion
