@@ -26,6 +26,18 @@
 
 
 ## [Reflection and Attributes](https://judge.softuni.bg/Contests/263/Reflection-and-Attributes-Exercise)
-
+1. Harvesting Fields
+2. Black Box Integer
+3. BarrackWars - A New Factory
+4. BarrackWars - The Commands Strike Back
+5. BarrackWars - Return of the Dependencies
+6. Traffic Lights
+7. Inferno Infinity
+8. Create Custom Class Attribute
 
 ## [Object Communication and Events](https://judge.softuni.bg/Contests/257/Object-Communication-and-Events-Exercise)
+1. Event Implementation
+2. Kings Gambit
+3. Dependency Inversion
+4. Work Force
+5. Kings Gambit Extended
