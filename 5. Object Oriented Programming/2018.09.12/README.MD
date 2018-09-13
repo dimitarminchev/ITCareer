@@ -1,4 +1,4 @@
-# Упражнения
+# Упражнения по обектно ориентирано програмиране
 
 ## I. [Generics](https://judge.softuni.bg/Contests/248/Generics-Exercise)
 1. [GenericBoxOfString](GenericBoxOfString.zip)
@@ -18,9 +18,9 @@
 2. [Collection](Collection.zip)
 3. [Stack](Stack.zip)
 4. [Froggy](Froggy.zip)
-5. ComparingObjects
+5. [ComparingObjects](ComparingObjects.zip)
 6. StrategyPattern
-7. EqualityLogic
+7. [EqualityLogic](EqualityLogic.zip)
 8. PetClinics
 9. [LinkedListTraversal](LinkedListTraversal.zip)
 
