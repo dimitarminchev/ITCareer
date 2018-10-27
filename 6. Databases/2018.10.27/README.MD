@@ -37,10 +37,10 @@ UPDATE minions SET age=age+1;
 /* Изтриване на запис от таблица */
 DELETE FROM minions WHERE id=2;
 
-/* Итриване на всички записи от таблица */
+/* Изтриване на всички записи от таблица */
 DELETE FROM minions;
 
-/* Итриване на таблица */
+/* Изтриване на таблица */
 DROP TABLE minions;
 ```
 
