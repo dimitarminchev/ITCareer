@@ -1,10 +1,11 @@
 #  Въведение в Базите от Данни
 
-MySQL Community Server
-http://dev.mysql.com/downloads/mysql/
-
-HeidiSQL 
-http://www.heidisql.com/download.php
+- MySQL Community Server http://dev.mysql.com/downloads/mysql/
+- HeidiSQL http://www.heidisql.com/download.php
+```
+/* HeidiSQL fix for MySQL Server 8+ (must be Executed in MySQL Workbench) */
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+```
 
 ## Упражнение 1
 ```
