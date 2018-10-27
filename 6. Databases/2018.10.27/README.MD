@@ -49,7 +49,7 @@ DROP TABLE minions;
 /* Изтриване на база данни */
 DROP SCHEMA minions;
 ```
-## Помощни материали
+## Решения
 - [Minions.sql](Minions.sql)
 - [People.sql](People.sql)
 - [Users.sql](Users.sql)
