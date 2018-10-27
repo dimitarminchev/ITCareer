@@ -1,10 +1,10 @@
--- Crate Database 
+/* Създаване на база данни */
 CREATE SCHEMA minions;
 
--- Use Database minions
+/* Избор на база данни по подразбиране */
 USE minions;
 
--- Create Table minions
+/* Създаване на нова таблица */
 CREATE TABLE IF NOT EXISTS minions
 (
 id INT NOT NULL AUTO_INCREMENT,
@@ -13,7 +13,7 @@ age INT NULL,
 CONSTRAINT pk_minions PRIMARY KEY (id)
 );
 
--- Create Table towns
+/* Създаване на нова таблица */
 CREATE TABLE IF NOT EXISTS towns
 (
 id INT NOT NULL AUTO_INCREMENT,
@@ -21,13 +21,13 @@ name VARCHAR(50) NOT NULL,
 CONSTRAINT pk_towns PRIMARY KEY (id)
 );
 
--- Alter Table minions
+/* Редакция на таблица */
 ALTER TABLE minions
 ADD COLUMN town_id INT NOT NULL;
 ALTER TABLE minions
 ADD CONSTRAINT fk_minions_towns FOREIGN KEY (town_id) REFERENCES towns(id);
 
--- Insert Records in Both Tables
+/* Добавяне на записи в двете таблици */
 INSERT INTO towns (name) VALUES ('Sofia');
 INSERT INTO towns (name) VALUES ('Plovdiv'); 
 INSERT INTO towns (name) VALUES ('Varna');
