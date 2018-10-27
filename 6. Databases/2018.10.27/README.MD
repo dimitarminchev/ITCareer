@@ -50,7 +50,7 @@ DROP TABLE minions;
 DROP SCHEMA minions;
 ```
 ## Помощни материали
-- Minions.sql	
-- People.sql	
-- Users.sql
-- Movies.sql
+- (Minions.sql)[Minions.sql]
+- (People.sql)[People.sql]
+- (Users.sql)[Users.sql]
+- (Movies.sql)[Movies.sql]
