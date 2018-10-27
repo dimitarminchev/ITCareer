@@ -31,9 +31,6 @@ INSERT INTO minions (name, age) VALUES ('Kevin', '15');
 INSERT INTO minions (name, age) VALUES ('Bob', '22');
 INSERT INTO minions (name) VALUES ('Steward');
 
-/* Редакция на запис от таблица */
-UPDATE minions SET age=22 WHERE (id=2);
-
 /* Актуализация на запис от таблица */
 UPDATE minions SET age=10 WHERE id=3;
 
@@ -48,6 +45,9 @@ DELETE FROM minions;
 
 /* Изтриване на таблица */
 DROP TABLE minions;
+
+/* Изтриване на база данни */
+DROP SCHEMA minions;
 ```
 
 ## Упражнение 2
