@@ -43,3 +43,6 @@ CREATE TABLE cars (
 );
 ```
 ## Релационна диаграма (Entity/Relationship)
+- [softuni.sql](softuni.sql)
+- [softuni.mwb](softuni.mwb)
+![softuni.png](softuni.png)
