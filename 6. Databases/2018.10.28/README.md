@@ -42,7 +42,8 @@ CREATE TABLE cars (
   CONSTRAINT fk_cars_drivers FOREIGN KEY (driver_id) REFERENCES drivers(driver_id)
 );
 ```
-## Релационна диаграма (Entity/Relationship)
+## Релационна схема  (Entity/Relationship)
 - [softuni.sql](softuni.sql)
 - [softuni.mwb](softuni.mwb)
+
 ![softuni.png](softuni.png)
