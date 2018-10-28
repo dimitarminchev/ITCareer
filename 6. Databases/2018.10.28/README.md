@@ -53,3 +53,27 @@ CREATE TABLE cars (
 - [221. One to Many Relationship](222.sql)
 - [223. Many to Many Relationship](223.sql)
 - [224. Cross-Reference Relationship](224.sql)
+
+## Каскадни операции
+```
+CREATE SCHEMA THES;
+USE THES;
+CREATE TABLE drivers(
+  driver_id INT PRIMARY KEY,
+  driver_name VARCHAR(50)
+);
+CREATE TABLE cars(
+  car_id INT PRIMARY KEY,
+  driver_id INT,
+  CONSTRAINT fk_car_driver FOREIGN KEY(driver_id)
+  REFERENCES drivers(driver_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+INSERT INTO drivers VALUES (1,'Драган'),(2,'Кънчо'),(3,'Янка');
+INSERT INTO cars VALUES (1,1),(2,3),(3,1),(4,2),(5,2),(6,3);
+
+/* Каскадно актуализиране */
+UPDATE drivers SET driver_id=42 WHERE driver_id=1;
+
+/* Каскадно изтриеване */
+DELETE FROM drivers WHERE driver_id=2;
+```
