@@ -50,6 +50,6 @@ CREATE TABLE cars (
 
 ##  Упражнения
 - [221. One to One Relationship](221.sql)
-- [221. 222. One to Many Relationship](222.sql)
+- [221. One to Many Relationship](222.sql)
 - [223. Many to Many Relationship](223.sql)
 - [224. Cross-Reference Relationship](224.sql)
