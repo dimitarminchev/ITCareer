@@ -48,7 +48,7 @@ CREATE TABLE cars (
 
 ![softuni.png](softuni.png)
 
-##  Упражнения
+##  Упражнение
 - [221. One to One Relationship](221.sql)
 - [221. One to Many Relationship](222.sql)
 - [223. Many to Many Relationship](223.sql)
@@ -77,3 +77,6 @@ UPDATE drivers SET driver_id=42 WHERE driver_id=1;
 /* Каскадно изтриеване */
 DELETE FROM drivers WHERE driver_id=2;
 ```
+##  Упражнение
+- [261. База данни за онлайн магазин](261.sql)
+- [262. Университетска база данни](262.sql)
