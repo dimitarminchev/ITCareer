@@ -1,4 +1,4 @@
-#  Въведение в Базите от Данни
+#  1. Въведение в Базите от Данни
 
 - MySQL Community Server http://dev.mysql.com/downloads/mysql/
 - HeidiSQL http://www.heidisql.com/download.php
