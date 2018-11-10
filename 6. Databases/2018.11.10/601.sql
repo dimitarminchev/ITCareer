@@ -1,4 +1,4 @@
-/* 501. Record Count */
+/* 601. Record Count */
 USE gringotts;
 
 SELECT COUNT(id) AS `count`

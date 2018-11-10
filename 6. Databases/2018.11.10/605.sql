@@ -1,4 +1,4 @@
-/* 505. Deposits Sum */
+/* 605. Deposits Sum */
 USE gringotts;
 
 SELECT deposit_group, SUM(deposit_amount) AS total_sum

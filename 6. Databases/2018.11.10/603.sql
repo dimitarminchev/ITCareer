@@ -1,4 +1,4 @@
-/* 503. Longest Magic Wand per Deposit Groups */
+/* 603. Longest Magic Wand per Deposit Groups */
 USE gringotts;
 
 SELECT deposit_group, 

@@ -1,4 +1,4 @@
-/* 506. Deposits Sum for Ollivander family */
+/* 606. Deposits Sum for Ollivander family */
 USE gringotts;
 
 SELECT deposit_group, SUM(deposit_amount) AS total_sum

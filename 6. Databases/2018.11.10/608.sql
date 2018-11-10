@@ -1,4 +1,4 @@
-/* 508. Deposit charge */
+/* 608. Deposit charge */
 USE gringotts;
 
 SELECT deposit_group, magic_wand_creator,

@@ -1,4 +1,4 @@
-/* 507. Deposits Filter */
+/* 607. Deposits Filter */
 USE gringotts;
 
 SELECT deposit_group, SUM(deposit_amount) AS total_sum

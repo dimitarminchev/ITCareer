@@ -1,4 +1,4 @@
-/* 509. Age Groups */
+/* 609. Age Groups */
 USE gringotts;
 
 DROP TABLE IF EXISTS table509;

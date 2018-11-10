@@ -1,4 +1,4 @@
-/* 510. First Letter */
+/* 610. First Letter */
 USE gringotts;
 
 SELECT SUBSTR(first_name,1,1) AS first_letter

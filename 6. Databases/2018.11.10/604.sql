@@ -1,4 +1,4 @@
-/* 504. Smallest Deposit Group per Magic Wand Size */
+/* 604. Smallest Deposit Group per Magic Wand Size */
 USE gringotts;
 
 DROP TABLE IF EXISTS table54;
