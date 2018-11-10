@@ -1,9 +1,9 @@
 /* 604. Smallest Deposit Group per Magic Wand Size */
 USE gringotts;
 
-DROP TABLE IF EXISTS table54;
+DROP TABLE IF EXISTS table604;
 
-CREATE TABLE IF NOT EXISTS table54 AS 
+CREATE TABLE IF NOT EXISTS table604 AS 
 (
 	SELECT deposit_group,AVG(magic_wand_size) as `AVR`
 	FROM wizzard_deposits
@@ -11,8 +11,8 @@ CREATE TABLE IF NOT EXISTS table54 AS
 );
 
 SELECT deposit_group 
-FROM table54
+FROM table604
 WHERE `AVR` = 
 (
-	SELECT MIN(`AVR`) AS `MIN` FROM table54
+	SELECT MIN(`AVR`) AS `MIN` FROM table604
 );
