@@ -6,22 +6,22 @@ GROUP BY
 HAVING
 ```
 
-501. Record Count
-502. Longest Magic Wand
-503. Longest Magic Wand per Deposit Groups
-504. Smallest Deposit Group per Magic Wand Size
-505. Deposits Sum
-506. Deposits Sum for Ollivander family
-507. Deposits Filter
-508. Deposit charge
-509. Age Groups
-510. First Letter
-511. Average Interest
-512. Rich Wizard, Poor Wizard
-513. Employees Minimum Salaries
-514. Employees Average Salaries
-515. Employees Maximum Salaries
-516. Employees Count Salaries
-517. 3rd Highest Salary
-518. Salary Challenge
-519. Departments Total Salaries
+601. Record Count
+602. Longest Magic Wand
+603. Longest Magic Wand per Deposit Groups
+604. Smallest Deposit Group per Magic Wand Size
+605. Deposits Sum
+606. Deposits Sum for Ollivander family
+607. Deposits Filter
+608. Deposit charge
+609. Age Groups
+610. First Letter
+611. Average Interest
+612. Rich Wizard, Poor Wizard
+613. Employees Minimum Salaries
+614. Employees Average Salaries
+615. Employees Maximum Salaries
+616. Employees Count Salaries
+617. 3rd Highest Salary
+618. Salary Challenge
+619. Departments Total Salaries
