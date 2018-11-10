@@ -5,8 +5,7 @@ DROP TABLE IF EXISTS table614;
 
 CREATE TABLE IF NOT EXISTS table614 AS
 (	
-	SELECT *
-    FROM employees
+	SELECT * FROM employees
     WHERE salary >= 30000
 );
 
