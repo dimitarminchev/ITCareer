@@ -1,5 +1,9 @@
 /* 705. Функция за ниво на заплата */
 USE company;
+
+-- Изтриване на функцията 
+DROP FUNCTION IF EXISTS ufn_get_salary_level;
+
 -- Създаване на функция
 DELIMITER $$
 CREATE FUNCTION ufn_get_salary_level(salary DECIMAL(19,4))
@@ -18,6 +22,7 @@ BEGIN
     RETURN result;
 END
 $$
+
 -- Извикване на функция
 SELECT salary, ufn_get_salary_level(salary) AS salary_Level
 FROM employees;

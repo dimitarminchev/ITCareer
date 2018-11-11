@@ -1,5 +1,7 @@
 /* 706. Дефинирайте функция */
 USE company;
+
+-- Изтриване на функцията 
 DROP FUNCTION IF EXISTS ufn_is_word_comprised;
 
 -- Създаване на функция
@@ -21,6 +23,7 @@ BEGIN
     RETURN TRUE;
 END 
 $$
+
 -- Създаване на таблица
 DROP TABLE IF EXISTS table706;
 CREATE TABLE IF NOT EXISTS table706 
@@ -30,6 +33,7 @@ CREATE TABLE IF NOT EXISTS table706
 );
 INSERT INTO table706 VALUES 
 ("Oistmiahf","Sofia"),("Oistmiahf","halves"),("Bobr","Rob"),("Pppp","Guy"); 
+
 -- Използване на функцията
 SELECT set_of_letters, word, ufn_is_word_comprised(set_of_letters,word) AS result 
 FROM table706;

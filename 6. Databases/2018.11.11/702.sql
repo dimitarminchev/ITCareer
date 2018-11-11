@@ -1,5 +1,9 @@
 /* 702. Служители със заплата над ... */
 USE company;
+
+-- Изтриване на процедурата 
+DROP PROCEDURE IF EXISTS usp_get_employees_salary_above;
+
 -- Създаване на съхранена процедура
 DELIMITER $$
 CREATE PROCEDURE usp_get_employees_salary_above(param INT) 
@@ -13,5 +17,6 @@ BEGIN
 
 END
 $$
+
 -- Извикване и изпълнение на съхранената процедура
 CALL usp_get_employees_salary_above(48100);

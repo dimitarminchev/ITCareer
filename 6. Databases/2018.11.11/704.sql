@@ -1,5 +1,9 @@
 /* 704. Служители от град */
 USE company;
+
+-- Изтриване на процедурата 
+DROP PROCEDURE IF EXISTS usp_get_employees_from_town;
+
 -- Създаване на съхранена процедура
 DELIMITER $$
 CREATE PROCEDURE usp_get_employees_from_town(city TEXT) 
@@ -13,5 +17,6 @@ BEGIN
     ORDER BY e.first_name ASC, e.last_name ASC; 
 END
 $$
+
 -- Извикване и изпълнение на съхранената процедура
 CALL usp_get_employees_from_town("Sofia");
