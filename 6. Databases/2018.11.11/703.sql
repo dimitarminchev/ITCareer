@@ -11,5 +11,5 @@ BEGIN
     ORDER BY town_name ASC;
 END
 $$
--- Изпълнение на съхранената процедура
+-- Извикване и изпълнение на съхранената процедура
 CALL usp_get_towns_starting_with('b');

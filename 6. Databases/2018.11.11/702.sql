@@ -1,6 +1,6 @@
 /* 702. Служители със заплата над ... */
 USE company;
--- Деклариране на съхранена процедура
+-- Създаване на съхранена процедура
 DELIMITER $$
 CREATE PROCEDURE usp_get_employees_salary_above(param INT) 
 BEGIN
@@ -13,5 +13,5 @@ BEGIN
 
 END
 $$
--- Извикване на съхранена процедура
+-- Извикване и изпълнение на съхранената процедура
 CALL usp_get_employees_salary_above(48100);
