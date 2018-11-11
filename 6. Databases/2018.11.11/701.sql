@@ -1,6 +1,5 @@
 /* 701. Служители със заплата над 35000 */
 USE company;
-
 -- Създаване на съхранена процедура
 DELIMITER $$
 CREATE PROCEDURE usp_get_employees_salary_above_35000()
@@ -14,6 +13,5 @@ BEGIN
 
 END 
 $$
-
 -- Извикване и изпълнение
 CALL usp_get_employees_salary_above_35000();
