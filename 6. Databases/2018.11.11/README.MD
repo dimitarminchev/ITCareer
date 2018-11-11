@@ -1,5 +1,10 @@
 # 7. Скаларни функции работа с дати транзакции
-
+```
+CREATE PROCEDURE
+CREATE FUNCTION
+START TRANSACTION + ROLLBACK + COMMIT
+CREATE TRIGGER (BEFORE|AFTER + INSERT|UPDATE|DELETE)
+```
 701. Служители със заплата над 35000
 702. Служители със заплата над ...
 703. Градове започващи със ...
