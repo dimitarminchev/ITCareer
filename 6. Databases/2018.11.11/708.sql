@@ -7,7 +7,7 @@ DROP PROCEDURE IF EXISTS usp_transfer_money;
 -- Създаване на съхранена процедура
 DELIMITER $$
 CREATE PROCEDURE usp_transfer_money
-                 (from_account_id INT, to_account_id INT, amount DECIMAL(14,2))
+                 (from_account_id INT, to_account_id INT, amount DECIMAL(15,4))
 BEGIN
 	-- Тяло на съхранената процедура
     START TRANSACTION;       

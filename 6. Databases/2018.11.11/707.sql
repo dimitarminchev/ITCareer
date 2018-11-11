@@ -6,7 +6,7 @@ DROP PROCEDURE IF EXISTS usp_withdraw_money;
 
 -- Създаване на съхранена процедура
 DELIMITER $$
-CREATE PROCEDURE usp_withdraw_money (account_id INT, money_amount DECIMAL(14,2))
+CREATE PROCEDURE usp_withdraw_money (account_id INT, money_amount DECIMAL(15,4))
 BEGIN
 	-- Тяло на съхранената процедура
 	START TRANSACTION;      
