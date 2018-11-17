@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS journeys(
 	id INT(11) AUTO_INCREMENT PRIMARY KEY,
     journey_start DATETIME NOT NULL,
     journey_end DATETIME NOT NULL,
-    purpose ENUM('Medical', 'Technical', 'Educational', 'Military') NOT NULL,
+    purpose ENUM('Medical', 'Technical', 'Educational', 'Military'),
     destination_spaceport_id INT(11),
     spaceship_id INT(11),
     FOREIGN KEY(destination_spaceport_id) REFERENCES spaceports(id),
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS journeys(
 CREATE TABLE IF NOT EXISTS tarvel_cards(
 	id INT(11) AUTO_INCREMENT PRIMARY KEY,
     card_number CHAR(10) NOT NULL UNIQUE,
-    job_during_journey ENUM( 'Pilot', 'Engineer', 'Trooper', 'Cleaner', 'Cook') NOT NULL,
+    job_during_journey ENUM( 'Pilot', 'Engineer', 'Trooper', 'Cleaner', 'Cook'),
     colonist_id INT(11),
     journey_id INT(11),
     FOREIGN KEY(colonist_id) REFERENCES colonists(id),
