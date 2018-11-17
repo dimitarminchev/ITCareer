@@ -14,4 +14,4 @@ SELECT * FROM
 	FROM planets AS pl
 	ORDER BY journeys_count DESC, pl.name ASC
 ) AS c
-WHERE c.journeys_count IS NOT NULL
+WHERE c.journeys_count IS NOT NULL;

@@ -1,0 +1,2 @@
+-- 13. Extract the shortest journey 
+-- https://judge.softuni.bg/Contests/Practice/Index/1265#13

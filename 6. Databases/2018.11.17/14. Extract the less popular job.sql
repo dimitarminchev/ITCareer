@@ -1,0 +1,2 @@
+-- 14. Extract the less popular job 
+-- https://judge.softuni.bg/Contests/Practice/Index/1265#14

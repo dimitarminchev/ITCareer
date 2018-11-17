@@ -1,0 +1,2 @@
+-- 15. Get colonists count 
+-- https://judge.softuni.bg/Contests/Practice/Index/1265#15
