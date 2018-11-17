@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS journeys(
     FOREIGN KEY(spaceship_id) REFERENCES spaceships(id)
 );
 
-CREATE TABLE IF NOT EXISTS tarvel_cards(
+CREATE TABLE IF NOT EXISTS travel_cards(
 	id INT(11) AUTO_INCREMENT PRIMARY KEY,
     card_number CHAR(10) NOT NULL UNIQUE,
     job_during_journey ENUM( 'Pilot', 'Engineer', 'Trooper', 'Cleaner', 'Cook'),
