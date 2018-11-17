@@ -1,4 +1,4 @@
--- 09.Extract the fastest spaceship
+-- 09. Extract the fastest spaceship
 -- https://judge.softuni.bg/Contests/Practice/Index/1265#9
 
 SELECT sh.name AS spaceship_name, sp.name AS spaceport_name

@@ -1,4 +1,4 @@
--- 06.	Extract all military journeys 
+-- 06. Extract all military journeys 
 -- https://judge.softuni.bg/Contests/Practice/Index/1265#6
 
 SELECT id, journey_start, journey_end

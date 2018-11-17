@@ -1,4 +1,4 @@
--- 07.	Extract all pilots 
+-- 07. Extract all pilots 
 -- https://judge.softuni.bg/Contests/Practice/Index/1265#7
 
 SELECT id, CONCAT(first_name, ' ', last_name) AS full_name
