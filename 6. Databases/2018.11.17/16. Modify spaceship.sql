@@ -31,7 +31,7 @@ BEGIN
         WHERE name = spaceship_name;
 		COMMIT;
     END IF;
-END
+END;
 $$
 
 CALL udp_modify_spaceship_light_speed_rate('USS Templar', 5);
