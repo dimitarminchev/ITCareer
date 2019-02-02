@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\TipCalculatorController.cs" />
+    <Compile Include="Model\Tip.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Display.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
