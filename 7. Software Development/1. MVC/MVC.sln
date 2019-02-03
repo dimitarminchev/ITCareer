@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Histogram", "Histogram\Hist
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VegetableStore", "VegetableStore\VegetableStore.csproj", "{DA4F7BB4-1F8C-4F28-8769-69C8A44E45A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoRemainderDivision", "NoRemainderDivision\NoRemainderDivision.csproj", "{D115D49F-0420-438D-838B-9B5A975E9B9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DA4F7BB4-1F8C-4F28-8769-69C8A44E45A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA4F7BB4-1F8C-4F28-8769-69C8A44E45A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA4F7BB4-1F8C-4F28-8769-69C8A44E45A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D115D49F-0420-438D-838B-9B5A975E9B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D115D49F-0420-438D-838B-9B5A975E9B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D115D49F-0420-438D-838B-9B5A975E9B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D115D49F-0420-438D-838B-9B5A975E9B9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
