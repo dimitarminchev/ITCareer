@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoolPipes", "PoolPipes\Pool
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassGen", "PassGen\PassGen.csproj", "{2466ACEF-3299-4A2D-AB1C-76550378EA1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileRepair", "TileRepair\TileRepair.csproj", "{F4834FD0-C637-42D5-B3F7-198C1EB74588}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{2466ACEF-3299-4A2D-AB1C-76550378EA1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2466ACEF-3299-4A2D-AB1C-76550378EA1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2466ACEF-3299-4A2D-AB1C-76550378EA1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4834FD0-C637-42D5-B3F7-198C1EB74588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4834FD0-C637-42D5-B3F7-198C1EB74588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4834FD0-C637-42D5-B3F7-198C1EB74588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4834FD0-C637-42D5-B3F7-198C1EB74588}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
