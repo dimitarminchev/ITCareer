@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Axe
+namespace TaskAxe
 {
     class Program
     {
         static void Main(string[] args)
         {
+            // Nothing
         }
     }
 }

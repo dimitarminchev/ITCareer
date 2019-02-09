@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axe", "Axe\Axe.csproj", "{757FAB2B-C7FD-4E9E-A605-C8D485FE5726}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAxe", "TaskAxe\TaskAxe.csproj", "{C1DCAA25-C7A1-418B-A2A9-C4303E02378F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAxeUnitTests", "TaskAxeUnitTests\TaskAxeUnitTests.csproj", "{14EFB579-F8AE-4645-91A7-1350B49E5B20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{757FAB2B-C7FD-4E9E-A605-C8D485FE5726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{757FAB2B-C7FD-4E9E-A605-C8D485FE5726}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{757FAB2B-C7FD-4E9E-A605-C8D485FE5726}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{757FAB2B-C7FD-4E9E-A605-C8D485FE5726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1DCAA25-C7A1-418B-A2A9-C4303E02378F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1DCAA25-C7A1-418B-A2A9-C4303E02378F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1DCAA25-C7A1-418B-A2A9-C4303E02378F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1DCAA25-C7A1-418B-A2A9-C4303E02378F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14EFB579-F8AE-4645-91A7-1350B49E5B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14EFB579-F8AE-4645-91A7-1350B49E5B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14EFB579-F8AE-4645-91A7-1350B49E5B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14EFB579-F8AE-4645-91A7-1350B49E5B20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
