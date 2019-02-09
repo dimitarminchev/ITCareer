@@ -1,12 +1,11 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
+using System;
 
 namespace Tests
 {
-    [TestClass]
     public class DummyTests
-    {        
-        [TestMethod]
+    {
+        [Test]
         // Чучелото губи здраве, ако е атакувано
         public void DummyLosesHealthUnderAttack()
         {
@@ -21,7 +20,7 @@ namespace Tests
             Assert.AreEqual(0, dummy.Health, "Dummy Loses Health Under Attack.");
         }
 
-        [TestMethod]
+        [Test]
         // Мъртво чучело хвърля изключение, ако е атакувано
         public void DeadDummyThrowsExceptionUnderAttack()
         {
@@ -33,20 +32,20 @@ namespace Tests
             axe.Attack(dummy);
 
             // Assert
-            var exception = Assert.ThrowsException<InvalidOperationException>
+            var exception = Assert.Throws<InvalidOperationException>
             (
                 () => axe.Attack(dummy) // Exception => Dummy is dead. 
             );
             Assert.AreEqual(exception.Message, "Dummy is dead.");
         }
 
-        [TestMethod]
+        [Test]
         // Мъртвото чучело може да даде XP
         public void DeadDummyGivesExperience()
         {
             // Arrange 
             Axe axe = new Axe(10, 10);
-            Dummy dummy = new Dummy(10, 10);            
+            Dummy dummy = new Dummy(10, 10);
 
             // Act
             axe.Attack(dummy);
@@ -55,7 +54,7 @@ namespace Tests
             Assert.AreEqual(10, dummy.GiveExperience());
         }
 
-        [TestMethod]
+        [Test]
         // Живото чучело не може да даде XP
         public void LiveDummyDoesNotGiveExperience()
         {
@@ -67,7 +66,7 @@ namespace Tests
             axe.Attack(dummy);
 
             // Assert
-            var exception = Assert.ThrowsException<InvalidOperationException>
+            var exception = Assert.Throws<InvalidOperationException>
             (
                 () => dummy.GiveExperience() // Exception => Target is not dead. 
             );

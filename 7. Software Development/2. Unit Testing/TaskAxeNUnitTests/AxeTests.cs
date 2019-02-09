@@ -1,12 +1,11 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using System;
 
 namespace Tests
 {
-    [TestClass]
     public class AxeTests
     {
-        [TestMethod]
+        [Test]
         public void AxeLosesDurabilityAfterAttack()
         {
             // Arrange 
@@ -21,7 +20,7 @@ namespace Tests
                 "Axe durability changes after the attack.");
         }
 
-        [TestMethod]
+        [Test]
         public void BrokenAxeCanAttack()
         {
             // Arrange 
@@ -29,11 +28,11 @@ namespace Tests
             Dummy dummy = new Dummy(20, 20);
 
             // Act
-            axe.Attack(dummy); 
+            axe.Attack(dummy);
             axe.Attack(dummy); // Exception => Axe is broken.
 
             // Assert
-            var exception = Assert.ThrowsException<InvalidOperationException>
+            var exception = Assert.Throws<InvalidOperationException>
             (
                 () => axe.Attack(dummy)
             );
