@@ -21,12 +21,14 @@ namespace _7.BitCarousel
                 {
                     int rightMostBit = number & 1;
                     number >>= 1;
-                    number |= (byte)(rightMostBit << 6);
+                    var shiftingBit = rightMostBit << 5; // fix 1: 6 > 5
+                    number |= (byte)(shiftingBit);
                 }
-                else if (direction == "left")
+                else if (direction == "left") 
                 {
-                    int leftMostBit = (number >> 6) & 1;
+                    int leftMostBit = (number >> 5) & 1; // fix 2: 6 > 5
                     number <<= 1;
+                    number &= 63; // fix 3: Remove first 2 bits
                     number |= (byte)leftMostBit;
                 }
             }
