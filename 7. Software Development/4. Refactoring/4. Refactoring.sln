@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. ArraySlider", "01. ArraySlider\01. ArraySlider.csproj", "{DFE20412-0007-4E29-AF5E-66A9057C7484}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFE20412-0007-4E29-AF5E-66A9057C7484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE20412-0007-4E29-AF5E-66A9057C7484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE20412-0007-4E29-AF5E-66A9057C7484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE20412-0007-4E29-AF5E-66A9057C7484}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CBF4453-7D5F-47F4-B73D-AC2D273192F2}
+	EndGlobalSection
+EndGlobal
