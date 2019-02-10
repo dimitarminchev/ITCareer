@@ -18,78 +18,83 @@ namespace _5.ArrayTest
 
             string command = Console.ReadLine();
 
-            while (!command.Equals("over"))
+            while (!command.Equals("stop"))  // FIX: over => stop
             {
-                string line = Console.ReadLine().Trim();
+                string line = command.Trim(); // Console.ReadLine() => command
                 int[] args = new int[2];
 
-                if (command.Equals("add") ||
-                    command.Equals("substract") ||
-                    command.Equals("multiply"))
+                string[] stringParams = line.Split(ArgumentsDelimiter);
+                if (command.Contains("add") ||      // Fix: Equal => Contains
+                    command.Contains("subtract") || // Fix: substract => subtract && Equal => Contains
+                    command.Contains("multiply"))   // Fix: Equal => Contains
                 {
-                    string[] stringParams = line.Split(ArgumentsDelimiter);
-                    args[0] = int.Parse(stringParams[0]);
-                    args[1] = int.Parse(stringParams[1]);
+                    // Fix: Moved stringParams array to allow seperation of commands  
+                    args[0] = int.Parse(stringParams[1]); // FIX: 0 => 1
+                    args[1] = int.Parse(stringParams[2]); // FIX: 1 => 2
 
-                    PerformAction(array, command, args);
+                    // Fix: No need to call PerformAction() Method
                 }
 
-                PerformAction(array, command, args);
+                PerformAction(array, stringParams[0], args); // Fix: command => stringParams[0]
 
                 PrintArray(array);
-                Console.WriteLine('\n');
-
+                Console.WriteLine(); // Fix: Console.WriteLine(/n) => Console.WriteLine()
                 command = Console.ReadLine();
             }
         }
 
         static void PerformAction(long[] arr, string action, int[] args)
         {
-            long[] array = arr.Clone() as long[];
-            int pos = args[0];
+            // Fix: No need to clone the array
+            int pos = args[0] - 1; // Fix: args[0] => args[0] - 1
             int value = args[1];
 
             switch (action)
             {
                 case "multiply":
-                    array[pos] *= value;
+                    arr[pos] *= value;
                     break;
                 case "add":
-                    array[pos] += value;
+                    arr[pos] += value;
                     break;
                 case "subtract":
-                    array[pos] -= value;
+                    arr[pos] -= value;
                     break;
                 case "lshift":
-                    ArrayShiftLeft(array);
+                    ArrayShiftLeft(arr);
                     break;
                 case "rshift":
-                    ArrayShiftRight(array);
+                    ArrayShiftRight(arr);
                     break;
             }
         }
 
         private static void ArrayShiftRight(long[] array)
         {
+            long lastElement = array.Last();  // Fix: Now storing the last element of the sequence
             for (int i = array.Length - 1; i >= 1; i--)
             {
                 array[i] = array[i - 1];
             }
+            array[0] = lastElement; // Fix: We change the first element to the last one; wasn't done in the array
         }
 
         private static void ArrayShiftLeft(long[] array)
         {
+            long firstElement = array.First();  // Fix: Now storing the first element of the sequence
             for (int i = 0; i < array.Length - 1; i++)
             {
                 array[i] = array[i + 1];
             }
+            array[array.Length - 1] = firstElement; // Fix: We change the last element to the first one; wasn't done in the array
         }
 
         private static void PrintArray(long[] array)
         {
+            long lastElement = array.Last();  // Fix: Now storing the last element of the sequence
             for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine(array[i] + " ");
+                Console.Write(array[i] + " "); //Console.WriteLine() => Console.Write()
             }
         }
     }
