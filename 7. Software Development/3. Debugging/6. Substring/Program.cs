@@ -13,7 +13,7 @@ namespace _6.Substring
             string text = Console.ReadLine();
             int jump = int.Parse(Console.ReadLine());
 
-            const char Search = 'р';
+            const char Search = 'p'; // Fix: Some asshole put the Bulgarian symbol р instead of the English symbol p
             bool hasMatch = false;
 
             for (int i = 0; i < text.Length; i++)
@@ -22,14 +22,12 @@ namespace _6.Substring
                 {
                     hasMatch = true;
 
-                    int endIndex = jump;
-
-                    if (endIndex > text.Length)
-                    {
-                        endIndex = text.Length;
-                    }
-
-                    string matchedString = text.Substring(i, endIndex);
+                    // Fix: No need for EndIndex at all, .Substring() does not accept endIndex parameter                   
+                    string matchedString = text.Substring
+                                           (
+                                                i, 
+                                                Math.Min (jump + 1, text.Length - i)
+                                           ); // Fix: Will stop at the end if the string doesn't have enough characters to print out
                     Console.WriteLine(matchedString);
                     i += jump;
                 }
