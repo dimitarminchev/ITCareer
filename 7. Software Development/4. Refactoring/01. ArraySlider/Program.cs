@@ -12,89 +12,92 @@ namespace _01.ArraySlider
     {
         static void Main(string[] args)
         {
-            var q = Console.ReadLine();
-            BigInteger[] jm = Regex.Split(q, "\\s+").Where(n => n != "").Select(n => BigInteger.Parse(n)).ToArray();
-            var r = Console.ReadLine();
-            long i = 0;
-            while (r != "stop")
+            var numberInput = Console.ReadLine();
+            BigInteger[] numberInputSplitter = Regex.Split(numberInput, "\\s+").Where(n => n != "").Select(n => BigInteger.Parse(n)).ToArray();
+            var command = Console.ReadLine();
+            long indexInArray = 0;
+            while (command != "stop")
             {
-                var ee = r.Split(' ');
-                var a = long.Parse(ee[0]);
-                var b = ee[1];
-                var c = long.Parse(ee[2]);
-                a = a % jm.Length;
-                i += a;
-                var pos = i % jm.Length;
-                if (pos < 0)
+                var splittedCommands = command.Split(' ');
+                var firstValue = long.Parse(splittedCommands[0]);
+                var mathSymbol = splittedCommands[1];
+                var secondValue = long.Parse(splittedCommands[2]);
+
+                firstValue = firstValue % numberInputSplitter.Length;
+                indexInArray += firstValue;
+
+                var position = indexInArray % numberInputSplitter.Length;
+
+                if (position < 0)
                 {
-                    pos += jm.Length;
+                    position += numberInputSplitter.Length;
                 }
-                if (pos >= jm.Length)
+                if (position >= numberInputSplitter.Length)
                 {
-                    pos -= jm.Length;
+                    position -= numberInputSplitter.Length;
                 }
-                switch (b)
+                switch (mathSymbol)
                 {
                     case "+":
-                        if ((jm[pos] + c) < 0)
+                        if ((numberInputSplitter[position] + secondValue) < 0)
                         {
-                            jm[pos] = 0;
+                            numberInputSplitter[position] = 0;
                         }
-                        else jm[pos] = jm[pos] + c;
+                        else numberInputSplitter[position] += secondValue;
                         break;
                     case "-":
-                        if (jm[pos] < c)
+                        if (numberInputSplitter[position] < secondValue)
                         {
-                            jm[pos] = 0;
+                            numberInputSplitter[position] = 0;
                         }
-                        else jm[pos] = jm[pos] - c;
+                        else numberInputSplitter[position] -= secondValue;
                         break;
                     case "*":
-                        if ((jm[pos] * c) < 0)
+                        if ((numberInputSplitter[position] * secondValue) < 0)
                         {
-                            jm[pos] = 0;
+                            numberInputSplitter[position] = 0;
                         }
-                        else jm[pos] = jm[pos] * c;
+                        else numberInputSplitter[position] *= secondValue;
                         break;
                     case "/":
-                        if ((jm[pos] / c) < 0)
+                        if ((numberInputSplitter[position] / secondValue) < 0)
                         {
-                            jm[pos] = 0;
+                            numberInputSplitter[position] = 0;
                         }
-                        else jm[pos] = jm[pos] / c;
+                        else numberInputSplitter[position] /= secondValue;
                         break;
                     case "&":
-                        if ((jm[pos] & c) < 0)
+                        if ((numberInputSplitter[position] & secondValue) < 0)
                         {
-                            jm[pos] = 0;
+                            numberInputSplitter[position] = 0;
                         }
-                        else jm[pos] = jm[pos] & c;
+                        else numberInputSplitter[position] &= secondValue;
                         break;
                     case "|":
-                        if ((jm[pos] | c) < 0)
+                        if ((numberInputSplitter[position] | secondValue) < 0)
                         {
-                            jm[pos] = 0;
+                            numberInputSplitter[position] = 0;
                         }
-                        else jm[pos] = jm[pos] | c;
+                        else numberInputSplitter[position] |= secondValue;
                         break;
                     case "^":
-                        if ((jm[pos] ^ c) < 0)
+                        if ((numberInputSplitter[position] ^ secondValue) < 0)
                         {
-                            jm[pos] = 0;
+                            numberInputSplitter[position] = 0;
                         }
-                        else jm[pos] = jm[pos] ^ c;
+                        else numberInputSplitter[position] ^= secondValue;
                         break;
                 }
-                r = Console.ReadLine();
+                command = Console.ReadLine();
             }
-            for (int qq = 0; qq < jm.Length; qq++)
+            for (int i = 0; i < numberInputSplitter.Length; i++)
             {
-                if (jm[qq] < 0)
+                if (numberInputSplitter[i] < 0)
                 {
-                    jm[qq] = 0;
+                    numberInputSplitter[i] = 0;
                 }
             }
-            Console.WriteLine("[" + string.Join(", ", jm) + "]");
+            Console.WriteLine("[" + string.Join(", ", numberInputSplitter) + "]");
         }
     }
 }
