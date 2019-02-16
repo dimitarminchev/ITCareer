@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. YoloSnake", "02. YoloSn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. StringExtensions", "03. StringExtensions\03. StringExtensions.csproj", "{3831C4AB-F6B1-4C24-96B2-9AE69F4D534A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. FiveSpecialLetters", "04. FiveSpecialLetters\04. FiveSpecialLetters.csproj", "{3029E293-A72C-4A3D-974C-2F3C707EC645}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3831C4AB-F6B1-4C24-96B2-9AE69F4D534A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3831C4AB-F6B1-4C24-96B2-9AE69F4D534A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3831C4AB-F6B1-4C24-96B2-9AE69F4D534A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3029E293-A72C-4A3D-974C-2F3C707EC645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3029E293-A72C-4A3D-974C-2F3C707EC645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3029E293-A72C-4A3D-974C-2F3C707EC645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3029E293-A72C-4A3D-974C-2F3C707EC645}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
