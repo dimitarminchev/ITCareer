@@ -11,6 +11,7 @@ namespace _08.InheritanceAndPolymorphism
     {
         static void Main(string[] args)
         {
+            // part 1
             LocalCourse localCourse = new LocalCourse("Databases");
             Console.WriteLine(localCourse);
 
@@ -25,9 +26,18 @@ namespace _08.InheritanceAndPolymorphism
             localCourse.Students.Add("Todor");
             Console.WriteLine(localCourse);
 
-            OffsiteCourse offsiteCourse = new OffsiteCourse(
-                "PHP and WordPress Development", "Mario Peshev",
-                new List<string>() { "Thomas", "Ani", "Steve" });
+            // part 2
+            OffsiteCourse offsiteCourse = new OffsiteCourse
+            (
+                "PHP and WordPress Development", 
+                "Mario Peshev",
+                new List<string>()
+                {
+                    "Thomas",
+                    "Ani",
+                    "Steve"
+                }
+            );
             Console.WriteLine(offsiteCourse);
         }
     }

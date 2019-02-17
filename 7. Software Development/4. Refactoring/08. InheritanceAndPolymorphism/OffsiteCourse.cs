@@ -4,61 +4,33 @@ using System.Text;
 
 namespace InheritanceAndPolymorphism
 {
-    public class OffsiteCourse
+    public class OffsiteCourse : Course
     {
-        public string Name { get; set; }
-        public string TeacherName { get; set; }
-        public IList<string> Students { get; set; }
+        
         public string Town { get; set; }
 
         public OffsiteCourse(string name)
+             : base(name, null, new List<string>())
         {
-            this.Name = name;
-            this.TeacherName = null;
-            this.Students = new List<string>();
             this.Town = null;
         }
 
         public OffsiteCourse(string courseName, string teacherName)
+            : base(courseName, teacherName, new List<string>())
         {
-            this.Name = courseName;
-            this.TeacherName = teacherName;
-            this.Students = new List<string>();
             this.Town = null;
         }
 
-        public OffsiteCourse(string courseName, string teacherName, IList<string> students)
+        public OffsiteCourse(string courseName, string teacherName, List<string> students)
+            : base(courseName, teacherName, students)
         {
-            this.Name = courseName;
-            this.TeacherName = teacherName;
-            this.Students = students;
             this.Town = null;
-        }
-
-        private string GetStudentsAsString()
-        {
-            if (this.Students == null || this.Students.Count == 0)
-            {
-                return "{ }";
-            }
-            else
-            {
-                return "{ " + string.Join(", ", this.Students) + " }";
-            }
         }
 
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();
-            result.Append("OffsiteCourse { Name = ");
-            result.Append(this.Name);
-            if (this.TeacherName != null)
-            {
-                result.Append("; Teacher = ");
-                result.Append(this.TeacherName);
-            }
-            result.Append("; Students = ");
-            result.Append(this.GetStudentsAsString());
+            result.Append(base.ToString());
             if (this.Town != null)
             {
                 result.Append("; Town = ");
