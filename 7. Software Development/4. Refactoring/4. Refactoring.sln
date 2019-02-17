@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Methods", "05. Methods\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Abstraction", "06. Abstraction\06. Abstraction.csproj", "{A513C417-7075-4AC1-ABE1-5EB7FA3206B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. CohesionAndCoupling", "07. CohesionAndCoupling\07. CohesionAndCoupling.csproj", "{C06A9E6C-7601-499F-BF1D-4FD968B1CB7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{A513C417-7075-4AC1-ABE1-5EB7FA3206B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A513C417-7075-4AC1-ABE1-5EB7FA3206B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A513C417-7075-4AC1-ABE1-5EB7FA3206B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C06A9E6C-7601-499F-BF1D-4FD968B1CB7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C06A9E6C-7601-499F-BF1D-4FD968B1CB7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C06A9E6C-7601-499F-BF1D-4FD968B1CB7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C06A9E6C-7601-499F-BF1D-4FD968B1CB7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
