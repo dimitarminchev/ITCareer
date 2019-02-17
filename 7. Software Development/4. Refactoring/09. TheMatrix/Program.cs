@@ -8,6 +8,7 @@ namespace _09.TheMatrix
 {
     class Program
     {
+
         private static void Main(string[] args)
         {
             Console.WriteLine("Enter a positive number ");
