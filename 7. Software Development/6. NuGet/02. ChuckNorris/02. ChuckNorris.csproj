@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F69F5B37-8D06-4817-8740-0C4EBC6C5EE5}</ProjectGuid>
+    <ProjectGuid>{7C175383-C0E5-484F-A54D-3F2E8CF26824}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_01.JsonApp</RootNamespace>
-    <AssemblyName>_01.JsonApp</AssemblyName>
+    <RootNamespace>_02.ChuckNorris</RootNamespace>
+    <AssemblyName>_02.ChuckNorris</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
