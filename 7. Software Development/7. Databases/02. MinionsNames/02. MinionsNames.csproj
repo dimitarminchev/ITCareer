@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE785F96-CC94-4AF9-9E74-CC1671FE8253}</ProjectGuid>
+    <ProjectGuid>{4FD55566-CBD3-445F-A884-143C350FC5BD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_1.Minions</RootNamespace>
-    <AssemblyName>_1.Minions</AssemblyName>
+    <RootNamespace>_02.MinionsNames</RootNamespace>
+    <AssemblyName>_02.MinionsNames</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,9 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="minions.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
-namespace _1.Minions
+namespace _01_VliliansNames
 {
     class Program
     {
