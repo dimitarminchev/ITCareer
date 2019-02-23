@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. VliliansNames", "1. Minions\01. VliliansNames.csproj", "{AE785F96-CC94-4AF9-9E74-CC1671FE8253}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. VliliansNames", "01. VliliansNames\01. VliliansNames.csproj", "{AE785F96-CC94-4AF9-9E74-CC1671FE8253}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. MinionsNames", "02. MinionsNames\02. MinionsNames.csproj", "{4FD55566-CBD3-445F-A884-143C350FC5BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. AddMinions", "03. AddMinions\03. AddMinions.csproj", "{50DFCBED-7347-4A7B-B369-A044EC7CB18A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4FD55566-CBD3-445F-A884-143C350FC5BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FD55566-CBD3-445F-A884-143C350FC5BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FD55566-CBD3-445F-A884-143C350FC5BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50DFCBED-7347-4A7B-B369-A044EC7CB18A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50DFCBED-7347-4A7B-B369-A044EC7CB18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50DFCBED-7347-4A7B-B369-A044EC7CB18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50DFCBED-7347-4A7B-B369-A044EC7CB18A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
