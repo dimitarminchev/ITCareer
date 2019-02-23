@@ -1,9 +1,9 @@
 # Пакети и външни библиотеки
 
 ## JSON.NET
-https://www.newtonsoft.com/json
-http://www.json.org/
-http://json2csharp.com/
+- https://www.newtonsoft.com/json
+- http://www.json.org/
+- http://json2csharp.com/
 
 ### Serialize
 ```
