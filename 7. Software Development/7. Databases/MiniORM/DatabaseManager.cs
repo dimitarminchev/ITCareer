@@ -114,6 +114,7 @@ namespace MiniORM
                 idInfo.SetValue(entityType, id);
             }
 
+
             return numberOfAffectedRows > 0;
         }
 
@@ -149,16 +150,16 @@ namespace MiniORM
         private bool CheckIfTableExists(Type type)
         {
             string query =
-                $"SELECT COUNT(name) " +
-                $"FROM sys.sysobjects " +
-                $"WHERE [Name] = '{this.GetTableName(type)}' AND [xtype] = 'U'";
+                $"SELECT COUNT(table_name) " +
+                $"FROM information_schema.tables " +
+                $"WHERE table_name = '{this.GetTableName(type)}'";
 
             int numberOfTables = 0;
             using (this.connection = new MySqlConnection(this.connectionString))
             {
                 this.connection.Open();
                 MySqlCommand command = new MySqlCommand(query, this.connection);
-                numberOfTables = (int)command.ExecuteScalar();
+                numberOfTables = int.Parse(command.ExecuteScalar().ToString());
             }
 
             return numberOfTables > 0;
