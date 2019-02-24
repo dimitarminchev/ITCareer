@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. MinionsNames", "02. Min
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. AddMinions", "03. AddMinions\03. AddMinions.csproj", "{50DFCBED-7347-4A7B-B369-A044EC7CB18A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. CapitalizeCities", "04. CapitalizeCities\04. CapitalizeCities.csproj", "{DA7516FC-F1C1-4B1E-97FB-DFC7A705DBD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{50DFCBED-7347-4A7B-B369-A044EC7CB18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50DFCBED-7347-4A7B-B369-A044EC7CB18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50DFCBED-7347-4A7B-B369-A044EC7CB18A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA7516FC-F1C1-4B1E-97FB-DFC7A705DBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7516FC-F1C1-4B1E-97FB-DFC7A705DBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7516FC-F1C1-4B1E-97FB-DFC7A705DBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7516FC-F1C1-4B1E-97FB-DFC7A705DBD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
