@@ -20,3 +20,7 @@ while (reader.Read()) Console.WriteLine("Villain: {0}, EvilnessFactor: {1}", rea
 reader.Close();
 connection.Close();
 ```
+
+## ORM
+### Първи стъпки в ORM технологиите с Entity Framework (Наков @ БСУ хакатон 2015)
+https://nakov.com/blog/2015/05/29/entity-framework-ef-orm-for-beginners/
