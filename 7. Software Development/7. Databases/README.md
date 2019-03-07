@@ -1,16 +1,11 @@
 # Свързване на приложения с бази от данни
 
-## part I. Requirements
-Download Connector/NET
-https://dev.mysql.com/downloads/connector/net/
+## Part I. Requirements
+- [Download Connector/NET](https://dev.mysql.com/downloads/connector/net/)
+- [Download MySQL for Visual Studio](https://dev.mysql.com/downloads/windows/visualstudio/)
+- [MySQL Sample Employee Database](https://github.com/datacharmer/test_db)
 
-Download MySQL for Visual Studio
-https://dev.mysql.com/downloads/windows/visualstudio/
-
-MySQL Sample Employee Database
-https://github.com/datacharmer/test_db
-
-## part II. MySQL Connection in Visual Studio 2017
+## Part II. MySQL Connection in Visual Studio 2017
 ```
 // Connection String and SQL Query
 var connstr = "server=localhost;port=3306;user=root;password=root;database=employees";
