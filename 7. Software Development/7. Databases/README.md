@@ -1,8 +1,8 @@
 # Свързване на приложения с бази от данни
 
 ## Part I. Requirements
-- [Download Connector/NET](https://dev.mysql.com/downloads/connector/net/)
-- [Download MySQL for Visual Studio](https://dev.mysql.com/downloads/windows/visualstudio/)
+- [MySQL Connector .NET](https://dev.mysql.com/downloads/connector/net/)
+- [MySQL for Visual Studio](https://dev.mysql.com/downloads/windows/visualstudio/)
 - [MySQL Sample Employee Database](https://github.com/datacharmer/test_db)
 
 ## Part II. MySQL Connection in Visual Studio 2017
