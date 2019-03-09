@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_MiniORMTest", "10_MiniOR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_EntityFrameworkMysql", "11_EntityFrameworkMysql\11_EntityFrameworkMysql.csproj", "{1E60BD5E-25DA-4516-9F5B-A7F62948E915}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_ORM_CRUD", "12_ORM_CRUD\12_ORM_CRUD.csproj", "{17743E27-1585-4550-8E3F-ABADF2FED32F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{1E60BD5E-25DA-4516-9F5B-A7F62948E915}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E60BD5E-25DA-4516-9F5B-A7F62948E915}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E60BD5E-25DA-4516-9F5B-A7F62948E915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17743E27-1585-4550-8E3F-ABADF2FED32F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17743E27-1585-4550-8E3F-ABADF2FED32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17743E27-1585-4550-8E3F-ABADF2FED32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17743E27-1585-4550-8E3F-ABADF2FED32F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
