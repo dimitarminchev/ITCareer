@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A38F4502-EFFF-4047-9897-200E7C2DE663}</ProjectGuid>
+    <ProjectGuid>{AE785F96-CC94-4AF9-9E74-CC1671FE8253}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_08.ORMApp</RootNamespace>
-    <AssemblyName>_08.ORMApp</AssemblyName>
+    <RootNamespace>_01_VliliansNames</RootNamespace>
+    <AssemblyName>_01_VliliansNames</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,22 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Department.cs" />
-    <Compile Include="Data\Employee.cs" />
-    <Compile Include="Data\EmployeeProject.cs" />
-    <Compile Include="Data\Project.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MiniORM\MiniORM.csproj">
-      <Project>{db74cf9b-3971-4d8c-9810-1124e642e9d8}</Project>
-      <Name>MiniORM</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

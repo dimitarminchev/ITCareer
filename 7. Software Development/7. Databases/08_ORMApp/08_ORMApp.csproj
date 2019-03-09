@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{054E41EC-26FF-49E8-BF90-208FFAE37286}</ProjectGuid>
+    <ProjectGuid>{A38F4502-EFFF-4047-9897-200E7C2DE663}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MiniORM_Test</RootNamespace>
-    <AssemblyName>MiniORM Test</AssemblyName>
+    <RootNamespace>_08.ORMApp</RootNamespace>
+    <AssemblyName>_08.ORMApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Country.cs" />
-    <Compile Include="Data\Minion.cs" />
+    <Compile Include="Data\Department.cs" />
+    <Compile Include="Data\Employee.cs" />
+    <Compile Include="Data\EmployeeProject.cs" />
+    <Compile Include="Data\Project.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,10 +54,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MiniORM\MiniORM.csproj">
+    <ProjectReference Include="..\09_MiniORM\09_MiniORM.csproj">
       <Project>{db74cf9b-3971-4d8c-9810-1124e642e9d8}</Project>
       <Name>MiniORM</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

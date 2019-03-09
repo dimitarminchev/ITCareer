@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. VliliansNames", "01. VliliansNames\01. VliliansNames.csproj", "{AE785F96-CC94-4AF9-9E74-CC1671FE8253}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_VliliansNames", "01_VliliansNames\01_VliliansNames.csproj", "{AE785F96-CC94-4AF9-9E74-CC1671FE8253}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. MinionsNames", "02. MinionsNames\02. MinionsNames.csproj", "{4FD55566-CBD3-445F-A884-143C350FC5BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_MinionsNames", "02_MinionsNames\02_MinionsNames.csproj", "{4FD55566-CBD3-445F-A884-143C350FC5BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. AddMinions", "03. AddMinions\03. AddMinions.csproj", "{50DFCBED-7347-4A7B-B369-A044EC7CB18A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_AddMinions", "03_AddMinions\03_AddMinions.csproj", "{50DFCBED-7347-4A7B-B369-A044EC7CB18A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. CapitalizeCities", "04. CapitalizeCities\04. CapitalizeCities.csproj", "{DA7516FC-F1C1-4B1E-97FB-DFC7A705DBD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_CapitalizeCities", "04_CapitalizeCities\04_CapitalizeCities.csproj", "{DA7516FC-F1C1-4B1E-97FB-DFC7A705DBD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. RemoveVilian", "05. RemoveVilian\05. RemoveVilian.csproj", "{16B7B774-84C2-4252-98E5-C4106EE05385}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_RemoveVilian", "05_RemoveVilian\05_RemoveVilian.csproj", "{16B7B774-84C2-4252-98E5-C4106EE05385}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.AllMinionsNames", "06.AllMinionsNames\06.AllMinionsNames.csproj", "{6ED0B8BA-7162-42B4-8142-20045CCF5F74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_AllMinionsNames", "06_AllMinionsNames\06_AllMinionsNames.csproj", "{6ED0B8BA-7162-42B4-8142-20045CCF5F74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.IncreaseMinionRange", "07.IncreaseMinionRange\07.IncreaseMinionRange.csproj", "{CB7A4DBD-D394-48D3-8789-3C4B1E1F4A0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_IncreaseMinionRange", "07_IncreaseMinionRange\07_IncreaseMinionRange.csproj", "{CB7A4DBD-D394-48D3-8789-3C4B1E1F4A0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniORM", "MiniORM\MiniORM.csproj", "{DB74CF9B-3971-4D8C-9810-1124E642E9D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_ORMApp", "08_ORMApp\08_ORMApp.csproj", "{A38F4502-EFFF-4047-9897-200E7C2DE663}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniORM Test", "MiniORM Test\MiniORM Test.csproj", "{054E41EC-26FF-49E8-BF90-208FFAE37286}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_MiniORM", "09_MiniORM\09_MiniORM.csproj", "{DB74CF9B-3971-4D8C-9810-1124E642E9D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. ORMApp", "08. ORMApp\08. ORMApp.csproj", "{A38F4502-EFFF-4047-9897-200E7C2DE663}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_MiniORMTest", "10_MiniORMTest\10_MiniORMTest.csproj", "{054E41EC-26FF-49E8-BF90-208FFAE37286}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

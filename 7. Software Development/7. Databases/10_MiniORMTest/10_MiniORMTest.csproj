@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE785F96-CC94-4AF9-9E74-CC1671FE8253}</ProjectGuid>
+    <ProjectGuid>{054E41EC-26FF-49E8-BF90-208FFAE37286}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_01_VliliansNames</RootNamespace>
-    <AssemblyName>_01_VliliansNames</AssemblyName>
+    <RootNamespace>MiniORM_Test</RootNamespace>
+    <AssemblyName>MiniORM Test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Country.cs" />
+    <Compile Include="Data\Minion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,7 +52,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="minions.sql" />
+    <ProjectReference Include="..\09_MiniORM\09_MiniORM.csproj">
+      <Project>{db74cf9b-3971-4d8c-9810-1124e642e9d8}</Project>
+      <Name>MiniORM</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
