@@ -23,10 +23,10 @@ INSERT INTO products (`name`,`price`,`stock`) VALUES
 ```
 
 ## Windows Forms
-![Forms.jpg](Forms)
+![Forms.jpg](Forms.jpg)
 
 ## Universal Windows Platform
-![UWP.jpg](UWP)
+![UWP.jpg](UWP.jpg)
 
 ## ASP.NET
-![ASP.jpg](ASP)
+![ASP.jpg](ASP.jpg)
