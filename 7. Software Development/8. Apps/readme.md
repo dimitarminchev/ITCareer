@@ -22,11 +22,11 @@ INSERT INTO products (`name`,`price`,`stock`) VALUES
 ("Mineral Water",1.20,50);
 ```
 
-## Windows Forms
+## 1. Windows Forms
 ![Forms.jpg](Forms.jpg)
 
-## Universal Windows Platform
-![UWP.jpg](UWP.jpg)
-
-## ASP.NET
+## 2. ASP.NET
 ![ASP.jpg](ASP.jpg)
+
+## 3. Universal Windows Platform
+![UWP.jpg](UWP.jpg)
