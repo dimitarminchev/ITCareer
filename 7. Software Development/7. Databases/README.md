@@ -59,4 +59,4 @@ var context = new employeesContext();
 Първи стъпки в ORM технологиите с Entity Framework (Светлин Наков @ БСУ Хакатон 2015)
 https://nakov.com/blog/2015/05/29/entity-framework-ef-orm-for-beginners/
 
-[DataBase First](https://docs.microsoft.com/en-us/ef/ef6/modeling/designer/workflows/database-first) vs. [Code First](https://docs.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database)
+Microsoft: [DataBase First](https://docs.microsoft.com/en-us/ef/ef6/modeling/designer/workflows/database-first) vs. [Code First](https://docs.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database)
