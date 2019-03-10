@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Busine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalApp", "UniversalApp\UniversalApp.csproj", "{8A323584-A2DB-4F71-A1D4-8F2115330273}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspApp", "AspApp\AspApp.csproj", "{3AE37848-7C6F-4E11-B564-644F9B735F06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,26 @@ Global
 		{8A323584-A2DB-4F71-A1D4-8F2115330273}.Release|x86.ActiveCfg = Release|x86
 		{8A323584-A2DB-4F71-A1D4-8F2115330273}.Release|x86.Build.0 = Release|x86
 		{8A323584-A2DB-4F71-A1D4-8F2115330273}.Release|x86.Deploy.0 = Release|x86
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Debug|ARM.Build.0 = Debug|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Debug|x64.Build.0 = Debug|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Debug|x86.Build.0 = Debug|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Release|ARM.ActiveCfg = Release|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Release|ARM.Build.0 = Release|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Release|ARM64.Build.0 = Release|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Release|x64.ActiveCfg = Release|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Release|x64.Build.0 = Release|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Release|x86.ActiveCfg = Release|Any CPU
+		{3AE37848-7C6F-4E11-B564-644F9B735F06}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
