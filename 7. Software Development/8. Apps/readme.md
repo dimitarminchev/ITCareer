@@ -21,9 +21,12 @@ INSERT INTO products (`name`,`price`,`stock`) VALUES
 ("Coca Cola",2.60,50),
 ("Mineral Water",1.20,50);
 ```
-NuGet Package Manager Console
-```
-Install-Package Microsoft.EntityFrameworkCore.Tools
-Install-Package MySql.Data.EntityFrameworkCore
-Scaffold-DbContext -Connection "server=localhost;port=3306;user=root;password=root;database=products" -Provider MySql.Data.EntityFrameworkCore -OutputDir Models
-```
+
+## Windows Forms
+![Forms.png](Windows Forms)
+
+## Universal Windows Platform
+![UWP.png](Universal Windows Platform)
+
+## ASP.NET
+![ASP.png](ASP.NET)
