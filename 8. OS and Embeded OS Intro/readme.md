@@ -9,5 +9,9 @@
 - e-mail: dimitar.minchev@gmail.com 
 - blog: http://www.minchev.eu
 
+## Учебни материали
+- [Arduino](Arduino)
+- [Linux](Linux)
+
 ## Обучаеми
 ![group.jpg](group.jpg)
