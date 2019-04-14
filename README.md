@@ -17,6 +17,7 @@
 5. [Обектно-ориентирано програмиране](5.%20Object%20Oriented%20Programming)
 6. [Бази данни](6.%20Databases)
 7. [Разработка на софтуер](7.%20Software%20Development)
+8. [Въведение в операционни системи и вградени системи](8.%20OS%20and%20Embeded%20OS%20Intro)
 
 ## Допълнително информация
 Фондация "Софтуерен университет": http://softuni.foundation/projects/applied-software-developer-profession/
