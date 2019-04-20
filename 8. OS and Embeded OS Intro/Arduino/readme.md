@@ -12,7 +12,7 @@ https://www.arduino.cc/
 
 # Projects
 ## 1. Trafic Lights
-![Project1.png](Project1.png)
+![Project1.jpg](Project1.jpg)
 ```
 void setup()
 {
@@ -36,7 +36,7 @@ void loop()
 }
 ```
 ## 2. Disco
-![Project2.png](Project2.png)
+![Project2.jpg](Project2.jpg)
 ```
 void setup() 
 {
