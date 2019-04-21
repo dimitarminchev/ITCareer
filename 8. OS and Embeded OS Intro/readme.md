@@ -10,8 +10,8 @@
 - blog: http://www.minchev.eu
 
 ## Учебни материали
-- [Linux](Linux)
-- [Arduino](Arduino)
+- [Linux](1.%20Linux)
+- [Arduino](2.%20Arduino)
 
 ## Обучаеми
 ![group.jpg](group.jpg)
