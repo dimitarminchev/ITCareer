@@ -1,0 +1,11 @@
+# 4. Exam Preparation
+
+1. Transport = Цена за транспорт
+2. Pipes = Тръби в басейн
+3. CatTom = Поспаливата котка Том
+4. Harvest = Реколта
+5. OnTime = Навреме за изпит
+6. Travel = Пътешествие
+7. Numbers = Операции между числа
+8. Tickets = Билети за мач
+9. HotelRoom = Хотелска стая

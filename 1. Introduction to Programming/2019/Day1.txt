@@ -1,0 +1,8 @@
+# Day 1. Въведение в програмирането
+
+1. Hello-SoftUni
+2. Expression
+3. Nums1To20
+4. TriangleOf55Stars
+5. RectangleSquare
+6. SquareOfNStars

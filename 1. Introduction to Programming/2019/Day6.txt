@@ -1,0 +1,18 @@
+# 5. Повторения (цикли)
+
+19. House 
+20. Diamond
+21. LoopByStep3
+22. NumbersFromNto1
+23. NumbersPowerOf2
+24. EvenPowerOf2
+25. OrderOf2kPlus1
+26. NumberInRange1_100
+27. TheLCD (NOD)
+28. Factoriel
+29. SumDigitsOfNumber
+30. PrimeNumber
+31. EvenNumberWithCheck
+32. FibonacciNumber
+33. PyramidOfNumbers
+34. MatrixOfNumbers

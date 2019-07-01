@@ -9,15 +9,18 @@
 - e-mail: dimitar.minchev@gmail.com 
 - blog: http://www.minchev.eu
 
-## Учебна програма
-- [Дефиниране на класове](1.%20Classes)
-- [Полета и методи](2.%20Properties%20and%20Methods)
-- [Енкапсулация на данни](3.%20Encapsulation)
-- [Статични полета и методи](4.%20Static%20Members)
-- [Подготовка за практически изпит ](5.%20Exam%20Preparation)
+## Учебна програма 2018
+- [Дефиниране на класове](2018/1.%20Classes)
+- [Полета и методи](2018/2.%20Properties%20and%20Methods)
+- [Енкапсулация на данни](2018/3.%20Encapsulation)
+- [Статични полета и методи](2018/4.%20Static%20Members)
+- [Подготовка за практически изпит ](2018/5.%20Exam%20Preparation)
 
-## Обучаеми
-![group.jpg](group.jpg)
+## Обучаеми 2018
+![group_2018.jpg](group_2018.jpg)
+
+## Обучаеми 2019
+![group_2019.jpg](group_2019.jpg)
 
 ## Видео уроци
 1. [Откриване на курса](https://youtu.be/vPuIhPxp8og)

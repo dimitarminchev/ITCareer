@@ -1,0 +1,10 @@
+# 6. Подпрограми (функции методи)
+
+1. CashReceipt
+2. WholeNumberSign
+3. PrintTriangle
+4. DrawFillRectangle
+5. TriangleArea
+6. PowerOfNumber
+7. Max_Of_2_Values
+8. EvenOddSumMultiplication
