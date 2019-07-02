@@ -43,3 +43,30 @@ namespace _3215
         }
     }
 }
+/*
+var list = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var dic = new Dictionary<int, int>();
+            foreach (var item in list)
+            {
+                if (dic.ContainsKey(item))
+                {
+                    dic[item]++;
+                }
+                else
+                {
+                    dic.Add(item, 1);
+                }
+            }
+            var val = dic.Values.OrderByDescending(x => x).ToList();
+            var sum = 0;
+             var del = 0;
+            foreach (var item in dic.Keys)
+            {
+                if (dic[item] == val[0])
+                {
+                    sum += item;
+                    del =dic[item];
+                }                
+            }
+            Console.WriteLine($"{sum/(double)del}");
+*/
