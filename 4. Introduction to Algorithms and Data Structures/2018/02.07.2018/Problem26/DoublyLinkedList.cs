@@ -9,6 +9,7 @@ namespace Problem26
 {
     class DoublyLinkedList<T>:IEnumerable<T>
     {
+		// Елемент от списъка
         private class ListNode<T>
         {
             public T Value { get; set; }
@@ -22,15 +23,22 @@ namespace Problem26
             }
         }
 
+		// Глава
         private ListNode<T> Head { get; set; }
+		
+		// Опашка
         private ListNode<T> Tail { get; set; }
+		
+		// Брой елементи
         public int Count { get; private set; }
 
+		// Конструктор
         public DoublyLinkedList()
         {
-
+			// Нищо
         }
 
+		// Добавяне на първи елемент
         public void AddFirst(T element)
         {
             if (Count==0)
@@ -47,6 +55,7 @@ namespace Problem26
             this.Count++;
         }
 
+		// Добавяне на последен елемент
         public void AddLast(T element)
         {
             if (this.Count==0)
@@ -63,6 +72,7 @@ namespace Problem26
             this.Count++;
         }
 
+		// Прмахване на първи елемент
         public T RemoveFirst()
         {
             var elementoreturn = this.Head.Value;
@@ -72,6 +82,7 @@ namespace Problem26
             return elementoreturn;
         }
 
+		// Прмахване на последен елемент
         public T RemoveLast()
         {
             T  elementoreturn = this.Tail.Value;
@@ -81,6 +92,7 @@ namespace Problem26
             return elementoreturn;
         }
 
+		// Масив
         public T[] ToArray()
         {
             var curr = this.Head;
@@ -94,6 +106,7 @@ namespace Problem26
             return arr;
         }
 
+	    // Итериране на колекцията (Нумератор)
         public IEnumerator<T> GetEnumerator()
         {
             var curr = this.Head;
