@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C637F42-F81E-4453-A855-733B609C90F8}</ProjectGuid>
+    <ProjectGuid>{89CD7961-BC04-4EEE-9664-DB6CF1CBB416}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_27</RootNamespace>
-    <AssemblyName>27</AssemblyName>
+    <RootNamespace>LinkedStack</RootNamespace>
+    <AssemblyName>LinkedStack</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LinkedQueue.cs" />
+    <Compile Include="LinkedStack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueueNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

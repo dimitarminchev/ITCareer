@@ -5,43 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Problem26
+namespace _26
 {
-    class DoublyLinkedList<T>:IEnumerable<T>
+    public class DoublyLinkedList<T> : IEnumerable<T>
     {
-		// Елемент от списъка
-        private class ListNode<T>
-        {
-            public T Value { get; set; }
-            public ListNode<T> Prev { get; set; }
-            public ListNode<T> Next { get; set; }
-            public ListNode(T Value)
-            {
-                this.Value = Value;
-                this.Next = null;
-                this.Prev = null;
-            }
-        }
-
-		// Глава
+        // Глава
         private ListNode<T> Head { get; set; }
-		
-		// Опашка
+
+        // Опашка
         private ListNode<T> Tail { get; set; }
-		
-		// Брой елементи
+
+        // Брой елементи
         public int Count { get; private set; }
 
-		// Конструктор
-        public DoublyLinkedList()
-        {
-			// Нищо
-        }
 
-		// Добавяне на първи елемент
+        // Добавяне на първи елемент
         public void AddFirst(T element)
         {
-            if (Count==0)
+            if (Count == 0)
             {
                 this.Head = this.Tail = new ListNode<T>(element);
             }
@@ -55,10 +36,10 @@ namespace Problem26
             this.Count++;
         }
 
-		// Добавяне на последен елемент
+        // Добавяне на последен елемент
         public void AddLast(T element)
         {
-            if (this.Count==0)
+            if (this.Count == 0)
             {
                 this.Head = this.Tail = new ListNode<T>(element);
             }
@@ -72,7 +53,7 @@ namespace Problem26
             this.Count++;
         }
 
-		// Прмахване на първи елемент
+        // Прмахване на първи елемент
         public T RemoveFirst()
         {
             var elementoreturn = this.Head.Value;
@@ -82,17 +63,17 @@ namespace Problem26
             return elementoreturn;
         }
 
-		// Премахване на последен елемент
+        // Премахване на последен елемент
         public T RemoveLast()
         {
-            T  elementoreturn = this.Tail.Value;
+            T elementoreturn = this.Tail.Value;
             this.Tail = this.Tail.Prev;
             this.Tail.Next = null;
             this.Count--;
             return elementoreturn;
         }
 
-		// Масив
+        // Масив
         public T[] ToArray()
         {
             var curr = this.Head;
@@ -106,20 +87,20 @@ namespace Problem26
             return arr;
         }
 
-	    // Итериране на колекцията (Нумератор)
+        // Нумератор
         public IEnumerator<T> GetEnumerator()
         {
-            var curr = this.Head;
-            while (curr!=null)
+            var current = this.Head;
+            while (current != null)
             {
-                yield return curr.Value;
-                curr = curr.Next;
+                yield return current.Value;
+                current = current.Next;
             }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return GetEnumerator();
+            return this.GetEnumerator();
         }
     }
 }
