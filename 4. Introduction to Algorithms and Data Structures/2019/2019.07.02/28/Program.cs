@@ -8,6 +8,7 @@ namespace _28
 {
     class Program
     {
+        // 28. LinkedStack
         static void Main(string[] args)
         {
         }

@@ -8,6 +8,7 @@ namespace _25
 {
     class Program
     {
+        // 25. ReversedList
         static void Main(string[] args)
         {
         }

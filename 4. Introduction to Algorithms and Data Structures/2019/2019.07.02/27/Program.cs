@@ -8,6 +8,7 @@ namespace _27
 {
     class Program
     {
+        // 27. LinkedQueue
         static void Main(string[] args)
         {
         }
