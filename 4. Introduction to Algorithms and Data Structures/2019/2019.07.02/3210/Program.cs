@@ -37,6 +37,13 @@ namespace _3210
 
             // Print: 5 3 3 5
             Console.WriteLine(string.Join(" ", queue));
+
+
+            /*  Вариант 2 - цялата задача
+             *List<int> list = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+             *List<int> res = list.Where(x => list.Count(c => c == x) % 2 == 0).ToList();
+             *Console.WriteLine(string.Join(" ",res));
+             */
         }
     }
 }
