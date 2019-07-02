@@ -26,6 +26,7 @@ namespace Test1
 
         static void Main(string[] args)
         {
+            Console.Write("n=")
             int n = int.Parse(Console.ReadLine());
             PrintFigure(n);
         }
