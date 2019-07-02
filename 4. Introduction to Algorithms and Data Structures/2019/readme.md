@@ -1,16 +1,18 @@
 # Алгоритми и структури от данни
 
 ## 2019.07.01
-- [ArrayList](2019.07.01/Demo1) = Разтеглив масив
-- [DynamicList](2019.07.01/Demo2) = Свързан списък
-- [CircularQueue](2019.07.01/Demo3) = Кръгова опашка
-- [ArrayStack](2019.07.01/Demo4) = Статичен стек
+- [ArrayList](2019.07.01/ArrayList) = Разтеглив масив
+- [DynamicList](2019.07.01/DynamicList) = Свързан списък
+- [CircularQueue](2019.07.01/CircularQueue) = Кръгова опашка
+- [ArrayStack](2019.07.01/ArrayStack) = Статичен стек
+- backup.zip = Примери
 
 ## 2019.07.02
-- [ReversedList](2019.07.02/25) = Обратен списък
-- [DoublyLinkedList](2019.07.02/26) = Двойно свързан спиък
-- [LinkedQueue](2019.07.02/27) =  Свързана опашка
-- [LinkedStack](2019.07.02/28) = Свързан стек
+- [ReversedList](2019.07.02/ReversedList) = Обратен списък
+- [DoublyLinkedList](2019.07.02/DoublyLinkedList) = Двусвързан спиък
+- [LinkedQueue](2019.07.02/LinkedQueue) =  Свързана опашка
+- [LinkedStack](2019.07.02/LinkedStack) = Свързан стек
+- backup.zip = Примери
 
 ## 2019.07.03
 - Fisher-Yates Shuffle = Разбърване = О(N)
