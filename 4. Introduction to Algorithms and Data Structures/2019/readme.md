@@ -15,14 +15,14 @@
 - backup.zip = Примери
 
 ## 2019.07.03
-- Fisher-Yates Shuffle = Разбърване = О(N)
-- Selection Sort = Сортиране чрез пряка селекция = О(N^2)
-- Bubble Sort = Сортиране по метода на мехурчето = О(N^2)
-- Insertion Sort = Сортиране чрез вмъкване = О(N^2)
-- Merge Sort = Сортиране чрез сливане = O(N*log(N))
-- Quick Sort = Бързо сортиране = O(N*log(N))
+- FisherYatesShuffle = Разбърване = О(N)
+- SelectionSort = Сортиране чрез пряка селекция = О(N^2)
+- BubbleSort = Сортиране по метода на мехурчето = О(N^2)
+- InsertionSort = Сортиране чрез вмъкване = О(N^2)
+- MergeSort = Сортиране чрез сливане = O(N*log(N))
+- QuickSort = Бързо сортиране = O(N*log(N))
 
 ## 2019.07.04
-- Linear Search = не се препоръчва = O(n)
-- Binary Search = подходящ за графи и дървета = O(log(n))
+- LinearSearch = не се препоръчва = O(n)
+- BinarySearch = подходящ за графи и дървета = O(log(n))
 - InterpolationSearch = подходящ за масиви и списъци = O(log(log(N))
