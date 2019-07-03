@@ -49,6 +49,7 @@ namespace LinkedStack
             Node<T> fNode = this.firstNode;
             this.firstNode = firstNode.NextNode;
             return fNode.Value;
+            Count--;
         }
 
         // Масив
