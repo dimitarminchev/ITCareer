@@ -17,7 +17,7 @@
 ## 2019.07.03
 - [FisherYatesShuffle](2019.07.03/FisherYatesShuffle) = Разбърване = О(N)
 - [SelectionSort](2019.07.03/SelectionSort) = Сортиране чрез пряка селекция = О(N^2)
-- BubbleSort = Сортиране по метода на мехурчето = О(N^2)
+- [BubbleSort](2019.07.03/BubbleSort) = Сортиране по метода на мехурчето = О(N^2)
 - InsertionSort = Сортиране чрез вмъкване = О(N^2)
 - MergeSort = Сортиране чрез сливане = O(N*log(N))
 - QuickSort = Бързо сортиране = O(N*log(N))
