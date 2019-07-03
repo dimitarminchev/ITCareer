@@ -10,6 +10,9 @@ namespace _431
     {
         static void Main(string[] args)
         {
+            var numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            Sort.Merge(numbers);
+            Console.WriteLine(string.Join(" ", numbers));
         }
     }
 }

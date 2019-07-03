@@ -10,6 +10,9 @@ namespace _422
     {
         static void Main(string[] args)
         {
+            int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            Sort.Insertion(numbers);
+            Console.WriteLine(string.Join(" ", numbers));
         }
     }
 }
