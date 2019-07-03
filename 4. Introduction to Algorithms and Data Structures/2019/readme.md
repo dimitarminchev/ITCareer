@@ -19,8 +19,8 @@
 - [SelectionSort](2019.07.03/SelectionSort) = Сортиране чрез пряка селекция = О(N^2)
 - [BubbleSort](2019.07.03/BubbleSort) = Сортиране по метода на мехурчето = О(N^2)
 - [InsertionSort](2019.07.03/InsertionSort) = Сортиране чрез вмъкване = О(N^2)
-- MergeSort = Сортиране чрез сливане = O(N*log(N))
-- QuickSort = Бързо сортиране = O(N*log(N))
+- [MergeSort](2019.07.03/MergeSort) = Сортиране чрез сливане = O(N*log(N))
+- [QuickSort](2019.07.03/QuickSort) = Бързо сортиране = O(N*log(N))
 
 ## 2019.07.04
 - LinearSearch = не се препоръчва = O(n)
