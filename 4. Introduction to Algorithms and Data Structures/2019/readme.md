@@ -15,7 +15,7 @@
 - backup.zip = Примери
 
 ## 2019.07.03
-- FisherYatesShuffle = Разбърване = О(N)
+- [FisherYatesShuffle](2019.07.03/FisherYatesShuffle) = Разбърване = О(N)
 - SelectionSort = Сортиране чрез пряка селекция = О(N^2)
 - BubbleSort = Сортиране по метода на мехурчето = О(N^2)
 - InsertionSort = Сортиране чрез вмъкване = О(N^2)
