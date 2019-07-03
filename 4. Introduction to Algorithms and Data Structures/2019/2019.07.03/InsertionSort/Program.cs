@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BubbleSort
+namespace InsertionSort
 {
     class Program
     {
@@ -22,8 +22,8 @@ namespace BubbleSort
             // Печат
             Console.WriteLine(string.Join(" ", numbers));
 
-            // Сортиране по метода мехурчето = O(N^2)
-            Sort.Bubble(numbers);
+            // Сортиране чрез вмъкване = О(N ^ 2))
+            Sort.Insertion(numbers);
 
             // Печат
             Console.WriteLine(string.Join(" ", numbers));

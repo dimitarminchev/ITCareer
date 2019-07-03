@@ -22,7 +22,7 @@ namespace SelectionSort
             // Печат
             Console.WriteLine(string.Join(" ", numbers));
 
-            // Сортирне
+            // Сортиране по метода на пряката селекция = O(N ^ 2)
             Sort.Selection(numbers);
 
             // Печат
