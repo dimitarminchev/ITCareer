@@ -91,7 +91,8 @@ namespace ReversedList
             // Премахване на елемента и получване на нова колекция
             var temp = items.Take(Count).Reverse();
             this.items = temp.Take(index).Concat(temp.Skip(index + 1)).Reverse().Concat(new T[Capacity - Count + 1]).ToArray();
-
+            this.Count--;
+            
             return element;
         }
 
