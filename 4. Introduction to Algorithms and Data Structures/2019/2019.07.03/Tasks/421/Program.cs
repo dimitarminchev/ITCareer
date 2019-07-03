@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace _421
-{/* 5 4 3 2 1*/
+{
     class Program
     {
+        // Автор: Веселин Инзов
+        // 5 4 3 2 1
         static void Main(string[] args)
         {
             int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();

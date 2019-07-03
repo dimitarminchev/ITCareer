@@ -8,6 +8,7 @@ namespace _433
 {
     class Program
     {
+        // Автор: Щерю Атанасов
         static void Main(string[] args)
         {
         }

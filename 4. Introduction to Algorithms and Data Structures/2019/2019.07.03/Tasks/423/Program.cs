@@ -8,6 +8,7 @@ namespace _423
 {
     class Program
     {
+        // Автор: Христо Широв
         static void Main(string[] args)
         {
             int[] arr = { 5, 8, -1, 32, 18};

@@ -16,6 +16,7 @@ namespace _425
 3 1 2 4
 2 3 1 2
 */
+            // Автор: Цветилин Цветилов
             var input = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int R = input[0], C = input[1], S = input[2];
             int[][] array = new int[R][];

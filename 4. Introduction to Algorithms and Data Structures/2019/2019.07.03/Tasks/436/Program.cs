@@ -8,6 +8,7 @@ namespace _436
 {
     class Program
     {
+        // Автор: Димитър Митев
         static void Main(string[] args)
         {
         }

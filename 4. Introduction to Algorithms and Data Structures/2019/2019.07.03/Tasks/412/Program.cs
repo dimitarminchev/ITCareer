@@ -8,6 +8,7 @@ namespace _412
 {
     class Program
     {
+        // Автор: Владислав Петков
         static void Main(string[] args)
         {
             int[] a = new int[5] { 5, 4, 3, 2, 1 };

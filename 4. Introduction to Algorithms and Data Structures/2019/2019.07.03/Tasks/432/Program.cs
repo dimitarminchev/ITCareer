@@ -8,6 +8,7 @@ namespace _432
 {
     class Program
     {
+        // Автор: Ганчо Първанов
         static void Main(string[] args)
         {
             var numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();

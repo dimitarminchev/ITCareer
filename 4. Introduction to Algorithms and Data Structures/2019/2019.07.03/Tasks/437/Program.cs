@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace _437
 {
+    // Автори: Цветилин Цветилов и Стоян Златев
     class Program
     {
 /*

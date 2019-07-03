@@ -12,6 +12,7 @@ namespace _424
 10
 4 2 6 3 8 1 7 4 2 9
 */
+        // Автор: Стоян Златев
         static void Main(string[] args)
         {
             int N = int.Parse(Console.ReadLine());

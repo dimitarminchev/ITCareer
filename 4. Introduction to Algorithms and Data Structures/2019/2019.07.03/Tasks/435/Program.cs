@@ -8,6 +8,7 @@ namespace _435
 {
     class Program
     {
+        // Автор: Щерю Атанасов
         static void Main(string[] args)
         {
             int[] sequence = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();

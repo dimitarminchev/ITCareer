@@ -8,6 +8,7 @@ namespace _413
 {
     class Program
     {
+        // Автор: Христо Широв
         static void Main(string[] args)
         {
             int[] arr = { 95, 98, 103, 109, 48, 92, 25, 106, 160 };

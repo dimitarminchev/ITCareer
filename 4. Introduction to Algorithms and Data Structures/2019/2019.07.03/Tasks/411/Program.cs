@@ -8,6 +8,7 @@ namespace _411
 {
     class Program
     {
+        // Автор: Владислав Петков
         static void Main(string[] args)
         {
             // Look 412
