@@ -10,6 +10,10 @@ namespace _412
     {
         static void Main(string[] args)
         {
+            int[] a = new int[5] { 5, 4, 3, 2, 1 };
+            Console.WriteLine(string.Join(" ",a));
+            Sort.Selection(a);
+            Console.WriteLine(string.Join(" ", a));
         }
     }
 }
