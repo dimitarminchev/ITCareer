@@ -13,7 +13,7 @@ namespace Searching
         private static void MesureTime(Action metod)
         {
             Stopwatch timer = new Stopwatch();
-            timer.Restart();
+            timer.Start();
 
             // Изпълнение на метода който желаем да тестваме
             metod();
@@ -27,8 +27,8 @@ namespace Searching
             int index = 0;
 
             // Data Structure
-            int key = 456789;
-            const int N = 500000;
+            int key = 54321987;
+            const int N = 100000000;
             int[] numbers = new int[N];
             for (int i = 0; i < N; i++) numbers[i] = i + 1;
 

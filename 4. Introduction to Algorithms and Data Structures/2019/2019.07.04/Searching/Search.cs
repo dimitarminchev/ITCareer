@@ -87,33 +87,20 @@ namespace Searching
         /// <summary>
         /// Interpolation Search = Интерполационно търсене = O(log(log(N))
         /// </summary>
-        public static int Interpolational(int[] elements, int key)  // TODO: FIX
-        {
-            int low = 0, high = elements.Count() - 1;
-            // algo
-            while (elements[low].CompareTo(key) <= 0 && elements[high].CompareTo(key) >= 0)
+         public static int Interpolational(int[] sortedArray, int key)
+         {
+            // TODO: MUST BE FIXED ...
+            int low = 0;
+            int high = sortedArray.Length - 1;
+            while (sortedArray[low] <= key && sortedArray[high] >= key)
             {
-                int mid = low + (key - elements[low]) * (high - low) / (elements[high] - elements[low]);
-
-                // compare
-                if (elements[mid].CompareTo(key) > 0)
-                {
-                    // (mid > key) => key must be on left 
-                    high = mid - 1;
-                }
-                else if (elements[mid].CompareTo(key) < 0)
-                {
-                    // (mid < key) => key must be on right 
-                    low = mid + 1;
-                }
-                else
-                {
-                    // (mid == key) => found
-                    return mid;
-                }
+                int mid = (int)(low + ((double)(key - sortedArray[low]) * (high - low)) / (sortedArray[high] - sortedArray[low]));
+                if (sortedArray[mid] < key) low = mid + 1;
+                else if (sortedArray[mid] > key) high = mid - 1;
+                else  return mid;
             }
-            // not found
-            return -1;
+            if (sortedArray[low] == key) return low;
+            else return -1;
         }
 
         /// <summary>
