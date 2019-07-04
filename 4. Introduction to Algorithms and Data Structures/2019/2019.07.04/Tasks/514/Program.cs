@@ -8,6 +8,7 @@ namespace _514
 {
     class Program
     {
+        // Автор: Цветлилин Цветилов
         static void Main(string[] args)
         {
         }
