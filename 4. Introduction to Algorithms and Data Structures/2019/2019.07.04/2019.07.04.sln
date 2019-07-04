@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterpolationalSearch", "In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasySearch", "EasySearch\EasySearch.csproj", "{C2DE07FE-136A-4A63-A30A-D961B2DF7E23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searching", "Searching\Searching.csproj", "{88D6E513-D605-4121-A57D-609A4C9E4BDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C2DE07FE-136A-4A63-A30A-D961B2DF7E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2DE07FE-136A-4A63-A30A-D961B2DF7E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2DE07FE-136A-4A63-A30A-D961B2DF7E23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88D6E513-D605-4121-A57D-609A4C9E4BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88D6E513-D605-4121-A57D-609A4C9E4BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88D6E513-D605-4121-A57D-609A4C9E4BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88D6E513-D605-4121-A57D-609A4C9E4BDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

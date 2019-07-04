@@ -20,6 +20,7 @@ namespace EasySearch
                     return index;
                 }
             }
+            // not found
             return -1;
         }
     }

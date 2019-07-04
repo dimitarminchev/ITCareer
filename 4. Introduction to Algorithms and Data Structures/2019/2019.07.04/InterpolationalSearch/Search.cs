@@ -18,6 +18,7 @@ namespace InterpolationalSearch
             {
                 int mid = low + (((dynamic)key - (dynamic)elements[low])*(high-low)) / 
                                  ((dynamic)elements[high] - (dynamic)elements[low]);
+
                 // compare
                 if (elements[mid].CompareTo(key) > 0)
                 {
