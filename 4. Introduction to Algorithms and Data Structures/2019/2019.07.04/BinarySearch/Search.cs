@@ -14,23 +14,28 @@ namespace BinarySearch
             int start = 0, end = elements.Count() - 1;
             while (end >= start)
             {
-                int mid = (start + end) / 2; // middle
+                // middle
+                int mid = (start + end) / 2; 
 
-                // Comparing
-                if (elements[mid].CompareTo(key) < 0)
+                // compare
+                if (elements[mid].CompareTo(key) > 0)
                 {
-                    start = mid + 1; // mid < key
+                    // (mid > key) => key must be on left 
+                    end = mid - 1;                    
                 }
-                else if (elements[mid].CompareTo(key) > 0)
+                else if (elements[mid].CompareTo(key) < 0)
                 {
-                    end = mid - 1; // mid > key
+                    // (mid < key) => key must be on right 
+                    start = mid + 1;
                 }
                 else
                 {
-                    return mid; // found
+                    // (mid == key) => found
+                    return mid; 
                 }
             }
-            return -1; // not found
+            // not found
+            return -1; 
         }
     }
 }
