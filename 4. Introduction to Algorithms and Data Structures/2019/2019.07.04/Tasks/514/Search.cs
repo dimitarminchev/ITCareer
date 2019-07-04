@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _515
+namespace _514
 {
-    class Search
+    public class Search
     {
         public static int Linear<T>(T[] elements, T key) where T : IComparable
         {
@@ -71,21 +71,21 @@ namespace _515
             else return -1;
         }
         //Fibonacci
-        public static int Fibonacci(int[] arr, int x, int n)
+        public static long Fibonacci(int[] arr, int x, int n)
         {
-            int fibMMm2 = 0;
-            int fibMMm1 = 1; 
-            int fibM = fibMMm2 + fibMMm1;
+            long fibMMm2 = 0;
+            long fibMMm1 = 1;
+            long fibM = fibMMm2 + fibMMm1;
             while (fibM < n)
             {
                 fibMMm2 = fibMMm1;
                 fibMMm1 = fibM;
                 fibM = fibMMm2 + fibMMm1;
             }
-            int offset = -1;
+            long offset = -1;
             while (fibM > 1)
             {
-                int i = Math.Min(offset + fibMMm2, n - 1);
+                long i = offset + fibMMm2 > n-1 ? n-1 : offset + fibMMm2;
                 if (arr[i] < x)
                 {
                     fibM = fibMMm1;

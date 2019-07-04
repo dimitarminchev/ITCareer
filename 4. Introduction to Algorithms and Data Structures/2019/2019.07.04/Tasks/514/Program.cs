@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +24,13 @@ namespace _514
         }
         static void Main(string[] args)
         {
-            //Входни данни
+            // Входни данни
+            Console.Write("n=");
             int n = int.Parse(Console.ReadLine());
+            Console.Write("r=");
             int r = int.Parse(Console.ReadLine());
 
-            //Приготвяне на тестери
+            // Приготвяне на тестери
             Random rnd = new Random();
             int[] test1 = new int[n];
             int[] test2 = new int[n];
@@ -39,7 +42,7 @@ namespace _514
                 test3[i] = rnd.Next(1, n);
             }
 
-            //Измерване време за сортиране
+            // Измерване време за сортиране
             Stopwatch timer = new Stopwatch();
             timer.Start();
             int[] sortedTest2 = test2.OrderBy(x => x).ToArray();
