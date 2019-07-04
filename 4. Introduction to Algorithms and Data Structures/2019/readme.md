@@ -36,5 +36,6 @@
 - Tasks: 6.1, 6.2, 6.3
 
 ## 2019.07.06 = Exam Preparation ...
-- Пподготовка за изпит 
-- Tasks: Game, Product, Train
+- [Game](2019.07.06/game.md) = Игра
+- [Product](2019.07.06/product.md) = Продукти
+- [Train](2019.07.06/train.md) = Влакче
