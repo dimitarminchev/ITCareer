@@ -8,14 +8,14 @@ namespace _631
 {
     class Program
     {
-        //631* = Words
+        // 631* = Words
         public static List<string> final = new List<string>();
-        public static int Counter=0;
+        public static int Counter = 0;
         public static bool distincted = true;
-        public static void CheckWord(char[]s)
+        public static void CheckWord(char[] s)
         {
             bool go = true;
-            for (int i = 0; i < s.Length - 1; i ++)
+            for (int i = 0; i < s.Length - 1; i++)
             {
                 if (s[i] == s[i + 1])
                 {
