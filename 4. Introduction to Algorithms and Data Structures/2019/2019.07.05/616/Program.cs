@@ -68,8 +68,6 @@ namespace _616
                     for (; true; startX++)
                     {
                         if (startX == col) break;
-                        Console.WriteLine(startY + " " + startX);
-
                         if (table[startY][startX] == '-')
                         {
                             var temp = table[startY].ToCharArray();
@@ -77,11 +75,11 @@ namespace _616
                             table[startY] = string.Join("",temp);
                             area++;
                         }
-
                         else break;
                     }
                     if (startY + 1 == row) break;
                 }
+                regions[ind].Area = area;
             }
         }
         public static void Print()
@@ -96,6 +94,21 @@ namespace _616
             Draw();
             FindStartingPoints();
             Check();
+            regions = regions.Where(x=>x.Area!=0).OrderByDescending(x => x.Area).ToList();
+            Print();
         }
+    }
+    public class Region
+    {
+        public int X { get; set; }
+        public int Y { get; set; }
+        public int Area { get; set; }
+        public Region(int x, int y, int area = 0)
+        {
+            X = x;
+            Y = y;
+            Area = area;
+        }
+
     }
 }
