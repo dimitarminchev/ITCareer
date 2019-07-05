@@ -34,5 +34,43 @@ namespace _612
         {
             Permutation(0);
         }
+        
+        
+        /* Вариант 2
+            Автор: Цветилин Цветилов
+        static void Rec(int[] numbers, int n, int i, int iter = 0)
+        {
+            if (iter >= Math.Pow(n, n)) return;
+            else
+            {
+                if (i + 1 == n)
+                {
+                    iter++;
+                    Console.WriteLine(string.Join(" ", numbers));
+                }
+                if (numbers[i] < n)
+                {
+                    numbers[i]++;
+                    if (i < n - 1) i = n - 1;
+                }
+                else
+                {
+                    numbers[i] = 1;
+                    i--;
+                }
+                Rec(numbers, n, i, iter);
+            }
+
+
+        }
+
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int[] nums = new int[n];
+            for (int p = 0; p < n; p++) nums[p] = 1;
+            Rec(nums, n, n - 1);
+        }
+        */
     }
 }
