@@ -8,6 +8,7 @@ namespace _625
 {
     class Program
     {
+        //Автор: Стоян Златев
         // 625 = Combinations
         public static void Combination(int index, int[] arr, int border = 0)
         {
