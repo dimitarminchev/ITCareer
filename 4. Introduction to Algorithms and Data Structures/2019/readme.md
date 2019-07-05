@@ -41,7 +41,7 @@
 - 621 = Recursive Array Sum
 - 622 = Recursive Factorial
 - 623 = Recursive Drawing
-- 624 = Vector s0/1 
+- 624 = Vectors 0/1 
 - 625 = Combinations
 - 626* = Eight Queens
 - 627* = Labyrinth
