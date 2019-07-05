@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace _627
 {
     class Program
-    {
+    {   // Автори: Стоян Златев и Цветилин Цветилов
         // 627* = Labyrinth
         public static void FindPath(int row,int col,char direction)
         {
@@ -21,6 +21,16 @@ namespace _627
             Console.WriteLine();
             if (IsExit(row,col))
             {
+                if (path.Count() > max)
+                {
+                    max = path.Count();
+                    maxPath = string.Join("",path);
+                }
+                else if (path.Count()<min)
+                {
+                    min = path.Count();
+                    minPath = string.Join("", path);
+                }
                 Console.WriteLine(string.Join(" ",path));
             }
              else if (!IsVisited(row,col)&&IsFree(row,col,direction))
@@ -143,6 +153,12 @@ namespace _627
         public static int height = int.Parse(Console.ReadLine());
         public static int width = int.Parse(Console.ReadLine());
         public static string[] lab = new string[height];
+        public static int currentMin = 0;
+        public static int currentMax = 0;
+        public static string maxPath = "";
+        public static string minPath = "";
+        public static int min = int.MaxValue;
+        public static int max = 0;
         public static void DrawLab()
         {
             for (int i = 0; i < height; i++)
@@ -154,6 +170,8 @@ namespace _627
         {
             DrawLab();
           FindPath(0, 0, 'S');
+            Console.WriteLine("Min path: {0}",minPath);
+            Console.WriteLine("Max path: {0}",maxPath);
         }
     }
 }
