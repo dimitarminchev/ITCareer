@@ -14,7 +14,7 @@ namespace Game
         // Речник на играчите
         public static Dictionary<string, CapacityList> players = new Dictionary<string, CapacityList>();
 
-        // Зарове
+        // Добавяне на играч със зарове
         public static void Dice(string player, int number1, int number2)
         {
             if (players.ContainsKey(player))
@@ -34,7 +34,41 @@ namespace Game
         // Сума на двойките за даден играч
         public static void CurrentPairSum(string player)
         {
-            players[player].CurrentPairSum();
+            players[player].PrintCurrentPairSum();
+        }
+
+        // Текущо състояние на всички двойки на даден играч
+        public static void CurrentState(string player)
+        {
+            players[player].PrintCurrentState();
+        }
+        
+        // Победител
+        public static void Winner()
+        {
+            string winner = String.Empty;
+            int min = players.FirstOrDefault().Value.SumIntervalPairs().Difference();            
+            foreach (var player in players)
+            {
+                var temp = player.Value.SumIntervalPairs().Difference();
+                if (temp <= min)
+                {
+                    min = temp;
+                    winner = player.Key;
+                }
+            }
+            Console.WriteLine($"{winner} wins the game!");
+        }
+
+        // Статистика
+        public static void CurrentStanding()
+        {
+            var list = players.OrderByDescending(x => x.Value.SumIntervalPairs().Difference()).ToList();
+            foreach (var player in list)
+            {
+                Console.Write(player.Key + " - ");
+                player.Value.PrintCurrentState();
+            }
         }
 
         // Game
@@ -52,9 +86,24 @@ namespace Game
                             Dice(line[1], int.Parse(line[2]), int.Parse(line[3]));
                             break;
                         }
+                    case "CurrentState":
+                        {
+                            CurrentState(line[1]);
+                            break;
+                        }
                     case "CurrentPairSum":
                         {
                             CurrentPairSum(line[1]);
+                            break;
+                        }
+                    case "Winner":
+                        {
+                            Winner();
+                            break;
+                        }
+                    case "CurrentStanding":
+                        {
+                            CurrentStanding();
                             break;
                         }
                 }

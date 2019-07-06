@@ -15,5 +15,13 @@ namespace Game
             System.Console.WriteLine(text);
             System.Console.ForegroundColor = color;
         }
+
+        public static void Write(string text)
+        {
+            var color = System.Console.ForegroundColor;
+            System.Console.ForegroundColor = ConsoleColor.Green;
+            System.Console.Write(text);
+            System.Console.ForegroundColor = color;
+        }
     }
 }

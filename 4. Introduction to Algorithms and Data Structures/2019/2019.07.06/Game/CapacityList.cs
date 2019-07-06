@@ -54,20 +54,27 @@ namespace Game
                     part2 += this.items[index].Last;
                 }
             }
-            return new Pair(part1, part2);
+            return new Pair(part1, part2, true); // Summed
         }
 
         // Добавяне на двойката 
         public void Add(Pair item)
         {
-            // Ако няма масто, сумираме всички двойки и ги записваме на 1 място
+            // Ако няма място, сумираме всички двойки и ги записваме на едно място
             if (this.nextIndex == this.items.Length)
             {
-                var pair = SumIntervalPairs();
-                this.items = new Pair[InitialCapacity];
-                this.items[0] = pair;
-                this.Count = 1;
-                this.nextIndex = 1;
+                int capacity = this.items.Count();
+
+                var newItems = this.items.Where(x => x.Summed == true).ToList();
+                newItems.Add(Sum());
+
+                this.items = new Pair[capacity];
+                for (int index = 0; index < newItems.Count; index++)
+                {
+                    this.items[index] = newItems[index];
+                }
+                this.Count = newItems.Count();
+                this.nextIndex = newItems.Count();
             }
             else
             {
@@ -77,7 +84,7 @@ namespace Game
             }            
         }
 
-        // Oтпечатайте всички двойки от 0 до nextIndex
+        // Oтпечатване на всички двойки 
         public void PrintCurrentState()
         {
             for (int index = 0; index < this.nextIndex; index++)
@@ -86,8 +93,8 @@ namespace Game
             }
         }
 
-        // Мега яката магия
-        public void CurrentPairSum()
+        // Отпечатване на всички сумирани двойки
+        public void PrintCurrentPairSum()
         {
             bool printed = false;
             for (int index = 0; index < this.nextIndex; index++)
