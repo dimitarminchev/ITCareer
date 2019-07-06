@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Train
@@ -7,6 +8,7 @@ namespace Train
     {
         // Trains
         private static Deque<Train> trains = new Deque<Train>();
+        private static Stack<Train> history = new Stack<Train>();
 
         private static void Add(int number, string name, string type, int cars)
         {
@@ -28,15 +30,21 @@ namespace Train
                 Train backTrain = trains.GetBack();
                 if (backTrain != null && backTrain.Type == "F" && backTrain.Cars > 15)
                 {
-                    Console.WriteLine(trains.RemoveBack());
+                    var train = trains.RemoveBack();
+                    history.Push(train);
+                    Console.WriteLine(train.ToString());
                 }
                 else if (frontTrain != null && frontTrain.Type == "P")
                 {
-                    Console.WriteLine(trains.RemoveFront());
+                    var train = trains.RemoveFront();
+                    history.Push(train);
+                    Console.WriteLine(train.ToString());
                 }
                 else if (backTrain != null && backTrain.Type == "F")
                 {
-                    Console.WriteLine(trains.RemoveBack());
+                    var train = trains.RemoveBack();
+                    history.Push(train);
+                    Console.WriteLine(train.ToString());
                 }
             }
         }
@@ -66,7 +74,10 @@ namespace Train
 
         private static void History()
         {
-            throw new NotImplementedException();
+            foreach (var train in history)
+            {
+                Console.WriteLine(train.ToString());
+            }
         }
 
         static void Main(string[] args)

@@ -93,23 +93,23 @@ namespace Train
         }
 
         // връща и премахва елемента отпред
-        public string RemoveFront()
+        public T RemoveFront()
         {
             var item = this.Head.Value;
             this.Head.Prev = null;
             this.Head = this.Head.Next;
             this.Count--;
-            return item.ToString();
+            return item;
         }
 
         // връща и премахва елемента отзад
-        public string RemoveBack()
+        public T RemoveBack()
         {
             T item = this.Tail.Value;
             this.Tail = this.Tail.Prev;
             this.Tail.Next = null;
             this.Count--;
-            return item.ToString();
+            return item;
         }
 
         // връща, без да премахва, елемента отпред

@@ -50,7 +50,7 @@ namespace Train
 
         public override string ToString()
         {
-            return $"{this.Name} {this.Number} {this.Type} {this.Cars}";
+            return $"{this.Number} {this.Name} {this.Type} {this.Cars}";
         }
 
     }
