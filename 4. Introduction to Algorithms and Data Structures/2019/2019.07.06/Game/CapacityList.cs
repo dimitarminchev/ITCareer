@@ -67,6 +67,7 @@ namespace Game
 
                 var newItems = this.items.Where(x => x.Summed == true).ToList();
                 newItems.Add(Sum());
+                newItems.Add(item);
 
                 this.items = new Pair[capacity];
                 for (int index = 0; index < newItems.Count; index++)
