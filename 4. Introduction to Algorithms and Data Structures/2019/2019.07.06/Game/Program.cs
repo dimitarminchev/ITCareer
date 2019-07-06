@@ -34,7 +34,7 @@ namespace Game
         // Сума на двойките за даден играч
         public static void CurrentPairSum(string player)
         {
-            players[player].PrintCurrentState();
+            players[player].CurrentPairSum();
         }
 
         // Game

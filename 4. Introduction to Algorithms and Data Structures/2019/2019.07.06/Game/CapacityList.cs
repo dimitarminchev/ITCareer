@@ -30,7 +30,7 @@ namespace Game
         public Pair SumIntervalPairs()
         {
             Pair sum = new Pair(items[startIndex].First, items[startIndex].Last);
-            for (int index = startIndex + 1; index <= nextIndex; index++)
+            for (int index = startIndex + 1; index < nextIndex; index++)
             {
                 sum = new Pair
                 (
@@ -46,7 +46,7 @@ namespace Game
         public Pair Sum()
         {
             int part1 = 0, part2 = 0;
-            for (int index = 0; index <= this.Count; index++)
+            for (int index = 0; index < this.Count; index++)
             {
                 if (this.items[index].Summed == false)
                 {
@@ -80,10 +80,26 @@ namespace Game
         // Oтпечатайте всички двойки от 0 до nextIndex
         public void PrintCurrentState()
         {
-            for (int index = 0; index <= this.nextIndex; index++)
+            for (int index = 0; index < this.nextIndex; index++)
             {
                 Console.WriteLine(items[index].ToString());
             }
         }
+
+        // Мега яката магия
+        public void CurrentPairSum()
+        {
+            bool printed = false;
+            for (int index = 0; index < this.nextIndex; index++)
+            {
+                if (items[index].Summed == true)
+                {
+                    Console.WriteLine(items[index].ToString());
+                    printed = true;
+                }
+            }
+            if (!printed) Console.WriteLine("(0,0)");
+        }
+
     }
 }
