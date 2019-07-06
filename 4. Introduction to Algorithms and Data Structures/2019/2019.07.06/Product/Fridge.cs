@@ -26,18 +26,17 @@ namespace Product
         }
 
         public void AddProduct(string ProductName)
-        {
-            var product = new Product(ProductName);
+        {            
             if (this.head == null)
             {
-                this.head = product;
-                this.tail = product;
+                var next = new Product(ProductName);
+                this.head = next;
+                this.tail = next;
             }
             else
             {
-                var current = this.head;
-                this.head = product;
-                this.head.Next = current;
+                var next = new Product(ProductName, this.head);
+                this.head = next;                
             }
             this.Count++;
         }
@@ -66,10 +65,17 @@ namespace Product
             int i = 0;
             while (current != null)
             {
+                if (index == 0 && index == i)
+                {
+                    var name = this.head.Name;
+                    this.head = this.head.Next;
+                    return name;
+                }
                 if (index == i)
                 {
+                    var name = current.Name;
                     previous.Next = current.Next;
-                    return current.Name;
+                    return name;
                 }
                 i++;
                 previous = current;
@@ -80,8 +86,9 @@ namespace Product
 
         public string RemoveProductByName(string name)
         {
+            Product current = head;
+            Product previous = null;
             int index = 0;
-            var current = head;
             while (current != null)
             {
                 if (current.Name == name)
@@ -89,9 +96,10 @@ namespace Product
                     return RemoveProductByIndex(index);
                 }
                 index++;
+                previous = current;
                 current = current.Next;
             }
-            return string.Empty;
+            return String.Empty;
         }
 
         public bool CheckProductIsInStock(string name)

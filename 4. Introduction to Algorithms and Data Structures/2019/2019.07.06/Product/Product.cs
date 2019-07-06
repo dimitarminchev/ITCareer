@@ -15,6 +15,13 @@ namespace Product
         public Product(string name)
         {
             this.name = name;
+            this.next = null;
+        }
+
+        public Product(string name, Product product)
+        {
+            this.name = name;
+            this.next = product;
         }
 
         public string Name
