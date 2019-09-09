@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Backpack", "03_Backpack\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_Activities", "04_Activities\04_Activities.csproj", "{3E7BDB35-F337-4740-9BEF-08C73B858408}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_MagnetTape", "05_MagnetTape\05_MagnetTape.csproj", "{C5AE93E7-FB3D-4E6E-8D5C-8034BDAE0CDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Jobs", "06_Jobs\06_Jobs.csproj", "{43F8536A-1DA3-4735-B472-4356E3D25593}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{3E7BDB35-F337-4740-9BEF-08C73B858408}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E7BDB35-F337-4740-9BEF-08C73B858408}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E7BDB35-F337-4740-9BEF-08C73B858408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5AE93E7-FB3D-4E6E-8D5C-8034BDAE0CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5AE93E7-FB3D-4E6E-8D5C-8034BDAE0CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5AE93E7-FB3D-4E6E-8D5C-8034BDAE0CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5AE93E7-FB3D-4E6E-8D5C-8034BDAE0CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F8536A-1DA3-4735-B472-4356E3D25593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F8536A-1DA3-4735-B472-4356E3D25593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F8536A-1DA3-4735-B472-4356E3D25593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F8536A-1DA3-4735-B472-4356E3D25593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
