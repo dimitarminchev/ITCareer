@@ -1,4 +1,5 @@
 ﻿using System;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace _4_AxeTests
@@ -18,10 +19,12 @@ namespace _4_AxeTests
             axe.Attack(dummy);
 
             // Assets
-            Assert.AreEqual(1, axe.DurabilityPoints, "Axe Durability does not change after attack.");
+            Assert.AreEqual(9, axe.DurabilityPoints, "Axe Durability does not change after attack.");
         }
 
-        [TestMethod] // Тест дали счупена бравата да атакакува
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        // Тест дали счупена бравата да атакакува
         public void BrokenAxeCantAttack()
         {
             // Arrange
@@ -32,10 +35,11 @@ namespace _4_AxeTests
             axe.Attack(dummy);
             axe.Attack(dummy);
 
-            // Assets           
-
+            // Assets
+            axe.Attack(dummy);
+ 
             //var ex = Assert.Throws<InvalidOperationException>(() => axe.Attack(dummy));
-            //Assert.That(ex.Message, Is.EqualTo("Axe is broken."));
+            //Assert.That(ex.Message, Is.EqualTo());
         }
 
     }
