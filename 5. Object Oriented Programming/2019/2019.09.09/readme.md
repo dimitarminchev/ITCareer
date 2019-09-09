@@ -1,5 +1,8 @@
 # Unit Testing
 
+Get started with unit testing:
+https://docs.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2019
+
 ## Visual Studio Team Tests (VSTT)
 ```
 [TestClass] 
