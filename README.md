@@ -18,6 +18,7 @@
 6. [Бази данни](6.%20Databases)
 7. [Разработка на софтуер](7.%20Software%20Development)
 8. [Въведение в операционни системи и вградени системи](8.%20OS%20and%20Embeded%20OS%20Intro)
+9. [Алгоритми и структури от данни](9.%20Algorithms%20and%20Data%20Structures)
 
 ## Допълнително информация
 Фондация "Софтуерен университет": http://softuni.foundation/projects/applied-software-developer-profession/
