@@ -1,21 +1,5 @@
 # Unit Testing
 
-## Компонентно тестване на Телерик Академия
-- Course: https://telerikacademy.com/student-courses/programming/unit-testing-with-csharp/about
-- Video: https://www.youtube.com/watch?v=YDEq-SgJirs&index=1&list=PLF4lVL1sPDSnj0gf0XLEeFqJ0ODKNrgoE
-- Repo: https://github.com/TelerikAcademy/Unit-Testing
-
-## NUnit
-```
-[TextFixture] 
-public class TheClassName
-{
-	[Test] 
-	public void TheTestName()
-	{
-		...
-```
-
 ## Visual Studio Team Tests (VSTT)
 ```
 [TestClass] 
@@ -27,24 +11,9 @@ public class TheClassName
 		...
 ```
 
-## Атрибути
-```
-[TextFixture] // Клас компонентни тестове
-public class TheClassName { ...
-
-[Test] // Единичен компонентен тест
-public void TheTestName() { ... }
-
-[SetUp] // Изпълнение преди всеки тест
-public void TestInit() { ... }
-
-[TearDown] // Изпълнение след всеки тест
-public void TestCleanUp() { ... }
-```
-
 ## AAA = Arrange + Act + Assert
 ```
-[Test] 
+[TestMethod] 
 public void DespositMoneyTest()
 {
 	// Arrange
@@ -58,13 +27,24 @@ public void DespositMoneyTest()
 }
 ```
 
-## Твърдения
+## Atributes
+```
+[TestClass] = denotes a class holding unit tests
+[TestMethod] = denotes a unit test method
+[ExpectedException] = test causes an exception
+[Timeout] = sets a timeout for test execution
+[Ignore] = temporary ignored test case
+[ClassInitialize], [ClassCleanup] = setup / cleanup logic for the testing class
+[TestInitialize], [TestCleanup] = setup / cleanup logic for each test case
+```
 
-| № | Твърдениe    | Синтаксис                                                       |
-|---|--------------|-----------------------------------------------------------------|
-| 1 | Условно      | Assert.IsTrue(bool condition, string message);                  |
-| 2 | Сравнително  | Assert.AreEqual(expected value, actual value);                  |
-| 3 | Изключение   | Assert.Throws(Type expectedExceptionType, TestDelegate code);   |
-| 4 | Низово       | StringAssert.Contains(string expected, string actual);          |
-| 5 | Колекция     | CollectionAssert.Contains(IEnumerable expected, object actual); |
-| 6 | Файлово      | FileAssert.AreEqual(FileInfo expected, FileInfo actual);        |
+## Asserts
+```
+AreEqual(expected value, calculated value [,message]) = compare two values for equality
+AreSame(expected object, current object [,message]) = compare object references
+IsNull(object [,message])
+IsNotNull(object [,message])
+IsTrue(condition)
+IsFalse(condition)
+Fail(message) = Forced test fail
+```
