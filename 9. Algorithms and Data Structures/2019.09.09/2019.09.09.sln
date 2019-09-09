@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_SumRepresentatioun", "01_SumRepresentatioun\01_SumRepresentatioun.csproj", "{024E708F-5ECF-4E2B-83D4-E60DCC9130EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_EgyptianFractions", "02_EgyptianFractions\02_EgyptianFractions.csproj", "{48F670A2-A866-40D6-96E0-9EA984B947FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Backpack", "03_Backpack\03_Backpack.csproj", "{374A5093-8855-416E-B6FC-7B6A13283090}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{024E708F-5ECF-4E2B-83D4-E60DCC9130EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{024E708F-5ECF-4E2B-83D4-E60DCC9130EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{024E708F-5ECF-4E2B-83D4-E60DCC9130EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48F670A2-A866-40D6-96E0-9EA984B947FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48F670A2-A866-40D6-96E0-9EA984B947FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48F670A2-A866-40D6-96E0-9EA984B947FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48F670A2-A866-40D6-96E0-9EA984B947FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{374A5093-8855-416E-B6FC-7B6A13283090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{374A5093-8855-416E-B6FC-7B6A13283090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{374A5093-8855-416E-B6FC-7B6A13283090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{374A5093-8855-416E-B6FC-7B6A13283090}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
