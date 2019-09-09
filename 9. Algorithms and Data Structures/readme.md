@@ -9,16 +9,14 @@
 - e-mail: dimitar.minchev@gmail.com 
 - blog: http://www.minchev.eu
 
-## Учебни материали
-- [Linux](1.%20Linux)
-- [Arduino](2.%20Arduino)
-
-## Проекти
-- [ArduinoBoy](3.%20Projects/ArduinoBoy)
-- [HandGestures](3.%20Projects/HandGestures)
-- [IceCreamTruck](3.%20Projects/IceCreamTruck)
-- [KURU](3.%20Projects/KURU)
-- [RFIDControl](3.%20Projects/RFIDControl)
+## Учебна програма
+1. Greedy algorithms
+2. Recursion and backtracking
+3. Combinatorics
+4. Dynamic programming
+5. Trees
+6. Hashing and hash tables
+7. Graphs and graph algorithms
 
 ## Обучаеми
-![group.jpg](group.jpg)
+![group_2018.jpg](group_2018.jpg)
