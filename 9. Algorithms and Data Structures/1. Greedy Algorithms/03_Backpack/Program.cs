@@ -14,6 +14,7 @@ namespace _03_Backpack
 
     class Program
     {
+        // Knapsack implementation 
         public static int BackPack(Item[] items, int capacity)
         {
             int[,] matrix = new int[items.Length + 1, capacity + 1];
@@ -60,7 +61,6 @@ namespace _03_Backpack
 
         static void Main(string[] args)
         {
-
             var items = new[]
             {
                 new Item {Value = 42, Weight = 7},

@@ -10,7 +10,7 @@
 - blog: http://www.minchev.eu
 
 ## Учебна програма
-1. Greedy algorithms
+1. [Greedy algorithms](1.%20Greedy%20Algorithms)
 2. Recursion and backtracking
 3. Combinatorics
 4. Dynamic programming
