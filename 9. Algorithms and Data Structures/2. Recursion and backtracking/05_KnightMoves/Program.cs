@@ -8,92 +8,77 @@ namespace _05_KnightMoves
 {
     class Program
     {
-        // vars
-        private const int n = 5;
-        static int startx = 0, starty = 0;
-        static int[,] table =
-        {
-                { 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0 },
-        };
-        static private Stack<int[,]> moves = new Stack<int[,]>();
+        const int n = 5;
+        static bool[,] board;
+        static List<Tuple<int, int>> moves = new List<Tuple<int, int>>();        
+        static Tuple<int, int> position = new Tuple<int, int>(0, 0);       
 
-        // Print Table
-        static void PrintTable(int[,] matrix)
+        static bool TryMove(int k)
         {
-            for (int x = 0; x < n; x++)
+            bool result = false;
+            List<Tuple<int, int>> availableMoves = GetMoves();
+            for (int i = 0; i < availableMoves.Count; i++)
             {
-                for (int y = 0; y < n; y++)
+                position = new Tuple<int, int>(availableMoves[i].Item1, availableMoves[i].Item2);
+                board[position.Item1, position.Item2] = true;
+                moves.Add(position);
+                if (k == n * n) return true;
+                result = TryMove(k + 1);
+                if (result == false)
                 {
-                    if (matrix[x, y] < 10) Console.Write(" ");
-                    Console.Write("{0}\t", matrix[x, y]);
+                    board[availableMoves[i].Item1, availableMoves[i].Item2] = false;
+
+                    moves.Remove(moves.Last());
+                    position = moves.Last();
+                }
+                else break;
+            }
+            return result;
+        }
+
+        static List<Tuple<int, int>> GetMoves()
+        {
+            List<Tuple<int, int>> availableMoves = new List<Tuple<int, int>>();
+            AddMove(availableMoves, -2, 1);
+            AddMove(availableMoves, -2, -1);
+            AddMove(availableMoves, 2, 1);
+            AddMove(availableMoves, 2, -1);
+            AddMove(availableMoves, 1, 2);
+            AddMove(availableMoves, -1, 2);
+            AddMove(availableMoves, 1, -2);
+            AddMove(availableMoves, -1, -2);
+            return availableMoves;
+        }
+
+        static void AddMove(List<Tuple<int, int>> availableMoves, int x, int y)
+        {
+            if (position.Item1 + x < n && position.Item2 + y < n && position.Item1 + x >= 0 && position.Item2 + y >= 0)
+            {
+                if (board[position.Item1 + x, position.Item2 + y] == false)
+                {
+                    availableMoves.Add(new Tuple<int, int>(position.Item1 + x, position.Item2 + y));
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            moves.Add(position);
+            board = new bool[n, n];
+            board[0, 0] = true;
+            TryMove(2);
+            if (moves.Count == 1)
+            {
+                Console.WriteLine("No solution found");
+                return;
+            }
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write("{0}\t", moves.IndexOf(moves.Where(x => x.Item1 == i && x.Item2 == j).FirstOrDefault()) + 1);
                 }
                 Console.WriteLine();
             }
-        }
-
-        // Last Counter
-        static int LastCounter()
-        {
-            var last = moves.Last();
-            int max = last[0, 0];
-            for (int x = 0; x < n; x++)
-            {
-                for (int y = 0; y < n; y++)
-                {
-                    if (last[x, y] > max) max = last[x, y];
-                }
-            }
-            return max;
-        }
-
-        // Next Moves
-        static private void NextMoves(int[,] table, int startx, int starty)
-        {
-            // All possible moves of a knight 
-            // int[] X = { 2, 1, -1, -2, -2, -1,  1,  2 };
-            // int[] Y = { 1, 2,  2,  1, -1, -2, -2, -1 };
-            int[] X = { -2, -2, -1, -1, 2, 2, 1, 1 };
-            int[] Y = { 1, -1, -2, 2, 1, -1, 2, -2 };
-
-            // Check if each possible move is valid or not 
-            for (int i = 0; i < 8; i++)
-            {
-
-                // Position of knight  after move 
-                int x = startx + X[i];
-                int y = starty + Y[i];
-
-                // Valid Moves 
-                if (x >= 0 && y >= 0 && x < n && y < n && table[x, y] == 0)
-                {
-                    var lastMove = moves.Last();
-                    lastMove[x, y] = LastCounter() + 1;
-                    moves.Push(lastMove);
-                    NextMoves(lastMove, x, y);
-                }
-                // Stack Overflow: Must be Fixed
-                // else moves.Pop(); 
-            }
-        }
-
-        // Main Method
-        static public void Main()
-        {
-            // First Move
-            var firstMove = new int[n, n];
-            firstMove[0, 0] = 1;
-            moves.Push(firstMove);
-
-            // Calculate Next Moves
-            NextMoves(table, startx, starty);
-
-            // Print Final Moves
-            var finalMove = moves.Last();
-            PrintTable(finalMove);
         }
     }
 }
