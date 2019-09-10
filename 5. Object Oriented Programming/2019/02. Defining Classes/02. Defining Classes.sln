@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountApp", "BankAccou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatonalNumberApp", "RatonalNumberApp\RatonalNumberApp.csproj", "{1C105407-6E24-4FC0-AEEE-0061BB8289ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonCounter", "PersonCounter\PersonCounter.csproj", "{1AB3469A-82AB-4BC5-94E1-797ADE386431}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1C105407-6E24-4FC0-AEEE-0061BB8289ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C105407-6E24-4FC0-AEEE-0061BB8289ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C105407-6E24-4FC0-AEEE-0061BB8289ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AB3469A-82AB-4BC5-94E1-797ADE386431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AB3469A-82AB-4BC5-94E1-797ADE386431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AB3469A-82AB-4BC5-94E1-797ADE386431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AB3469A-82AB-4BC5-94E1-797ADE386431}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
