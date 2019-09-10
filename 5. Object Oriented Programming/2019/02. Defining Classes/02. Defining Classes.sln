@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatonalNumberApp", "Ratonal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonCounter", "PersonCounter\PersonCounter.csproj", "{1AB3469A-82AB-4BC5-94E1-797ADE386431}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryApp", "MemoryApp\MemoryApp.csproj", "{6CC2920A-1CC6-489C-8812-E2EC6768A119}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1AB3469A-82AB-4BC5-94E1-797ADE386431}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AB3469A-82AB-4BC5-94E1-797ADE386431}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AB3469A-82AB-4BC5-94E1-797ADE386431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC2920A-1CC6-489C-8812-E2EC6768A119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC2920A-1CC6-489C-8812-E2EC6768A119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC2920A-1CC6-489C-8812-E2EC6768A119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC2920A-1CC6-489C-8812-E2EC6768A119}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
