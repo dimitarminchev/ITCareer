@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_LCM", "03_LCM\03_LCM.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_8Queens", "04_8Queens\04_8Queens.csproj", "{B095EE2A-CD95-420E-AA4B-CA342C593406}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_KnightMoves", "05_KnightMoves\05_KnightMoves.csproj", "{5B07A1FE-236C-45EA-BD9E-E5B95FD5CADA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B095EE2A-CD95-420E-AA4B-CA342C593406}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B095EE2A-CD95-420E-AA4B-CA342C593406}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B095EE2A-CD95-420E-AA4B-CA342C593406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B07A1FE-236C-45EA-BD9E-E5B95FD5CADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B07A1FE-236C-45EA-BD9E-E5B95FD5CADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B07A1FE-236C-45EA-BD9E-E5B95FD5CADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B07A1FE-236C-45EA-BD9E-E5B95FD5CADA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
