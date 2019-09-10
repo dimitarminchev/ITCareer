@@ -11,7 +11,7 @@
 
 ## Учебна програма
 1. [Greedy algorithms](1.%20Greedy%20Algorithms)
-2. Recursion and backtracking
+2. [Recursion and backtracking](2.%20Recursion%20and%20backtracking)
 3. Combinatorics
 4. Dynamic programming
 5. Trees
