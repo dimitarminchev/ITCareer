@@ -14,27 +14,27 @@ namespace _04_IntegerBox
 
         public Box()
         {
-            items = new List<T>();
+            this.items = new List<T>();
             this.Count = 0;
         }
 
         public void Add(T element)
         {
-            items.Add(element);
+            this.items.Add(element);
             this.Count++;
         }
 
         public T Remove()
         {
-            T remove = items.Last();
-            items.Remove(items.Last());
+            T remove = this.items.Last();
+            this.items.Remove(items.Last());
             this.Count--;
             return remove;
         }
 
         public void Print()
         {
-            foreach (var item in items)
+            foreach (var item in this.items)
             {
                 Console.WriteLine($"{item.GetType()}: {item}");
             }

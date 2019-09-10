@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_IntegerSwap", "08_Intege
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_StringCounter", "09_StringCounter\09_StringCounter.csproj", "{9740B07F-A150-4D07-AEF8-E272500E3C71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_DoubleCounter", "10_DoubleCounter\10_DoubleCounter.csproj", "{AE940AE0-9845-42F1-84D3-3366CF0B2DA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{9740B07F-A150-4D07-AEF8-E272500E3C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9740B07F-A150-4D07-AEF8-E272500E3C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9740B07F-A150-4D07-AEF8-E272500E3C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE940AE0-9845-42F1-84D3-3366CF0B2DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE940AE0-9845-42F1-84D3-3366CF0B2DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE940AE0-9845-42F1-84D3-3366CF0B2DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE940AE0-9845-42F1-84D3-3366CF0B2DA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

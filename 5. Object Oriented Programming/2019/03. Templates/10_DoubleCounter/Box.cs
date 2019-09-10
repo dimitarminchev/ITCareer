@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _09_StringCounter
+namespace _10_DoubleCounter
 {
     public class Box<T> where T : IComparable
     {
