@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonCounter", "PersonCoun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryApp", "MemoryApp\MemoryApp.csproj", "{6CC2920A-1CC6-489C-8812-E2EC6768A119}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BufferedConsoleApp", "BufferedConsoleApp\BufferedConsoleApp.csproj", "{0D955857-3EC4-4B4E-9CE3-FF394454E5B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6CC2920A-1CC6-489C-8812-E2EC6768A119}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CC2920A-1CC6-489C-8812-E2EC6768A119}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CC2920A-1CC6-489C-8812-E2EC6768A119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D955857-3EC4-4B4E-9CE3-FF394454E5B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D955857-3EC4-4B4E-9CE3-FF394454E5B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D955857-3EC4-4B4E-9CE3-FF394454E5B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D955857-3EC4-4B4E-9CE3-FF394454E5B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
