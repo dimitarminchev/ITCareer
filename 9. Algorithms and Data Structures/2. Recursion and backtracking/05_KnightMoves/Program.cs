@@ -10,7 +10,7 @@ namespace _05_KnightMoves
     {
         const int n = 5;
         static bool[,] board;
-        static List<Tuple<int, int>> moves = new List<Tuple<int, int>>();        
+        static Stack<Tuple<int, int>> moves = new Stack<Tuple<int, int>>();        
         static Tuple<int, int> position = new Tuple<int, int>(0, 0);       
 
         static bool TryMove(int k)
@@ -21,15 +21,14 @@ namespace _05_KnightMoves
             {
                 position = new Tuple<int, int>(availableMoves[i].Item1, availableMoves[i].Item2);
                 board[position.Item1, position.Item2] = true;
-                moves.Add(position);
+                moves.Push(position);
                 if (k == n * n) return true;
                 result = TryMove(k + 1);
                 if (result == false)
                 {
                     board[availableMoves[i].Item1, availableMoves[i].Item2] = false;
-
-                    moves.Remove(moves.Last());
-                    position = moves.Last();
+                    moves.Pop();
+                    position = moves.Peek();
                 }
                 else break;
             }
@@ -62,7 +61,7 @@ namespace _05_KnightMoves
         }
         static void Main(string[] args)
         {
-            moves.Add(position);
+            moves.Push(position);
             board = new bool[n, n];
             board[0, 0] = true;
             TryMove(2);
@@ -71,11 +70,14 @@ namespace _05_KnightMoves
                 Console.WriteLine("No solution found");
                 return;
             }
+
+            // Print
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < n; j++)
                 {
-                    Console.Write("{0}\t", moves.IndexOf(moves.Where(x => x.Item1 == i && x.Item2 == j).FirstOrDefault()) + 1);
+                    var counter = n * n - moves.TakeWhile(x => x != moves.Where(y => y.Item1 == i && y.Item2 == j).FirstOrDefault()).Count();
+                    Console.Write("{0}\t", counter);
                 }
                 Console.WriteLine();
             }
