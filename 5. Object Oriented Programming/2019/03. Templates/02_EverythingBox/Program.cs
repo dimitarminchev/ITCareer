@@ -8,6 +8,7 @@ namespace _02_EverythingBox
 {
     class Program
     {
+        // Task 2. Everything Box
         static void Main(string[] args)
         {
             // 1. Integer Box

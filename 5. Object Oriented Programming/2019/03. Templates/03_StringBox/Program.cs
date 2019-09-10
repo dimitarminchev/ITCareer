@@ -8,7 +8,7 @@ namespace _03_StringBox
 {
     class Program
     {
-        // String Box
+        // Task 3. String Box
         static void Main(string[] args)
         {
             Box<string> stringBox = new Box<string>();

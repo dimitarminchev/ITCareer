@@ -8,6 +8,7 @@ namespace _01_TheBox
 {
     class Program
     {
+        // Task 1. The Box
         static void Main(string[] args)
         {
             Box<int> box = new Box<int>();

@@ -8,7 +8,7 @@ namespace _04_IntegerBox
 {
     class Program
     {
-        // Integer Box
+        // Task 4. Integer Box
         static void Main(string[] args)
         {
             Box<int> intBox = new Box<int>();
