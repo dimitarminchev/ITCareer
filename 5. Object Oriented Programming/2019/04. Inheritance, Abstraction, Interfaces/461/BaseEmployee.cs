@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace _461
 {
-    class Program
+    abstract class BaseEmployee
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }
