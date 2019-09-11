@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_RandomList", "04_RandomL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_StackOfStrings", "05_StackOfStrings\05_StackOfStrings.csproj", "{EB9024F4-BC18-4E5C-8D3F-32C41291B100}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_ColoredFigure", "06_ColoredFigure\06_ColoredFigure.csproj", "{F8E51023-DA6D-4077-AB5E-A8B7D1D0914E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{EB9024F4-BC18-4E5C-8D3F-32C41291B100}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB9024F4-BC18-4E5C-8D3F-32C41291B100}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB9024F4-BC18-4E5C-8D3F-32C41291B100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8E51023-DA6D-4077-AB5E-A8B7D1D0914E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8E51023-DA6D-4077-AB5E-A8B7D1D0914E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8E51023-DA6D-4077-AB5E-A8B7D1D0914E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8E51023-DA6D-4077-AB5E-A8B7D1D0914E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
