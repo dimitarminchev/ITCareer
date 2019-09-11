@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _461
 {
-    class FullTimeEmployee : BaseEmployee
+    public class FullTimeEmployee : BaseEmployee
     {
         private string employeePosition;
 

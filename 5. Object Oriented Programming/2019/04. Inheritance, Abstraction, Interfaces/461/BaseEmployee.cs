@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _461
 {
-    abstract class BaseEmployee
+    public abstract class BaseEmployee
     {
         private string id;
 
@@ -34,6 +34,10 @@ namespace _461
             this.adress = adress;
             this.name = name;
             this.id = id;
+        }
+        public BaseEmployee()
+        {
+
         }
         public void Show()
         {
