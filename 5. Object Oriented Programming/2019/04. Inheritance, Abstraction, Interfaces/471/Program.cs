@@ -16,3 +16,4 @@ namespace AnimalKingdom
             doge.MakeTrick();
         }
     }
+}
