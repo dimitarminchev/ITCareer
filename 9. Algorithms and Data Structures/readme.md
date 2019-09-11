@@ -12,11 +12,11 @@
 ## Учебна програма
 1. [Greedy algorithms](1.%20Greedy%20Algorithms)
 2. [Recursion and backtracking](2.%20Recursion%20and%20backtracking)
-3. Combinatorics
-4. Dynamic programming
-5. Trees
-6. Hashing and hash tables
-7. Graphs and graph algorithms
+3. [Combinatorics](3.%20Combinatorics)
+4. [Dynamic programming](4.%20Dynamic%20programming)
+5. [Trees](5.%20Trees)
+6. [Hashing and hash tables](6.%20Hashing%20and%20hash%20tables)
+7. [Graphs and graph algorithms](7.%20Graphs%20and%20graph%20algorithms)
 
 ## Обучаеми
 ![group_2018.jpg](group_2018.jpg)
