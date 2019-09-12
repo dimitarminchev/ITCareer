@@ -21,8 +21,6 @@ namespace _482
                     case "Citizen": citizens.Add(new Citizen(line[1], int.Parse(line[2]), line[3],line[4]));break;
                     case "Robot": robots.Add(new Robot(line[2], line[1]));break;
                     case "Pet": pets.Add(new Pet(line[1], line[2]));break;
-                    default:
-                        break;
                 }
                 
                 line = Console.ReadLine().Split().ToArray();
