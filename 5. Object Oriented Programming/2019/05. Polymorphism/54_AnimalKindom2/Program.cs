@@ -10,6 +10,10 @@ namespace _54_AnimalKindom2
     {
         static void Main(string[] args)
         {
+            Cat cat = new Cat();
+            Dog dog = new Dog();
+            cat.Perform();
+            dog.Perform();
         }
     }
 }
