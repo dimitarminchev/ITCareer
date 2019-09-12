@@ -10,6 +10,7 @@ namespace _57_AnimalFarm
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello");
         }
     }
 }
