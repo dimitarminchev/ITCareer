@@ -10,42 +10,47 @@ namespace _02_Knapsack
     {
 
 /* Input:
-// Number of distinct items (n)
-// Values (stored in array v)
-// Weights (stored in array w)
-// Knapsack capacity (W)
+// Number of items (N)
+// Values (stored in array V)
+// Weights (stored in array W)
+// Knapsack Capacity (C)
+
+0-1 Knapsack Problem (Dynamic Programming)  Youtube Video:
+https://www.youtube.com/watch?v=xOlhR_2QCXY
 */
-        const int n = 8; // Number of distinct items
-        static int[] v = new int[] { 0, 5, 3, 9, 1, 1, 2, 5, 2 }; // Values
-        static int[] w = new int[] { 0, 3, 7, 6, 1, 2, 4, 5, 5 }; // Weights
-        static int W = 7; // Knapsack capacity
+        const int N = 8; // Number of items
+        static int[] V = new int[] { 0, 5, 3, 9, 1, 1, 2, 5, 2 }; // Values
+        static int[] W = new int[] { 0, 3, 7, 6, 1, 2, 4, 5, 5 }; // Weights
+        static int C = 7; // Knapsack Capacity
 
-        // Solution
-        static int[,] value = new int[n + 1, W + 1];
+        static int result = 0;
 
-        static int m(int i, int j)
+        // Knapsack
+        static int Knapsack(int n, int c)
         {
-            if (i == 0 || j <= 0) return 0;
+            if (n == 0 || c == 0) return 0;
 
-            if (value[i - 1, j] == -1)
-                value[i - 1, j] = m(i - 1, j);
-
-            if (w[i] < j)
-                value[i, j] = value[i - 1, j];
+            else if (W[n] > c) result = Knapsack(n - 1, C);
             else
             {
-                if (value[i - 1, j - w[i]] == -1)
-                    value[i - 1, j - w[i]] = m(i - 1, j - w[i]);
-
-                value[i, j] = Math.Max(value[i - 1, j], value[i - 1, j - w[i]] + v[i]);               
+                var temp1 = Knapsack(n - 1, c);
+                var temp2 = V[n] + Knapsack(n - 1, C - W[n]);
+                result = Math.Max(temp1, temp2);
             }
-            return value[i, j];
+            return result;
         }
 
         // Main Method
         static void Main(string[] args)
         {
-            Console.WriteLine(m(n,W));
+            // Output
+            Console.WriteLine("Number of items = {0}", N);
+            Console.WriteLine("Values: {0}", string.Join(", ", V));
+            Console.WriteLine("Weights: {0}", string.Join(", ", W));
+            Console.WriteLine("Knapsack Capacity = {0}", C);
+
+            // Knapsack Sum
+            Console.WriteLine("Knapsack Sum = {0}", Knapsack(N,C));
         }
     }
 }
