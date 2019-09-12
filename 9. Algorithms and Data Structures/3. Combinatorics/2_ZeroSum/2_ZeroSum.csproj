@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D8A8BC5-D60D-4F19-B640-B0D64F5151FD}</ProjectGuid>
+    <ProjectGuid>{9558105B-7400-4EBB-A9C3-4250BA322638}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_483</RootNamespace>
-    <AssemblyName>483</AssemblyName>
+    <RootNamespace>_2_ZeroSum</RootNamespace>
+    <AssemblyName>2_ZeroSum</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,15 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Citizens.cs" />
-    <Compile Include="Data.cs" />
-    <Compile Include="IBuyer.cs" />
-    <Compile Include="INameAndBirthDate.cs" />
-    <Compile Include="Pet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rebel.cs" />
-    <Compile Include="Robot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

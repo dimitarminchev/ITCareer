@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace _483
 {
-    class Robot : Data
+    interface IBuyer
     {
-        public Robot(string id,string name) : base(id, name)
-        {
-            //nope
-        }
+        void BuyFood();
+        int Food {get; set;}
     }
 }

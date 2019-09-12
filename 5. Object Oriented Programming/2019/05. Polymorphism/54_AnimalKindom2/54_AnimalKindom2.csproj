@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D8A8BC5-D60D-4F19-B640-B0D64F5151FD}</ProjectGuid>
+    <ProjectGuid>{4651785F-26AD-4C18-A442-4A63E3D1C5CF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_483</RootNamespace>
-    <AssemblyName>483</AssemblyName>
+    <RootNamespace>_54_AnimalKindom2</RootNamespace>
+    <AssemblyName>54_AnimalKindom2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,15 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Citizens.cs" />
-    <Compile Include="Data.cs" />
-    <Compile Include="IBuyer.cs" />
-    <Compile Include="INameAndBirthDate.cs" />
-    <Compile Include="Pet.cs" />
+    <Compile Include="Cat.cs" />
+    <Compile Include="Dog.cs" />
+    <Compile Include="IAnimal.cs" />
+    <Compile Include="IMakeNoise.cs" />
+    <Compile Include="IMakeTrick.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rebel.cs" />
-    <Compile Include="Robot.cs" />
+    <Compile Include="Trainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

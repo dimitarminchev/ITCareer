@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _483
+namespace _57_AnimalFarm
 {
-    class Robot : Data
+    class Program
     {
-        public Robot(string id,string name) : base(id, name)
+        static void Main(string[] args)
         {
-            //nope
+            Console.WriteLine("Hello");
         }
     }
 }
