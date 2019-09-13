@@ -1,4 +1,7 @@
 ﻿using _638.Contracts;
+using _638.Core.Factories;
+using _638.Data;
+using _638.Models.Units;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +19,8 @@ namespace _638
         public override string Execute()
         {
             string unitType = base.Data[1];
-            IUnit unitToAdd = base.UnitFactory(unitType);
-            base.Repository.RemoveUnit(unit);
-            string output = unitType + " retired!";
-            return output;
+            //IUnit unit = UnitFactory.CreateUnit(unitType);
+            string output = base.Repository.RemoveUnit(unitType);
             return output;
         }
     }
