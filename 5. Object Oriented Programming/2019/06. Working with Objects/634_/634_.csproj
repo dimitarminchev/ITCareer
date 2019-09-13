@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{14A246F3-1359-4EDB-B312-77AD0CE2EF46}</ProjectGuid>
+    <ProjectGuid>{96E526A9-C700-485F-9ADF-9310150C8CE2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_637</RootNamespace>
-    <AssemblyName>637</AssemblyName>
+    <RootNamespace>_634_</RootNamespace>
+    <AssemblyName>634_</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,25 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Archer.cs" />
-    <Compile Include="Engine.cs" />
-    <Compile Include="Gunner.cs" />
-    <Compile Include="Horseman.cs" />
-    <Compile Include="IAttacker.cs" />
-    <Compile Include="ICommandInterpreter.cs" />
-    <Compile Include="IDestroyable.cs" />
-    <Compile Include="IExecutable.cs" />
-    <Compile Include="IRepository.cs" />
-    <Compile Include="IRunnable.cs" />
-    <Compile Include="IUnit.cs" />
-    <Compile Include="IUnitFactory.cs" />
-    <Compile Include="Pikeman.cs" />
+    <Compile Include="Hacker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SwordsMan.cs" />
-    <Compile Include="Unit.cs" />
-    <Compile Include="UnitFactory.cs" />
-    <Compile Include="UnitRepository.cs" />
+    <Compile Include="Spy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
