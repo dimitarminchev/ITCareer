@@ -31,3 +31,17 @@ namespace _634_
         }
     }
 }
+//
+ Type myType = Type.GetType(className);
+        Console.WriteLine("Class under investigation: {0}", className);
+
+        FieldInfo[] allfields = myType.GetFields(BindingFlags.Static | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+        StringBuilder stringBuilder = new StringBuilder();
+        foreach (var field in allfields)
+        {
+            Type testType = myType.ReflectedType;
+            var testInstance = Activator.CreateInstance(myType);
+            var fieldValue = field.GetValue(testInstance);
+            stringBuilder.Append(string.Format("{0} = {1}\n",field.Name, fieldValue.ToString()));
+        }
+        return stringBuilder.ToString();
