@@ -7,7 +7,7 @@
     class UnitRepository : IRepository
     {
         private IDictionary<string, int> amountOfUnits;
-
+        public IDictionary<string, int> AmountOfUnits { get { return amountOfUnits; } }
         public UnitRepository()
         {
             this.amountOfUnits = new SortedDictionary<string, int>();
@@ -40,13 +40,17 @@
             this.amountOfUnits[unitType]++;
         }
 
-        public void RemoveUnit(string unitType)
+        public string RemoveUnit(string unitType)
         {
-            if(this.amountOfUnits.ContainsKey(unitType))
+            if (this.amountOfUnits.ContainsKey(unitType))
             {
-                if(this.amountOfUnits[unitType]>=1)
-                amountOfUnits[unitType]--;
+                if (this.amountOfUnits[unitType] >= 1)
+                {
+                    amountOfUnits[unitType]--;
+                    return unitType + " retired!";
+                }
             }
+            return "No such units in repository.";
         }
     }
 }
