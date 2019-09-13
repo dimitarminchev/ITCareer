@@ -4,25 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _631
+public class Hacker
 {
-    class Hacker
+    public string username = "securityGod82";
+    private string password = "mySuperSecretPassw0rd";
+
+    public string Password
     {
-        public string username = "securityGod82";
-        private string password = "mySuperSecretPassw0rd";
+        get => this.password;
+        set => this.password = value;
+    }
 
-        public string Password
-        {
-            get => this.password;
-            set => this.password = value;
-        }
+    private int Id { get; set; }
 
-        private int Id { get; set; }
+    public double BankAccountBalance { get; private set; }
 
-        public double BankAccountBalance { get; private set; }
-
-        public void DownloadAllBankAccountsInTheWorld()
-        {
-        }
+    public void DownloadAllBankAccountsInTheWorld()
+    {
+        // nope
     }
 }
+

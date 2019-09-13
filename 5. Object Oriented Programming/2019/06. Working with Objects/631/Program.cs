@@ -11,7 +11,7 @@ namespace _631
         static void Main(string[] args)
         {
             Spy spy = new Spy();
-            string result = spy.StealFieldInfo("_631.Hacker", "username", "password");
+            string result = spy.StealFieldInfo("Hacker", "username", "password");
             Console.WriteLine(result);
         }
     }
