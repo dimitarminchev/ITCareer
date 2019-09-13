@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{373C294E-60B6-4064-BE16-F0A671269F07}</ProjectGuid>
+    <ProjectGuid>{FDFAD21F-7E3A-46E1-8181-DD166681AC76}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_01_Library</RootNamespace>
-    <AssemblyName>01_Library</AssemblyName>
+    <RootNamespace>_636</RootNamespace>
+    <AssemblyName>636</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,9 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book.cs" />
-    <Compile Include="Library.cs" />
-    <Compile Include="LibraryIterator.cs" />
+    <Compile Include="BlackBoxInteger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

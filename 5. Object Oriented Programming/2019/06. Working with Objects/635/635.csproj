@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{373C294E-60B6-4064-BE16-F0A671269F07}</ProjectGuid>
+    <ProjectGuid>{B6A6C509-373E-4DCF-AD19-415DF46AC97F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_01_Library</RootNamespace>
-    <AssemblyName>01_Library</AssemblyName>
+    <RootNamespace>_635</RootNamespace>
+    <AssemblyName>635</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,9 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book.cs" />
-    <Compile Include="Library.cs" />
-    <Compile Include="LibraryIterator.cs" />
+    <Compile Include="HarvestingFields.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

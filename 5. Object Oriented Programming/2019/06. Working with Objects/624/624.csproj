@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{373C294E-60B6-4064-BE16-F0A671269F07}</ProjectGuid>
+    <ProjectGuid>{5400302E-2644-4C79-8FAE-DD420A9029DA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_01_Library</RootNamespace>
-    <AssemblyName>01_Library</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>Strategy</RootNamespace>
+    <AssemblyName>Strategy</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,9 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book.cs" />
-    <Compile Include="Library.cs" />
-    <Compile Include="LibraryIterator.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="PersonAgeComparator.cs" />
+    <Compile Include="PersonNameComparator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
