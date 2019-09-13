@@ -33,42 +33,29 @@
             }
         }
 
-        // TODO: refactor for Problem 4
         private string InterpredCommand(string[] data, string commandName)
         {
+            Command addCmd = new AddCommand(data,repository,unitFactory);
+            Command reportcmd = new ReportCommand(data, repository, unitFactory);
+            Command removecmd = new RemoveCommand(data, repository, unitFactory);
             string result = string.Empty;
+            if(commandName=="fight") Environment.Exit(0);
             switch (commandName)
             {
-                case "add":
-                    result = this.AddUnitCommand(data);
-                    break;
+                case "add": 
+                    return addCmd.Execute();
                 case "report":
-                    result = this.ReportCommand(data);
-                    break;
+                    return reportcmd.Execute();
                 case "fight":
                     Environment.Exit(0);
                     break;
+                case "retire":
+                    return removecmd.Execute();
                 default:
                     throw new InvalidOperationException("Invalid command!");
             }
             return result;
         }
 
-
-        private string ReportCommand(string[] data)
-        {
-            string output = this.repository.Statistics;
-            return output;
-        }
-
-
-        private string AddUnitCommand(string[] data)
-        {
-            string unitType = data[1];
-            IUnit unitToAdd = this.unitFactory.CreateUnit(unitType);
-            this.repository.AddUnit(unitToAdd);
-            string output = unitType + " added!";
-            return output;
-        }
     }
 }
