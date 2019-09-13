@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{14A246F3-1359-4EDB-B312-77AD0CE2EF46}</ProjectGuid>
+    <ProjectGuid>{5749BD88-F245-4EAC-83C1-38A209A6F82B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_637</RootNamespace>
-    <AssemblyName>637</AssemblyName>
+    <RootNamespace>_617</RootNamespace>
+    <AssemblyName>617</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,25 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Archer.cs" />
-    <Compile Include="Engine.cs" />
-    <Compile Include="Gunner.cs" />
-    <Compile Include="Horseman.cs" />
-    <Compile Include="IAttacker.cs" />
-    <Compile Include="ICommandInterpreter.cs" />
-    <Compile Include="IDestroyable.cs" />
-    <Compile Include="IExecutable.cs" />
-    <Compile Include="IRepository.cs" />
-    <Compile Include="IRunnable.cs" />
-    <Compile Include="IUnit.cs" />
-    <Compile Include="IUnitFactory.cs" />
-    <Compile Include="Pikeman.cs" />
+    <Compile Include="Clinic.cs" />
+    <Compile Include="Pet.cs" />
+    <Compile Include="PetClinicsHolding.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SwordsMan.cs" />
-    <Compile Include="Unit.cs" />
-    <Compile Include="UnitFactory.cs" />
-    <Compile Include="UnitRepository.cs" />
+    <Compile Include="Room.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
