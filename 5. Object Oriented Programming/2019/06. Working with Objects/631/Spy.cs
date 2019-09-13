@@ -11,7 +11,7 @@ public class Spy
     {
         Type myType = Type.GetType(className);
         Console.WriteLine("Class under investigation: {0}", className);
-        string fullname=typeof(myType).FullName();
+        string fullname=myType.FullName;
         FieldInfo[] allfields = myType.GetFields(BindingFlags.Static | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
         StringBuilder stringBuilder = new StringBuilder();
         foreach (var field in allfields)
