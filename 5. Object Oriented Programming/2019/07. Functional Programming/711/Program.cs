@@ -10,7 +10,7 @@ namespace _711
     {
         static void Main(string[] args)
         {
-            var people = Console.ReadLine().Split().ToList();
+            var people = Console.ReadLine().Split(new[] {";"}, StringSplitOptions.RemoveEmptyEntries).ToList();
             var invited = new List<string>();
             Action<string> add = name => invited.Add(name);
             Action<string> remove = name => invited.Remove(name);
