@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_BasicTreeImplementation"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_FindRoot", "06_FindRoot\06_FindRoot.csproj", "{422A626B-EB4C-4A57-B984-17BE752054B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_PrintTree", "PrintTree\07_PrintTree.csproj", "{E780CD62-E2DC-42A0-9ADE-E8FE1B288831}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_PrintTree", "07_PrintTree\07_PrintTree.csproj", "{E780CD62-E2DC-42A0-9ADE-E8FE1B288831}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_PrintLeaves", "08_PrintLeaves\08_PrintLeaves.csproj", "{2514C52B-AC7C-42B4-B941-4AD7B6AE6BDD}"
 EndProject
