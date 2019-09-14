@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_BasicTreeImplementation"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_FindRoot", "06_FindRoot\06_FindRoot.csproj", "{422A626B-EB4C-4A57-B984-17BE752054B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_PrintTree", "PrintTree\07_PrintTree.csproj", "{E780CD62-E2DC-42A0-9ADE-E8FE1B288831}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{422A626B-EB4C-4A57-B984-17BE752054B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{422A626B-EB4C-4A57-B984-17BE752054B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{422A626B-EB4C-4A57-B984-17BE752054B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E780CD62-E2DC-42A0-9ADE-E8FE1B288831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E780CD62-E2DC-42A0-9ADE-E8FE1B288831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E780CD62-E2DC-42A0-9ADE-E8FE1B288831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E780CD62-E2DC-42A0-9ADE-E8FE1B288831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
