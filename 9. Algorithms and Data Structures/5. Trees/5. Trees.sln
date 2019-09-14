@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_DeepestNode", "10_Deepes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_LongestPath", "11_LongestPath\11_LongestPath.csproj", "{0CC38E88-CC54-4050-BE2D-B1D22987EB2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_PathsWithGivenSum", "PathsWithGivenSum\12_PathsWithGivenSum.csproj", "{BD6F9983-7486-47AD-B6D1-EDDAAE40C976}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{0CC38E88-CC54-4050-BE2D-B1D22987EB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CC38E88-CC54-4050-BE2D-B1D22987EB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CC38E88-CC54-4050-BE2D-B1D22987EB2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD6F9983-7486-47AD-B6D1-EDDAAE40C976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD6F9983-7486-47AD-B6D1-EDDAAE40C976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD6F9983-7486-47AD-B6D1-EDDAAE40C976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD6F9983-7486-47AD-B6D1-EDDAAE40C976}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
