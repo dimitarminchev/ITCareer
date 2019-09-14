@@ -1,4 +1,4 @@
-﻿namespace _637.Contracts
+﻿namespace _638.Contracts
 {
     public interface IRepository
     {

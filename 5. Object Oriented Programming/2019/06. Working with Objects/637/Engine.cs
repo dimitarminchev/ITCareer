@@ -1,4 +1,4 @@
-﻿namespace _637.Core
+﻿namespace _638.Core
 {
     using System;
     using Contracts;

@@ -5,26 +5,23 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _631
+public class Spy
 {
-    class Spy
+    public string StealFieldInfo(string className, params string[] fieldNames)
     {
-        public string StealFieldInfo(string inClass, params string[] fields)
+        Type myType = Type.GetType(className);
+        Console.WriteLine("Class under investigation: {0}", className);
+        string fullname=myType.FullName;
+        FieldInfo[] allfields = myType.GetFields(BindingFlags.Static | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+        StringBuilder stringBuilder = new StringBuilder();
+        foreach (var field in allfields)
         {
-            Type classType = Type.GetType(inClass);
-            FieldInfo[] classFields = classType.GetFields(
-                BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public);
-            StringBuilder stringBuilder = new StringBuilder();
-
-            Object classInstance = Activator.CreateInstance(classType, new object[] { });
-            stringBuilder.AppendLine($"Class under investigation: {inClass}");
-
-            foreach (FieldInfo field in classFields.Where(f => fields.Contains(f.Name)))
-            {
-                stringBuilder.AppendLine($"{field.Name} = {field.GetValue(classInstance)}");
-            }
-
-            return stringBuilder.ToString().Trim();
+            Type testType = myType.ReflectedType;
+            var testInstance = Activator.CreateInstance(myType);
+            var fieldValue = field.GetValue(testInstance);
+            stringBuilder.Append(string.Format("{0} = {1}\n",field.Name, fieldValue.ToString()));
         }
+        return stringBuilder.ToString();
     }
 }
+
