@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_DFS", "02_DFS\02_DFS.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_BFS", "03_BFS\03_BFS.csproj", "{574227F5-751B-49DD-85F2-6441F0BB9EB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_BinaryTree", "04_BinaryTree\04_BinaryTree.csproj", "{F30CFECD-88A9-4C62-90CD-4F52C7E84D0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{574227F5-751B-49DD-85F2-6441F0BB9EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{574227F5-751B-49DD-85F2-6441F0BB9EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{574227F5-751B-49DD-85F2-6441F0BB9EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F30CFECD-88A9-4C62-90CD-4F52C7E84D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F30CFECD-88A9-4C62-90CD-4F52C7E84D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F30CFECD-88A9-4C62-90CD-4F52C7E84D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F30CFECD-88A9-4C62-90CD-4F52C7E84D0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
