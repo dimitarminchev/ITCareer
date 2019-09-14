@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_AddVAT", "04_AddVAT\04_A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_FilterByAge", "05_FilterByAge\05_FilterByAge.csproj", "{86E4F21D-08E8-4807-8475-07C3FF9B4603}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "707", "707\707.csproj", "{D426019D-E5A4-42CA-813D-9DF14F195F6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{86E4F21D-08E8-4807-8475-07C3FF9B4603}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86E4F21D-08E8-4807-8475-07C3FF9B4603}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86E4F21D-08E8-4807-8475-07C3FF9B4603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D426019D-E5A4-42CA-813D-9DF14F195F6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D426019D-E5A4-42CA-813D-9DF14F195F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D426019D-E5A4-42CA-813D-9DF14F195F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D426019D-E5A4-42CA-813D-9DF14F195F6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
