@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_MiddleNodes", "09_Middle
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_DeepestNode", "10_DeepestNode\10_DeepestNode.csproj", "{7F46A3EF-406D-4D7E-B00D-CAC939245F0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_LongestPath", "11_LongestPath\11_LongestPath.csproj", "{0CC38E88-CC54-4050-BE2D-B1D22987EB2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{7F46A3EF-406D-4D7E-B00D-CAC939245F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F46A3EF-406D-4D7E-B00D-CAC939245F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F46A3EF-406D-4D7E-B00D-CAC939245F0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CC38E88-CC54-4050-BE2D-B1D22987EB2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CC38E88-CC54-4050-BE2D-B1D22987EB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CC38E88-CC54-4050-BE2D-B1D22987EB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CC38E88-CC54-4050-BE2D-B1D22987EB2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
