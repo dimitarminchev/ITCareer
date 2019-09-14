@@ -5,7 +5,7 @@ public static class BinaryTreePrinter
 {
     class NodeInfo
     {
-        public Node Node;
+        public BinaryNode Node;
         public string Text;
         public int StartPos;
         public int Size { get { return Text.Length; } }
@@ -13,7 +13,7 @@ public static class BinaryTreePrinter
         public NodeInfo Parent, Left, Right;
     }
 
-    public static void Print(this Node root, int topMargin = 2, int leftMargin = 2)
+    public static void Print(this BinaryNode root, int topMargin = 2, int leftMargin = 2)
     {
         if (root == null) return;
         int rootTop = Console.CursorTop + topMargin;

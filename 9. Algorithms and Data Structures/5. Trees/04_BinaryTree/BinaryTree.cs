@@ -1,6 +1,6 @@
 ﻿public class BinaryTree
 {
-    public Node Root { get; set; }
+    public BinaryNode Root { get; set; }
 
     public int Count { get; private set; }
 
@@ -15,7 +15,7 @@
     {
         if (Root == null) return false;
 
-        Node it = Root;
+        BinaryNode it = Root;
         while (true)
         {
             if (it == null) return false;
@@ -27,7 +27,7 @@
 
     public void Add(int item)
     {
-        Node node = new Node(item);
+        BinaryNode node = new BinaryNode(item);
 
         if (Root == null)
         {
@@ -35,7 +35,7 @@
             return;
         }
 
-        Node it = Root;
+        BinaryNode it = Root;
         while (true)
         {
             if (it.Left != null && it.Item.CompareTo(item) >= 0) it = it.Left;
@@ -48,9 +48,6 @@
 
         this.Count++;
     }
-
-    // public void Remove(T item);
-
 }
 
 
