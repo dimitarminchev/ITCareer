@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace D
+namespace _53_Dependencies
 {
     interface IStrategy
     {

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9A81E639-3BC3-4923-BB33-80316626249F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D</RootNamespace>
-    <AssemblyName>D</AssemblyName>
+    <RootNamespace>_53_Dependencies</RootNamespace>
+    <AssemblyName>53_Dependencies</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
