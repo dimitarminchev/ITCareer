@@ -64,9 +64,15 @@ namespace HashTables
         public TValue Get(TKey key)
         {
             int slotNumber = this.FindSlotNumber(key);
+            LinkedList<KeyValuePair<TKey, TValue>> slot = slots[slotNumber];
+            if (slot == null)
+            {
+                throw new ArgumentException("No element corresponding to the key: " + key);
+            }
+
             KeyValuePair<TKey, TValue>
                 keyValuePair =
-                 slots[slotNumber]
+                 slot
                 .Where(x => x.Key.Equals(key))
                 .FirstOrDefault();
 
@@ -92,13 +98,20 @@ namespace HashTables
         public bool TryGetValue(TKey key, out TValue value)
         {
             int slotNumber = this.FindSlotNumber(key);
+            LinkedList<KeyValuePair<TKey, TValue>> slot = slots[slotNumber];
+            if (slot == null)
+            {
+                value = default(TValue);
+                return false;
+            }
+
             KeyValuePair<TKey, TValue>
                 keyValuePair =
-                 slots[slotNumber]
+                 slot
                 .Where(x => x.Key.Equals(key))
                 .FirstOrDefault();
 
-            if(keyValuePair == null)
+            if (keyValuePair == null)
             {
                 value = default(TValue);
                 return false;
@@ -111,9 +124,12 @@ namespace HashTables
         public KeyValuePair<TKey, TValue> Find(TKey key)
         {
             int slotNumber = this.FindSlotNumber(key);
-            KeyValuePair<TKey, TValue> 
-                keyValuePair = 
-                 slots[slotNumber]
+            LinkedList<KeyValuePair<TKey, TValue>> slot = slots[slotNumber];
+            if (slot == null) return null;
+
+            KeyValuePair<TKey, TValue>
+                keyValuePair =
+                 slot
                 .Where(x => x.Key.Equals(key))
                 .FirstOrDefault();
 
@@ -123,9 +139,12 @@ namespace HashTables
         public bool ContainsKey(TKey key)
         {
             int slotNumber = this.FindSlotNumber(key);
+            LinkedList<KeyValuePair<TKey, TValue>> slot = slots[slotNumber];
+            if(slot == null) return false;
+            
             KeyValuePair<TKey, TValue>
                 keyValuePair =
-                 slots[slotNumber]
+                 slot
                 .Where(x => x.Key.Equals(key))
                 .FirstOrDefault();
 
@@ -174,21 +193,21 @@ namespace HashTables
 
         public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
         {
-            return this.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            foreach(var elementList in this.slots)
+            foreach (var elementList in this.slots)
             {
-                if(elementList != null)
+                if (elementList != null)
                 {
-                    foreach(var keyValuePair in elementList)
+                    foreach (var keyValuePair in elementList)
                     {
                         yield return keyValuePair;
                     }
                 }
             }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator(); 
         }
         
         private void Grow()
@@ -196,6 +215,7 @@ namespace HashTables
             this.Capacity *= 2;
             var newSlots = new LinkedList<KeyValuePair<TKey, TValue>>[Capacity];
             Array.Copy(slots, 0, newSlots, 0, slots.Length);
+            slots = newSlots;
         }
 
         private void GrowIfNeeded()
