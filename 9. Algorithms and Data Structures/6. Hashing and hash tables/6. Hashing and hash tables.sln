@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_PointHashDemo", "01_PointHashDemo\01_PointHashDemo.csproj", "{C54A550D-94B5-4DF5-9118-E1577EF8E361}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C54A550D-94B5-4DF5-9118-E1577EF8E361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54A550D-94B5-4DF5-9118-E1577EF8E361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54A550D-94B5-4DF5-9118-E1577EF8E361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54A550D-94B5-4DF5-9118-E1577EF8E361}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2B295C7-25C3-44C8-AE64-485CCD73D6A4}
+	EndGlobalSection
+EndGlobal
