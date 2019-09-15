@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01_PointHashDemo
+namespace Demo
 {
     class Program
     {

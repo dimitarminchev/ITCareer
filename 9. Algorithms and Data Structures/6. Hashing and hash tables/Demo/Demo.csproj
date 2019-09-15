@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C54A550D-94B5-4DF5-9118-E1577EF8E361}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_01_PointHashDemo</RootNamespace>
-    <AssemblyName>01_PointHashDemo</AssemblyName>
+    <RootNamespace>Demo</RootNamespace>
+    <AssemblyName>Demo</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
