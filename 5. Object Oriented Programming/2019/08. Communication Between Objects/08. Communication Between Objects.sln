@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_EventsDemo", "01_EventsD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_MouseClickDemo", "02_MouseClickDemo\02_MouseClickDemo.csproj", "{3FEC9DC0-5A92-4DAA-B9E1-0D94064AFA48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_ObserverDemo", "03_ObserverDemo\03_ObserverDemo.csproj", "{2C8639EC-FBE1-448E-BC8C-2F50503C086F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3FEC9DC0-5A92-4DAA-B9E1-0D94064AFA48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FEC9DC0-5A92-4DAA-B9E1-0D94064AFA48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FEC9DC0-5A92-4DAA-B9E1-0D94064AFA48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8639EC-FBE1-448E-BC8C-2F50503C086F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8639EC-FBE1-448E-BC8C-2F50503C086F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8639EC-FBE1-448E-BC8C-2F50503C086F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8639EC-FBE1-448E-BC8C-2F50503C086F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
