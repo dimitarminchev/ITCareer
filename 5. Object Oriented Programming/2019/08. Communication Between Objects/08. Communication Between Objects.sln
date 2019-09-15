@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_ObserverDemo", "03_Obser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "52_KingGambit", "52_KingGambit\52_KingGambit.csproj", "{5B0A4BBD-8776-47F1-AE76-25398177D295}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "54_TaskForce", "54_TaskForce\54_TaskForce.csproj", "{F56997B2-71AF-4FAB-9EF9-E4F5E9BAC999}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5B0A4BBD-8776-47F1-AE76-25398177D295}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B0A4BBD-8776-47F1-AE76-25398177D295}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B0A4BBD-8776-47F1-AE76-25398177D295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F56997B2-71AF-4FAB-9EF9-E4F5E9BAC999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56997B2-71AF-4FAB-9EF9-E4F5E9BAC999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56997B2-71AF-4FAB-9EF9-E4F5E9BAC999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56997B2-71AF-4FAB-9EF9-E4F5E9BAC999}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
