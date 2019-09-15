@@ -19,11 +19,11 @@ namespace _704
 
             if (oddOrEven == "odd")
             {
-                result = Enumerable.Range(numbers[0], numbers[1]).Where(n => oddFinder(n)).ToArray();
+                result = Enumerable.Range(numbers[0], numbers[1] - numbers[0] + 1).Where(n => oddFinder(n)).ToArray();
             }
             else if (oddOrEven == "even")
             {
-                result = Enumerable.Range(numbers[0], numbers[1]).Where(n => evenFinder(n)).ToArray();
+                result = Enumerable.Range(numbers[0], numbers[1] - numbers[0] + 1).Where(n => evenFinder(n)).ToArray();
             }
 
             Console.WriteLine(string.Join(" ", result));
