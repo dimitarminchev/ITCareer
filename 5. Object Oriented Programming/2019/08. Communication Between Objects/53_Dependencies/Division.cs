@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace D
+namespace _53_Dependencies
 {
-    class Multiplying : IStrategy
+    public class Division : IStrategy
     {
         public int Calculate(int first, int second)
         {
-            return first * second;
+            return first / second;
         }
     }
 }
