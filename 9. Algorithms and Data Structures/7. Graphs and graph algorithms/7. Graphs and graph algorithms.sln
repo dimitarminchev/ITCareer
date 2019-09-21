@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "72_MatrixRegions", "72_Matr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "73_GraphCycle", "73_GraphCycle\73_GraphCycle.csproj", "{BC7917D0-1C6D-4B12-945F-3BDE6E9B1E07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "74_CyclesBreaker", "74_CyclesBreaker\74_CyclesBreaker.csproj", "{8D88682C-A80C-4387-9B7A-C58F2781EE0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BC7917D0-1C6D-4B12-945F-3BDE6E9B1E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC7917D0-1C6D-4B12-945F-3BDE6E9B1E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC7917D0-1C6D-4B12-945F-3BDE6E9B1E07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D88682C-A80C-4387-9B7A-C58F2781EE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D88682C-A80C-4387-9B7A-C58F2781EE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D88682C-A80C-4387-9B7A-C58F2781EE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D88682C-A80C-4387-9B7A-C58F2781EE0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
