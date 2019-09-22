@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1022_FilePartition", "1022_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1023_Compression", "1023_Compression\1023_Compression.csproj", "{A379E11A-FCF3-4380-8F5C-3885F27B49B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1024_FolderSearch", "1024_FolderSearch\1024_FolderSearch.csproj", "{D74400BC-520B-43EB-9BD7-5C9C0F294747}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1025_FullFolderSearch", "1025_FullFolderSearch\1025_FullFolderSearch.csproj", "{1A3DA685-5456-4DF4-BEA7-1FAE99CD590B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{A379E11A-FCF3-4380-8F5C-3885F27B49B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A379E11A-FCF3-4380-8F5C-3885F27B49B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A379E11A-FCF3-4380-8F5C-3885F27B49B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D74400BC-520B-43EB-9BD7-5C9C0F294747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D74400BC-520B-43EB-9BD7-5C9C0F294747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D74400BC-520B-43EB-9BD7-5C9C0F294747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D74400BC-520B-43EB-9BD7-5C9C0F294747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3DA685-5456-4DF4-BEA7-1FAE99CD590B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3DA685-5456-4DF4-BEA7-1FAE99CD590B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A3DA685-5456-4DF4-BEA7-1FAE99CD590B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3DA685-5456-4DF4-BEA7-1FAE99CD590B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
