@@ -12,7 +12,7 @@ namespace _05_NetworkStreamDemo
     {
         static void Main(string[] args)
         {
-            // Server start
+            // Start TCP/IP listening  for network connection
             var portNumber = 8080;
             var tcpListener = new TcpListener(IPAddress.Any, portNumber);
             tcpListener.Start();
@@ -22,7 +22,7 @@ namespace _05_NetworkStreamDemo
             {
                 using (NetworkStream stream = tcpListener.AcceptTcpClient().GetStream())
                 {
-                    // Read from the Connected Client
+                    // Read from the connected client
                     byte[] request = new byte[4096];
                     stream.Read(request, 0, 4096);
                     Console.WriteLine(Encoding.UTF8.GetString(request));
@@ -32,7 +32,7 @@ namespace _05_NetworkStreamDemo
                     string html = string.Format("<html><head><meta charset=\"UTF-8\" /></head><body><h1>Добре дошли!</h1><hr /><h2>{0}</h2><p>Ние сме групата в Сливен.</p></body></html>", bulgarianDate);
                     byte[] htmlBytes = Encoding.UTF8.GetBytes(html);
 
-                    // Write to tha connected client
+                    // Write to the connected client
                     stream.Write(htmlBytes, 0, htmlBytes.Length);
                 }
             }
