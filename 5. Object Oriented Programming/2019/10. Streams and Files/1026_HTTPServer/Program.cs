@@ -26,13 +26,45 @@ namespace _1026_HTTPServer
                     byte[] requestBytes = new byte[4096];
                     stream.Read(requestBytes, 0, 4096);
                     var request = Encoding.UTF8.GetString(requestBytes);
+                    string page = string.Empty;
+                    try
+                    {
+                        page = request.Substring(request.IndexOf("/") + 1, request.IndexOf("HTTP/") - request.IndexOf("/") - 1).Trim();
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Error reading page data.");
+                    }
+                    StreamReader reader;
+                    string code = string.Empty;
+                    switch (page)
+                    {
+                        case "page.html":
+                        case "error.html":
+                            {
+                                reader = new StreamReader(page);
+                                code = reader.ReadToEnd();
+                                break;
+                            }
 
-                    var page = request.Substring( request.IndexOf("/") + 1, request.IndexOf("HTTP/1.1") - request.IndexOf("/") - 1);
-                    if (string.IsNullOrEmpty(page.Trim())) page = "page.html"; // Default Page
+                        case "info.html":
+                            {
+                                reader = new StreamReader(page);
+                                code = reader.ReadToEnd();
+                                code = code.Replace("{Date}", $"{ DateTime.Now.Day}.{ DateTime.Now.Month}.{ DateTime.Now.Year}, { DateTime.Now.Hour}:{ DateTime.Now.Minute}:{ DateTime.Now.Second}");
+                                code = code.Replace("{CPU}",Environment.ProcessorCount.ToString());
+                                break;
+                            }
+                        default:
+                            {
+                                reader = new StreamReader("page.html");
+                                code = reader.ReadToEnd();
+                                break;
+                            }
+                    } 
 
                     // Send to clilent
-                    StreamReader reader = new StreamReader(page);
-                    byte[] html = Encoding.UTF8.GetBytes(reader.ReadToEnd());
+                    byte[] html = Encoding.UTF8.GetBytes(code.Replace("\r",""));
                     stream.Write(html, 0, html.Length);
                 }
             }
