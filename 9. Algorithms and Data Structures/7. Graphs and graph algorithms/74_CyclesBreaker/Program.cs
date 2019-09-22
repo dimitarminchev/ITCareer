@@ -4,82 +4,106 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Graphs
+namespace _75_CyclesBreaker
 {
     class Program
     {
-        public class Employee
-        {
-            public int Salary;
-            public List<int> Employees;
-
-            public Employee()
-            {
-                this.Salary = 0;
-                this.Employees = new List<int>();
-            }
-        }
-
-        static List<Employee> employees;
-
         static void Main(string[] args)
         {
-            employees = new List<Employee>();
-            List<Employee> managers = new List<Employee>();
-
+            var graph = new Dictionary<string, List<string>>();
             int n = int.Parse(Console.ReadLine());
-
-            string[] input = new string[n];
             for (int i = 0; i < n; i++)
             {
-                input[i] = Console.ReadLine();
-                employees.Add(new Employee());
-                for (int j = 0; j < n; j++)
+                string[] input =
+                     Console.ReadLine()
+                    .Split(new char[] { ' ', '-', '>' }, StringSplitOptions.RemoveEmptyEntries)
+                    .ToArray();
+
+                graph.Add(input[0], new List<string>());
+                for (int j = 1; j < input.Length; j++)
                 {
-                    if (input[i][j] == 'Y')
-                    {
-                        employees[i].Employees.Add(j);
-                    }
+                    graph[input[0]].Add(input[j]);
                 }
+            }
+            var sortedGraph = new Dictionary<string, List<string>>();
+            foreach (var keyValuePair in graph.OrderBy(x => x.Key))
+            {
+                sortedGraph.Add(keyValuePair.Key, keyValuePair.Value.OrderBy(x => x).ToList());
             }
 
-            for (int i = 0; i < n; i++)
+            var removedEdges = new List<Tuple<string, string>>();
+            RemoveCycles(sortedGraph, removedEdges);
+            Console.WriteLine("Number of removed edges: {0}", removedEdges.Count);
+            foreach (var edge in removedEdges)
             {
-                bool isManaged = false;
-                for (int j = 0; j < n; j++)
-                {
-                    if (input[j][i] == 'Y')
-                    {
-                        isManaged = true;
-                        break;
-                    }
-                }
-                if (!isManaged)
-                {
-                    managers.Add(employees[i]);
-                }
+                Console.WriteLine("{0} - {1}", edge.Item1, edge.Item2);
             }
-
-            employees.ForEach(x => x.Salary = x.Employees.Count == 0 ? 1 : 0);
-            foreach (var manager in managers)
-            {
-                FindTotalSalary(manager);
-            }
-            Console.WriteLine(employees.Sum(x => x.Salary));
         }
 
-        static int FindTotalSalary(Employee currentEmployee)
+        static void RemoveCycles(Dictionary<string, List<string>> graph, List<Tuple<string, string>> removedEdges)
         {
-            if (currentEmployee.Salary == 0)
+            foreach (var node in graph)
             {
-                int total = 0;
-                foreach (var managedEmployee in currentEmployee.Employees)
+                foreach (var neighbouringNode in node.Value)
                 {
-                    total += FindTotalSalary(employees[managedEmployee]);
+                    if (!removedEdges.Any(x => x.Item1 == neighbouringNode && x.Item2 == node.Key))
+                    {
+                        var modifiedGraph = new Dictionary<string, List<string>>();
+                        foreach (var keyValuePair in graph)
+                        {
+                            modifiedGraph.Add(keyValuePair.Key, keyValuePair.Value.ToArray().ToList());
+                        }
+
+                        foreach (var removedEdge in removedEdges)
+                        {
+                            modifiedGraph[removedEdge.Item1].Remove(removedEdge.Item2);
+                            modifiedGraph[removedEdge.Item2].Remove(removedEdge.Item1);
+                        }
+
+                        modifiedGraph[node.Key].Remove(neighbouringNode);
+                        modifiedGraph[neighbouringNode].Remove(node.Key);
+
+                        if (CanFindPath(node.Key, neighbouringNode, modifiedGraph))
+                        {
+                            removedEdges.Add(new Tuple<string, string>(node.Key, neighbouringNode));
+                        }
+                    }
                 }
-                currentEmployee.Salary = total;
             }
-            return currentEmployee.Salary;
+        }
+
+        static bool CanFindPath(string startNode, string endNode, Dictionary<string, List<string>> graph)
+        {
+            List<List<string>> solutions = new List<List<string>>();
+            Dictionary<string, bool> visited = new Dictionary<string, bool>();
+            foreach (var node in graph)
+            {
+                visited.Add(node.Key, false);
+            }
+            FindPath(startNode, endNode, new List<string>(), solutions, visited, graph);
+            return solutions.Count == 0 ? false : true;
+        }
+
+        static void FindPath(string node, string destination, List<string> currentSolution, List<List<string>> solutions, Dictionary<string, bool> visited, Dictionary<string, List<string>> graph)
+        {
+            currentSolution.Add(node);
+            visited[node] = true;
+            if (node == destination)
+            {
+                solutions.Add(currentSolution.ToArray().ToList());
+                currentSolution.Remove(node);
+                visited[node] = false;
+                return;
+            }
+            foreach (var connectedNode in graph[node])
+            {
+                if (visited[connectedNode] == false)
+                {
+                    FindPath(connectedNode, destination, currentSolution, solutions, visited, graph);
+                }
+            }
+            currentSolution.Remove(node);
+            visited[node] = false;
         }
     }
 }
