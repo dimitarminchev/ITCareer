@@ -21,10 +21,17 @@ namespace _1026_HTTPServer
             while (true)
             {
                 using (NetworkStream stream = listener.AcceptTcpClient().GetStream())
-                {                  
-                    Thread.Sleep(1000); // Pause to process the request
+                {
 
-                    StreamReader reader = new StreamReader("page.html");
+                    byte[] requestBytes = new byte[4096];
+                    stream.Read(requestBytes, 0, 4096);
+                    var request = Encoding.UTF8.GetString(requestBytes);
+
+                    var page = request.Substring( request.IndexOf("/") + 1, request.IndexOf("HTTP/1.1") - request.IndexOf("/") - 1);
+                    if (string.IsNullOrEmpty(page.Trim())) page = "page.html"; // Default Page
+
+                    // Send to clilent
+                    StreamReader reader = new StreamReader(page);
                     byte[] html = Encoding.UTF8.GetBytes(reader.ReadToEnd());
                     stream.Write(html, 0, html.Length);
                 }
