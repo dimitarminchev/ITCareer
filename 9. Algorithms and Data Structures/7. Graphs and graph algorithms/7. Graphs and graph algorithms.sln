@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "72_MatrixRegions", "72_Matr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "73_GraphCycle", "73_GraphCycle\73_GraphCycle.csproj", "{BC7917D0-1C6D-4B12-945F-3BDE6E9B1E07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "75_CyclesBreaker", "74_CyclesBreaker\75_CyclesBreaker.csproj", "{8D88682C-A80C-4387-9B7A-C58F2781EE0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "75_CyclesBreaker", "75_CyclesBreaker\75_CyclesBreaker.csproj", "{8D88682C-A80C-4387-9B7A-C58F2781EE0F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "74_Salaries", "74_Salaries\74_Salaries.csproj", "{88D3E6C3-159B-4769-8DF0-73A19D3DE475}"
 EndProject
