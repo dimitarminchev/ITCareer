@@ -15,17 +15,18 @@ namespace _1013_WorldsCount
 
             using (StreamReader words = new StreamReader("words.txt"))
             {
-                using (StreamReader text = new StreamReader("input.txt"))
+                using (StreamReader text = new StreamReader("TextFile1.txt"))
                 {
                     using (StreamWriter writer = new StreamWriter("output.txt"))
                     {
-                        var line = text.ReadToEnd().ToLower().Split().ToArray();
-                        var search = words.ReadToEnd().ToLower().Split().ToArray();                       
-                        foreach (var item in search)
+                        var line = text.ReadToEnd().ToLower().Split(' ','?',',','.','-','!').ToArray();
+                        var search = words.ReadLine();
+                        while (search != null)
                         {
-                            dict.Add(item, line.Count(x => x == item));
+                            dict.Add(search, line.Count(x => x == search));
+                            search = words.ReadLine();
                         }
-                        dict.OrderBy(x => x.Value);
+                        dict = dict.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
                         foreach (var item in dict)
                         {
                             writer.WriteLine($"{item.Key} - {item.Value}");
