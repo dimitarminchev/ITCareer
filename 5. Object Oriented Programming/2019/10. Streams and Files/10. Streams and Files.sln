@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1021_BinaryFileCopy", "1021
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1022_FilePartition", "1022_FilePartition\1022_FilePartition.csproj", "{3D52C3DB-F971-4BF6-A6EB-00E992A6BEFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1023_Compression", "1023_Compression\1023_Compression.csproj", "{A379E11A-FCF3-4380-8F5C-3885F27B49B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{3D52C3DB-F971-4BF6-A6EB-00E992A6BEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D52C3DB-F971-4BF6-A6EB-00E992A6BEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D52C3DB-F971-4BF6-A6EB-00E992A6BEFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A379E11A-FCF3-4380-8F5C-3885F27B49B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A379E11A-FCF3-4380-8F5C-3885F27B49B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A379E11A-FCF3-4380-8F5C-3885F27B49B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A379E11A-FCF3-4380-8F5C-3885F27B49B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

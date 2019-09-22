@@ -37,7 +37,7 @@ namespace _1022_FilePartition
                 int sizeOfFile = FileLength / parts;
                 for (int i = 0; i < parts; i++)
                 {
-                    using (FileStream write = new FileStream($"{destinationDirectory}/Part -{i}.{ext}", FileMode.Create))
+                    using (FileStream write = new FileStream($"{destinationDirectory}/Part - {i}.{ext}", FileMode.Create))
                     {
                         byte[] bytes = new byte[sizeOfFile];
                         int data = read.Read(bytes, 0, bytes.Length);
