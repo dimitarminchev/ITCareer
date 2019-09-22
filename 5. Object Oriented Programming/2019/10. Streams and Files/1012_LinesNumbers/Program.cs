@@ -12,9 +12,9 @@ namespace _1012_LinesNumbers
         static void Main(string[] args)
         {
             int count = 1;
-            using (StreamReader reader = new StreamReader("somefile.txt"))
+            using (StreamReader reader = new StreamReader("input.txt"))
             {
-                using (StreamWriter writer = new StreamWriter("otherfile.txt"))
+                using (StreamWriter writer = new StreamWriter("output.txt"))
                 {
                     var line = reader.ReadLine();
                     while (line != null)

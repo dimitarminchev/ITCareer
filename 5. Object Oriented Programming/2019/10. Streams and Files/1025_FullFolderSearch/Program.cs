@@ -12,9 +12,12 @@ namespace _1025_FullFolderSearch
         public static string searched;
         static void Main(string[] args)
         {
-            StreamWriter r = new StreamWriter("report.txt");
-            r.Close();
-            searched = Console.ReadLine();
+            string searched = "Program.cs";
+            Console.WriteLine("Searching for {0}", searched);
+
+            //StreamWriter r = new StreamWriter("report.txt");
+            //r.Close();
+
             DirectoryInfo dir = new DirectoryInfo("../../");
             GetInfo(dir);
             DirectoryInfo[] ad = dir.GetDirectories();
@@ -22,7 +25,8 @@ namespace _1025_FullFolderSearch
             {
                 GetInfo(item);
             }
-            /*FileInfo[] fileInfo = dir.GetFiles($"*{searched}*");
+            /* // v1
+            FileInfo[] fileInfo = dir.GetFiles($"*{searched}*");
             fileInfo = fileInfo.OrderBy(x => x.Extension).ThenBy(x => x.Length).ToArray();
             using (StreamWriter writer = new StreamWriter("report.txt"))
             {
@@ -37,6 +41,12 @@ namespace _1025_FullFolderSearch
                     writer.WriteLine($"--{file.Name}.{file.Extension} - {file.Length / 1000}kb");
                 }
             }*/
+
+            // Print
+            using (var reader = new StreamReader("report.txt"))
+            {
+                Console.WriteLine("report.txt\n---\n{0}", reader.ReadToEnd());
+            }
         }
         static void GetInfo(DirectoryInfo dir)
         {

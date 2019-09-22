@@ -11,12 +11,14 @@ namespace _1024_FolderSearch
     {
         static void Main(string[] args)
         {
-            string searched = Console.ReadLine();
-            //string[] files = Directory.GetFiles(Directory.GetCurrentDirectory().ToString());
+            string searched = "Program.cs";
+            Console.WriteLine("Searching for {0}", searched);
+
             DirectoryInfo d = new DirectoryInfo("../../"/*+Directory.GetCurrentDirectory()*/);
             FileInfo[] fileInfo = d.GetFiles($"*{searched}*");
             fileInfo = fileInfo.OrderBy(x => x.Extension).ThenBy(x => x.Length).ToArray();
-            using (StreamWriter writer = new StreamWriter("report.txt"))
+
+            using (StreamWriter writer = new StreamWriter("../../report.txt"))
             {
                 string lastExt = string.Empty;
                 foreach (FileInfo file in fileInfo)
@@ -28,6 +30,12 @@ namespace _1024_FolderSearch
                     }
                     writer.WriteLine($"--{file.Name}.{file.Extension} - {file.Length/1000}kb");
                 }
+            }
+
+            // Print
+            using (var reader = new StreamReader("../../report.txt"))
+            {
+                Console.WriteLine("report.txt\n---\n{0}", reader.ReadToEnd()); 
             }
         }
     }

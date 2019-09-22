@@ -11,7 +11,7 @@ namespace _1011_OddLines
     {
         static void Main(string[] args)
         {
-            using(StreamReader reader = new StreamReader("somefile.txt"))
+            using(StreamReader reader = new StreamReader("input.txt"))
             {
                 var line1 = reader.ReadLine();
                 var line2 = reader.ReadLine();

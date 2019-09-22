@@ -11,15 +11,16 @@ namespace _1013_WorldsCount
     {
         static void Main(string[] args)
         {
+            var dict = new Dictionary<string, int>();
+
             using (StreamReader words = new StreamReader("words.txt"))
             {
-                using (StreamReader text = new StreamReader("text.txt"))
+                using (StreamReader text = new StreamReader("input.txt"))
                 {
-                    using (StreamWriter writer = new StreamWriter("result.txt"))
+                    using (StreamWriter writer = new StreamWriter("output.txt"))
                     {
                         var line = text.ReadToEnd().ToLower().Split().ToArray();
-                        var search = words.ReadToEnd().ToLower().Split().ToArray();
-                        var dict = new Dictionary<string, int>();
+                        var search = words.ReadToEnd().ToLower().Split().ToArray();                       
                         foreach (var item in search)
                         {
                             dict.Add(item, line.Count(x => x == item));
@@ -32,6 +33,8 @@ namespace _1013_WorldsCount
                     }
                 }
             }
+            // Print
+            Console.WriteLine(string.Join("\n", dict));
         }
     }
 }

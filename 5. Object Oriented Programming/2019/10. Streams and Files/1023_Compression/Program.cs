@@ -16,8 +16,9 @@ namespace _1023_Compression
             var source = Console.ReadLine();
             Console.Write("Parts: ");
             int n = int.Parse(Console.ReadLine());
+
             Slice(source, n);
-            Console.WriteLine("Sliced\n");
+            Console.WriteLine("Sliced");
             Assemble();
             Console.WriteLine("Assembled");
         }
