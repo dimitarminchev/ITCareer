@@ -1,0 +1,30 @@
+;metsyS gnisu
+;cireneG.snoitcelloC.metsyS gnisu
+;qniL.metsyS gnisu
+;txeT.metsyS gnisu
+;sksaT.gnidaerhT.metsyS gnisu
+;OI.metsyS gnisu
+
+omeDretirWeliF_20_ ecapseman
+{
+margorP ssalc    
+{    
+retirW eliF .2 omeD //        
+)sgra ][gnirts(niaM diov citats        
+{        
+))"sc.margorP/../.."(redaeRmaertS wen = redaer rav( gnisu            
+{            
+;)(eniLdaeR.redaer = stnetnoCenil rav                
+))"txt.desreveR/../.."(retirWmaertS wen = retirw rav( gnisu                
+{                
+)llun =! stnetnoCenil( elihw                    
+{                    
+;))(yarrAoT.)(esreveR.stnetnoCenil(gnirts wen = desrever rav                        
+;)desrever(eniLetirW.retirw                        
+;)(eniLdaeR.redaer = stnetnoCenil                        
+}                    
+;)(esopsiD.retirw // }                
+;)(esopsiD.redaer // }            
+}        
+}    
+}
