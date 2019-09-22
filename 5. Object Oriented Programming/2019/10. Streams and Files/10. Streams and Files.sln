@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1024_FolderSearch", "1024_F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1025_FullFolderSearch", "1025_FullFolderSearch\1025_FullFolderSearch.csproj", "{1A3DA685-5456-4DF4-BEA7-1FAE99CD590B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1026_HTTPServer", "1026_HTTPServer\1026_HTTPServer.csproj", "{EA20E52F-C491-48BC-82CE-898F0D985510}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{1A3DA685-5456-4DF4-BEA7-1FAE99CD590B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A3DA685-5456-4DF4-BEA7-1FAE99CD590B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A3DA685-5456-4DF4-BEA7-1FAE99CD590B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA20E52F-C491-48BC-82CE-898F0D985510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA20E52F-C491-48BC-82CE-898F0D985510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA20E52F-C491-48BC-82CE-898F0D985510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA20E52F-C491-48BC-82CE-898F0D985510}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
