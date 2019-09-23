@@ -10,4 +10,4 @@
 08. [Communication Between Objects](08.%20Communication%20Between%20Objects)
 09. [Exceptions](09.%20Exceptions)
 10. [Streams and Files](10.%20Streams%20and%20Files)
-11. [Design Patterns](11.%20Design%20Patterns)
+11. Design Patterns
