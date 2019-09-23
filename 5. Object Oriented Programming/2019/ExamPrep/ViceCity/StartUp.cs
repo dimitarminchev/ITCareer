@@ -4,7 +4,7 @@ using ViceCity.Core.Contracts;
 
 namespace ViceCity
 {
-    class Program
+    public class StartUp
     {
         IEngine engine;
 

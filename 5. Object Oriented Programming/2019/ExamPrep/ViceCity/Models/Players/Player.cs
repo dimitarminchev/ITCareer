@@ -5,7 +5,7 @@ using ViceCity.Repositories.Contracts;
 
 namespace ViceCity.Models.Players
 {
-    public class Player : IPlayer
+    public  class Player : IPlayer
     {
         private string name;
         public string Name
