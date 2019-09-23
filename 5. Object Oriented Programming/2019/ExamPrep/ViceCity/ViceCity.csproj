@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3BB6DD1A-1888-4AD0-A547-18D55A350D6C}</ProjectGuid>
+    <ProjectGuid>{86AC418C-A5ED-43FD-BB84-6B9EFB9610F7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>GTAViceCity</RootNamespace>
-    <AssemblyName>GTAViceCity</AssemblyName>
+    <RootNamespace>ViceCity</RootNamespace>
+    <AssemblyName>ViceCity</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Contracts\IController.cs" />
+    <Compile Include="Core\Contracts\IEngine.cs" />
+    <Compile Include="Core\Engine.cs" />
+    <Compile Include="IO\Contracts\IReader.cs" />
+    <Compile Include="IO\Contracts\IWriter.cs" />
+    <Compile Include="IO\Reader.cs" />
+    <Compile Include="IO\Writer.cs" />
+    <Compile Include="Models\Guns\Contracts\IGun.cs" />
+    <Compile Include="Models\Neghbourhoods\Contracts\INeighbourhood.cs" />
+    <Compile Include="Models\Players\Contracts\IPlayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Contracts\IRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
