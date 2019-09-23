@@ -51,11 +51,19 @@
     <Compile Include="IO\Reader.cs" />
     <Compile Include="IO\Writer.cs" />
     <Compile Include="Models\Guns\Contracts\IGun.cs" />
+    <Compile Include="Models\Guns\Gun.cs" />
+    <Compile Include="Models\Guns\Pistol.cs" />
     <Compile Include="Models\Neghbourhoods\Contracts\INeighbourhood.cs" />
+    <Compile Include="Models\Neghbourhoods\GangNeighbourhood.cs" />
+    <Compile Include="Models\Players\CivilPlayer.cs" />
     <Compile Include="Models\Players\Contracts\IPlayer.cs" />
+    <Compile Include="Models\Players\MainPlayer.cs" />
+    <Compile Include="Models\Players\Player.cs" />
+    <Compile Include="Models\Rifle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Contracts\IRepository.cs" />
+    <Compile Include="Repositories\GunRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

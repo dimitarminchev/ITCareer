@@ -11,6 +11,7 @@ namespace ViceCity
     class Program
     {
         IEngine engine;
+
         static void Main(string[] args)
         {
             IEngine engine = new Engine();
