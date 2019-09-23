@@ -1,5 +1,7 @@
 ﻿using ViceCity.Core.Contracts;
 using System;
+using System.Collections.Generic;
+using System.Text;
 using ViceCity.IO.Contracts;
 using ViceCity.IO;
 
@@ -30,19 +32,19 @@ namespace ViceCity.Core
                 {
                     if (input[0] == "AddPlayer")
                     {
-                        // todo
+                        
                     }
                     else if (input[0] == "AddGun")
                     {
-                        // todo
+
                     }
                     else if (input[0] == "AddGunToPlayer")
                     {
-                        // todo
+
                     }
                     else if (input[0] == "Fight")
                     {
-                        // todo
+
                     }            
                 }
                 catch (Exception ex)
