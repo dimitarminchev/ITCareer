@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Graphs
+namespace _72_MatrixRegions
 {
     class Program
     {

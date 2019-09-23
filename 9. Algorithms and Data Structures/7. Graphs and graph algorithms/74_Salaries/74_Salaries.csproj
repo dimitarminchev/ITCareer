@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D88682C-A80C-4387-9B7A-C58F2781EE0F}</ProjectGuid>
+    <ProjectGuid>{88D3E6C3-159B-4769-8DF0-73A19D3DE475}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_74_CyclesBreaker</RootNamespace>
-    <AssemblyName>74_CyclesBreaker</AssemblyName>
+    <RootNamespace>_74_Salaries</RootNamespace>
+    <AssemblyName>74_Salaries</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
