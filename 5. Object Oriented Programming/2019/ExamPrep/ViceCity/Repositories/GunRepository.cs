@@ -7,7 +7,7 @@ namespace ViceCity.Repositories
 {
     public class GunRepository : IRepository<IGun>
     {
-        private List<IGun> models;
+        private Queue<IGun> models;
 
         public IReadOnlyCollection<IGun> Models => models;
 
@@ -16,7 +16,7 @@ namespace ViceCity.Repositories
         {
             if (!this.models.Contains(model))
             {
-                this.models.Add(model);
+                this.models.Enqueue(model);
             }
         }
 
@@ -28,8 +28,8 @@ namespace ViceCity.Repositories
         public bool Remove(IGun model)
         {
             if (!this.models.Contains(model))
-            {
-                this.models.Remove(model);
+            {                
+                this.models.Dequeue();
                 return true;
             }
             else return false;
@@ -37,7 +37,7 @@ namespace ViceCity.Repositories
 
         public GunRepository()
         {
-            this.models = new List<IGun>();
+            this.models = new Queue<IGun>();
         }
     }
 }
