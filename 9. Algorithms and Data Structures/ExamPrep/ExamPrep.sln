@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostDevices", "LostDevices\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMadGardener", "TheMadGardener\TheMadGardener.csproj", "{37D20BFC-1D09-4BD8-B362-4C80803270E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodOmens", "GoodOmens\GoodOmens.csproj", "{01A416BF-0845-45F6-A2D5-382874198F26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{37D20BFC-1D09-4BD8-B362-4C80803270E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37D20BFC-1D09-4BD8-B362-4C80803270E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37D20BFC-1D09-4BD8-B362-4C80803270E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01A416BF-0845-45F6-A2D5-382874198F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A416BF-0845-45F6-A2D5-382874198F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A416BF-0845-45F6-A2D5-382874198F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A416BF-0845-45F6-A2D5-382874198F26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
