@@ -15,7 +15,7 @@ namespace _1013_WorldsCount
 
             using (StreamReader words = new StreamReader("words.txt"))
             {
-                using (StreamReader text = new StreamReader("TextFile1.txt"))
+                using (StreamReader text = new StreamReader("input.txt"))
                 {
                     using (StreamWriter writer = new StreamWriter("output.txt"))
                     {
