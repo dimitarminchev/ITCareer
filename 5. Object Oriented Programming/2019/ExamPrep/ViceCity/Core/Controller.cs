@@ -5,6 +5,8 @@ using System.Text;
 using ViceCity.Core.Contracts;
 using ViceCity.Models.Guns;
 using ViceCity.Models.Players;
+using ViceCity.Models.Neghbourhoods;
+using ViceCity.Models.Players.Contracts;
 
 namespace ViceCity.Core
 {
@@ -16,9 +18,9 @@ namespace ViceCity.Core
 
         public Controller()
         {
-            this.player = new MainPlayer();
-            this.civils = new List<CivilPlayer>();
             this.guns = new Queue<Gun>();
+            this.player = new MainPlayer();
+            this.civils = new List<CivilPlayer>();            
         }
 
         public string AddGun(string type, string name)
@@ -63,7 +65,27 @@ namespace ViceCity.Core
 
         public string Fight()
         {
-            throw new NotImplementedException();
+            var oldPlayer = player;
+            var oldCivils = civils;
+
+            // Fight
+            var gang = new GangNeighbourhood();
+            gang.Action(player, civils as ICollection<IPlayer>);
+
+            // Nothing happend
+            if (oldPlayer == player && oldCivils == civils)
+            {
+                return "Everything is okay!";
+            }
+
+            // Result
+            StringBuilder sb = new StringBuilder();
+            sb.Append("A fight happened:" + Environment.NewLine);
+            sb.Append($"Tommy live points: {player.LifePoints}!" + Environment.NewLine);
+            sb.Append($"Tommy has killed: {oldCivils.Count - civils.Count} players!" + Environment.NewLine);
+            sb.Append($"Left Civil Players: {civils.Count}!" + Environment.NewLine);
+
+            return sb.ToString();
         }
     }
 }

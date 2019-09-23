@@ -10,12 +10,13 @@ namespace ViceCity.Core
         private IReader reader;
         private IWriter writer;
 
+        private Controller controller;
 
         public Engine()
         {
             this.reader = new Reader();
             this.writer = new Writer();
-
+            this.controller = new Controller();
         }
         public void Run()
         {
@@ -30,19 +31,19 @@ namespace ViceCity.Core
                 {
                     if (input[0] == "AddPlayer")
                     {
-                        // todo
+                        Console.WriteLine(controller.AddPlayer(input[1]));
                     }
                     else if (input[0] == "AddGun")
                     {
-                        // todo
+                        Console.WriteLine(controller.AddGun(input[1], input[2]));
                     }
                     else if (input[0] == "AddGunToPlayer")
                     {
-                        // todo
+                        Console.WriteLine(controller.AddGunToPlayer(input[1]));
                     }
                     else if (input[0] == "Fight")
                     {
-                        // todo
+                        Console.WriteLine(controller.Fight());
                     }            
                 }
                 catch (Exception ex)
