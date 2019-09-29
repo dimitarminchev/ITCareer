@@ -1,15 +1,15 @@
 # Exam Preparation
-SoftUni Judje Algorithms Exam (16 June 2019)
-https://judge.softuni.bg/Contests/1700/Algorithms-Exam-16-June-2019
+SoftUni Judje Algorithms Exam (21 Sept 2019)
+https://judge.softuni.bg/Contests/1817/CSharp-Algorithms-Exam-21-Sept-2019
 
-### 1. Monkey Business
-https://judge.softuni.bg/Contests/Practice/Index/1700#0
+### 1. Cinema
+https://judge.softuni.bg/Contests/Practice/Index/1817#0
 
-### 2. Lost Devices
-https://judge.softuni.bg/Contests/Practice/Index/1700#1
+### 2. Word Cruncher
+https://judge.softuni.bg/Contests/Practice/Index/1817#1
 
-### 3. The Mad Gardener
-https://judge.softuni.bg/Contests/Practice/Index/1700#2
+### 3.Word Differences
+https://judge.softuni.bg/Contests/Practice/Index/1817#2
 
-### 4. Good Omens
-https://judge.softuni.bg/Contests/Practice/Index/1700#3
+### 4. Road Reconstruction
+https://judge.softuni.bg/Contests/Practice/Index/1817#3
