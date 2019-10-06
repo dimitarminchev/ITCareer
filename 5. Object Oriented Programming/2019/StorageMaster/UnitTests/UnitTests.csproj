@@ -40,10 +40,17 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestClass.cs" />
+    <Compile Include="MainTests.cs" />
+    <Compile Include="BusinessLogicTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\2019.09.29 - ExamPrep\StorageMaster.csproj">
+      <Project>{c6e8b8e5-2faa-4654-8790-bbdf3f79883e}</Project>
+      <Name>StorageMaster</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
