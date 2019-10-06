@@ -1,0 +1,396 @@
+﻿Test 1
+grade reduction=1
+input=RegisterStorage DistributionCenter SofiaDistribution
+RegisterStorage Warehouse AmazonWarehouse
+AddProduct Gpu 1200
+AddProduct SolidStateDrive 205
+AddProduct HardDrive 70
+AddProduct HardDrive 120
+SelectVehicle SofiaDistribution 0
+LoadVehicle HardDrive Gpu
+SendVehicleTo SofiaDistribution 0 AmazonWarehouse
+UnloadVehicle AmazonWarehouse 3
+END
+
+output=Registered SofiaDistribution
+Registered AmazonWarehouse
+Added Gpu to pool
+Added SolidStateDrive to pool
+Added HardDrive to pool
+Added HardDrive to pool
+Selected Van
+Loaded 2/2 products into Van
+Sent Van to AmazonWarehouse (slot 3)
+Unloaded 2/2 products at AmazonWarehouse
+AmazonWarehouse:
+Storage worth: $1320.00
+SofiaDistribution:
+Storage worth: $0.00
+
+
+case=Test 2
+grade reduction=1
+input=AddProduct HardDrive -20
+AddProduct Product 20
+RegisterStorage InvalidStorage LoshHackerStorage
+RegisterStorage Warehouse GoodHackerStorage
+SelectVehicle GoodHackerStorage 0
+LoadVehicle HardDrive
+SendVehicleTo LoshHackerStorage 0 GoodHackerStorage
+SendVehicleTo GoodHackerStorage 0 LoshHackerStorage
+END
+
+output=Error: Price cannot be negative!
+Error: Invalid product type!
+Error: Invalid storage type!
+Registered GoodHackerStorage
+Selected Semi
+Error: HardDrive is out of stock!
+Error: Invalid source storage!
+Error: Invalid destination storage!
+GoodHackerStorage:
+Storage worth: $0.00
+
+
+case=Test 3
+grade reduction=1
+input=RegisterStorage DistributionCenter AmazonDistribution
+RegisterStorage Warehouse AmazonWarehouse
+AddProduct HardDrive 80
+AddProduct HardDrive 70
+AddProduct HardDrive 120
+AddProduct Gpu 800
+SelectVehicle AmazonDistribution 0
+LoadVehicle SolidStateDrive
+LoadVehicle HardDrive Gpu HardDrive
+SendVehicleTo AmazonDistribution 0 AmazonWarehouse
+GetStorageStatus AmazonWarehouse
+UnloadVehicle AmazonWarehouse 3
+GetStorageStatus AmazonWarehouse
+END
+
+output=Registered AmazonDistribution
+Registered AmazonWarehouse
+Added HardDrive to pool
+Added HardDrive to pool
+Added HardDrive to pool
+Added Gpu to pool
+Selected Van
+Error: SolidStateDrive is out of stock!
+Loaded 3/3 products into Van
+Sent Van to AmazonWarehouse (slot 3)
+Stock (0/10): []
+Garage: [Semi|Semi|Semi|Van|empty|empty|empty|empty|empty|empty]
+Unloaded 3/3 products at AmazonWarehouse
+Stock (2.7/10): [HardDrive (2), Gpu (1)]
+Garage: [Semi|Semi|Semi|Van|empty|empty|empty|empty|empty|empty]
+AmazonWarehouse:
+Storage worth: $990.00
+AmazonDistribution:
+Storage worth: $0.00
+
+
+case=Test 4
+Fail message= Case4_fail
+grade reduction=1
+input=RegisterStorage DistributionCenter VratsaDistribution
+RegisterStorage Warehouse GoogleWarehouse
+AddProduct Gpu 1200
+AddProduct SolidStateDrive 205
+AddProduct HardDrive 70
+AddProduct HardDrive 120
+SelectVehicle VratsaDistribution 0
+LoadVehicle Gpu HardDrive
+SendVehicleTo VratsaDistribution 0 GoogleWarehouse
+UnloadVehicle GoogleWarehouse 3
+END
+
+output=Registered VratsaDistribution
+Registered GoogleWarehouse
+Added Gpu to pool
+Added SolidStateDrive to pool
+Added HardDrive to pool
+Added HardDrive to pool
+Selected Van
+Loaded 2/2 products into Van
+Sent Van to GoogleWarehouse (slot 3)
+Unloaded 2/2 products at GoogleWarehouse
+GoogleWarehouse:
+Storage worth: $1320.00
+VratsaDistribution:
+Storage worth: $0.00
+
+
+case=Test 5
+Fail message= Case5_fail
+grade reduction=3
+input=AddProduct HardDrive -20
+RegisterStorage InvalidStorage BadHackerStorage
+RegisterStorage Warehouse NiceHackerStorage
+SelectVehicle NiceHackerStorage 0
+LoadVehicle HardDrive
+SendVehicleTo BadHackerStorage 0 NiceHackerStorage
+SendVehicleTo NiceHackerStorage 0 BadHackerStorage
+END
+
+output=Error: Price cannot be negative!
+Error: Invalid storage type!
+Registered NiceHackerStorage
+Selected Semi
+Error: HardDrive is out of stock!
+Error: Invalid source storage!
+Error: Invalid destination storage!
+NiceHackerStorage:
+Storage worth: $0.00
+
+
+case=Test 6
+Fail message= Case6_fail
+grade reduction=3
+input=RegisterStorage DistributionCenter AmazonDistribution
+RegisterStorage Warehouse AmazonWarehouse
+AddProduct HardDrive 70
+AddProduct HardDrive 60
+AddProduct HardDrive 110
+AddProduct Gpu 600
+SelectVehicle AmazonDistribution 0
+LoadVehicle SolidStateDrive
+LoadVehicle HardDrive HardDrive HardDrive
+SendVehicleTo AmazonDistribution 0 AmazonWarehouse
+GetStorageStatus AmazonWarehouse
+UnloadVehicle AmazonWarehouse 3
+GetStorageStatus AmazonWarehouse
+END
+
+output=Registered AmazonDistribution
+Registered AmazonWarehouse
+Added HardDrive to pool
+Added HardDrive to pool
+Added HardDrive to pool
+Added Gpu to pool
+Selected Van
+Error: SolidStateDrive is out of stock!
+Loaded 2/3 products into Van
+Sent Van to AmazonWarehouse (slot 3)
+Stock (0/10): []
+Garage: [Semi|Semi|Semi|Van|empty|empty|empty|empty|empty|empty]
+Unloaded 2/2 products at AmazonWarehouse
+Stock (2/10): [HardDrive (2)]
+Garage: [Semi|Semi|Semi|Van|empty|empty|empty|empty|empty|empty]
+AmazonWarehouse:
+Storage worth: $170.00
+AmazonDistribution:
+Storage worth: $0.00
+
+
+case=Test 7
+Fail message= Case7_fail
+grade reduction=3
+input=RegisterStorage Warehouse TheWarehouse
+RegisterStorage AutomatedWarehouse TheAutomatedWarehouse
+RegisterStorage DistributionCenter TheDistributionCenter
+RegisterStorage Invalid InvalidStorage
+AddProduct Gpu 100
+AddProduct HardDrive 100
+AddProduct SolidStateDrive 100
+AddProduct Ram 100
+AddProduct Product 100
+SelectVehicle TheWarehouse 0
+LoadVehicle Gpu HardDrive
+SelectVehicle TheAutomatedWarehouse 0
+LoadVehicle SolidStateDrive
+SelectVehicle TheDistributionCenter 0
+LoadVehicle Ram
+SendVehicleTo TheWarehouse 0 TheDistributionCenter
+SendVehicleTo TheWarehouse 0 TheDistributionCenter
+SendVehicleTo TheWarehouse 1 TheDistributionCenter
+GetStorageStatus TheWarehouse
+GetStorageStatus TheDistributionCenter
+GetStorageStatus TheAutomatedWarehouse
+UnloadVehicle TheDistributionCenter 3
+UnloadVehicle TheDistributionCenter 4
+END
+
+output=Registered TheWarehouse
+Registered TheAutomatedWarehouse
+Registered TheDistributionCenter
+Error: Invalid storage type!
+Added Gpu to pool
+Added HardDrive to pool
+Added SolidStateDrive to pool
+Added Ram to pool
+Error: Invalid product type!
+Selected Semi
+Loaded 2/2 products into Semi
+Selected Truck
+Loaded 1/1 products into Truck
+Selected Van
+Loaded 1/1 products into Van
+Sent Semi to TheDistributionCenter (slot 3)
+Error: No vehicle in this garage slot!
+Sent Semi to TheDistributionCenter (slot 4)
+Stock (0/10): []
+Garage: [empty|empty|Semi|empty|empty|empty|empty|empty|empty|empty]
+Stock (0/2): []
+Garage: [Van|Van|Van|Semi|Semi]
+Stock (0/1): []
+Garage: [Truck|empty]
+Unloaded 2/2 products at TheDistributionCenter
+Unloaded 0/0 products at TheDistributionCenter
+TheDistributionCenter:
+Storage worth: $200.00
+TheWarehouse:
+Storage worth: $0.00
+TheAutomatedWarehouse:
+Storage worth: $0.00
+
+
+case=Test 8
+Fail message= Case8_fail
+grade reduction=3
+input=END
+output=
+
+
+case=Test 9
+Fail message= Case9_fail
+grade reduction=3
+input=RegisterStorage Warehouse TheWarehouse
+RegisterStorage AutomatedWarehouse TheAutomatedWarehouse
+RegisterStorage DistributionCenter TheDistributionCenter
+RegisterStorage Invalid InvalidStorage
+AddProduct Gpu 100
+AddProduct HardDrive 100
+AddProduct SolidStateDrive 100
+AddProduct Ram 100
+AddProduct Product 100
+AddProduct Gpu 100
+AddProduct HardDrive 100
+AddProduct SolidStateDrive 100
+AddProduct Ram 100
+AddProduct Product 100
+SelectVehicle TheWarehouse 0
+LoadVehicle Gpu HardDrive Gpu HardDrive
+SelectVehicle TheAutomatedWarehouse 0
+LoadVehicle SolidStateDrive SolidStateDrive Ram Ram
+SelectVehicle TheDistributionCenter 0
+LoadVehicle Ram
+SendVehicleTo TheWarehouse 0 TheDistributionCenter
+SendVehicleTo TheWarehouse 0 TheDistributionCenter
+SendVehicleTo TheWarehouse 1 TheDistributionCenter
+GetStorageStatus TheWarehouse
+GetStorageStatus TheDistributionCenter
+GetStorageStatus TheAutomatedWarehouse
+UnloadVehicle TheDistributionCenter 3
+UnloadVehicle TheDistributionCenter 4
+END
+
+output=Registered TheWarehouse
+Registered TheAutomatedWarehouse
+Registered TheDistributionCenter
+Error: Invalid storage type!
+Added Gpu to pool
+Added HardDrive to pool
+Added SolidStateDrive to pool
+Added Ram to pool
+Error: Invalid product type!
+Added Gpu to pool
+Added HardDrive to pool
+Added SolidStateDrive to pool
+Added Ram to pool
+Error: Invalid product type!
+Selected Semi
+Loaded 4/4 products into Semi
+Selected Truck
+Loaded 4/4 products into Truck
+Selected Van
+Error: Ram is out of stock!
+Sent Semi to TheDistributionCenter (slot 3)
+Error: No vehicle in this garage slot!
+Sent Semi to TheDistributionCenter (slot 4)
+Stock (0/10): []
+Garage: [empty|empty|Semi|empty|empty|empty|empty|empty|empty|empty]
+Stock (0/2): []
+Garage: [Van|Van|Van|Semi|Semi]
+Stock (0/1): []
+Garage: [Truck|empty]
+Unloaded 3/4 products at TheDistributionCenter
+Error: Storage is full!
+TheDistributionCenter:
+Storage worth: $300.00
+TheWarehouse:
+Storage worth: $0.00
+TheAutomatedWarehouse:
+Storage worth: $0.00
+
+
+case=Test 10
+Fail message= Case10_fail
+grade reduction=3
+input=RegisterStorage Warehouse DaWarehouse
+RegisterStorage AutomatedWarehouse TheAutomatedWarehouse
+RegisterStorage DistributionCenter TheDistributionCenter
+RegisterStorage Invalid InvalidStorage
+AddProduct Gpu 100
+AddProduct HardDrive 100
+AddProduct SolidStateDrive 100
+AddProduct Ram 100
+AddProduct Product 100
+AddProduct Gpu 100
+AddProduct HardDrive 100
+AddProduct SolidStateDrive 100
+AddProduct Ram 100
+AddProduct Product 100
+SelectVehicle DaWarehouse 0
+LoadVehicle Gpu HardDrive Gpu HardDrive
+SelectVehicle TheAutomatedWarehouse 0
+LoadVehicle SolidStateDrive SolidStateDrive Ram Ram
+SelectVehicle TheDistributionCenter 0
+LoadVehicle Ram
+SendVehicleTo DaWarehouse 0 TheDistributionCenter
+SendVehicleTo DaWarehouse 0 TheDistributionCenter
+SendVehicleTo DaWarehouse 1 TheDistributionCenter
+GetStorageStatus DaWarehouse
+GetStorageStatus TheDistributionCenter
+GetStorageStatus TheAutomatedWarehouse
+UnloadVehicle TheDistributionCenter 3
+UnloadVehicle TheDistributionCenter 4
+END
+
+output=Registered DaWarehouse
+Registered TheAutomatedWarehouse
+Registered TheDistributionCenter
+Error: Invalid storage type!
+Added Gpu to pool
+Added HardDrive to pool
+Added SolidStateDrive to pool
+Added Ram to pool
+Error: Invalid product type!
+Added Gpu to pool
+Added HardDrive to pool
+Added SolidStateDrive to pool
+Added Ram to pool
+Error: Invalid product type!
+Selected Semi
+Loaded 4/4 products into Semi
+Selected Truck
+Loaded 4/4 products into Truck
+Selected Van
+Error: Ram is out of stock!
+Sent Semi to TheDistributionCenter (slot 3)
+Error: No vehicle in this garage slot!
+Sent Semi to TheDistributionCenter (slot 4)
+Stock (0/10): []
+Garage: [empty|empty|Semi|empty|empty|empty|empty|empty|empty|empty]
+Stock (0/2): []
+Garage: [Van|Van|Van|Semi|Semi]
+Stock (0/1): []
+Garage: [Truck|empty]
+Unloaded 3/4 products at TheDistributionCenter
+Error: Storage is full!
+TheDistributionCenter:
+Storage worth: $300.00
+DaWarehouse:
+Storage worth: $0.00
+TheAutomatedWarehouse:
+Storage worth: $0.00
