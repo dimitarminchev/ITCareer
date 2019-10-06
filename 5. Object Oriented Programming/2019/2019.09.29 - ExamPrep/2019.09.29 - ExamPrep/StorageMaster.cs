@@ -90,7 +90,7 @@ namespace StorageMaster.Storage
             if (storages.Count(x => x.Name == sourceName) <= 0) throw new InvalidOperationException("Invalid source storage!");
             if (storages.Count(x => x.Name == destinationName) <= 0) throw new InvalidOperationException("Invalid destination storage!");
             var vehicle = storages.First(x => x.Name == sourceName).Garage.ToList()[sourceGarageSlot];
-            if(vehicle is null) throw new InvalidOperationException("No vehicle in this garage slot!");
+            if(vehicle == null) throw new InvalidOperationException("No vehicle in this garage slot!");
             string vehicleType = vehicle.GetType().Name;
             /*if (vehicle is Van) vehicleType = "Van";
             else if (vehicle is Truck) vehicleType = "Truck";
