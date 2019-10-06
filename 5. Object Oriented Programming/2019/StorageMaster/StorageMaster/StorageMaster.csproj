@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C6E8B8E5-2FAA-4654-8790-BBDF3F79883E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_2019._09._29___ExamPrep</RootNamespace>
-    <AssemblyName>2019.09.29 - ExamPrep</AssemblyName>
+    <RootNamespace>_StorageMaster</RootNamespace>
+    <AssemblyName>StorageMaster</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
