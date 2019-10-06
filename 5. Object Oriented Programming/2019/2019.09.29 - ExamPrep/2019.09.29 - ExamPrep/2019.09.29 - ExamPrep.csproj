@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutomatedWarehouse.cs" />
+    <Compile Include="Console.cs" />
     <Compile Include="DistributionCenter.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="Gpu.cs" />

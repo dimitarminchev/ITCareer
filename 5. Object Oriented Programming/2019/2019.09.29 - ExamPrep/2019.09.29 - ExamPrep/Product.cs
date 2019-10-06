@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StorageMaster.Products
 {
-    public class Product
+    public abstract class Product
     {
         private double price;
 
@@ -22,7 +22,7 @@ namespace StorageMaster.Products
 
         private double weight;
 
-        public double Wieght
+        public double Weight
         {
             get { return weight; }
             set { weight = value; }
@@ -31,7 +31,7 @@ namespace StorageMaster.Products
         public Product(double price, double weight)
         {
             this.Price = price;
-            this.Wieght = weight;
+            this.Weight = weight;
         }
     }
 }

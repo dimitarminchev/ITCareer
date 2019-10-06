@@ -113,7 +113,8 @@ namespace StorageMaster.Storage
             Dictionary<string, int> dic = new Dictionary<string, int>();
             foreach (var item in storage.Products)
             {
-                switch (item.GetType().ToString())
+                if (item == null) continue;
+                switch (item.GetType().Name)
                 {
                     case "Gpu": if (!dic.ContainsKey("Gpu")) dic.Add("Gpu", 0); dic["Gpu"]++; break;
                     case "HardDrive": if (!dic.ContainsKey("HardDrive")) dic.Add("HardDrive", 0); dic["HardDrive"]++; break;
@@ -122,15 +123,33 @@ namespace StorageMaster.Storage
                 }
             }
             dic = dic.OrderByDescending(x => x.Value).ThenBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);
-            return string.Format("Stock({0}/{1}): [{2}])\nGarage: [{3}]", storage.Products.Select(x => x.Wieght).Sum(),
-                storage.Capacity, string.Join(", ", $"{dic.Keys} ({dic.Values})"),
-                string.Join("|", storage.Garage.OrderBy(x => x.GetType().Name).
-                ThenByDescending(x => storage.Garage.Count(y => y.GetType().Name == x.GetType().Name)).Select(x => x.GetType().Name)));
+            string stock = string.Format("Stock({0}/{1}): [", storage.Products.Where(x => x != null).Select(x => x.Weight).Sum(),
+                storage.Capacity); if (storage.Products.Where(x => x != null).Count() != 0) foreach (var item in dic)
+                {
+                    if (item.Equals(dic.Last()))
+                        stock += $"{item.Key} ({item.Value})";
+                    else
+                    stock += $"{item.Key} ({item.Value}), ";
+                }
+            stock += "]\n";
+            List<Vehicle> a = new List<Vehicle>();
+            foreach (var item in storage.Garage)
+            {
+                if (item != null) a.Add(item);
+            }
+            string garage = string.Format("Garage: {0}", string.Join("|", a.OrderBy(x => x.GetType().Name).
+                ThenByDescending(x => a.Count(y => y.GetType().Name == x.GetType().Name)).Select(x => x.GetType().Name))); for (int i = 0; i < storage.Garage.Count - a.Count; i++)
+                garage += "|empty";
+            garage += "]";
+            {
+
+            };
+            return stock + garage;
         }
 
         public  string GetSummary()
         {
-            var sorted = storages/*.OrderBy(x => x.Products.Select(y => y.Price).Sum())*/.Where(x => x.Products.Count(y => y == null) == 0).OrderBy(x => x.Products.Select(y => y.Price).Sum()).ToList();
+            var sorted = storages/*.OrderBy(x => x.Products.Select(y => y.Price).Sum())*/.Where(x => x.Products.Count(y => y != null) != 0).OrderBy(x => x.Products.Where(y=>y!=null).Select(y => y.Price).Sum()).ToList();
 
             StringBuilder sb = new StringBuilder();
             foreach (var item in sorted)
@@ -138,7 +157,7 @@ namespace StorageMaster.Storage
                 // if (item.Products.Count(x => x == null) != item.Products.Count())
                 //{
                 //var srt = item.Select(x=>x.Products).Where(x=>x!=null).OrderBy(x => x.Select(y => y.Price).Sum()).ToList();
-                double a = item.Products.Select(y => y.Price).Sum();
+                double a = item.Products.Where(x=>x!=null).Select(y => y.Price).Sum();
                 sb.AppendLine(string.Format("{0}:\nStorage worth: ${1:F2}", item.Name, a));
                 //}
 

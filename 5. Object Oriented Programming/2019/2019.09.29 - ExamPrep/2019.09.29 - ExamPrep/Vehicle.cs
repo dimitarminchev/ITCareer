@@ -7,7 +7,7 @@ using StorageMaster.Products;
 
 namespace StorageMaster.Entities.Vehicles
 {
-    public class Vehicle
+    public abstract class Vehicle
     {
         private int capacity;
 
@@ -22,16 +22,22 @@ namespace StorageMaster.Entities.Vehicles
         {
             get { return trunk; }
         }
-        public bool IsFull()
+        public bool IsFull
         {
-            if (trunk.Select(x => x.Wieght).Sum() >= Capacity) return true;
-            return false;
+            get
+            {
+                if (trunk.Select(x => x.Weight).Sum() >= Capacity) return true;
+                return false;
+            }
         }
 
-        public bool IsEmpty()
+        public bool IsEmpty
         {
-            if (trunk.Count == 0) return true;
-            return false;
+            get
+            {
+                if (trunk.Count == 0) return true;
+                return false;
+            }
         }
         public Vehicle(int capacity)
         {
@@ -40,12 +46,12 @@ namespace StorageMaster.Entities.Vehicles
         }
         public void LoadProduct(Product product)
         {
-            if (IsFull()) throw new InvalidOperationException("Vehicle is full!");
+            if (IsFull) throw new InvalidOperationException("Vehicle is full!");
             trunk.Add(product);
         }
         public Product Unload()
         {
-            if (IsEmpty()) throw new InvalidOperationException("No products left in vehicle!");
+            if (IsEmpty) throw new InvalidOperationException("No products left in vehicle!");
             var lastProduct = trunk.Last();
             trunk.Remove(lastProduct);
             return lastProduct;

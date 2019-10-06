@@ -9,7 +9,7 @@ namespace StorageMaster.Storage
 {
     class Warehouse : Storage
     {
-        public Warehouse(string name) : base(name, 2, 5, new List<Vehicle> { new Semi(), new Semi(), new Semi() })
+        public Warehouse(string name) : base(name, 10, 10, new List<Vehicle> { new Semi(), new Semi(), new Semi() })
         {
 
         }
