@@ -47,7 +47,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\2019.09.29 - ExamPrep\StorageMaster.csproj">
+    <ProjectReference Include="..\StorageMaster\StorageMaster.csproj">
       <Project>{c6e8b8e5-2faa-4654-8790-bbdf3f79883e}</Project>
       <Name>StorageMaster</Name>
     </ProjectReference>
