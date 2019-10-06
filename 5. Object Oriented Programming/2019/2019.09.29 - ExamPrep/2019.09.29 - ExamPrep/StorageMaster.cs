@@ -139,13 +139,22 @@ namespace StorageMaster.Storage
             {
                 if (item != null) a.Add(item);
             }
-            string garage = string.Format("Garage: [{0}", string.Join("|", a.OrderBy(x => x.GetType().Name).
+            string garage = "Garage: [";
+            var gar = storage.Garage;
+            for (int i = 0; i < gar.Count; i++)
+            {
+                if (gar.ToList()[i] != null) garage += gar.ToList()[i].GetType().Name;
+                else garage += "empty";
+                if (i != gar.Count - 1) garage += "|";
+            }
+            garage += "]";
+            /*string garage = string.Format("Garage: [{0}", string.Join("|", a.OrderBy(x => x.GetType().Name).
                 ThenByDescending(x => a.Count(y => y.GetType().Name == x.GetType().Name)).Select(x => x.GetType().Name))); for (int i = 0; i < storage.Garage.Count - a.Count; i++)
                 garage += "|empty";
             garage += "]";
             {
 
-            };
+            };*/
             return stock + garage;
         }
 
