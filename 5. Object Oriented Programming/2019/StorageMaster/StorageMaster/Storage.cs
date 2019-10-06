@@ -59,7 +59,7 @@ namespace StorageMaster.Storage
             Capacity = capacity;
             GarageSlots = garageSlots;
             garage = new Vehicle[GarageSlots];
-            products = new Product[capacity];
+            products = new Product[capacity+1];
             for (int i = 0; i < vehicles.Count(); i++)
             {
                 garage[i] = vehicles.ToArray()[i];
@@ -107,6 +107,7 @@ namespace StorageMaster.Storage
             {
                 //gurmi li?
                 if (IsFull || veicle.IsEmpty) return count;
+                if (count > products.Count() - 1) break;
                 products[count] = veicle.Trunk.ToList()[count];
                 count++;
             }
