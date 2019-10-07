@@ -1,0 +1,32 @@
+﻿Registered TheWarehouse
+Registered TheAutomatedWarehouse
+Registered TheDistributionCenter
+Error: Invalid storage type!
+Added Gpu to pool
+Added HardDrive to pool
+Added SolidStateDrive to pool
+Added Ram to pool
+Error: Invalid product type!
+Selected Semi
+Loaded 2/2 products into Semi
+Selected Truck
+Loaded 1/1 products into Truck
+Selected Van
+Loaded 1/1 products into Van
+Sent Semi to TheDistributionCenter (slot 3)
+Error: No vehicle in this garage slot!
+Sent Semi to TheDistributionCenter (slot 4)
+Stock (0/10): []
+Garage: [empty|empty|Semi|empty|empty|empty|empty|empty|empty|empty]
+Stock (0/2): []
+Garage: [Van|Van|Van|Semi|Semi]
+Stock (0/1): []
+Garage: [Truck|empty]
+Unloaded 2/2 products at TheDistributionCenter
+Unloaded 0/0 products at TheDistributionCenter
+TheDistributionCenter:
+Storage worth: $200.00
+TheWarehouse:
+Storage worth: $0.00
+TheAutomatedWarehouse:
+Storage worth: $0.00

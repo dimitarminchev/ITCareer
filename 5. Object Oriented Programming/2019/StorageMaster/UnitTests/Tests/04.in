@@ -1,0 +1,11 @@
+﻿RegisterStorage DistributionCenter VratsaDistribution
+RegisterStorage Warehouse GoogleWarehouse
+AddProduct Gpu 1200
+AddProduct SolidStateDrive 205
+AddProduct HardDrive 70
+AddProduct HardDrive 120
+SelectVehicle VratsaDistribution 0
+LoadVehicle Gpu HardDrive
+SendVehicleTo VratsaDistribution 0 GoogleWarehouse
+UnloadVehicle GoogleWarehouse 3
+END

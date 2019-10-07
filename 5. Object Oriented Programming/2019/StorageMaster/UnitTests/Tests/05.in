@@ -1,0 +1,8 @@
+﻿AddProduct HardDrive -20
+RegisterStorage InvalidStorage BadHackerStorage
+RegisterStorage Warehouse NiceHackerStorage
+SelectVehicle NiceHackerStorage 0
+LoadVehicle HardDrive
+SendVehicleTo BadHackerStorage 0 NiceHackerStorage
+SendVehicleTo NiceHackerStorage 0 BadHackerStorage
+END

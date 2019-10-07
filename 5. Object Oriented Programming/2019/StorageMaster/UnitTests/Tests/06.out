@@ -1,0 +1,19 @@
+﻿Registered AmazonDistribution
+Registered AmazonWarehouse
+Added HardDrive to pool
+Added HardDrive to pool
+Added HardDrive to pool
+Added Gpu to pool
+Selected Van
+Error: SolidStateDrive is out of stock!
+Loaded 2/3 products into Van
+Sent Van to AmazonWarehouse (slot 3)
+Stock (0/10): []
+Garage: [Semi|Semi|Semi|Van|empty|empty|empty|empty|empty|empty]
+Unloaded 2/2 products at AmazonWarehouse
+Stock (2/10): [HardDrive (2)]
+Garage: [Semi|Semi|Semi|Van|empty|empty|empty|empty|empty|empty]
+AmazonWarehouse:
+Storage worth: $170.00
+AmazonDistribution:
+Storage worth: $0.00

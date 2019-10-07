@@ -1,0 +1,14 @@
+﻿RegisterStorage DistributionCenter AmazonDistribution
+RegisterStorage Warehouse AmazonWarehouse
+AddProduct HardDrive 70
+AddProduct HardDrive 60
+AddProduct HardDrive 110
+AddProduct Gpu 600
+SelectVehicle AmazonDistribution 0
+LoadVehicle SolidStateDrive
+LoadVehicle HardDrive HardDrive HardDrive
+SendVehicleTo AmazonDistribution 0 AmazonWarehouse
+GetStorageStatus AmazonWarehouse
+UnloadVehicle AmazonWarehouse 3
+GetStorageStatus AmazonWarehouse
+END

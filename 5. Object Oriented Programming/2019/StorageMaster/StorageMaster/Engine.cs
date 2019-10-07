@@ -10,10 +10,12 @@ namespace StorageMaster
     {
         string ReadLine();
     }
+
     public interface IWriter
     {
         void WriteLine(string message);
     }
+
     public class ConsoleReader : IReader
     {
         public string ReadLine()
@@ -25,18 +27,21 @@ namespace StorageMaster
     {
         public void WriteLine(string message)
         {
-             Console.WriteLine(message);
+            Console.WriteLine(message);
         }
     }
-    class Engine
+
+    public class Engine
     {
         private IReader reader;
         private IWriter writer;
+
         public Engine(IReader reader, IWriter writer)
         {
             this.reader = reader;
             this.writer = writer;
         }
+
         public void Run()
         {
             var cmd = reader.ReadLine().Split().ToArray();
@@ -55,7 +60,7 @@ namespace StorageMaster
                         case "SendVehicleTo": result = storageMaster.SendVehicleTo(cmd[1], int.Parse(cmd[2]), cmd[3]); break;
                         case "UnloadVehicle": result = storageMaster.UnloadVehicle(cmd[1], int.Parse(cmd[2])); break;
                         case "GetStorageStatus": result = storageMaster.GetStorageStatus(cmd[1]); break;
-                        default: writer.WriteLine("mnoo jestoko gramna :("); break;
+                        default: writer.WriteLine("Don't panic!"); break;
                     }
                     writer.WriteLine(result);
                 }

@@ -1,0 +1,9 @@
+﻿AddProduct HardDrive -20
+AddProduct Product 20
+RegisterStorage InvalidStorage LoshHackerStorage
+RegisterStorage Warehouse GoodHackerStorage
+SelectVehicle GoodHackerStorage 0
+LoadVehicle HardDrive
+SendVehicleTo LoshHackerStorage 0 GoodHackerStorage
+SendVehicleTo GoodHackerStorage 0 LoshHackerStorage
+END

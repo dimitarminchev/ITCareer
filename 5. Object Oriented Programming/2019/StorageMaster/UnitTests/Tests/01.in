@@ -1,0 +1,11 @@
+﻿RegisterStorage DistributionCenter SofiaDistribution
+RegisterStorage Warehouse AmazonWarehouse
+AddProduct Gpu 1200
+AddProduct SolidStateDrive 205
+AddProduct HardDrive 70
+AddProduct HardDrive 120
+SelectVehicle SofiaDistribution 0
+LoadVehicle HardDrive Gpu
+SendVehicleTo SofiaDistribution 0 AmazonWarehouse
+UnloadVehicle AmazonWarehouse 3
+END

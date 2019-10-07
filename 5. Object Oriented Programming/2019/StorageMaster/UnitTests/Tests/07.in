@@ -1,0 +1,24 @@
+﻿RegisterStorage Warehouse TheWarehouse
+RegisterStorage AutomatedWarehouse TheAutomatedWarehouse
+RegisterStorage DistributionCenter TheDistributionCenter
+RegisterStorage Invalid InvalidStorage
+AddProduct Gpu 100
+AddProduct HardDrive 100
+AddProduct SolidStateDrive 100
+AddProduct Ram 100
+AddProduct Product 100
+SelectVehicle TheWarehouse 0
+LoadVehicle Gpu HardDrive
+SelectVehicle TheAutomatedWarehouse 0
+LoadVehicle SolidStateDrive
+SelectVehicle TheDistributionCenter 0
+LoadVehicle Ram
+SendVehicleTo TheWarehouse 0 TheDistributionCenter
+SendVehicleTo TheWarehouse 0 TheDistributionCenter
+SendVehicleTo TheWarehouse 1 TheDistributionCenter
+GetStorageStatus TheWarehouse
+GetStorageStatus TheDistributionCenter
+GetStorageStatus TheAutomatedWarehouse
+UnloadVehicle TheDistributionCenter 3
+UnloadVehicle TheDistributionCenter 4
+END

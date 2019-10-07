@@ -61,9 +61,6 @@ namespace StorageMaster.Storage
         {
             var vehicle = storages[storagePos].Garage.ToList()[currentVehiclePos];
             string vehicleType = vehicle.GetType().Name;
-            /*if (vehicle is Van) vehicleType = "Van";
-            else if (vehicle is Truck) vehicleType = "Truck";
-            else vehicleType = "Semi";*/
             int loadedProductsCount = 0;
             foreach (var item in productNames)
             {
@@ -92,9 +89,6 @@ namespace StorageMaster.Storage
             var vehicle = storages.First(x => x.Name == sourceName).Garage.ToList()[sourceGarageSlot];
             if(vehicle == null) throw new InvalidOperationException("No vehicle in this garage slot!");
             string vehicleType = vehicle.GetType().Name;
-            /*if (vehicle is Van) vehicleType = "Van";
-            else if (vehicle is Truck) vehicleType = "Truck";
-            else vehicleType = "Semi";*/
             int destinationGarageSlot = storages.First(x => x.Name == sourceName).SendVehicleTo(sourceGarageSlot, storages.First(x => x.Name == destinationName));
             return $"Sent {vehicleType} to {destinationName} (slot {destinationGarageSlot})";
         }
@@ -111,7 +105,6 @@ namespace StorageMaster.Storage
         public  string GetStorageStatus(string storageName)
         {
             var storage = storages.First(x => x.Name == storageName);
-            //List<Product> sortedListOfProdicts = storage.Products.OrderBy(x=>x.na)
             Dictionary<string, int> dic = new Dictionary<string, int>();
             foreach (var item in storage.Products)
             {
@@ -133,7 +126,7 @@ namespace StorageMaster.Storage
                     else
                     stock += $"{item.Key} ({item.Value}), ";
                 }
-            stock += "]\n";
+            stock += "]" + Environment.NewLine;
             List<Vehicle> a = new List<Vehicle>();
             foreach (var item in storage.Garage)
             {
@@ -148,34 +141,22 @@ namespace StorageMaster.Storage
                 if (i != gar.Count - 1) garage += "|";
             }
             garage += "]";
-            /*string garage = string.Format("Garage: [{0}", string.Join("|", a.OrderBy(x => x.GetType().Name).
-                ThenByDescending(x => a.Count(y => y.GetType().Name == x.GetType().Name)).Select(x => x.GetType().Name))); for (int i = 0; i < storage.Garage.Count - a.Count; i++)
-                garage += "|empty";
-            garage += "]";
-            {
-
-            };*/
             return stock + garage;
         }
 
         public  string GetSummary()
         {
-            var sorted = storages/*.OrderBy(x => x.Products.Select(y => y.Price).Sum())*/.Where(x => x.Products.Count(y => y != null) != 0).OrderBy(x => x.Products.Where(y=>y!=null).Select(y => y.Price).Sum()).ToList();
+            var sorted = storages.Where(x => x.Products.Count(y => y != null) != 0).OrderBy(x => x.Products.Where(y=>y!=null).Select(y => y.Price).Sum()).ToList();
 
             StringBuilder sb = new StringBuilder();
             foreach (var item in sorted)
             {
-                // if (item.Products.Count(x => x == null) != item.Products.Count())
-                //{
-                //var srt = item.Select(x=>x.Products).Where(x=>x!=null).OrderBy(x => x.Select(y => y.Price).Sum()).ToList();
                 double a = item.Products.Where(x=>x!=null).Select(y => y.Price).Sum();
-                sb.AppendLine(string.Format("{0}:\nStorage worth: ${1:F2}", item.Name, a));
-                //}
-
+                sb.AppendLine(string.Format("{0}:{1}Storage worth: ${2:F2}", item.Name, Environment.NewLine, a));
             }
             foreach (var item in storages)
             {
-                if (!sorted.Contains(item)) sb.AppendLine($"{item.Name}:\nStorage worth: $0.00");
+                if (!sorted.Contains(item)) sb.AppendLine($"{item.Name}:{Environment.NewLine}Storage worth: $0.00");
             }
             return sb.ToString();
         }

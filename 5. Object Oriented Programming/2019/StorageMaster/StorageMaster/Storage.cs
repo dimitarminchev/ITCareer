@@ -31,7 +31,7 @@ namespace StorageMaster.Storage
             get { return garageSlots; }
             set { garageSlots = value; }
         }
-        //        private bool isFull;
+
         public bool IsFull
         {
             get
