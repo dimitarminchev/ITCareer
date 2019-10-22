@@ -12,11 +12,11 @@
 - **Money** = реално число
 - **Computer** = параметър от тип Computer
 
-Имената на потребителите не трябва да бъдат null или празен стринг. Съобщение: Username must not be null or empty!
+Имената на потребителите не трябва да бъдат null или празен стринг. Съобщение: **Username must not be null or empty!**
 
-Парите на потребителя не може да са отрицателни. Съобщение: User's money cannot be less than 0!
+Парите на потребителя не може да са отрицателни. Съобщение: **User's money cannot be less than 0!**
 
-Звездите на потребителя се изчисляват по формулата: Stars  = user's money / 100
+Звездите на потребителя се изчисляват по формулата: **Stars  = user's money / 100**
 
 При подаване на невалидна стойност хвърлете изключение ArgumentException с конкретното съобщение.
 
@@ -28,10 +28,10 @@
 - **MinedAmountPerHour** = реално число
 
 Минималната стойност на рам паметта е 0, а максимална - 32.
-Съобщение: PC Ram cannot be less or equal to 0 and more than 32!
+Съобщение: **PC Ram cannot be less or equal to 0 and more than 32!**
 
 MinedAmountPerHour се изчислява по следната формула:
-{Video card's mined money per hour} * {Processor's mined multiplier}
+**{Video card's mined money per hour} * {Processor's mined multiplier}**
 
 При подаване на невалидна стойност хвърлете изключение – ArgumentException с конкретното съобщение.
 
@@ -42,21 +42,21 @@ MinedAmountPerHour се изчислява по следната формула:
 - **Generation** = цяло число
 - **LifeWorkingHours** = цяло число
 
-Всеки модел на компнента не трябва да е null  или празен стринг. Съобщение: Model cannot be null or empty!
+Всеки модел на компнента не трябва да е null  или празен стринг. Съобщение: **Model cannot be null or empty!**
 
-Цената на един компонент не трябва да е отрицателна или по – голяма от 10000. Nothing is for free!!! Съобщение: Price cannot be less or equal to 0 and more than 10000!
+Цената на един компонент не трябва да е отрицателна или по – голяма от 10000. Nothing is for free!!! Съобщение: **Price cannot be less or equal to 0 and more than 10000!**
 
-Всеки компонент има генерация, започваща от 1. Съобщение: Generation cannot be 0 or negative!
+Всеки компонент има генерация, започваща от 1. Съобщение: **Generation cannot be 0 or negative!**
 
 При подаване на невалидна стойност хвърлете изключение – ArgumentException с конкретното съобщение.
 
 ## Processor
 Всеки процесор има множител на придобитите пари:
 - **MineMultiplier** = цяло число
-- **LifeWorkingHours** се изчислява по следната формула: {Generation} * 100
+- **LifeWorkingHours** се изчислява по следната формула: **{Generation} * 100**
 
 Никой процесор не може да има генерация по – голяма от 9.
-Съобщение: {processorType} generation cannot be more than 9!
+Съобщение: **{processorType} generation cannot be more than 9!**
 
 При подаване на невалидна стойност хвърлете изключение – ArgumentException с конкретното съобщение.
 
@@ -71,11 +71,11 @@ HighPerformanceProcessor има стойност на MineMultiplier равна 
 - **Ram** = цяло число
 - **MinedMoneyPerHour** = реално число
 
-Всяка видео карта притежава стойност на рам паметта в диапазона 0 > RAM <= 32. Съобщение: {videoCardType} ram cannot less or equal to 0 and more than 32!
+Всяка видео карта притежава стойност на рам паметта в диапазона 0 > RAM <= 32. Съобщение: **{videoCardType} ram cannot less or equal to 0 and more than 32!**
 
-MinedMoneyPerHour се изчислява по следната формула: {RAM} * {Generation} / 10
+MinedMoneyPerHour се изчислява по следната формула: **{RAM} * {Generation} / 10**
 
-LifeWorkingHours се изчислява по следната формула: {RAM} * {Generation} * 10
+LifeWorkingHours се изчислява по следната формула: **{RAM} * {Generation} * 10**
 
 При подаване на невалидна стойност хвърлете изключение – ArgumentException с конкретното съобщение.
 Генерацията на картата не може да бъде по – голяма от 9.
@@ -128,7 +128,7 @@ public string Shutdown()
 - **processorPrice** = реално число
 - **videoCardType** = символен низ
 - **videoCardModel** = символен низ
-- **videoCardGeneration = цяло число
+- **videoCardGeneration** = цяло число
 - **videoCardRam** = цяло число
 - **videoCardPrice** = реално число
  
@@ -158,32 +158,34 @@ public string Shutdown()
 Четете редове с различни команди, докато не получите команда за приключване на програмата.
 По-долу можете да видите формата, в който всяка команда ще бъде дадена във входа:
 
-- RegisterUser {name} {money}
-- CreateComputer {userName} {processorType} {processorModel} {processorGeneration} {processorPrice} {videoCardType} {videoCardModel} {videoCardGerenation} {videoCardRam} {videoCardPrice}
-- Mine
-- UserInfo {name}
-- Shutdown
+```
+RegisterUser {name} {money}
+CreateComputer {userName} {processorType} {processorModel} {processorGeneration} {processorPrice} {videoCardType} {videoCardModel} {videoCardGerenation} {videoCardRam} {videoCardPrice}
+Mine
+UserInfo {name}
+Shutdown
+```
 
 ## Изход
 По–долу може да видите кой изход трябва да бъде предоставен от командите.
 
 ### RegisterUser Команда
-При успешно регистриране на потребител: Successfully registered user – {name}!
+При успешно регистриране на потребител: **Successfully registered user – {name}!**
 
-В противен случай: Username: {name} already exists!
+В противен случай: **Username: {name} already exists!**
 
 ### CreateComputer Команда
-При успешно създаване на компютъра: Successfully created computer for user: {name}!
+При успешно създаване на компютъра: **Successfully created computer for user: {name}!**
 
 В случай на невалидни данни: 
-- Невалидно име на потребител: Username: {name} does not exist!
-- Невалиден тип процесор: Invalid type processor!
-- Невалиден тип видео карта: Invalid type video card!
+- Невалидно име на потребител: **Username: {name} does not exist!**
+- Невалиден тип процесор: **Invalid type processor!**
+- Невалиден тип видео карта: **Invalid type video card!**
 
-В случай, че финансовите средства на потребителя не са достатъчни за компютърната конфигурация: User: {name} - insufficient funds!
+В случай, че финансовите средства на потребителя не са достатъчни за компютърната конфигурация: **User: {name} - insufficient funds!**
 
 ### Mine Команда
-След завършване на командата, трябва да върнете отчета за деня в следния формат: Daily profits: {dailyProfits}!
+След завършване на командата, трябва да върнете отчета за деня в следния формат: **Daily profits: {dailyProfits}!**
 
 ### UserInfo Команда
 След завършването на командата, трябва да върнете информация за потребителя, ако той съществува, в следния формат:
@@ -200,13 +202,11 @@ PC Ram: {PC ram}
 * Video card Ram: {videoCardRam}
 ```
 
-При получаване на не регистрирано потребителско име: Username: {name} does not exist!
+При получаване на не регистрирано потребителско име: **Username: {name} does not exist!**
 
 ### Shutdown Команда
 След завършване на командата трябва да върнете информация за всички потребители във формата, описан в UserInfo командата, и накрая добавете:
-```
-System total profits: {totalSystemProfits}!!!
-```
+**System total profits: {totalSystemProfits}!!!**
 
 ## Ограничения
 Името на потребителя ще бъде символен низ, който може да съдържа всеки ASCII символ, с изключение на интервал и запетая. Имената на потребителите винаги ще бъдат уникални. Винаги ще получавате команда за приключване на програмата. Входните данни ще бъдат валидни от страна на типове данни.
