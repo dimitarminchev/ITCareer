@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMiningSystem", "CryptoMiningSystem\CryptoMiningSystem.csproj", "{20CE8BF3-F5C1-4E1E-B4BC-4396FBB0CB4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{E0359017-8FE9-4ADE-824F-2308F1EAFB7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20CE8BF3-F5C1-4E1E-B4BC-4396FBB0CB4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CE8BF3-F5C1-4E1E-B4BC-4396FBB0CB4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20CE8BF3-F5C1-4E1E-B4BC-4396FBB0CB4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20CE8BF3-F5C1-4E1E-B4BC-4396FBB0CB4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0359017-8FE9-4ADE-824F-2308F1EAFB7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0359017-8FE9-4ADE-824F-2308F1EAFB7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0359017-8FE9-4ADE-824F-2308F1EAFB7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0359017-8FE9-4ADE-824F-2308F1EAFB7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24F7256C-1D0E-4D04-AEC7-E24A6A686813}
+	EndGlobalSection
+EndGlobal
