@@ -1,17 +1,22 @@
-# Functional Programming
+# Обучителен модул "Функционално програмиране"
+- Национална програма "Обучение за ИТ кариера"
+- Професия "Приложен програмист" 
+- Образователен център: Професионална имназия по електротехника и електроника "Константин Фотинов", гр.Бургас  
+- Електронен портал: https://it-kariera.mon.bg/e-learning/
 
-## Haskell
-https://www.haskell.org/
+## Преподавател
+- доц. д-р Димитър Минчев
+- e-mail: dimitar.minchev@gmail.com 
+- blog: http://www.minchev.eu
 
-## Microsoft Visual Studio Code
-https://code.visualstudio.com/Download
+## Учебна програма
+1. Въведение 
+2. Функции и стойности
+3. Рекурсия
+4. Списъци
+5. Функции
+6. Затваряне на състояние във функция
 
-### Extensions
-#### Haskell Syntax Highlighting
-https://marketplace.visualstudio.com/items?itemName=justusadam.language-haskell
+## Обучаеми 2019
+![group_2019.jpg](group_2019.jpg)
 
-#### Haskelly
-https://marketplace.visualstudio.com/items?itemName=UCL.haskelly
-
-#### Haskero
-https://marketplace.visualstudio.com/items?itemName=Vans.haskero
