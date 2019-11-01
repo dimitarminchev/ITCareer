@@ -1,10 +1,12 @@
-# Инсталация
+# 1. Въведение
+
+## Инсталация
 
 1. [Haskell](https://www.haskell.org/)
 2. [Microsoft Visual Studio Code](https://code.visualstudio.com/Download)
 3. [Haskell Syntax Highlighting Plugin](https://marketplace.visualstudio.com/items?itemName=justusadam.language-haskell)
 
-# Първа програма
+## Първа програма
 1. VS Code > File > New **[Ctrl + N]**
 ```
 -- First Haskell Program
@@ -23,7 +25,7 @@ ghc hello.hs
 ```
 ![hello.png](hello.png)
 
-# Демонстрации
+## Демонстрации
 1. [hello.hs](hello.hs)
 2. [introduction.hs](introduction.hs)
 3. [files.hs](files.hs)
