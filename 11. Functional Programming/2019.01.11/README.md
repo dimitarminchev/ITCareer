@@ -5,17 +5,17 @@
 3. [Haskell Syntax Highlighting Plugin](https://marketplace.visualstudio.com/items?itemName=justusadam.language-haskell)
 
 # Първа програма
-1. VS Code > File > New [Ctrl + N]
+1. VS Code > File > New **[Ctrl + N]**
 ```
 -- First Haskell Program
 main = do
     putStrLn "Hello World"
 ```
-2. VS Code > File > Save [Ctrl + S]
+2. VS Code > File > Save **[Ctrl + S]**
 ```
 hello.hs
 ```
-3. VS Code > Terminal > New terminal [Ctrl + Shift + `]
+3. VS Code > Terminal > New terminal **[Ctrl + Shift + `]**
 ```
 cd Desktop
 ghc hello.hs
