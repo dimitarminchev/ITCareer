@@ -46,11 +46,11 @@ CREATE TABLE cars (
 
 ## Релационни схеми (Entity/Relationship)
 
-### soft_uni 
+### 1. soft_uni database
 ![soft_uni_database.png](soft_uni_database.png)
 
-### geography 
+### 2. geography database
 ![geography_database.png](geography_database.png)
 
-### diablo 
+### 3. diablo database
 ![diablo_database.png](diablo_database.png)
