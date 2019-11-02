@@ -5,7 +5,7 @@
 square x = x * x
 ```
 
-Дефиниране на функция с повече параметри
+Функция с повече параметри
 ```
 multMax a b x = (max a b) * x
 ```
@@ -23,6 +23,15 @@ pass3 f = f 3
 add1 x = x + 1 
 pass3 add1
 -- Result = 4
+```
+
+Композиция
+```
+compose f g x = f (g x)
+add1 x = x + 1
+mult2 x = 2 * x
+
+compose add1 mult2 4
 ```
 
 Рекурсия
