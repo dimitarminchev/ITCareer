@@ -36,7 +36,7 @@ WHERE continent_code = (SELECT continent_code FROM geography.continents WHERE co
 ORDER BY population DESC, country_name  LIMIT 30;
 
 
-/*Problem 8.*/
+/*Problem 8. Държави и валути (Евро / Не евро)*/
 (
 	SELECT country_name, country_code, 'EURO' as 'currency'
 	FROM geography.countries
