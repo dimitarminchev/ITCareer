@@ -40,7 +40,7 @@ WHERE m.`mountain_range` = "Rila"
 ORDER BY p.`elevation` DESC;
 ```
 
-## 5.2. INNER JOINN
+## 5.2. INNER JOIN
 Ако се използва само **JOIN**, се подразбира **INNER JOIN**.
 
 ### Задача: Адреси с градове
