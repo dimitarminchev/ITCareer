@@ -16,7 +16,7 @@ SELECT concat(`first_name`," ",`last_name`) AS `name`, `name` AS `department`
 FROM `employees`, `departments`;
 ```
 293 employee x 16 departmens = 4688
-- Файл: [demo01.sql] (demo01.sql)
+- Файл: [demo01.sql](demo01.sql)
 
 ### Връзки между таблици 
 Релациите между таблици са полезни, когато са съчетани с връзки **JOIN**. Така можем да извлечем данни едновременно от две таблици.
@@ -27,7 +27,7 @@ FROM `employees`
 JOIN `departments` ON `departments`.`department_id` = `employees`.`department_id`;
 ```
 **Бележка**: връзките с JOIN са по-производителни от вложените SELECT
-- Файл: [demo02.sql] (demo02.sql)
+- Файл: [demo02.sql](demo02.sql)
 
 ### Задача: Върхове в Рила
 Използвайте базата данни **Geography**. Изведете справка за всички върхове в планината **Rila**.
@@ -41,7 +41,7 @@ JOIN `peaks` AS p ON p.`mountain_id` = m.`id`
 WHERE m.`mountain_range` = "Rila"
 ORDER BY p.`elevation` DESC;
 ```
-- Файл: [demo03.sql] (demo03.sql)
+- Файл: [demo03.sql](demo03.sql)
 
 ## 5.2. INNER JOINN
 Ако се използва само **JOIN**, се подразбира **INNER JOIN**.
@@ -56,7 +56,7 @@ FROM employees AS e
   JOIN towns AS t  ON a.town_id = t.town_id
 ORDER BY e.first_name, e.last_name LIMIT 5;
 ```
-- Файл: [demo04.sql] (demo04.sql)
+- Файл: [demo04.sql](demo04.sql)
 
 ### Задача: Служители по продажбите
 Намерете всички служители, които са в отдел **Sales**. Използвайте базата данни **SoftUni**.
@@ -70,7 +70,7 @@ FROM employees AS e
 WHERE d.name = 'Sales'
 ORDER BY e.employee_id DESC;
 ```
-- Файл: [demo05.sql] (demo05.sql)
+- Файл: [demo05.sql](demo05.sql)
 
 ### Задача: Служители наети след дата
 Покажете всички служители, които:
@@ -86,7 +86,7 @@ FROM employees e
   AND d.name IN ('Sales', 'Finance'))
 ORDER BY e.hire_date;
 ```
-- Файл: [demo06.sql] (demo06.sql)
+- Файл: [demo06.sql](demo06.sql)
 
 ## 5.3. OUTER JOIN 
 ### LEFT OUTER JOIN
@@ -115,7 +115,7 @@ LEFT JOIN mountains_countries AS mc
 ON c.country_code = mc.country_code
 WHERE mc.mountain_id IS NULL;
 ```
-- Файл: [demo07.sql] (demo07.sql)
+- Файл: [demo07.sql](demo07.sql)
 
 ## 5.4. FULL JOIN AND CROSS JOIN
 - FULL JOIN обединява LEFT JOIN и RIGHT JOIN.
