@@ -97,7 +97,7 @@ SELECT * FROM employees AS e
  ON e.department_id = d.department_id;
 ```
 
-## #RIGHT OUTER JOIN
+### RIGHT OUTER JOIN
 Тази връзка връща записите, отговарящи на свързващото условие и също така несъвпадащите записи от дясната таблица.
 ```
 SELECT * FROM employees AS e
