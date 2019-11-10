@@ -1,0 +1,7 @@
+﻿CreateHero:Assassin:Master Assassin
+HeroInfo:Master Assassin
+CreateWeapon:Master Assassin:Sword:Excalibur:15:10:5
+CreateHero:Priest:The Priest
+Fight:Master Assassin:The Priest
+HeroInfo:Master Assassin
+CloseArena

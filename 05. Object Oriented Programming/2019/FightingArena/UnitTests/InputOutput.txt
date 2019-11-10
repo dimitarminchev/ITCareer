@@ -1,0 +1,488 @@
+﻿Case=Case 001
+grade reduction=0
+input=CreateHero:Assassin:Master Assassin
+HeroInfo:Master Assassin
+CreateWeapon:Master Assassin:Sword:Excalibur:15:10:5
+CreateHero:Priest:The Priest
+Fight:Master Assassin:The Priest
+HeroInfo:Master Assassin
+CloseArena
+output=Assassin: Master Assassin joined the Arena!
+Assassin: Master Assassin - Level: 0
+Experience: 0
+Power: 0.00
+Successfully armed hero Master Assassin with weapon Sword!
+Priest: The Priest joined the Arena!
+Winner in the battle between Master Assassin and The Priest is Master Assassin with 150.00.
+Assassin: Master Assassin - Level: 0
+Experience: 30
+Sword: Excalibur
+  *Strength: 60
+  *Agility: 10
+  *Intelligence: 5
+Power: 150.00
+Heroes: 2
+Assassin: Master Assassin - Level: 0
+Experience: 30
+Sword: Excalibur
+  *Strength: 60
+  *Agility: 10
+  *Intelligence: 5
+Power: 150.00
+Priest: The Priest - Level: 0
+Experience: 0
+Power: 0.00
+
+Case=Case 002
+grade reduction=0
+input=CreateHero:Assassin:Master Assassin
+HeroInfo:The Priest
+CreateWeapon:Master Assassin:Sword:Excalibur:15:10:5
+CreateWeapon:The Priest:MagicWand:Star Touch:5:15:25
+CreateHero:Assassin:Master Assassin
+Fight:Master Assassin:Atila
+CreateHero:Priest:The Priest
+CreateWeapon:The Priest:MagicWand:Star Touch:5:15:25
+Fight:The Priest:Atila
+Fight:Master Assassin:The Priest
+HeroInfo:The Priest
+CloseArena
+output=Assassin: Master Assassin joined the Arena!
+Hero with name: The Priest does not exist!
+Successfully armed hero Master Assassin with weapon Sword!
+Hero with name: The Priest does not exist!
+Hero with name: Master Assassin already exists!
+Hero with name: Atila does not exist!
+Priest: The Priest joined the Arena!
+Successfully armed hero The Priest with weapon MagicWand!
+Hero with name: Atila does not exist!
+Winner in the battle between Master Assassin and The Priest is The Priest with 236.67.
+Priest: The Priest - Level: 0
+Experience: 30
+MagicWand: Star Touch
+  *Strength: 5
+  *Agility: 15
+  *Intelligence: 125
+Power: 386.67
+Heroes: 2
+Priest: The Priest - Level: 0
+Experience: 30
+MagicWand: Star Touch
+  *Strength: 5
+  *Agility: 15
+  *Intelligence: 125
+Power: 386.67
+Assassin: Master Assassin - Level: 0
+Experience: 0
+Sword: Excalibur
+  *Strength: 60
+  *Agility: 10
+  *Intelligence: 5
+Power: 150.00
+
+Case=Case 01
+Fail message= Case1_fail
+input=CreateHero: :HeroName
+CreateHero:        :HeroName
+CreateHero:InvalidType:HeroName
+CreateHero:Assassin: 
+CreateHero:Assassin:      
+CreateHero:Assassin:Pesho
+CreateHero:Assassin:Pesho
+CloseArena
+output=Invalid type hero:  .
+Invalid type hero:         .
+Invalid type hero: InvalidType.
+Hero name cannot be null, empty or whitespace.
+Hero name cannot be null, empty or whitespace.
+Assassin: Pesho joined the Arena!
+Hero with name: Pesho already exists!
+Heroes: 1
+Assassin: Pesho - Level: 0
+Experience: 0
+Power: 0.00
+
+Case=Case 02
+Fail message= Case2_fail
+input=CreateWeapon:MissingName:Sword:WeaponName:5:5:5
+CreateHero:Assassin:Gosho
+CreateWeapon:Gosho:InvalidWeaponType:WeaponName:5:5:5
+CreateWeapon:Gosho:Bow: :5:5:5
+CreateWeapon:Gosho:Bow:   :5:5:5
+CreateWeapon:Gosho:Bow:Name:-5:5:5
+CreateWeapon:Gosho:Bow:Name:5:-5:5
+CreateWeapon:Gosho:Bow:Name:5:5:-5
+CloseArena
+output=Hero with name: MissingName does not exist!
+Assassin: Gosho joined the Arena!
+Invalid type weapon: InvalidWeaponType.
+Weapon name cannot be null, empty or whitespace.
+Weapon name cannot be null, empty or whitespace.
+Strength cannot be less than 0!
+Agility cannot be less than 0!
+Intelligence cannot be less than 0!
+Heroes: 1
+Assassin: Gosho - Level: 0
+Experience: 0
+Power: 0.00
+
+Case=Case 03
+Fail message= Case3_fail
+input=CreateHero:Warrior:Pesho
+Fight:Gosho:Pesho
+Fight:Pesho:Gosho
+CreateHero:Assassin:Gosho
+Fight:Gosho:Pesho
+CreateWeapon:Gosho:Sword:WeaponName:5:5:5
+Fight:Gosho:Pesho
+CloseArena
+output=Warrior: Pesho joined the Arena!
+Hero with name: Gosho does not exist!
+Hero with name: Gosho does not exist!
+Assassin: Gosho joined the Arena!
+No winner in battle between Gosho and Pesho!
+Successfully armed hero Gosho with weapon Sword!
+Winner in the battle between Gosho and Pesho is Gosho with 60.00.
+Heroes: 2
+Assassin: Gosho - Level: 0
+Experience: 45
+Sword: WeaponName
+  *Strength: 20
+  *Agility: 5
+  *Intelligence: 5
+Power: 60.00
+Warrior: Pesho - Level: 0
+Experience: 15
+Power: 0.00
+
+Case=Case 04
+Fail message= Case4_fail
+input=HeroInfo:Gosho
+CreateHero:Priest:Pesho
+HeroInfo:Pesho
+CreateWeapon:Pesho:MagicWand:NameOfWeapon:5:5:5
+HeroInfo:Pesho
+CloseArena
+output=Hero with name: Gosho does not exist!
+Priest: Pesho joined the Arena!
+Priest: Pesho - Level: 0
+Experience: 0
+Power: 0.00
+Successfully armed hero Pesho with weapon MagicWand!
+Priest: Pesho - Level: 0
+Experience: 0
+MagicWand: NameOfWeapon
+  *Strength: 5
+  *Agility: 5
+  *Intelligence: 25
+Power: 93.33
+Heroes: 1
+Priest: Pesho - Level: 0
+Experience: 0
+MagicWand: NameOfWeapon
+  *Strength: 5
+  *Agility: 5
+  *Intelligence: 25
+Power: 93.33
+
+Case=Case 05
+Fail message= Case5_fail
+input=CreateHero:Warrior:Simo
+CreateHero:Assassin:Gosho
+CreateHero:Priest:Silviya
+CreateHero:Warrior:Dimitar
+CreateWeapon:Silviya:MagicWand:MagicStick:5:5:5
+CreateWeapon:Dimitar:Sword:SomeSword:5:5:5
+Fight:Silviya:Simo
+Fight:Silviya:Simo
+Fight:Silviya:Gosho
+Fight:Silviya:Gosho
+Fight:Dimitar:Simo
+Fight:Dimitar:Simo
+Fight:Dimitar:Gosho
+Fight:Dimitar:Gosho
+CloseArena
+output=Warrior: Simo joined the Arena!
+Assassin: Gosho joined the Arena!
+Priest: Silviya joined the Arena!
+Warrior: Dimitar joined the Arena!
+Successfully armed hero Silviya with weapon MagicWand!
+Successfully armed hero Dimitar with weapon Sword!
+Winner in the battle between Silviya and Simo is Silviya with 93.33.
+Winner in the battle between Silviya and Simo is Silviya with 93.33.
+Winner in the battle between Silviya and Gosho is Silviya with 93.33.
+Winner in the battle between Silviya and Gosho is Silviya with 93.33.
+Winner in the battle between Dimitar and Simo is Dimitar with 40.00.
+Winner in the battle between Dimitar and Simo is Dimitar with 40.00.
+Winner in the battle between Dimitar and Gosho is Dimitar with 40.00.
+Winner in the battle between Dimitar and Gosho is Dimitar with 40.00.
+Heroes: 4
+Priest: Silviya - Level: 1
+Experience: 20
+MagicWand: MagicStick
+  *Strength: 5
+  *Agility: 5
+  *Intelligence: 25
+Power: 93.33
+Warrior: Dimitar - Level: 1
+Experience: 20
+Sword: SomeSword
+  *Strength: 20
+  *Agility: 5
+  *Intelligence: 5
+Power: 40.00
+Assassin: Gosho - Level: 0
+Experience: 0
+Power: 0.00
+Warrior: Simo - Level: 0
+Experience: 0
+Power: 0.00
+
+Case=Case 06
+
+input=CreateHero:Assassin:Master Assassin
+HeroInfo:Master Assassin
+CreateWeapon:Master Assassin:Sword:Excalibur:15:10:5
+CreateHero:Priest:The Priest
+Fight:Master Assassin:The Priest
+HeroInfo:Master Assassin
+CloseArena
+output=Assassin: Master Assassin joined the Arena!
+Assassin: Master Assassin - Level: 0
+Experience: 0
+Power: 0.00
+Successfully armed hero Master Assassin with weapon Sword!
+Priest: The Priest joined the Arena!
+Winner in the battle between Master Assassin and The Priest is Master Assassin with 150.00.
+Assassin: Master Assassin - Level: 0
+Experience: 30
+Sword: Excalibur
+  *Strength: 60
+  *Agility: 10
+  *Intelligence: 5
+Power: 150.00
+Heroes: 2
+Assassin: Master Assassin - Level: 0
+Experience: 30
+Sword: Excalibur
+  *Strength: 60
+  *Agility: 10
+  *Intelligence: 5
+Power: 150.00
+Priest: The Priest - Level: 0
+Experience: 0
+Power: 0.00
+
+Case=Case 07
+Fail message= Case7_fail
+input=CreateHero:Assassin:Master Assassin
+HeroInfo:The Priest
+CreateWeapon:Master Assassin:Sword:Excalibur:15:10:5
+CreateWeapon:The Priest:MagicWand:Star Touch:5:15:25
+CreateHero:Assassin:Master Assassin
+Fight:Master Assassin:Atila
+CreateHero:Priest:The Priest
+CreateWeapon:The Priest:MagicWand:Star Touch:5:15:25
+Fight:The Priest:Atila
+Fight:Master Assassin:The Priest
+HeroInfo:The Priest
+CloseArena
+output=Assassin: Master Assassin joined the Arena!
+Hero with name: The Priest does not exist!
+Successfully armed hero Master Assassin with weapon Sword!
+Hero with name: The Priest does not exist!
+Hero with name: Master Assassin already exists!
+Hero with name: Atila does not exist!
+Priest: The Priest joined the Arena!
+Successfully armed hero The Priest with weapon MagicWand!
+Hero with name: Atila does not exist!
+Winner in the battle between Master Assassin and The Priest is The Priest with 236.67.
+Priest: The Priest - Level: 0
+Experience: 30
+MagicWand: Star Touch
+  *Strength: 5
+  *Agility: 15
+  *Intelligence: 125
+Power: 386.67
+Heroes: 2
+Priest: The Priest - Level: 0
+Experience: 30
+MagicWand: Star Touch
+  *Strength: 5
+  *Agility: 15
+  *Intelligence: 125
+Power: 386.67
+Assassin: Master Assassin - Level: 0
+Experience: 0
+Sword: Excalibur
+  *Strength: 60
+  *Agility: 10
+  *Intelligence: 5
+Power: 150.00
+
+Case=Case 08
+Fail message= Case8_fail
+input=CreateHero:Assassin:Filip
+CreateWeapon:Pesho:Sword:Name:5:5:5
+CreateHero:Warrior:Simo
+Fight:Simo:Dimo
+HeroInfo:Filip
+Fight:Filip:Simo
+CloseArena
+output=Assassin: Filip joined the Arena!
+Hero with name: Pesho does not exist!
+Warrior: Simo joined the Arena!
+Hero with name: Dimo does not exist!
+Assassin: Filip - Level: 0
+Experience: 0
+Power: 0.00
+No winner in battle between Filip and Simo!
+Heroes: 2
+Assassin: Filip - Level: 0
+Experience: 15
+Power: 0.00
+Warrior: Simo - Level: 0
+Experience: 15
+Power: 0.00
+
+Case=Case 09
+Fail message= Case9_fail
+input=CreateHero:Assassin:GodAssassin
+CreateHero:Priest:GodPriest
+CreateHero:Warrior:GodWarrior
+CreateHero:Priest:GodPriest
+CreateWeapon:GodAssassin:Bow:AssassinBow:5:5:5
+HeroInfo:GodAssassin
+CreateWeapon:GodWarrior:Sword:WarriorSword:5:5:5
+CreateWeapon:GodPriest:MagicWand:PriestMagicWand:5:5:5
+HeroInfo:SomeName
+Fight:GodAssassin:GotinAssassin
+Fight:GodAssassin:GodWarrior
+Fight:GodWarrior:GodPriest
+HeroInfo:GodWarrior
+CreateHero:Priest:Pesho
+CloseArena
+output=Assassin: GodAssassin joined the Arena!
+Priest: GodPriest joined the Arena!
+Warrior: GodWarrior joined the Arena!
+Hero with name: GodPriest already exists!
+Successfully armed hero GodAssassin with weapon Bow!
+Assassin: GodAssassin - Level: 0
+Experience: 0
+Bow: AssassinBow
+  *Strength: 10
+  *Agility: 15
+  *Intelligence: 5
+Power: 60.00
+Successfully armed hero GodWarrior with weapon Sword!
+Successfully armed hero GodPriest with weapon MagicWand!
+Hero with name: SomeName does not exist!
+Hero with name: GotinAssassin does not exist!
+Winner in the battle between GodAssassin and GodWarrior is GodAssassin with 20.00.
+Winner in the battle between GodWarrior and GodPriest is GodPriest with 53.33.
+Warrior: GodWarrior - Level: 0
+Experience: 0
+Sword: WarriorSword
+  *Strength: 20
+  *Agility: 5
+  *Intelligence: 5
+Power: 40.00
+Priest: Pesho joined the Arena!
+Heroes: 4
+Priest: GodPriest - Level: 0
+Experience: 30
+MagicWand: PriestMagicWand
+  *Strength: 5
+  *Agility: 5
+  *Intelligence: 25
+Power: 93.33
+Assassin: GodAssassin - Level: 0
+Experience: 30
+Bow: AssassinBow
+  *Strength: 10
+  *Agility: 15
+  *Intelligence: 5
+Power: 60.00
+Warrior: GodWarrior - Level: 0
+Experience: 0
+Sword: WarriorSword
+  *Strength: 20
+  *Agility: 5
+  *Intelligence: 5
+Power: 40.00
+Priest: Pesho - Level: 0
+Experience: 0
+Power: 0.00
+
+Case=Case 10
+Fail message= Case10_fail
+input=CreateHero:Priest:GodPriest
+CreateHero:Warrior:GodWarrior
+CreateWeapon:GodAssassin:Bow:AssassinBow:5:5:5
+HeroInfo:GodAssassin
+CreateWeapon:GodWarrior:Sword:WarriorSword:5:5:5
+CreateHero:Assassin:GodAssassin
+CreateWeapon:GodPriest:MagicWand:PriestMagicWand:5:5:5
+HeroInfo:SomeName
+CreateWeapon:GodAssassin:Bow:AssassinBow:5:5:5
+Fight:GodAssassin:GotinAssassin
+Fight:GodAssassin:GodWarrior
+CreateHero:Priest:GodPriest
+Fight:GodWarrior:GodPriest
+Fight:GodAssassin:GodPriest
+Fight:Simo:GodPriest
+HeroInfo:GodWarrior
+CreateHero:Warrior:Pesho
+Fight:GodPriest:Pesho
+Fight:GodPriest:Pesho
+CloseArena
+output=Priest: GodPriest joined the Arena!
+Warrior: GodWarrior joined the Arena!
+Hero with name: GodAssassin does not exist!
+Hero with name: GodAssassin does not exist!
+Successfully armed hero GodWarrior with weapon Sword!
+Assassin: GodAssassin joined the Arena!
+Successfully armed hero GodPriest with weapon MagicWand!
+Hero with name: SomeName does not exist!
+Successfully armed hero GodAssassin with weapon Bow!
+Hero with name: GotinAssassin does not exist!
+Winner in the battle between GodAssassin and GodWarrior is GodAssassin with 20.00.
+Hero with name: GodPriest already exists!
+Winner in the battle between GodWarrior and GodPriest is GodPriest with 53.33.
+Winner in the battle between GodAssassin and GodPriest is GodPriest with 33.33.
+Hero with name: Simo does not exist!
+Warrior: GodWarrior - Level: 0
+Experience: 0
+Sword: WarriorSword
+  *Strength: 20
+  *Agility: 5
+  *Intelligence: 5
+Power: 40.00
+Warrior: Pesho joined the Arena!
+Winner in the battle between GodPriest and Pesho is GodPriest with 93.33.
+Winner in the battle between GodPriest and Pesho is GodPriest with 93.33.
+Heroes: 4
+Priest: GodPriest - Level: 1
+Experience: 20
+MagicWand: PriestMagicWand
+  *Strength: 5
+  *Agility: 5
+  *Intelligence: 25
+Power: 93.33
+Assassin: GodAssassin - Level: 0
+Experience: 30
+Bow: AssassinBow
+  *Strength: 10
+  *Agility: 15
+  *Intelligence: 5
+Power: 60.00
+Warrior: GodWarrior - Level: 0
+Experience: 0
+Sword: WarriorSword
+  *Strength: 20
+  *Agility: 5
+  *Intelligence: 5
+Power: 40.00
+Warrior: Pesho - Level: 0
+Experience: 0
+Power: 0.00

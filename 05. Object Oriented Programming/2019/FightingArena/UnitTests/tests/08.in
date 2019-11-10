@@ -1,0 +1,7 @@
+﻿CreateHero:Assassin:Filip
+CreateWeapon:Pesho:Sword:Name:5:5:5
+CreateHero:Warrior:Simo
+Fight:Simo:Dimo
+HeroInfo:Filip
+Fight:Filip:Simo
+CloseArena

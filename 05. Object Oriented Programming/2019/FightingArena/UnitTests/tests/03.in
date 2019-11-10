@@ -1,0 +1,8 @@
+﻿CreateHero:Warrior:Pesho
+Fight:Gosho:Pesho
+Fight:Pesho:Gosho
+CreateHero:Assassin:Gosho
+Fight:Gosho:Pesho
+CreateWeapon:Gosho:Sword:WeaponName:5:5:5
+Fight:Gosho:Pesho
+CloseArena

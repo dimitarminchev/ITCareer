@@ -1,0 +1,12 @@
+﻿CreateHero:Assassin:Master Assassin
+HeroInfo:The Priest
+CreateWeapon:Master Assassin:Sword:Excalibur:15:10:5
+CreateWeapon:The Priest:MagicWand:Star Touch:5:15:25
+CreateHero:Assassin:Master Assassin
+Fight:Master Assassin:Atila
+CreateHero:Priest:The Priest
+CreateWeapon:The Priest:MagicWand:Star Touch:5:15:25
+Fight:The Priest:Atila
+Fight:Master Assassin:The Priest
+HeroInfo:The Priest
+CloseArena

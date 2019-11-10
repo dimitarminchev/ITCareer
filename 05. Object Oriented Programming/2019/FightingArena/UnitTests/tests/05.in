@@ -1,0 +1,15 @@
+﻿CreateHero:Warrior:Simo
+CreateHero:Assassin:Gosho
+CreateHero:Priest:Silviya
+CreateHero:Warrior:Dimitar
+CreateWeapon:Silviya:MagicWand:MagicStick:5:5:5
+CreateWeapon:Dimitar:Sword:SomeSword:5:5:5
+Fight:Silviya:Simo
+Fight:Silviya:Simo
+Fight:Silviya:Gosho
+Fight:Silviya:Gosho
+Fight:Dimitar:Simo
+Fight:Dimitar:Simo
+Fight:Dimitar:Gosho
+Fight:Dimitar:Gosho
+CloseArena

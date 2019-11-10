@@ -1,0 +1,15 @@
+﻿CreateHero:Assassin:GodAssassin
+CreateHero:Priest:GodPriest
+CreateHero:Warrior:GodWarrior
+CreateHero:Priest:GodPriest
+CreateWeapon:GodAssassin:Bow:AssassinBow:5:5:5
+HeroInfo:GodAssassin
+CreateWeapon:GodWarrior:Sword:WarriorSword:5:5:5
+CreateWeapon:GodPriest:MagicWand:PriestMagicWand:5:5:5
+HeroInfo:SomeName
+Fight:GodAssassin:GotinAssassin
+Fight:GodAssassin:GodWarrior
+Fight:GodWarrior:GodPriest
+HeroInfo:GodWarrior
+CreateHero:Priest:Pesho
+CloseArena

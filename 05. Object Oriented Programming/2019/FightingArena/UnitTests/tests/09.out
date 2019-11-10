@@ -1,0 +1,51 @@
+﻿Assassin: GodAssassin joined the Arena!
+Priest: GodPriest joined the Arena!
+Warrior: GodWarrior joined the Arena!
+Hero with name: GodPriest already exists!
+Successfully armed hero GodAssassin with weapon Bow!
+Assassin: GodAssassin - Level: 0
+Experience: 0
+Bow: AssassinBow
+  *Strength: 10
+  *Agility: 15
+  *Intelligence: 5
+Power: 60.00
+Successfully armed hero GodWarrior with weapon Sword!
+Successfully armed hero GodPriest with weapon MagicWand!
+Hero with name: SomeName does not exist!
+Hero with name: GotinAssassin does not exist!
+Winner in the battle between GodAssassin and GodWarrior is GodAssassin with 20.00.
+Winner in the battle between GodWarrior and GodPriest is GodPriest with 53.33.
+Warrior: GodWarrior - Level: 0
+Experience: 0
+Sword: WarriorSword
+  *Strength: 20
+  *Agility: 5
+  *Intelligence: 5
+Power: 40.00
+Priest: Pesho joined the Arena!
+Heroes: 4
+Priest: GodPriest - Level: 0
+Experience: 30
+MagicWand: PriestMagicWand
+  *Strength: 5
+  *Agility: 5
+  *Intelligence: 25
+Power: 93.33
+Assassin: GodAssassin - Level: 0
+Experience: 30
+Bow: AssassinBow
+  *Strength: 10
+  *Agility: 15
+  *Intelligence: 5
+Power: 60.00
+Warrior: GodWarrior - Level: 0
+Experience: 0
+Sword: WarriorSword
+  *Strength: 20
+  *Agility: 5
+  *Intelligence: 5
+Power: 40.00
+Priest: Pesho - Level: 0
+Experience: 0
+Power: 0.00

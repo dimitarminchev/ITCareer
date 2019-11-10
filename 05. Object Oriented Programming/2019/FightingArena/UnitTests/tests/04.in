@@ -1,0 +1,6 @@
+﻿HeroInfo:Gosho
+CreateHero:Priest:Pesho
+HeroInfo:Pesho
+CreateWeapon:Pesho:MagicWand:NameOfWeapon:5:5:5
+HeroInfo:Pesho
+CloseArena
