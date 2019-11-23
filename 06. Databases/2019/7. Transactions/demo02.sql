@@ -11,7 +11,7 @@ BEGIN
 	IF(salary >= 30000 AND salary <= 50000) THEN
 		RETURN "Average";	
 	END IF;
-    IF(salary > 50000) THEN
+	IF(salary > 50000) THEN
 		RETURN "High";	
 	END IF;
 END
