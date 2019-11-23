@@ -1,6 +1,6 @@
 DELIMITER $$
 
-CREATE PROCEDURE udf_update_salary()
+CREATE PROCEDURE udp_update_salary()
 BEGIN
   
     -- Transaction
