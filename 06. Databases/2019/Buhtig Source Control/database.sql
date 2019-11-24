@@ -1,8 +1,8 @@
--- PART 0
-CREATE DATABASE `Buhtig`;
-USE `Buhtig`;
-
 -- PART 1
+CREATE DATABASE `buhtig`;
+USE `buhtig`;
+
+-- PART 2
 CREATE TABLE users ( 
 id INT AUTO_INCREMENT primary key,
 username varchar(30) NOT NULL UNIQUE,
@@ -83,7 +83,7 @@ ALTER TABLE files
 ADD CONSTRAINT fk_files_commits foreign key(commit_id)
 references commits(id);
 
--- PART 2
+-- PART 3
 INSERT INTO users (id, username, password, email)
 VALUES
 (1, 'UnderSinduxrein', '4l8nYGTKMW', 'azfex@gmail.com'),
