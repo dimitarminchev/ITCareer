@@ -20,6 +20,7 @@
 - [Въведение в операционни системи и вградени системи](08.%20OS%20and%20Embeded%20OS%20Intro)
 - [Алгоритми и структури от данни](10.%20Algorithms%20and%20Data%20Structures)
 - [Функционално програмиране](11.%20Functional%20Programming)
+- [Интернет програмиране](12.%20Internet%20Programming)
 
 ## Допълнително информация
 Фондация "Софтуерен университет": http://softuni.foundation/projects/applied-software-developer-profession/
