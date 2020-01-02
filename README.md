@@ -24,4 +24,3 @@
 
 ## Допълнително информация
 Фондация "Софтуерен университет": http://softuni.foundation/projects/applied-software-developer-profession/
-
