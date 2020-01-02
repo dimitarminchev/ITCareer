@@ -12,15 +12,17 @@
 ## Учебна програма
 01. Internet and Sockets 
 02. HTTP
-03. HTML
-04. Servers
-05. MVC
-06. Database
-07. Template Language
-08. State Management
-09. Authentication and Authorization
-10. Security
-11. REST API
+03. Introduction to HTML
+04. HTTP Servers Part 1
+05. HTTP Servers Part 2
+06. Introduction to MVC Part 1
+07. Introduction to MVC Part 2
+08. Database
+09. Template Language
+10. State Management
+11. Authentication and Authorization
+12. Security
+13. REST API
 14. Consuming REST API
 15. Deployment
 
