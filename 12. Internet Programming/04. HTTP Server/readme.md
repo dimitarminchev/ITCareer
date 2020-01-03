@@ -381,3 +381,233 @@ Path присвоява стойността, като разделим Url и �
 Този метод извиква ParseQueryParameters() и  ParseFormDataParameters() методите. Това е просто wrapping метод. 
 
 Ако сте имплементирали всички правилно, би трябвало да преобразувате дори и много сложни заявки без проблем.
+
+## 3. MiniServer.WebServer Архитектура
+WebServer проекта ще съдържа информация за класовете, които изграждат връзка с TCP. Тези класове ще комуникират с класовете от HTTP Project. Проекта ще изнася няколко класа, които ще служат за външния свят, за да създаваме приложния.
+
+Създайте следните папки в проекта **MiniServer.WebServer**
+
+![12_04_02.png](12_04_02.png)
+
+### Results папка
+Results папката ще съдържа няколко класа, които са наследени от HttpResponse класа. Тези класове, ще използват за имплементираме прости приложения с MiniServer. Трябва да създадем три класа вътре: TextResult, HtmlResult и RedirectResult.
+
+#### TextResult
+Създаден е така, че да връща текст, като отговор. Трябва да има Content-Type и header  text/plain.
+```
+public class TextResult : HttpResponse
+{
+	public TextResult(string content, HttpResponseStatusCode responseStatusCode, string contentType = "text/plain; charset=utf-8") : base(responseStatusCode)
+	{
+		this.Headers.AddHeader(new HttpHeader(HttpHeader.ContentType, contentType));
+		this.Content = Encoding.UTF8.GetBytes(content);
+	}
+
+	public TextResult(byte[] content, HttpResponseStatusCode responseStatusCode, string contentType = "text/plain; charset=utf-8") : base(responseStatusCode)
+	{
+		this.Content = content;
+		this.Headers.AddHeader(new HttpHeader(HttpHeader.ContentType, contentType);
+	}
+}
+```
+#### HtmlResult
+Създаваме този клас, да връща HTML в себе си. Така чрез този клас, ние можем да върнем HTML или просто съобщение. Трябва да има Content-Type и header  text/html.
+```
+public class HtmlResult : HttpResponse
+{
+	public HtmlResult(string content, HttpResponseStatusCode responseStatusCode) : base(responseStatusCode)
+	{
+		this.Headers.AddHeader(new HttpHeader(HttpHeader.ContentType, "text/html; charset=utf-8"));
+		this.Content = Encoding.UTF8.GetBytes(content);
+	}
+}
+```
+ 
+#### RedirectResult
+Този клас, не трябва да има Content. Единствената задача е да бъде пренасочен. Този Response има локация. Статуса трябва да бъде SeeOther.
+```
+public class RedirectResult : HttpResponse
+{
+	public RedirectResult(string location) : base(HttpResponseStatusCode.SeeOther)
+	{
+		this.Headers.AddHeader(new HttpHeader(HttpHeader.Location, location));  
+	}
+}
+```
+ 
+### Routing папка
+В папката, ще съдържа логиката за рутиране и конфигурация на сървъра. Ще съдържа един интерфейс и един клас: IServerRoutingTable and ServerRoutingTable.
+```
+public interface IServerRoutingTable
+{
+	void Add(HttpRequestMethod method, string path, Func<IHttpRequest, IHttpResponse> func);
+	bool Contains(HttpRequestMethod requestMethod, string path);
+	Func<IHttpRequest, IHttpResponse> Get(HttpRequestMethod requestMethod, string path);
+}
+```
+Този клас съдържа големи колекции от насложени асоциативни масиви, които ще се използват за рутиране.
+```
+public class ServerRoutingTable : IServerRoutingTable
+{
+	private readonly Dictionary<HttpRequestMethod, Dictionary<string, Func<IHttpRequest, IHttpResponse>>> routes;
+
+	public ServerRoutingTable()
+	{
+		this.routes = new Dictionary<HttpRequestMethod, Dictionary<string, Func<IHttpRequest, IHttpResponse>>>
+		{
+			[HttpRequestMethod.Get] = new Dictionary<string, Func<IHttpRequest, IHttpResponse>>(),
+			[HttpRequestMethod.Post] = new Dictionary<string, Func<IHttpRequest, IHttpResponse>>(),
+			[HttpRequestMethod.Put] = new Dictionary<string, Func<IHttpRequest, IHttpResponse>>(),
+			[HttpRequestMethod.Delete] = new Dictionary<string, Func<IHttpRequest, IHttpResponse>>(),
+		};
+	}
+	public void Add(HttpRequestMethod method, string path, Func<IHttpRequest, IHttpResponse> func) ...
+	public bool Contains(HttpRequestMethod requestMethod, string path) ... 
+	public Func<IHttpRequest, IHttpResponse> Get(HttpRequestMethod requestMethod, string path) ...
+}
+```
+Това е главният алгоритъм за Request Handling. Request Handler се конфигурира, като настройва Request Method и Path на заявката. Handler сам по себе си е функция, която приема Request параметър и генерира Response параметър.
+```
+<Method, <Path, Func>>
+```
+Ще видим по-надолу в примерите как работи.
+
+### Server клас
+Server класа е обвивка за TCP connection. Използва TcpListener , за да запише връзката с клиента и да я подаде на ConnectionHandler, която го изпълнява.
+```
+public class Server
+{
+	private const string LocalhostIpAddress = "127.0.0.1";
+	private readonly int port;
+	private readonly TcpListener listener;
+	private readonly IServerRoutingTable serverRoutingTable;
+	private bool isRunning;
+
+	public Server(int port, IServerRoutingTable serverRoutingTable) ...
+	public void Run() ...
+	private async Task Listen(Socket client) ...
+}
+```
+Конструкторът се използва, за да бъде инициализиран Listener и RoutingTable.
+```
+public Server(int port, IServerRoutingTable serverRoutingTable)
+{
+	this.port = port;
+	this.listener = new TcpListener(IPAddress.Parse(LocalhostIpAddress), port);
+	this.serverRoutingTable = serverRoutingTable;
+}
+```
+Този метод се използва за процеса на слушане. Процесът трябва да бъде асинхронен, за да подсигури функционалността, когато двама клиенти изпратят заявка.
+```
+public void Run()
+{
+	this.listener.Start();
+	this.isRunning = true;
+	Console.WriteLine($"Server started at http://{LocalhostIpAddress}:{this.port}");
+	while (this.isRunning)
+	{
+		Console.WriteLine("Waitying for client ...");
+		var client = this.listener.AcceptSocketAsync().GetAwaiter().GetResult();
+		Task.Run(() => this.Listen(client));
+	}
+}
+```
+Listen() метода е главният процес при свързване с клиента.
+```
+private async Task Listen(Socket client)
+{
+	var connectionHandler = new ConnectionHandler(client, this.serverRoutingTable);
+	await connectionHandler.ProcessRequestAsync();
+}
+```
+Както виждате, ние създаваме нов ConnectionHandler, за всяка нова връзка и я подаваме на ConnectionHandler, заедно с routing table, така че заявката да бъде изпълнена.
+
+### ConnectionHandler клас
+ConnectionHandler е клас, който произвежда връзката с клиента. Приема връзката, изважда заявката, като низ и минава процес през routing table, като я изпраща обратно на "Response" в байт формат, чрез TCP link.
+```
+public class ConnectionHandler
+{
+	private readonly Socket client;
+	private readonly IServerRoutingTable serviceRoutingTable;
+	public ConnectionHandler(Socket client, IServerRoutingTable serviceRoutingTable) ...
+	public void ProcessRequest() ...
+	private IHttpRequest ReadRequest() ...
+	private IHttpResponse HandleResponse(IHttpRequest httpRequest) ...
+	private void PrepareResponse(IHttpResponse httpResponse) ...
+}
+```
+Конструктора се използва, за да се инициализира socket и routing table.
+```
+public ConnectionHandler(Socket client, IServerRoutingTable serviceRoutingTable)
+{
+	CoreValidator.ThrowIfNull(client, nameof(client));
+	CoreValidator.ThrowIfNull(serviceRoutingTable, nameof(serviceRoutingTable));
+	this.client = client;
+	this.serviceRoutingTable = serviceRoutingTable;
+}
+```
+ProcessRequestAsync() метода е асинхронен метод, който съдържа главната функционалност на класа. Използва и други методи да чете заявки, да ги обработва и да създава Response, Който да бъде върнат на клиента и най-накрая да затвори връзката.
+```
+
+```
+ReadRequest() метода е асинхронен метод, който чете байт данни, от връзката с клиента, изважда низа от заявката и след това го обръща в HttpRequest обект.
+```
+
+```
+HandleRequest() метода проверява ако routing table има handler за дадената заявка, като използва Request's Method и Path
+- Ако няма такъв handler Not Found отговор е върнат.
+- Ако има такъв handler, функцията е извикана и резултата е върнат.
+```
+
+```
+PrepareResponse() метода изважда байт данни от отговора и ги изпраща на клиента.
+```
+
+```
+Това е финалният вид на нашия ConnectionHandler и WebServer проект. 
+
+## 4. Hello, World!
+Създайте трети проект, който да се казва **MiniServer.Demo**. Той трябва да реферира и двата проекта **MiniServer.HTTP** и **MiniServer.WebServer**.
+
+Създайте следните класове:
+
+### HomeController клас
+HomeController класа трябва да има един метод – Index(), който да изглежда по този начин:
+```
+public class HomeController
+{
+	public IHttpResponse Index(IHttpRequest request)
+	{
+		string content = "<h1>#1 WEB PAGE</h1><p>The Number One Web Page.</p>";
+		return new HtmlResult(content, HttpResponseStatusCode.Ok);
+	}
+}
+```
+
+### Launcher клас
+Launcher класа трябва да съдържа Main метода, който инстанциира Server и го конфигурира да се справя със заявките, като използва ServerRoutingTable.
+
+Конфигурирайте само пътя "/", като използва ламбда функция, която извиква HomeController.Index метода.
+```
+public static void Main(string[] args)
+{
+	IServerRoutingTable serverRoutingTable = new ServerRoutingTable();
+	serverRoutingTable.Add
+	(
+		HttpRequestMethod.Get,
+		path: "/",
+		request => new HomeController().Index(request)
+	);
+	Server server = new Server(port: 8080, serverRoutingTable);
+	server.Run();
+}
+```
+Сега стартирайте MiniServer.Demo проекта и трябва да видите това на конзолата, ако всичко е наред:
+
+![12_04_03.png](12_04_03.png)
+ 
+Отворете браузъра и отидете на localhost:8000 и трябва да видите това:
+ 
+![12_04_04.png](12_04_04.png)
+ 
+Поздравления! Завършихте първото си приложение с MiniServer.
