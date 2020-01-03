@@ -6,7 +6,6 @@ using MiniServer.HTTP.Responses;
 using MiniServer.WebServer.Results;
 using MiniServer.WebServer.Routing;
 using System;
-using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
