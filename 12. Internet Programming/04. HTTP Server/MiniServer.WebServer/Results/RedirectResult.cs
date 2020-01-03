@@ -9,7 +9,6 @@ namespace MiniServer.WebServer.Results
         public RedirectResult(string location) : base(HttpResponseStatusCode.SeeOther)
         {
             this.Headers.AddHeader(new HttpHeader("Location", location));
-            // this.Headers.AddHeader(new HttpHeader(HttpHeader.Location, location));  
         }
     }
 }

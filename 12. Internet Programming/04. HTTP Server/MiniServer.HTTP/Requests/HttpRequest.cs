@@ -36,15 +36,11 @@ namespace MiniServer.HTTP.Requests
 
         private bool IsValidRequestLine(string[] requestLine)
         {
-            if (requestLine.Length == 3)
+            if (requestLine.Length == 3 && requestLine[2] == GlobalConstants.HttpOneProtocolFragment)
             {
-                if (requestLine[2] == GlobalConstants.HttpOneProtocolFragment)
-                {
-                    return true;
-                }
-                return false;
+                return true;
             }
-            return false;
+            else return false;
         }
 
         private bool isValidRequestQueryString(string queryString, string[] queryParameters)
@@ -53,12 +49,12 @@ namespace MiniServer.HTTP.Requests
             {
                 return true;
             }
-            return false;
+            else return false;
         }
 
         private void ParseRequestMethod(string[] requestLine)
         {
-            string methodString = StringExtensions.Capitalize(requestLine[0]);
+            String methodString = StringExtensions.Capitalize(requestLine[0]);
             HttpRequestMethod method;
             if (Enum.TryParse(methodString, true, out method))
             {
@@ -74,7 +70,7 @@ namespace MiniServer.HTTP.Requests
 
         private void ParseRequestPath()
         {
-            this.Path = this.Url.Substring(0, this.Url.IndexOf('?') + 1);
+            this.Path = this.Url.Split(new[] { '?', '#' }, StringSplitOptions.RemoveEmptyEntries)[0];
         }
 
         private void ParseHeaders(string[] requestContent)
@@ -99,7 +95,7 @@ namespace MiniServer.HTTP.Requests
 
         private void ParseCookies()
         {
-
+            throw new NotImplementedException();
         }
 
         private void ParseQueryParameters()
@@ -114,8 +110,7 @@ namespace MiniServer.HTTP.Requests
             if (indexOfAnchor == -1) indexOfAnchor = this.Url.Length - 1;
 
             string queryString = this.Url.Substring(indexOfQuestionMark, indexOfAnchor - indexOfQuestionMark + 1);
-            string[] queryParameters = queryString
-                .Split(new char[] { '&', '#', '?' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
+            string[] queryParameters = queryString.Split(new char[] { '&', '#', '?' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
 
             if (!isValidRequestQueryString(queryString, queryParameters))
             {
@@ -166,7 +161,7 @@ namespace MiniServer.HTTP.Requests
             this.ParseRequestPath();
 
             this.ParseHeaders(splitRequestContent.Skip(1).ToArray());
-            this.ParseCookies();
+            // this.ParseCookies();
 
             this.ParseRequestParameters(splitRequestContent[splitRequestContent.Length - 1]);
         }

@@ -26,16 +26,15 @@ namespace MiniServer.WebServer
             this.serverRoutingTable = serverRoutingTable;
         }
 
-        public async Task ProcessRequestAsync()
+        public async Task ProcessRequest()
         {
             try
             {
-                var httpRequest = this.ReadRequest();
-
+                var httpRequest = await this.ReadRequest();
                 if (httpRequest != null)
                 {
-                    Console.WriteLine($"Processing: {httpRequest.Result.RequestMethod} {httpRequest.Result.Path}");
-                    var httpResponse = this.HandleRequest(httpRequest.Result);
+                    Console.WriteLine($"Processing: {httpRequest.RequestMethod} {httpRequest.Path}");
+                    var httpResponse = this.HandleRequest(httpRequest);
                     await this.PrepareResponse(httpResponse);
                 }
             }
@@ -58,24 +57,15 @@ namespace MiniServer.WebServer
             {
                 int numberOfBytesRead = await this.client.ReceiveAsync(data.Array, SocketFlags.None);
 
-                if (numberOfBytesRead == 0)
-                {
-                    break;
-                }
+                if (numberOfBytesRead == 0) break;   
 
                 var bytesAsString = Encoding.UTF8.GetString(data.Array, 0, numberOfBytesRead);
                 result.Append(bytesAsString);
 
-                if (numberOfBytesRead < 1023)
-                {
-                    break;
-                }
+                if (numberOfBytesRead < 1023) break;
             }
 
-            if (result.Length == 0)
-            {
-                return null;
-            }
+            if (result.Length == 0) return null;
 
             return new HttpRequest(result.ToString());
         }

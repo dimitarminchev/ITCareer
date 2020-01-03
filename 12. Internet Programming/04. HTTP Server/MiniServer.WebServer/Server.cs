@@ -20,6 +20,7 @@ namespace MiniServer.WebServer
             this.listener = new TcpListener(IPAddress.Parse(LocalhostIpAddress), port);
             this.serverRoutingTable = serverRoutingTable;
         }
+
         public void Run()
         {
             this.listener.Start();
@@ -36,7 +37,7 @@ namespace MiniServer.WebServer
         private async Task Listen(Socket client)
         {
             var connectionHandler = new ConnectionHandler(client, this.serverRoutingTable);
-            await connectionHandler.ProcessRequestAsync();
+            await connectionHandler.ProcessRequest();
         }
     }
 }
