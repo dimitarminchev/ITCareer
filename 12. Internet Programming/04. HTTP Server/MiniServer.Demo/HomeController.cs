@@ -1,7 +1,7 @@
-﻿using MiniHTTP.HTTP.Enums;
-using MiniHTTP.HTTP.Requests;
-using MiniHTTP.HTTP.Responses;
-using MiniHTTP.WebServer.Results;
+﻿using MiniServer.HTTP.Enums;
+using MiniServer.HTTP.Requests;
+using MiniServer.HTTP.Responses;
+using MiniServer.WebServer.Results;
 
 namespace MiniServer.Demo
 {

@@ -3,8 +3,8 @@
 
 ## 1. Архитектура
 Първо нека да създадем архитектурата на нашият проект. Създайте нов Solution и го кръстете MiniServer. Добавете два проекта към него:
-- **MiniHTTP.HTTP**
-- **MiniHTTP.WebServer**
+- **MiniServer.HTTP**
+- **MiniServer.WebServer**
 
 ## 2. MiniServer.HTTP Архитектура
 HTTP проекта ще съдържа всички класове (и техните интерфейси), които ще бъда изпозлвани да имплементираме HTTP  комуникацията с TCP Link между клиента и нашият сървър. Можем да работим само с низове и байт масиви, но ще следваме добрите практики и ще го направим кода да бъде лесно четим и преизползваем.
@@ -548,21 +548,77 @@ public ConnectionHandler(Socket client, IServerRoutingTable serviceRoutingTable)
 ```
 ProcessRequestAsync() метода е асинхронен метод, който съдържа главната функционалност на класа. Използва и други методи да чете заявки, да ги обработва и да създава Response, Който да бъде върнат на клиента и най-накрая да затвори връзката.
 ```
+public async Task ProcessRequestAsync()
+{
+	try
+	{
+		var httpRequest = this.ReadRequest();
 
+		if (httpRequest != null)
+		{
+			Console.WriteLine($"Processing: {httpRequest.Result.RequestMethod} {httpRequest.Result.Path}");
+			var httpResponse = this.HandleRequest(httpRequest.Result);
+			await this.PrepareResponse(httpResponse);
+		}
+	}
+	catch (BadRequestException e)
+	{
+		await this.PrepareResponse(new TextResult(e.ToString(), HttpResponseStatusCode.BadRequest));
+	}
+	catch (Exception e)
+	{
+		await this.PrepareResponse(new TextResult(e.ToString(), HttpResponseStatusCode.InternalServerError));
+	}
+}
 ```
 ReadRequest() метода е асинхронен метод, който чете байт данни, от връзката с клиента, изважда низа от заявката и след това го обръща в HttpRequest обект.
 ```
+private async Task<IHttpRequest> ReadRequest()
+{
+	var result = new StringBuilder();
+	var data = new ArraySegment<byte>(new byte[1024]);
+	while (true)
+	{
+		int numberOfBytesRead = await this.client.ReceiveAsync(data.Array, SocketFlags.None);
 
+		if (numberOfBytesRead == 0)
+		{
+			break;
+		}
+		var bytesAsString = Encoding.UTF8.GetString(data.Array, 0, numberOfBytesRead);
+		result.Append(bytesAsString);
+		if (numberOfBytesRead < 1023)
+		{
+			break;
+		}
+	}
+	if (result.Length == 0)
+	{
+		return null;
+	}
+	return new HttpRequest(result.ToString());
+}
 ```
 HandleRequest() метода проверява ако routing table има handler за дадената заявка, като използва Request's Method и Path
 - Ако няма такъв handler Not Found отговор е върнат.
 - Ако има такъв handler, функцията е извикана и резултата е върнат.
 ```
-
+private IHttpResponse HandleRequest(IHttpRequest httpRequest)
+{
+	if (!this.serverRoutingTable.Contains(httpRequest.RequestMethod, httpRequest.Path))
+	{
+		return new TextResult($"Route with method {httpRequest.RequestMethod} and path \"{httpRequest.Path}\" not found.", HttpResponseStatusCode.NotFound);
+	}
+	return this.serverRoutingTable.Get(httpRequest.RequestMethod, httpRequest.Path).Invoke(httpRequest);
+}
 ```
 PrepareResponse() метода изважда байт данни от отговора и ги изпраща на клиента.
 ```
-
+private async Task PrepareResponse(IHttpResponse httpResponse)
+{
+	byte[] byteSegments = httpResponse.GetBytes();
+	await this.client.SendAsync(byteSegments, SocketFlags.None);
+}
 ```
 Това е финалният вид на нашия ConnectionHandler и WebServer проект. 
 

@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MiniServer.HTTP\MiniServer.HTTP.csproj" />
-    <ProjectReference Include="..\MiniServer.WebServer\MiniServer.WebServer.csproj" />
   </ItemGroup>
 
 </Project>

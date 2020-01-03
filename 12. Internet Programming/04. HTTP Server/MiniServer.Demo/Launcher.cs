@@ -1,6 +1,6 @@
-﻿using MiniHTTP.HTTP.Enums;
-using MiniHTTP.WebServer;
-using MiniHTTP.WebServer.Routing;
+﻿using MiniServer.HTTP.Enums;
+using MiniServer.WebServer;
+using MiniServer.WebServer.Routing;
 using System;
 
 namespace MiniServer.Demo
