@@ -2,7 +2,13 @@ body
 {
 	background: lightgray;
 	margin: 0px;
-	padding: 20px;
+	padding: 0px;
+}
+
+img {
+	padding: 5px;
+	float: left;
+	width: 125px;
 }
 
 header 
@@ -11,19 +17,32 @@ header
 	padding: 20px;
 }
 
-section 
+nav 
 {
-	float: right;
+	position: fixed;
+	right: 0px;
 	background: gray;
 	color: white;
 	margin: 0px;
+	padding: 40px;
+	height: 100%;
+}
+
+section 
+{
+	margin: 40px;
 	padding: 20px;
 }
 
+
 footer 
 {
-	background: black;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: black;
 	color: white;
-	margin: 0px;
 	padding: 20px;
+	text-align: center;
 }
