@@ -13,8 +13,12 @@ namespace IRunes.App
         {
             ServerRoutingTable serverRoutingTable = new ServerRoutingTable();
 
-            serverRoutingTable.Add(HttpRequestMethod.Get, "/", request => new RedirectResult("/Home/Index"));
+            serverRoutingTable.Add(HttpRequestMethod.Get, "/", request => new RedirectResult("/Home/Test"));
+            serverRoutingTable.Add(HttpRequestMethod.Get, "/Home/Test", request => new HomeController().Test(request));
             serverRoutingTable.Add(HttpRequestMethod.Get, "/Home/Index", request => new HomeController().Index(request));
+
+            serverRoutingTable.Add(HttpRequestMethod.Get, "/Albums/All", request => new AlbumsController().Index(request));
+            serverRoutingTable.Add(HttpRequestMethod.Get, "/Albums/Details", request => new AlbumsController().Details(request));
             serverRoutingTable.Add(HttpRequestMethod.Get, "/Albums/Create", request => new AlbumsController().Create(request));
             serverRoutingTable.Add(HttpRequestMethod.Post, "/Albums/Create", request => new AlbumsController().CreateConfirm(request));
 

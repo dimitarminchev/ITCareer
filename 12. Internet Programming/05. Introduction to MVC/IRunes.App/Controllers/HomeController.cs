@@ -12,5 +12,10 @@ namespace IRunes.App.Controllers
         {
             return View("Index");
         }
+
+        public IHttpResponse Test(IHttpRequest httpRequest)
+        {
+            return View("Test");
+        }
     }
 }

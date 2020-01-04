@@ -53,6 +53,7 @@ namespace MiniServer.WebServer
 
         private void PrepareResponse(IHttpResponse httpResponse)
         {
+            if (httpResponse == null) return;
             byte[] byteSegments = httpResponse.GetBytes();
             this.client.Send(byteSegments, SocketFlags.None);
         }
