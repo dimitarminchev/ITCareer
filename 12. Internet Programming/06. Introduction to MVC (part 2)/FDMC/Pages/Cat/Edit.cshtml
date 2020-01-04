@@ -1,0 +1,50 @@
+﻿@page
+@model FDMC.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Cat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Cat.Id" />
+            <div class="form-group">
+                <label asp-for="Cat.Name" class="control-label"></label>
+                <input asp-for="Cat.Name" class="form-control" />
+                <span asp-validation-for="Cat.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cat.Age" class="control-label"></label>
+                <input asp-for="Cat.Age" class="form-control" />
+                <span asp-validation-for="Cat.Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cat.Breed" class="control-label"></label>
+                <input asp-for="Cat.Breed" class="form-control" />
+                <span asp-validation-for="Cat.Breed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cat.ImageUrl" class="control-label"></label>
+                <input asp-for="Cat.ImageUrl" class="form-control" />
+                <span asp-validation-for="Cat.ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

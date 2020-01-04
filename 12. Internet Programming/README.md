@@ -14,15 +14,16 @@
 02. HTTP
 03. Introduction to HTML
 04. HTTP Server
-05. Introduction to MVC
-06. Database
-07. Template Language
-08. State Management
-09. Authentication and Authorization
-10. Security
-11. REST API
-12. Consuming REST API
-13. Deployment
+05. Introduction to MVC (part 1)
+06. Introduction to MVC (part 2)
+07. Database
+08. Template Language
+09. State Management
+10. Authentication and Authorization
+11. Security
+12. REST API
+13. Consuming REST API
+14. Deployment
 
 ## Обучаеми 2020
 ![group_2020.jpg](group_2020.jpg)
