@@ -1,0 +1,21 @@
+﻿<hr class="bg-success" style="height: 2px" />
+<main>
+    <h1 class="text-success text-center">Create Album</h1>
+    <hr class="bg-success w-50" style="height: 2px" />
+    <form action="/Albums/Create" class="w-50 mx-auto" method="POST">
+        @Widgets.ValidationWidget
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name..." />
+        </div>
+        <div class="form-group">
+            <label for="cover">Cover</label>
+            <input type="text" class="form-control" id="cover" name="cover" placeholder="Cover..." />
+        </div>
+        <hr class="bg-success" style="height: 2px" />
+        <div class="d-flex justify-content-around mt-4">
+            <button type="submit" class="btn bg-success text-white">Create</button>
+            <a href="/Albums/All" class="btn bg-success text-white">Back To All</a>
+        </div>
+    </form>
+</main>

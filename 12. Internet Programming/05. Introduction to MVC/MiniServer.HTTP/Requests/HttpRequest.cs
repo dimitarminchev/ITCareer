@@ -191,6 +191,7 @@ namespace MiniServer.HTTP.Requests
             this.ParseRequestPath();
 
             this.ParseHeaders(this.ParsePlainRequestHeaders(splitRequestContent).ToArray());
+            //this.ParseHeaders(splitRequestContent.Skip(1).ToArray());
             // this.ParseCookies();
 
             this.ParseRequestParameters(splitRequestContent[splitRequestContent.Length - 1]);

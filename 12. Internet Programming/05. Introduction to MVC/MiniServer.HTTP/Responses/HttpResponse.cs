@@ -34,7 +34,7 @@ namespace MiniServer.HTTP.Responses
 
         public byte[] GetBytes()
         {
-            var Header = Encoding.UTF8.GetBytes(this.ToString());
+            var Header = Encoding.UTF8.GetBytes(ToString());
             byte[] Response = new byte[Header.Length + Content.Length];
             Array.Copy(Header, 0, Response, 0, Header.Length);
             Array.Copy(Content, 0, Response, Header.Length, Content.Length);
