@@ -5,24 +5,24 @@ namespace IRunes.App.Controllers
 {
     public class AlbumsController : BaseController
     {
-        public IHttpResponse Index(IHttpRequest httpRequest)
+        public IHttpResponse All(IHttpRequest httpRequest)
         {
-            return View("All");
+            return this.View();
         }
 
         public IHttpResponse Details(IHttpRequest httpRequest)
         {
-            return View("Details");
+            return this.View();
         }
 
         public IHttpResponse Create(IHttpRequest httpRequest)
         {
-            return base.View("Create");
+            return this.View();
         }
 
         public IHttpResponse CreateConfirm(IHttpRequest httpRequest)
         {
-            return base.View("Create");
+            return this.View();
         }
     }
 }

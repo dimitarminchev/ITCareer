@@ -10,12 +10,12 @@ namespace IRunes.App.Controllers
     {
         public IHttpResponse Index(IHttpRequest httpRequest)
         {
-            return View("Index");
+            return this.View();
         }
 
         public IHttpResponse Test(IHttpRequest httpRequest)
         {
-            return View("Test");
+            return this.View();
         }
     }
 }
