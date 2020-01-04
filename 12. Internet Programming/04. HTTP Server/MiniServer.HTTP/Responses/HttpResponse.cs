@@ -32,24 +32,45 @@ namespace MiniServer.HTTP.Responses
             this.Headers.AddHeader(header);
         }
 
+        //public byte[] GetBytes()
+        //{
+        //    var Header = Encoding.UTF8.GetBytes(ToString());
+        //    byte[] Response = new byte[Header.Length + Content.Length];
+        //    Array.Copy(Header, 0, Response, 0, Header.Length);
+        //    Array.Copy(Content, 0, Response, Header.Length, Content.Length);
+        //    return Response;
+        //}
+
         public byte[] GetBytes()
         {
-            var Header = Encoding.UTF8.GetBytes(ToString());
-            byte[] Response = new byte[Header.Length + Content.Length];
-            Array.Copy(Header, 0, Response, 0, Header.Length);
-            Array.Copy(Content, 0, Response, Header.Length, Content.Length);
-            return Response;
+            byte[] httpResponseBytesWithoutBody = Encoding.UTF8.GetBytes(this.ToString());
+
+            byte[] httpResponseBytesWithBody = new byte[httpResponseBytesWithoutBody.Length + this.Content.Length];
+
+            for (int i = 0; i < httpResponseBytesWithoutBody.Length; i++)
+            {
+                httpResponseBytesWithBody[i] = httpResponseBytesWithoutBody[i];
+            }
+
+            for (int i = 0; i < httpResponseBytesWithBody.Length - httpResponseBytesWithoutBody.Length; i++)
+            {
+                httpResponseBytesWithBody[i + httpResponseBytesWithoutBody.Length] = this.Content[i];
+            }
+
+            return httpResponseBytesWithBody;
         }
 
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();
+
             result
-            .Append($"{GlobalConstants.HttpOneProtocolFragment} {(int)this.StatusCode} {this.StatusCode.ToString()}")
-            .Append(GlobalConstants.HttpNewLine)
-            .Append(this.Headers)
-            .Append(GlobalConstants.HttpNewLine)
-            .Append(GlobalConstants.HttpNewLine);
+                .Append($"{GlobalConstants.HttpOneProtocolFragment} {(int)this.StatusCode} {this.StatusCode.ToString()}")
+                .Append(GlobalConstants.HttpNewLine)
+                .Append($"{this.Headers}").Append(GlobalConstants.HttpNewLine);
+
+            result.Append(GlobalConstants.HttpNewLine);
+
             return result.ToString();
         }
     }

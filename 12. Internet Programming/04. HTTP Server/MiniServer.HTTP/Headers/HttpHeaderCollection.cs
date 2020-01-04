@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniServer.HTTP.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,22 +18,22 @@ namespace MiniServer.HTTP.Headers
 
         public void AddHeader(HttpHeader header)
         {
+            CoreValidator.ThrowIfNull(header, nameof(header));
             headers.Add(header.Key, header);
         }
 
         public bool ContainsHeader(string key)
         {
+            CoreValidator.ThrowIfNullOrEmpty(key, nameof(key));
             return headers.ContainsKey(key);
         }
 
         public HttpHeader GetHeader(string key)
         {
+            CoreValidator.ThrowIfNullOrEmpty(key, nameof(key));
             return headers[key];
         }
 
-        public override string ToString()
-        {
-            return string.Join(Environment.NewLine, headers);
-        }
+        public override string ToString() => string.Join(Environment.NewLine,  this.headers.Values.Select(header => header.ToString()));
     }
 }

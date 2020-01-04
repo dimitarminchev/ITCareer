@@ -1,4 +1,5 @@
-﻿using MiniServer.WebServer.Routing;
+﻿using MiniServer.HTTP.Common;
+using MiniServer.WebServer.Routing;
 using System;
 using System.Net;
 using System.Net.Sockets;
@@ -16,9 +17,16 @@ namespace MiniServer.WebServer
 
         public Server(int port, IServerRoutingTable serverRoutingTable)
         {
+            CoreValidator.ThrowIfNull(serverRoutingTable, nameof(serverRoutingTable));
             this.port = port;
-            this.listener = new TcpListener(IPAddress.Parse(LocalhostIpAddress), port);
             this.serverRoutingTable = serverRoutingTable;
+            this.listener = new TcpListener(IPAddress.Parse(LocalhostIpAddress), port);
+        }
+
+        private void Listen(Socket client)
+        {
+            var connectionHandler = new ConnectionHandler(client, this.serverRoutingTable);
+            connectionHandler.ProcessRequest();
         }
 
         public void Run()
@@ -28,16 +36,10 @@ namespace MiniServer.WebServer
             Console.WriteLine($"Server started at http://{LocalhostIpAddress}:{this.port}");
             while (this.isRunning)
             {
-                Console.WriteLine("Waitying for client ...");
-                var client = this.listener.AcceptSocketAsync().GetAwaiter().GetResult();
-                Task.Run(() => this.Listen(client));
+                Console.WriteLine("Waiting for client...");
+                var client = this.listener.AcceptSocket();
+                this.Listen(client);
             }
-        }
-
-        private async Task Listen(Socket client)
-        {
-            var connectionHandler = new ConnectionHandler(client, this.serverRoutingTable);
-            await connectionHandler.ProcessRequest();
         }
     }
 }

@@ -1,0 +1,29 @@
+body 
+{
+	background: lightgray;
+	margin: 0px;
+	padding: 20px;
+}
+
+header 
+{
+	background: white;
+	padding: 20px;
+}
+
+section 
+{
+	float: right;
+	background: gray;
+	color: white;
+	margin: 0px;
+	padding: 20px;
+}
+
+footer 
+{
+	background: black;
+	color: white;
+	margin: 0px;
+	padding: 20px;
+}

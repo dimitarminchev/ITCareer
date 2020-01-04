@@ -1,4 +1,5 @@
-﻿using MiniServer.HTTP.Enums;
+﻿using MiniServer.HTTP.Common;
+using MiniServer.HTTP.Enums;
 using MiniServer.HTTP.Requests;
 using MiniServer.HTTP.Responses;
 using System;
@@ -9,11 +10,10 @@ namespace MiniServer.WebServer.Routing
 {
     public class ServerRoutingTable : IServerRoutingTable
     {
-        private readonly Dictionary<HttpRequestMethod, Dictionary<string, Func<IHttpRequest, IHttpResponse>>> routes;
-
+        private Dictionary<HttpRequestMethod, Dictionary<string, Func<IHttpRequest, IHttpResponse>>> routingTable;
         public ServerRoutingTable()
         {
-            this.routes = new Dictionary<HttpRequestMethod, Dictionary<string, Func<IHttpRequest, IHttpResponse>>>
+            this.routingTable = new Dictionary<HttpRequestMethod, Dictionary<string, Func<IHttpRequest, IHttpResponse>>>
             {
                 [HttpRequestMethod.Get] = new Dictionary<string, Func<IHttpRequest, IHttpResponse>>(),
                 [HttpRequestMethod.Post] = new Dictionary<string, Func<IHttpRequest, IHttpResponse>>(),
@@ -21,23 +21,30 @@ namespace MiniServer.WebServer.Routing
                 [HttpRequestMethod.Delete] = new Dictionary<string, Func<IHttpRequest, IHttpResponse>>()
             };
         }
+
         public void Add(HttpRequestMethod method, string path, Func<IHttpRequest, IHttpResponse> func)
         {
-            routes[method].Add(path, func);
+            CoreValidator.ThrowIfNull(method, nameof(method));
+            CoreValidator.ThrowIfNullOrEmpty(path, nameof(path));
+            CoreValidator.ThrowIfNull(func, nameof(func));
+
+            this.routingTable[method].Add(path, func);
         }
 
-        public bool Contains(HttpRequestMethod requestMethod, string path)
+        public bool Contains(HttpRequestMethod method, string path)
         {
-            return routes[requestMethod].ContainsKey(path);
+            CoreValidator.ThrowIfNull(method, nameof(method));
+            CoreValidator.ThrowIfNullOrEmpty(path, nameof(path));
+
+            return this.routingTable.ContainsKey(method) && this.routingTable[method].ContainsKey(path);
         }
 
-        public Func<IHttpRequest, IHttpResponse> Get(HttpRequestMethod requestMethod, string path)
+        public Func<IHttpRequest, IHttpResponse> Get(HttpRequestMethod method, string path)
         {
-            if (routes[requestMethod].ContainsKey(path))
-            {
-                return routes[requestMethod][path];
-            }
-            return null;
+            CoreValidator.ThrowIfNull(method, nameof(method));
+            CoreValidator.ThrowIfNullOrEmpty(path, nameof(path));
+
+            return this.routingTable[method][path];
         }
     }
 }

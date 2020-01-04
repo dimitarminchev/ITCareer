@@ -23,15 +23,10 @@ namespace MiniServer.HTTP.Requests
         }
 
         public string Path { get; private set; }
-
         public string Url { get; private set; }
-
         public Dictionary<string, object> FormData { get; }
-
         public Dictionary<string, object> QueryData { get; }
-
         public IHttpHeaderCollection Headers { get; }
-
         public HttpRequestMethod RequestMethod { get; private set; }
 
         private bool IsValidRequestLine(string[] requestLine)
@@ -43,24 +38,28 @@ namespace MiniServer.HTTP.Requests
             else return false;
         }
 
-        private bool isValidRequestQueryString(string queryString, string[] queryParameters)
+        private bool IsValidRequestQueryString(string queryString, string[] queryParameters)
         {
-            if (!string.IsNullOrEmpty(queryString) && queryParameters.Length >= 1)
-            {
-                return true;
-            }
-            else return false;
+            //if (!string.IsNullOrEmpty(queryString) && queryParameters.Length >= 1)
+            //{
+            //    return true;
+            //}
+            //else return false;
+
+            CoreValidator.ThrowIfNullOrEmpty(queryString, nameof(queryString));
+            return true; 
         }
 
         private void ParseRequestMethod(string[] requestLine)
         {
-            String methodString = StringExtensions.Capitalize(requestLine[0]);
-            HttpRequestMethod method;
-            if (Enum.TryParse(methodString, true, out method))
+            bool parseResult = HttpRequestMethod.TryParse(requestLine[0], true, out HttpRequestMethod method);
+
+            if (!parseResult)
             {
-                this.RequestMethod = method;
+                throw new BadRequestException($"Unsupported Method: {requestLine[0]}");
             }
-            else throw new BadRequestException();
+
+            this.RequestMethod = method;
         }
 
         private void ParseRequestUrl(string[] requestLine)
@@ -70,27 +69,30 @@ namespace MiniServer.HTTP.Requests
 
         private void ParseRequestPath()
         {
-            this.Path = this.Url.Split(new[] { '?', '#' }, StringSplitOptions.RemoveEmptyEntries)[0];
+            // this.Path = this.Url.Split(new[] { '?', '#' }, StringSplitOptions.RemoveEmptyEntries)[0];
+            this.Path = this.Url.Split('?')[0];
         }
 
         private void ParseHeaders(string[] requestContent)
         {
-            for (int i = 0; i < requestContent.Length; i++)
-            {
-                if (string.IsNullOrEmpty(requestContent[i].Trim()))
-                {
-                    break;
-                }
-                string[] keyValueArr = requestContent[i].Split(new char[] { ':' });
+            //for (int i = 0; i < requestContent.Length; i++)
+            //{
+            //    if (string.IsNullOrEmpty(requestContent[i].Trim()))
+            //    {
+            //        break;
+            //    }
+            //    string[] keyValueArr = requestContent[i].Split(new char[] { ':' });
 
-                HttpHeader headerToAdd = new HttpHeader(keyValueArr[0], keyValueArr[1].Trim());
-                this.Headers.AddHeader(headerToAdd);
-            }
+            //    HttpHeader headerToAdd = new HttpHeader(keyValueArr[0], keyValueArr[1].Trim());
+            //    this.Headers.AddHeader(headerToAdd);
+            //}
 
-            if (!Headers.ContainsHeader("Host"))
-            {
-                throw new BadRequestException();
-            }
+            //if (!Headers.ContainsHeader("Host"))
+            //{
+            //    throw new BadRequestException();
+            //}
+
+            requestContent.Select(plainHeader => plainHeader.Split(new[] { ':', ' ' }, StringSplitOptions.RemoveEmptyEntries)).ToList().ForEach(headerKeyValuePair => this.Headers.AddHeader(new HttpHeader(headerKeyValuePair[0], headerKeyValuePair[1])));
         }
 
         private void ParseCookies()
@@ -100,42 +102,59 @@ namespace MiniServer.HTTP.Requests
 
         private void ParseQueryParameters()
         {
-            int indexOfQuestionMark = this.Url.IndexOf('?');
-            if (indexOfQuestionMark == -1)
-            {
-                return;
-            }
+            //int indexOfQuestionMark = this.Url.IndexOf('?');
+            //if (indexOfQuestionMark == -1)
+            //{
+            //    return;
+            //}
 
-            int indexOfAnchor = this.Url.IndexOf('#');
-            if (indexOfAnchor == -1) indexOfAnchor = this.Url.Length - 1;
+            //int indexOfAnchor = this.Url.IndexOf('#');
+            //if (indexOfAnchor == -1) indexOfAnchor = this.Url.Length - 1;
 
-            string queryString = this.Url.Substring(indexOfQuestionMark, indexOfAnchor - indexOfQuestionMark + 1);
-            string[] queryParameters = queryString.Split(new char[] { '&', '#', '?' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
+            //string queryString = this.Url.Substring(indexOfQuestionMark, indexOfAnchor - indexOfQuestionMark + 1);
+            //string[] queryParameters = queryString.Split(new char[] { '&', '#', '?' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
 
-            if (!isValidRequestQueryString(queryString, queryParameters))
-            {
-                throw new BadRequestException();
-            }
+            //if (!IsValidRequestQueryString(queryString, queryParameters))
+            //{
+            //    throw new BadRequestException();
+            //}
 
-            for (int i = 0; i < queryParameters.Length; i++)
-            {
-                string[] keyValueArr = queryParameters[i].Split('=').ToArray();
-                QueryData.Add(keyValueArr[0], keyValueArr[1]);
-            }
+            //for (int i = 0; i < queryParameters.Length; i++)
+            //{
+            //    string[] keyValueArr = queryParameters[i].Split('=').ToArray();
+            //    QueryData.Add(keyValueArr[0], keyValueArr[1]);
+            //}
+
+            if (!(this.Url.Split('?').Length > 1)) return;
+            this.Url.Split('?', '#')[1].Split('&').Select(plainQueryParameter => plainQueryParameter.Split('=')).ToList().ForEach
+            (
+                queryParameterKeyValuePair => this.QueryData.Add(queryParameterKeyValuePair[0], queryParameterKeyValuePair[1])
+            );
         }
 
         private void ParseFormDataParameters(string formData)
         {
-            formData.Trim();
-            if (!string.IsNullOrEmpty(formData))
+            //formData.Trim();
+            //if (!string.IsNullOrEmpty(formData))
+            //{
+            //    string[] pairs = formData.Split('&').ToArray();
+            //    for (int i = 0; i < pairs.Length; i++)
+            //    {
+            //        string currentPair = pairs[i];
+            //        string[] pairArray = currentPair.Split('=').ToArray();
+            //        this.FormData.Add(pairArray[0], pairArray[1]);
+            //    }
+            //}
+
+            if(!string.IsNullOrEmpty(formData))
             {
-                string[] pairs = formData.Split('&').ToArray();
-                for (int i = 0; i < pairs.Length; i++)
-                {
-                    string currentPair = pairs[i];
-                    string[] pairArray = currentPair.Split('=').ToArray();
-                    this.FormData.Add(pairArray[0], pairArray[1]);
-                }
+                // TODO: Parse Multiple Parameters By Name
+                formData
+                    .Split('&')
+                    .Select(plainQueryParameter => plainQueryParameter.Split('='))
+                    .ToList()
+                    .ForEach(queryParameterKeyValuePair =>
+                        this.FormData.Add(queryParameterKeyValuePair[0], queryParameterKeyValuePair[1]));
             }
         }
 
@@ -145,11 +164,22 @@ namespace MiniServer.HTTP.Requests
             ParseFormDataParameters(formData);
         }
 
+        private IEnumerable<string> ParsePlainRequestHeaders(string[] requestLines)
+        {
+            for (int i = 1; i < requestLines.Length - 1; i++)
+            {
+                if (!string.IsNullOrEmpty(requestLines[i]))
+                {
+                    yield return requestLines[i];
+                }
+            }
+        }
+
         private void ParseRequest(string requestString)
         {
             string[] splitRequestContent = requestString.Split(new[] { GlobalConstants.HttpNewLine }, StringSplitOptions.None);
 
-            string[] requestLine = splitRequestContent[0].Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] requestLine = splitRequestContent[0].Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
             if (!this.IsValidRequestLine(requestLine))
             {
@@ -160,7 +190,8 @@ namespace MiniServer.HTTP.Requests
             this.ParseRequestUrl(requestLine);
             this.ParseRequestPath();
 
-            this.ParseHeaders(splitRequestContent.Skip(1).ToArray());
+            this.ParseHeaders(this.ParsePlainRequestHeaders(splitRequestContent).ToArray());
+            //this.ParseHeaders(splitRequestContent.Skip(1).ToArray());
             // this.ParseCookies();
 
             this.ParseRequestParameters(splitRequestContent[splitRequestContent.Length - 1]);
