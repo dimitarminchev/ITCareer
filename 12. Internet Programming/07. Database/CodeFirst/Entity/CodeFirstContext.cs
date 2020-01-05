@@ -4,6 +4,16 @@ namespace CodeFirst.Entity
 {
     public class CodeFirstContext : DbContext
     {
+        // Constructors
+        public CodeFirstContext()
+        {
+            ;;
+        }
+        public CodeFirstContext(DbContextOptions<CodeFirstContext> options) : base(options)
+        {
+            ;;
+        }
+
         // Tables
         public virtual DbSet<Author> Authors { get; set; }
         public virtual DbSet<Biography> Biographies { get; set; }
