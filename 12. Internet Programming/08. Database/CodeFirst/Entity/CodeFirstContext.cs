@@ -42,7 +42,7 @@ namespace CodeFirst.Entity
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
-            optionBuilder.UseSqlServer(@"Data Sourse=(localdb)\\mssqllocaldb;Database=CodeFirstDb;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=CodeFirstDb;Trusted_Connection=True");
             optionBuilder.UseLazyLoadingProxies();
         }
     }

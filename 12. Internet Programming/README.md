@@ -27,7 +27,6 @@
 
 ## Ресурси
 - [C# Web Basics - май 2019](https://softuni.bg/trainings/2355/csharp-web-basics-may-2019)
-
 - [ASP.NET Core MVC - юни 2019](https://softuni.bg/trainings/2419/asp-net-core-mvc-june-2019)
 
 ## Обучаеми 2020
