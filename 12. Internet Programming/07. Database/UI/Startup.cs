@@ -10,12 +10,12 @@ namespace UI
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -42,6 +42,20 @@ namespace UI
             {
                 endpoints.MapRazorPages();
             });
+
+            UpdateDatabase(app);
+        }
+
+        // Ensure the database is created and adds two records.
+        private static void UpdateDatabase(IApplicationBuilder app)
+        {
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                using (var context = serviceScope.ServiceProvider.GetService<CodeFirstContext>())
+                {
+                    context.Database.EnsureCreated();
+                }
+            }
         }
     }
 }

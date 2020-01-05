@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Category\" />
     <Folder Include="Pages\Company\" />
     <Folder Include="Pages\Employee\" />
   </ItemGroup>

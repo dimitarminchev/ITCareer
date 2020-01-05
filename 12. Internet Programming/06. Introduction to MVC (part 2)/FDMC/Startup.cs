@@ -25,8 +25,7 @@ namespace FDMC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-
-            services.AddDbContext<CatContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CatContextConnStr")));
+            services.AddDbContext<CatContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
