@@ -57,9 +57,29 @@ namespace CHUSHKA
             {
                 using (var context = serviceScope.ServiceProvider.GetService<ChushkaContext>())
                 {
+                    context.Database.EnsureDeleted();
                     context.Database.EnsureCreated();
                     // Fill the Datadase
-
+                    if (!context.Users.Any())
+                    {
+                        context.Users.Add(new User { Username = "mitko", Password = "mitko", FullName = "Dimitar Minchev", Email = "mitko@bfu.bg", Role = 0 });
+                        context.Users.Add(new User { Username = "ivan", Password = "ivan", FullName = "Ivan Ivanov", Email = "ivan@abv.bg", Role = 0 });
+                        context.SaveChanges();
+                    }
+                    if (!context.Products.Any())
+                    {
+                        context.Products.Add(new Product { Name = "Beer", Price = 2, Description = "Beer", Type = 0 });
+                        context.Products.Add(new Product { Name = "Fries", Price = 1, Description = "Fries", Type = 0 });
+                        context.SaveChanges();
+                    }
+                    if (!context.Orders.Any())
+                    {
+                        context.Orders.Add(new Order { ProductId = 1, UserId = 1, OrderedOn = new DateTime() });
+                        context.Orders.Add(new Order { ProductId = 2, UserId = 1, OrderedOn = new DateTime() });
+                        context.Orders.Add(new Order { ProductId = 1, UserId = 2, OrderedOn = new DateTime() });
+                        context.Orders.Add(new Order { ProductId = 2, UserId = 2, OrderedOn = new DateTime() });
+                        context.SaveChanges();
+                    }
                 }
             }
         }
