@@ -1,0 +1,49 @@
+.app {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: #F8F8FF;
+}
+
+.half-width {
+    width: 50%;
+}
+
+textarea {
+    resize: none;
+}
+
+.chushka-bg-color {
+    background-color: #DC143C;
+    color: #F8F8FF;
+}
+
+.nav-link-dark {
+    color: #C0C0C0
+}
+
+.hr-2 {
+    height: 2px;
+}
+
+.hr-1 {
+    height: 1px;
+}
+
+.table-hover>tbody>tr:hover {
+    background-color: #DC143C;
+    color: #F8F8FF;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    border: 0;
+    width: 98%;
+}
+
+/*.product {*/
+	/*word-wrap: break-word;*/
+/*}*/
