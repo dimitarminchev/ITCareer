@@ -60,7 +60,7 @@ Data content class: CarContext (Data)
 ```
 Move **CarsController.cs** to the folder Controllers
 
-appsettings.cs
+appsettings.json
 ```
 "ConnectionStrings": {
 	"DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=CarsDb;Trusted_Connection=True;MultipleActiveResultSets=true"
