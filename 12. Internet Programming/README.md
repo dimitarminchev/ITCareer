@@ -13,17 +13,18 @@
 01. Internet and Sockets 
 02. HTTP
 03. Introduction to HTML
-04. HTTP Server
-05. Introduction to MVC (part 1)
-06. Introduction to MVC (part 2)
-07. Database
-08. Template Language
-09. State Management
-10. Authentication and Authorization
-11. Security
-12. REST API
-13. Consuming REST API
-14. Deployment
+04. HTTP Server (part 1)
+05. HTTP Server (part 2)
+06. Introduction to MVC (part 1)
+07. Introduction to MVC (part 2)
+08. Database
+09. Template Language
+10. State Management
+11. Authentication and Authorization
+12. Security
+13. REST API
+14. Consuming REST API
+15. Deployment
 
 ## Ресурси
 - [C# Web Basics - май 2019](https://softuni.bg/trainings/2355/csharp-web-basics-may-2019)

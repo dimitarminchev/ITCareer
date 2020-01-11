@@ -1,4 +1,4 @@
-# Simple ASP.NET Core Demo
+# ASP.NET Core Simple Demo
 
 ## 1. Class Library (.NET Core) 
 Create **Class Library (.NET Core)** Project and Named it **Data**.
