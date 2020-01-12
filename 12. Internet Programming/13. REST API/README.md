@@ -256,3 +256,17 @@ public IActionResult PutProduct(long id, ProductBindingModel pm)
 - Отговорът е 204 (No Content)
 - HTTP PUT изисква цяла актуализация на записа
 
+### ASP.NET Core Web API (DELETE Методи)
+Създаване на уеб API с един контролер
+```
+[HttpDelete("{id}")]
+public ActionResult<Product> DeleteProduct(long id)
+{
+    var product = this.productService.DeleteProduct(id);
+    if (product == null) return NotFound();
+    return product;
+}
+```
+- Отговорът е 204 (No Content)
+- И с това ние имаме нашия Products Web API
+- Сега нека да тестваме крайните точки
