@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using RestApi.Data;
-using RestApi.Model;
-using RestApi.ViewModel;
+using WebChat.Data;
+using WebChat.Model;
+using WebChat.ViewModel;
 
-namespace RestApi.Controllers
+namespace WebChat.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

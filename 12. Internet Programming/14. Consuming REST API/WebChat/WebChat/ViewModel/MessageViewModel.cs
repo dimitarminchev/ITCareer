@@ -1,4 +1,4 @@
-﻿namespace RestApi.ViewModel
+﻿namespace WebChat.ViewModel
 {
     public class MessageViewModel
     {
