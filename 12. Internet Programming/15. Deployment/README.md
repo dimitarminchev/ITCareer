@@ -1,6 +1,6 @@
 # Задача 15. Deployment
 
-[Работещ пример](https://aspnet-simple-chat-app.herokuapp.com/index.html)
+[Работещ пример](https://aspnet-simple-chat-app.herokuapp.com/index.html) (Може да отнеме известно време докато се зареди)
 
 ## Какво ни трябва
 
@@ -10,13 +10,14 @@
 
 ## Променяне на проекта да е готов за качване
 
-1. Влезте в [примерния проект](SimpleChatApp) и копирайте добавеното в Program.cs към вашия проект
-2. Влезте в Properties/launchSettings.json и се погрижете че стойността на ASPNETCORE_ENVIRONMENT е променена на Production
-3. Изтрийте appsettings.json ако го използвате
-4. В Startup.cs премахнете Configuration и го заминете със Environment класа
-5. Качете проекта си във Github
+1. Влезте в [примерния проект](SimpleChatApp)
+2. Копирайте добавеното в Program.cs към вашия проект
+3. Влезте в Properties/launchSettings.json и се погрижете че стойността на ASPNETCORE_ENVIRONMENT е променена на Production
+4. Изтрийте appsettings.json ако го използвате
+5. В Startup.cs премахнете Configuration и го заминете със Environment класа
+6. Качете проекта си във Github
 
-## Създаване на asp.net core проект в heroku
+## Създаване на asp.net core проект в Heroku
 
 1. Създадете акаунт ако нямате
 2. Отидете на [този линк](https://dashboard.heroku.com/new-app) или натиснете New и Create new app
