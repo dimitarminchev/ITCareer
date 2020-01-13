@@ -8,19 +8,18 @@ namespace WebChat.Data
 
         public MessagesContext()
         {
-            ; ;
+            ;;
         }
         public MessagesContext(DbContextOptions<MessagesContext> options) : base(options)
         {
-            ; ;
+            ;;
         }
 
         public DbSet<Message> Messages { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
-            optionBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=WebChatDb;");
-            optionBuilder.UseLazyLoadingProxies();
+            optionBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=WebChatDb");        
         }
     }
 }
