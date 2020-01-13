@@ -7,7 +7,7 @@ function toggleMenu(command) {
     menuDiv = undefined;
   }
   menuVisible = !menuVisible;
-};
+}
 
 function setPosition({ top, left }, message) {
   if (menuVisible) {
@@ -17,7 +17,7 @@ function setPosition({ top, left }, message) {
   createMenu(message);
   menuDiv.css({ left: `${left}px`, top: `${top}px` });
   toggleMenu('show');
-};
+}
 
 function createMenu(message) {
   menuDiv = $('<div></div>');
