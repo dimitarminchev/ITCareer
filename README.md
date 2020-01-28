@@ -22,7 +22,7 @@
 10. [Алгоритми и структури от данни](10.%20Algorithms%20and%20Data%20Structures)
 11. [Функционално програмиране](11.%20Functional%20Programming)
 12. [Интернет програмиране](12.%20Internet%20Programming)
-13. Софтуерно инжинерство
+13. Софтуерно инженерство
 
 ## Допълнително информация
 Фондация "Софтуерен университет": http://softuni.foundation/projects/applied-software-developer-profession/
