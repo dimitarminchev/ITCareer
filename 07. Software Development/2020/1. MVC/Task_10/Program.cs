@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Task_10.Controllers;
 
 namespace Task_10
 {
@@ -10,6 +6,7 @@ namespace Task_10
     {
         static void Main(string[] args)
         {
+            TilesController c = new TilesController();
         }
     }
 }

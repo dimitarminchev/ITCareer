@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Task_05.View;
+﻿using Task_05.View;
 using Task_05.Models;
 
 namespace Task_05.Controllers

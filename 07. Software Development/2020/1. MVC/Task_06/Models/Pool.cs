@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Task_6.Models
+namespace Task_06.Models
 {
-    class Pool
+    public class Pool
     {
         public int v;
         public int V
@@ -50,8 +50,6 @@ namespace Task_6.Models
             P1 = p1;
             P2 = p2;
             H = h;
-
-
         }
 
         public string Calculate()

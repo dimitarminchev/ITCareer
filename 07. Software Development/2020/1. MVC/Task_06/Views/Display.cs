@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Task_6.Views
+namespace Task_06.Views
 {
-    class Display
+    public class Display
     {
         public int V { get; set; }
         public int P1 { get; set; }

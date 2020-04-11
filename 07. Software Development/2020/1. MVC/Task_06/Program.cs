@@ -1,5 +1,5 @@
-﻿using System;
-using Task_06.Controllers;
+﻿using Task_06.Controllers;
+
 namespace Task_06
 {
     class Program
@@ -7,7 +7,6 @@ namespace Task_06
         static void Main(string[] args)
         {
             PoolController controller = new PoolController();
-
         }
     }
 }

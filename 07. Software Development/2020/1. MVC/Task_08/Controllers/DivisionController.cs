@@ -1,23 +1,24 @@
 ﻿using System;
-using Task_06.Models;
-using Task_06.Views;
 
-namespace Task_06.Controllers
+using Task_08.Models;
+using Task_08.Views;
+
+namespace Task_08.Controllers
 {
-    class PoolController
+    class DivisionController
     {
         private Display display;
-        private Pool pool;
+        private Division division;
 
-        public PoolController()
+        public DivisionController()
         {
             display = new Display();
-            while (pool is null)
+            while (division is null)
             {
                 try
                 {
                     display.Input();
-                    pool = new Pool(display.V, display.P1, display.P2, display.H);
+                    division = new Division(display.numbers);
                 }
                 catch (Exception e) 
                 { 
@@ -25,7 +26,7 @@ namespace Task_06.Controllers
                     display.ShowResponse(); 
                 }
             }
-            display.Response = pool.Calculate();
+            display.Response = division.Calculate();
             display.ShowResponse();
         }
     }

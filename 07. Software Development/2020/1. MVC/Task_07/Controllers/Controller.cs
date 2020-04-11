@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Task_07.View;
+﻿using Task_07.View;
 using Task_07.Models;
 
 namespace Task_07.Controllers

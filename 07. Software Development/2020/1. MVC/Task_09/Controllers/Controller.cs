@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Task_09.View;
 using Task_09.Models;
-using Task_09.View;
 
 namespace Task_09.Controllers
 {

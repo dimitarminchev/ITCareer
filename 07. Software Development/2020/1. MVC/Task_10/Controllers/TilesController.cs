@@ -1,23 +1,24 @@
 ﻿using System;
-using Task_06.Models;
-using Task_06.Views;
 
-namespace Task_06.Controllers
+using Task_10.Models;
+using Task_10.Views;
+
+namespace Task_10.Controllers
 {
-    class PoolController
+    class TilesController
     {
         private Display display;
-        private Pool pool;
+        private Tiles tiles;
 
-        public PoolController()
+        public TilesController()
         {
             display = new Display();
-            while (pool is null)
+            while (tiles is null)
             {
                 try
                 {
                     display.Input();
-                    pool = new Pool(display.V, display.P1, display.P2, display.H);
+                    tiles = new Tiles(display.N, display.W, display.L, display.M, display.O);
                 }
                 catch (Exception e) 
                 { 
@@ -25,7 +26,7 @@ namespace Task_06.Controllers
                     display.ShowResponse(); 
                 }
             }
-            display.Response = pool.Calculate();
+            display.Response = tiles.Calculate();
             display.ShowResponse();
         }
     }
