@@ -1,4 +1,6 @@
-﻿namespace FightExample
+﻿using System;
+
+namespace AxeExample
 {
     class Program
     {

@@ -1,10 +1,10 @@
-﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
-namespace FightExample.Test
+namespace AxeExample.MSTests
 {
     [TestClass]
-    public class TestFight
+    public class AxeTests
     {
         [TestMethod]
         public void AxeLosesDurabilityAfterAttack()
@@ -17,7 +17,7 @@ namespace FightExample.Test
             axe.Attack(dummy);
 
             // Assert
-            Assert.AreEqual(9, axe.DurabilityPoints,  "Axe Durability doesn't change after attack.");
+            Assert.AreEqual(9, axe.DurabilityPoints, "Axe Durability doesn't change after attack.");
         }
 
         [TestMethod]
