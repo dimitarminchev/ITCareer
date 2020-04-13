@@ -10,7 +10,6 @@ namespace Introduction
 
             // Print the Array
             Console.WriteLine(string.Join(", ", numbers));
-            
         }
     }
 }
