@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_Game", "04_Game\04_Game.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_UnknownMethod", "05_UnknownMethod\05_UnknownMethod.csproj", "{05227F10-50B0-468D-B7CF-234917BAC21C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_StringExtensions", "06_StringExtensions\06_StringExtensions.csproj", "{DDB83717-BBC9-4B66-AD24-12EBD2412DCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{05227F10-50B0-468D-B7CF-234917BAC21C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05227F10-50B0-468D-B7CF-234917BAC21C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05227F10-50B0-468D-B7CF-234917BAC21C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDB83717-BBC9-4B66-AD24-12EBD2412DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDB83717-BBC9-4B66-AD24-12EBD2412DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDB83717-BBC9-4B66-AD24-12EBD2412DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB83717-BBC9-4B66-AD24-12EBD2412DCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
