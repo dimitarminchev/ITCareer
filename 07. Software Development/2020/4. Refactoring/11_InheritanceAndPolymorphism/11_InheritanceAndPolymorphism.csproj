@@ -43,17 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CourseData.cs" />
-    <Compile Include="LocalCourse.cs" />
-    <Compile Include="OffsiteCourse.cs" />
+    <Compile Include="Courses\CourseData.cs" />
+    <Compile Include="Courses\LocalCourse.cs" />
+    <Compile Include="Courses\OffsiteCourse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Courses\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
