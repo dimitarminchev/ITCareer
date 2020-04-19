@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _09_Abstraction
+namespace Abstraction
 {
     abstract class Figure
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-namespace Refactoring
+namespace ArraySlider
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {

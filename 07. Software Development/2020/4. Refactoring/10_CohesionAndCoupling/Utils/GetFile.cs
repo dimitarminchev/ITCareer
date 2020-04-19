@@ -1,4 +1,4 @@
-﻿namespace _10_CohesionAndCoupling
+﻿namespace CohesionAndCoupling
 {
     class GetFile
     {

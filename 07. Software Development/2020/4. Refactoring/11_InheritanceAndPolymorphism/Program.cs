@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _11_InheritanceAndPolymorphism
+namespace InheritanceAndPolymorphism
 {
     class Program
     {

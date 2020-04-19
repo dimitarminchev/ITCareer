@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _06_StringExtensions
+namespace StringExtensions
 {
     class Program
     {

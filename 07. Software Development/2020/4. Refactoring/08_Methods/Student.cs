@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _08_Methods
+namespace Methods
 {
     class Student
     {

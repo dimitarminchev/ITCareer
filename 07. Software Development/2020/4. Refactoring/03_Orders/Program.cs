@@ -1,10 +1,9 @@
-﻿using Orders;
-using System;
+﻿using System;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
 
-namespace _03_Orders
+namespace Orders
 {
     class Program
     {

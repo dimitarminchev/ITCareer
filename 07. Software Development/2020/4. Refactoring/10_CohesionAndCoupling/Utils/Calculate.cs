@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _10_CohesionAndCoupling
+namespace CohesionAndCoupling
 {
     class Calculate
     {

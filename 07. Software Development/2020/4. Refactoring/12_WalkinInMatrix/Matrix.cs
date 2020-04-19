@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _12_WalkinInMatrix
+namespace WalkinInMatrix
 {
     public class Matrix
     {

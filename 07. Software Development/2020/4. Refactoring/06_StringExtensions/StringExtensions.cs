@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace _06_StringExtensions
+namespace StringExtensions
 {
 
     public static class StringExtensions
