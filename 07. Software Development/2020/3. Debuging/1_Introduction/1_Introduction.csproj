@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{05227F10-50B0-468D-B7CF-234917BAC21C}</ProjectGuid>
+    <ProjectGuid>{D02C72F3-34C4-4702-85EA-C74475A8F015}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_05_UnknownMethod</RootNamespace>
-    <AssemblyName>05_UnknownMethod</AssemblyName>
+    <RootNamespace>_1_Introduction</RootNamespace>
+    <AssemblyName>1_Introduction</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,7 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\05_UnknownMethod.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\1_Introduction.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>

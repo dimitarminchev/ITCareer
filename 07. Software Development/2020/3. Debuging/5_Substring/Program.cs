@@ -1,13 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
+/// <summary>
+/// 3. Debuging, 5. Sub String
+/// </summary>
 namespace _5_Substring
 {
-    class Program
+    /// <summary>
+    /// Main Program Class: 3. Debuging, 5. Sub String
+    /// </summary>
+    public class Program
     {
+        /// <summary>
+        /// Input:
+        /// preparation
+        /// 4
+        /// Output:
+        /// prepra
+        /// </summary>
         public static void Main()
         {
             string text = Console.ReadLine();
@@ -21,14 +30,11 @@ namespace _5_Substring
                 if (text[i] == Search)
                 {
                     hasMatch = true;
-
                     int length = jump+1;
-
                     if (length +1+i> text.Length)
                     {
                         length = text.Length-i;
                     }
-
                     string matchedString = text.Substring(i, length);
                     Console.WriteLine(matchedString);
                     i += jump;

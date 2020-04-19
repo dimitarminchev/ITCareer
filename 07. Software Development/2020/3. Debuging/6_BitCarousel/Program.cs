@@ -1,14 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
+/// <summary>
+/// 3. Debuging, 6. Bit Carousel
+/// </summary>
 namespace _6_BitCarousel
 {
-    class Program
+    /// <summary>
+    /// Main Program Class: 3. Debuging, 6. Bit Carousel
+    /// </summary>
+    public class Program
     {
-        static void Main()
+        /// <summary>
+        /// Input:
+        /// 42
+        /// 1
+        /// left
+        /// Output:
+        /// 21
+        /// </summary>
+        public static void Main()
         {
             byte number = byte.Parse(Console.ReadLine());
             byte rotations = byte.Parse(Console.ReadLine());

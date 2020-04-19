@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_Substring", "5_Substring\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_BitCarousel", "6_BitCarousel\6_BitCarousel.csproj", "{25981E71-EE61-40A4-A106-1E199A4776ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_Introduction", "1_Introduction\1_Introduction.csproj", "{D02C72F3-34C4-4702-85EA-C74475A8F015}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{25981E71-EE61-40A4-A106-1E199A4776ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25981E71-EE61-40A4-A106-1E199A4776ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25981E71-EE61-40A4-A106-1E199A4776ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02C72F3-34C4-4702-85EA-C74475A8F015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02C72F3-34C4-4702-85EA-C74475A8F015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02C72F3-34C4-4702-85EA-C74475A8F015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02C72F3-34C4-4702-85EA-C74475A8F015}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

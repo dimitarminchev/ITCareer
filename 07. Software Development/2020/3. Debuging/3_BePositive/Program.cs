@@ -1,10 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// 3. Debuging, 3. Be Positive
+/// </summary>
 namespace _3_BePositive
 {
-    class Program
+
+    /// <summary>
+    /// Main Program Class: 3. Debuging, 3. Be Positive
+    /// </summary>
+    public class Program
     {
+        /// <summary>
+        /// Input:
+        /// 1
+        /// 0 -2 2 -2 3
+        /// Output:
+        /// 0 0 1
+        /// </summary>
         public static void Main()
         {
             int countSequences = int.Parse(Console.ReadLine());

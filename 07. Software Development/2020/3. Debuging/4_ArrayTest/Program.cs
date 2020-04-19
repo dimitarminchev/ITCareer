@@ -1,14 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
+/// <summary>
+/// 3. Debuging, 4. Array Test
+/// </summary>
 namespace _4_ArrayTest
 {
+    /// <summary>
+    /// Override Console Class
+    /// </summary>
     public static class Console
     {
-        public static void Write(string s )
+        /// <summary>
+        ///  Override Write Method
+        /// </summary>
+        /// <param name="s">Input Text To Print</param>
+        public static void Write(string s)
         {
             var fgColor = System.Console.ForegroundColor;
             System.Console.ForegroundColor = ConsoleColor.Yellow;
@@ -17,11 +24,27 @@ namespace _4_ArrayTest
         }
     }
 
-    class Program
+    /// <summary>
+    /// Main Program Class: 3. Debuging, 4. Array Test
+    /// </summary>
+    public class Program
     {
 
         private const char ArgumentsDelimiter = ' ';
 
+        /// <summary>
+        /// Input:
+        /// 5
+        /// 3 0 9 333 11
+        /// add 2 2
+        /// subtract 1 1
+        /// multiply 3 3
+        /// stop
+        /// Output:
+        /// 3 2 9 333 11 
+        /// 2 2 9 333 11 
+        /// 2 2 27 333 11
+        /// </summary>
         public static void Main()
         {
             int sizeOfArray = int.Parse(System.Console.ReadLine());
@@ -55,7 +78,13 @@ namespace _4_ArrayTest
             }
         }
 
-        static void PerformAction(long[] array, string action, int[] args)
+        /// <summary>
+        /// Perform Action
+        /// </summary>
+        /// <param name="array">Array</param>
+        /// <param name="action">Action</param>
+        /// <param name="args">Arguments</param>
+        public static void PerformAction(long[] array, string action, int[] args)
         {
             int pos = args[0]-1;
             int value = args[1];
@@ -80,7 +109,11 @@ namespace _4_ArrayTest
             }
         }
 
-        private static void ArrayShiftRight(long[] array)
+        /// <summary>
+        /// Array Shift Right
+        /// </summary>
+        /// <param name="array">Array</param>
+        public static void ArrayShiftRight(long[] array)
         {
             long last = array[array.Count() - 1];
             for (int i = array.Length - 1; i >= 1; i--)
@@ -90,7 +123,11 @@ namespace _4_ArrayTest
             array[0] = last;
         }
 
-        private static void ArrayShiftLeft(long[] array)
+        /// <summary>
+        /// Array Shift Left
+        /// </summary>
+        /// <param name="array">Array</param>
+        public static void ArrayShiftLeft(long[] array)
         {
             long first = array[0];
             for (int i = 0; i < array.Length - 1; i++)
@@ -100,7 +137,11 @@ namespace _4_ArrayTest
             array[array.Count() - 1] = first;
         }
 
-        private static void PrintArray(long[] array)
+        /// <summary>
+        /// PrintArray
+        /// </summary>
+        /// <param name="array">Array</param>
+        public static void PrintArray(long[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {

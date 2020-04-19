@@ -1,18 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
+/// <summary>
+/// 3. Debuging, 2. Instruction Set
+/// </summary>
 namespace _2_InstructionSet
 {
-    class Program
+    /// <summary>
+    /// Main Program Class: 3. Debuging, 2. Instruction Set
+    /// </summary>
+    public class Program
     {
-        static void Main()
+        /// <summary>
+        /// Input: 
+        /// ADD 1323134 421315521
+        /// END
+        /// Output:
+        /// 422638655
+        /// </summary>
+        public static void Main()
         {
-
             string opCode = Console.ReadLine();
-
             while (opCode != "END")
             {
                 string[] codeArgs = opCode.Split(' ');
