@@ -9,16 +9,19 @@ namespace _01.Minions
 {
     public class Program
     {
+        /// <summary>
+        /// Minions MySQL Database 
+        /// </summary>
         static void Main(string[] args)
         {
-            // 1. Connection String
+            // 1. MySQL Connection String
             var connstr = "server=localhost;port=3306;user=root;password=root;database=minions";
 
             // 2. MySQL Connection
             MySqlConnection conn = new MySqlConnection(connstr);
             conn.Open();
 
-            // 3. SQL Query
+            // 3. MySQL Query
             var sql = "SELECT name,age FROM minions;";
 
             // 4. MySQL Command
