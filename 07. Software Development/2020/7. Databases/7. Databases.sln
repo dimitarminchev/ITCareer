@@ -19,9 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. AllMinionNames", "07. A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. AgeIncrease", "08. AgeIncrease\08. AgeIncrease.csproj", "{79627B8D-F6F6-4903-A4C0-0118DAECFA31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniORM", "MiniORM\MiniORM.csproj", "{622D5177-423B-4C77-A166-E862E64889F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniORM", "MiniORM\MiniORM.csproj", "{622D5177-423B-4C77-A166-E862E64889F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniORM.App", "MiniORM.App\MiniORM.App.csproj", "{A17E6541-5305-498D-ADCC-5E51C3D398AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniORM.App", "MiniORM.App\MiniORM.App.csproj", "{A17E6541-5305-498D-ADCC-5E51C3D398AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudWithoutORM", "CrudWithoutORM\CrudWithoutORM.csproj", "{F080FF3B-1F5E-490C-B6AC-3F6708A7A304}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{A17E6541-5305-498D-ADCC-5E51C3D398AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A17E6541-5305-498D-ADCC-5E51C3D398AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A17E6541-5305-498D-ADCC-5E51C3D398AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F080FF3B-1F5E-490C-B6AC-3F6708A7A304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F080FF3B-1F5E-490C-B6AC-3F6708A7A304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F080FF3B-1F5E-490C-B6AC-3F6708A7A304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F080FF3B-1F5E-490C-B6AC-3F6708A7A304}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
