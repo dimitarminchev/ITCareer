@@ -32,7 +32,6 @@ namespace CrudWithORM.Business
             {
                 productContext.Products.Add(product);
                 productContext.SaveChanges();
-
             }
         }
 
