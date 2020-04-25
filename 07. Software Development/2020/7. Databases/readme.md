@@ -53,3 +53,30 @@ while (reader.Read())
 reader.Close();
 conn.Close();
 ```
+
+## MSSQL CodeFirst Approach
+Примерен контекст:
+```
+public class ProductContext : DbContext
+{
+	public DbSet<Product> Products { get; set; }
+	public ProductContext()
+	{
+		Database.EnsureCreated();
+	}
+	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+	{
+		optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB.;Database=shop; Integrated Security=True");
+	}
+}
+```
+От менюто на Microsoft Visual Studio изберете следната последователност:
+```
+Tools > NuGet Package Manager > Package Manager Console
+```
+Инсталирайте следните пакети:
+```
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Design
+Add-Migration InitalCreate
+```
