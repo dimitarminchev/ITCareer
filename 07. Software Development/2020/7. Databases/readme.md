@@ -1,8 +1,18 @@
 # Свързване на приложения с бази от данни
-- [MySQL Connector .NET](https://dev.mysql.com/downloads/connector/net/)
-- [MySQL for Visual Studio](https://dev.mysql.com/downloads/windows/visualstudio/)
 
-## Minions Database
+## MySQL
+
+### 1. Инсталирайте пакета MySQL.Data
+От менюто на Microsoft Visual Studio изберете следната последователност:
+```
+Tools > NuGet Package Manager > Package Manager Console
+```
+Инсталирайте пакета MySql.Database като напишете командата:
+```
+Install-Package MySql.Data 
+```
+
+### 2. Създайте MySQL база данни minions 
 ```
 CREATE SCHEMA IF NOT EXISTS `minions`;
 CREATE TABLE IF NOT EXISTS `minions`.`minions` 
@@ -17,7 +27,7 @@ INSERT INTO minions.minions (id, name, age) VALUES ('2', 'Bob', '22');
 INSERT INTO minions.minions (id, name, age) VALUES ('3', 'Steward','42');
 ```
 
-##  MySQL Connection in Visual Studio 
+### 3. Visual Studio връзка с MySQL базата данни 
 ```
 // 1. Connection String
 var connstr = "server=localhost;port=3306;user=root;password=root;database=minions";
