@@ -1,9 +1,16 @@
-﻿DROP DATABASE shop
+﻿-- Drop Database
+DROP DATABASE IF EXISTS shop;
 GO
-CREATE DATABASE shop
+
+-- Create Database
+CREATE DATABASE shop;
 GO
-USE shop
+
+-- Use Dataase
+USE shop;
 GO
+
+-- Create Table
 CREATE TABLE product
 (
 	Id INT IDENTITY PRIMARY KEY,
@@ -11,3 +18,4 @@ CREATE TABLE product
 	Price DECIMAL(10,2),
 	Stock INT
 );
+GO
