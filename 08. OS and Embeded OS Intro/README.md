@@ -10,8 +10,8 @@
 - blog: http://www.minchev.eu
 
 ## Учебни материали
-- [Linux](Linux)
-- [Arduino](Arduino)
+- Linux
+- Arduino
 
 ## Обучаеми 2019
 ![2019.jpg](2019.jpg)

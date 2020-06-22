@@ -1,3 +1,0 @@
-46.10.253.12
-user: students
-pass: password123

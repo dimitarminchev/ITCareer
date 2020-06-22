@@ -11,11 +11,8 @@
 
 ## Учебни материали
 - [Linux](Linux)
-- [Arduino](Arduino)
-
-## Проекти
-- [ArduinoBoy](Projects/ArduinoBoy)
-- [HandGestures](Projects/HandGestures)
-- [IceCreamTruck](Projects/IceCreamTruck)
-- [KURU](Projects/KURU)
-- [RFIDControl](Projects/RFIDControl)
+```
+46.10.253.12
+user: students
+pass: password123
+```
