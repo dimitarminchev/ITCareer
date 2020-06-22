@@ -10,11 +10,12 @@
 - blog: http://www.minchev.eu
 
 ## Учебни материали
-- [Linux](Linux)
-- [Arduino](Arduino)
+- Linux
+- Arduino
 
-## Обучаеми 2019
-![2019.jpg](2019.jpg)
-
-## Обучаеми 2020
-![2020.jpg](2020.jpg)
+## Проекти
+- [ArduinoBoy](Projects/ArduinoBoy)
+- [HandGestures](Projects/HandGestures)
+- [IceCreamTruck](Projects/IceCreamTruck)
+- [KURU](Projects/KURU)
+- [RFIDControl](Projects/RFIDControl)
