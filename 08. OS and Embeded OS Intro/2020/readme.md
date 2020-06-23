@@ -18,7 +18,6 @@ host: 46.10.253.12
 user: students
 pass: password123
 ```
-### Webminal
-http://webminal.org/
+- Webminal: http://webminal.org/
 
 ### 2. [Arduino](Arduino)
