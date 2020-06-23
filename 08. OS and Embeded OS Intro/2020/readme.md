@@ -10,7 +10,7 @@
 - blog: http://www.minchev.eu
 
 ## Учебни материали
-### [Linux](Linux)
+### 1. [Linux](Linux)
 Работна система: Ubuntu Server 20.04
 ```
 host: 46.10.253.12
@@ -21,3 +21,5 @@ pass: password123
 
 ### Webminal
 http://webminal.org/
+
+### 2. [Arduino](Arduino)
