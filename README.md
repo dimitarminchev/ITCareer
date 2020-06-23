@@ -4,6 +4,9 @@
 - Образователен център: Професионална имназия по електротехника и електроника "Константин Фотинов", гр.Бургас  
 - Електронен портал: https://it-kariera.mon.bg/e-learning/
 
+### 3 години в 70 секунди
+[![3Y@70S](http://img.youtube.com/vi/a1T-5u_IAFg/0.jpg)](https://youtu.be/a1T-5u_IAFg)
+
 ## Преподавател
 - доц. д-р Димитър Минчев
 - e-mail: dimitar.minchev@gmail.com 
@@ -26,6 +29,3 @@
 
 ## Допълнително информация
 Фондация "Софтуерен университет": http://softuni.foundation/projects/applied-software-developer-profession/
-
-### Youtube
-[![3Y@70S](http://img.youtube.com/vi/a1T-5u_IAFg/0.jpg)](https://youtu.be/a1T-5u_IAFg)
