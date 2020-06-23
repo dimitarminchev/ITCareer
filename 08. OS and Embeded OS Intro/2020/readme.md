@@ -11,14 +11,13 @@
 
 ## Учебни материали
 ### 1. [Linux](Linux)
-Работна система: Ubuntu Server 20.04
+- Работна система: Ubuntu Server 20.04
+- Отдалечен достъп: https://www.putty.org/
 ```
 host: 46.10.253.12
 user: students
 pass: password123
 ```
-Отдалечен достъп: https://www.putty.org/
-
 ### Webminal
 http://webminal.org/
 
