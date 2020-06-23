@@ -26,3 +26,6 @@
 
 ## Допълнително информация
 Фондация "Софтуерен университет": http://softuni.foundation/projects/applied-software-developer-profession/
+
+### Youtube
+[![3Y@70S](http://img.youtube.com/vi/a1T-5u_IAFg/0.jpg)](https://youtu.be/a1T-5u_IAFg)
