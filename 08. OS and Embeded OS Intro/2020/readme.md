@@ -10,9 +10,14 @@
 - blog: http://www.minchev.eu
 
 ## Учебни материали
-- [Linux](Linux)
+### [Linux](Linux)
+Работна система: Ubuntu Server 20.04
 ```
-46.10.253.12
+host: 46.10.253.12
 user: students
 pass: password123
 ```
+Отдалечен достъп: https://www.putty.org/
+
+### Webminal
+http://webminal.org/
