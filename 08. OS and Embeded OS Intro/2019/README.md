@@ -21,10 +21,10 @@
 - [RFIDControl](Projects/RFIDControl)
 
 ### ArduinoBoy
-[ArduinoBoy](ArduinoBoy/ArduinoBoy.jpg)
+![ArduinoBoy](Projects/ArduinoBoy/ArduinoBoy.jpg)
 
 ### KURU
-[KURU](KURU/KURU.jpg)
+![KURU](Projects/KURU/KURU.jpg)
 
 ### RFIDControl
-[RFIDControl](RFIDControl/RFIDControl.jpg)
+![RFIDControl](Projects/RFIDControl/RFIDControl.jpg)
