@@ -19,3 +19,12 @@
 - [IceCreamTruck](Projects/IceCreamTruck)
 - [KURU](Projects/KURU)
 - [RFIDControl](Projects/RFIDControl)
+
+### ArduinoBoy
+[ArduinoBoy](Projects/ArduinoBoy/ArduinoBoy.jpg)
+
+### KURU
+[KURU](Projects/KURU/KURU.jpg)
+
+### RFIDControl
+[RFIDControl](Projects/RFIDControl/RFIDControl.jpg)
