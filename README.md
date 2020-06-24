@@ -25,5 +25,6 @@
 13. [Софтуерно инженерство](13.%20Software%20Engineering)
 
 ## Източници
+- Документация на проекта: https://github.com/dimitarminchev/ITCareer/wiki
 - Електронен портал по националната програма "Обучение за ИТ кариера" на МОН: https://it-kariera.mon.bg/e-learning/
 - Фондация "Софтуерен университет": http://softuni.foundation/projects/applied-software-developer-profession/
