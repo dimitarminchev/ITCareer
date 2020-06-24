@@ -11,6 +11,7 @@
 
 ## Учебни материали
 ### 1. [Linux](Linux)
+Операционни системи
 - Работна система: Ubuntu Server 20.04
 - Отдалечен достъп: https://www.putty.org/
 ```
@@ -21,3 +22,7 @@ pass: password123
 - Webminal: http://webminal.org/
 
 ### 2. [Arduino](Arduino)
+Вградени системи
+
+### 3. [Robot](Robot)
+Мобилен робот
