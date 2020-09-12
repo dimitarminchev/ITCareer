@@ -17,9 +17,3 @@
 5. Trees
 6. Hashing and hash tables
 7. Graphs and graph algorithms
-
-## Обучаеми 2019
-![2019.jpg](2019.jpg)
-
-## Обучаеми 2020
-![2020.jpg](2020.jpg)
