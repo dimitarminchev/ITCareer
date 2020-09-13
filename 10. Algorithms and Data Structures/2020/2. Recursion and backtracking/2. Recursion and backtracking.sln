@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Fibonacii", "1. Fibonacii\1. Fibonacii.csproj", "{6856A558-148D-4E67-A115-67A313F8640D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1. Fibonacii", "1. Fibonacii\1. Fibonacii.csproj", "{6856A558-148D-4E67-A115-67A313F8640D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Greatest Common Divisor", "2. Greatest Common Divisor\2. Greatest Common Divisor.csproj", "{319FDAFF-5D94-4C9A-A66B-759598A18FBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2. Greatest Common Divisor", "2. Greatest Common Divisor\2. Greatest Common Divisor.csproj", "{319FDAFF-5D94-4C9A-A66B-759598A18FBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Least Common Multiple", "3. Least Common Multiple\3. Least Common Multiple.csproj", "{22B77997-6273-4714-A7AE-82A5AC47DBF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3. Least Common Multiple", "3. Least Common Multiple\3. Least Common Multiple.csproj", "{22B77997-6273-4714-A7AE-82A5AC47DBF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. 8 Queens", "4. 8 Queens\4. 8 Queens.csproj", "{6A34F93B-24FC-45D0-AFE5-F5D64A650991}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4. 8 Queens", "4. 8 Queens\4. 8 Queens.csproj", "{6A34F93B-24FC-45D0-AFE5-F5D64A650991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Knight Moves", "5. Knight Moves\5. Knight Moves.csproj", "{7C5386A0-475E-48DA-A44D-2E0471B75F54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Maze Paths", "6. Maze Paths\6. Maze Paths.csproj", "{A2612CB9-CEE6-49C0-B71B-95FCBC939964}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{6A34F93B-24FC-45D0-AFE5-F5D64A650991}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A34F93B-24FC-45D0-AFE5-F5D64A650991}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A34F93B-24FC-45D0-AFE5-F5D64A650991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C5386A0-475E-48DA-A44D-2E0471B75F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C5386A0-475E-48DA-A44D-2E0471B75F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C5386A0-475E-48DA-A44D-2E0471B75F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C5386A0-475E-48DA-A44D-2E0471B75F54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2612CB9-CEE6-49C0-B71B-95FCBC939964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2612CB9-CEE6-49C0-B71B-95FCBC939964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2612CB9-CEE6-49C0-B71B-95FCBC939964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2612CB9-CEE6-49C0-B71B-95FCBC939964}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
