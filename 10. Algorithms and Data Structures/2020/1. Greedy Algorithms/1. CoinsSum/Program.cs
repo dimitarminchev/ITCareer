@@ -20,11 +20,11 @@ namespace _1._CoinsSum
                 currentSum += coins[i];
                 resultCoins.Enqueue(coins[i]);
                 if (currentSum == finalSum)
-                { 
+                {
                     // Намерили сме търсената сума монети
                     Console.Write("Coins: ");
-                    Console.WriteLine(String.Join(", ",resultCoins));
-                    Console.Write("Count = {0}",resultCoins.Count);
+                    Console.WriteLine(String.Join(", ", resultCoins));
+                    Console.Write("Count = {0}", resultCoins.Count);
                     return;
                 }
             }

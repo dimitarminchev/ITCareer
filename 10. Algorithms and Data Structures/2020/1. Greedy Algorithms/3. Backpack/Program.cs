@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace _3._Backpack
 {
-    class Program 
+    class Program
     {
-        static void Main(string[] args) 
+        static void Main(string[] args)
         {
             List<int> w = new List<int> { 7, 3, 4, 5 }; // Тегла на предметите в килограми
             List<int> v = new List<int> { 42, 12, 40, 25 }; // Цени на предметите в килограми
@@ -16,7 +16,7 @@ namespace _3._Backpack
 
             // Намиране комбинациите на тегла и цени
             var weights = GetCombination(w);
-            var prices =  GetCombination(v);
+            var prices = GetCombination(v);
             int vi = 0;
 
             // Обхождаме получените комбинации от тегла

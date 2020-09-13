@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection.Metadata.Ecma335;
 
 namespace _2._Egyptian_Fractions
 {
@@ -10,7 +9,7 @@ namespace _2._Egyptian_Fractions
             // Дроб: 7/9
             int p = 7, q = 9, r = 0;
 
-            while (p > 1) 
+            while (p > 1)
             {
                 r = (p + q) / p; // r=(7+9)/7=2
                 Console.Write("1/{0} + ", r);
