@@ -6,7 +6,7 @@ namespace _4._8_Queens
     {
         const int N = 8;
 
-        // Отпечаване на шахматната дъска
+        // Отпечатване на шахматната дъска
         static void Print(int[,] board)
         {
             for (int i = 0; i < N; i++)
@@ -20,7 +20,7 @@ namespace _4._8_Queens
             }
         }
 
-        // Можем ли да поставим царица на шахматната дъска
+        // Можем ли да поставим царица на шахматната дъска?
         static bool Place(int[,] board, int row, int col)
         {
             int i, j;
@@ -33,7 +33,7 @@ namespace _4._8_Queens
             return true;
         }
 
-        // Решение на задачата за осемте царици
+        // Решение на задачата за осемте царици!
         static bool Solve(int[,] board, int col)
         {
             if (col >= N) return true; // гранично условие
@@ -54,15 +54,15 @@ namespace _4._8_Queens
             // Шахматна дъска
             int[,] board = new int[N, N]; 
 
-            // Решаване на задачата
+            // Решава ли се задачата?
             if (!Solve(board, 0))
             {
-                // Неуспешно
+                // Не
                 Console.WriteLine("Solution Not Found.");
             }
             else
             {
-                // Успешно
+                // Да
                 Print(board);
             }
         }
