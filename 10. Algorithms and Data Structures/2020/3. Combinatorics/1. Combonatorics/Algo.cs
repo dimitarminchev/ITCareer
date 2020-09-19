@@ -108,8 +108,33 @@ namespace _1._Combonatorics
         }
 
         // Combination with Repetition = Комбинации с повторения = O(N!/K!(N-K)!)
+        public static void CombinationRepeat<T>(T[] array, int k)
+        {
+            T[] vector = new T[k];
+            CombinationRepeatAlgo(array, vector, 0, 0);
+        }
+
+        private static void CombinationRepeatAlgo<T>(T[] array, T[] vector, int index, int start)
+        {
+            if (index >= vector.Length)
+            {
+                Console.WriteLine(string.Join(" ", vector));
+            }
+            else
+            {
+                for (int i = start; i < array.Length; i++)
+                {
+                    vector[index] = array[i];
+                    CombinationAlgo(array, vector, index + 1, i);
+                }
+            }
+        }
 
         // Binomial Coefficients = Биномни коефициенти =  C[n | k] = N!/(N-K)!K!
-
+        public static long Binom(int k, int n)
+        {
+            if(k==0 || k==n) return 1;
+            return Binom(k - 1, n - 1) + Binom(k, n - 1);
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace _1._Combonatorics
             Algo.PermuteNoRepeat(data2, 0);
 
             // Permutation with Repetition = Пермутации с повторения = O(N!)
-            Console.WriteLine("2. Permutation with Repetition ...");
+            Console.WriteLine("2. Permutation with repetition ...");
             Algo.PermuteRepeat(data1, 0); // index = 0
             Algo.PermuteRepeat(data2, 0);
 
@@ -31,8 +31,14 @@ namespace _1._Combonatorics
             Algo.Combination(data2, 2);
 
             // Combination with Repetition = Комбинации с повторения = O(N! / K!(N - K)!)
+            Console.WriteLine("5. Combination with Repetition ...");
+            Algo.CombinationRepeat(data1, 2); // k = 2
+            Algo.CombinationRepeat(data2, 2);
 
             // Binomial Coefficients = Биномни коефициенти = C[n | k] = N! / (N - K)!K!
+            Console.WriteLine("6. Binomial Coefficients ...");
+            Console.WriteLine("[5/35] = {0}", Algo.Binom(5, 35));
+            Console.WriteLine("[6/49] = {0}", Algo.Binom(6, 49));
 
         }
     }
