@@ -6,26 +6,20 @@ namespace HashTable
     {
         static void Main(string[] args)
         {
-            // Task 13. Cointing Symbols
+            // HashTable
+            var hashtable = new HashTable<char, int>();
 
-            // Input
-            string symbols = Console.ReadLine();
-
-            // Process
-            var symbolCount = new HashTable<char, int>();
-            foreach (var symbol in symbols)
+            // Add data
+            for (int i = 65; i < 91; i++)
             {
-                if (!symbolCount.ContainsKey(symbol))
-                {
-                    symbolCount.Add(symbol, 0);
-                }
-                symbolCount[symbol]++;
+                hashtable.Add((char)i, i);
             }
 
             // Print
-            foreach (var item in symbolCount)
+            Console.WriteLine("ASCII");
+            foreach (var item in hashtable)
             {
-                Console.WriteLine("{0}: {1} time/s", item.Key, item.Value);
+                Console.WriteLine("{0} = {1}", item.Key, item.Value);
             }
         }
     }
