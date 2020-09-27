@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
-namespace _1._Demo
+namespace Demo
 {
     /// <summary>
     /// Точка в двумерна координатна система
