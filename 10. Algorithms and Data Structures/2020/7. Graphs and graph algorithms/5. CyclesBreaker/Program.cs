@@ -6,7 +6,7 @@ namespace _5._CyclesBreaker
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // TODO
         }
     }
 }

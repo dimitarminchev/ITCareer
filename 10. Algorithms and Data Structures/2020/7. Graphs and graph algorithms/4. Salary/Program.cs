@@ -6,7 +6,7 @@ namespace _4._Salary
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // TODO
         }
     }
 }
