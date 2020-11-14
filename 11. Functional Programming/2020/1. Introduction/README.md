@@ -19,11 +19,9 @@ hello.hs
 ```
 3. VS Code > Terminal > New terminal **[Ctrl + Shift + `]**
 ```
-cd Desktop
 ghc hello.hs
-.\hello.hs
+.\hello.exe
 ```
-![hello.png](hello.png)
 
 ## Демонстрации
 1. [hello.hs](hello.hs)
