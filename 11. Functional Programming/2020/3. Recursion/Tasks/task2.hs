@@ -1,4 +1,4 @@
--- Рекурсивна функция за намиране на Факториел
+-- Рекурсивна функция за намиране на Факториел (Опашкова рекурсия)
 findFactorial n initialValue index = 
     if index > n
     then initialValue
