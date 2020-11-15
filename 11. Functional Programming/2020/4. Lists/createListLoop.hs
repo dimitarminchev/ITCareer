@@ -1,11 +1,11 @@
--- Помощна функция за създаване на списък
-createList start end = createListLoop [] start end
-
 -- Рекурсивна функция за създавне на списък
 createListLoop list start end =
     if start > end
     then list
-    else createListLoop (list ++ [start]) (start + 1) end
+    else createListLoop (list ++
+
+-- Помощна функция за създаване на списък
+createList start end = createListLoop [] start end
 
 -- Главна функция
 main = do
