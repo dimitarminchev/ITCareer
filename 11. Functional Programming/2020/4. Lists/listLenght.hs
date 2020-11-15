@@ -4,7 +4,7 @@ findLength length list =
     then (length-1)
     else findLength (length+1) (tail list)
 
--- Спомагателна финцкия
+-- Помощна функция
 listLength list = findLength 1 list 
 
 -- Главна функция
