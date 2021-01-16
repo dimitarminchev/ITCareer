@@ -25,12 +25,3 @@
 13. REST API
 14. Consuming REST API
 15. Deployment
-
-## Ресурси
-- [ASP.NET Core MVC - юни 2019](https://softuni.bg/trainings/2419/asp-net-core-mvc-june-2019)
-
-## Обучаеми 2020
-![group_2020.jpg](group_2020.jpg)
-
-## Обучаеми 2021
-![group_2021.jpg](group_2021.jpg)
