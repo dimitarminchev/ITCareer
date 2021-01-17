@@ -10,4 +10,16 @@
     <ProjectReference Include="..\MiniServer.WebServer\MiniServer.WebServer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="web\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="web\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="web\styles.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

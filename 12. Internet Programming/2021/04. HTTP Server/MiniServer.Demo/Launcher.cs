@@ -8,8 +8,10 @@ namespace MiniServer.Demo
     {
         public static void Main(string[] args)
         {
-            // Routes
+            // Create Web Routing Table
             IServerRoutingTable serverRoutingTable = new ServerRoutingTable();
+
+            // index.html
             serverRoutingTable.Add
             (
                 HttpRequestMethod.Get,
@@ -17,7 +19,23 @@ namespace MiniServer.Demo
                 request => new HomeController().Index(request) 
             );
 
-            // Server
+            // logo.png
+            serverRoutingTable.Add
+            (
+                HttpRequestMethod.Get,
+                path: "/logo.png",
+                request => new HomeController().Logo(request)
+            );
+
+            // styles.css
+            serverRoutingTable.Add
+            (
+                HttpRequestMethod.Get,
+                path: "/styles.css",
+                request => new HomeController().Style(request)
+            );
+
+            // Start Web Server
             Server server = new Server(8080, serverRoutingTable);
             server.Run();
         }

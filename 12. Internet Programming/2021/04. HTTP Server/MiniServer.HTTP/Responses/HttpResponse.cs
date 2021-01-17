@@ -42,13 +42,13 @@ namespace MiniServer.HTTP
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();
-            
+
             result
-            .Append($"{GlobalConstants.HttpOneProtocolFragment} {(int)this.StatusCode} {this.StatusCode.ToString()}")
-            .Append(GlobalConstants.HttpNewLine)
-            .Append(this.Headers)
-            .Append(GlobalConstants.HttpNewLine)
-            .Append(GlobalConstants.HttpNewLine);
+                .Append($"{GlobalConstants.HttpOneProtocolFragment} {(int)this.StatusCode} {this.StatusCode.ToString()}")
+                .Append(GlobalConstants.HttpNewLine)
+                .Append($"{this.Headers}").Append(GlobalConstants.HttpNewLine);
+
+            result.Append(GlobalConstants.HttpNewLine);
 
             return result.ToString();
         }

@@ -15,22 +15,22 @@ namespace MiniServer.HTTP
 
         public void AddHeader(HttpHeader header)
         {
-            this.headers.Add(header.Key, header);
+            CoreValidator.ThrowIfNull(header, nameof(header));
+            headers.Add(header.Key, header);
         }
 
         public bool ContainsHeader(string key)
         {
-            return this.headers.ContainsKey(key);
+            CoreValidator.ThrowIfNullOrEmpty(key, nameof(key));
+            return headers.ContainsKey(key);
         }
 
         public HttpHeader GetHeader(string key)
         {
-            return this.headers.FirstOrDefault(x => x.Key == key).Value;
+            CoreValidator.ThrowIfNullOrEmpty(key, nameof(key));
+            return headers[key];
         }
 
-        public override string ToString()
-        {
-            return string.Join(Environment.NewLine, this.headers.Select(x => x.Value));
-        }
+        public override string ToString() => string.Join(Environment.NewLine, this.headers.Values.Select(header => header.ToString()));
     }
 }

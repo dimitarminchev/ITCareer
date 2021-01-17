@@ -4,16 +4,16 @@ namespace MiniServer.HTTP
 {
     public class BadRequestException : Exception
     {
-        public const string error = "The Request was malformed or contains unsupported elements.";
+        private const string BadRequestExceptionDefaultMessage = "The Request was malformed or contains unsupported elements.";
 
-        public BadRequestException()
+        public BadRequestException() : this(BadRequestExceptionDefaultMessage)
         {
-            throw new Exception(error);
+            ; ;
         }
 
-        public BadRequestException(string message) : base(message)
+        public BadRequestException(string name) : base(name)
         {
-            throw new Exception(message);
+            ; ;
         }
     }
 }

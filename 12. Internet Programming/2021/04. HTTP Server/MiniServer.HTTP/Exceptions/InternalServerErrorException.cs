@@ -4,11 +4,16 @@ namespace MiniServer.HTTP
 {
     public class InternalServerErrorException : Exception
     {
-        public const string error = "The Server has encountered an error.";
+        private const string InternalServerErrorExceptionDefaultMessage = "The Server has encountered an error.";
 
-        public InternalServerErrorException()
+        public InternalServerErrorException() : this(InternalServerErrorExceptionDefaultMessage)
         {
-            throw new Exception(error);
+            ;;
+        }
+
+        public InternalServerErrorException(string name) : base(name)
+        {
+            ;;
         }
     }
 }
