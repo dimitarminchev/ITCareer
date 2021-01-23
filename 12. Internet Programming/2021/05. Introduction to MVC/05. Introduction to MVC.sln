@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniServer.HTTP", "MiniServer.HTTP\MiniServer.HTTP.csproj", "{DA5F2E51-2377-4E7D-9B92-5D24194FE2A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniServer.HTTP", "MiniServer.HTTP\MiniServer.HTTP.csproj", "{DA5F2E51-2377-4E7D-9B92-5D24194FE2A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniServer.WebServer", "MiniServer.WebServer\MiniServer.WebServer.csproj", "{1AF60F7B-EF9F-407D-A65C-2832EBC758D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniServer.WebServer", "MiniServer.WebServer\MiniServer.WebServer.csproj", "{1AF60F7B-EF9F-407D-A65C-2832EBC758D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniServer.Demo", "MiniServer.Demo\MiniServer.Demo.csproj", "{8729CC75-9F57-40F2-8B88-38BE75326056}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRunes.App", "IRunes.App\IRunes.App.csproj", "{B279ED14-273B-4082-A68B-7A1CDDFE5AE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{1AF60F7B-EF9F-407D-A65C-2832EBC758D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AF60F7B-EF9F-407D-A65C-2832EBC758D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AF60F7B-EF9F-407D-A65C-2832EBC758D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8729CC75-9F57-40F2-8B88-38BE75326056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8729CC75-9F57-40F2-8B88-38BE75326056}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8729CC75-9F57-40F2-8B88-38BE75326056}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8729CC75-9F57-40F2-8B88-38BE75326056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B279ED14-273B-4082-A68B-7A1CDDFE5AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B279ED14-273B-4082-A68B-7A1CDDFE5AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B279ED14-273B-4082-A68B-7A1CDDFE5AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B279ED14-273B-4082-A68B-7A1CDDFE5AE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
