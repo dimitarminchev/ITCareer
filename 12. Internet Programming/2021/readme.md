@@ -13,15 +13,13 @@
 01. Internet and Sockets 
 02. HTTP
 03. Introduction to HTML
-04. HTTP Server (part 1)
-05. HTTP Server (part 2)
-06. Introduction to MVC (part 1)
-07. Introduction to MVC (part 2)
-08. Database
-09. Template Language
-10. State Management
-11. Authentication and Authorization
-12. Security
-13. REST API
-14. Consuming REST API
-15. Deployment
+04. HTTP Server 
+05. Introduction to MVC
+06. Database
+07. Template Language
+08. State Management
+09. Authentication and Authorization
+10. Security
+11. REST API
+12. Consuming REST API
+13. Deployment
