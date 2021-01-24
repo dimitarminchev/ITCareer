@@ -1,0 +1,72 @@
+﻿@page
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chushka</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</head>
+<body>
+
+    <!-- menu -->
+    <ul class="nav m-4 p-4 container bg-danger text-white">
+        <div class="navbar-brand">CHUSHKA</div>
+        <li class="nav-item">
+            <a class="nav-link active" href="Index">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Login">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Register">Register</a>
+        </li>
+    </ul>
+    <!-- /menu -->
+
+    <!-- content -->
+    <div class="container m-5 p-5">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center">Register</h1>
+                <form method="post" action="Register">
+                    <div class="mb-3">
+                        <label for="username">Username</label>
+                        <input class="form-control" type="text" name="username" placeholder="Username..." />
+                    </div>
+                    <div class="mb-3">
+                        <label for="password">Password</label>
+                        <input class="form-control" type="password" name="password" placeholder="Password..." />
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input class="form-control" type="password" name="confirm-password" placeholder="Confirm Password..." />
+                    </div>
+                    <div class="mb-3">
+                        <label for="fullname">Full name</label>
+                        <input class="form-control" type="text" name="fullname" placeholder="Full Name..." />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="text" name="email" placeholder="Email..." />
+                    </div>
+                    <input type="submit" class="btn btn-danger" value="Register" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /content -->
+
+    <!-- footer -->
+    <footer class="container m-4 bg-danger text-white text-center">
+        <p>&copy; CopyRight Sanity Web Design Studios 2018. All Rights Reseved.</p>
+    </footer>
+    <!-- /footer -->
+
+</body>
+</html>
