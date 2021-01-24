@@ -8,13 +8,16 @@ namespace IRunes.App.Controllers
 {
     public abstract class BaseController
     {
+        // Data
+        protected Dictionary<string, object> ViewData;
+        
+        // Constructor
         protected BaseController()
         {
             this.ViewData = new Dictionary<string, object>();
         }
 
-        protected Dictionary<string, object> ViewData;
-
+        // Parse
         private string ParseTemplate(string viewContent)
         {
             foreach (var param in this.ViewData)
@@ -24,6 +27,7 @@ namespace IRunes.App.Controllers
             return viewContent;
         }
 
+        // View
         protected IHttpResponse View([CallerMemberName] string view = null)
         {
             string controllerName = this.GetType().Name.Replace("Controller", string.Empty);
@@ -34,6 +38,7 @@ namespace IRunes.App.Controllers
             return htmlResult;
         }
 
+        // Redirect
         protected IHttpResponse Redirect(string url)
         {
             return new RedirectResult(url);
