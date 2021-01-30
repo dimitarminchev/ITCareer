@@ -29,18 +29,20 @@ namespace Demo
         {
             services.AddDbContext<ApplicationDbContext>
             (
-                options => options.UseSqlServer( Configuration.GetConnectionString("DefaultConnection"))
-            );
+                options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+            ); 
             services.AddDefaultIdentity<IdentityUser>
             (
                 options =>
                 {
                     options.Password.RequireNonAlphanumeric = false;
-                    options.Password.RequiredLength = 6;
+                    options.Password.RequiredLength = 5;
+                    options.Password.RequireDigit = false;
                     options.Password.RequireUppercase = false;
                     options.SignIn.RequireConfirmedAccount = true;
                 }
-            ).AddEntityFrameworkStores<ApplicationDbContext>();
+            )
+            .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
         }
 
