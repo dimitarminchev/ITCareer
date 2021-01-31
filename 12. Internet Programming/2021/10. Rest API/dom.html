@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>DOM sample</title>
+</head>
+<body>
+
+<!-- html -->
+<h1>DOM sample</h1>
+<div id="div1">
+ <p id="p1">This is a paragraph.</p>
+ <p id="p2">This is another paragraph.</p>
+</div>
+
+<!-- js -->
+<script>
+// Remove 
+let parentDiv = document.getElementById("div1");
+let firstP = document.getElementById("p1");
+let secondP = document.getElementById("p2");
+firstP.remove();
+parentDiv.removeChild(secondP);
+
+// Add 
+let list = document.createElement("ul");
+let firstLi = document.createElement("li");
+firstLi.textContent = "Peter";
+list.appendChild(firstLi);
+let secondLi = document.createElement("li");
+secondLi.innerHTML = "<b>Maria</b>";
+list.appendChild(secondLi);
+document.body.appendChild(list);
+
+// Get
+let firstOne = document.getElementsByTagName('li')[0];
+console.log(firstOne);
+
+// Click
+function handler() {
+  alert("You have clicked me!");
+}
+let btn = document.createElement("button");
+btn.textContent = "Click me!";
+btn.addEventListener('click', handler);
+document.body.appendChild(btn);
+</script>
+
+</body>
+</html>

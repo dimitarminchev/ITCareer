@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>AJAX sample</title>
+</head>
+<body>
+
+<!-- Heading -->
+<h1>AJAX Sample</h1>
+
+<!-- Request 1 -->
+<button onclick="request1()">XMLHttpRequest</button>
+
+<!-- Request 2 -->
+<button onclick="request2()">fetch</button>
+
+<!-- Result -->
+<pre id="result"></pre>
+
+<!-- JavaScript -->
+<script>
+// 1. XMLHttpRequest
+function request1() 
+{
+  const req = new XMLHttpRequest();
+  req.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200)
+      document.getElementById("result").textContent =
+        this.responseText;
+  };
+  req.open("GET",
+    "https://api.github.com/users/dimitarminchev/repos", true);
+  req.send();
+}
+
+// 2. fetch get request
+function request2() 
+{
+fetch('https://api.github.com/users/dimitarminchev/repos')
+.then((response) => response.json())
+.then((data) => document.getElementById("result").textContent = JSON.stringify(data))
+//.then((data) => console.log(JSON.stringify(data)))
+.catch((error) => console.error(error))
+}
+// 3. fetch post request
+/*
+fetch('/url', {
+  method: 'post',
+  headers: { 'Content-type': 'application/json' },
+  body: JSON.stringify(data),
+})
+*/
+</script>
+
+</body>
+</html>
