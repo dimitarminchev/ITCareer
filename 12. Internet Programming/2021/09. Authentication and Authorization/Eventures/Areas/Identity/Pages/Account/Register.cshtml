@@ -1,0 +1,67 @@
+@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="mt-5 mb-3 w-50 container text-center">
+    <form method="post" asp-action-returnUrl="@Model.ReturnUrl">
+        <h2>Register</h2>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <hr class="hr-2 eventures-bg-color">
+        <div class="row">
+            <div class="col-6 form-group">
+                <label asp-for="Input.Username"></label>
+                <input class="form-control" asp-for="Input.Username" placeholder="@Html.DisplayNameFor(d => d.Input.Username)..."/>
+                <span asp-validation-for="Input.Username" class="text-danger"></span>
+            </div>
+
+            <div class="col-6 form-group">
+                <label asp-for="Input.Email"></label>
+                <input class="form-control" asp-for="Input.Email" placeholder="@Html.DisplayNameFor(d => d.Input.Email)..."/>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+
+            <div class="col-6 form-group">
+                <label asp-for="Input.Password" class="mt-3"></label>
+                <input class="form-control" asp-for="Input.Password" placeholder="@Html.DisplayNameFor(d => d.Input.Password)..."/>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+
+            <div class="col-6 d-flex flex-column">
+                <label asp-for="Input.ConfirmPassword" class="mt-3"></label>
+                <input class="form-control" asp-for="Input.ConfirmPassword" placeholder="@Html.DisplayNameFor(d => d.Input.ConfirmPassword)..."/>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+
+        <hr class="hr-2 eventures-bg-color my-4">
+
+        <div class="row">
+            <div class="col-6 form-group">
+                <label asp-for="Input.FirstName"></label>
+                <input class="form-control" asp-for="Input.FirstName" placeholder="@Html.DisplayNameFor(d => d.Input.FirstName)..."/>
+                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+            </div>
+            <div class="col-6 form-group">
+                <label asp-for="Input.LastName"></label>
+                <input class="form-control" asp-for="Input.LastName" placeholder="@Html.DisplayNameFor(d => d.Input.LastName)..."/>
+                <span asp-validation-for="Input.LastName" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group mt-3">
+            <label asp-for="Input.UniqueCitizenNumber"></label>
+            <input class="form-control" asp-for="Input.UniqueCitizenNumber" placeholder="Universal Citizen Number..."/>
+            <span asp-validation-for="Input.UniqueCitizenNumber" class="text-danger"></span>
+        </div>
+
+        <hr class="hr-2 eventures-bg-color my-4">
+
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}
