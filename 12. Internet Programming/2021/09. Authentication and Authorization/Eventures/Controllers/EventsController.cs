@@ -51,6 +51,16 @@ namespace Eventures.Controllers
             });
         }
 
+        [Authorize]
+        public async Task<IActionResult> My()
+        {
+            var orders = (await this.ordersService
+                    .GetAllForUser(this.User.Identity.Name))
+                .Select(Mapper.Map<OrderListingViewModel>);
+
+            return this.View(orders);
+        }
+
         [Authorize(Roles = GlobalConstants.AdminRoleName)]
         public IActionResult Create()
         {
@@ -75,14 +85,6 @@ namespace Eventures.Controllers
             return this.RedirectToAction("All");
         }
 
-        [Authorize]
-        public async Task<IActionResult> My()
-        {
-            var orders = (await this.ordersService
-                    .GetAllForUser(this.User.Identity.Name))
-                .Select(Mapper.Map<OrderListingViewModel>);
-
-            return this.View(orders);
-        }
+        
     }
 }

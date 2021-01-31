@@ -19,7 +19,4 @@
 07. Template Language
 08. State Management
 09. Authentication and Authorization
-10. Security
-11. REST API
-12. Consuming REST API
-13. Deployment
+10. REST API & Consuming REST API
