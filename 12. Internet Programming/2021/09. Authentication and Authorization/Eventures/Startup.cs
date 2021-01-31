@@ -1,4 +1,5 @@
 using Eventures.Data;
+using Eventures.Data.Mapping;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -20,6 +21,8 @@ namespace Eventures
         // Constructor
         public Startup(IConfiguration configuration)
         {
+            AutoMapperConfig.ConfigureMapping();
+
             Configuration = configuration;
         }
 

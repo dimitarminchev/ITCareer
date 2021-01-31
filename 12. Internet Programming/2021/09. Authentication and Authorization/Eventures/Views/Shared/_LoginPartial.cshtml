@@ -1,14 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
-
 @using Eventures.Data;
 @inject SignInManager<User> SignInManager
 @inject UserManager<User> userManager
-
-@{
-    // @inject SignInManager<IdentityUser> SignInManager
-    // @inject UserManager<IdentityUser> UserManager
-}
-
 
 <ul class="navbar-nav">
     @if (SignInManager.IsSignedIn(User))

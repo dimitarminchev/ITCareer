@@ -53,6 +53,7 @@ namespace Eventures.Web.Areas.Identity.Pages.Account
             public bool RememberMe { get; set; }
         }
 
+        // GET
         public async Task<IActionResult> OnGetAsync(string returnUrl = null)
         {
             returnUrl = returnUrl ?? this.Url.Content("~/");
@@ -79,6 +80,7 @@ namespace Eventures.Web.Areas.Identity.Pages.Account
             return this.Page();
         }
 
+        // POST
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             

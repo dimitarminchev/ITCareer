@@ -1,0 +1,32 @@
+﻿@model IEnumerable<OrderListingViewModel>
+
+@{
+    ViewData["Title"] = "My Events";
+    const string dateFormat = "dd-MMM-yyyy hh:mm:ss";
+}
+
+<h1 class="text-center">My Events</h1>
+
+<table class="table">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Tickets</th>
+    </tr>
+
+    @{ var orders = Model as OrderListingViewModel[] ?? Model.ToArray(); }
+    @for (int i = 0; i < orders.Length; i++)
+    {
+        var m = orders[i];
+
+        <tr>
+            <th>@(i + 1)</th>
+            <td>@m.Event.Name</td>
+            <td>@m.Event.StartDate.ToString(dateFormat)</td>
+            <td>@m.Event.EndDate.ToString(dateFormat)</td>
+            <td>@m.TicketsCount</td>
+        </tr>
+    }
+</table>

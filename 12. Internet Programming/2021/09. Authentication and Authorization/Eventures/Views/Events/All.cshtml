@@ -1,0 +1,63 @@
+﻿@model AllEventsViewModel
+
+@{ ViewData["Title"] = "All Events";
+    const string dateFormat = "dd-MMM-yyyy hh:mm"; }
+
+<h1 class="text-center">All Events</h1>
+<table class="table">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Place</th>
+        <th>Actions</th>
+    </tr>
+
+
+    @{ var orders = Model.Events as EventListingViewModel[] ?? Model.Events.ToArray(); }
+    @for (int i = 0; i < orders.Length; i++)
+    {
+        var m = orders[i];
+
+<tr>
+    <th>@((Model.CurrentPage - 1) * 10 + i + 1)</th>
+    <td>@m.Name</td>
+    <td>@m.StartDate.ToString(dateFormat)</td>
+    <td>@m.EndDate.ToString(dateFormat)</td>
+    <td>@m.Place</td>
+    <td>
+        @await Html.PartialAsync("_OrderPartial", new OrderCreateBindingModel
+        {
+            EventId = m.Id
+        })
+    </td>
+</tr>
+}
+
+</table>
+
+<!-- Paging -->
+<nav>
+    <ul class="pagination justify-content-center">
+        <li class="page-item @(Model.CurrentPage == 1 ? "disabled" : "")">
+            <a class="page-link" asp-action="All" asp-controller="Events" asp-route-page="@(Model.CurrentPage - 1)">
+                &laquo;
+            </a>
+        </li>
+
+        @for (int pageNumber = 1; pageNumber <= Model.PageCount; pageNumber++)
+        {
+<li class="page-item @(Model.CurrentPage == pageNumber ? "active" : "")">
+    <a class="page-link" asp-action="All" asp-controller="Events" asp-route-page="@pageNumber">
+        @pageNumber
+    </a>
+</li>
+       }
+        <li class="page-item @(Model.CurrentPage == Model.PageCount ? "disabled" : "")">
+            <a class="page-link" asp-action="All" asp-controller="Events" asp-route-page="@(Model.CurrentPage + 1)">
+                &raquo;
+            </a>
+        </li>
+    </ul>
+</nav>
