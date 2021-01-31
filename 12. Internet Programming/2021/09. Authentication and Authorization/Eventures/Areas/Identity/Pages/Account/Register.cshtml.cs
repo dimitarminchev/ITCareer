@@ -75,6 +75,7 @@ namespace Eventures.Web.Areas.Identity.Pages.Account
             public string UniqueCitizenNumber { get; set; }
         }
 
+        // GET
         public IActionResult OnGet(string returnUrl = null)
         {
             returnUrl = returnUrl ?? this.Url.Content("~/");
@@ -89,6 +90,7 @@ namespace Eventures.Web.Areas.Identity.Pages.Account
             return this.Page();
         }
 
+        // POST
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl = returnUrl ?? this.Url.Content("~/");
