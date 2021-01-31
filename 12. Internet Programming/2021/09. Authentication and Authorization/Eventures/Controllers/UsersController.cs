@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Eventures.Data;
 using Eventures.Models;
+using AutoMapper;
 
 namespace Eventures.Controllers
 {
@@ -26,7 +27,7 @@ namespace Eventures.Controllers
                 .ToArray();
 
             var adminIds = (await this.userManager
-                    .GetUsersInRoleAsync(GlobalConstants.AdminRoleName))
+                .GetUsersInRoleAsync(GlobalConstants.AdminRoleName))
                 .Select(r => r.Id)
                 .ToHashSet();
 

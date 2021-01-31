@@ -1,0 +1,13 @@
+﻿@model OrderCreateBindingModel
+
+<form asp-controller="Orders" asp-action="Create" method="post">
+    <div class="d-flex align-items-center">
+        <label class="font-weight-bold text-left mr-1" asp-for="TicketsCount">Tickets:</label>
+        <div class="mr-1">
+            <input class="form-control" min="1" asp-for="TicketsCount" />
+            <span asp-validation-for="TicketsCount" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-danger">Order</button>
+    </div>
+    <input type="hidden" asp-for="EventId" value="@Model.EventId">
+</form>

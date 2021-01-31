@@ -29,7 +29,6 @@ namespace Eventures.Controllers
             }
 
             var serviceModel = Mapper.Map<OrderServiceModel>(model);
-
             serviceModel.OrderedOn = DateTime.Now;
 
             var result = await this.ordersService.Create(serviceModel, this.User.Identity.Name);
@@ -42,7 +41,7 @@ namespace Eventures.Controllers
         }
 
         [Authorize(Roles = GlobalConstants.AdminRoleName)]
-        public async Task<IActionResult> All()
+        public async Task<IActionResult> Index()
         {
             var orders = (await this.ordersService.GetAll())
                 .Select(Mapper.Map<OrderListingViewModel>);

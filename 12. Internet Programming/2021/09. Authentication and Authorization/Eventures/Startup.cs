@@ -21,8 +21,6 @@ namespace Eventures
         // Constructor
         public Startup(IConfiguration configuration)
         {
-            AutoMapperConfig.ConfigureMapping();
-
             Configuration = configuration;
         }
 
@@ -60,12 +58,15 @@ namespace Eventures
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+
         }
 
         /* This method gets called by the runtime. 
            Use this method to configure the HTTP request pipeline. */
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            AutoMapperConfig.ConfigureMapping();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -77,6 +78,10 @@ namespace Eventures
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            // Database, Roles and Admin
+            app.UseSeedMiddleware();
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

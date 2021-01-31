@@ -1,9 +1,14 @@
 ﻿@model AllEventsViewModel
 
-@{ ViewData["Title"] = "All Events";
-    const string dateFormat = "dd-MMM-yyyy hh:mm"; }
+@{
+    ViewData["Title"] = "All Events";
+    const string dateFormat = "dd MMM yyyy hh:mm"; 
+}
 
-<h1 class="text-center">All Events</h1>
+<!-- Title -->
+<h2>All Events</h2>
+
+<!-- Table -->
 <table class="table">
     <tr>
         <th>#</th>
@@ -32,12 +37,11 @@
             EventId = m.Id
         })
     </td>
-</tr>
-}
+</tr>}
 
 </table>
 
-<!-- Paging -->
+<!-- Paginator -->
 <nav>
     <ul class="pagination justify-content-center">
         <li class="page-item @(Model.CurrentPage == 1 ? "disabled" : "")">
@@ -52,8 +56,7 @@
     <a class="page-link" asp-action="All" asp-controller="Events" asp-route-page="@pageNumber">
         @pageNumber
     </a>
-</li>
-       }
+</li>}
         <li class="page-item @(Model.CurrentPage == Model.PageCount ? "disabled" : "")">
             <a class="page-link" asp-action="All" asp-controller="Events" asp-route-page="@(Model.CurrentPage + 1)">
                 &raquo;

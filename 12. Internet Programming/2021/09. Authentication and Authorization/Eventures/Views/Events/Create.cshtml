@@ -1,0 +1,58 @@
+﻿@model EventCreateBindingModel
+
+@{ ViewData["Title"] = "Create Event"; }
+
+<div class="m-2 container">
+    <form method="post">
+        <h2>Create Event</h2>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <hr class="hr-2 eventures-bg-color">
+        <div class="row">
+            <div class="col-6 form-group">
+                <label asp-for="Name">Name:</label>
+                <input class="form-control" asp-for="Name" placeholder="@Html.DisplayNameFor(d => d.Name)..." />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="col-6 form-group">
+                <label asp-for="Place">Place:</label>
+                <input class="form-control" asp-for="Place" placeholder="@Html.DisplayNameFor(d => d.Place)..." />
+                <span asp-validation-for="Place" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 form-group">
+                <label asp-for="StartDate">Start Date:</label>
+                <input class="form-control" asp-for="StartDate" type="datetime-local" placeholder="@Html.DisplayNameFor(d => d.StartDate)..." />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+
+            <div class="col-6 form-group">
+                <label asp-for="EndDate">End Date:</label>
+                <input class="form-control" asp-for="EndDate" type="datetime-local" placeholder="@Html.DisplayNameFor(d => d.EndDate)..." />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 form-group">
+                <label asp-for="TotalTickets">Total Tickets:</label>
+                <input class="form-control" min="1" asp-for="TotalTickets" placeholder="@Html.DisplayNameFor(d => d.TotalTickets)..." />
+                <span asp-validation-for="TotalTickets" class="text-danger"></span>
+            </div>
+
+            <div class="col-6 form-group">
+                <label asp-for="PricePerTicket">Price Per Ticket:</label>
+                <input class="form-control" asp-for="PricePerTicket" placeholder="@Html.DisplayNameFor(d => d.PricePerTicket)..." />
+                <span asp-validation-for="PricePerTicket" class="text-danger"></span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create Event</button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -27,23 +27,40 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
 
+                        <!-- User -->
                         @if (SignInManager.IsSignedIn(User))
                         {
-                            <!-- Authenticated User -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Events" asp-action="All">All Events</a>
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Events" asp-action="My">My Events</a>
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-events" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown-menu-events">
+                                    <a class="nav-link text-dark" asp-controller="Events" asp-action="All">All Events</a>
+                                    <a class="nav-link text-dark" asp-controller="Events" asp-action="My">My Events</a>
+
+                                    <!-- Admin / Create Event -->
+                                    @if (User.IsInRole(GlobalConstants.AdminRoleName))
+                                    {
+                                        <a class="nav-link text-dark" asp-controller="Events" asp-action="Create">Create Event</a>
+                                    }
+
                                 </div>
                             </li>
                         }
-                        <!--
-                        <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        -->
+
+                        <!-- Admin / Orders -->
+                        @if (User.IsInRole(GlobalConstants.AdminRoleName))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Orders" asp-action="Index">Orders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Users" asp-action="Index">Users</a>
+                            </li>
+                        }
+
                     </ul>
                 </div>
             </div>

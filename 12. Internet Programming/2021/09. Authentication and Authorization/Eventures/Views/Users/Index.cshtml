@@ -1,0 +1,46 @@
+@model IEnumerable<UserListingViewModel>
+@{ 
+    ViewData["Title"] = "Users"; 
+}
+
+<!-- Title -->
+<h2>Users</h2>
+
+<!-- Table -->
+<table class="table">
+<tr>
+    <th>Username</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>UCN</th>
+    <th>Actions</th>
+</tr>
+
+@foreach (var user in Model)
+{
+    <tr>
+        <td>@user.UserName @(user.IsAdmin ? "(Admin)" : "")</td>
+        <td>@user.FirstName @user.LastName</td>
+        <td>@user.Email</td>
+        <td>@user.UniqueCitizenNumber</td>
+        <td>
+
+        @if (!user.IsAdmin)
+        {
+            <form asp-action="Promote" asp-controller="Users" method="post">
+                <input type="hidden" name="userId" value="@user.Id">
+                <button type="submit" class="btn btn-success">Promote</button>
+            </form> 
+        }
+        else
+        {
+            <form asp-action="Demote" asp-controller="Users" method="post">
+                <input type="hidden" name="userId" value="@user.Id">
+                <button type="submit" class="btn btn-danger">Demote</button>
+            </form>
+        }
+
+        </td>
+    </tr>
+}
+</table>

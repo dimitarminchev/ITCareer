@@ -1,5 +1,3 @@
-using System;
-
 namespace Eventures.Models
 {
     public class ErrorViewModel
