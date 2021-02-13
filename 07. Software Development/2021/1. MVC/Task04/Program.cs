@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Task04.Controllers;
 
 namespace Task04
 {
@@ -6,7 +6,7 @@ namespace Task04
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            PasswordController passwords = new PasswordController();
         }
     }
 }
