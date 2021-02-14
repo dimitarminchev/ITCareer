@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxeExample", "AxeExample\Ax
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxeExample.NUnit", "AxeExample.NUnit\AxeExample.NUnit.csproj", "{15CBE8BE-8656-4E8D-A780-2A42E263D3BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxeExample.MSTest", "AxeExample.MSTest\AxeExample.MSTest.csproj", "{0F1A6B90-09A7-4093-A38C-28B75449F58A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{15CBE8BE-8656-4E8D-A780-2A42E263D3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15CBE8BE-8656-4E8D-A780-2A42E263D3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15CBE8BE-8656-4E8D-A780-2A42E263D3BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F1A6B90-09A7-4093-A38C-28B75449F58A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F1A6B90-09A7-4093-A38C-28B75449F58A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F1A6B90-09A7-4093-A38C-28B75449F58A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F1A6B90-09A7-4093-A38C-28B75449F58A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
