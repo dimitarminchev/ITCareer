@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_InstructionSet", "02_Ins
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_BePositive", "03_BePositive\03_BePositive.csproj", "{838A1CB8-BDBD-429D-8951-E5E0551C2B16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_ArraysTest", "04_ArraysTest\04_ArraysTest.csproj", "{0ECA3F24-D2F6-4C58-A245-B8DC04C8C6A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{838A1CB8-BDBD-429D-8951-E5E0551C2B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{838A1CB8-BDBD-429D-8951-E5E0551C2B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{838A1CB8-BDBD-429D-8951-E5E0551C2B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ECA3F24-D2F6-4C58-A245-B8DC04C8C6A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ECA3F24-D2F6-4C58-A245-B8DC04C8C6A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ECA3F24-D2F6-4C58-A245-B8DC04C8C6A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ECA3F24-D2F6-4C58-A245-B8DC04C8C6A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
