@@ -4,11 +4,6 @@
     {
         static void Main()
         {
-            byte number = byte.Parse(System.Console.ReadLine());
-            byte rotations = byte.Parse(System.Console.ReadLine());
-
-            for (int i = 0; i < rotations; i++)
-            {
 /* Input:
 45
 3
@@ -16,6 +11,10 @@ left
 right
 left
 */
+            byte number = byte.Parse(System.Console.ReadLine());
+            byte rotations = byte.Parse(System.Console.ReadLine());
+            for (int i = 0; i < rotations; i++)
+            {
                 string direction = System.Console.ReadLine();
                 if (direction == "right")
                 {
@@ -34,7 +33,6 @@ left
 
                 }
             }
-
             Console.WriteLine(number);
         }
     }
