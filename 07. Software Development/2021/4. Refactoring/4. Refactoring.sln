@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_CohesionAndCoupling", "7_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8_InheritanceAndPolymorphism", "8_InheritanceAndPolymorphism\8_InheritanceAndPolymorphism.csproj", "{7E12C13C-B524-4E75-91B6-655E1EB75EE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9_WalkinInMatrix", "9_WalkinInMatrix\9_WalkinInMatrix.csproj", "{4A63EF48-A19B-4101-8AE0-30599541CA29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{7E12C13C-B524-4E75-91B6-655E1EB75EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E12C13C-B524-4E75-91B6-655E1EB75EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E12C13C-B524-4E75-91B6-655E1EB75EE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A63EF48-A19B-4101-8AE0-30599541CA29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A63EF48-A19B-4101-8AE0-30599541CA29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A63EF48-A19B-4101-8AE0-30599541CA29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A63EF48-A19B-4101-8AE0-30599541CA29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
