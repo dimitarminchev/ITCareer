@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_ArraySlider", "1_ArraySlider\1_ArraySlider.csproj", "{FE910A67-8B44-408E-BD61-E13D045EFD81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_YoloSnake", "2_YoloSnake\2_YoloSnake.csproj", "{D7DC3CC2-8569-4D33-8FBC-32FB6396F36F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FE910A67-8B44-408E-BD61-E13D045EFD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE910A67-8B44-408E-BD61-E13D045EFD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE910A67-8B44-408E-BD61-E13D045EFD81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7DC3CC2-8569-4D33-8FBC-32FB6396F36F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7DC3CC2-8569-4D33-8FBC-32FB6396F36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7DC3CC2-8569-4D33-8FBC-32FB6396F36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7DC3CC2-8569-4D33-8FBC-32FB6396F36F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
