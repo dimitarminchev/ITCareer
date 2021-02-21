@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_ArraySlider", "1_ArraySli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_YoloSnake", "2_YoloSnake\2_YoloSnake.csproj", "{D7DC3CC2-8569-4D33-8FBC-32FB6396F36F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_StringExtensions", "3_StringExtensions\3_StringExtensions.csproj", "{8D96D2CE-D1DC-4700-B95C-0043A9179B68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D7DC3CC2-8569-4D33-8FBC-32FB6396F36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7DC3CC2-8569-4D33-8FBC-32FB6396F36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7DC3CC2-8569-4D33-8FBC-32FB6396F36F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D96D2CE-D1DC-4700-B95C-0043A9179B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D96D2CE-D1DC-4700-B95C-0043A9179B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D96D2CE-D1DC-4700-B95C-0043A9179B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D96D2CE-D1DC-4700-B95C-0043A9179B68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
