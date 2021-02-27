@@ -22,16 +22,17 @@
     <Language>en-US</Language>
     <DocumentationSources>
       <DocumentationSource sourceFile="1_ArraySlider\1_ArraySlider.csproj" />
-<DocumentationSource sourceFile="2_YoloSnake\2_YoloSnake.csproj" />
-<DocumentationSource sourceFile="3_StringExtensions\3_StringExtensions.csproj" />
-<DocumentationSource sourceFile="4_FiveSpecialLetters\4_FiveSpecialLetters.csproj" />
-<DocumentationSource sourceFile="5_Methods\5_Methods.csproj" />
-<DocumentationSource sourceFile="6_Abstraction\6_Abstraction.csproj" />
-<DocumentationSource sourceFile="7_CohesionAndCoupling\7_CohesionAndCoupling.csproj" />
-<DocumentationSource sourceFile="8_InheritanceAndPolymorphism\8_InheritanceAndPolymorphism.csproj" />
-<DocumentationSource sourceFile="9_WalkinInMatrix\9_WalkinInMatrix.csproj" /></DocumentationSources>
+      <DocumentationSource sourceFile="2_YoloSnake\2_YoloSnake.csproj" />
+      <DocumentationSource sourceFile="3_StringExtensions\3_StringExtensions.csproj" />
+      <DocumentationSource sourceFile="4_FiveSpecialLetters\4_FiveSpecialLetters.csproj" />
+      <DocumentationSource sourceFile="5_Methods\5_Methods.csproj" />
+      <DocumentationSource sourceFile="6_Abstraction\6_Abstraction.csproj" />
+      <DocumentationSource sourceFile="7_CohesionAndCoupling\7_CohesionAndCoupling.csproj" />
+      <DocumentationSource sourceFile="8_InheritanceAndPolymorphism\8_InheritanceAndPolymorphism.csproj" />
+      <DocumentationSource sourceFile="9_WalkinInMatrix\9_WalkinInMatrix.csproj" />
+    </DocumentationSources>
     <HelpFileFormat>HtmlHelp1</HelpFileFormat>
-    <SyntaxFilters>C#, Managed C++</SyntaxFilters>
+    <SyntaxFilters>C#</SyntaxFilters>
     <PresentationStyle>VS2013</PresentationStyle>
     <CleanIntermediates>True</CleanIntermediates>
     <KeepLogFile>True</KeepLogFile>
