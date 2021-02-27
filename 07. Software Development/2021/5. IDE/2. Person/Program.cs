@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// Person namespace
+/// </summary>
 namespace _2._Person
 {
     /// <summary>

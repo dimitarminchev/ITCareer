@@ -1,4 +1,7 @@
-﻿namespace _2._Person
+﻿/// <summary>
+/// Person namespace
+/// </summary>
+namespace _2._Person
 {
     /// <summary>
     /// Bank Accound Class.

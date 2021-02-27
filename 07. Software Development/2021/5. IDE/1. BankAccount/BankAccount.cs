@@ -1,4 +1,7 @@
-﻿namespace _1._BankAccount
+﻿/// <summary>
+/// Bank Account Namespace
+/// </summary>
+namespace _1._BankAccount
 {
     /// <summary>
     /// Bank Accound Class.
