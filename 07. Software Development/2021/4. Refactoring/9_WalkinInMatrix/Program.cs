@@ -3,7 +3,7 @@
 namespace WalkinInMatrix
 {
     /// <summary>
-    /// Walkin in matrix main program class.
+    /// Walkin in matrix main program class. 
     /// </summary>
     class Program
     {
