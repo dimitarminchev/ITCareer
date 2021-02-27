@@ -1,20 +1,13 @@
 # XML Documentation
 
-## 1. Install
-Sandcastle Help File Builder project
-https://github.com/EWSoftware/SHFB
+## Download and Install
 
-Download Help File Builder and Tools v2020.3.6.0
-https://github.com/EWSoftware/SHFB/releases/download/v2020.3.6.0/SHFBInstaller_v2020.3.6.0.zip
+1. [Microsoft HTML Help Workshop 1.3](https://www.helpandmanual.com/download/htmlhelp.exe)
 
-Microsoft HTML Help
-https://docs.microsoft.com/en-us/previous-versions/windows/desktop/htmlhelp/microsoft-html-help-downloads
+2. [Sandcastle Help File Builder and Tools v2020.3.6.0](https://github.com/EWSoftware/SHFB/releases/download/v2020.3.6.0/SHFBInstaller_v2020.3.6.0.zip)
 
-Download Microsoft HTML Help Workshop 
-https://www.helpandmanual.com/download/htmlhelp.exe
-
-## 2. Create
-Command Prompt
+## Create Help
+Start Command Prompt as Administrator and execute following command:
 ```
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" /p:CleanIntermediates=True /p:Configuration=Debug "Refactoring.shfbproj"
 ```
