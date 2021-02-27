@@ -5,8 +5,14 @@ namespace CohesionAndCoupling
     // My namespace
     using Extensions;
 
+    /// <summary>
+    /// Cohesion and coupling main program class.
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Cohesion and coupling main program method.
+        /// </summary>
         static void Main(string[] args)
         {
             // FileExtesions

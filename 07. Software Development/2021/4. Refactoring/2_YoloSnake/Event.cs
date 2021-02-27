@@ -3,12 +3,21 @@ using System.Text;
 
 namespace YoloSnake
 {
+    /// <summary>
+    /// Yolo Snake Event Class
+    /// </summary>
     public class Event : IComparable
     {
         public DateTime date;
         public string title;
         public string location;
 
+        /// <summary>
+        /// Yolo Snake Event class constructor.
+        /// </summary>
+        /// <param name="date">DateTime</param>
+        /// <param name="title">Title</param>
+        /// <param name="location">Location</param>
         public Event(DateTime date, string title, string location)
         {
             this.date = date;
@@ -16,6 +25,11 @@ namespace YoloSnake
             this.location = location;
         }
 
+        /// <summary>
+        /// Yolo Snake CompareTo method.
+        /// </summary>
+        /// <param name="obj">Object</param>
+        /// <returns>Integer</returns>
         public int CompareTo(object obj)
         {
             Event other = obj as Event;
@@ -39,6 +53,10 @@ namespace YoloSnake
             }
         }
 
+        /// <summary>
+        /// Yolo Snake override To String method.
+        /// </summary>
+        /// <returns>String</returns>
         public override string ToString()
         {
             StringBuilder toString = new StringBuilder();

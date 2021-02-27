@@ -2,8 +2,15 @@
 
 namespace WalkinInMatrix
 {
+    /// <summary>
+    /// Walkin in matrix main program class.
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Walkin in matrix main program method.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             Console.Write("Enter a positive number: ");

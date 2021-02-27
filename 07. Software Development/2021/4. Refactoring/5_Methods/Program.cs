@@ -5,10 +5,13 @@ namespace _5_Methods
     // My Namespace
     using Methods;
 
+    /// <summary>
+    /// Methods main program class.
+    /// </summary>
     class Program
     {
         /// <summary>
-        /// Main Method
+        /// Methods main program method.
         /// </summary>
         static void Main(string[] args)
         {

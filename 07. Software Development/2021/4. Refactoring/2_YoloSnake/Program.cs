@@ -2,10 +2,20 @@
 
 namespace YoloSnake
 {
+    /// <summary>
+    /// Yolo Snake main program class.
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Yolo Snake events.
+        /// </summary>
         static EventHolder events = new EventHolder();
 
+        /// <summary>
+        /// Yolo Snake execute next command method.
+        /// </summary>
+        /// <returns>Boolean: true or false</returns>
         private static bool ExecuteNextCommand()
         {
             string command = Console.ReadLine();
@@ -19,6 +29,10 @@ namespace YoloSnake
             return false;
         }
 
+        /// <summary>
+        /// Yolo Snake list events method.
+        /// </summary>
+        /// <param name="command">Command</param>
         private static void ListEvents(string command)
         {
             int pipeIndex = command.IndexOf('|');
@@ -27,11 +41,22 @@ namespace YoloSnake
             int count = int.Parse(countString);
             events.ListEvents(date, count);
         }
+
+        /// <summary>
+        /// Yolo Snake delete command method.
+        /// </summary>
+        /// <param name="command">Command</param>
         private static void DeleteEvents(string command)
         {
             string title = command.Substring("DeleteEvents".Length + 1);
             events.DeleteEvents(title);
         }
+
+
+        /// <summary>
+        /// Yolo Snake add event method.
+        /// </summary>
+        /// <param name="command">Command</param>
         private static void AddEvent(string command)
         {
             DateTime date;
@@ -40,6 +65,15 @@ namespace YoloSnake
             GetParameters(command, "AddEvent", out date, out title, out location);
             events.AddEvent(date, title, location);
         }
+
+        /// <summary>
+        /// Yolo Snake get parameters method.
+        /// </summary>
+        /// <param name="commandForExecution">Command for execution</param>
+        /// <param name="commandType">Command type</param>
+        /// <param name="dateAndTime">DateTime</param>
+        /// <param name="eventTitle">Event title</param>
+        /// <param name="eventLocation">Event location</param>
         private static void GetParameters(string commandForExecution, string commandType,
                                           out DateTime dateAndTime, out string eventTitle,
                                           out string eventLocation)
@@ -60,12 +94,22 @@ namespace YoloSnake
                 eventLocation = commandForExecution.Substring(lastPipeIndex + 1).Trim();
             }
         }
+
+        /// <summary>
+        /// Yolo Snake get date method.
+        /// </summary>
+        /// <param name="command">Command</param>
+        /// <param name="commandType">Command type</param>
+        /// <returns></returns>
         private static DateTime GetDate(string command, string commandType)
         {
             DateTime date = DateTime.Parse(command.Substring(commandType.Length + 1, 20));
             return date;
         }
 
+        /// <summary>
+        /// Yolo Snake main method.
+        /// </summary>
         static void Main(string[] args)
         {
             while (ExecuteNextCommand())

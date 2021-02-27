@@ -7,11 +7,22 @@ namespace YoloSnake.Models
     using Enums;
     using Interfaces;
 
+    /// <summary>
+    /// Yolo Snake Class
+    /// </summary>
     public class Snake : IPlayable
     {
         private const Direction StartDirection = Direction.Right;
         private LinkedList<IPosition> positions;
         private readonly char symbol;
+
+        /// <summary>
+        /// Yolo Snake class constructor.
+        /// </summary>
+        /// <param name="symbol">Character</param>
+        /// <param name="startX">Start X coordinate position</param>
+        /// <param name="startY">Start Y coordinate position</param>
+        /// <param name="initialLength">Initial Lenght of the snake</param>
         public Snake(char symbol, int startX, int startY, int initialLength)
         {
             this.symbol = symbol;
@@ -19,12 +30,29 @@ namespace YoloSnake.Models
             this.Direction = StartDirection;
         }
 
+        /// <summary>
+        /// Yolo Snake Head
+        /// </summary>
         public IPosition Head { get { return positions.First.Value; } }
+
+        /// <summary>
+        /// Yolo Snake Direction
+        /// </summary>
         public Direction Direction { get; private set; }
+
+        /// <summary>
+        /// Yolo Snake Eat method.
+        /// </summary>
+        /// <param name="position"></param>
         public void Eat(IPosition position)
         {
             positions.AddLast(position);
         }
+
+        /// <summary>
+        /// Yolo Snake change direction method.
+        /// </summary>
+        /// <param name="newDirection"></param>
         public void ChangeDirection(Direction newDirection)
         {
             switch (newDirection)
@@ -47,6 +75,10 @@ namespace YoloSnake.Models
             }
 
         }
+
+        /// <summary>
+        /// Yolo Snake Move method
+        /// </summary>
         public void Move()
         {
             positions.RemoveLast();
@@ -71,6 +103,12 @@ namespace YoloSnake.Models
                     throw new ArgumentException("Unknown direction");
             }
         }
+
+
+        /// <summary>
+        /// Yolo Snake draw method.
+        /// </summary>
+        /// <param name="drawer">Drawer parameter</param>
         public void Draw(IDrawer drawer)
         {
             foreach (var position in this.positions)
@@ -82,6 +120,14 @@ namespace YoloSnake.Models
 
             drawer.DrawPoint(last.Value.X, last.Value.Y, ' ');
         }
+
+        /// <summary>
+        /// Yolo Snake initialize snake body.
+        /// </summary>
+        /// <param name="startX">Start X coordinate</param>
+        /// <param name="startY">Start Y coordinate</param>
+        /// <param name="initialLength">Initial snake lenght</param>
+
         private void InitializeSnakeBody(int startX, int startY, int initialLength)
         {
             positions = new LinkedList<IPosition>();

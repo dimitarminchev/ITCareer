@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace _4_FiveSpecialLetters
 {
+    /// <summary>
+    /// Five Special Letters main program class.
+    /// </summary>
     class Program
     {
         /// <summary>
@@ -50,7 +53,7 @@ namespace _4_FiveSpecialLetters
         private const int maxLetters = 5;
 
         /// <summary>
-        /// Main Method of the Program
+        /// ive Special Letters main program method.
         /// </summary>
         private static void Main()
         {

@@ -2,6 +2,9 @@
 
 namespace WalkinInMatrix
 {
+    /// <summary>
+    /// Walkin in matrix class.
+    /// </summary>
     public class Matrix
     {
         int[,] matrix;
@@ -13,11 +16,19 @@ namespace WalkinInMatrix
         int[] xDirectionInstructions = new int[] { 1, 1, 1, 0, -1, -1, -1, 0 };
         int[] yDirectionInstructions = new int[] { 1, 0, -1, -1, -1, 0, 1, 1 };
 
+        /// <summary>
+        /// Walkin in matrix class constructor.
+        /// </summary>
+        /// <param name="n">Integer</param>
         public Matrix(int n)
         {
             matrix = new int[n, n];
             dimensions = n;
         }
+
+        /// <summary>
+        /// Walkin in matrix class change direction method.
+        /// </summary>
         private void ChangeDirection()
         {
             int currentDirectionIndex = 0;
@@ -39,6 +50,11 @@ namespace WalkinInMatrix
             xDirection = xDirectionInstructions[currentDirectionIndex + 1];
             yDirection = yDirectionInstructions[currentDirectionIndex + 1];
         }
+
+        /// <summary>
+        /// Walkin in matrix class has visited all method.
+        /// </summary>
+        /// <returns>Boolean: true or false</returns>
         private bool HasVisitedAll()
         {
             for (int x = 0; x < dimensions; x++)
@@ -55,6 +71,9 @@ namespace WalkinInMatrix
             return true;
         }
 
+        /// <summary>
+        /// Walkin in matrix class get unvisited cell coordinates method.
+        /// </summary>
         private void GetUnvisitedCellCoords()
         {
             x = 0;
@@ -75,6 +94,10 @@ namespace WalkinInMatrix
             }
         }
 
+        /// <summary>
+        /// Walkin in matrix class posible move around method.
+        /// </summary>
+        /// <returns>Boolean: true or false</returns>
         private bool PossibleMoveAround()
         {
             int[] xDirectionInstuctions = { 1, 1, 1, 0, -1, -1, -1, 0 };
@@ -103,6 +126,9 @@ namespace WalkinInMatrix
             return false;
         }
 
+        /// <summary>
+        /// Walkin in matrix class print matrix method.
+        /// </summary>
         public void PrintMatrix()
         {
             for (int x = 0; x < dimensions; x++)
@@ -115,6 +141,9 @@ namespace WalkinInMatrix
             }
         }
 
+        /// <summary>
+        /// Walkin in matrix class get around method.
+        /// </summary>
         public void GetAround()
         {
             while (!HasVisitedAll())

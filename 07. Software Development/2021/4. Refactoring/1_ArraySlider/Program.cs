@@ -3,8 +3,14 @@ using System.Linq;
 
 namespace _1_ArraySlider
 {
+    /// <summary>
+    /// Array Slider main progrma class.
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Array Slider main progrma method.
+        /// </summary>
         static void Main(string[] args)
         {
             long[] numbersCollection = Console.ReadLine()

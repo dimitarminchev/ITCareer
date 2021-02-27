@@ -2,6 +2,9 @@
 
 namespace Methods
 {
+    /// <summary>
+    /// Method class
+    /// </summary>
     public static class Methods
     {
         /// <summary>

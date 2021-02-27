@@ -2,12 +2,31 @@
 
 namespace Methods
 {
+    /// <summary>
+    /// Student class
+    /// </summary>
     class Student
     {
+        /// <summary>
+        /// Student first name.
+        /// </summary>
         public string FirstName { get; set; }
+
+        /// <summary>
+        /// Student last name.
+        /// </summary>
         public string LastName { get; set; }
+
+        /// <summary>
+        /// Student other information.
+        /// </summary>
         public string OtherInfo { get; set; }
 
+        /// <summary>
+        /// Student is older than method.
+        /// </summary>
+        /// <param name="other">Student</param>
+        /// <returns>Boolean: true otr false</returns>
         public bool IsOlderThan(Student other)
         {
             DateTime firstDate =

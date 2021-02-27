@@ -6,8 +6,14 @@ namespace InheritanceAndPolymorphism
     // my namespace
     using Courses;
 
+    /// <summary>
+    /// Inheritance and Polymorphism main program class.
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Inheritance and Polymorphism main program method.
+        /// </summary>
         static void Main(string[] args)
         {
             LocalCourse localCourse = new LocalCourse("Databases");
