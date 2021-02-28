@@ -1,20 +1,17 @@
 # JSON
-More information about JSON
+More information about JSONL
 https://www.json.org/json-bg.html
 
 ## Chuck Norris Jokes API
-https://api.chucknorris.io/
+https://api.chucknorris.io/ or 
 https://api.chucknorris.io/jokes/random
 ```
 {"categories":[],"created_at":"2020-01-05 13:42:23.880601","icon_url":"https://assets.chucknorris.host/img/avatar/chuck-norris.png","id":"R55uzYlySNGawd5gdctDvw","updated_at":"2020-01-05 13:42:23.880601","url":"https://api.chucknorris.io/jokes/R55uzYlySNGawd5gdctDvw","value":"Four score and seven years ago... Chuck Norris drank a barrel of mead and roundhouse kicked the shit outta some mutton chop-wearing assholes."}
 ```
 
 ## Additional Resources
-JSON Online Viewer
-http://jsonviewer.stack.hu/
-
-Convert Json to C# Classes Online
-https://json2csharp.com/
+- JSON Online Viewer: http://jsonviewer.stack.hu/
+- Convert Json to C# Classes Online: https://json2csharp.com/
 
 ## NewtonSoft.Json 12.0.3
 https://www.newtonsoft.com/json
