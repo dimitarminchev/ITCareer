@@ -1,5 +1,5 @@
 # JSON
-More information about JSONL
+More information about JSON:
 https://www.json.org/json-bg.html
 
 ## Chuck Norris Jokes API

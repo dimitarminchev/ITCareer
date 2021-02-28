@@ -26,15 +26,18 @@ namespace _1._Chuck_Norris_Jokes
         static void Main(string[] args)
         {
             // Get new random Chuck Norris joke as JSON
-            string json = GetJoke().Result;
-            Console.WriteLine("JSON:\n{0}\n\n",json);
+            string json1 = GetJoke().Result;
 
             // Deserialize JSON string to C# object
-            Joke joke = JsonConvert.DeserializeObject<Joke>(json);
+            Joke joke = JsonConvert.DeserializeObject<Joke>(json1);
             Console.WriteLine("Joke: {0}", joke.value);
             Console.WriteLine("Created: {0}", joke.created_at);
             Console.WriteLine("Updated: {0}", joke.updated_at);
             Console.WriteLine("Link: {0}", joke.url);
+
+            // Serialize C# object to JSON string
+            string json2 = JsonConvert.SerializeObject(joke);
+            Console.WriteLine("\n\nJSON:\n{0}", json2);
         }
         
     }
