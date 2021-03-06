@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		minions.sql = minions.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.VilliansNames", "02.VilliansNames\02.VilliansNames.csproj", "{BD26A189-719A-41BF-9BC2-1A5D308BDC5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MinionsNames", "03.MinionsNames\03.MinionsNames.csproj", "{88249D1A-C23B-42B5-84BE-E75C4BA4043E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,14 @@ Global
 		{79694C1B-28B8-4842-9CD2-5EED388C6688}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79694C1B-28B8-4842-9CD2-5EED388C6688}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79694C1B-28B8-4842-9CD2-5EED388C6688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD26A189-719A-41BF-9BC2-1A5D308BDC5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD26A189-719A-41BF-9BC2-1A5D308BDC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD26A189-719A-41BF-9BC2-1A5D308BDC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD26A189-719A-41BF-9BC2-1A5D308BDC5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88249D1A-C23B-42B5-84BE-E75C4BA4043E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88249D1A-C23B-42B5-84BE-E75C4BA4043E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88249D1A-C23B-42B5-84BE-E75C4BA4043E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88249D1A-C23B-42B5-84BE-E75C4BA4043E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
