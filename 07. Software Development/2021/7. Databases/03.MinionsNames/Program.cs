@@ -8,24 +8,36 @@ namespace _03.MinionsNames
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter villain's ID: ");
+            int villainID = int.Parse(Console.ReadLine());
 
             using (var conn = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;Database=minions;Integrated Security=true"))
             {
                 conn.Open();
-                // T-SQL
                 SqlCommand sql = new SqlCommand
                 (
-                    "SELECT V.Name, COUNT(MV.VillainId) " +
-                    "FROM Villains as V " +
-                    "JOIN MinionsVillains AS MV on MV.VillainId = V.Id " +
-                    "GROUP BY MV.VillainId, V.Name " +
-                    "HAVING COUNT(MV.VillainId) > 3", conn
+                    "SELECT minions.name " + 
+                    "FROM minionsvillains " +
+                    "JOIN minions on minionsvillains.MinionId = minions.id " +
+                   $"WHERE minionsvillains.VillainId = @villainID", conn
                 );
+                sql.Parameters.AddWithValue("@villainID", villainID);
                 var reader = sql.ExecuteReader();
+
+                bool hasNames = false;
+                int i = 1;
                 while (reader.Read())
                 {
-                    Console.WriteLine("{0} -> {1}", reader[0], reader[1]);
+                    hasNames = true;
+                    Console.WriteLine("{0}. {1}", i++, reader[0]);
                 }
+                if (hasNames == false)
+                {
+                    Console.WriteLine($"No villain with ID {villainID} exists in the database.");
+                }
+
+                reader.Close();
+                conn.Close();
             }
         }
     }
