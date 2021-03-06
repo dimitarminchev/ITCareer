@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ORM_Demo.Model
+namespace DemoEFC5.Model
 {
     /// <summary>
     /// Единичен продукт

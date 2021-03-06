@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQL Demo", "MSSQL Demo\MSSQL Demo.csproj", "{14F73F81-F9E0-4D5C-91D6-AF4A855A1443}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoMsSql", "DemoMsSql\DemoMsSql.csproj", "{14F73F81-F9E0-4D5C-91D6-AF4A855A1443}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MYSQL Demo", "MYSQL Demo\MYSQL Demo.csproj", "{3AC46018-17D6-497C-BB76-9BF2A1A35246}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoMySql", "DemoMySql\DemoMySql.csproj", "{3AC46018-17D6-497C-BB76-9BF2A1A35246}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORM Demo", "ORM Demo\ORM Demo.csproj", "{79694C1B-28B8-4842-9CD2-5EED388C6688}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoEFC5", "DemoEFC5\DemoEFC5.csproj", "{79694C1B-28B8-4842-9CD2-5EED388C6688}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

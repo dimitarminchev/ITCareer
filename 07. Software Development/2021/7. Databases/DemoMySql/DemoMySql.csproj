@@ -3,11 +3,12 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>MSSQL_Demo</RootNamespace>
+    <RootNamespace>DemoMySql</RootNamespace>
+    <AssemblyName>DemoMySql</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    <PackageReference Include="MySql.Data" Version="8.0.23" />
   </ItemGroup>
 
 </Project>

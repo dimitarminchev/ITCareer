@@ -1,9 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
 
-namespace ORM_Demo.Model
+namespace DemoEFC5.Model
 {
+    // EFC5
+    using Microsoft.EntityFrameworkCore;
+
     /// <summary>
-    /// Контекста на базата данни
+    /// Контекст на базата данни
     /// </summary>
     public class ProductDatabaseContext : DbContext
     {
@@ -32,7 +35,7 @@ namespace ORM_Demo.Model
         /// <param name="optionsBuilder"></param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(localdb)\\ProjectsV13;Database=products; Integrated Security=True");
+            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Database=products; Integrated Security=True");
         }
     }
 }
