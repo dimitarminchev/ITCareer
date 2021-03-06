@@ -9,6 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoMySql", "DemoMySql\Demo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoEFC5", "DemoEFC5\DemoEFC5.csproj", "{79694C1B-28B8-4842-9CD2-5EED388C6688}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D502DD66-8A9D-4035-B8E3-42C80FF07B30}"
+	ProjectSection(SolutionItems) = preProject
+		minions.sql = minions.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
