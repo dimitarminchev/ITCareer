@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Linq;
 namespace ORM_Demo
 {
     // My data model
@@ -22,11 +22,27 @@ namespace ORM_Demo
             db.Products.Add(new Product() { Name = "Fish", Price = 3.1m, Quantity = 32 });
             db.SaveChanges();
 
-            // 3. Извеждане на добавените продукти
+            // 3. Добавяне на поръчка
+            db.Orders.Add(new Order() 
+            { 
+                OrderDate = new DateTime(),  
+                Quantity = 5,
+                Product = db.Products.FirstOrDefault()
+            });
+            db.SaveChanges();
+
+            // 4. Извеждане на добавените продукти и поръчки
             foreach (var product in db.Products)
             {
                 Console.WriteLine("Name: {0}, Price: {1}, Quantity: {2}",
-                                  product.Name, product.Price, product.Quantity);
+                product.Name, product.Price, product.Quantity);
+            }
+            Console.WriteLine("Orders:");
+            Console.WriteLine(new string('-', 25));
+            foreach (var order in db.Orders)
+            {
+                Console.WriteLine("Order product: {0}, Quantiti: {1}, Date: {2}",
+                order.Product.Name, order.Quantity, order.OrderDate);
             }
         }
     }

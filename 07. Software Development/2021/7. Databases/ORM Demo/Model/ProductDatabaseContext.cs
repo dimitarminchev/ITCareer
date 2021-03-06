@@ -13,6 +13,11 @@ namespace ORM_Demo.Model
         public DbSet<Product> Products { get; set; }
 
         /// <summary>
+        /// Таблица с поръчка
+        /// </summary>
+        public DbSet<Order> Orders { get; set; }
+
+        /// <summary>
         /// Конструктор
         /// </summary>
         public ProductDatabaseContext()
