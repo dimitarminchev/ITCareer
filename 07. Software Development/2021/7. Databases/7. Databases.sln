@@ -14,19 +14,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		minions.sql = minions.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.VilliansNames", "02.VilliansNames\02.VilliansNames.csproj", "{BD26A189-719A-41BF-9BC2-1A5D308BDC5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.VilliansNames", "02.VilliansNames\02.VilliansNames.csproj", "{BD26A189-719A-41BF-9BC2-1A5D308BDC5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MinionsNames", "03.MinionsNames\03.MinionsNames.csproj", "{88249D1A-C23B-42B5-84BE-E75C4BA4043E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.MinionsNames", "03.MinionsNames\03.MinionsNames.csproj", "{88249D1A-C23B-42B5-84BE-E75C4BA4043E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.AddMinion", "04.AddMinion\04.AddMinion.csproj", "{F55CA569-0570-48CB-9203-3474B275FE76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.AddMinion", "04.AddMinion\04.AddMinion.csproj", "{F55CA569-0570-48CB-9203-3474B275FE76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ChangeRegister", "05.ChangeRegister\05.ChangeRegister.csproj", "{16E97E04-A2FE-4A4A-ABE2-4D7342DA1436}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.ChangeRegister", "05.ChangeRegister\05.ChangeRegister.csproj", "{16E97E04-A2FE-4A4A-ABE2-4D7342DA1436}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.RemoveVillian", "06.RemoveVillian\06.RemoveVillian.csproj", "{C29AB5EE-ED4E-4E8A-8F57-24C960F671E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.RemoveVillian", "06.RemoveVillian\06.RemoveVillian.csproj", "{C29AB5EE-ED4E-4E8A-8F57-24C960F671E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.AllMinionNames", "07.AllMinionNames\07.AllMinionNames.csproj", "{BDE0B528-133B-4370-B978-1EE2D9F84793}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.AllMinionNames", "07.AllMinionNames\07.AllMinionNames.csproj", "{BDE0B528-133B-4370-B978-1EE2D9F84793}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.AgeIncrease", "08.AgeIncrease\08.AgeIncrease.csproj", "{08F4C1DF-EB08-4DBD-8F26-72ED635FB31D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.AgeIncrease", "08.AgeIncrease\08.AgeIncrease.csproj", "{08F4C1DF-EB08-4DBD-8F26-72ED635FB31D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniORM", "MiniORM\MiniORM.csproj", "{1AD5B3E4-B35C-4265-9C8F-613C99754086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniORM.Employees", "MiniORM.Employees\MiniORM.Employees.csproj", "{20B5DE6A-639D-4D49-87C0-7297A4BA7EEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +78,14 @@ Global
 		{08F4C1DF-EB08-4DBD-8F26-72ED635FB31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08F4C1DF-EB08-4DBD-8F26-72ED635FB31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08F4C1DF-EB08-4DBD-8F26-72ED635FB31D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AD5B3E4-B35C-4265-9C8F-613C99754086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD5B3E4-B35C-4265-9C8F-613C99754086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD5B3E4-B35C-4265-9C8F-613C99754086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD5B3E4-B35C-4265-9C8F-613C99754086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B5DE6A-639D-4D49-87C0-7297A4BA7EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B5DE6A-639D-4D49-87C0-7297A4BA7EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B5DE6A-639D-4D49-87C0-7297A4BA7EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B5DE6A-639D-4D49-87C0-7297A4BA7EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
