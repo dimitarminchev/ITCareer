@@ -29,6 +29,7 @@ namespace WinFormApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -40,7 +41,9 @@ namespace WinFormApp
             this.btnDelete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSave = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +61,7 @@ namespace WinFormApp
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtName.Location = new System.Drawing.Point(143, 43);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(355, 39);
+            this.txtName.Size = new System.Drawing.Size(409, 39);
             this.txtName.TabIndex = 1;
             // 
             // txtPrice
@@ -66,7 +69,7 @@ namespace WinFormApp
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPrice.Location = new System.Drawing.Point(143, 100);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(355, 39);
+            this.txtPrice.Size = new System.Drawing.Size(409, 39);
             this.txtPrice.TabIndex = 3;
             // 
             // label2
@@ -84,7 +87,7 @@ namespace WinFormApp
             this.txtStock.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtStock.Location = new System.Drawing.Point(143, 159);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(355, 39);
+            this.txtStock.Size = new System.Drawing.Size(409, 39);
             this.txtStock.TabIndex = 5;
             // 
             // label3
@@ -151,11 +154,22 @@ namespace WinFormApp
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(576, 43);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(292, 254);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 586);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnDelete);
@@ -170,6 +184,7 @@ namespace WinFormApp
             this.Name = "Form1";
             this.Text = "Продукти 1.0";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,6 +203,7 @@ namespace WinFormApp
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
