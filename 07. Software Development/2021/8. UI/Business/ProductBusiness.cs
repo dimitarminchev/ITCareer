@@ -1,9 +1,9 @@
-﻿namespace CrudWithORM.Business
+﻿namespace Business
 {
     using System.Linq;
     using System.Collections.Generic;
-    using CrudWithORM.Data;
-    using CrudWithORM.Data.Model;
+    using Data;
+    using Data.Model;
 
     /// <summary>
     /// Business Logic of the App (CRUD operations)

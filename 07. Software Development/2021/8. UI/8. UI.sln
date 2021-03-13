@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{8E0811DD-B9B4-454B-BD85-840B8292E67E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{3A84643A-990B-47AB-8B42-020BE84A1C28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{980FEDE4-CB93-41C7-B834-F095EA917CCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E0811DD-B9B4-454B-BD85-840B8292E67E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E0811DD-B9B4-454B-BD85-840B8292E67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E0811DD-B9B4-454B-BD85-840B8292E67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E0811DD-B9B4-454B-BD85-840B8292E67E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A84643A-990B-47AB-8B42-020BE84A1C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A84643A-990B-47AB-8B42-020BE84A1C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A84643A-990B-47AB-8B42-020BE84A1C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A84643A-990B-47AB-8B42-020BE84A1C28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{980FEDE4-CB93-41C7-B834-F095EA917CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{980FEDE4-CB93-41C7-B834-F095EA917CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{980FEDE4-CB93-41C7-B834-F095EA917CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{980FEDE4-CB93-41C7-B834-F095EA917CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F53DA8BE-5D9F-48A4-8457-4B60CEE705E2}
+	EndGlobalSection
+EndGlobal
