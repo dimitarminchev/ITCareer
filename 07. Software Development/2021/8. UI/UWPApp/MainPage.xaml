@@ -3,12 +3,13 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWPApp"
+    xmlns:model="using:Model"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <!-- Продукти 1.0 UI -->
+    <!-- Продукти 1.0 -->
     <StackPanel Background="Yellow" Padding="50">
         <TextBlock Text="Продукти 1.0" FontSize="42" />
 
@@ -22,8 +23,41 @@
         <TextBlock Text="Количество" FontSize="24" />
         <TextBox x:Name="stock"  FontSize="24"/>
 
-        <Button Content="Запис на продукта"  FontSize="24"
+        <Button Content="Запис"  FontSize="24"
                 Padding="20" Margin="0 20 0 20" Click="Button_Click"/>
 
+        <!-- Списък -->
+        <ListView Name="ProductsList"
+                  SelectionMode="Single"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  ScrollViewer.IsVerticalRailEnabled="True"
+                  ScrollViewer.VerticalScrollMode="Enabled"
+                  ScrollViewer.HorizontalScrollMode="Enabled"
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  ScrollViewer.IsHorizontalRailEnabled="True"
+                  Margin="20">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal"  >
+                        <TextBlock Text="Id"  Width="50" FontWeight="Bold" />
+                        <TextBlock Text="Name" Width="300" FontWeight="Bold" />
+                        <TextBlock Text="Price" Width="200" FontWeight="Bold" />
+                        <TextBlock Text="Stock" Width="80" FontWeight="Bold" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="model:Product">
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="{x:Bind Id}"  Width="50" />
+                        <TextBlock Text="{x:Bind Name}"  Width="300" />
+                        <TextBlock Text="{x:Bind Price}"  Width="200" />
+                        <TextBlock Text="{x:Bind Stock}"  Width="80" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <!-- /Списък -->
+        
     </StackPanel>
 </Page>

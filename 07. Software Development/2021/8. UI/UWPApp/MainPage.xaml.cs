@@ -23,13 +23,11 @@ namespace UWPApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        // Контекста на базата данни
-        private ProductBusiness productBusiness = new ProductBusiness();
-
         // Конструктор
         public MainPage()
         {
             this.InitializeComponent();
+            ProductsList.ItemsSource = Products.GetAll();
         }
 
         // Запис
@@ -41,7 +39,10 @@ namespace UWPApp
                 Price = decimal.Parse(price.Text),
                 Stock = int.Parse(stock.Text)
             };
-            productBusiness.Add(product);
+            Products.Add(product);
+
+            // Актуализация
+            ProductsList.ItemsSource = Products.GetAll();
         }
     }
 }
