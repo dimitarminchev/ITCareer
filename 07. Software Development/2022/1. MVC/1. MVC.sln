@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7. Trip", "7. Trip\7. Trip.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9. MagicNumbers", "9. MagicNumbers\9. MagicNumbers.csproj", "{EDC90C96-7986-4562-82D4-7C2E779D9C34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Repair", "10. Repair\10. Repair.csproj", "{C2B5EAFB-1CF8-4E81-8BF4-EF9E082838F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{EDC90C96-7986-4562-82D4-7C2E779D9C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDC90C96-7986-4562-82D4-7C2E779D9C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDC90C96-7986-4562-82D4-7C2E779D9C34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2B5EAFB-1CF8-4E81-8BF4-EF9E082838F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B5EAFB-1CF8-4E81-8BF4-EF9E082838F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B5EAFB-1CF8-4E81-8BF4-EF9E082838F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B5EAFB-1CF8-4E81-8BF4-EF9E082838F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
