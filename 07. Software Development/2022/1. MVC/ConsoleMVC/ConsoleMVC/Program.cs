@@ -1,18 +1,17 @@
-﻿using System;
-
-namespace ConsoleMVC
+﻿namespace ConsoleMVC
 {
     // Моите пространства с имена
-    using ConsoleMVC.Model;
     using ConsoleMVC.Controllers;
-    using ConsoleMVC.Views;
 
     internal class Program
     {
+        /// <summary>
+        ///  Главен метод на програмата
+        /// </summary>
         static void Main(string[] args)
         {
-            
-            // TipCalculatorController t = new TipCalculatorController();
+            // Използване на контролера
+            TipCalculatorController t = new TipCalculatorController();
         }
     }
 }
