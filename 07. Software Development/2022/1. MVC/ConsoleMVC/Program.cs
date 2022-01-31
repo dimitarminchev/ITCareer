@@ -11,7 +11,7 @@
         static void Main(string[] args)
         {
             // Използване на контролера
-            TipCalculatorController t = new TipCalculatorController();
+            Controller controller = new Controller();
         }
     }
 }

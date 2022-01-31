@@ -3,12 +3,12 @@
     /// <summary>
     /// Бакшиш
     /// </summary>
-    internal class Tip
+    internal class Model
     {
         private double amount;
 
         /// <summary>
-        /// Стойност
+        /// Сума за плащане
         /// </summary>
         public double Amount
         {
@@ -19,7 +19,7 @@
         private double percent;
 
         /// <summary>
-        /// Процент
+        /// Процент за бакшиш
         /// </summary>
         public double Percent
         {
@@ -40,9 +40,9 @@
         /// <summary>
         /// Конструктор с параметри
         /// </summary>
-        /// <param name="amount">Сума</param>
-        /// <param name="percent">Процент бакшиш</param>
-        public Tip(double amount, double percent)
+        /// <param name="amount">Сума за плащане</param>
+        /// <param name="percent">Процент за бакшиш</param>
+        public Model(double amount, double percent)
         {
             this.Amount = amount;
             this.Percent = percent;
@@ -51,13 +51,13 @@
         /// <summary>
         /// Конструктор по подразбиране
         /// </summary>
-        public Tip() : this(0, 0)
+        public Model() : this(0, 0)
         {
             // По подразбитране
         }
 
         /// <summary>
-        /// Смята сумата на бакшиша
+        /// Калкулира сумата само на бакшиша
         /// </summary>
         /// <returns>Сума * Процент</returns>
         public double CalculateTip()
@@ -66,9 +66,9 @@
         }
 
         /// <summary>
-        /// Смята общата сума за плащане
+        /// Калкулиране на общата сума за плащане
         /// </summary>
-        /// <returns>Сума плюс бакшиша</returns>
+        /// <returns>Сума плюс бакшиш</returns>
         public double CalculateTotal()
         {
             return CalculateTip() + Amount;

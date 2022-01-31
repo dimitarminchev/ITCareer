@@ -3,27 +3,27 @@
     internal class Display
     {
         /// <summary>
-        /// Процент на бакшиша
+        /// Процент за бакшиш
         /// </summary>
         public double Percent { get; set; }
 
         /// <summary>
-        /// Сума на сметката
+        /// Сума за плащане
         /// </summary>
         public double Amount { get; set; }
 
         /// <summary>
-        /// Общо сума = Сума на сметката + Бакшиш
+        /// Общо сума = Сума за сметката и сума на бакшиш
         /// </summary>
         public double Total { get; set; }
 
         /// <summary>
-        ///  Стойност на бакшиша
+        ///  Сума на бакшиша
         /// </summary>
         public double TipAmount { get; set; }
 
         /// <summary>
-        /// Конструктор
+        /// Конструктор без параметри
         /// </summary>
         public Display()
         {
@@ -35,18 +35,19 @@
         }
 
         /// <summary>
-        /// Въвеждане на сума и процент
+        /// Въвеждане на сума за плащане и процент за бакшиш
         /// </summary>
         public void GetValues()
         {
             Console.WriteLine("Enter the amount of the meal: ");
             Amount = double.Parse(Console.ReadLine());
+
             Console.WriteLine("Enter the percent you want to tip: ");
             Percent = double.Parse(Console.ReadLine());
         }
 
         /// <summary>
-        /// Извежда сума на бакшиш и обща сума
+        /// Извеждане на сума на бакшиш и обща сума за плащане
         /// </summary>
         public void ShowTipAndTotal()
         {
