@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleMVC", "ConsoleMVC\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Transport", "1. Transport\1. Transport.csproj", "{67F81EA4-42E1-4E88-A6FB-81F330D764F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. OnTimeForExam", "2. OnTimeForExam\2. OnTimeForExam.csproj", "{40A2ADEF-4D99-446D-A6CD-D7ED1C8CDBAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{67F81EA4-42E1-4E88-A6FB-81F330D764F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67F81EA4-42E1-4E88-A6FB-81F330D764F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67F81EA4-42E1-4E88-A6FB-81F330D764F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40A2ADEF-4D99-446D-A6CD-D7ED1C8CDBAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40A2ADEF-4D99-446D-A6CD-D7ED1C8CDBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40A2ADEF-4D99-446D-A6CD-D7ED1C8CDBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40A2ADEF-4D99-446D-A6CD-D7ED1C8CDBAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
