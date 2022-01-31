@@ -2,11 +2,17 @@
 
 namespace ConsoleMVC
 {
+    // Моите пространства с имена
+    using ConsoleMVC.Model;
+    using ConsoleMVC.Controllers;
+    using ConsoleMVC.Views;
+
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            // TipCalculatorController t = new TipCalculatorController();
         }
     }
 }
