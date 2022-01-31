@@ -1,7 +1,7 @@
-﻿namespace _8._Trip.Controllers
+﻿namespace _7._Trip.Controllers
 {
-    using _8._Trip.Model;
-    using _8._Trip.View;
+    using _7._Trip.Model;
+    using _7._Trip.View;
 
     internal class Controller
     {

@@ -1,4 +1,4 @@
-﻿namespace _8._Trip.Model
+﻿namespace _7._Trip.Model
 {
     internal class Model
     {

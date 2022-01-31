@@ -1,6 +1,6 @@
-﻿namespace _8._Trip
+﻿namespace _7._Trip
 {
-    using _8._Trip.Controllers;
+    using _7._Trip.Controllers;
 
     internal class Program
     {

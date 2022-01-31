@@ -5,19 +5,23 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleMVC", "ConsoleMVC\ConsoleMVC.csproj", "{A6C06D8F-7098-4A85-B3D0-AF418F4D8C65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Transport", "1. Transport\1. Transport.csproj", "{67F81EA4-42E1-4E88-A6FB-81F330D764F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1. Transport", "1. Transport\1. Transport.csproj", "{67F81EA4-42E1-4E88-A6FB-81F330D764F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. OnTimeForExam", "2. OnTimeForExam\2. OnTimeForExam.csproj", "{40A2ADEF-4D99-446D-A6CD-D7ED1C8CDBAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2. OnTimeForExam", "2. OnTimeForExam\2. OnTimeForExam.csproj", "{40A2ADEF-4D99-446D-A6CD-D7ED1C8CDBAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Histogram", "3. Histogram\3. Histogram.csproj", "{7D6EFB6A-AB84-434C-83D9-B99A05A170A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3. Histogram", "3. Histogram\3. Histogram.csproj", "{7D6EFB6A-AB84-434C-83D9-B99A05A170A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. PasswordGenerator", "4. PasswordGenerator\4. PasswordGenerator.csproj", "{BCA2BD3D-8BEC-4522-A1BE-9B528635D8DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4. PasswordGenerator", "4. PasswordGenerator\4. PasswordGenerator.csproj", "{BCA2BD3D-8BEC-4522-A1BE-9B528635D8DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. GroceryStore", "5. GroceryStore\5. GroceryStore.csproj", "{026E8F13-286F-42E8-B6E0-25EBD1FD01D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5. GroceryStore", "5. GroceryStore\5. GroceryStore.csproj", "{026E8F13-286F-42E8-B6E0-25EBD1FD01D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Pool", "6. Pool\6. Pool.csproj", "{A7B40DD3-ADC4-4E8B-8106-2EB270151AB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6. Pool", "6. Pool\6. Pool.csproj", "{A7B40DD3-ADC4-4E8B-8106-2EB270151AB8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8. Trip", "8. Trip\8. Trip.csproj", "{A65DD7B8-92B7-4AAC-AF63-090BFD5C4D4D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8. Div", "8. Div\8. Div.csproj", "{A6D5F1BD-4D81-46BF-BB56-B3E888417929}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. Trip", "7. Trip\7. Trip.csproj", "{4DE0EF88-5DFA-4ABB-88AE-F642E11C76A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{A65DD7B8-92B7-4AAC-AF63-090BFD5C4D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A65DD7B8-92B7-4AAC-AF63-090BFD5C4D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A65DD7B8-92B7-4AAC-AF63-090BFD5C4D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D5F1BD-4D81-46BF-BB56-B3E888417929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D5F1BD-4D81-46BF-BB56-B3E888417929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D5F1BD-4D81-46BF-BB56-B3E888417929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D5F1BD-4D81-46BF-BB56-B3E888417929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DE0EF88-5DFA-4ABB-88AE-F642E11C76A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DE0EF88-5DFA-4ABB-88AE-F642E11C76A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DE0EF88-5DFA-4ABB-88AE-F642E11C76A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DE0EF88-5DFA-4ABB-88AE-F642E11C76A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
