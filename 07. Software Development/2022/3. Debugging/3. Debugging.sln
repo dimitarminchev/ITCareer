@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BePositive", "BePositive\Be
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayTest", "ArrayTest\ArrayTest.csproj", "{6C79416B-59B8-4B88-A986-A5D27935819C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCarousel", "BitCarousel\BitCarousel.csproj", "{084A645C-95A0-434A-816C-BA22E7E95B79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6C79416B-59B8-4B88-A986-A5D27935819C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C79416B-59B8-4B88-A986-A5D27935819C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C79416B-59B8-4B88-A986-A5D27935819C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{084A645C-95A0-434A-816C-BA22E7E95B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{084A645C-95A0-434A-816C-BA22E7E95B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{084A645C-95A0-434A-816C-BA22E7E95B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{084A645C-95A0-434A-816C-BA22E7E95B79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
