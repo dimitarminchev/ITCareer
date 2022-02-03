@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace InstructionSet
+﻿namespace InstructionSet
 {
     internal class Program
     {
         static void Main()
         {
 
-            string opCode = Console.ReadLine();
+            string opCode = System.Console.ReadLine();
 
             // fix: end => END
             while (opCode != "END")
@@ -51,7 +49,7 @@ namespace InstructionSet
                 Console.WriteLine(result);
 
                 // fix: Read next opCode
-                opCode = Console.ReadLine();
+                opCode = System.Console.ReadLine();
             }
         }
     }
