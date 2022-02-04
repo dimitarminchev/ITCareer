@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _4_FiveSpecialLetters
+namespace FiveSpecialLetters
 {
     /// <summary>
     /// Five Special Letters main program class.

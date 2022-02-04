@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _1_ArraySlider
+namespace ArraySlider
 {
     /// <summary>
     /// Array Slider main progrma class.

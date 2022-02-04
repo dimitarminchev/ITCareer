@@ -29,8 +29,9 @@
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <DocumentationSources>
       <DocumentationSource sourceFile="1_ArraySlider\1_ArraySlider.csproj" />
-<DocumentationSource sourceFile="2_YoloSnake\2_YoloSnake.csproj" />
-<DocumentationSource sourceFile="3_StringExtensions\3_StringExtensions.csproj" /></DocumentationSources>
+<DocumentationSource sourceFile="3_StringExtensions\3_StringExtensions.csproj" />
+<DocumentationSource sourceFile="4_FiveSpecialLetters\4_FiveSpecialLetters.csproj" />
+<DocumentationSource sourceFile="2_YoloSnake\2_YoloSnake.csproj" /></DocumentationSources>
     <MissingTags>Summary, Parameter, Returns, Value, AutoDocumentCtors, Namespace, TypeParameter, IncludeTargets, AutoDocumentDispose</MissingTags>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform

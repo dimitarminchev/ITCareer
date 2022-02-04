@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _3_StringExtensions
+namespace StringExtension
 {
     /// <summary>
     /// String Extensions main program class.
