@@ -14,7 +14,7 @@
     <RootNamespace>Documentation</RootNamespace>
     <Name>Documentation</Name>
     <!-- SHFB properties -->
-    <FrameworkVersion>Cross-platform (.NET Core/.NET Standard)</FrameworkVersion>
+    <FrameworkVersion>.NET Core/.NET Standard/.NET 5.0+</FrameworkVersion>
     <OutputPath>.\Help\</OutputPath>
     <HtmlHelpName>Documentation</HtmlHelpName>
     <Language>en-US</Language>
@@ -29,7 +29,8 @@
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <DocumentationSources>
       <DocumentationSource sourceFile="1_ArraySlider\1_ArraySlider.csproj" />
-<DocumentationSource sourceFile="2_YoloSnake\2_YoloSnake.csproj" /></DocumentationSources>
+<DocumentationSource sourceFile="2_YoloSnake\2_YoloSnake.csproj" />
+<DocumentationSource sourceFile="3_StringExtensions\3_StringExtensions.csproj" /></DocumentationSources>
     <MissingTags>Summary, Parameter, Returns, Value, AutoDocumentCtors, Namespace, TypeParameter, IncludeTargets, AutoDocumentDispose</MissingTags>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
