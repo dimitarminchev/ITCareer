@@ -1,11 +1,14 @@
 ﻿using System.Text;
 
+/// <summary>
+/// Refactoring Task Yolo Snake Namespace.
+/// </summary>
 namespace YoloSnake
 {
     /// <summary>
     /// Yolo Snake messages class
     /// </summary>
-    static class Messages
+    public static class Messages
     {
         /// <summary>
         /// Yolo Snake StringBuileder.

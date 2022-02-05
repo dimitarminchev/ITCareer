@@ -1,11 +1,12 @@
-﻿using System;
-
+﻿/// <summary>
+/// Refactoring Task String Extensions Namespace.
+/// </summary>
 namespace StringExtension
 {
     /// <summary>
     /// String Extensions main program class.
     /// </summary>
-    class Program
+    public class Program
     {
         /// <summary>
         /// String Extensions main program method.

@@ -1,20 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
+﻿/// <summary>
+/// Refactoring Task: Five Special Letters Namespace
+/// </summary>
 namespace FiveSpecialLetters
 {
     /// <summary>
     /// Five Special Letters main program class.
     /// </summary>
-    class Program
+    public class Program
     {
+        /// <summary>
+        /// Max Letters is Five.
+        /// </summary>
+        public const int maxLetters = 5;
+
         /// <summary>
         /// This method returns the Letter Weight
         /// </summary>
         /// <param name="input">Single Charecter</param>
         /// <returns>Integer Value</returns>
-        private static int GetLetterWeight(char input)
+        public static int GetLetterWeight(char input)
         {
             switch (input)
             {
@@ -32,7 +36,7 @@ namespace FiveSpecialLetters
         /// </summary>
         /// <param name="input">Single Word</param>
         /// <returns>Weight as a Integer Value</returns>
-        private static int CountWeightOfWord(char[] input)
+        public static int CountWeightOfWord(char[] input)
         {
             List<char> word = new List<char>();
             for (int i = 0; i < input.Length; i++)
@@ -50,12 +54,10 @@ namespace FiveSpecialLetters
             return weightResult;
         }
 
-        private const int maxLetters = 5;
-
         /// <summary>
-        /// ive Special Letters main program method.
+        /// Five Special Letters Main Program Method.
         /// </summary>
-        private static void Main()
+        public static void Main()
         {
             // input
             int minWeight = int.Parse(Console.ReadLine());

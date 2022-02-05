@@ -1,17 +1,17 @@
-﻿using System;
-using System.Linq;
-
+﻿/// <summary>
+/// Refactoring Task "Array Slider" namespace.
+/// </summary>
 namespace ArraySlider
 {
     /// <summary>
-    /// Array Slider main progrma class.
+    /// Refactoring Task "Array Slider" main program class.
     /// </summary>
-    class Program
+    public class Program
     {
         /// <summary>
-        /// Array Slider main progrma method.
+        /// Refactoring Task "Array Slider" main program method.
         /// </summary>
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             long[] numbersCollection = Console.ReadLine()
                                      .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)

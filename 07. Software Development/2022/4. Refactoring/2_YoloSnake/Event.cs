@@ -1,6 +1,9 @@
 using System;
 using System.Text;
 
+/// <summary>
+/// Refactoring Task Yolo Snake Namespace.
+/// </summary>
 namespace YoloSnake
 {
     /// <summary>

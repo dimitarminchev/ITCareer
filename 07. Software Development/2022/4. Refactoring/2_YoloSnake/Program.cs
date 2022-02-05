@@ -1,11 +1,12 @@
-﻿using System;
-
+﻿/// <summary>
+/// Refactoring Task Yolo Snake Namespace.
+/// </summary>
 namespace YoloSnake
 {
     /// <summary>
     /// Yolo Snake main program class.
     /// </summary>
-    class Program
+    public class Program
     {
         /// <summary>
         /// Yolo Snake events.
