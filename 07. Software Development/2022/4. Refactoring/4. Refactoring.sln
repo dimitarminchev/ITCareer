@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_Abstraction", "6_Abstract
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_CohesionAndCoupling", "7_CohesionAndCoupling\7_CohesionAndCoupling.csproj", "{D3BCC184-CC3F-44FD-8F51-B39D78E06B30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8_InheritanceAndPolymorphism", "8_InheritanceAndPolymorphism\8_InheritanceAndPolymorphism.csproj", "{AFCC6671-D2E6-4532-AB6F-E311FDFEDBC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{D3BCC184-CC3F-44FD-8F51-B39D78E06B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3BCC184-CC3F-44FD-8F51-B39D78E06B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3BCC184-CC3F-44FD-8F51-B39D78E06B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFCC6671-D2E6-4532-AB6F-E311FDFEDBC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCC6671-D2E6-4532-AB6F-E311FDFEDBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCC6671-D2E6-4532-AB6F-E311FDFEDBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFCC6671-D2E6-4532-AB6F-E311FDFEDBC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
