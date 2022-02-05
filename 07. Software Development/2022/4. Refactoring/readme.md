@@ -14,4 +14,4 @@
 
 ## Step 3. Create Manual
 
-![sandcasle](sandcasle.png)
+![sandcastle.png](sandcastle.png)
