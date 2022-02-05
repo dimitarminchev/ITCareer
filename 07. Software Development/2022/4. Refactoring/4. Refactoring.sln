@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_ArraySlider", "1_ArraySli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2_YoloSnake", "2_YoloSnake\2_YoloSnake.csproj", "{D1BE7887-9825-42BC-90EB-16B517BB1E2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_StringExtensions", "3_StringExtensions\3_StringExtensions.csproj", "{A14EDE48-F1B4-4E52-9F78-1C15A517B449}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3_StringExtensions", "3_StringExtensions\3_StringExtensions.csproj", "{A14EDE48-F1B4-4E52-9F78-1C15A517B449}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_FiveSpecialLetters", "4_FiveSpecialLetters\4_FiveSpecialLetters.csproj", "{88458730-5CDC-4165-8196-545467341041}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4_FiveSpecialLetters", "4_FiveSpecialLetters\4_FiveSpecialLetters.csproj", "{88458730-5CDC-4165-8196-545467341041}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_Methods", "5_Methods\5_Methods.csproj", "{07E857F9-3F74-4778-A8ED-5D6836F7F0DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{88458730-5CDC-4165-8196-545467341041}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88458730-5CDC-4165-8196-545467341041}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88458730-5CDC-4165-8196-545467341041}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E857F9-3F74-4778-A8ED-5D6836F7F0DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E857F9-3F74-4778-A8ED-5D6836F7F0DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E857F9-3F74-4778-A8ED-5D6836F7F0DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E857F9-3F74-4778-A8ED-5D6836F7F0DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
