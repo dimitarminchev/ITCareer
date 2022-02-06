@@ -47,6 +47,8 @@ namespace Person
         /// <summary>
         /// Bank Account Constructor setting: Id and Balance
         /// </summary>
+        /// <param name="id">Identificator</param>
+        /// <param name="balance">Balance</param>
         public BankAccount(int id, double balance)
         {
             this.Id = id;
