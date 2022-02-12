@@ -5,7 +5,7 @@
 4. [Convert Json 2 Csharp](https://json2csharp.com/)
 5. [Json.NET](https://www.newtonsoft.com/json)
 
-## Sample Chuck Norris Joke in JSON
+## 1. Sample Chuck Norris Joke in JSON
 ```
 {
 	"categories" : [],
@@ -16,7 +16,7 @@
 	"value" : "Chuck Norris killed osama bin laden, he roundhoused the bullt through his skull!"
 }
 ```
-## Sample JSON to C# Class
+## 2. Sample JSON to C# Class
 ```
 public class Root
 {
@@ -30,12 +30,12 @@ public class Root
 }
 ```
 
-## Deserialize JSON to Object
+## 3. Deserialize JSON to Object
 ```
 var obj = JsonConvert.DeserializeObject<Root>(joke);
 ```
 
-## Serialize Object to JSON
+## 4. Serialize Object to JSON
 ```
 var json  = JsonConvert.SerializeObject(obj);
 ```
