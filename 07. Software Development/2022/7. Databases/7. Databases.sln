@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniORM.App", "MiniORM.App\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudWithoutORM", "CrudWithoutORM\CrudWithoutORM.csproj", "{915888A8-2779-4E1C-9A13-5A244E919794}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudWithORM", "CrudWithORM\CrudWithORM.csproj", "{4C66CDED-AC6E-427F-84B3-B1F2042B4FC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{915888A8-2779-4E1C-9A13-5A244E919794}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{915888A8-2779-4E1C-9A13-5A244E919794}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{915888A8-2779-4E1C-9A13-5A244E919794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C66CDED-AC6E-427F-84B3-B1F2042B4FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C66CDED-AC6E-427F-84B3-B1F2042B4FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C66CDED-AC6E-427F-84B3-B1F2042B4FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C66CDED-AC6E-427F-84B3-B1F2042B4FC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
