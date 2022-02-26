@@ -9,6 +9,11 @@
     public class ProductContext : DbContext
     {
         /// <summary>
+        /// Connection String
+        /// </summary> 
+        private const string connectionString = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=shop; Integrated Security=SSPI";
+
+        /// <summary>
         /// Products Table
         /// </summary>
         public DbSet<Product> Products { get; set; }
@@ -24,10 +29,10 @@
 
         /// <summary>
         /// Connection string to Microsoft SQL Server
-        /// </summary>
+        /// </summary> 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Shop;Integrated Security=True");
+            optionsBuilder.UseSqlServer(connectionString);
         }
     }
 }

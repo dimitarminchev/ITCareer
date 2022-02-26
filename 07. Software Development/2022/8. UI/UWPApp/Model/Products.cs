@@ -11,8 +11,8 @@ namespace Model
     {
         /// <summary>
         /// Connection String
-        /// </summary>
-        private static string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Shop;Integrated Security=True";
+        /// </summary> 
+        private const string connectionString = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=shop; Integrated Security=SSPI";
 
         /// <summary>
         /// Get all products from the database

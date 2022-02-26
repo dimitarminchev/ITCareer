@@ -16,8 +16,8 @@ namespace UWPApp
         {
             this.InitializeComponent();
 
-            // TODO: Connection String Fix
-            // ProductsList.ItemsSource = Products.GetAll();
+            // Products Table
+            ProductsList.ItemsSource = Products.GetAll();
         }
 
         // Запис
@@ -31,8 +31,8 @@ namespace UWPApp
             };
             Products.Add(product);
 
-            // TODO: Connection String Fix
-            // ProductsList.ItemsSource = Products.GetAll();
+            // Update Product
+            ProductsList.ItemsSource = Products.GetAll();
         }
     }
 }
