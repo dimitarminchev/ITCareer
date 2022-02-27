@@ -1,7 +1,6 @@
 ﻿using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using System.Threading.Tasks;
 
 namespace UWPApp
 {
@@ -13,10 +12,12 @@ namespace UWPApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        // Identificator
-        private int ProductID = 0;
+        // Product Identifier
+        private int ProductId = 0;
 
-        // Constructor
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public MainPage()
         {
             this.InitializeComponent();
@@ -25,9 +26,12 @@ namespace UWPApp
             ProductsList.ItemsSource = Products.GetAll();
         }
 
-        // Save Button Click Event Hanler
+        /// <summary>
+        /// Save Button Click Event Hanler
+        /// </summary>
         private void Save_Button_Click(object sender, RoutedEventArgs e)
         {
+            // Create Product
             Product product = new Product()
             {
                 Name = name.Text,
@@ -42,19 +46,50 @@ namespace UWPApp
             ProductsList.ItemsSource = Products.GetAll();
         }
 
-        // Select ITem Event Handler
+        /// <summary>
+        /// Select Product Event Handler
+        /// </summary>
         private void ListView_Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
-            var product = ProductsList.SelectedItems[0] as Model.Product;
+            try
+            {
+                // Get Product Info
+                var item = ProductsList.SelectedItems[0] as Model.Product;
+                ProductId = item.Id;
+                this.name.Text = item.Name;
+                this.price.Text = item.Price.ToString();
+                this.stock.Text = item.Stock.ToString();
+            }
+            catch 
+            {
+                // nope
+            }
         }
 
-        // Update Button Click Event Hanler
+        /// <summary>
+        /// Update Button Click Event Hanler
+        /// </summary>
         private void Update_Button_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: Updage
+            // Create Product
+            Product product = new Product()
+            {
+                Id = ProductId,
+                Name = name.Text,
+                Price = decimal.Parse(price.Text),
+                Stock = int.Parse(stock.Text)
+            };
+
+            // Update
+            Products.Update(product);
+
+            // Update Products Table
+            ProductsList.ItemsSource = Products.GetAll();
         }
 
-        // Delete Button Click Event Hanler
+        /// <summary>
+        /// Delete Button Click Event Hanler
+        /// </summary>
         private async void Delete_Button_Click(object sender, RoutedEventArgs e)
         {
             // Dialog
@@ -70,7 +105,7 @@ namespace UWPApp
             // Delete the file if the user clicked the primary button.
             if (dialogResult == ContentDialogResult.Primary)
             {
-                 Model.Product item = ProductsList.SelectedItems[0] as Model.Product;
+                var item = ProductsList.SelectedItems[0] as Model.Product;
 
                 // Delete
                 Products.Delete(item.Id);
