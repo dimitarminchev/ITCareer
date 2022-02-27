@@ -1,5 +1,7 @@
-﻿using Windows.UI.Xaml;
+﻿using System;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using System.Threading.Tasks;
 
 namespace UWPApp
 {
@@ -11,7 +13,10 @@ namespace UWPApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        // Конструктор
+        // Identificator
+        private int ProductID = 0;
+
+        // Constructor
         public MainPage()
         {
             this.InitializeComponent();
@@ -20,8 +25,8 @@ namespace UWPApp
             ProductsList.ItemsSource = Products.GetAll();
         }
 
-        // Запис
-        private void Button_Click(object sender, RoutedEventArgs e)
+        // Save Button Click Event Hanler
+        private void Save_Button_Click(object sender, RoutedEventArgs e)
         {
             Product product = new Product()
             {
@@ -29,10 +34,51 @@ namespace UWPApp
                 Price = decimal.Parse(price.Text),
                 Stock = int.Parse(stock.Text)
             };
+
+            // Insert
             Products.Add(product);
 
-            // Update Product
+            // Update Products Table
             ProductsList.ItemsSource = Products.GetAll();
         }
+
+        // Select ITem Event Handler
+        private void ListView_Selection_Changed(object sender, SelectionChangedEventArgs e)
+        {
+            var product = ProductsList.SelectedItems[0] as Model.Product;
+        }
+
+        // Update Button Click Event Hanler
+        private void Update_Button_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: Updage
+        }
+
+        // Delete Button Click Event Hanler
+        private async void Delete_Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Dialog
+            ContentDialog diaogDialog = new ContentDialog
+            {
+                Title = "Delete permanently?",
+                Content = "If you delete this, you won't be able to recover it. Do you want to delete it?",
+                PrimaryButtonText = "Delete",
+                CloseButtonText = "Cancel"
+            };
+            var dialogResult = await diaogDialog.ShowAsync();
+
+            // Delete the file if the user clicked the primary button.
+            if (dialogResult == ContentDialogResult.Primary)
+            {
+                 Model.Product item = ProductsList.SelectedItems[0] as Model.Product;
+
+                // Delete
+                Products.Delete(item.Id);
+
+                // Update Products Table
+                ProductsList.ItemsSource = Products.GetAll();
+            }            
+        }
+
     }
 }
