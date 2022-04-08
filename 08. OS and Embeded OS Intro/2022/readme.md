@@ -9,15 +9,13 @@
 - e-mail: dimitar.minchev@gmail.com 
 - blog: http://www.minchev.eu
 
-## Учебни материали
-### 1. [Linux](Linux)
-Операционни системи
-- Работна система: Ubuntu Server 20.04
-- Отдалечен достъп: https://www.putty.org/
+## Полезно
+1. Упражнете въвеждащите уроци от Webminal: http://webminal.org/
+2. Пробвайте отдалечен достъп до реален сървър: https://www.putty.org/
 ```
 host: 46.10.253.12
 user: students
 pass: password123
 ```
-- Webminal: http://webminal.org/
+
 
