@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ArrayStack
 {
     /// <summary>
-    /// Разтеглив стек
+    /// Статичен стек
     /// </summary>
     public class ArrayStack<T> : IEnumerable<T>
     {

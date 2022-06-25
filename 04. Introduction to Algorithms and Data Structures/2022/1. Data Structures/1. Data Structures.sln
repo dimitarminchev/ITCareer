@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircularQueue", "CircularQu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayStack", "ArrayStack\ArrayStack.csproj", "{71389DA3-3C40-4156-B355-8367EAFA7793}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReversedList", "ReversedList\ReversedList.csproj", "{38998981-267B-4D6F-BE90-C64355AB6F4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{71389DA3-3C40-4156-B355-8367EAFA7793}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71389DA3-3C40-4156-B355-8367EAFA7793}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71389DA3-3C40-4156-B355-8367EAFA7793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38998981-267B-4D6F-BE90-C64355AB6F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38998981-267B-4D6F-BE90-C64355AB6F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38998981-267B-4D6F-BE90-C64355AB6F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38998981-267B-4D6F-BE90-C64355AB6F4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

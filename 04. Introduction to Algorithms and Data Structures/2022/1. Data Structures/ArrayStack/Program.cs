@@ -5,7 +5,7 @@ namespace ArrayStack
     {
         static void Main(string[] args)
         {
-            // Разтеглив масив с числа
+            // Статичен стек с числа
             ArrayStack<int> numbers = new ArrayStack<int>();
             numbers.Push(112);
             numbers.Push(911);
@@ -13,7 +13,7 @@ namespace ArrayStack
             numbers.Push(150);
             Console.WriteLine(string.Join(" ", numbers));
 
-            // Разтеглив масив с текст
+            // Статичен стек с текст
             ArrayStack<string> text = new ArrayStack<string>();
             text.Push("Hello");
             text.Push("World");
