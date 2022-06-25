@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleLinkedList", "DoubleL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedQueue", "LinkedQueue\LinkedQueue.csproj", "{EEC3E3C0-EF9D-4339-9D01-096646E00F0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedStack", "LinkedStack\LinkedStack.csproj", "{5DCC368E-3D7A-4C78-9099-F0238CC0B966}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{EEC3E3C0-EF9D-4339-9D01-096646E00F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEC3E3C0-EF9D-4339-9D01-096646E00F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEC3E3C0-EF9D-4339-9D01-096646E00F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DCC368E-3D7A-4C78-9099-F0238CC0B966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DCC368E-3D7A-4C78-9099-F0238CC0B966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DCC368E-3D7A-4C78-9099-F0238CC0B966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DCC368E-3D7A-4C78-9099-F0238CC0B966}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

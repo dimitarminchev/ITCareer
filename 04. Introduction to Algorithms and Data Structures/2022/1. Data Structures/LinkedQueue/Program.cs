@@ -5,7 +5,7 @@ namespace LinkedQueue
     {
         static void Main(string[] args)
         {
-            // Обратен списък с числа
+            // Свързана опашка с числа
             LinkedQueue<int> numbers = new LinkedQueue<int>();
             numbers.Enqueue(112);
             numbers.Enqueue(911);
@@ -13,7 +13,7 @@ namespace LinkedQueue
             numbers.Enqueue(150);
             Console.WriteLine(string.Join(" ", numbers));
 
-            // Обратен списък с текст
+            // Свързана опашка с текст
             LinkedQueue<string> text = new LinkedQueue<string>();
             text.Enqueue("Hello");
             text.Enqueue("World");
