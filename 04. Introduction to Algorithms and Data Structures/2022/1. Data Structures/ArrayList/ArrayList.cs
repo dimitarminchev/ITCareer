@@ -17,7 +17,7 @@ namespace ArrayList
         public int Count { get; private set; }
 
         /// <summary>
-        /// Капацитет
+        /// Капацитет 
         /// </summary>
         public int Capacity { get; private set; }
 
