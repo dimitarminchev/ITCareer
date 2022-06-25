@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
 namespace DoubleLinkedList
 {
@@ -12,35 +7,6 @@ namespace DoubleLinkedList
     /// </summary>
     public class DoubleLinkedList<T> : IEnumerable<T>
     {
-        /// <summary>
-        /// Един възел
-        /// </summary>
-        public class ListNode<T>
-        {
-            /// <summary>
-            /// Стойност на възела
-            /// </summary>
-            public T Value { get; private set; }
-
-            /// <summary>
-            /// Предишен възел
-            /// </summary>
-            public ListNode<T> Prev { get; set; }
-
-            /// <summary>
-            /// Следващ възел
-            /// </summary>
-            public ListNode<T> Next { get; set; }
-
-            /// <summary>
-            /// Конструктор
-            /// </summary>
-            public ListNode(T value)
-            {
-                this.Value = value;
-            }
-        }
-
         // Глава
         private ListNode<T> Head { get; set; }
 
