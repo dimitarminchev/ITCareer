@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayList", "ArrayList\Arra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicList", "DynamicList\DynamicList.csproj", "{3A9313D6-E78F-4AEC-ADAD-E14FCAD65CC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircularQueue", "CircularQueue\CircularQueue.csproj", "{5D096AB4-CC72-40ED-95FC-79F079A9A652}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3A9313D6-E78F-4AEC-ADAD-E14FCAD65CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A9313D6-E78F-4AEC-ADAD-E14FCAD65CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A9313D6-E78F-4AEC-ADAD-E14FCAD65CC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D096AB4-CC72-40ED-95FC-79F079A9A652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D096AB4-CC72-40ED-95FC-79F079A9A652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D096AB4-CC72-40ED-95FC-79F079A9A652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D096AB4-CC72-40ED-95FC-79F079A9A652}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
