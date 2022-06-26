@@ -6,7 +6,7 @@
     public class BubbleSort
     {
         /// <summary>
-        /// Сортиране по метода мехурчето = O(N^2)
+        /// Сортиране чрез метода мехурчето
         /// </summary>
         public static void Sort<T>(T[] elements) where T : IComparable
         {
