@@ -5,6 +5,9 @@
     /// </summary>
     public class Help
     {
+        // Случайно число
+        private static Random rnd = new Random();
+
         /// <summary>
         /// Размяна на два елемента 
         /// </summary>
@@ -28,7 +31,6 @@
         /// </summary>
         public static void Shuffle<T>(T[] collection)
         {
-            Random rnd = new Random();
             for (int index = 0; index < collection.Length; index++)
             {
                 int random = index + rnd.Next(0, collection.Length - index);

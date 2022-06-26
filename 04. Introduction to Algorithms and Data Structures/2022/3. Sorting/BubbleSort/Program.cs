@@ -6,6 +6,8 @@ namespace BubbleSort
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("BubbleSort:");
+
             // Колекция за сортиране
             int[] array = { -1, 9, 2, -8, 7, 6, -3, 5, 4, 1, 3 };
 

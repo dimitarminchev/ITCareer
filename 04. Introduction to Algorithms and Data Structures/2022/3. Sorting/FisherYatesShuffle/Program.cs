@@ -7,17 +7,23 @@ namespace FisherYatesShuffle
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("3 x Fisher-Yates Shuffle:");
+
             // Колекция за сортиране
             int[] array = { -1, 9, 2, -8, 7, 6, -3, 5, 4, 1, 3 };
 
-            // Отпечаваме на колекцията
-            Console.WriteLine(String.Join(" ", array));
-
-            // Разбъркване на колекцията
+            // Разбъркване и отпечатване на колекцията
             Help.Shuffle(array);
-
-            // Отпечаваме на колекцията
             Console.WriteLine(String.Join(" ", array));
+
+            // Разбъркване и отпечатване на колекцията
+            Help.Shuffle(array);
+            Console.WriteLine(String.Join(" ", array));
+
+            // Разбъркване и отпечатване на колекцията
+            Help.Shuffle(array);
+            Console.WriteLine(String.Join(" ", array));
+
         }
     }
 }
