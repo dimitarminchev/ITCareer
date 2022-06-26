@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "BinarySearc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterpolationSearch", "InterpolationSearch\InterpolationSearch.csproj", "{B38ECABD-37EE-4118-A470-CA0BE3E5F7B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasySearch", "EasySearch\EasySearch.csproj", "{4DA9EC6F-F3E5-4AAD-944C-5B45CF3C9A61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B38ECABD-37EE-4118-A470-CA0BE3E5F7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B38ECABD-37EE-4118-A470-CA0BE3E5F7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B38ECABD-37EE-4118-A470-CA0BE3E5F7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DA9EC6F-F3E5-4AAD-944C-5B45CF3C9A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DA9EC6F-F3E5-4AAD-944C-5B45CF3C9A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DA9EC6F-F3E5-4AAD-944C-5B45CF3C9A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DA9EC6F-F3E5-4AAD-944C-5B45CF3C9A61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
