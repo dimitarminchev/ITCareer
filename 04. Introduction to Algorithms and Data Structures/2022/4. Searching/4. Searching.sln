@@ -5,6 +5,10 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearSearch", "LinearSearch\LinearSearch.csproj", "{36369465-8714-4113-B79E-22C3D170B07A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursiveBinarySearch", "RecursiveBinarySearch\RecursiveBinarySearch.csproj", "{EBDEF93A-EA2E-4224-B6CC-71F00EAB4F0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "BinarySearch\BinarySearch.csproj", "{43C4ECD1-808B-424D-9D12-868793183785}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{36369465-8714-4113-B79E-22C3D170B07A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36369465-8714-4113-B79E-22C3D170B07A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36369465-8714-4113-B79E-22C3D170B07A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDEF93A-EA2E-4224-B6CC-71F00EAB4F0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDEF93A-EA2E-4224-B6CC-71F00EAB4F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDEF93A-EA2E-4224-B6CC-71F00EAB4F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDEF93A-EA2E-4224-B6CC-71F00EAB4F0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43C4ECD1-808B-424D-9D12-868793183785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43C4ECD1-808B-424D-9D12-868793183785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43C4ECD1-808B-424D-9D12-868793183785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43C4ECD1-808B-424D-9D12-868793183785}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
