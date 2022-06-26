@@ -3,7 +3,7 @@
     public class Search
     {
         /// <summary>
-        /// Рекурсивно двоично търсене
+        /// Итеративно двоично търсене
         /// </summary>
         public static int Binary<T>(T[] collection, T key, int start, int end) where T : IComparable
         {
