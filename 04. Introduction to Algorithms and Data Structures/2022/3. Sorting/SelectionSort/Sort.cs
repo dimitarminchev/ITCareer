@@ -21,7 +21,7 @@ namespace SelectionSort
                 int min = index;
                 for (int curr = index + 1; curr < collection.Length; curr++)
                 {
-                    if (Help.Less(collection[curr], collection[min]))
+                    if (Help.IsLess(collection[curr], collection[min]))
                     {
                         min = curr;
                     }

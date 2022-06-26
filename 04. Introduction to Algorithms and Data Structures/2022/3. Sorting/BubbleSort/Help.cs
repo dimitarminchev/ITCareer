@@ -1,4 +1,4 @@
-﻿namespace SelectionSort
+﻿namespace BubbleSort
 {
     /// <summary>
     /// Помощен клас

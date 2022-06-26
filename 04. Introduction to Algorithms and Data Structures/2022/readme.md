@@ -32,8 +32,9 @@
 - 3.3.3. Редица N -> M
 
 ## 3. Sorting 
-- [FisherYatesShuffle](3.%20Sorting/FisherYatesShuffle) = Разбърване = О(N)
 - [SelectionSort](3.%20Sorting/SelectionSort) = Сортиране чрез пряка селекция = О(N^2)
+
+- [FisherYatesShuffle](3.%20Sorting/FisherYatesShuffle) = Разбърване = О(N)
 - [BubbleSort](3.%20Sorting/BubbleSort) = Сортиране по метода на мехурчето = О(N^2)
 - [InsertionSort](3.%20Sorting/InsertionSort) = Сортиране чрез вмъкване = О(N^2)
 - [MergeSort](3.%20Sorting/MergeSort) = Сортиране чрез сливане = O(N*log(N))
