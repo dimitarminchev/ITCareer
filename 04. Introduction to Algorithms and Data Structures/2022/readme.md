@@ -71,5 +71,10 @@
 - 5.1.5. Игли
 
 ## 6. Additional Tasks
+- 6.1.1. Array Reverse
+- 6.1.2. Iterations Variables 
+- 6.1.3. Combinations with Repetitions
+- 6.1.4. Hanoi Towers
+- 6.1.5. Combinations without Repetitions
 
 ## 7. Exam Prep
