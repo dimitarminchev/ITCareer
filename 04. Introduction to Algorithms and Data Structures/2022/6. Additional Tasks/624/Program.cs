@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _623
+namespace _624
 {
     public class Program
     {
