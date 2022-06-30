@@ -1,0 +1,15 @@
+﻿# 6. Additional Tasks
+- 611. Array Reverse
+- 612. Iterations Variables 
+- 613. Combinations with Repetitions
+- 614. Hanoi Towers
+- 615. Combinations without Repetitions
+- 616. Arrays in Matrix
+- 621. Recursive Array Sum
+- 622. Recursive Factorial
+- 623. Recursive Drawing
+- 624. Vectors 0/1 
+- 625. Combinations
+- 626. Eight Queens
+- 627. Labyrinth
+- 631. Words
