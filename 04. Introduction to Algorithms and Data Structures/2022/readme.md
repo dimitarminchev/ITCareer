@@ -87,3 +87,6 @@
 - 6.3.1. Words
 
 ## 7. Exam Prep
+- [Game](5.%20Exam%20Prep/game.md) = Игра
+- [Product](5.%20Exam%20Prep/product.md) = Продукти
+- [Train](5.%20Exam%20Prep/train.md) = Влакче
