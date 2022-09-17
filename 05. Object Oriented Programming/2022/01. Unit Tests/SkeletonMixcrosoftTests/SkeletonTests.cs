@@ -2,6 +2,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SkeletonMixcrosoftTests
 {
+    /// <summary>
+    /// Microsoft Unit Tests
+    /// </summary>
     [TestClass]
     public class SkeletonTests
     {

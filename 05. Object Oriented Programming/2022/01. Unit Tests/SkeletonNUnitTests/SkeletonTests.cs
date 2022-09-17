@@ -2,6 +2,9 @@ using NUnit.Framework;
 
 namespace SkeletonNUnitTests
 {
+    /// <summary>
+    /// NUnit Tests
+    /// </summary>
     public class SkeletonTests
     {
         private const int AxeAttack = 2;
