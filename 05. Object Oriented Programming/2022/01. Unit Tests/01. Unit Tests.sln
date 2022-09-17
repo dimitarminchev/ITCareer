@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount", "BankAccount\BankAccount.csproj", "{B17257D4-1C2A-484A-9E8B-7F948D2575BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountNUnitTests", "BankAccountNUnitTests\BankAccountNUnitTests.csproj", "{AF05AFF2-093E-4AF5-B21A-38D92F9EAD97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountMicrosoftTests", "BankAccountMicrosoftTests\BankAccountMicrosoftTests.csproj", "{3FDE03BA-6832-49C4-8C68-9C37C18FB563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton", "Skeleton\Skeleton.csproj", "{01ED4DEE-81BF-4A34-BB22-53BB9CD9E9D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkeletonNUnitTests", "SkeletonNUnitTests\SkeletonNUnitTests.csproj", "{6F1C795A-D901-445B-9D41-EBDBED3E1A6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkeletonMixcrosoftTests", "SkeletonMixcrosoftTests\SkeletonMixcrosoftTests.csproj", "{818DD754-D497-41A8-B07D-C1C81A46D717}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B17257D4-1C2A-484A-9E8B-7F948D2575BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B17257D4-1C2A-484A-9E8B-7F948D2575BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B17257D4-1C2A-484A-9E8B-7F948D2575BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B17257D4-1C2A-484A-9E8B-7F948D2575BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF05AFF2-093E-4AF5-B21A-38D92F9EAD97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF05AFF2-093E-4AF5-B21A-38D92F9EAD97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF05AFF2-093E-4AF5-B21A-38D92F9EAD97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF05AFF2-093E-4AF5-B21A-38D92F9EAD97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FDE03BA-6832-49C4-8C68-9C37C18FB563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FDE03BA-6832-49C4-8C68-9C37C18FB563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FDE03BA-6832-49C4-8C68-9C37C18FB563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FDE03BA-6832-49C4-8C68-9C37C18FB563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01ED4DEE-81BF-4A34-BB22-53BB9CD9E9D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01ED4DEE-81BF-4A34-BB22-53BB9CD9E9D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01ED4DEE-81BF-4A34-BB22-53BB9CD9E9D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01ED4DEE-81BF-4A34-BB22-53BB9CD9E9D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F1C795A-D901-445B-9D41-EBDBED3E1A6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F1C795A-D901-445B-9D41-EBDBED3E1A6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F1C795A-D901-445B-9D41-EBDBED3E1A6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F1C795A-D901-445B-9D41-EBDBED3E1A6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{818DD754-D497-41A8-B07D-C1C81A46D717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{818DD754-D497-41A8-B07D-C1C81A46D717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{818DD754-D497-41A8-B07D-C1C81A46D717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{818DD754-D497-41A8-B07D-C1C81A46D717}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF2D6A25-AB79-4CA4-8D81-500FE4B4BE18}
+	EndGlobalSection
+EndGlobal

@@ -1,17 +1,18 @@
-using Demo;
 using NUnit.Framework;
 
-namespace NUnitTests
+namespace BankAccountNUnitTests
 {
-    [TestFixture]
+    /// <summary>
+    /// NUnit
+    /// </summary>
     public class BankAccountTests
     {
-        private BankAccount account;
+        private BankAccount.BankAccount account;
 
         [SetUp]
         public void TestInit()
         {
-            this.account = new BankAccount();
+            this.account = new BankAccount.BankAccount();
         }
 
         [Test]

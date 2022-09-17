@@ -1,12 +1,14 @@
-using Demo;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MicrosoftTests
+namespace BankAccountMicrosoftTests
 {
+    /// <summary>
+    /// Microsoft Tests
+    /// </summary>
     [TestClass]
     public class BankAccountTests
     {
-        private BankAccount account = new BankAccount();
+        private BankAccount.BankAccount account = new BankAccount.BankAccount();
 
         [TestMethod]
         public void ZeroTest()
@@ -34,6 +36,5 @@ namespace MicrosoftTests
             var ex = Assert.ThrowsException<Exception>(() => account.Deposit(-100));
             Assert.AreEqual(ex.Message, "Must be positive");
         }
-
     }
 }
