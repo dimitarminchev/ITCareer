@@ -6,37 +6,34 @@ namespace MicrosoftTests
     [TestClass]
     public class BankAccountTests
     {
-        [TestMethod]
-        public void InitializeAcountWithZeroValue()
-        {
-            // Arrange & Act
-            BankAccount acount = new BankAccount();
+        private BankAccount account = new BankAccount();
 
-            // Assert
-            Assert.AreEqual(0m, acount.Amount);
+        [TestMethod]
+        public void ZeroTest()
+        {
+            Assert.AreEqual(0m, account.Amount);
         }
 
         [TestMethod]
-        public void InitializeAcountWithPositiveValue()
+        public void SetTest()
         {
-            // Arrange & Act
-            BankAccount acount = new BankAccount(2000m);
-
-            // Assert
-            Assert.AreEqual(2000m, acount.Amount);
+            account.Amount = 1000m;
+            Assert.AreEqual(1000m, account.Amount);
         }
 
         [TestMethod]
-        public void InitializeAcountAndSetAmount()
+        public void DepositTest()
         {
-            // Arrange 
-            BankAccount acount = new BankAccount();
-
-            // Act
-            acount.Amount = 1000m;
-
-            // Assert
-            Assert.AreEqual(1000m, acount.Amount);
+            account.Deposit(50);
+            Assert.IsTrue(account.Amount == 50);
         }
+
+        [TestMethod]
+        public void ExceptionTest()
+        {
+            var ex = Assert.ThrowsException<Exception>(() => account.Deposit(-100));
+            Assert.AreEqual(ex.Message, "Must be positive");
+        }
+
     }
 }

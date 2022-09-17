@@ -6,37 +6,38 @@ namespace NUnitTests
     [TestFixture]
     public class BankAccountTests
     {
-        [Test]
-        public void InitializeAcountWithZeroValue()
-        {
-            // Arrange & Act
-            BankAccount acount = new BankAccount();
+        private BankAccount account;
 
-            // Assert
-            Assert.AreEqual(0m, acount.Amount);
+        [SetUp]
+        public void TestInit()
+        {
+            this.account = new BankAccount();
         }
 
         [Test]
-        public void InitializeAcountWithPositiveValue()
+        public void ZeroTest()
         {
-            // Arrange & Act
-            BankAccount acount = new BankAccount(2000m);
-
-            // Assert
-            Assert.AreEqual(2000m, acount.Amount);
+            Assert.AreEqual(0m, account.Amount);
         }
 
         [Test]
-        public void InitializeAcountAndSetAmount()
+        public void SetTest()
         {
-            // Arrange 
-            BankAccount acount = new BankAccount();
+            account.Amount = 1000m;
+            Assert.AreEqual(1000m, account.Amount);
+        }
+        [Test]
+        public void DepositTest()
+        {
+            account.Deposit(50);
+            Assert.IsTrue(account.Amount == 50);
+        }
 
-            // Act
-            acount.Amount = 1000m;
-
-            // Assert
-            Assert.AreEqual(1000m, acount.Amount);
+        [Test]
+        public void ExceptionTest()
+        {
+            var ex = Assert.Throws<Exception>(() => account.Deposit(-100));
+            Assert.That(ex.Message, Is.EqualTo("Must be positive"));
         }
     }
 }

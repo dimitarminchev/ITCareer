@@ -13,7 +13,22 @@
 		public decimal Amount
         {
 			get { return this.amount; }
-			set { this.amount = value; }
+			set 
+			{
+				if (value < 0)
+				{
+					throw new Exception("Must be positive");
+				}
+				this.amount = value; 
+			}
+		}
+
+		/// <summary>
+		/// Deposit
+		/// </summary>
+		public void Deposit(decimal amount)
+		{
+			this.Amount = amount;
 		}
 
 		/// <summary>
