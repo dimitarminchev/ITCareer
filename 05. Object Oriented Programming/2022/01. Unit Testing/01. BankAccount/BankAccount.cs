@@ -1,4 +1,4 @@
-﻿namespace BankAccount
+﻿namespace _01._BankAccount
 {
     /// <summary>
 	/// Bank account
@@ -26,9 +26,9 @@
         /// <summary>
         /// Deposit
         /// </summary>
-        public void Deposit(decimal amount)
+        public void Deposit(decimal cash)
         {
-            this.Amount = amount;
+            this.Amount += cash;
         }
 
         /// <summary>
@@ -47,5 +47,4 @@
             this.amount = account;
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿namespace Skeleton
+﻿namespace _04._Skeleton
 {
     internal class Program
     {

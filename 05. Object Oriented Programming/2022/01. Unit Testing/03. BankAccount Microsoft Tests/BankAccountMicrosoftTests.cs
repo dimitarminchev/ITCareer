@@ -1,6 +1,7 @@
+using _01._BankAccount;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace BankAccountMicrosoftTests
+namespace _03._BankAccount_Microsoft_Tests
 {
     /// <summary>
     /// Microsoft Unit Tests
@@ -8,7 +9,7 @@ namespace BankAccountMicrosoftTests
     [TestClass]
     public class BankAccountTests
     {
-        private BankAccount.BankAccount account = new BankAccount.BankAccount();
+        private BankAccount account = new BankAccount();
 
         [TestMethod]
         public void ZeroTest()

@@ -1,14 +1,13 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SkeletonMicrosoftTests
+namespace _06._Skeleton_Microsoft_Tests
 {
     /// <summary>
     /// Microsoft Unit Tests
     /// </summary>
     [TestClass]
-    public class SkeletonTests
+    public class SkeletonMicrosoftTests
     {
-
         private const int AxeAttack = 2;
         private const int AxeDurability = 2;
         private const int DummyHealth = 20;

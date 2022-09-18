@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. BankAccount", "01. BankAccount\01. BankAccount.csproj", "{D7D13115-D57E-43EA-BAC1-452B9D04AC94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. BankAccount NUnit Tests", "02. BankAccount NUnit Tests\02. BankAccount NUnit Tests.csproj", "{C5D9AA56-0E81-472B-ACEA-A0FB65E87F3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. BankAccount Microsoft Tests", "03. BankAccount Microsoft Tests\03. BankAccount Microsoft Tests.csproj", "{7B4EB5C8-B937-43D1-8847-A81315ECD935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Skeleton", "04. Skeleton\04. Skeleton.csproj", "{04F0617E-4671-45D0-85B4-7A3C9A87091D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Skeleton NUnit Tests", "05. Skeleton NUnit Tests\05. Skeleton NUnit Tests.csproj", "{8B2DB5F9-37B7-4846-B0BE-EA6AF52E496D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Skeleton Microsoft Tests", "06. Skeleton Microsoft Tests\06. Skeleton Microsoft Tests.csproj", "{6C232BB3-2F0E-48DD-B707-A49D90777905}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7D13115-D57E-43EA-BAC1-452B9D04AC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D13115-D57E-43EA-BAC1-452B9D04AC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D13115-D57E-43EA-BAC1-452B9D04AC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D13115-D57E-43EA-BAC1-452B9D04AC94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5D9AA56-0E81-472B-ACEA-A0FB65E87F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5D9AA56-0E81-472B-ACEA-A0FB65E87F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5D9AA56-0E81-472B-ACEA-A0FB65E87F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5D9AA56-0E81-472B-ACEA-A0FB65E87F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B4EB5C8-B937-43D1-8847-A81315ECD935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4EB5C8-B937-43D1-8847-A81315ECD935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4EB5C8-B937-43D1-8847-A81315ECD935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4EB5C8-B937-43D1-8847-A81315ECD935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04F0617E-4671-45D0-85B4-7A3C9A87091D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04F0617E-4671-45D0-85B4-7A3C9A87091D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F0617E-4671-45D0-85B4-7A3C9A87091D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04F0617E-4671-45D0-85B4-7A3C9A87091D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B2DB5F9-37B7-4846-B0BE-EA6AF52E496D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B2DB5F9-37B7-4846-B0BE-EA6AF52E496D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B2DB5F9-37B7-4846-B0BE-EA6AF52E496D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B2DB5F9-37B7-4846-B0BE-EA6AF52E496D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C232BB3-2F0E-48DD-B707-A49D90777905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C232BB3-2F0E-48DD-B707-A49D90777905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C232BB3-2F0E-48DD-B707-A49D90777905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C232BB3-2F0E-48DD-B707-A49D90777905}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15E1CE5C-70A4-4C48-86D2-DD16B15E79B9}
+	EndGlobalSection
+EndGlobal

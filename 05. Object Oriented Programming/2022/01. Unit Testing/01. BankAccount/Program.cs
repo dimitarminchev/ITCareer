@@ -1,4 +1,4 @@
-﻿namespace BankAccount
+﻿namespace _01._BankAccount
 {
     internal class Program
     {

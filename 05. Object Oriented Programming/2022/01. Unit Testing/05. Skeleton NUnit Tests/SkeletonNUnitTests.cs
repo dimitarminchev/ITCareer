@@ -1,11 +1,11 @@
 using NUnit.Framework;
 
-namespace SkeletonNUnitTests
+namespace _05._Skeleton_NUnit_Tests
 {
     /// <summary>
     /// NUnit Tests
     /// </summary>
-    public class SkeletonTests
+    public class SkeletonNUnitTests
     {
         private const int AxeAttack = 2;
         private const int AxeDurability = 2;
@@ -36,6 +36,5 @@ namespace SkeletonNUnitTests
             var ex = Assert.Throws<InvalidOperationException>(() => axe.Attack(dummy));
             Assert.That(ex.Message, Is.EqualTo("Axe is broken."));
         }
-
     }
 }
