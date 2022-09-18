@@ -3,17 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. BankAccount", "01. BankAccount\01. BankAccount.csproj", "{D7D13115-D57E-43EA-BAC1-452B9D04AC94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. BankAccount", "01. BankAccount\01. BankAccount.csproj", "{D7D13115-D57E-43EA-BAC1-452B9D04AC94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. BankAccount NUnit Tests", "02. BankAccount NUnit Tests\02. BankAccount NUnit Tests.csproj", "{C5D9AA56-0E81-472B-ACEA-A0FB65E87F3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. BankAccount NUnit Tests", "02. BankAccount NUnit Tests\02. BankAccount NUnit Tests.csproj", "{C5D9AA56-0E81-472B-ACEA-A0FB65E87F3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. BankAccount Microsoft Tests", "03. BankAccount Microsoft Tests\03. BankAccount Microsoft Tests.csproj", "{7B4EB5C8-B937-43D1-8847-A81315ECD935}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. BankAccount Microsoft Tests", "03. BankAccount Microsoft Tests\03. BankAccount Microsoft Tests.csproj", "{7B4EB5C8-B937-43D1-8847-A81315ECD935}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Skeleton", "04. Skeleton\04. Skeleton.csproj", "{04F0617E-4671-45D0-85B4-7A3C9A87091D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Skeleton", "04. Skeleton\04. Skeleton.csproj", "{04F0617E-4671-45D0-85B4-7A3C9A87091D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Skeleton NUnit Tests", "05. Skeleton NUnit Tests\05. Skeleton NUnit Tests.csproj", "{8B2DB5F9-37B7-4846-B0BE-EA6AF52E496D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Skeleton NUnit Tests", "05. Skeleton NUnit Tests\05. Skeleton NUnit Tests.csproj", "{8B2DB5F9-37B7-4846-B0BE-EA6AF52E496D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Skeleton Microsoft Tests", "06. Skeleton Microsoft Tests\06. Skeleton Microsoft Tests.csproj", "{6C232BB3-2F0E-48DD-B707-A49D90777905}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Skeleton Microsoft Tests", "06. Skeleton Microsoft Tests\06. Skeleton Microsoft Tests.csproj", "{6C232BB3-2F0E-48DD-B707-A49D90777905}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Dependencies", "07. Dependencies\07. Dependencies.csproj", "{A8E0DF6A-6BBA-4F01-92C0-6E73D553EC74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Dependencies Tests", "08. Dependencies Tests\08. Dependencies Tests.csproj", "{19F96214-9EDD-4230-BDCC-386664912E15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Mocking", "09. Mocking\09. Mocking.csproj", "{B6A4C3F6-3C60-4D94-A556-D01C130A6E1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Mocking Tests", "10. Mocking Tests\10. Mocking Tests.csproj", "{FDEE6FB1-C91C-485C-B53D-FD5279A09BD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +53,22 @@ Global
 		{6C232BB3-2F0E-48DD-B707-A49D90777905}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C232BB3-2F0E-48DD-B707-A49D90777905}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C232BB3-2F0E-48DD-B707-A49D90777905}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8E0DF6A-6BBA-4F01-92C0-6E73D553EC74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E0DF6A-6BBA-4F01-92C0-6E73D553EC74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E0DF6A-6BBA-4F01-92C0-6E73D553EC74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E0DF6A-6BBA-4F01-92C0-6E73D553EC74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F96214-9EDD-4230-BDCC-386664912E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F96214-9EDD-4230-BDCC-386664912E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F96214-9EDD-4230-BDCC-386664912E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F96214-9EDD-4230-BDCC-386664912E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A4C3F6-3C60-4D94-A556-D01C130A6E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A4C3F6-3C60-4D94-A556-D01C130A6E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A4C3F6-3C60-4D94-A556-D01C130A6E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A4C3F6-3C60-4D94-A556-D01C130A6E1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDEE6FB1-C91C-485C-B53D-FD5279A09BD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDEE6FB1-C91C-485C-B53D-FD5279A09BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDEE6FB1-C91C-485C-B53D-FD5279A09BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDEE6FB1-C91C-485C-B53D-FD5279A09BD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
