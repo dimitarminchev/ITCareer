@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BankAccountMicrosoftTests
 {
     /// <summary>
-    /// Microsoft Tests
+    /// Microsoft Unit Tests
     /// </summary>
     [TestClass]
     public class BankAccountTests

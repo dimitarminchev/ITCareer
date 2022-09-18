@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SkeletonMixcrosoftTests
+namespace SkeletonMicrosoftTests
 {
     /// <summary>
     /// Microsoft Unit Tests
