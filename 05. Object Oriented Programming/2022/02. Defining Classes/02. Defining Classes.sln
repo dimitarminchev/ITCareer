@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. SqrtPrecalculator", "04
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. PersonCounter", "05. PersonCounter\05. PersonCounter.csproj", "{55EB4495-214E-405D-9118-D3F537636E05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. MemoryApp", "06. MemoryApp\06. MemoryApp.csproj", "{61BFE0A0-7BB4-4950-9E49-52E7F051B24D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{55EB4495-214E-405D-9118-D3F537636E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55EB4495-214E-405D-9118-D3F537636E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55EB4495-214E-405D-9118-D3F537636E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61BFE0A0-7BB4-4950-9E49-52E7F051B24D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61BFE0A0-7BB4-4950-9E49-52E7F051B24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61BFE0A0-7BB4-4950-9E49-52E7F051B24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61BFE0A0-7BB4-4950-9E49-52E7F051B24D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
