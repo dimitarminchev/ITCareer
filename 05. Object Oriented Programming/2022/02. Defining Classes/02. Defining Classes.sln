@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. BankAccount", "02. Bank
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Arithmetics", "03. Arithmetics\03. Arithmetics.csproj", "{97FD12BA-8524-4F21-B802-C9AD0384A710}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. SqrtPrecalculator", "04. SqrtPrecalculator\04. SqrtPrecalculator.csproj", "{BED4F4A4-3FC8-4F18-AFCB-D0C2516DCD6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{97FD12BA-8524-4F21-B802-C9AD0384A710}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97FD12BA-8524-4F21-B802-C9AD0384A710}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97FD12BA-8524-4F21-B802-C9AD0384A710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED4F4A4-3FC8-4F18-AFCB-D0C2516DCD6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED4F4A4-3FC8-4F18-AFCB-D0C2516DCD6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED4F4A4-3FC8-4F18-AFCB-D0C2516DCD6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED4F4A4-3FC8-4F18-AFCB-D0C2516DCD6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
