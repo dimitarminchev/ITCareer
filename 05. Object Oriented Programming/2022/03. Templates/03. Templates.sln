@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Scale", "06_Scale\06_Sca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_StringSwap", "07_StringSwap\07_StringSwap.csproj", "{A7D4FDD8-6685-4B8E-A82F-56C7D0284FAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_IntegerSwap", "08_IntegerSwap\08_IntegerSwap.csproj", "{BCE80401-5B74-4909-90F0-A1EB46A8BA6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{A7D4FDD8-6685-4B8E-A82F-56C7D0284FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7D4FDD8-6685-4B8E-A82F-56C7D0284FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7D4FDD8-6685-4B8E-A82F-56C7D0284FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE80401-5B74-4909-90F0-A1EB46A8BA6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE80401-5B74-4909-90F0-A1EB46A8BA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE80401-5B74-4909-90F0-A1EB46A8BA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE80401-5B74-4909-90F0-A1EB46A8BA6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
