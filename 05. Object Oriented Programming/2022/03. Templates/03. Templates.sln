@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_IntegerBox", "04_Integer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_ArrayCreator", "05_ArrayCreator\05_ArrayCreator.csproj", "{9332B8EE-9E84-4462-B890-4D026712FE1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Scale", "06_Scale\06_Scale.csproj", "{A4BF28AB-58D5-4858-8B09-97D48E63BD8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9332B8EE-9E84-4462-B890-4D026712FE1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9332B8EE-9E84-4462-B890-4D026712FE1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9332B8EE-9E84-4462-B890-4D026712FE1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4BF28AB-58D5-4858-8B09-97D48E63BD8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4BF28AB-58D5-4858-8B09-97D48E63BD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4BF28AB-58D5-4858-8B09-97D48E63BD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4BF28AB-58D5-4858-8B09-97D48E63BD8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
