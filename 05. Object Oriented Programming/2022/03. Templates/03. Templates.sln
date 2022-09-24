@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_StringBox", "03_StringBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_IntegerBox", "04_IntegerBox\04_IntegerBox.csproj", "{504E19EB-2D20-4ECD-BF3D-4B493E9AF285}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_ArrayCreator", "05_ArrayCreator\05_ArrayCreator.csproj", "{9332B8EE-9E84-4462-B890-4D026712FE1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{504E19EB-2D20-4ECD-BF3D-4B493E9AF285}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{504E19EB-2D20-4ECD-BF3D-4B493E9AF285}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{504E19EB-2D20-4ECD-BF3D-4B493E9AF285}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9332B8EE-9E84-4462-B890-4D026712FE1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9332B8EE-9E84-4462-B890-4D026712FE1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9332B8EE-9E84-4462-B890-4D026712FE1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9332B8EE-9E84-4462-B890-4D026712FE1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
