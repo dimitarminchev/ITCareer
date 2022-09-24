@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_ArrayCreator", "05_Array
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Scale", "06_Scale\06_Scale.csproj", "{A4BF28AB-58D5-4858-8B09-97D48E63BD8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_StringSwap", "07_StringSwap\07_StringSwap.csproj", "{A7D4FDD8-6685-4B8E-A82F-56C7D0284FAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{A4BF28AB-58D5-4858-8B09-97D48E63BD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4BF28AB-58D5-4858-8B09-97D48E63BD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4BF28AB-58D5-4858-8B09-97D48E63BD8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7D4FDD8-6685-4B8E-A82F-56C7D0284FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7D4FDD8-6685-4B8E-A82F-56C7D0284FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7D4FDD8-6685-4B8E-A82F-56C7D0284FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7D4FDD8-6685-4B8E-A82F-56C7D0284FAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
