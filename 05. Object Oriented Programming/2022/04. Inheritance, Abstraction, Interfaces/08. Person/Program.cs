@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace _09._Person
+namespace _08._Person
 {
     internal class Program
     {
@@ -14,7 +14,6 @@ namespace _09._Person
             IPerson person = new Citizen(name, age);
             Console.WriteLine(person.Name);
             Console.WriteLine(person.Age);
-
         }
     }
 }
