@@ -1,7 +1,7 @@
 ﻿/// <summary>
 /// Хакер
 /// </summary>
-private class Hacker
+public class Hacker
 {
     /// <summary>
     /// Потребител
