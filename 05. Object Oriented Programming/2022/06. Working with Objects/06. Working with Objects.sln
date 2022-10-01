@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Library", "01. Library\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. ComparableBook", "02. ComparableBook\02. ComparableBook.csproj", "{606547FE-738A-456C-B936-67FC09E35D08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. BookComparator", "03. BookComparator\03. BookComparator.csproj", "{FA54AE9E-73DA-47C5-AACE-D0419BD264C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{606547FE-738A-456C-B936-67FC09E35D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{606547FE-738A-456C-B936-67FC09E35D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{606547FE-738A-456C-B936-67FC09E35D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA54AE9E-73DA-47C5-AACE-D0419BD264C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA54AE9E-73DA-47C5-AACE-D0419BD264C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA54AE9E-73DA-47C5-AACE-D0419BD264C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA54AE9E-73DA-47C5-AACE-D0419BD264C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
