@@ -1,0 +1,4 @@
+﻿interface IMakeNoise
+{
+    void MakeNoise();
+}

@@ -1,0 +1,4 @@
+﻿interface IMakeTrick
+{
+    void MakeTrick();
+}
