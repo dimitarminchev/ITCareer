@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. MinMaxSumAverage", "02.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Largest3Numbers", "03. Largest3Numbers\03. Largest3Numbers.csproj", "{2BE3DDC4-4AC3-47E1-A59B-2FB0CC3E6A0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. ShortWordsSorted", "04. ShortWordsSorted\04. ShortWordsSorted.csproj", "{59CEC57D-99AD-4BC7-8167-3E31529269F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2BE3DDC4-4AC3-47E1-A59B-2FB0CC3E6A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BE3DDC4-4AC3-47E1-A59B-2FB0CC3E6A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BE3DDC4-4AC3-47E1-A59B-2FB0CC3E6A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59CEC57D-99AD-4BC7-8167-3E31529269F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59CEC57D-99AD-4BC7-8167-3E31529269F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59CEC57D-99AD-4BC7-8167-3E31529269F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59CEC57D-99AD-4BC7-8167-3E31529269F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
