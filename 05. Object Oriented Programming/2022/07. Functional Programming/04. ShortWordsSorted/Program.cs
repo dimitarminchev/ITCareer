@@ -14,8 +14,10 @@ namespace _04._ShortWordsSorted
         {
             char[] separators = new char[]{'.',',',':',';','(',')','[',']','\\','\"','\'','/','!','?',' '};
 
+            // inut
             string sentence = Console.ReadLine().ToLower();
 
+            // processing
             string[] words = sentence.Split(separators);
 
             var result = words
@@ -24,6 +26,7 @@ namespace _04._ShortWordsSorted
                       .OrderBy(w => w)
                       .Distinct();
 
+            // output
             Console.WriteLine(string.Join(", ", result));
         }
     }

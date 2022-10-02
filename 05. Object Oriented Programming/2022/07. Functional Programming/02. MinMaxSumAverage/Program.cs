@@ -5,8 +5,10 @@ namespace _02._MinMaxSumAverage
 {
     internal class Program
     {
-        // Min Max Sum Average
-        // https://judge.softuni.bg/Contests/Practice/Index/174#2
+        /// <summary>
+        /// Min Max Sum Average
+        /// https://judge.softuni.bg/Contests/Practice/Index/174#2
+        /// </summary>
         static void Main(string[] args)
         {
             // input
