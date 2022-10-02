@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. SortEvenNumbers", "01. SortEvenNumbers\01. SortEvenNumbers.csproj", "{95C0FA73-5CD5-47E4-86B8-91011D0353AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. MinMaxSumAverage", "02. MinMaxSumAverage\02. MinMaxSumAverage.csproj", "{5D4C84AF-BC5B-4357-BCA9-622AC94842A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{95C0FA73-5CD5-47E4-86B8-91011D0353AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95C0FA73-5CD5-47E4-86B8-91011D0353AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95C0FA73-5CD5-47E4-86B8-91011D0353AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D4C84AF-BC5B-4357-BCA9-622AC94842A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D4C84AF-BC5B-4357-BCA9-622AC94842A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D4C84AF-BC5B-4357-BCA9-622AC94842A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D4C84AF-BC5B-4357-BCA9-622AC94842A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
