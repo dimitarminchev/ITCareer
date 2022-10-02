@@ -21,7 +21,8 @@ namespace _04._ShortWordsSorted
             var result = words
                       .Where(w => w != "")
                       .Where(w => w.Count() < 5)
-                      .OrderBy(w => w).Distinct();
+                      .OrderBy(w => w)
+                      .Distinct();
 
             Console.WriteLine(string.Join(", ", result));
         }
