@@ -13,6 +13,7 @@ namespace _04_EnterNumbers
             int n = int.Parse(Console.ReadLine());
             if (n < start || n > end) throw new InvalidOperationException($"Number must be in range {start} - {end}");
         }
+        
         static void Main(string[] args)
         {
             int s = int.Parse(Console.ReadLine());
