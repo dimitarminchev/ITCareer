@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_EventsDemo", "01_EventsDemo\01_EventsDemo.csproj", "{C06DE1C1-9350-4276-9AF6-EDD9D5C0D90A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_KingGambit", "02_KingGambit\02_KingGambit.csproj", "{0894D165-55BC-40A3-88EA-54CB1621E978}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C06DE1C1-9350-4276-9AF6-EDD9D5C0D90A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C06DE1C1-9350-4276-9AF6-EDD9D5C0D90A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C06DE1C1-9350-4276-9AF6-EDD9D5C0D90A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0894D165-55BC-40A3-88EA-54CB1621E978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0894D165-55BC-40A3-88EA-54CB1621E978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0894D165-55BC-40A3-88EA-54CB1621E978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0894D165-55BC-40A3-88EA-54CB1621E978}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
