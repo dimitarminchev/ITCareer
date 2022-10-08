@@ -21,6 +21,7 @@
         {
             int start = int.Parse(Console.ReadLine());
             int end = int.Parse(Console.ReadLine());
+
             for (int i = 0; i < 10; i++)
             {
                 try
