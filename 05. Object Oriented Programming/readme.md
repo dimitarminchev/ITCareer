@@ -29,6 +29,9 @@
 ## Обучаеми 2019
 ![group_2019.jpg](group_2019.jpg)
 
+## Обучаеми 2022
+![group_2022.jpg](group_2022.jpg)
+
 ## Видео уроци
 1. [Откриване на курса](https://youtu.be/Vd5nml7ZthQ)
 2. Компонентно тестване: [Част 1](https://youtu.be/DxHbpT6u0V4) и [Част 2](https://youtu.be/5CwkbtVGlEI)
