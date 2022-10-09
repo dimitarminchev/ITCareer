@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_FileStreamDemo", "03_Fil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_MemoryStreamDemo", "04_MemoryStreamDemo\04_MemoryStreamDemo.csproj", "{7CD6D5AD-AB54-41D7-A974-F6374BB01882}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_NetworkStreamDemo", "05_NetworkStreamDemo\05_NetworkStreamDemo.csproj", "{7D1A284B-568A-44E2-8AB2-4E17BFE931F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7CD6D5AD-AB54-41D7-A974-F6374BB01882}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CD6D5AD-AB54-41D7-A974-F6374BB01882}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CD6D5AD-AB54-41D7-A974-F6374BB01882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D1A284B-568A-44E2-8AB2-4E17BFE931F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D1A284B-568A-44E2-8AB2-4E17BFE931F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D1A284B-568A-44E2-8AB2-4E17BFE931F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D1A284B-568A-44E2-8AB2-4E17BFE931F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
