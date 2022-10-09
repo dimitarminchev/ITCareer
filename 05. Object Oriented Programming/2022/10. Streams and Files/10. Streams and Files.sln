@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_FileReaderDemo", "01_FileReaderDemo\01_FileReaderDemo.csproj", "{FF5E4BBE-DEA5-457F-B0F6-5E9FC1DBA298}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_FileWriterDemo", "02_FileWriterDemo\02_FileWriterDemo.csproj", "{36D56C49-0B6D-4A1C-98F5-C9872262EB2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FF5E4BBE-DEA5-457F-B0F6-5E9FC1DBA298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF5E4BBE-DEA5-457F-B0F6-5E9FC1DBA298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF5E4BBE-DEA5-457F-B0F6-5E9FC1DBA298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36D56C49-0B6D-4A1C-98F5-C9872262EB2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36D56C49-0B6D-4A1C-98F5-C9872262EB2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36D56C49-0B6D-4A1C-98F5-C9872262EB2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36D56C49-0B6D-4A1C-98F5-C9872262EB2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
