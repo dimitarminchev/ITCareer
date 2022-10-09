@@ -10,30 +10,36 @@ namespace _109_HttpServer
     {
         static void Main(string[] args)
         {
+            // Step 1. Create TCP network connection listener
             Console.WriteLine("http://127.0.0.1:8080/");
             TcpListener listener = new TcpListener(IPAddress.Any, 8080);
             listener.Start();
 
             while (true)
             {
+                // Step 2. Accept TCP network client
                 using (NetworkStream stream = listener.AcceptTcpClient().GetStream())
                 {
-
+                    // Step 3. Read 4K bytes 
                     byte[] requestBytes = new byte[4096];
                     stream.Read(requestBytes, 0, 4096);
-                    var request = Encoding.ASCII.GetString(requestBytes);
+                    Console.WriteLine(Encoding.UTF8.GetString(requestBytes));
+
+                    // Step 4. Find requested page
+                    var requestString = Encoding.ASCII.GetString(requestBytes);
                     string page = string.Empty;
                     try
                     {
-                        page = request.Substring(request.IndexOf("/") + 1, request.IndexOf("HTTP/") - request.IndexOf("/") - 1).Trim();
+                        page = requestString.Substring(requestString.IndexOf("/") + 1, requestString.IndexOf("HTTP/") - requestString.IndexOf("/") - 1).Trim();
                     }
-                    catch
+                    catch(Exception e)
                     {
-                        Console.WriteLine("Error reading page data.");
+                        Console.WriteLine($"Error: {e.Message}");
                     }
-                    StreamReader reader;
-                    string code = string.Empty;
 
+                    // Step 5. Read html page
+                    StreamReader reader = null;
+                    string code = string.Empty;
                     switch (page)
                     {
                         case "page.html":
@@ -60,18 +66,18 @@ namespace _109_HttpServer
                             }
                     }
 
-                    // Form the response
+                    // Step 6. Form the response
                     StringBuilder message = new StringBuilder();
                     message.Append("HTTP/1.1 200 OK\r\n");
                     message.Append("Content-Type: text/html\r\n");
                     message.Append("Content-Length: " + code.Length + "\r\n\r\n");
                     message.Append(code);
 
-                    // Return Response to Client
+                    // Step 7. Return Response to Client
                     byte[] bytes = Encoding.ASCII.GetBytes(message.ToString());
                     stream.Write(bytes, 0, bytes.Length);
 
-                    // Clean Up
+                    // Step 8. Clean Up
                     stream.Flush();
                     stream.Close();
                 }
