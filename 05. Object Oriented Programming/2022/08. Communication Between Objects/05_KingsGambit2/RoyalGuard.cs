@@ -18,8 +18,8 @@
 
     public RoyalGuard(string name)
     {
-        this.name = name;
-        this.health = 3;
+        this.Name = name;
+        this.Health = 3;
     }
 
     public void Attack(object sender, EventArgs e)
@@ -28,12 +28,10 @@
         {
             Console.WriteLine($"Royal Guard {name} is defending!");
         }
-
         if (this.health == 0)
         {
             return;
         }
-
         health--;
     }
 

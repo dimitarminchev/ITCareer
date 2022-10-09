@@ -1,4 +1,4 @@
-﻿public class FootMan
+﻿public class FootMan : EventArgs
 {
     private string name;
 
@@ -18,8 +18,8 @@
 
     public FootMan(string name)
     {
-        this.name = name;
-        this.health = 2;
+        this.Name = name;
+        this.Health = 2;
     }
 
     public void Attack(object sender, EventArgs e)
@@ -28,12 +28,10 @@
         {
             Console.WriteLine($"Footman {name} is panicking!");
         }
-
         if (this.health == 0)
         {
             return;
         }
-
         health--;
     }
 }

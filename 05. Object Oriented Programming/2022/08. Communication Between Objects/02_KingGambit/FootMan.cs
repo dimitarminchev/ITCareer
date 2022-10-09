@@ -1,4 +1,4 @@
-﻿public class FootMan 
+﻿public class FootMan : EventArgs
 {
     private string name;
 

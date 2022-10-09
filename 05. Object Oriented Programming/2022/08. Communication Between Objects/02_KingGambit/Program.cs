@@ -12,19 +12,19 @@
         static void Main(string[] args)
         {
             // 1. Крал
-            var name = Console.ReadLine();
+            var name = System.Console.ReadLine();
             King king = new King(name);
 
             // 2. Охранители
             List<RoyalGuard> guards = new List<RoyalGuard>();
-            Console.ReadLine().Split().ToList().ForEach
+            System.Console.ReadLine().Split().ToList().ForEach
             (
                 x => guards.Add(new RoyalGuard(x))
             );
 
             // 3. Слуги
             List<FootMan> footmen = new List<FootMan>();
-            Console.ReadLine().Split().ToList().ForEach
+            System.Console.ReadLine().Split().ToList().ForEach
             (
                 x => footmen.Add(new FootMan(x))
             );
@@ -35,7 +35,7 @@
 
             while (true)
             {
-                var input = Console.ReadLine().Split().ToArray();
+                var input = System.Console.ReadLine().Split().ToArray();
                 switch (input[0])
                 {
                     case "Attack": king.UnderAttack(new EventArgs()); break;

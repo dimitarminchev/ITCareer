@@ -1,4 +1,4 @@
-﻿public class RoyalGuard 
+﻿public class RoyalGuard : EventArgs
 {
     private string name;
 

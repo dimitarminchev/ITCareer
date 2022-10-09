@@ -19,9 +19,14 @@
         /// </summary>
         static void Main(string[] args)
         {
+            // Input
+            System.Console.Write("Enter range start: ");
             int start = int.Parse(Console.ReadLine());
+            System.Console.Write("Enter range end: ");
             int end = int.Parse(Console.ReadLine());
+            System.Console.WriteLine($"Enter 10 numbers in the range from {start} to {end}");
 
+            // Process
             for (int i = 0; i < 10; i++)
             {
                 try
@@ -30,13 +35,15 @@
                 }
                 catch (InvalidOperationException e)
                 {
-                    Console.WriteLine($"Error: {e.Message}");
+                    Console.Error($"Error: {e.Message}");
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"Error: {e.Message}");
+                    Console.Error($"Error: {e.Message}");
                 }
             }
+
+            // The End
         }
     }
 }

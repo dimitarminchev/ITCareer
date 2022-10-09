@@ -1,4 +1,4 @@
-﻿public class King
+﻿public class King : EventArgs
 {
     private string name;
 
