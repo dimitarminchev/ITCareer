@@ -8,7 +8,6 @@
         /// <summary>
         /// Get info for directory
         /// </summary>
-        /// <param name="dir"></param>
         static void GetInfo(DirectoryInfo dir)
         {
             DirectoryInfo[] ad = dir.GetDirectories();

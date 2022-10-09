@@ -30,6 +30,21 @@ namespace _05_NetworkStreamDemo
                     byte[] htmlBytes = Encoding.UTF8.GetBytes(html);
                     stream.Write(htmlBytes, 0, htmlBytes.Length);
 
+                    /* TODO: Test it!
+                     string html = string.Format("{0}{1}{2}{3} - {4}{2}{1}{0}",
+                                          "<html>", "<body>", "<h1>", "Welcome to my awesome site!", DateTime.Now);
+
+                                        StringBuilder message = new StringBuilder();
+                                        message.Append("HTTP/1.1 200 OK\r\n");
+                                        message.Append("Content-Type: text/html\r\n");
+                                        message.Append("Content-Length: " + html.Length + "\r\n\r\n");
+                                        message.Append(html);
+
+                                        byte[] bytes = Encoding.ASCII.GetBytes(message.ToString());
+                                        stream.Write(bytes, 0, bytes.Length);
+                    */
+
+
                     // TODO: HttpResponse => http://192.168.0.100:8080
                 }
             }

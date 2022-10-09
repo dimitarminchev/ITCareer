@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "107_FolderSearch", "107_Fol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "108_FullFolderSearch", "108_FullFolderSearch\108_FullFolderSearch.csproj", "{3C81EC0F-C1F4-4C4D-863E-000D111FDD8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "109_HttpServer", "109_HttpServer\109_HttpServer.csproj", "{239483CD-7E99-4483-9ED9-E909882D3B10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{3C81EC0F-C1F4-4C4D-863E-000D111FDD8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C81EC0F-C1F4-4C4D-863E-000D111FDD8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C81EC0F-C1F4-4C4D-863E-000D111FDD8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{239483CD-7E99-4483-9ED9-E909882D3B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239483CD-7E99-4483-9ED9-E909882D3B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239483CD-7E99-4483-9ED9-E909882D3B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239483CD-7E99-4483-9ED9-E909882D3B10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
