@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_MemoryStreamDemo", "04_M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_NetworkStreamDemo", "05_NetworkStreamDemo\05_NetworkStreamDemo.csproj", "{7D1A284B-568A-44E2-8AB2-4E17BFE931F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "101_OddStream", "101_OddStream\101_OddStream.csproj", "{60D2F6EE-11BD-40C6-A764-C4F94BEE0803}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7D1A284B-568A-44E2-8AB2-4E17BFE931F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D1A284B-568A-44E2-8AB2-4E17BFE931F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D1A284B-568A-44E2-8AB2-4E17BFE931F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60D2F6EE-11BD-40C6-A764-C4F94BEE0803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60D2F6EE-11BD-40C6-A764-C4F94BEE0803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60D2F6EE-11BD-40C6-A764-C4F94BEE0803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60D2F6EE-11BD-40C6-A764-C4F94BEE0803}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
