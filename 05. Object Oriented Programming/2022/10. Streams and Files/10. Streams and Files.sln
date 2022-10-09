@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "103_WordsCounter", "103_Wor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "104_BinaryFileCopy", "104_BinaryFileCopy\104_BinaryFileCopy.csproj", "{28FC2074-B262-4076-9F0E-4E9A15094CD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "105_FilePartition", "105_FilePartition\105_FilePartition.csproj", "{6930E024-AC55-46D4-89A8-9EEC32B8B66B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{28FC2074-B262-4076-9F0E-4E9A15094CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28FC2074-B262-4076-9F0E-4E9A15094CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28FC2074-B262-4076-9F0E-4E9A15094CD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6930E024-AC55-46D4-89A8-9EEC32B8B66B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6930E024-AC55-46D4-89A8-9EEC32B8B66B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6930E024-AC55-46D4-89A8-9EEC32B8B66B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6930E024-AC55-46D4-89A8-9EEC32B8B66B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
