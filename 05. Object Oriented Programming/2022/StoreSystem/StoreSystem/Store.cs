@@ -5,7 +5,9 @@ using System.Linq;
 
 public class Store 
 {
-	private string name;
+    private readonly List<Product> products = null;
+
+    private string name;
 
 	public string Name
     {
@@ -43,8 +45,9 @@ public class Store
 		private set { revenue = value; }
 	}
 
-	private List<Product> products = null;
-
+    /// <summary>
+    /// Constructor
+    /// </summary>
 	public Store(string name, string type)
 	{
 		Name = name;
@@ -53,46 +56,72 @@ public class Store
 		products = new List<Product>();
 	}
 
-	public bool ReceiveProduct(Product product)
+    /// <summary>
+    /// ReceiveProduct
+    /// </summary>
+    public bool ReceiveProduct(Product product)
 	{
-		if (products.Contains(product)) return false;
-		products.Add(product);
-		return true;
-	}
+        if (products.Any(x => x.Name.Equals(product.Name)))
+        {
+            return false;
+        }
 
-	public bool SellProduct(string name, int quantity)
-	{
-		var product = products.Find(x => x.Name == name);
+        products.Add(product);
 
-        if (product == null) return false;
-
-		if (product.Quantity < quantity) return false;
-
-		if (product.Quantity == quantity) products.Remove(product);
-		else product.Quantity -= quantity;
-
-        Revenue = Revenue + (quantity * product.FinalPrice);
-
-		return true;
+        return true;
     }
 
-	public Product GetProduct(string name)
+    /// <summary>
+    /// SellProduct
+    /// </summary>
+    public bool SellProduct(string name, int quantity)
 	{
-		return products.Find(x => x.Name == name);
+        if (!products.Any(x => x.Name.Equals(name)))
+        {
+            return false;
+        }
+
+        Product product = products.First(x => x.Name.Equals(name));
+
+        if (quantity > product.Quantity)
+        {
+            return false;
+        }
+
+        if (product.Quantity == quantity)
+        {
+            products.Remove(product);
+        }
+        else
+        {
+            product.Quantity -= quantity;
+        }
+
+        Revenue += quantity * product.FinalPrice;
+
+        return true;
     }
 
-	public override string ToString()
+    /// <summary>
+    /// GetProduct
+    /// </summary>
+    public Product GetProduct(string name)
 	{
-		var sb = new StringBuilder();
+		return products.FirstOrDefault(x => x.Name.Equals(name));
+    }
 
-		sb.Append($"****Store: {Name} <{Type}>" + Environment.NewLine);
-		sb.Append($"****Available products: <{products.Count()}>" + Environment.NewLine);
-		foreach (var product in products)
-		{
-			sb.Append($"****** {product.Name} ({product.Quantity})" + Environment.NewLine);
-		}
-		sb.Append($"****Revenue: <{Revenue:f2}BGN>");
+    /// <summary>
+    /// ToString
+    /// </summary>
+    public override string ToString()
+	{
+		var stringBuilder = new StringBuilder();
 
-		return sb.ToString();	
+        stringBuilder.AppendLine($"****Store: {Name} <{Type}>");
+        stringBuilder.AppendLine($"****Available products: <{products.Count()}>");
+        products.ForEach(x => stringBuilder.AppendLine($"****** {x.Name} ({x.Quantity})"));
+        stringBuilder.Append($"****Revenue: <{Revenue:f2}BGN>");
+
+		return stringBuilder.ToString();	
 	}
 }

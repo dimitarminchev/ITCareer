@@ -6,88 +6,142 @@ using System.Linq;
 
 public class StoreController
 {
-    private List<Store> stores = new List<Store>();
+    private List<Store> stores = null;
 
-    // CreateStore:{name}:{type}
+    /// <summary>
+    /// Constructor
+    /// </summary>
+    public StoreController()
+    {
+        stores = new List<Store>();
+    }
+
+    /// <summary>
+    /// CreateStore:{name}:{type}
+    /// </summary>
     public string CreateStore(List<string> args)
     {
-        var name = args[0];
-        var type = args[1];
-
-        if (stores.Contains(new Store(name, type)))
+        if (stores.Any(x => x.Name.Equals(args[0])))
         {
-            return $"Store {name} is already registered!";
+            return $"Store {args[0]} is already registered!";
         }
 
-        stores.Add(new Store(name, type));
-        return $"Store {name} was successfully registerd in the system!";
+        try
+        {
+            stores.Add(new Store(args[0], args[1]));
+        }
+        catch (ArgumentException e)
+        {
+            return e.Message;
+        }
+
+        return $"Store {args[0]} was successfully registerd in the system!";
     }
 
-    // ReceiveProduct:{type}:{name}:{quantity}:{price}:{percentageMarkup}:{storeName}
+    /// <summary>
+    /// ReceiveProduct:{type}:{name}:{quantity}:{price}:{percentageMarkup}:{storeName}
+    /// </summary>
     public string ReceiveProduct(List<string> args)
     {
-        string type = args[0];
-        string name = args[1];
-        int quantity = int.Parse(args[2]);
-        float price = float.Parse(args[3]);
-        float percentageMarkup = float.Parse(args[2]);
-        var storeName = args[5];
+        if (!stores.Any(x => x.Name.Equals(args[5])))
+        {
+            return $"Invalid Store: {args[5]}. Cannot find it in system!";
+        }
 
-        if (type != "Food" && type != "Drink")
-        return $"Product {type} is invalid!";
+        if (stores.First(x => x.Name.Equals(args[5])).GetProduct(args[1]) != null)
+        {
+            return $"Product {args[1]} was already delivered to {args[5]}!";
+        }
 
-        Store store = stores.FirstOrDefault(x => x.Name == storeName);
-        if (store == null) return $"Invalid Store: {storeName}. Cannot find it in system!";
+        if (args[0].Equals("Food"))
+        {
+            try
+            {
+                stores.First(x => x.Name.Equals(args[5])).ReceiveProduct(new Food(
+                    args[1],
+                    int.Parse(args[2]),
+                    double.Parse(args[3]),
+                    double.Parse(args[4])
+                ));
+            }
+            catch (ArgumentException e)
+            {
+                return e.Message;
+            }
+        }
+        else if (args[0].Equals("Drink"))
+        {
+            try
+            {
+                stores.First(x => x.Name.Equals(args[5])).ReceiveProduct(new Drink(
+                    args[1], 
+                    int.Parse(args[2]), 
+                    double.Parse(args[3]), 
+                    double.Parse(args[4])
+                ));
+            }
+            catch (ArgumentException e)
+            {
+                return e.Message;
+            }
+        }
+        else
+        {
+            return $"Product {args[0]} is invalid!";
+        }
 
-        Product product = null;
-        if (type == "Food") product = new Food(name, quantity, price, percentageMarkup);
-        if (type == "Drink") product = new Drink(name, quantity, price, percentageMarkup);
-
-        if (!store.ReceiveProduct(product))
-            return $"Product {name} was already delivered to {storeName}!";
-
-        return $"Product {name} was successfully delivered to {storeName}!";
+        return $"Product {args[1]} was successfully delivered to {args[5]}!";
     }
 
-    // SellProduct:{name}:{quantity}:{storeName}
+    /// <summary>
+    /// SellProduct:{name}:{quantity}:{storeName}
+    /// </summary>
     public string SellProduct(List<string> args)
     {
-        string name = args[0];
-        int quantity = int.Parse(args[1]);
-        string storeName = args[2];
+        if (!stores.Any(x => x.Name.Equals(args[2])))
+        {
+            return $"Invalid Store: {args[2]}. Cannot find it in system!";
+        }
 
-        Store store = stores.FirstOrDefault(x => x.Name == storeName);
-        if (store == null) return $"Invalid Store: {storeName}. Cannot find it in system!";
+        if (stores.First(x => x.Name.Equals(args[2])).GetProduct(args[0]) == null)
+        {
+            return $"Product {args[0]} was already sold out!";
+        }
 
-        if (!store.SellProduct(name, quantity))
-            return $"Product {name} was already sold out!";
+        if (!stores.First(x => x.Name.Equals(args[2])).SellProduct(args[0], int.Parse(args[1])))
+        {
+            return $"Product {args[0]} was already sold out!";
+        }
 
-        return $"Product {name} was successfully bought from {storeName}!";
+        return $"Product {args[0]} was successfully bought from {args[2]}!";
     }
 
-    // StoreInfo:{storeName}
+    /// <summary>
+    /// StoreInfo:{storeName}
+    /// </summary>
     public string StoreInfo(List<string> args)
     {
-        string storeName = args[0];
+        if (!stores.Any(x => x.Name.Equals(args[0])))
+        {
+            return $"Invalid Store: {args[0]}. Cannot find it in system!";
+        }
 
-        Store store = stores.FirstOrDefault(x => x.Name == storeName);
-        if (store == null) return $"Invalid Store: {storeName}. Cannot find it in system!";
-
-        return store.ToString();
+        return stores.First(x => x.Name.Equals(args[0])).ToString();
     }
 
+    /// <summary>
+    /// Shutdown
+    /// </summary>
     public string Shutdown()
     {
-        stores = stores.OrderByDescending(x => x.Revenue).ThenBy(y => y.Name).ToList();
+        stores = stores.OrderByDescending(x => x.Revenue).ThenBy(x => x.Name).ToList();
 
-        var sum = stores.Sum(x => x.Revenue);
+        StringBuilder stringBuilder = new StringBuilder();
 
-        var sb = new StringBuilder();
-        sb.Append($"Stores: {stores.Count()}" + Environment.NewLine);
-        foreach (var store in stores)
-            sb.Append(StoreInfo(new List<string>() { store.Name }));
-        sb.Append($"\nSystem Store Revenues: {sum:f2}BGN" + Environment.NewLine);
+        stringBuilder.AppendLine($"Stores: {stores.Count}");
+        stores.ForEach(x => stringBuilder.AppendLine(x.ToString()));
+        stringBuilder.Append($"System Store Revenues: {stores.Sum(x => x.Revenue):F2}BGN");
 
-        return sb.ToString();
+        return stringBuilder.ToString();
     }
 }

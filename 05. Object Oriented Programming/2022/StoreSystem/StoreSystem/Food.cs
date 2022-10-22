@@ -2,23 +2,28 @@
 
 public class Food : Product
 {
-    private double percentageMarkup;
-
-    protected override double PercentageMarkup
+    /// <summary>
+    /// Constructor
+    /// </summary>
+    public Food(string name, int quantity, double deliverPrice, double percentageMarkup) : 
+        base(name, quantity, deliverPrice, percentageMarkup)
     {
-        get { return percentageMarkup; }
-        set
+        // nope
+    }
+
+    /// <summary>
+    /// Percent
+    /// </summary>
+    public override double PercentageMarkup
+    {
+        get { return base.PercentageMarkup; }
+        protected set
         {
             if (value > 100)
             {
                 throw new ArgumentException("Food percentage markup cannot be above 100%!");
             }
-            percentageMarkup = value;
+            base.PercentageMarkup = value;
         }
-    }
-
-    public Food(string name, int quantity, float deliverPrice, float percentageMarkup) : base(name, quantity, deliverPrice, percentageMarkup)
-    {
-        this.PercentageMarkup = percentageMarkup;
     }
 }

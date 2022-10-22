@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 public abstract class Product 
 {
@@ -34,7 +35,7 @@ public abstract class Product
 
 	private double deliverPrice;
 
-    protected double DeliverPrice
+    public double DeliverPrice
     {
 		get { return deliverPrice; }
         private set
@@ -49,11 +50,11 @@ public abstract class Product
 
 	private double percentageMarkup;
 
-    protected virtual double PercentageMarkup
+    public virtual double PercentageMarkup
     {
 		get { return percentageMarkup; }
-		set 
-		{
+        protected set
+        {
             if (value <= 0)
             {
                 throw new ArgumentException("Percentage markup cannot be less or equal to 0!");
@@ -66,10 +67,13 @@ public abstract class Product
     {
 		get 
 		{ 
-			return deliverPrice + ((deliverPrice * percentageMarkup) / 100.0);
+			return DeliverPrice + (DeliverPrice * PercentageMarkup / 100);
         }
 	}
 
+	/// <summary>
+	/// Constructor
+	/// </summary>
 	protected Product(string name, int quantity, double deliverPrice, double percentageMarkup)
 	{
 		Name = name;
@@ -78,8 +82,18 @@ public abstract class Product
 		PercentageMarkup = percentageMarkup;	
 	}
 
+	/// <summary>
+	/// ToString
+	/// </summary>
 	public override string ToString()
 	{
-		return $"****Product: {Name} <{Quantity}>\n****Deliver Price: {DeliverPrice}\n****Percentage Markup: {PercentageMarkup}\n****Final Price: {FinalPrice}\n";
-	}
+		StringBuilder stringBuilder = new StringBuilder();
+
+		stringBuilder.AppendLine($"****Product: {Name} <{Quantity}>");
+		stringBuilder.AppendLine($"****Deliver Price: {DeliverPrice}");
+        stringBuilder.AppendLine($"****Percentage Markup: {PercentageMarkup}");
+		stringBuilder.Append($"****Final Price: {FinalPrice}");
+
+        return stringBuilder.ToString();
+    }
 }
