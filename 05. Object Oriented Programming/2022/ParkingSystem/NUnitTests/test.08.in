@@ -1,0 +1,11 @@
+﻿CreateParkingSpot:1:False:car:1.50
+ParkVehicle:1:CB1111AA:5:car
+FreeParkingSpot:1
+ParkVehicle:1:A2222MA:3:car
+CreateParkingSpot:2:False:bus:2.50
+ParkVehicle:2:B8846KX:3:bus
+FreeParkingSpot:1
+ParkVehicle:1:CB1111AA:3:car
+CalculateTotal
+GetParkingSpotById:1
+GetParkingIntervalsByParkingSpotIdAndRegistrationPlate:1:CB1111AA

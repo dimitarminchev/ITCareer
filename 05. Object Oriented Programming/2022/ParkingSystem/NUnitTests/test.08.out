@@ -1,0 +1,22 @@
+﻿Parking spot 1 was successfully registered in the system!
+Vehicle CB1111AA parked at 1 for 5 hours.
+Parking spot 1 is now free!
+Vehicle A2222MA parked at 1 for 3 hours.
+Parking spot 2 was successfully registered in the system!
+Vehicle B8846KX parked at 2 for 3 hours.
+Parking spot 1 is now free!
+Vehicle CB1111AA parked at 1 for 3 hours.
+Total revenue from the parking: 24.00 BGN
+> Parking Spot #1
+> Occupied: True
+> Type: car
+> Price per hour: 1.50 BGN
+Parking intervals for parking spot 1:
+> Parking Spot #1
+> RegistrationPlate: CB1111AA
+> HoursParked: 5
+> Revenue: 7.50 BGN
+> Parking Spot #1
+> RegistrationPlate: CB1111AA
+> HoursParked: 3
+> Revenue: 4.50 BGN
