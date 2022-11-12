@@ -43,10 +43,9 @@ pow2 n =
 ```
 
 ## Демонстрации
-1. [doubleValue.hs](doubleValue.hs)
-2. [square.hs](square.hs)
-3. [multMax.hs](multMax.hs)
-4. [brackets.hs](brackets.hs)
-5. [plusFive.hs](plusFive.hs)
-6. [pow2.hs](pow2.hs)
-7. [repeatString.hs](repeatString.hs)
+1. [square.hs](square.hs)
+2. [multMax.hs](multMax.hs)
+3. [brackets.hs](brackets.hs)
+4. [plusFive.hs](plusFive.hs)
+5. [pow2.hs](pow2.hs)
+6. [repeatString.hs](repeatString.hs)

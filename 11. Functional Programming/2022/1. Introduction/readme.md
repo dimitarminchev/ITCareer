@@ -23,9 +23,8 @@ ghc hello.hs
 .\hello.exe
 ```
 
-## Упражнения
-1. [firstAndLastName.hs](firstAndLastName.hs)
-2. [numbersMultiply.hs](numbersMultiply.hs)
-3. [areaOfCircle.hs](areaOfCircle.hs)
-4. [guessTheNumber.hs](guessTheNumber.hs)
-5. [pointInsideRectangle.hs](pointInsideRectangle.hs)
+## Демонстрации
+1. [hello.hs](hello.hs)
+2. [introduction.hs](introduction.hs)
+3. [files.hs](files.hs)
+4. [condition.hs](condition.hs)

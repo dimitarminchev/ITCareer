@@ -7,5 +7,12 @@ repeatString str n =
 -- Главен метод
 main = do
    
-    -- Повтаряме низа "Hello" 5 на брой пъти 
-    putStrLn(repeatString "Hello" 5)
+    -- Един път извеждаме "Please Input Number: "
+    putStrLn(repeatString "Please Input Number: " 1)
+
+    -- Четем числото n 
+    line <- getLine
+    let n = read line :: Int
+
+    -- Повтаряме низа "Hello" n на брой пъти 
+    putStrLn(repeatString "Hello" n)
