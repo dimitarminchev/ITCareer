@@ -1,20 +1,20 @@
 -- Задача 1.
 
 -- Функция за отпечатване на името и фамилията
-printName :: IO()
-printName = do
+firstAndLastName :: IO()
+firstAndLastName = do
     -- Въвеждане на име
-    name <- getLine
+    firstname <- getLine
     
     -- Въвеждане на фамилия
-    family <- getLine
+    lastname <- getLine
 
     -- Отпечатваме име и фамилие
-    putStrLn (name ++ "  " ++ family)
+    putStrLn (firstname ++ "  " ++ falastnamemily)
 
 -- Главна функция
 main :: IO ()
 main = do
 
     -- Изпълнение на фунцкия
-   printName
+   firstAndLastName

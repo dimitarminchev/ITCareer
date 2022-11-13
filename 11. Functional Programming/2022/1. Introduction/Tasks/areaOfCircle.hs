@@ -1,7 +1,7 @@
 -- Задача 3.
 
 -- Функция за намиране на лице на кръг
-getCircleSurface = do
+areaOfCircle = do
     -- Въвеждане на r
     line <- getLine
 
@@ -16,4 +16,4 @@ getCircleSurface = do
 main = do
 
     -- Изпълнение на фунцкия
-   getCircleSurface
+   areaOfCircle

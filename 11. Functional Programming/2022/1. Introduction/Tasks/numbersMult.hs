@@ -1,7 +1,7 @@
 -- Задача 2.
 
 -- Функция за произведението на две чсла
-getProduct = do
+numbersMult = do
     -- Въвеждане на a и b
     line1 <- getLine
     line2 <- getLine
@@ -18,4 +18,4 @@ getProduct = do
 main = do
 
     -- Изпълнение на фунцкия
-   getProduct
+   numbersMult

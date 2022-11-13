@@ -22,9 +22,3 @@ hello.hs
 ghc hello.hs
 .\hello.exe
 ```
-
-## Демонстрации
-1. [hello.hs](hello.hs)
-2. [introduction.hs](introduction.hs)
-3. [files.hs](files.hs)
-4. [condition.hs](condition.hs)
