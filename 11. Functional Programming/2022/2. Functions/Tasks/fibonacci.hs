@@ -8,6 +8,8 @@ fib n =
 main = do
 
     -- Четем ред от конзолата, превръщаме го в число, използваме рекурсиванта функция и отпечатваме резултата
-    firstLine <- getLine
-    let value = read firstLine :: Int
-    putStrLn(show(fib value))
+    line <- getLine
+    let number = read line :: Int
+    putStrLn(show(fib number))
+    -- Fibonacci Sequence: 0 1 1 2 3 5 8 13 21 ... f[n]
+    -- f[0] = 0, f[1] = 1, ... , f[n] = f[n-2] + f[n-1] 

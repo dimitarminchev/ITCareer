@@ -11,3 +11,4 @@ main = do
     line <- getLine
     let number = read line :: Int
     putStrLn (show(fak number))
+    -- Input: 5, Output: 120
