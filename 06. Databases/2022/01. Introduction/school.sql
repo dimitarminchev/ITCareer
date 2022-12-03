@@ -1,7 +1,8 @@
 /* database school */
 CREATE SCHEMA IF NOT EXISTS `school`;
+USE `school`;
 
-CREATE TABLE IF NOT EXISTS `school`.`students` 
+CREATE TABLE IF NOT EXISTS `students` 
 ( 
 	`id` INT(3) NOT NULL,
 	`name` VARCHAR(50) NOT NULL,
@@ -9,48 +10,48 @@ CREATE TABLE IF NOT EXISTS `school`.`students`
 	`phone_number` VARCHAR(50)  NULL,
     PRIMARY KEY (`id`)
 ); 
-INSERT INTO `school`.`students` (`id`, `name`, `age`) VALUES ('1', 'Mitko', '42');
-INSERT INTO `school`.`students` (`id`, `name`, `age`) VALUES ('2', 'Ani', '36');
-INSERT INTO `school`.`students` (`id`, `name`, `age`) VALUES ('3', 'Peter', '4');
+INSERT INTO `students` (`id`, `name`, `age`) VALUES ('1', 'Mitko', '42');
+INSERT INTO `students` (`id`, `name`, `age`) VALUES ('2', 'Ani', '36');
+INSERT INTO `students` (`id`, `name`, `age`) VALUES ('3', 'Peter', '4');
 
-CREATE TABLE IF NOT EXISTS `school`.`classes` 
+CREATE TABLE IF NOT EXISTS `classes` 
 (
 	`id` INT(3) NOT NULL,
 	`name` VARCHAR(50) NOT NULL,
 	`max_students` INT(3) NULL,
 	PRIMARY KEY (`id`)
 );
-INSERT INTO `school`.`classes` (`id`, `name`, `max_students`) VALUES ('1', 'Introduction to programming', '15');
-INSERT INTO `school`.`classes` (`id`, `name`, `max_students`) VALUES ('2', 'Algorithms and data structure', '10');
-INSERT INTO `school`.`classes` (`id`, `name`, `max_students`) VALUES ('3', 'Databases', '2');
+INSERT INTO `classes` (`id`, `name`, `max_students`) VALUES ('1', 'Introduction to programming', '15');
+INSERT INTO `classes` (`id`, `name`, `max_students`) VALUES ('2', 'Algorithms and data structure', '10');
+INSERT INTO `classes` (`id`, `name`, `max_students`) VALUES ('3', 'Databases', '2');
 
-CREATE TABLE IF NOT EXISTS `school`.`teachers`
+CREATE TABLE IF NOT EXISTS `teachers`
 (
 	`id` INT(3) NOT NULL,
 	`name` VARCHAR(50) NOT NULL,
 	`class` TEXT NULL,
 	PRIMARY KEY (`id`)
 );
-INSERT INTO `school`.`teachers` (`id`, `name`, `class`) VALUES ('1', 'Dimitar Minchev', 'Introduction to programming');
-INSERT INTO `school`.`teachers` (`id`, `name`, `class`) VALUES ('2', 'Dimitar Minchev', 'Algorithms and data structure');
-INSERT INTO `school`.`teachers` (`id`, `name`, `class`) VALUES ('3', 'Dimitar Minchev', 'Databases');
+INSERT INTO `teachers` (`id`, `name`, `class`) VALUES ('1', 'Dimitar Minchev', 'Introduction to programming');
+INSERT INTO `teachers` (`id`, `name`, `class`) VALUES ('2', 'Dimitar Minchev', 'Algorithms and data structure');
+INSERT INTO `teachers` (`id`, `name`, `class`) VALUES ('3', 'Dimitar Minchev', 'Databases');
 
-CREATE TABLE IF NOT EXISTS `school`.`towns`
+CREATE TABLE IF NOT EXISTS `towns`
 (
    `id` INT(3) NOT NULL,
    `name` VARCHAR(40) NOT NULL,
    PRIMARY KEY (`id`)
 );
-INSERT INTO `school`.`towns` (`id`,`name`) VALUES (1,"Burgas");
-INSERT INTO `school`.`towns` (`id`,`name`) VALUES (2,"Sofia");
-INSERT INTO `school`.`towns` (`id`,`name`) VALUES (3,"Varna");
+INSERT INTO `towns` (`id`,`name`) VALUES (1,"Burgas");
+INSERT INTO `towns` (`id`,`name`) VALUES (2,"Sofia");
+INSERT INTO `towns` (`id`,`name`) VALUES (3,"Varna");
 
-ALTER TABLE `school`.`students` 
+ALTER TABLE `students` 
 ADD COLUMN `townid` INT NULL AFTER `phone_number`;
 
-ALTER TABLE `school`.`students` 
+ALTER TABLE `students` 
 ADD CONSTRAINT `fk_students_towns`
   FOREIGN KEY (`id`)
-  REFERENCES `school`.`towns` (`id`)
+  REFERENCES `towns` (`id`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;

@@ -1,6 +1,6 @@
-/* database rent-a-car */
-CREATE DATABASE IF NOT EXISTS `rent-a-car`;
-USE `rent-a-car`;
+/* database car-rental */
+CREATE DATABASE IF NOT EXISTS `car-rental`;
+USE `car-rental`;
 
 CREATE TABLE IF NOT EXISTS `categories` 
 (
@@ -72,26 +72,26 @@ CREATE TABLE IF NOT EXISTS `rental_orders`
 
 ALTER TABLE `car`
 ADD CONSTRAINT `fk_car_category` FOREIGN KEY(`id`)
-	REFERENCES `rent-a-car`.`categories`(`id`) 
+	REFERENCES `car-rental`.`categories`(`id`) 
     ON DELETE NO ACTION 
     ON UPDATE NO action;
     
 ALTER TABLE `rental_orders`
 ADD CONSTRAINT `fk_employee_order` FOREIGN KEY(`id`)
-	REFERENCES `rent-a-car`.`employees`(`id`) 
+	REFERENCES `car-rental`.`employees`(`id`) 
     ON DELETE NO ACTION 
     ON UPDATE NO action;
     
 ALTER TABLE `rental_orders`
 ADD CONSTRAINT `fk_car_order` FOREIGN KEY(`id`)
-	REFERENCES `rent-a-car`.`car`(`id`) 
+	REFERENCES `car-rental`.`car`(`id`) 
     ON DELETE NO ACTION 
     ON UPDATE NO action;
     
 ALTER TABLE `rental_orders`
 ADD CONSTRAINT `fk_order_customer` FOREIGN KEY(`id`)
-	REFERENCES `rent-a-car`.`customers`(`id`) 
+	REFERENCES `car-rental`.`customers`(`id`) 
     ON DELETE NO ACTION 
     ON UPDATE NO action;
 
-/* DROP SCHEMA `rent-a-car`; */
+/* DROP SCHEMA `car-rental`; */

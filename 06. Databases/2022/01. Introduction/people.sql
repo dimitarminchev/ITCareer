@@ -1,6 +1,8 @@
 /* database people */
 CREATE DATABASE IF NOT EXISTS `people`;
-CREATE TABLE IF NOT EXISTS `people`.`people`
+USE `people`;
+
+CREATE TABLE IF NOT EXISTS `people`
 (
 	`id` INT AUTO_INCREMENT NOT NULL UNIQUE,
     `name` VARCHAR(200) NOT NULL,
@@ -13,14 +15,14 @@ CREATE TABLE IF NOT EXISTS `people`.`people`
     CONSTRAINT pk_people PRIMARY KEY (`id`)
 );
 
-INSERT INTO `people`.`people` (`name`,`height`,`weight`,`gender`,`birthdate`) 
+INSERT INTO `people` (`name`,`height`,`weight`,`gender`,`birthdate`) 
 VALUES ("Dimitar Minchev", "183","85","m","1978-08-23");
-INSERT INTO `people`.`people` (`name`,`height`,`weight`,`gender`,`birthdate`) 
+INSERT INTO `people` (`name`,`height`,`weight`,`gender`,`birthdate`) 
 VALUES ("Anelia Tzvetanova", "172","65","f","1986-09-11");
-INSERT INTO `people`.`people` (`name`,`height`,`weight`,`gender`,`birthdate`) 
+INSERT INTO `people` (`name`,`height`,`weight`,`gender`,`birthdate`) 
 VALUES ("Peter Minchev", "106","15","m","2015-06-30");
 
-CREATE TABLE IF NOT EXISTS `people`.`users`
+CREATE TABLE IF NOT EXISTS `users`
 (
 	`id` BIGINT AUTO_INCREMENT NOT NULL,
     `username` VARCHAR(30) NOT NULL,
@@ -31,27 +33,27 @@ CREATE TABLE IF NOT EXISTS `people`.`users`
     CONSTRAINT `pk_users` PRIMARY KEY (`id`)
 );
 
-INSERT INTO `people`.`users` (`username`,`password`,`last_login_time`,`is_deleted`) 
+INSERT INTO `users` (`username`,`password`,`last_login_time`,`is_deleted`) 
 VALUES ("Pesho","1234",now(),0);
-INSERT INTO `people`.`users` (`username`,`password`,`last_login_time`,`is_deleted`) 
+INSERT INTO `users` (`username`,`password`,`last_login_time`,`is_deleted`) 
 VALUES ("Maria","qwerty",now(),0);
-INSERT INTO `people`.`users` (`username`,`password`,`last_login_time`,`is_deleted`) 
+INSERT INTO `users` (`username`,`password`,`last_login_time`,`is_deleted`) 
 VALUES ("Georgi","gogo",now(),1);
 
-ALTER TABLE `people`.`users` 
+ALTER TABLE `users` 
 DROP PRIMARY KEY;
 
-ALTER TABLE `people`.`users`
+ALTER TABLE `users`
 ADD CONSTRAINT `pk_users` PRIMARY KEY (`id`,`username`);
 
-ALTER TABLE `people`.`users`
+ALTER TABLE `users`
 MODIFY COLUMN `last_login_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
 
-ALTER TABLE `people`.`users` 
+ALTER TABLE `users` 
 DROP PRIMARY KEY;
 
-ALTER TABLE `people`.`users`
+ALTER TABLE `users`
 ADD CONSTRAINT `pk_users` PRIMARY KEY (`id`);
 
-ALTER TABLE `people`.`users`
+ALTER TABLE `users`
 MODIFY COLUMN `username` VARCHAR(30) NOT NULL UNIQUE;

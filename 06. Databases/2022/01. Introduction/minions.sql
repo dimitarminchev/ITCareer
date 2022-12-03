@@ -2,9 +2,10 @@
 
 /* Създаване на нова база от данни */
 CREATE SCHEMA IF NOT EXISTS `minions`;
+USE `minions`;
 
 /* Създаване на таблица */
-CREATE TABLE IF NOT EXISTS `minions`.`minions` 
+CREATE TABLE IF NOT EXISTS `minions` 
 (
   `id` INT NOT NULL,
   `name` VARCHAR(50) NOT NULL,
@@ -13,27 +14,27 @@ CREATE TABLE IF NOT EXISTS `minions`.`minions`
 );
 
 /* Вмъкване на данни в таблицата */
-INSERT INTO `minions`.`minions` (`id`, `name`, `age`) VALUES ('1', 'Kevin', '15');
-INSERT INTO `minions`.`minions` (`id`, `name`, `age`) VALUES ('2', 'Bob', '22');
-INSERT INTO `minions`.`minions` (`id`, `name`) VALUES ('3', 'Steward');
+INSERT INTO `minions` (`id`, `name`, `age`) VALUES ('1', 'Kevin', '15');
+INSERT INTO `minions` (`id`, `name`, `age`) VALUES ('2', 'Bob', '22');
+INSERT INTO `minions` (`id`, `name`) VALUES ('3', 'Steward');
 
 /* Извеждане на всички записи от таблица */
-SELECT * FROM `minions`.`minions`;
+SELECT * FROM `minions`;
 
 /* Извеждане на всички записи с въраст различна от NULL */
-SELECT * FROM `minions`.`minions` WHERE `age` IS NOT NULL;
+SELECT * FROM `minions` WHERE `age` IS NOT NULL;
 
 /* Aктуализиране на един запис */
-UPDATE `minions`.`minions` SET `age`='10' WHERE (`id` = '3');
+UPDATE `minions` SET `age`='10' WHERE (`id` = '3');
 
 /* Актуализиране на всички записи */
-UPDATE `minions`.`minions` SET age = age + 1;
+UPDATE `minions` SET age = age + 1;
 
 /* Изтриване на запис */
-DELETE FROM `minions`.`minions` WHERE id=2;
+DELETE FROM `minions` WHERE id=2;
 
 /* Създаване на нова таблица */
-CREATE TABLE IF NOT EXISTS `minions`.`towns`
+CREATE TABLE IF NOT EXISTS `towns`
 (
    `id` INT NOT NULL,
    `name` VARCHAR(40) NOT NULL,
@@ -41,17 +42,17 @@ CREATE TABLE IF NOT EXISTS `minions`.`towns`
 );
 
 /* Добавяне на данни в таблицата */
-INSERT INTO `minions`.`towns` (`id`,`name`) VALUES (1,"Burgas");
-INSERT INTO `minions`.`towns` (`id`,`name`) VALUES (2,"Sofia");
-INSERT INTO `minions`.`towns` (`id`,`name`) VALUES (3,"Varna");
+INSERT INTO `towns` (`id`,`name`) VALUES (1,"Burgas");
+INSERT INTO `towns` (`id`,`name`) VALUES (2,"Sofia");
+INSERT INTO `towns` (`id`,`name`) VALUES (3,"Varna");
 
 /* Свързване на таблици */
-ALTER TABLE `minions`.`minions` 
+ALTER TABLE `minions` 
 ADD COLUMN `townid` INT NULL AFTER `age`;
 
-ALTER TABLE `minions`.`minions` 
+ALTER TABLE `minions` 
 ADD CONSTRAINT `fk_minions_towns`
   FOREIGN KEY (`id`)
-  REFERENCES `minions`.`towns` (`id`)
+  REFERENCES `towns` (`id`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
