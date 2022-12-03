@@ -3,11 +3,8 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-
 CREATE DATABASE IF NOT EXISTS `diablo` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `diablo`;
-
-
 
 CREATE TABLE IF NOT EXISTS `characters` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
@@ -18,7 +15,6 @@ CREATE TABLE IF NOT EXISTS `characters` (
   KEY `fk_characters_statistics` (`statistics_id`),
   CONSTRAINT `fk_characters_statistics` FOREIGN KEY (`statistics_id`) REFERENCES `statistics` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
-
 
 /*!40000 ALTER TABLE `characters` DISABLE KEYS */;
 INSERT INTO `characters` (`id`, `name`, `statistics_id`) VALUES
@@ -36,8 +32,6 @@ INSERT INTO `characters` (`id`, `name`, `statistics_id`) VALUES
 	(12, 'Sorceress', 13);
 /*!40000 ALTER TABLE `characters` ENABLE KEYS */;
 
-
-
 CREATE TABLE IF NOT EXISTS `games` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
@@ -50,7 +44,6 @@ CREATE TABLE IF NOT EXISTS `games` (
   KEY `fk_games_game_types` (`game_type_id`),
   CONSTRAINT `fk_games_game_types` FOREIGN KEY (`game_type_id`) REFERENCES `game_types` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=242 DEFAULT CHARSET=utf8;
-
 
 /*!40000 ALTER TABLE `games` DISABLE KEYS */;
 INSERT INTO `games` (`id`, `name`, `start`, `duration`, `game_type_id`, `is_finished`) VALUES

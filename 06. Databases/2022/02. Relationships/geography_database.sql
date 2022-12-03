@@ -3,10 +3,8 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-
 CREATE DATABASE IF NOT EXISTS `geography` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `geography`;
-
 
 CREATE TABLE IF NOT EXISTS `continents` (
   `continent_code` char(2) NOT NULL,
@@ -14,7 +12,6 @@ CREATE TABLE IF NOT EXISTS `continents` (
   PRIMARY KEY (`continent_code`),
   UNIQUE KEY `PK_Continents` (`continent_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 
 /*!40000 ALTER TABLE `continents` DISABLE KEYS */;
 INSERT INTO `continents` (`continent_code`, `continent_name`) VALUES
@@ -26,8 +23,6 @@ INSERT INTO `continents` (`continent_code`, `continent_name`) VALUES
 	('OC', 'Oceania'),
 	('SA', 'South America');
 /*!40000 ALTER TABLE `continents` ENABLE KEYS */;
-
-
 
 CREATE TABLE IF NOT EXISTS `countries` (
   `country_code` char(2) NOT NULL,
@@ -45,7 +40,6 @@ CREATE TABLE IF NOT EXISTS `countries` (
   CONSTRAINT `fk_countries_continents` FOREIGN KEY (`continent_code`) REFERENCES `continents` (`continent_code`),
   CONSTRAINT `fk_countries_currencies` FOREIGN KEY (`currency_code`) REFERENCES `currencies` (`currency_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 
 /*!40000 ALTER TABLE `countries` DISABLE KEYS */;
 INSERT INTO `countries` (`country_code`, `iso_code`, `country_name`, `currency_code`, `continent_code`, `population`, `are_in_sq_km`, `capital`) VALUES
@@ -607,7 +601,6 @@ CREATE TABLE IF NOT EXISTS `mountains` (
   UNIQUE KEY `PK_Mountains` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
-
 /*!40000 ALTER TABLE `mountains` DISABLE KEYS */;
 INSERT INTO `mountains` (`id`, `mountain_range`) VALUES
 	(1, 'Alaska Range'),
@@ -637,8 +630,6 @@ INSERT INTO `mountains` (`id`, `mountain_range`) VALUES
 	(25, 'Strandza'),
 	(26, 'Monte Rosa');
 /*!40000 ALTER TABLE `mountains` ENABLE KEYS */;
-
-
 
 CREATE TABLE IF NOT EXISTS `mountains_countries` (
   `mountain_id` int(10) NOT NULL,
@@ -697,7 +688,6 @@ CREATE TABLE IF NOT EXISTS `peaks` (
   CONSTRAINT `fk_peaks_mountains` FOREIGN KEY (`mountain_id`) REFERENCES `mountains` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
 
-
 /*!40000 ALTER TABLE `peaks` DISABLE KEYS */;
 INSERT INTO `peaks` (`id`, `peak_name`, `elevation`, `mountain_id`) VALUES
 	(62, 'Aconcagua', 6962, 3),
@@ -750,8 +740,6 @@ INSERT INTO `peaks` (`id`, `peak_name`, `elevation`, `mountain_id`) VALUES
 	(109, 'Kom', 2016, 4);
 /*!40000 ALTER TABLE `peaks` ENABLE KEYS */;
 
-
-
 CREATE TABLE IF NOT EXISTS `rivers` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `river_name` varchar(50) NOT NULL,
@@ -762,7 +750,6 @@ CREATE TABLE IF NOT EXISTS `rivers` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `PK_Rivers` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
-
 
 /*!40000 ALTER TABLE `rivers` DISABLE KEYS */;
 INSERT INTO `rivers` (`id`, `river_name`, `length`, `drainage_area`, `average_discharge`, `outflow`) VALUES
