@@ -1,3 +1,7 @@
+/* university database */
+create schema `university`;
+use `university`;
+
 create table `subjects`
 (
 	`subject_id` INT(11) NOT NULL primary key,
