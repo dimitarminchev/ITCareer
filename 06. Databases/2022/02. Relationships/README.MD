@@ -1,7 +1,20 @@
 # 2. Взаимовръзки
 
-## Връзка: едно към много
+## 1. Едно към едно [1..1]
+```sql
+CREATE TABLE drivers (
+  driver_id INT PRIMARY KEY,
+  driver_name VARCHAR(50)
+);
+CREATE TABLE cars (
+  car_id INT PRIMARY KEY,
+  driver_id INT UNIQUE,
+  CONSTRAINT fk_cars_drivers FOREIGN KEY (driver_id) REFERENCES drivers(driver_id)
+);
 ```
+
+## 2. Едно към много [1..N]
+```sql
 CREATE TABLE country (
   id INT PRIMARY KEY,
   name TEXT
@@ -13,8 +26,8 @@ CREATE TABLE city (
   CONSTRAINT fk_country FOREIGN KEY (id) REFERENCES country(id)
 );
 ```
-## Връзка: Много към много
-```
+## 3. Много към много [N..M]
+```sql
 CREATE TABLE employees (
   employee_id INT PRIMARY KEY,
   employee_name VARCHAR(50)
@@ -31,20 +44,8 @@ CREATE TABLE employees_projects (
   CONSTRAINT fk_employees_projects_projects FOREIGN KEY(project_id) REFERENCES projects(project_id)
 );
 ```
-## Връзка: едно към едно
-```
-CREATE TABLE drivers (
-  driver_id INT PRIMARY KEY,
-  driver_name VARCHAR(50)
-);
-CREATE TABLE cars (
-  car_id INT PRIMARY KEY,
-  driver_id INT UNIQUE,
-  CONSTRAINT fk_cars_drivers FOREIGN KEY (driver_id) REFERENCES drivers(driver_id)
-);
-```
 
-## Релационни схеми (Entity/Relationship)
+## Релационни схеми (Entity/Relationship Diagram)
 
 ### 1. soft_uni database
 ![soft_uni_database.png](soft_uni_database.png)

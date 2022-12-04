@@ -49,7 +49,7 @@ https://dev.mysql.com/doc/refman/5.5/en/storage-requirements.html
 | SET('value1','value2'...)	  | 1,2,3,4 or 8 bytes depending on the number of set members (64 members maximum) |
 
 ### Упражнение
-```
+```sql
 /* Създаване на нова база данни */
 CREATE SCHEMA minions;
 

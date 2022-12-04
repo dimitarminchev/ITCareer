@@ -1,4 +1,6 @@
-/* Task 2.2.1 */
+/* 1. One-To-One Relationship */
+
+/* Create Tables */
 CREATE TABLE `passports`
 (
 	`passport_id` INT NOT NULL PRIMARY KEY,
@@ -11,11 +13,14 @@ CREATE TABLE `persons`
     `first_name` TEXT,
 	`salary` FLOAT,
     `passport_id` INT,
+
+    /* Foreign key: passport_id => passports.passport_id */
     CONSTRAINT `fk_persons_passports`
     FOREIGN KEY (`passport_id`) 
     REFERENCES `passports`(`passport_id`)
 );
 
+/* Insert Data */
 INSERT INTO `passports` (`passport_id`,`passport_number`) VALUES (101,"N34FG21B");
 INSERT INTO `passports` (`passport_id`,`passport_number`) VALUES (102,"K65LO4R7");
 INSERT INTO `passports` (`passport_id`,`passport_number`) VALUES (103,"ZE657QP2");

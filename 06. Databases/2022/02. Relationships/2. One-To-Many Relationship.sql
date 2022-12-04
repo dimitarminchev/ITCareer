@@ -1,5 +1,6 @@
-/* Task 2.2.2 */
+/* 2. One-To-Many Relationship */
 
+/* Create Tables */
 CREATE TABLE `manufacturers`
 (
 	`manufacturer_id` INT NOT NULL PRIMARY KEY,
@@ -12,11 +13,14 @@ CREATE TABLE `models`
 	`model_id` INT NOT NULL PRIMARY KEY,
     `name` TEXT,
     `manufacturer_id` INT,
+
+    /* Foreign key: manufacturer_id => manufacturers.manufacturer_id */
     CONSTRAINT `fk_models_manufacturers`
     FOREIGN KEY (`manufacturer_id`) 
     REFERENCES `manufacturers`(`manufacturer_id`)
 );
 
+/* Insert Data */
 INSERT INTO `manufacturers` (`manufacturer_id`,`name`,`established_on`) VALUES (1,"BMW", "01/03/1916");
 INSERT INTO `manufacturers` (`manufacturer_id`,`name`,`established_on`) VALUES (2,"Tesla","01/01/2003");
 INSERT INTO `manufacturers` (`manufacturer_id`,`name`,`established_on`) VALUES (3,"Lada","01/05/1966");
