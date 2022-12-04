@@ -4,21 +4,21 @@
 
 ### Псевдоними на колони и таблици 
 Псевдонимите служат за именуване на колони и таблици
-```
+```sql
 SELECT c.duration, c.acg AS 'Access Control Gateway' 
 FROM calls AS c;
 ```
 
 ### Сортиране на резултата 
 Клаузата **ORDER BY** се ползва за подреждане (сортира) на редовете, във възходящ **ASC** (по подразбиране) или в низходящ **DESC** ред.
-```
+```sql
 SELECT `last_name`, `hire_date` FROM `soft_uni`.`employees` ORDER BY `hire_date` ASC;
 SELECT `last_name`, `hire_date` FROM `soft_uni`.`employees` ORDER BY `hire_date` DESC;
 ```
 
 ### Ограничаване на броя записи 
 Клаузата **LIMIT** ни помага да ограничим броя на извежданите записи.
-```
+```sql
 -- Извежда данни за най-високия връх на планетата
 SELECT * FROM `geography`.`peaks` ORDER BY `elevation` DESC LIMIT 1;
 
@@ -28,7 +28,7 @@ SELECT `last_name`, `hire_date` FROM `soft_uni`.`employees` ORDER BY `hire_date`
 
 ## Подзаявки
 Заявките могат да бъдат вложени една в друга
-```
+```sql
 SELECT * 
 FROM employees 
 WHERE department_id IN 
@@ -40,7 +40,7 @@ WHERE department_id IN
 ```
 
 **SELECT** изразите може да бъдат влагани в **WHERE** клаузата
-```
+```sql
 SELECT FirstName, LastName, Salary 
 FROM Employees
 WHERE Salary = 
@@ -56,7 +56,7 @@ WHERE Salary =
 - Намерете планините в България
 - После покажете върховете от тези планини
 - Сортирайте резултата по височина, в намаляващ ред 
-```
+```sql
 SELECT peak_name, elevation 
 FROM peaks 
 WHERE mountain_id IN
@@ -72,7 +72,7 @@ ORDER BY elevation DESC;
 - **ALL** = дали условието е в сила за всички стойности
 - **ANY** = дали условието е в сила за поне една от стойностите
 - **SOME** = синоним на ANY
-```
+```sql
 SELECT FirstName, LastName, DepartmentID, Salary 
 FROM Employees
 WHERE DepartmentID = ANY 
@@ -83,7 +83,7 @@ WHERE DepartmentID = ANY
 )
 ```
 Таблична подзаявка
-```
+```sql
 SELECT FirstName, LastName, DepartmentID, Salary 
 FROM Employees
 WHERE (DepartmentID, ManagerID) = ANY 
@@ -96,7 +96,7 @@ WHERE (DepartmentID, ManagerID) = ANY
 
 ## Взаимосвързани заявки
 Таблиците от външния SELECT може да бъдат споменати във вътрешния SELECT чрез псевдоними и използвани в неговите условия. Такива заявки наричаме **взаимосвързани**.
-```
+```sql
 SELECT FirstName, LastName, DepartmentID, Salary
 FROM Employees e 
 WHERE Salary = 
@@ -109,7 +109,7 @@ WHERE Salary =
 ORDER BY DepartmentID
 ```
 При други подзаявки вътрешния SELECT не ползва външния и може да бъде ползван самостоятелно. Такива заявки наричаме **необвързани**. 
-```
+```sql
 SELECT FirstName, LastName, DepartmentID, Salary
 FROM Employees 
 WHERE Salary = 
@@ -123,7 +123,7 @@ ORDER BY DepartmentID
 
 ### EXISTS
 При **EXISTS** условието е вярно, ако подзаявката връща записи
-```
+```sql
 SELECT first_name, first_name, department_id, salary 
 FROM employees e 
 WHERE EXISTS
@@ -135,7 +135,7 @@ WHERE EXISTS
 
 ### NOT EXISTS
 Намерете най-високата заплата на служител извън отдел Финанси и работника, който я получава
-```
+```sql
 SELECT first_name, first_name, department_id, salary 
 FROM employees e WHERE NOT EXISTS
 ( 
@@ -148,7 +148,7 @@ ORDER BY salary DESC LIMIT 1;
 
 ## Обединяване на заявки
 Да се изведе списък с имената на всички планини и реки
-```
+```sql
 (
 	SELECT river_name 
 	FROM rivers
