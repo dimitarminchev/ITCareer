@@ -1,4 +1,4 @@
-use `soft_uni`;
+USE `soft_uni`;
 
 SELECT DISTINCT e.`job_title`, e.`salary` 
 FROM `employees` AS e 
