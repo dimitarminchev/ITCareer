@@ -1,10 +1,15 @@
-/* 5.3.4. Служители без проект */
-USE `soft_uni`;
+/* 5.4.3. Европейското по футбол */
+USE `geography`;
 
-SELECT `e`.`employee_id`, `first_name`, `last_name`
-FROM `employees` AS `e`
-LEFT JOIN `employees_projects` AS `ep` 
-       ON `ep`.`employee_id` = `e`.`employee_id`
-WHERE `ep`.`project_id` IS NULL
-ORDER BY `first_name`, `last_name`
-LIMIT 3;
+SELECT `c1`.`capital` AS `Place`, 
+       `c1`.`country_name` AS `Player 1`,
+       NULL AS `Host`,
+       NULL AS `Guest`,
+       `c2`.`country_name` AS `Player 2`
+FROM `countries` AS `c1`
+CROSS JOIN `countries` AS `c2`
+
+WHERE `c1`.`continent_code` = "EU" AND
+      `c2`.`continent_code` = "EU"
+      
+ORDER BY RAND();
