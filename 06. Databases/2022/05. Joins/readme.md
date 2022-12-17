@@ -46,25 +46,23 @@ ORDER BY p.`elevation` DESC;
 ### Задача: Адреси с градове
 Покажете информация за адреса на всички служители в базата данни **SoftUni**. Изберете първите 5 служителя. Подредете ги по **first_name**, после по **last_name** (възходящо). Съвет:  Използвайте връзка (**JOIN**) между три таблици.
 ```sql
-SELECT e.first_name, e.last_name,
-  t.name as town, a.address_text
-FROM employees AS e
-  JOIN addresses AS a ON e.address_id = a.address_id
-  JOIN towns AS t  ON a.town_id = t.town_id
-ORDER BY e.first_name, e.last_name LIMIT 5;
+SELECT `e`.`first_name`, `e`.`last_name`, `t`.`name` as `town`, `a`.`address_text`
+FROM `employees` AS `e`
+JOIN `addresses` AS `a` ON `e`.`address_id` = `a`.`address_id`
+JOIN `towns` AS `t` ON `a`.`town_id` = `t`.`town_id`
+ORDER BY `e`.`first_name`, `e`.`last_name` 
+LIMIT 5;
 ```
 
 ### Задача: Служители по продажбите
 Намерете всички служители, които са в отдел **Sales**. Използвайте базата данни **SoftUni**.
 Следвайте специфичния формат. Подредете ги по employee_id низходящо.
 ```sql
-SELECT e.employee_id, e.first_name, e.last_name, 
-  d.name AS department_name
-FROM employees AS e 
-  INNER JOIN departments AS d 
-    ON e.department_id = d.department_id
-WHERE d.name = 'Sales'
-ORDER BY e.employee_id DESC;
+SELECT `e`.`employee_id`, `e`.`first_name`, `e`.`last_name`, `d`.`name` AS `department_name`
+FROM `employees` AS `e` 
+INNER JOIN `departments` AS `d` ON `e`.`department_id` = `d`.`department_id`
+WHERE `d`.`name` = 'Sales'
+ORDER BY `e`.`employee_id` DESC;
 ```
 
 ### Задача: Служители наети след дата
@@ -73,41 +71,35 @@ ORDER BY e.employee_id DESC;
 - Са в някой от отделите **Sales** или **Finance**.
 - Сортирайте по **hire_date** (възходящо).
 ```sql
-SELECT e.first_name, e.last_name, e.hire_date, d.name
-FROM employees e
-  INNER JOIN departments AS d
-  ON (e.department_id = d.department_id
-  AND DATE(e.hire_date) > '1999/1/1'
-  AND d.name IN ('Sales', 'Finance'))
-ORDER BY e.hire_date;
+SELECT `e`.`first_name`, `e`.`last_name`, `e`.`hire_date`, `d`.`name`
+FROM `employees` AS `e`
+INNER JOIN `departments` AS `d` ON (`e`.`department_id` = `d`.`department_id` AND DATE(`e`.`hire_date`) > '1999/1/1' AND `d`.`name` IN ('Sales', 'Finance'))
+ORDER BY `e`.`hire_date`;
 ```
 
 ## 5.3. OUTER JOIN 
 ### LEFT OUTER JOIN
 Тази връзка връща записите, отговарящи на свързващото условие и също така несъвпадащите записи от лявата таблица.
 ```sql
-SELECT * FROM employees AS e
- LEFT OUTER JOIN departments AS d
- ON e.department_id = d.department_id;
+SELECT * FROM `employees` AS `e`
+LEFT OUTER JOIN `departments` AS `d` ON `e`.`department_id` = `d`.`department_id`;
 ```
 
 ### RIGHT OUTER JOIN
 Тази връзка връща записите, отговарящи на свързващото условие и също така несъвпадащите записи от дясната таблица.
 ```sql
-SELECT * FROM employees AS e
- RIGHT OUTER JOIN departments AS d
- ON e.department_id = d.department_id;
+SELECT * FROM `employees` AS `e`
+RIGHT OUTER JOIN `departments` AS `d` ON `e`.`department_id` = `d`.`department_id`;
 ```
 
 ### Задача: Страни, в които няма планини
 Изведете броя на страните, в които няма планини.
 Използвайте базата данни **Geography**.
 ```sql
-SELECT  COUNT(*) AS country_count  
-FROM  countries AS c
-LEFT JOIN mountains_countries AS mc
-ON c.country_code = mc.country_code
-WHERE mc.mountain_id IS NULL;
+SELECT  COUNT(*) AS `country_count`  
+FROM  `countries` AS `c`
+LEFT JOIN `mountains_countries` AS `mc` ON `c`.`country_code` = `mc`.`country_code`
+WHERE `mc`.`mountain_id` IS NULL;
 ```
 
 ## 5.4. FULL JOIN AND CROSS JOIN
@@ -117,18 +109,20 @@ WHERE mc.mountain_id IS NULL;
 ### FULL JOIN
 Тази връзка връща записите, отговарящи на свързващото условие и също така несъвпадащите записи от лявата и от дясната таблица.
 ```sql
-SELECT * FROM employees AS e
-LEFT OUTER JOIN departments AS d
-ON e.department_id=d.department_id
+(
+  SELECT * FROM `employees` AS `e`
+  LEFT OUTER JOIN `departments` AS `d` ON `e`.`department_id`=`d`.`department_id`
+)
 UNION
-SELECT * FROM employees AS e
-RIGHT OUTER JOIN departments AS d
-ON e.department_id=d.department_id;
+(
+  SELECT * FROM `employees` AS `e`
+  RIGHT OUTER JOIN `departments` AS `d` ON `e`.`department_id`=`d`.`department_id`
+);
 ```
 
 ### CROSS JOIN
 При тази връзка всеки ред от първата таблица е комбиниран с всеки ред от втората.
 ```sql
-SELECT * FROM employees AS e
-CROSS JOIN departments AS d;
+SELECT * FROM `employees` AS `e`
+CROSS JOIN `departments` AS `d`;
 ```
