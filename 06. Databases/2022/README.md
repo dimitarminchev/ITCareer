@@ -19,6 +19,6 @@
 7. [Скаларни функции, работа с дати, транзакции](07.%20Transactions)
 
 ## Подготовка за изпит 
-1. [Buhtig Source Control]
-2. [Colonial Journey Management System]
-3. [Plant Service]
+1. [Buhtig Source Control](08.%20Exam%20Preparation/Buhtig%20Source%20Control)
+2. [Colonial Journey Management System](08.%20Exam%20Preparation/Colonial%20Journey%20Management%20System)
+3. [Plant Service](08.%20Exam%20Preparation/Plan%20Service)
