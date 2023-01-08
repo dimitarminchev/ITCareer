@@ -1,6 +1,6 @@
 -- Schema
--- CREATE DATABASE IF NOT EXISTS `plant_service`;
--- USE `plant_service`; 
+CREATE DATABASE IF NOT EXISTS `plant_service`;
+USE `plant_service`; 
 
 -- Tables
 CREATE TABLE IF NOT EXISTS `cities` 
