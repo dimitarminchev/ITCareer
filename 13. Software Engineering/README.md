@@ -18,3 +18,7 @@
 06. Software Documentation
 07. Software Development Processes
 
+## Видео
+https://youtube.com/playlist?list=PL-w_n7hgFuN2vw5F2A36TqU6YLMjUzHjM
+
+_Дата на последна актуализация: 14.02.2023_
