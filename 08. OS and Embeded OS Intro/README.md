@@ -13,3 +13,8 @@
 - Linux
 - Arduino
 
+## Видео
+https://youtube.com/playlist?list=PL-w_n7hgFuN3jhJvjfG5OCN_WEeh4c2j5
+
+_Дата на последна актуализация: 14.02.2023_
+
