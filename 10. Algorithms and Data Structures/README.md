@@ -18,7 +18,7 @@
 6. Hashing and hash tables
 7. Graphs and graph algorithms
 
-## Видео
+## Видео 
 https://youtube.com/playlist?list=PL-w_n7hgFuN3PZoGQuzuoYDSDYvoyx96S
 
 _Дата на последна актуализация: 14.02.2023_
