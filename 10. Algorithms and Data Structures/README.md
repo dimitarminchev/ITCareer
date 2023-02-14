@@ -17,3 +17,8 @@
 5. Trees
 6. Hashing and hash tables
 7. Graphs and graph algorithms
+
+## Видео
+https://youtube.com/playlist?list=PL-w_n7hgFuN3PZoGQuzuoYDSDYvoyx96S
+
+_Дата на последна актуализация: 14.02.2023_
