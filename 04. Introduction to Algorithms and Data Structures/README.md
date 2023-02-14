@@ -20,4 +20,4 @@
 ## Видео
 https://youtube.com/playlist?list=PL-w_n7hgFuN0vg-7PWxHo2PlSnhKWbGyF
 
-_Дата на последна актуализация: 13.02.2023_
+_Дата на последна актуализация: 14.02.2023_
