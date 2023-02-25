@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Histogram", "3. Histogra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. PasswordGenerator", "4. PasswordGenerator\4. PasswordGenerator.csproj", "{AC557D47-E388-4CBA-B66B-3D9B92DBF89F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. GroceryStore", "5. GroceryStore\5. GroceryStore.csproj", "{6C1AB9A6-183C-42B4-9882-545DF5D648F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{AC557D47-E388-4CBA-B66B-3D9B92DBF89F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC557D47-E388-4CBA-B66B-3D9B92DBF89F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC557D47-E388-4CBA-B66B-3D9B92DBF89F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C1AB9A6-183C-42B4-9882-545DF5D648F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C1AB9A6-183C-42B4-9882-545DF5D648F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C1AB9A6-183C-42B4-9882-545DF5D648F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C1AB9A6-183C-42B4-9882-545DF5D648F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
