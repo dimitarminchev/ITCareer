@@ -5,21 +5,25 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleMVC", "ConsoleMVC\ConsoleMVC.csproj", "{53289476-E504-4731-9B3C-EB846A6764F6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1. Transport", "1. Transport\1. Transport.csproj", "{2A927487-52F5-4435-95E8-9CD1550CCE48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Transport", "01. Transport\01. Transport.csproj", "{2A927487-52F5-4435-95E8-9CD1550CCE48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. OnTimeForExam", "2. OnTimeForExam\2. OnTimeForExam.csproj", "{FEDCE25B-991E-4E8A-BBFC-BA8B79F87632}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. OnTimeForExam", "02. OnTimeForExam\02. OnTimeForExam.csproj", "{FEDCE25B-991E-4E8A-BBFC-BA8B79F87632}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Histogram", "3. Histogram\3. Histogram.csproj", "{6832D8F8-4F60-4C01-9879-FC620BA874A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Histogram", "03. Histogram\03. Histogram.csproj", "{6832D8F8-4F60-4C01-9879-FC620BA874A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. PasswordGenerator", "4. PasswordGenerator\4. PasswordGenerator.csproj", "{AC557D47-E388-4CBA-B66B-3D9B92DBF89F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. PasswordGenerator", "04. PasswordGenerator\04. PasswordGenerator.csproj", "{AC557D47-E388-4CBA-B66B-3D9B92DBF89F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. GroceryStore", "5. GroceryStore\5. GroceryStore.csproj", "{6C1AB9A6-183C-42B4-9882-545DF5D648F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. GroceryStore", "05. GroceryStore\05. GroceryStore.csproj", "{6C1AB9A6-183C-42B4-9882-545DF5D648F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Pool", "6. Pool\6. Pool.csproj", "{21CF9D5F-2A65-4222-B5DE-99E829AE844A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Pool", "06. Pool\06. Pool.csproj", "{21CF9D5F-2A65-4222-B5DE-99E829AE844A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. Trip", "7. Trip\7. Trip.csproj", "{7908AB70-2421-4A0A-B298-9E0138127164}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Trip", "07. Trip\07. Trip.csproj", "{7908AB70-2421-4A0A-B298-9E0138127164}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8. Div", "8. Div\8. Div.csproj", "{3865634C-3474-4D79-A23D-5EB71F2F00F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Div", "08. Div\08. Div.csproj", "{3865634C-3474-4D79-A23D-5EB71F2F00F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. MagicNumbers", "09. MagicNumbers\09. MagicNumbers.csproj", "{DA1AEB4B-3656-4076-983E-0B4567365FD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Repair", "10. Repair\10. Repair.csproj", "{C95A327D-105F-4299-9AE6-ACE9BE4A6D1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{3865634C-3474-4D79-A23D-5EB71F2F00F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3865634C-3474-4D79-A23D-5EB71F2F00F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3865634C-3474-4D79-A23D-5EB71F2F00F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA1AEB4B-3656-4076-983E-0B4567365FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA1AEB4B-3656-4076-983E-0B4567365FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA1AEB4B-3656-4076-983E-0B4567365FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA1AEB4B-3656-4076-983E-0B4567365FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C95A327D-105F-4299-9AE6-ACE9BE4A6D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C95A327D-105F-4299-9AE6-ACE9BE4A6D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C95A327D-105F-4299-9AE6-ACE9BE4A6D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C95A327D-105F-4299-9AE6-ACE9BE4A6D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
