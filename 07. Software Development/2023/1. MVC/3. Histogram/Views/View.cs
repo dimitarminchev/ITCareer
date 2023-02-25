@@ -27,7 +27,7 @@ namespace _3._Histogram.Views
             }
         }
 
-        public void Output()
+        public void ShowPercents()
         {
             Console.WriteLine(percents);
         }

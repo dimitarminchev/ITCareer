@@ -15,7 +15,7 @@ namespace _3._Histogram.Controllers
 
             view.percents = model.FindPercentages();
 
-            view.Output();
+            view.ShowPercents();
         }
     }
 }

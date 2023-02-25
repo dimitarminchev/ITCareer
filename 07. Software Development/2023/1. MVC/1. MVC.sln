@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. OnTimeForExam", "2. OnTi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Histogram", "3. Histogram\3. Histogram.csproj", "{6832D8F8-4F60-4C01-9879-FC620BA874A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. PasswordGenerator", "4. PasswordGenerator\4. PasswordGenerator.csproj", "{AC557D47-E388-4CBA-B66B-3D9B92DBF89F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6832D8F8-4F60-4C01-9879-FC620BA874A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6832D8F8-4F60-4C01-9879-FC620BA874A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6832D8F8-4F60-4C01-9879-FC620BA874A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC557D47-E388-4CBA-B66B-3D9B92DBF89F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC557D47-E388-4CBA-B66B-3D9B92DBF89F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC557D47-E388-4CBA-B66B-3D9B92DBF89F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC557D47-E388-4CBA-B66B-3D9B92DBF89F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
