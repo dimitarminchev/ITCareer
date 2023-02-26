@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Lab.DummyTests
+namespace Lab.Tests
 {
     public class DummyTests
     {
