@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Lab.AxeTests
+namespace Lab.Tests
 {
     public class AxeTests
     {
