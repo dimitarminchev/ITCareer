@@ -1,6 +1,6 @@
-﻿using System.Numerics;
-using System.Text.RegularExpressions;
-
+﻿/// <summary>
+/// Refactoring Task "Array Slider" namespace.
+/// </summary>
 namespace ArraySlider
 {
     /// <summary>
@@ -11,6 +11,16 @@ namespace ArraySlider
         /// <summary>
         /// Refactoring Task "Array Slider" main program method.
         /// </summary>
+        /// <example>
+        /// Input:
+        /// 1 2 3 4 5
+        /// 1 + 2
+        /// stop
+        /// 
+        /// Output: 
+        /// [1, 4, 3, 4, 5]
+        /// </example>
+        /// <param name="args">No arguments needed.</param>
         public static void Main(string[] args)
         {
             long[] numbersCollection = Console.ReadLine()

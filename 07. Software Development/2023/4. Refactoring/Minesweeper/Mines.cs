@@ -1,15 +1,22 @@
 ﻿using System.Linq;
 
+/// <summary>
+/// Refactoring Task "Minesweeper" namespace.
+/// </summary>
 namespace Minesweeper
 {
+    /// <summary>
+    /// Refactoring Task "Minesweeper" class "Mines".
+    /// </summary>
     public static class Mines
     {
         /// <summary>
-        /// Класация
+        /// Print Players Ratings
         /// </summary>
+        /// <param name="points">List of ratings points</param>
         public static void Ratings(List<Ratings> points)
         {
-            Console.WriteLine("\nPoints:");
+            Console.WriteLine("\nPlayers Ratings:");
             if (points.Count > 0)
             {
                 for (int i = 0; i < points.Count; i++)
@@ -25,9 +32,13 @@ namespace Minesweeper
         }
 
         /// <summary>
-        /// Ти си на ход
+        /// Next move in the game
         /// </summary>
-        public static void YourMove(char[,] board, char[,] bombs, int row, int col)
+        /// <param name="board">Game board</param>
+        /// <param name="bombs">Bombs board</param>
+        /// <param name="row">Row position</param>
+        /// <param name="col">Col position</param>
+        public static void NextMove(char[,] board, char[,] bombs, int row, int col)
         {
             char getBombs = GetBombs(bombs, row, col);
             bombs[row, col] = getBombs;
@@ -35,8 +46,9 @@ namespace Minesweeper
         }
 
         /// <summary>
-        /// Отпечатване на игралното поле
+        /// Print the game board
         /// </summary>
+        /// <param name="board">The game board</param>
         public static void Print(char[,] board)
         {
             int boardRows = board.GetLength(0);
@@ -59,8 +71,9 @@ namespace Minesweeper
         }
 
         /// <summary>
-        /// Създаване на игралното поле
+        /// Create game board
         /// </summary>
+        /// <returns>Game board</returns>
         public static char[,] CreateBoard()
         {
             int boardRows = 5;
@@ -78,9 +91,9 @@ namespace Minesweeper
         }
 
         /// <summary>
-        /// Поставяне на бомби в игралното поле
+        /// Put bombs on game board
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Game board</returns>
         public static char[,] PutBombs()
         {
             int boardRows = 5;
@@ -127,73 +140,77 @@ namespace Minesweeper
         }
 
         /// <summary>
-        /// Колко бомби
+        /// Get surrounding bombs count at desired position
         /// </summary>
-        public static char GetBombs(char[,] board, int rows, int cols)
+        /// <param name="board">game board</param>
+        /// <param name="row">Desired position row</param>
+        /// <param name="col">Desired position col</param>
+        /// <returns>Surrounding bombs count</returns>
+        public static char GetBombs(char[,] board, int row, int col)
         {
             int count = 0;
             int boardRows = board.GetLength(0);
             int boardCols = board.GetLength(1);
 
-            if (rows - 1 >= 0)
+            if (row - 1 >= 0)
             {
-                if (board[rows - 1, cols] == '*')
+                if (board[row - 1, col] == '*')
                 {
                     count++;
                 }
             }
 
-            if (rows + 1 < boardRows)
+            if (row + 1 < boardRows)
             {
-                if (board[rows + 1, cols] == '*')
+                if (board[row + 1, col] == '*')
                 {
                     count++;
                 }
             }
 
-            if (cols - 1 >= 0)
+            if (col - 1 >= 0)
             {
-                if (board[rows, cols - 1] == '*')
+                if (board[row, col - 1] == '*')
                 {
                     count++;
                 }
             }
 
-            if (cols + 1 < boardCols)
+            if (col + 1 < boardCols)
             {
-                if (board[rows, cols + 1] == '*')
+                if (board[row, col + 1] == '*')
                 {
                     count++;
                 }
             }
 
-            if ((rows - 1 >= 0) && (cols - 1 >= 0))
+            if ((row - 1 >= 0) && (col - 1 >= 0))
             {
-                if (board[rows - 1, cols - 1] == '*')
+                if (board[row - 1, col - 1] == '*')
                 {
                     count++;
                 }
             }
 
-            if ((rows - 1 >= 0) && (cols + 1 < boardCols))
+            if ((row - 1 >= 0) && (col + 1 < boardCols))
             {
-                if (board[rows - 1, cols + 1] == '*')
+                if (board[row - 1, col + 1] == '*')
                 {
                     count++;
                 }
             }
 
-            if ((rows + 1 < boardRows) && (cols - 1 >= 0))
+            if ((row + 1 < boardRows) && (col - 1 >= 0))
             {
-                if (board[rows + 1, cols - 1] == '*')
+                if (board[row + 1, col - 1] == '*')
                 {
                     count++;
                 }
             }
 
-            if ((rows + 1 < boardRows) && (cols + 1 < boardCols))
+            if ((row + 1 < boardRows) && (col + 1 < boardCols))
             {
-                if (board[rows + 1, cols + 1] == '*')
+                if (board[row + 1, col + 1] == '*')
                 {
                     count++;
                 }

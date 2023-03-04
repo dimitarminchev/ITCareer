@@ -1,10 +1,10 @@
 ﻿/// <summary>
-/// Refactoring Task Yolo Snake Namespace.
+/// Refactoring Task "Yolo Snake" Namespace.
 /// </summary>
 namespace YoloSnake
 {
     /// <summary>
-    /// Yolo Snake main program class.
+    /// Refactoring Task "Yolo Snake" main program class.
     /// </summary>
     public class Program
     {
@@ -101,7 +101,7 @@ namespace YoloSnake
         /// </summary>
         /// <param name="command">Command</param>
         /// <param name="commandType">Command type</param>
-        /// <returns></returns>
+        /// <returns>DateTime</returns>
         private static DateTime GetDate(string command, string commandType)
         {
             DateTime date = DateTime.Parse(command.Substring(commandType.Length + 1, 20));
@@ -109,13 +109,17 @@ namespace YoloSnake
         }
 
         /// <summary>
-        /// Yolo Snake main method.
+        /// Refactoring Task "Yolo Snake" main method.
         /// </summary>
+        /// <example>
+        /// Note: Do not now how to play this game!
+        /// </example>
+        /// <param name="args">No arguments needed.</param>
         static void Main(string[] args)
         {
             while (ExecuteNextCommand())
             {
-                // ...
+                // empty
             }
             Console.WriteLine(Messages.output);
         }

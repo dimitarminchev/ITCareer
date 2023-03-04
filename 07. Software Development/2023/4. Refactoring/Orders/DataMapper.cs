@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-
+﻿/// <summary>
+/// Refactoring Task "Orders" namespace.
+/// </summary>
 namespace Orders
 {
     using Orders.Models;
@@ -16,7 +15,7 @@ namespace Orders
         private string ordersFileName;
 
         /// <summary>
-        /// Constructor
+        /// Overloaded Constructor
         /// </summary>
         /// <param name="categoriesFileName">Comma separated file for Categories</param>
         /// <param name="productsFileName">Comma separated file for Products</param>
@@ -29,7 +28,7 @@ namespace Orders
         }
 
         /// <summary>
-        /// Constructor
+        /// Default Constructor
         /// </summary>
         public DataMapper() : this
         (

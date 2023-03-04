@@ -1,4 +1,7 @@
-﻿namespace Orders.Models
+﻿/// <summary>
+/// Refactoring Task "Orders" namespace.
+/// </summary>
+namespace Orders.Models
 {
     /// <summary>
     /// Class Order

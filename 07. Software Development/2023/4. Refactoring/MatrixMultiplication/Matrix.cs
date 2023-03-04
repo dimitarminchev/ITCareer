@@ -1,14 +1,17 @@
-﻿namespace MatrixMultiplication
+﻿/// <summary>
+/// Refactoring Task "Matrix Multiplication" namespace.
+/// </summary>
+namespace MatrixMultiplication
 {
-    /// <summary>
-    /// Matrix
+    // <summary>
+    /// Refactoring Task "Matrix Multiplication" class "Matrix"
     /// </summary>
     public static class Matrix
     {
         /// <summary>
         /// Print any dimmension matrix
         /// </summary>
-        /// <param name="matrixToPrint">Matrix To Print</param>
+        /// <param name="matrixToPrint">The Matrix To Print</param>
         public static void Print(double[,] matrixToPrint)
         {
             for (int x = 0; x < matrixToPrint.GetLength(0); x++)

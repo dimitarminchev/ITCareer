@@ -1,7 +1,13 @@
 ﻿using System.Diagnostics.Metrics;
 
+/// <summary>
+/// Refactoring Task "Minesweeper" namespace.
+/// </summary>
 namespace Minesweeper
 {
+    /// <summary>
+    /// Refactoring Task "Minesweeper" main program class.
+    /// </summary>
     public class Program
     {
         private static List<Ratings> ratings = new List<Ratings>(6);
@@ -16,7 +22,7 @@ namespace Minesweeper
 
         private static void SetRating(int counter)
         {
-            Console.WriteLine("Enter your name: ");
+            Console.WriteLine("Enter player name: ");
             string name = Console.ReadLine();
             Ratings t = new Ratings(name, counter);
             if (ratings.Count < 5)
@@ -41,6 +47,25 @@ namespace Minesweeper
             Mines.Ratings(ratings);
         }
 
+        /// <summary>
+        /// Refactoring Task "Minesweeper" main program method.
+        /// </summary>
+        /// <example>
+        /// Let's play Minesweeper! 
+        /// Command 'top' shows rating, command 'restart' starts a new game, command 'exit' leaves the game!
+        ///
+        ///     0 1 2 3 4 5 6 7 8 9
+        ///    ---------------------
+        /// 0 | ? ? ? ? ? ? ? ? ? ? |
+        /// 1 | ? ? ? ? ? ? ? ? ? ? |
+        /// 2 | ? ? ? ? ? ? ? ? ? ? |
+        /// 3 | ? ? ? ? ? ? ? ? ? ? |
+        /// 4 | ? ? ? ? ? ? ? ? ? ? |
+        ///    ---------------------
+        ///    
+        /// Enter[row, col] :
+        /// </example>
+        /// <param name="args">No arguments needed.</param>
         public static void Main(string[] args)
         {
             const int MAX = 35;
@@ -56,7 +81,8 @@ namespace Minesweeper
             {
                 if (IsNewGame)
                 {
-                    Console.WriteLine("Let's play Minesweeper. Command 'top' shows rating, command 'restart' starts a new game, 'exit' exit the game!");
+                    Console.WriteLine("Let's play Minesweeper! ");
+                    Console.WriteLine("Command 'top' shows rating, command 'restart' starts a new game, command 'exit' leaves the game!");
                     Mines.Print(board);
                     IsNewGame = false;
                 }
@@ -94,7 +120,7 @@ namespace Minesweeper
                         {
                             if (bombs[row, col] == '-')
                             {
-                                Mines.YourMove(board, bombs, row, col);
+                                Mines.NextMove(board, bombs, row, col);
                                 counter++;
                             }
 

@@ -1,5 +1,8 @@
 ﻿using YoloSnake.Enums;
 
+/// <summary>
+/// Refactoring Task "Yolo Snake" Namespace.
+/// </summary>
 namespace YoloSnake.Interfaces
 {
     /// <summary>

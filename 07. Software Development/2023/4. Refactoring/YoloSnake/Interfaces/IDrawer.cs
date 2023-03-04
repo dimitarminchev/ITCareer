@@ -1,4 +1,7 @@
-﻿namespace YoloSnake.Interfaces
+﻿/// <summary>
+/// Refactoring Task "Yolo Snake" Namespace.
+/// </summary>
+namespace YoloSnake.Interfaces
 {
     /// <summary>
     /// Yolo Snake draw point interface.

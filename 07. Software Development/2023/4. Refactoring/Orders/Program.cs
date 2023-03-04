@@ -1,11 +1,45 @@
 ﻿using System.Globalization;
 
+/// <summary>
+/// Refactoring Task "Orders" namespace.
+/// </summary>
 namespace Orders
 {
     using Orders.Models;
 
+    /// <summary>
+    /// Refactoring Task "Orders" main program class.
+    /// </summary>
     public class Program
     {
+        /// <summary>
+        /// Refactoring Task "Orders" main program method.
+        /// </summary>
+        /// <example>
+        /// Côte de Blaye
+        /// Thüringer Rostbratwurst
+        /// Mishi Kobe Niku
+        /// Sir Rodney's Marmalade
+        /// Carnarvon Tigers
+        /// ----------
+        /// Beverages: 12
+        /// Condiments: 12
+        /// Produce: 5
+        /// Meat/Poultry: 6
+        /// Seafood: 12
+        /// Dairy Products: 10
+        /// Confections: 13
+        /// Grains/Cereals: 7
+        /// ----------
+        /// Camembert Pierrot: 1577
+        /// Raclette Courdavault: 1496
+        /// Gorgonzola Telino: 1397
+        /// Gnocchi di nonna Alice: 1263
+        /// Pavlova: 1158
+        /// ----------
+        /// Beverages: 309582.25
+        /// </example>
+        /// <param name="args">No arguments needed.</param>
         public static void Main()
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;

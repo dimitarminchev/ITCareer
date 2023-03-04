@@ -1,4 +1,7 @@
-﻿namespace YoloSnake.Enums
+﻿/// <summary>
+/// Refactoring Task "Yolo Snake" Namespace.
+/// </summary>
+namespace YoloSnake.Enums
 {
     /// <summary>
     /// Yolo Snake moving direction enumarator.
