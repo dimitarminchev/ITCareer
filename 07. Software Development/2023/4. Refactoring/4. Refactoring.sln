@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixMultiplication", "Mat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders", "Orders\Orders.csproj", "{4EE6A6F1-809C-42A8-9EA4-1D5D1F15809A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minesweeper", "Minesweeper\Minesweeper.csproj", "{DAE0893E-84D5-41EF-A16C-696F73650614}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4EE6A6F1-809C-42A8-9EA4-1D5D1F15809A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EE6A6F1-809C-42A8-9EA4-1D5D1F15809A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EE6A6F1-809C-42A8-9EA4-1D5D1F15809A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE0893E-84D5-41EF-A16C-696F73650614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE0893E-84D5-41EF-A16C-696F73650614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE0893E-84D5-41EF-A16C-696F73650614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE0893E-84D5-41EF-A16C-696F73650614}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
