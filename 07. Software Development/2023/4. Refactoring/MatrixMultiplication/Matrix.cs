@@ -6,8 +6,9 @@
     public static class Matrix
     {
         /// <summary>
-        /// Print 
+        /// Print any dimmension matrix
         /// </summary>
+        /// <param name="matrixToPrint">Matrix To Print</param>
         public static void Print(double[,] matrixToPrint)
         {
             for (int x = 0; x < matrixToPrint.GetLength(0); x++)
@@ -21,8 +22,12 @@
         }
 
         /// <summary>
-        /// Product
+        /// This method multiplyes two matrixes.
         /// </summary>
+        /// <param name="firstMatrix">First Martrix to Multiply</param>
+        /// <param name="secondMatrix">Second Martrix to Multiply</param>
+        /// <returns>Matrix Multiplication</returns>
+        /// <exception cref="Exception">Matrix dimmensions not mached.</exception>
         public static double[,] Product(double[,] firstMatrix, double[,] secondMatrix)
         {
             if (firstMatrix.GetLength(1) != secondMatrix.GetLength(0))

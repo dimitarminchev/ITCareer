@@ -6,6 +6,9 @@ namespace Orders
 {
     using Orders.Models;
 
+    /// <summary>
+    /// Map files to object in classes
+    /// </summary>
     public class DataMapper
     {
         private string categoriesFileName;
@@ -15,6 +18,9 @@ namespace Orders
         /// <summary>
         /// Constructor
         /// </summary>
+        /// <param name="categoriesFileName">Comma separated file for Categories</param>
+        /// <param name="productsFileName">Comma separated file for Products</param>
+        /// <param name="ordersFileName">Comma separated file for Orders</param>
         public DataMapper(string categoriesFileName, string productsFileName, string ordersFileName)
         {
             this.categoriesFileName = categoriesFileName;
@@ -38,6 +44,7 @@ namespace Orders
         /// <summary>
         /// Get All Categories
         /// </summary>
+        /// <returns>Collection of Category Objects</returns>
         public IEnumerable<Category> getAllCategories()
         {
             var cat = readFileLines(this.categoriesFileName, true);
@@ -54,6 +61,7 @@ namespace Orders
         /// <summary>
         /// Get All Products
         /// </summary>
+        /// <returns>Collection of Products Objects</returns>
         public IEnumerable<Product> getAllProducts()
         {
             var prod = readFileLines(this.productsFileName, true);
@@ -72,6 +80,7 @@ namespace Orders
         /// <summary>
         /// Get All Orders
         /// </summary>
+        /// <returns>Collection of Orders Objects</returns>
         public IEnumerable<Order> getAllOrders()
         {
             var ord = readFileLines(this.ordersFileName, true);

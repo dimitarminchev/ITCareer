@@ -2,7 +2,6 @@
 {
     internal class Program
     {
-
         static void Main(string[] args)
         {
             // 2x2
@@ -15,7 +14,7 @@
             Console.WriteLine("*");
             Matrix.Print(B);
             Console.WriteLine("=");
-            Matrix.Print(C);
+            Matrix.Print(C)
         }
     }
 }

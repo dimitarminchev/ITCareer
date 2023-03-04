@@ -4,9 +4,9 @@ namespace Orders
 {
     using Orders.Models;
 
-    internal class Program
+    public class Program
     {
-        static void Main()
+        public static void Main()
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             var dataMapper = new DataMapper();

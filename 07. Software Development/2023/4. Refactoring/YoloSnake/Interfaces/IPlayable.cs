@@ -1,7 +1,7 @@
 ﻿namespace YoloSnake.Interfaces
 {
-    public interface IPlayable : IDrawable, IMovable
-    { 
-        // empty
-    }
+    /// <summary>
+    /// Yolo Snake playable interface.
+    /// </summary>
+    public interface IPlayable : IDrawable, IMovable { }
 }

@@ -2,8 +2,14 @@
 
 namespace YoloSnake.Core
 {
+    /// <summary>
+    /// Yolo Snake keyboard handler.
+    /// </summary>
     public class KeyboardHandler : IKeyboardHandler
     {
+        /// <summary>
+        /// Yolo Snake console read pressed key.
+        /// </summary>
         public ConsoleKey PressedKey
         {
             get
@@ -12,6 +18,10 @@ namespace YoloSnake.Core
             }
         }
 
+
+        /// <summary>
+        /// Yolo Snake is console key avalable.
+        /// </summary>
         public bool IsKeyAvailable
         {
             get
