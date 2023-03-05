@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringExtensions", "StringE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiveSpecialLetters", "FiveSpecialLetters\FiveSpecialLetters.csproj", "{4BCF84DA-2B1C-4D60-8D76-A537BA20D540}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods", "Methods\Methods.csproj", "{B35B5E93-B7F8-41B2-A39B-9E5B078AB051}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{4BCF84DA-2B1C-4D60-8D76-A537BA20D540}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BCF84DA-2B1C-4D60-8D76-A537BA20D540}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BCF84DA-2B1C-4D60-8D76-A537BA20D540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B35B5E93-B7F8-41B2-A39B-9E5B078AB051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35B5E93-B7F8-41B2-A39B-9E5B078AB051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35B5E93-B7F8-41B2-A39B-9E5B078AB051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35B5E93-B7F8-41B2-A39B-9E5B078AB051}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
