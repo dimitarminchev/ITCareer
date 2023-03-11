@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minions", "Minions\Minions.csproj", "{2A2ACE14-0C80-4EAD-8240-0AC7921CED0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniORM", "MiniORM\MiniORM.csproj", "{E835B359-9A49-435F-AF26-534F028612B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniORM.Demo", "MiniORM.Demo\MiniORM.Demo.csproj", "{6D97D44B-3474-4925-8FDB-AD436A137C60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2A2ACE14-0C80-4EAD-8240-0AC7921CED0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A2ACE14-0C80-4EAD-8240-0AC7921CED0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A2ACE14-0C80-4EAD-8240-0AC7921CED0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E835B359-9A49-435F-AF26-534F028612B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E835B359-9A49-435F-AF26-534F028612B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E835B359-9A49-435F-AF26-534F028612B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E835B359-9A49-435F-AF26-534F028612B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D97D44B-3474-4925-8FDB-AD436A137C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D97D44B-3474-4925-8FDB-AD436A137C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D97D44B-3474-4925-8FDB-AD436A137C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D97D44B-3474-4925-8FDB-AD436A137C60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
