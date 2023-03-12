@@ -6,11 +6,7 @@ namespace OpticalCharacterRecognition
     {
         static void Main(string[] args)
         {
-            // File Path
-            string filePath = AppContext.BaseDirectory;
-            string fileName = filePath + "tessdata\\test.png";
-
-            // Process Optical Character Recognition (OCR) ...
+            string fileName = AppContext.BaseDirectory + "tessdata\\test.png";
             using (var engine = new TesseractEngine(@"tessdata", "eng"))
             {
                 using (var image = Pix.LoadFromFile(fileName))
