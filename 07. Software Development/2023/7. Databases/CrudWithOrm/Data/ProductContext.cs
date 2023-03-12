@@ -14,7 +14,7 @@ namespace CrudWithOrm.Data
         /// <summary>
         /// Connection String
         /// </summary>
-        private const string connectionSTring = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Products;Integrated Security=True";
+        private const string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Products;Integrated Security=True";
 
         /// <summary>
         /// Product Table from Database
@@ -34,7 +34,7 @@ namespace CrudWithOrm.Data
         /// </summary>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connectionSTring);
+            optionsBuilder.UseSqlServer(connectionString);
         }
     }
 }
