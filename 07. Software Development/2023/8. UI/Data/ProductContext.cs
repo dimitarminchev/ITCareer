@@ -14,7 +14,7 @@ namespace Data
         /// <summary>
         /// Connection String
         /// </summary> 
-        private const string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Products;Integrated Security=True;";
+        private const string connectionString = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=produts; Integrated Security=SSPI";
 
         /// <summary>
         /// Products
