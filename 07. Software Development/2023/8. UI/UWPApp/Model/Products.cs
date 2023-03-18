@@ -11,7 +11,7 @@ namespace UWPApp.Model
         /// <summary>
         /// Connection String
         /// </summary> 
-        private const string connectionString = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=produts; Integrated Security=SSPI";
+        private const string connectionString = @"Data Source=SURFACE-4\SQLEXPRESS; Initial Catalog=produts; Integrated Security=SSPI";
 
         /// <summary>
         /// Get all products from the database
