@@ -1,0 +1,78 @@
+ProductID,ProductName,CategoryID,UnitPrice,UnitsInStock
+1,Chai,1,18.00,39
+2,Chang,1,19.00,17
+3,Aniseed Syrup,2,10.00,13
+4,Chef Anton's Cajun Seasoning,2,22.00,53
+5,Chef Anton's Gumbo Mix,2,21.35,0
+6,Grandma's Boysenberry Spread,2,25.00,120
+7,Uncle Bob's Organic Dried Pears,7,30.00,15
+8,Northwoods Cranberry Sauce,2,40.00,6
+9,Mishi Kobe Niku,6,97.00,29
+10,Ikura,8,31.00,31
+11,Queso Cabrales,4,21.00,22
+12,Queso Manchego La Pastora,4,38.00,86
+13,Konbu,8,6.00,24
+14,Tofu,7,23.25,35
+15,Genen Shouyu,2,15.50,39
+16,Pavlova,3,17.45,29
+17,Alice Mutton,6,39.00,0
+18,Carnarvon Tigers,8,62.50,42
+19,Teatime Chocolate Biscuits,3,9.20,25
+20,Sir Rodney's Marmalade,3,81.00,40
+21,Sir Rodney's Scones,3,10.00,3
+22,Gustaf's Knäckebröd,5,21.00,104
+23,Tunnbröd,5,9.00,61
+24,Guaraná Fantástica,1,4.50,20
+25,NuNuCa Nuß-Nougat-Creme,3,14.00,76
+26,Gumbär Gummibärchen,3,31.23,15
+27,Schoggi Schokolade,3,43.90,49
+28,Rössle Sauerkraut,7,45.60,26
+29,Thüringer Rostbratwurst,6,123.79,0
+30,Nord-Ost Matjeshering,8,25.89,10
+31,Gorgonzola Telino,4,12.50,0
+32,Mascarpone Fabioli,4,32.00,9
+33,Geitost,4,2.50,112
+34,Sasquatch Ale,1,14.00,111
+35,Steeleye Stout,1,18.00,20
+36,Inlagd Sill,8,19.00,112
+37,Gravad lax,8,26.00,11
+38,Côte de Blaye,1,263.50,17
+39,Chartreuse verte,1,18.00,69
+40,Boston Crab Meat,8,18.40,123
+41,Jack's New England Clam Chowder,8,9.65,85
+42,Singaporean Hokkien Fried Mee,5,14.00,26
+43,Ipoh Coffee,1,46.00,17
+44,Gula Malacca,2,19.45,27
+45,Rogede sild,8,9.50,5
+46,Spegesild,8,12.00,95
+47,Zaanse koeken,3,9.50,36
+48,Chocolade,3,12.75,15
+49,Maxilaku,3,20.00,10
+50,Valkoinen suklaa,3,16.25,65
+51,Manjimup Dried Apples,7,53.00,20
+52,Filo Mix,5,7.00,38
+53,Perth Pasties,6,32.80,0
+54,Tourtière,6,7.45,21
+55,Pâté chinois,6,24.00,115
+56,Gnocchi di nonna Alice,5,38.00,21
+57,Ravioli Angelo,5,19.50,36
+58,Escargots de Bourgogne,8,13.25,62
+59,Raclette Courdavault,4,55.00,79
+60,Camembert Pierrot,4,34.00,19
+61,Sirop d'érable,2,28.50,113
+62,Tarte au sucre,3,49.30,17
+63,Vegie-spread,2,43.90,24
+64,Wimmers gute Semmelknödel,5,33.25,22
+65,Louisiana Fiery Hot Pepper Sauce,2,21.05,76
+66,Louisiana Hot Spiced Okra,2,17.00,4
+67,Laughing Lumberjack Lager,1,14.00,52
+68,Scottish Longbreads,3,12.50,6
+69,Gudbrandsdalsost,4,36.00,26
+70,Outback Lager,1,15.00,15
+71,Flotemysost,4,21.50,26
+72,Mozzarella di Giovanni,4,34.80,14
+73,Röd Kaviar,8,15.00,101
+74,Longlife Tofu,7,10.00,4
+75,Rhönbräu Klosterbier,1,7.75,125
+76,Lakkalikööri,1,18.00,57
+77,Original Frankfurter grüne Soße,2,13.00,32
