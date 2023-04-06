@@ -740,3 +740,8 @@ BEGIN
 	VALUES(old.employee_id, old.project_id);
 END $$
 ```
+
+## 8. Подготовка за изпит
+- [Buhtig Source Control]((08.%20Exam%20Preparation/Buhtig%20Source%20Control)
+- [Colonial Journey Management System]((08.%20Exam%20Preparation/Colonial%20Journey%20Management%20System)
+- [Plant Service]((08.%20Exam%20Preparation/Plan%20Service)
