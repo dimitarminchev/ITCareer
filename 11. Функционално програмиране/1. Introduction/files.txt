@@ -1,0 +1,2 @@
+This is one line of text wrtitten in file.
+This is second line of thext in the file.
