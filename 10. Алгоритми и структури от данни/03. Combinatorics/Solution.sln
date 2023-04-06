@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permutations", "Permutations\Permutations.csproj", "{8EB430A5-12C3-46A8-82AA-636502BF9F1A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroSum", "ZeroSum\ZeroSum.csproj", "{A47310A2-C849-4E30-B23E-4ED4A5C382F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberDecompositionAsSum", "NumberDecompositionAsSum\NumberDecompositionAsSum.csproj", "{3826370E-DB7A-47D5-AC89-7171308A4595}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberDecompositionAsMultiplication", "NumberDecompositionAsMultiplication\NumberDecompositionAsMultiplication.csproj", "{4AC38D1A-F96B-438E-BB1F-A1FDBAECC2C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberDecompositionAsSumOfGivenNumbers", "NumberDecompositionAsSumOfGivenNumbers\NumberDecompositionAsSumOfGivenNumbers.csproj", "{471D2B96-A608-4EED-A122-1A98D796E6FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combonatorics", "Combonatorics\Combonatorics.csproj", "{822C34D4-CCC2-418E-9C79-DBEFF7165920}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EB430A5-12C3-46A8-82AA-636502BF9F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB430A5-12C3-46A8-82AA-636502BF9F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB430A5-12C3-46A8-82AA-636502BF9F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB430A5-12C3-46A8-82AA-636502BF9F1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A47310A2-C849-4E30-B23E-4ED4A5C382F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A47310A2-C849-4E30-B23E-4ED4A5C382F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A47310A2-C849-4E30-B23E-4ED4A5C382F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A47310A2-C849-4E30-B23E-4ED4A5C382F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3826370E-DB7A-47D5-AC89-7171308A4595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3826370E-DB7A-47D5-AC89-7171308A4595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3826370E-DB7A-47D5-AC89-7171308A4595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3826370E-DB7A-47D5-AC89-7171308A4595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC38D1A-F96B-438E-BB1F-A1FDBAECC2C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC38D1A-F96B-438E-BB1F-A1FDBAECC2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC38D1A-F96B-438E-BB1F-A1FDBAECC2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC38D1A-F96B-438E-BB1F-A1FDBAECC2C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{471D2B96-A608-4EED-A122-1A98D796E6FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{471D2B96-A608-4EED-A122-1A98D796E6FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{471D2B96-A608-4EED-A122-1A98D796E6FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{471D2B96-A608-4EED-A122-1A98D796E6FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{822C34D4-CCC2-418E-9C79-DBEFF7165920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{822C34D4-CCC2-418E-9C79-DBEFF7165920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{822C34D4-CCC2-418E-9C79-DBEFF7165920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{822C34D4-CCC2-418E-9C79-DBEFF7165920}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9ED2FAA3-C286-49D0-9C1B-D053B38FABF6}
+	EndGlobalSection
+EndGlobal
