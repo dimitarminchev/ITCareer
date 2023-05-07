@@ -306,16 +306,21 @@ Android мобилното приложение е разработено с п�
 ## Проекти
 
 ### 2019
-- [ArduinoBoy](Projects/ArduinoBoy.zip), https://github.com/cakasa/ArduinoBoy
-- [KURU](Projects/KURU.zip), https://github.com/Bojidar1308/K.U.R.U
-- [HandGestures](HandGestures)
-- [IceCreamTruck](IceCreamTruck)
-- [RFIDControl](RFIDControl)
+- [ArduinoBoy](Projects/2019/ArduinoBoy.zip), https://github.com/cakasa/ArduinoBoy
+- [KURU](Projects/2019/KURU.zip), https://github.com/Bojidar1308/K.U.R.U
+- [HandGestures](Projects/2019/HandGestures.zip)
+- [IceCreamTruck](Projects/2019/IceCreamTruc.zip)
+- [RFIDControl](Projects/2019/RFIDControl.zip)
 
 ### 2022
-- [Car Project](Projects/CarProject.zip), https://github.com/Konstantinn56/ArduinoCarProject
-- [Fire Alarm](Projects/FireAlarm.zip), https://github.com/StanimirRaykov/ArduinoFireAlarm
-- [Pet Feeder](Projects/PetFeeder.zip), https://github.com/saltyyul/PetFeeder
-- [Memory Game](Projects/MemoryGame.zip), https://github.com/Martin-Georgiev-21/Memory_Game_Repo
-- [Car Game](Projects/CarGame.zip), https://github.com/banano-man/Car-Game
-- [Smart Irrigation System](Projects/SmartIrrigationSystem.zip), https://github.com/jacquelinegg/SmartIrrigationSystemSimulation
+- [Car Project](Projects/2022/CarProject.zip), https://github.com/Konstantinn56/ArduinoCarProject
+- [Fire Alarm](Projects/2022/FireAlarm.zip), https://github.com/StanimirRaykov/ArduinoFireAlarm
+- [Pet Feeder](Projects/2022/PetFeeder.zip), https://github.com/saltyyul/PetFeeder
+- [Memory Game](Projects/2022/MemoryGame.zip), https://github.com/Martin-Georgiev-21/Memory_Game_Repo
+- [Car Game](Projects/2022/CarGame.zip), https://github.com/banano-man/Car-Game
+- [Smart Irrigation System](Projects/2022/SmartIrrigationSystem.zip), https://github.com/jacquelinegg/SmartIrrigationSystemSimulation
+
+### 2023
+- [Rover](Projects/2023/Rover.zip), https://github.com/mirkataa/Rover
+- [RoboHand](Projects/2023/RoboHand.zip), https://github.com/KaterinaSlavova/RoboHand
+- [IrrigationSystem](Projects/2023/IrrigationSystem.zip), https://github.com/machev24/IrrigationSystem
