@@ -146,11 +146,11 @@ https://ryanstutorials.net/bash-scripting-tutorial/.
 
 ### Arduino Uno Board
 
-![Arduino Uno Board](<Arduino/ArduinoUnoBoard (2).png>)
+![Arduino Uno Board](<Arduino/ArduinoUnoBoard.png>)
 
 ### Arduino Uno Pinout
 
-![Arduino Uno Pinout](<Arduino/ArduinoUnoPinout (2).png>)
+![Arduino Uno Pinout](<Arduino/ArduinoUnoPinout.png>)
 
 ### Autodesk IDE
 
