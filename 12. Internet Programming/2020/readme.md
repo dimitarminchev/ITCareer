@@ -1,24 +1,27 @@
 # Обучителен модул "Интернет програмиране"
-- Национална програма "Обучение за ИТ кариера"
-- Професия "Приложен програмист" 
-- Образователен център: Професионална имназия по електротехника и електроника "Константин Фотинов", гр.Бургас  
-- Електронен портал: https://it-kariera.mon.bg/e-learning/
+
+* Национална програма "Обучение за ИТ кариера"
+* Професия "Приложен програмист"&#x20;
+* Образователен център: Професионална имназия по електротехника и електроника "Константин Фотинов", гр.Бургас &#x20;
+* Електронен портал: [https://it-kariera.mon.bg/e-learning/](https://it-kariera.mon.bg/e-learning/)
 
 ## Преподавател
-- доц. д-р Димитър Минчев
-- e-mail: dimitar.minchev@gmail.com 
-- blog: http://www.minchev.eu
+
+* доц. д-р Димитър Минчев
+* e-mail: dimitar.minchev@gmail.com&#x20;
+* blog: [http://www.minchev.eu](http://www.minchev.eu)
 
 ## Учебна програма
-01. Internet and Sockets 
-02. HTTP
-03. Introduction to HTML
-04. HTTP Server (part 1)
-05. HTTP Server (part 2)
-06. Introduction to MVC (part 1)
-07. Introduction to MVC (part 2)
-08. Database
-09. Template Language
+
+1. Internet and Sockets&#x20;
+2. HTTP
+3. Introduction to HTML
+4. HTTP Server (part 1)
+5. HTTP Server (part 2)
+6. Introduction to MVC (part 1)
+7. Introduction to MVC (part 2)
+8. Database
+9. Template Language
 10. State Management
 11. Authentication and Authorization
 12. Security
