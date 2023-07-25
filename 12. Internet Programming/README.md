@@ -1,4 +1,4 @@
-# Модул 11. Интернет програмиране
+# Модул 12. Интернет програмиране
 [Материали](Материали.zip) |
 [Видео](https://youtube.com/playlist?list=PL-w_n7hgFuN30PVkwHBxg1cAjovEOf0jH)
 
