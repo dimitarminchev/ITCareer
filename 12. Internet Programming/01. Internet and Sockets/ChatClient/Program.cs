@@ -13,8 +13,9 @@ namespace ChatClient
 
             IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
             IPAddress ipAddress = ipHostInfo.AddressList[0];
-            IPEndPoint remoteEP = new IPEndPoint(ipAddress, 11000);
+            IPEndPoint remoteEP = new IPEndPoint(ipAddress, 11000); // ip:port
 
+            // TCP = SocketType.Stream, UDP = SocketType.Dgram
             Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
             try

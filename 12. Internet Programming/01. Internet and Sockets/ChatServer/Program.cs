@@ -11,7 +11,7 @@ namespace ChatServer
         {
             IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
             IPAddress ipAddress = ipHostInfo.AddressList[0];
-            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
+            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000); // IP:PORT
 
             Socket listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
@@ -21,7 +21,7 @@ namespace ChatServer
                 byte[] buffer = new byte[1024];
 
                 listener.Bind(localEndPoint);
-                listener.Listen(100);
+                listener.Listen(10);
 
                 Socket handle = listener.Accept();
 

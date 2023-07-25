@@ -27,7 +27,7 @@ Common папката, ще съдържа класове, които се из�
 
 Създайте статичен клас GlobalConstants, който ще бъде използван за споеделните константи:
 
-```
+```cs
 public static class GlobalConstants
 {
     public const string HttpOneProtocolFragment = "HTTP/1.1";
@@ -42,7 +42,7 @@ public static class GlobalConstants
 
 Създайте клас CoreValidator, който ще има два метода, за проверка за null стойности или празни стрингове:
 
-```
+```cs
 public class CoreValidator
 {
     public static void ThrowIfNull(object obj, string name)
@@ -71,7 +71,7 @@ Enums папката ще съдържа enumerations. Има два енъма,
 
 Създайте Enum, с името HttpRequestMethod. Той ще дефинира, метода ,които сървъра получава
 
-```
+```cs
 public enum HttpRequestMethod
 {
     Get, Post, Put, Delete
@@ -84,7 +84,7 @@ public enum HttpRequestMethod
 
 Създайте Enum, с името HttpResponseStatusCode. Той ще дефинира статус кода от отговора на нашият сървър. Този Enum, ще съдържа стойности, които са стутусите и цели числа, които ще представляват статус кода.
 
-```
+```cs
 public enum HttpResponseStatusCode
 {
     Ok = 200,
@@ -133,7 +133,7 @@ Headers папката, ще съдържа класове и интерфейс
 
 Създайте клас, който се казва HttpHeader. Той ще съхранява данните за HTTP Request/Response Header.
 
-```
+```cs
 public HttpHeader(string key, string value)
 {
     CoreValidator.ThrowIfNullOrEmpty(value, nameof(value));
@@ -154,7 +154,7 @@ public override string ToString()
 
 Създайте интерфейс, който се казва IHttpHeaderCollection, който ще опише действията на "Repository-like object" за HttpHeaders.
 
-```
+```cs
 public interface IHttpHeaderCollection
 {
     void AddHeader(HttpHeader header);
@@ -167,7 +167,7 @@ public interface IHttpHeaderCollection
 
 Създайте клас, който се казва HttpHeaderCollection, който имплементира IHttpHeaderCollection интерфейса. Този клас е като "Repository". Трябва да има Dictionary колекция на всички Headers и трябва да имплементирате всички методи на интерфейса.
 
-```
+```cs
 class HttpHeaderCollection : IHttpHeaderCollection
 {
     private readonly Dictionary<string, HttpHeader> headers;
@@ -198,7 +198,7 @@ Responses папката ще съдържа класове и интерфей�
 
 Създайте интерфейс, който се казва IHttpResponse и ще се съдържа следните пропъртита и методи:
 
-```
+```cs
 public interface IHttpResponse
 {
     HttpResponseStatusCode StatusCode { get; set; }
@@ -213,7 +213,7 @@ public interface IHttpResponse
 
 Създайте клас, който се казва HttpResponse и имплементира IHttpResponse интерфейса.
 
-```
+```cs
 public class HttpResponse : IHttpResponse
 {
     public HttpResponse()
@@ -258,7 +258,7 @@ public class HttpResponse : IHttpResponse
 
 We can add Headers to it, gradually with the processing of the Request, using the AddHeader() method. Можем добавяме Headers, като използваме AddHeader() метода.
 
-```
+```cs
 public void AddHeader(HttpHeader header)
 {
     CoreValidator.ThrowIfNull(header, nameof(header));
@@ -274,7 +274,7 @@ public void AddHeader(HttpHeader header)
 
 ToString() метода формира Response реда – този ред съдържа протокола, статус кода, статус и Response Headers, като завършва с празен ред. Тези пропъртита са съединени в един низ и върнати в края.
 
-```
+```cs
 public override string ToString()
 {
     StringBuilder result = new StringBuilder();
@@ -308,7 +308,7 @@ Requests папката ще съдържа класове и интерфейс
 
 Създайте интерфейс, който се казва IHttpRequest, който ще описва поведението на Request обекта.
 
-```
+```cs
 public interface IHttpRequest
 {
     string Path { get; }
@@ -324,7 +324,7 @@ public interface IHttpRequest
 
 Създайте клас, който се казва HttpRequest, който имплементира IHttpRequest интерфейса. Класът трябва да имплементира и методите на интерфейса.
 
-```
+```cs
 public class HttpRequest : IHttpRequest
 {
     public HttpRequest(string requestString)
@@ -358,7 +358,7 @@ public class HttpRequest : IHttpRequest
 
 Сега е време да имплементираме повече логика, което означава много методи, ако искаме да спазваме принципите за High-Quality Code. Имплементирайте следните методи.
 
-```
+```cs
 private bool IsValidRequestLine(string[] requestLine)
 private bool IsValidRequestQueryString(string queryString, string[] queryParameters)
 private void ParseRequestMethod(string[] requestLine)
@@ -374,7 +374,7 @@ private void ParseRequest(string requestString)
 
 **ParseRequest()** е метода откъдето започва всичко:
 
-```
+```cs
 public HttpRequest(string requestString)
 {
     CoreValidator.ThrowIfNullOrEmpty(requestString, nameof(requestString));
@@ -389,7 +389,7 @@ public HttpRequest(string requestString)
 
 Нека да видим как изглежда той:
 
-```
+```cs
 private void ParseRequest(string requestString)
 {
     string[] splitRequestContent = requestString.Split(new[] { GlobalConstants.HttpNewLine }, StringSplitOptions.None);
@@ -469,7 +469,7 @@ Results папката ще съдържа няколко класа, които
 
 Създаден е така, че да връща текст, като отговор. Трябва да има Content-Type и header text/plain.
 
-```
+```cs
 public class TextResult : HttpResponse
 {
     public TextResult(string content, HttpResponseStatusCode responseStatusCode, string contentType = "text/plain; charset=utf-8") : base(responseStatusCode)
@@ -490,7 +490,7 @@ public class TextResult : HttpResponse
 
 Създаваме този клас, да връща HTML в себе си. Така чрез този клас, ние можем да върнем HTML или просто съобщение. Трябва да има Content-Type и header text/html.
 
-```
+```cs
 public class HtmlResult : HttpResponse
 {
     public HtmlResult(string content, HttpResponseStatusCode responseStatusCode) : base(responseStatusCode)
@@ -505,7 +505,7 @@ public class HtmlResult : HttpResponse
 
 Този клас, не трябва да има Content. Единствената задача е да бъде пренасочен. Този Response има локация. Статуса трябва да бъде SeeOther.
 
-```
+```cs
 public class RedirectResult : HttpResponse
 {
     public RedirectResult(string location) : base(HttpResponseStatusCode.SeeOther)
@@ -519,7 +519,7 @@ public class RedirectResult : HttpResponse
 
 В папката, ще съдържа логиката за рутиране и конфигурация на сървъра. Ще съдържа един интерфейс и един клас: IServerRoutingTable and ServerRoutingTable.
 
-```
+```cs
 public interface IServerRoutingTable
 {
     void Add(HttpRequestMethod method, string path, Func<IHttpRequest, IHttpResponse> func);
@@ -530,7 +530,7 @@ public interface IServerRoutingTable
 
 Този клас съдържа големи колекции от насложени асоциативни масиви, които ще се използват за рутиране.
 
-```
+```cs
 public class ServerRoutingTable : IServerRoutingTable
 {
     private readonly Dictionary<HttpRequestMethod, Dictionary<string, Func<IHttpRequest, IHttpResponse>>> routes;
@@ -563,7 +563,7 @@ public class ServerRoutingTable : IServerRoutingTable
 
 Server класа е обвивка за TCP connection. Използва TcpListener , за да запише връзката с клиента и да я подаде на ConnectionHandler, която го изпълнява.
 
-```
+```cs
 public class Server
 {
     private const string LocalhostIpAddress = "127.0.0.1";
@@ -580,7 +580,7 @@ public class Server
 
 Конструкторът се използва, за да бъде инициализиран Listener и RoutingTable.
 
-```
+```cs
 public Server(int port, IServerRoutingTable serverRoutingTable)
 {
     this.port = port;
@@ -591,7 +591,7 @@ public Server(int port, IServerRoutingTable serverRoutingTable)
 
 Този метод се използва за процеса на слушане. Процесът трябва да бъде асинхронен, за да подсигури функционалността, когато двама клиенти изпратят заявка.
 
-```
+```cs
 public void Run()
 {
     this.listener.Start();
@@ -608,7 +608,7 @@ public void Run()
 
 Listen() метода е главният процес при свързване с клиента.
 
-```
+```cs
 private async Task Listen(Socket client)
 {
     var connectionHandler = new ConnectionHandler(client, this.serverRoutingTable);
@@ -622,7 +622,7 @@ private async Task Listen(Socket client)
 
 ConnectionHandler е клас, който произвежда връзката с клиента. Приема връзката, изважда заявката, като низ и минава процес през routing table, като я изпраща обратно на "Response" в байт формат, чрез TCP link.
 
-```
+```cs
 public class ConnectionHandler
 {
     private readonly Socket client;
@@ -637,7 +637,7 @@ public class ConnectionHandler
 
 Конструктора се използва, за да се инициализира socket и routing table.
 
-```
+```cs
 public ConnectionHandler(Socket client, IServerRoutingTable serviceRoutingTable)
 {
     CoreValidator.ThrowIfNull(client, nameof(client));
@@ -649,7 +649,7 @@ public ConnectionHandler(Socket client, IServerRoutingTable serviceRoutingTable)
 
 ProcessRequestAsync() метода е асинхронен метод, който съдържа главната функционалност на класа. Използва и други методи да чете заявки, да ги обработва и да създава Response, Който да бъде върнат на клиента и най-накрая да затвори връзката.
 
-```
+```cs
 public async Task ProcessRequestAsync()
 {
     try
@@ -676,7 +676,7 @@ public async Task ProcessRequestAsync()
 
 ReadRequest() метода е асинхронен метод, който чете байт данни, от връзката с клиента, изважда низа от заявката и след това го обръща в HttpRequest обект.
 
-```
+```cs
 private async Task<IHttpRequest> ReadRequest()
 {
     var result = new StringBuilder();
@@ -709,7 +709,7 @@ HandleRequest() метода проверява ако routing table има hand
 * Ако няма такъв handler Not Found отговор е върнат.
 *   Ако има такъв handler, функцията е извикана и резултата е върнат.
 
-    ```
+```cs
     private IHttpResponse HandleRequest(IHttpRequest httpRequest)
     {
       if (!this.serverRoutingTable.Contains(httpRequest.RequestMethod, httpRequest.Path))
@@ -728,9 +728,9 @@ HandleRequest() метода проверява ако routing table има hand
       byte[] byteSegments = httpResponse.GetBytes();
       await this.client.SendAsync(byteSegments, SocketFlags.None);
     }
-    ```
+```
 
-    Това е финалният вид на нашия ConnectionHandler и WebServer проект.&#x20;
+Това е финалният вид на нашия ConnectionHandler и WebServer проект.&#x20;
 
 ## 4. Hello, World!
 
@@ -742,7 +742,7 @@ HandleRequest() метода проверява ако routing table има hand
 
 HomeController класа трябва да има един метод – Index(), който да изглежда по този начин:
 
-```
+```cs
 public class HomeController
 {
     public IHttpResponse Index(IHttpRequest request)
@@ -759,7 +759,7 @@ Launcher класа трябва да съдържа Main метода, койт
 
 Конфигурирайте само пътя "/", като използва ламбда функция, която извиква HomeController.Index метода.
 
-```
+```cs
 public static void Main(string[] args)
 {
     IServerRoutingTable serverRoutingTable = new ServerRoutingTable();

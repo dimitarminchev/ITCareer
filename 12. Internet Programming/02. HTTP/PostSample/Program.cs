@@ -39,6 +39,7 @@ namespace PostSample
         {
             var html = Post("http://www.dir.bg", "q=burgas", "text/html", "POST");
             Console.WriteLine("Response Contents:\n{0}", html.Substring(0,512));
+            var key = Console.ReadKey();
         }
     }
 }
