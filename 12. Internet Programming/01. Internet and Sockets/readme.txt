@@ -1,3 +1,23 @@
+# Модул 12. Интернет програмиране
+[Материали](Материали.zip) |
+[Видео](https://youtube.com/playlist?list=PL-w_n7hgFuN30PVkwHBxg1cAjovEOf0jH)
+
+## Съдържание
+01. Internet and Sockets 
+02. HTTP
+03. Introduction to HTML
+04. HTTP Server 
+05. Introduction to MVC 
+06. Database
+07. Template Language
+08. State Management
+09. Authentication and Authorization
+10. Security
+11. REST API
+12. Consuming REST API
+13. Deployment
+14. Exam Preparation
+
 ## 1. Internet and Sockets
 
 ### 1. Какво ще направим?
@@ -6,7 +26,7 @@
 ### 2. Архитектура на проекта
 Проектът, ще се състои от два подпроекта, като съответно единият ще служи за нашият socket сървър, а другият за socket клиент. Ще поставим и двата проекта под един solution на име ChatServer.
 
-![12\_01\_01.png](<../../2021/01. Internet and Sockets/12\_01\_01 (1).png>)
+![01. Internet and Sockets/Pictures/01.png](<01. Internet and Sockets/Pictures/01.png>)
 
 За да се запази проекта в прост вид и да се наблегне върху новите знания за сокети, а не върху шаблони за дизайн, ще поставяме нашият код директно в Main() методите.
 
@@ -36,7 +56,6 @@ IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
 Край на изпълнението на програма ще слага въвеждането на съобщение **exit**, за което ще проверяваме и при което ще прекъсваме действието цикъла си. Преди да направим това обаче е нужно да затворим сокета си, което става чрез методите Shutdown() – с параметър SocketShutDown.Both (затваря както за четене, така и за писане) и Close(). Преди да спрем изпълнението на сървъра ще изпишем на конзолата **Goodbye**.
 
 Как изглежда това:
-
 ```cs
 Socket listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 string message = "";
@@ -120,22 +139,23 @@ catch (Exception e)
 ### 5. Как да използваме приложението
 За да използваме приложението, трябва сървърът да е пуснат преди клиента. В противен случай връзката не може да бъде осъществена. За целта ще се възползваме от инструментите на Visual Studio и ще настроим при старт на програта да се пускат едноврменно и сървърът и клиентът, като сървърът да е първи.
 
-![12\_01\_02.png](<../../2021/01. Internet and Sockets/12\_01\_02 (2).png>)
+![01. Internet and Sockets/Pictures/02.png](<01. Internet and Sockets/Pictures/02.png>)
 
 От solution explorer-а ще изберем опцията Set StartUp Projects…, която можем да открием в падащото меню след десен клик върху името на solution-а ни.
 
-![12\_01\_03.png](<../../2021/01. Internet and Sockets/12\_01\_03 (1).png>)
+![01. Internet and Sockets/Pictures/03.png](<01. Internet and Sockets/Pictures/03.png>)
 
 От появилото се меню ще изберем опцията Multiple startup projects, и ще създадем последователността, в която проектите трябва да стартират – в нашия случай отгоре ще сложим сървърът. За Action съответно изберете start/start without debugging.
 
-![12\_01\_04.png](<../../2021/01. Internet and Sockets/12\_01\_04 (7).png>)
+![01. Internet and Sockets/Pictures/04.png](<01. Internet and Sockets/Pictures/04.png>)
 
 При стартиране на проекта би трябвало да се отворят две конзолни приложения – нашият сървър и нашият клиент. В клиентското приложение ще се изпише адреса, на който се е свързал сокета ни, както и съответния порт. На този етап всяко съобщение ще бъде изпратено от клиента на сървъра. Нека тестваме:
 
-![12\_01\_05.png](<../../2021/01. Internet and Sockets/12\_01\_05.png>)
+![01. Internet and Sockets/Pictures/05.png](<01. Internet and Sockets/Pictures/05.png>)
 
 За да приключи изпълнението, както на нашия сървър, така и на нашия клиент въвеждаме като съобщение “exit”. Съответно преди да се затвори сървъра изчиства изпратените съобщения и изписва “Goodbye”.
 
-![12\_01\_06.png](<../../2021/01. Internet and Sockets/12\_01\_06 (14).png>)
+![01. Internet and Sockets/Pictures/06.png](<01. Internet and Sockets/Pictures/06.png>)
 
 Това е финалната стъпка – вече разполагаме със собствен чат сървър.
+
