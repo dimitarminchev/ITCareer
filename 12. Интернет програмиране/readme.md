@@ -1476,4 +1476,967 @@ public static void Main(string[] args)
 
 Поздравления! Завършихте първото си приложение с MiniServer.
 
-## 5.
+## 5. Introduction to MVC
+След като изградихме нашият HTTP Server е време да го впрегнем в действие и да видим как работи.
+
+### 1. Архитектура
+
+Първо нека да създадем архитектурата на нашият проект. Към вече съществуващият sln. добавете нов проект и го кръстете **IRunes.App**
+
+### 2. IRunes.App Архитектура
+
+IRunes.App ще съдържа логиката за контролер, моделите, ресурсите и html файловете. Ще имаме един клас "Launcher" от където ще започва нашата логика.
+
+![05. Introduction to MVC/Pictures/01.png](<05. Introduction to MVC/Pictures/01.png>)
+
+Нека да започнем с папката Controllers:
+
+#### Controllers папка
+
+Controllers папката, ще съдържа нашите контролери, благодарение на тях ние ще можем да обработваме данни, да пренасочване ресурси и т.н. За сега ще създадем един клас, който ще се казва BaseController.
+
+#### BaseController клас
+
+Създайте абстрактен клас BaseController. Това ще бъде базовият клас за всички контролери.
+
+```cs
+public abstract class BaseController
+{
+    protected BaseController()
+    {
+        this.ViewData = new Dictionary<string, object>();
+    }
+    protected Dictionary<string, object> ViewData;
+    private string ParseTemplate(string viewContent) ...
+    protected IHttpResponse View([CallerMemberName] string view = null) ...
+    protected IHttpResponse Redirect(string url) ...
+}
+```
+
+**ViewData пропърти** То ще помогне, когато искаме да визуализираме данни. Първо ще ги добавим в този асоциативен масив и после ParseTemplate метода ще ги обработи.
+
+**ParseTemplate метод** Този метод ще обходи целият речник и там, където засече @Model. в нашият html, ще го замени с данните, които искаме. Този метод ще стане по-ясен, когато стигнем до описването на html файлове.
+
+```cs
+private string ParseTemplate(string viewContent) 
+{
+    foreach (var param in this.ViewData)
+    {
+        viewContent = viewContent.Replace($"@Model.{param.Key}", param.Value.ToString());
+    }
+    return viewContent;
+}
+```
+
+**View метод** Това е най-сложният метод в контролер класа. Той е отговорен да върне правилният html и с правилно заредени данни.
+
+```cs
+protected IHttpResponse View([CallerMemberName] string view = null) 
+{
+    string controllerName = this.GetType().Name.Replace("Controller", string.Empty);
+    string viewName = view;
+    string viewContent = File.ReadAllText("Views/" + controllerName + "/" + viewName + ".html");
+    viewContent = this.ParseTemplate(viewContent);
+    HtmlResult htmlResult = new HtmlResult(viewContent, HttpResponseStatusCode.Ok);
+    return htmlResult;
+}
+```
+
+CallerMemberName е атрибут, който ще върне информация откъде е бил извикан този метод. Така след, като знаем името на контролера и името на html файла, ние може да открием къде се намира и го върнем на потребителя, но при това използваме нашият метод ParseTemplate, който ще помогне за зарeждане на допълнителна информация.
+
+**Redirect метод**
+
+```cs
+protected IHttpResponse Redirect(string url) 
+{
+    return new RedirectResult(url);
+}
+```
+
+#### Models папка
+
+Models папката, ще съдържа нашите модели, които ще си комуникират с базата за в бъдеще. Сега създайте един клас Album със следните пропъртита:
+
+```cs
+public class Album
+{
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public string Cover { get; set; }
+    public string Price { get; set; }
+}
+```
+
+#### Resources папка
+
+Изтеглете от ресурсите на сайта тази папка и я добавете към вашият проект.
+
+#### Views папка
+
+Изтеглете от ресурсите на сайта тази папка и я добавете към вашият проект. В нея ще откриете вече разписаните html файлове.
+
+#### Controllers папка
+
+В Controllers папката добавете два нови класа: HomeController и AlbumsController.
+
+HomeController класa трябва да съдържа метод: **IHttpResponse Index(IHttpRequest httpRequest)**.
+
+AlbumsController класa трябва да съдържа два метода: **IHttpResponse Create(IHttpRequest httpRequest)** и **IHttpResponse CreateConfirm(IHttpRequest httpRequest)**.
+
+#### Launcher клас
+
+Този клас е нашата стартираща точка. Той съдържа Main метод в себе си. Създайте нова инстанция на ServerRoutingTable. След това регистрирайте пътищата до папките:
+
+```cs
+public static void Main(string[] args)
+{
+    ServerRoutingTable serverRoutingTable = new ServerRoutingTable();
+
+    serverRoutingTable.Add(HttpRequestMethod.Get, "/", request => new RedirectResult("/Home/Index"));
+    serverRoutingTable.Add(HttpRequestMethod.Get, "/Home/Index", request => new HomeController().Index(request));
+    serverRoutingTable.Add(HttpRequestMethod.Get, "/Albums/Create", request => new AlbumsController().Create(request));
+    serverRoutingTable.Add(HttpRequestMethod.Post, "/Albums/Create", request => new AlbumsController().CreateConfirm(request));
+
+    Server server = new Server(8080, serverRoutingTable);
+    server.Run();
+}
+```
+
+Сега ако стартирате проекта и имплементирате правилно Index метода в HomeController трябва да ви покаже днешната дата и час.
+
+![05. Introduction to MVC/Pictures/02.png](<05. Introduction to MVC/Pictures/02.png>)
+
+## 8. Управление на състоянието в уеб приложенията
+
+### Бисквитки
+
+* Малък файл с обикновен текст без изпълним код
+* Изпраща се от сървъра до браузъра на клиента
+* Съхранява се от браузъра на устройството на клиента&#x20;
+* Съхранява малка част данни за конкретен клиент и уеб сайт
+
+#### За какво се използват бисквитки?
+
+* **Управление на сесиите** = Вход, колички за пазаруване, резултати от игри или нещо друго, което сървърът трябва да запомни
+* **Персонализация** = Потребителски предпочитания, теми и персонализирани настройки
+* **Проследяване** = Записване и анализ на поведението на потребителя
+
+#### Как се използват бисквитките?
+Отговорът държи бисквитките, които трябва да бъдат запазени в Set-Cookie хедъра
+```
+HTTP/1.1 200 OK
+Set-Cookie: lang=en
+```
+Заявката съдържа специфичната за даден уебсайт бисквитка в рамките на Cookie хедъра
+```
+GET www.example.bg HTTP/1.1
+Cookie: lang=en
+```
+
+#### Структура на бисквитките
+Бисквитката се състои от име, стойност и атрибути.
+
+Атрибутите:
+* Двойки ключ-стойност с допълнителна  информация
+* Не са включват в заявките
+*   Използват се от клиента за контрол на бисквитките
+```
+Set-Cookie: SSID=Ap4P…GTEq; Domain=foo.com; Path=/; Expires=Wed, 13 Jan 2021 22:23:01 GMT; Secure; HttpOnly
+```
+* **Обхват** = Определя се от атрибутите Domain и Path
+* **Живот** = Определя се от атрибутите Expires и Max-Age
+* **Сигурност** = Определя се от защитните флагове Secure и HttpOnly.
+
+#### Разгледайте Вашите бисквитки
+Местоположение на бисквитките на Mozilla
+```
+C:\Users\{username}\AppData\Roaming\Mozilla\Firefox\Profiles\{name}.default\cookies.sqlite
+```
+Местоположение на бисквитките на Chrome
+```
+C:\Users\{username}\AppData\Local\Google\Chrome\User Data\Default\Cookies
+```
+
+### Сесии
+* Сесиите представяват начин за съхраняване на информация за потребител.
+* Сесиите предоставят механизмът за обмен  между потребителя и уеб приложението.
+
+Структура на сесия
+```
+"hje85d3" : 
+{
+    user_id: 789
+    username: FirstUser
+},
+"af354dd" : 
+{
+    user_id: 456
+    username: SecondUser
+},
+"fg78e5s" : 
+{
+    user_id: 654
+    username: ThirdUser
+}
+```
+
+## 9. Автентикация и Авторизация
+
+**Автентикация**
+
+* Процесът на проверка на самоличността на потребител или компютър
+* Въпроси: Кой си ти? Как го доказваш?
+* Поверителните данни могат да бъдат парола, смарт карта, външен маркер и т.н.
+
+**Авторизация**
+
+* Процесът на определяне на това, което на потребителя е разрешено да прави на компютър или мрежа
+* Въпроси: Какво можете да правите? Можете ли да видите тази страница?
+
+### ASP.NET Core Identity
+Системата ASP.NET Core Identity
+* Система за удостоверяване и упълномощаване за ASP.NET Core
+* Поддържа ASP.NET MVC, Pages, Web API (JWT), SignalR
+* Работи с потребители, потребителски профили, влизане / излизане, роли и т.н.
+* Работи със съгласието за бисквитки и GDPR
+* Поддържа външни доставчици за вход
+* Facebook, Google, Twitter и т.н.
+* Поддържа база данни, Azure, Active Directory, потребители на Windows и т.н.
+
+Обикновено данните за идентичност на ASP.NET Core се съхраняват в релационна база данни. Данните се запазват с помощта на Entity Framework Core. Имате известен контрол върху вътрешната схема на базата данни
+
+Настройка на идентичността на ASP.NET чрез използване на шаблоните на ASP.NET за проекти от Visual Studio.
+
+Необходим пакет NuGet
+```
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+```
+
+#### Удостоверяване на шаблона на ASP.NET Core Project
+
+**ApplicationDbContext.cs**
+
+* Съдържа контекста на данни на EF
+* Осигурява достъп до данните на приложението, използвайки модели на обекти
+
+**Startup.cs**
+
+* Може да конфигурира удостоверяване въз основа на бисквитки (или JWT)
+* Може да активира външно влизане (напр. Вход във Facebook)
+* Може да промени настройките за идентификация по подразбиране
+* Може да активира RoleManager с .AddRoles  ()
+
+Настройки на паролата - могат да бъдат определени в Startup.cs
+
+```cs
+public void ConfigureServices(IServiceCollection services)
+{
+    ...
+    services.AddDefaultIdentity<IdentityUser>(options =>
+    { 
+        // Password, lockout, emails, etc.
+        options.Password.RequireNonAlphanumeric = false;
+    })
+    .AddDefaultUI(UIFramework.Bootstrap4)
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+}
+```
+
+#### Регистрация на потребител
+
+```cs
+var newUser = new ApplicationUser()
+{
+    UserName = "maria",
+    Email = "mm@gmail.com",
+    PhoneNumber = "+359 2 981 981"
+};
+var result = await userManager.CreateAsync(newUser, "S0m3@Pa$$");
+if (result.Succeeded) // User registered
+else // result.Errors holds the error messages
+```
+
+#### Потребителски Вход/Изход
+Вход
+
+```cs
+bool rememberMe = true;
+bool shouldLockout = false;
+var signInStatus = await signInManager.PasswordSignInAsync( "maria", "S0m3@Pa$$", rememberMe, shouldLockout);
+if (signInStatus.Succeeded) // Sucessfull login
+else // Login failed
+```
+Изход
+```cs
+await signInManager.SignOutAsync();
+```
+
+#### ASP.NET Авторизиране
+Използвайте атрибутите \[Authorize] и \[AllowAnonymous], за да конфигурирате разрешен / анонимен достъп за контролер / действие
+```cs
+[Authorize]
+public class AccountController : Controller 
+{
+  // GET: /Account/Login (anonymous)
+  [AllowAnonymous]
+  public async Task<IActionResult> Login(string returnUrl) { … }
+
+  // POST: /Account/LogOff (for logged-in users only)
+  [HttpPost]
+  public async Task<IActionResult> Logout() { … }
+}
+```
+
+#### Провери настоящият потребител
+```cs
+// GET: /Account/Roles (for logged-in users only)
+[Authorize]
+public ActionResult Roles()
+{
+    var currentUser = await userManager.GetUserAsync(this.User);
+    var roles = await userManager.GetRolesAsync(currentUser);
+    ...
+}
+// GET: /Account/Data (for logged-in users only)
+[Authorize]
+public ActionResult Data()
+{
+    var currentUserUsername = await userManager.GetUserName(this.User);
+    var currentUserId = await userManager.GetUserIdAsync(this.User);
+    ...
+}
+```
+
+#### Добави потребител в роля
+```cs
+var roleName = "Administrator";
+var roleExists = await roleManager.RoleExistsAsync(roleName);
+if (roleExists)
+{
+    var user = await userManager.GetUserAsync(User);
+    var result = await userManager.AddToRoleAsync(user, roleName);
+    if (result.Succeeded) // The user is now Administrator
+}
+```
+
+#### Изисква влезлия потребител в определена роля
+Достъп само на потребителите в роля **Administrator**:
+```cs
+[Authorize(Roles="Administrator")]
+public class AdminController : Controller { ...
+```
+Достъп, ако Ролята на потребителя е **User**, **Student** или **Trainer**:
+```cs
+[Authorize(Roles="User, Student, Trainer")]
+public ActionResult Roles(){ ...
+```
+
+#### Проверете ролята на потребителя, в която сте в момента
+```cs
+// GET: /Home/Admin (for logged-in admins only)
+[Authorize]
+public ActionResult Admin()
+{
+    if (this.User.IsInRole("Administrator"))
+    {
+        ViewBag.Message = "Welcome to the admin area!";
+        return View();
+    }
+    return this.View("Unauthorized");
+}
+```
+
+#### ASP.NET Core User Manager
+UserManager  - API за управление на потребителите в постоянен магазин
+
+| Category             |                       |                                        |
+| -------------------- | --------------------- | -------------------------------------- |
+| AddClaimsAsync(…)    | FindByEmailAsync(…)   | GenerateChangeEmailTokenAsync(…)       |
+| AddToRoleAsync(…)    | FindByIdAsync(…)      | GenerateEmailConfirmationTokenAsync(…) |
+| IsInRoleAsync(…)     | FindByNameAsync(…)    | GeneratePasswordResetTokenAsync(…)     |
+| GetUserId(…)         | GetClaimsAsync(…)     | GetAuthenticationTokenAsync(…)         |
+| ConfirmEmailAsync(…) | GetEmailAsync(…)      | IsEmailConfirmedAsync(…)               |
+| ChangeEmailAsync(…)  | GetRolesAsync(…)      | CreateSecurityTokenAsync(…)            |
+| CreateAsync(…)       | GetUserAsync(…)       | ResetPasswordAsync(…)                  |
+| DeleteAsync(…)       | CheckPasswordAsync(…) | RemoveFromRoleAsync(…)                 |
+| Dispose(…)           | UpdateAsync(…)        | RemoveClaimsAsync(…)                   |
+
+#### Claims
+
+* Идентичността на базата на претенции е често срещана техника, използвана в приложенията.
+* Искът е твърдение, което един субект прави за себе си
+* Идентичността на базата на претенции опростява логиката за удостоверяване
+* В ASP.NET Core проверките за автентичност на базата на претенции са декларативни
+* Изискванията за искове се основават на политиката
+* Претенциите са двойки име-стойност
+* Най-простият вид политика за искове проверява само за наличието на рекламация
+
+```cs
+public void ConfigureServices(IServiceCollection services) 
+{
+    ...
+    services.AddAuthorization(options => { options.AddPolicy("EmployeeOnly", policy => policy.RequireClaim("EmployeeNumber")); });}
+
+[Authorize(Policy = "EmployeeOnly")]
+public IActionResult VacationBalance() 
+{
+    // This action is accessible only by Identities with the "EmployeeOnly" Claim...
+    return View(); }
+```
+
+### Пълен контрол идентичността
+```cs
+public void ConfigureServices(IServiceCollection services)
+{
+    ...
+    services.AddIdentity<IdentityUser, IdentityRole>() 
+        // services.AddDefaultIdentity<IdentityUser>()
+        .AddEntityFrameworkStores<ApplicationDbContext>()
+        .AddDefaultTokenProviders();
+    ...
+}
+```
+Конфигуриране на **LoginPath**, **LogoutPath**, **AccessDeniedPath**
+```cs
+public void ConfigureServices(IServiceCollection services)
+{
+    ...
+    services.ConfigureApplicationCookie(options =>
+    {
+        options.LoginPath = $"/Identity/Account/Login";
+        options.LogoutPath = $"/Identity/Account/Logout";
+        options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+    });    
+    ...
+}
+```
+
+### Видове за удостоверяване
+Видове удостоверяване в ASP.NET Core приложения:
+
+* Удостоверяване и упълномощаване на базата на бисквитки (идентичност)
+* Удостоверяване и упълномощаване на Windows
+* Облачно удостоверяване и упълномощаване
+* JSON Уеб токени (JWT) удостоверяване и авторизация
+
+#### Удостоверяване и упълномощаване въз основа на бисквитки
+* Базираната на бисквитки автентикация е механизмът за удостоверяване на приложението ASP.NET Core
+* Удостоверяването е изцяло на базата на бисквитки
+* Това е основна разлика от ASP.NET MVC
+* Главницата се основава на претенции
+
+#### Удостоверяване и упълномощаване на Windows
+Windows auth е по-сложен механизъм за автентификация
+
+* Разчита на операционната система за удостоверяване на потребителите
+* Акредитивните данни се хешират, преди да бъдат изпратени през мрежата
+* Най-подходящ за интранет среда
+* Клиенти, потребители, сървъри принадлежат към един и същ домейн на Windows (AD)
+
+#### JWT удостоверяване и упълномощаване
+JSON Web Tokens е модерен механизъм за авторство, базиран на JavaScript
+
+* Компактен и самостоятелен
+* Фокусиран върху подписани символи
+* Данните са криптирани
+* Използва се за auth & обмен на информация
+* Често използван при разработване на REST
+* Изключително проста за разбиране
+* Използва се в приложения Angular / React / Blazor
+
+### Социални Акаунти
+Позволяването на потребителите да влизат със съществуващите си идентификационни данни е удобно
+
+* Прехвърля сложността на управлението на процеса на влизане към трета страна
+* Подобрява потребителското изживяване, като свежда до минимум техните авторски дейности
+* ASP.NET Core поддържа вградени външни доставчици за вход&#x20;
+
+```cs
+public void ConfigureServices(IServiceCollection services) 
+{
+    ...
+    services.AddAuthentication()
+        .AddGoogle(googleOptions => { ... })
+        .AddFacebook(facebookOptions => { ... })
+        .AddTwitter(twitterOptions => { ... })
+        .AddMicrosoftAccount(microsoftOptions => { ... });
+    ...
+}
+```
+Всеки доставчик на външно влизане има определен API за разработчици
+
+* Трябва да конфигурирате приложението си там, преди да го използвате
+* Това приложение ще ви предостави пълномощия
+* Тези идентификационни данни ще бъдат използвани от API на външен доставчик
+* Вие се удостоверявате с тях, когато изпращате заявка
+* Тези идентификационни данни не трябва да се съхраняват публично
+
+**Facebook**
+```cs
+public void ConfigureServices(IServiceCollection services)
+{
+    ...
+    services.AddAuthentication()
+        .AddFacebook(facebookOptions => {
+            facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
+            facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+    });
+    ...
+}
+```
+
+### Demo
+
+#### 1. Create ASP.NET Core web application
+
+![09. Authentication and Authorization/Pictures/01.png](<09. Authentication and Authorization/Pictures/01.png>)
+
+#### 2. Project > Add > New Scaffolded Item...
+
+![09. Authentication and Authorization/Pictures/02.png](<09. Authentication and Authorization/Pictures/02.png>)
+
+#### 3. Identity > Add
+
+![09. Authentication and Authorization/Pictures/03.png](<09. Authentication and Authorization/Pictures/03.png>)
+
+#### 4. Override all files > Add
+
+![09. Authentication and Authorization/Pictures/04.png](<09. Authentication and Authorization/Pictures/04.png>)
+
+## 10. Сигурност на уеб приложенията
+* Уеб сигурността включва мерки за подобряване на сигурността на приложението.
+* Често се прави чрез поправяне и предотвратяване на уязвимости в сигурността.
+> Едно нещо се счита за сигурно, когато разходите за пробив струват повече от стойността, получена по този начин.
+* Нарушенията на сигурността често се случват спонтанно. Уязвимостта може да бъде напълно непреднамерена.
+* Нарушенията на сигурността са резултат от злонамерени атаки. Тези атаки може да имат много мотиви, които ги подкрепят. Предизвикателство, любопитство, вандализиране, кражба.
+* Нарушенията на сигурността могат да бъдат напълно дискретни. Силно опитни нападатели няма да оставят следа. Най-вероятно ще разберете, че сте били нападнати доста по-късно.
+
+### Основи на Сигурността
+
+Съществува широк спектър от известни видове заплахи и атаки
+
+| Категория                  | Атаки                                                                                                                          |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Валидиране на входа        | Преливане на буфер, скриптове, SQL инжекция, канонизация                                                                       |
+| Подправяне на параметри    | Манипулиране на низове за заявки, манипулация на полето на формуляра, манипулиране на бисквитки, манипулация на HTTP хедъри    |
+| Управление на сесиите      | Открадване на сесия, session replay, man-in-the-middle                                                                         |
+| Криптография               | Лошо генериране на ключове или управление на ключове, слабо или персонализирано криптиране                                     |
+| Чувствителна информация    | Достъп до чувствителен код или данни в хранилището, подслушване на мрежата, подправяне на код / данни, администраторска парола |
+| Управление на изключенията | Разкриване на информация, отказ на услугата                                                                                    |
+
+Някои от най-добрите действия, които един програмист може да предприеме, за подсигуряване на приложението:
+
+* Максимална простота
+* Подсигуряване на най-слабата връзка
+* Ограничаване на публично достъпните ресурси
+* Неправилно, докато не се докаже правилно
+* Принципът **Weakest Privilege**
+* Сигурност при грешки
+* Осигуряване на постоянна защита
+
+### SQL Injection
+Следните SQL команди се изпълняват:
+```sql
+/* Обичайно търсене без SQL инжектиране */
+SELECT * FROM Messages WHERE MessageText LIKE '%Nikolay.IT%'";
+
+/* Търсене с SQL инжектиране, съвпада с всички записи */
+SELECT * FROM Messages WHERE MessageText LIKE '%%%%'";
+SELECT * FROM Messages WHERE MessageText LIKE '%' or 1=1 --%'"
+
+/* Команда за вмъкване със SQL инжектиране */
+SELECT * FROM Messages WHERE MessageText
+LIKE '%'; INSERT INTO Messages(MessageText, MessageDate) VALUES ('Hacked!!!', '1.1.1980') --%'"
+```
+Оригинална SQL заявка
+```cs
+string sqlQuery = "SELECT * FROM user WHERE name = '" + username + "' AND pass='" + password + "'";
+```
+Задаване на потребителско име на John & парола на ' OR '1'= '1
+```cs
+string sqlQuery = "SELECT * FROM user WHERE name = 'Admin' AND pass='' OR '1'='1'"
+```
+
+Резултатът: Потребителят с потребителско име – "Admin" ще влезе БЕЗ парола. Заявката за преминаване ще се превърне в bool израз, който винаги е верен.
+
+### Cross Site Scripting (XSS)
+* Cross-site scripting (XSS) е често срещана уязвимост в уеб приложенията
+* Уеб приложенията показват JavaScript код. Изпълнява се в браузъра на клиента. Хакерите могат да поемат контрол над сесиите, бисквитките, паролите и т.н.
+* Как да се предпазим от XSS? Проверете потребителския вход (вградено в ASP.NET Core). Изпълнявайте HTML escaping при показване на текстови данни.
+
+Cross-site scripting атака:
+* Кражба на бисквитки
+* Кражба на акаунт
+* Промяна на съдържанието
+* Променете потребителските настройки
+* Изтеглете зловреден софтуер
+* Изпращане на CRSF атаки
+* Подсказване на парола
+
+### Cross-Site Request Forgery (CSRF)
+Това е атака на уеб сигурност над HTTP протокола
+* Позволява изпълнението на неоторизирани команди от името на някой потребител
+* Потребителят има валидни разрешения за изпълнение на заявената команда
+* Нападателят използва тези разрешения злонамерено, без знанието на потребителя
+
+Процесът не е толкова сложен за разбиране:
+* Потребителят има валидна бисквитка за автентикация до  victim.org. Съхранява се в браузъра
+* Нападателят моли потребителя да посети [http://evilsite.com](http://evilsite.com). Нападателят взема съхранената бисквитка
+* Злият сайт изпраща HTTP Заявка до victim.org чрез бисквитката
+* victim.org извършва действия от името на потребителя. Действията се извършват с данните на потребителя
+
+Какво е всъщност Cross-Site Request Forgery:
+```html
+<!-- SOME MULTI-COLOR USELESS CLICKBAIT CONTENT -->
+<form action="http://good-banking-site.com/api/account" method="post">
+    <input type="hidden" name="Transaction" value="withdraw">
+    <input type="hidden" name="Amount" value="1000000">
+    <input type="submit" value="Click to collect your prize!">
+</form>
+```
+Потребителят дори може грешно да кликне бутона
+* Това ще активира атаката
+* Сигурността срещу подобни атаки е необходима
+* Защитава както вашето приложение, така и вашите клиенти
+
+### Parameter Tampering
+Parameter Tampering е манипулиране на параметри, обменяни между клиент и сървър
+* Променени низове за запитвания, тяло на заявка, бисквитки
+* Пропуснати валидации на данните, инжектирани допълнителни параметри
+
+### Други заплахи за сигурността
+* Семантични URL/HTTP атаки (URL/HTTP манипулация). Винаги проверявайте данните от страна на сървъра
+* Man in the Middle (винаги ползвайте SSL)
+* Недостатъчен контрол на достъпа
+* Други видове инжектиране на данни (винаги санирайте данните)
+* DoS и DDoS и Brute Force attacks (CAPTCHA и Firewall)
+* Phishing и Social Engineering (образовайте потребителите си)
+* Пропуски в сигурността на други софтуери  (използвайте последните версии
+
+## 11. Създаване на REST API
+
+### JSON
+JavaScript Object Notation (JSON) е файлов формат с отворен стандарт:
+* Използва четим от човека текст за предаване на обекти с данни
+* Обектите на данни се състоят от двойки атрибут-стойност или типове данни от масив
+* Лесно за хората да четат и пишат
+* Лесно за машините да обработват и генерират
+
+JSON произлиза от JavaScript:
+* Независим от езика
+* Сега много езици предоставят код за генериране и обработване на JSON
+
+JSON е много често използван формат на данни, използван в уеб комуникацията:
+* Основно в комуникация браузър-сървър или сървър-сървър
+* Официалният тип интернет медия (MIME) за JSON е application/json
+* JSON файловете имат разширение .json
+
+JSON обикновено се използва като заместител на XML в AJAX:
+* По-кратък и лесен за разбиране
+* По-бърз за четене и писане и е по-интуитивен
+* Не поддържа схеми и пространства от имена
+
+```json
+{
+    "firstName": "Pesho",
+    "courses": ["C#", "JS", "ASP.NET"]
+    "age": 23,
+    "hasDriverLicense": true
+}
+```
+
+### XML
+XML дефинира набор от правила за кодиране на документи:
+* Идва от Extensible Markup Language
+* Подобен на JSON: По отношение на читаемостта от човека и обработката от машини, По отношение на йерархия (стойности в стойности)
+
+XML е текстов формат:
+* Силна поддръжка за различни човешки езици чрез Unicode
+* Дизайнът се фокусира силно върху действителните документи
+
+Има 2 типа MIME за XML **application/xml** и **text/xml**.
+
+Има много приложения:
+* Широко използван в SOA
+* Конфигуриране на .NET приложения
+* Използва се във формати на Microsoft Office
+* XHTML е трябвало да бъде строг HTML формат
+
+```xml
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>
+```
+
+### Web API
+Web API е интерфейс за програмиране на приложения:
+* Използван от Web Browser (SPA), Mobile Applications, Games, Desktop Applications, Web Server
+
+Състои се от публично изложени крайни точки (endpoint-и):
+* Крайните точки съответстват на дефинирана система за заявка-отговор
+* Комуникацията обикновено се изразява във формат JSON или XML
+* Комуникацията обикновено се осъществява чрез уеб протокол. Най-често HTTP - чрез уеб сървър, базиран на HTTP
+
+### ASP.NET Core Web API
+* Няма нищо различно от уеб приложение
+* Вие изграждате контролери с действия
+* В този случай обаче действията са в ролята на крайни точки
+* Контролерите трябва да се анотират с ApiController
+
+```cs
+// Път, използван за достъп до крайни точки от този ApiController
+[Route("api/[controller]")
+[ApiController]
+public class ProductsController : ControllerBase { ...
+
+[assembly: ApiController]
+namespace Demo.Api  {  public class Startup { ...
+```
+
+#### ASP.NET Core Web API Controller
+* Наследяваме Controller
+* Трябва да анотираме класа с атрибутите \[ApiController] и \[Route]
+
+```cs
+[Route("api/[controller]")]
+[ApiController]
+public class ProductController : Controller
+{
+  private readonly IProductService productService;
+
+  public ProductController(IProductService ps)
+  {
+    this.productService = ps;
+  }
+}
+```
+
+#### ASP.NET Core Web API (ApiController)
+Анотацията \[ApiController] предоставя удобни функции:
+* Автоматични HTTP 400 отговор (за грешки в състоянието на модела)
+* Обвързване на изходния параметър на източника
+* Изисквания за Атрибутно рутиране
+* Подробни отговори за кодове за състояние на грешка
+
+Автоматични HTTP 400 отговори
+* Грешките при валидиране на модела автоматично задействат HTTP 400 отговор
+```cs
+if (!ModelState.IsValid) return BadRequest(ModelState);
+```
+Обвързване на атрибути на източника
+* Атрибутите определят местоположението на стойността на параметъра
+```cs
+[HttpPost]
+public IActionResult Create(  Product product, // [FromBody] се подразбира
+       string name) // [FromQuery] се подразбира
+{ ...
+```
+Multipart / Form-data заявката се подразбира
+* Постига се чрез поставяне на атрибута \[FromForm] върху параметрите на действието
+
+Рутирането на атрибутите се превръща в изискване
+```cs
+[Route("api/[controller]")
+[ApiController]
+public class ProductsController : ControllerBase
+```
+
+Крайните точки са недостъпни по пътищата, определени от :
+* UseMvc() и UseMvcWithDefaultRoute()
+
+Отговори за подробности за проблема за кодове за състояние на грешка
+* От ASP.NET Core 2.2 MVC преобразува резултатите от грешки
+* Грешките се трансформират в ProblemDetails: Тип, базиран на HTTP Api за представяне на грешки; Стандартизиран формат за машинно четими данни за грешки
+
+```cs
+// C#
+if (product == null)
+{
+    return NotFound();
+}
+// JSON
+{
+    type: "https://tools.ietf.org/html/rfc7231#section-6.5.4",
+    title: "Not Found",
+    status: 404,
+    traceId: "0HLHLV31KRN83:00000001"
+}
+```
+Тези функции са вградени и активни по подразбиране
+* Поведението по подразбиране може да бъде презаписано
+
+```cs
+services.AddMvc()
+.SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+.ConfigureApiBehaviorOptions(o =>
+{       
+  o.SuppressConsumesConstraintForFormFileParameters = true;
+  o.SuppressInferBindingSourcesForParameters = true; 
+  o.SuppressModelStateInvalidFilter = true; 
+  o.SuppressMapClientErrors = true;
+  o.SuppressUseValidationProblemDetailsForInvalidModelStateResponses = true;
+});
+```
+
+#### ASP.NET Core Web API (Return Types)
+ASP.NET Core предлага няколко опции за типове връщане на API Endpoint.
+
+* Специфичен тип = Най-простият тип действие
+```cs
+[HttpGet]
+public IEnumerable<Product> Get()
+{
+  return this.productService.GetAllProducts();
+}
+```
+* IActionResult тип = Подходящо, когато са възможни няколко типа ActionResult в съответното действие
+
+```cs
+[HttpGet("{id}")]
+[ProducesResponseType(200, Type = typeof(Product))]
+[ProducesResponseType(404)]
+public IActionResult GetById(int id)
+{
+  var product = this.productService.GetById(id);
+  if (product == null) return NotFound();
+  return Ok(product);
+}
+```
+* Препоръчва се използването на ActionResult&#x20;
+```cs
+[HttpGet] public ActionResult> Get() 
+{ 
+  return this.productService.GetAllProducts(); 
+} 
+[HttpGet("{id}")] 
+[ProducesResponseType(200)] 
+[ProducesResponseType(404)] 
+public ActionResult GetById(int id) 
+{ 
+    var product = this.productService.GetById(id);
+    if (product == null) return NotFound();
+    return product; 
+}
+```
+
+#### ASP.NET Core Web API (GET Методи)
+Създаване на уеб API с един контролер
+```cs
+[HttpGet] 
+public ActionResult> GetProducts() => this.productService.GetAllProducts();
+
+[HttpGet("{id}")] 
+public ActionResult GetProduct(long id) 
+{ 
+  var product = this.productService.GetById(id); 
+  if (product == null) return NotFound(); 
+  return product; 
+}
+```
+
+#### ASP.NET Core Web API (POST Методи)
+Създаване на уеб API с един контролер
+```cs
+[HttpPost] 
+public ActionResult PostProduct(ProductBindingModel pm) 
+{ 
+  this.productService.RegisterProduct(pm);
+  return CreatedAtAction("GetProduct", new { id = pm.Id }, pm); 
+}
+```
+Методът CreatedAtAction:
+- Връща 201 (Created) отговор - стандарт за POST заявки
+- Добавя Location хедър към отговора
+- Използва път с име "GetProduct", за създаване на URL
+
+#### ASP.NET Core Web API (PUT Методи)
+Създаване на уеб API с един контролер
+```cs
+[HttpPut("{id}")] public IActionResult PutProduct(long id, ProductBindingModel pm) 
+{ 
+  if (id != pm.Id) return BadRequest(); 
+  this.productService.EditProduct(id, pm); 
+  return NoContent(); 
+}
+```
+- Подобно на PostProduct, но използва HTTP PUT
+- Отговорът е 204 (No Content)
+- HTTP PUT изисква цяла актуализация на записа
+
+#### ASP.NET Core Web API (DELETE Методи)
+Създаване на уеб API с един контролер
+```cs
+[HttpDelete("{id}")] public ActionResult DeleteProduct(long id) 
+{ 
+  var product = this.productService.DeleteProduct(id); 
+  if (product == null) return NotFound(); 
+  return product; 
+}
+```
+* Отговорът е 204 (No Content)
+* И с това ние имаме нашия Products Web API
+* Сега нека да тестваме крайните точки
+
+## 12. Консумиране на REST API
+
+### Messages
+След като в последното занятие си създадохме **RestApi** за съобщения, сега е време да имплементиране и Front-End частта.
+
+Ще ни бъде предоставена обикновена HTML страница, оформена с Bootstrap. Страницата е конструирана като Front-End частта на приложението **WebChat**. Съдържа проста форма за избор на текущото потребителско име и проста форма за изпращане на съобщения. Също така има списък с изпратените съобщения, които са всички съобщения, които в момента са в базата данни на приложението.
+ 
+Не е необходимо да пишем какъвто и да е CSS. Въпреки това ще получим файл app.js, който трябва да допишем. Уеб API-то ни връща JSON обекти и нашата задача е да ги рендерираме на страницата с JavaSctipt.
+
+### Функционалност
+
+#### Username 
+След избора на потребителско име (натискане на бутона [Choose]) следва да се появи следният изглед.
+
+След като кликнем върху [Reset], Потребителското име трябва да бъде нулирано и да можем да изберем друго Потребителско име.
+
+#### Messaging
+След натискане на бутона [Send] съобщението трябва да бъде изпратено до уеб API-а и то да бъде създадено в базата данни. Всички съобщения трябва да бъдат обновени (изброени отново), така че новото съобщение да може да бъде прикачено.
+
+### Micro-Validations
+Нека въведем микро-валидации както следва:
+- Не трябва да можем да изпращаме съобщение, без първо да сме избрали потребителско име
+- Не трябва да можем да избераме празно потребителско име
+- Не трябва да можем да изпращаме празно съобщение
+
+## 13. Deployment
+[Работещ пример](https://aspnet-simple-chat-app.herokuapp.com/index.html) (Може да отнеме известно време докато се зареди)
+
+### Какво ни трябва
+* Акаунт в Heroku (който е безплатен)
+* Акаунт в Github (който трябва да имате)
+* Проект за качване
+
+### Променяне на проекта да е готов за качване
+1. Влезте в [примерния проект](https://github.com/dimitarminchev/ITCareer/tree/c64d596683ec8cc73e0a791e051417b3352a92a7/12.%20Internet%20Programming/15.%20Deployment/SimpleChatApp/README.md)
+2. Копирайте добавеното в Program.cs към вашия проект
+3. Влезте в Properties/launchSettings.json и се погрижете че стойността на ASPNETCORE\_ENVIRONMENT е променена на Production
+4. Изтрийте appsettings.json ако го използвате
+5. В Startup.cs премахнете Configuration и го заминете със Environment класа
+6. Качете проекта си във Github
+
+### Създаване на asp.net core проект в Heroku
+1. Създадете акаунт ако нямате
+2. Отидете на [този линк](https://dashboard.heroku.com/new-app) или натиснете New и Create new app
+3. В приложението влезте в Settings, отидете на Buildpacks и добавете нов със този url [https://github.com/jincod/dotnetcore-buildpack](https://github.com/jincod/dotnetcore-buildpack)
+4. Отидете на Deploy, изберете Github (ако не сте свързани се свържете), намерете вашето приложение и го качете със Deploy Branch
+5. Изчакайте приложението да се качи
+6. Ако имате проблеми отидете на More, View logs и от там се опитайте да намерите проблема
+
+### Неща да си имаме на предвид
+* Сменяме appsettings.json със Environment класа понеже от настройките на Heroku приложението можете да въведете 'Config Vars' които ще се дадат на програмата и можем да ги достъпим със Environment класа
+*   Ако искате да включите приложението от Visual Studio просто трябва да смените приложението да използва Kastrel вместо IIS &#x20;
+
+![Image file](https://i.imgur.com/o8yPFCl.png)
+
+* Heorku ви предлага безплатни и платени 'Add-ons' който можете да достъпите като отидете на Resources, един от тях е Postgres който може да се свържи със Entity Framework
+* Heroku ще изключи програмата когато не се използва за дълго време и после отново ще я включи ако някой се опита да я достъпи (това може да направи на програмата началното достъпване много бавно зависейки от големината на проекта)
+* Heroku ще ви даде PORT към който ще трябва да се свържете във Environment със име PORT
+* Примерния проект използва Sqlite за база данни който се свързва към app.db файла

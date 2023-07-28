@@ -1,6 +1,4 @@
-# readme
-
-## Автентикация и Авторизация
+## 9. Автентикация и Авторизация
 
 **Автентикация**
 
@@ -14,9 +12,7 @@
 * Въпроси: Какво можете да правите? Можете ли да видите тази страница?
 
 ### ASP.NET Core Identity
-
 Системата ASP.NET Core Identity
-
 * Система за удостоверяване и упълномощаване за ASP.NET Core
 * Поддържа ASP.NET MVC, Pages, Web API (JWT), SignalR
 * Работи с потребители, потребителски профили, влизане / излизане, роли и т.н.
@@ -30,7 +26,6 @@
 Настройка на идентичността на ASP.NET чрез използване на шаблоните на ASP.NET за проекти от Visual Studio.
 
 Необходим пакет NuGet
-
 ```
 Microsoft.AspNetCore.Identity.EntityFrameworkCore
 ```
@@ -51,7 +46,7 @@ Microsoft.AspNetCore.Identity.EntityFrameworkCore
 
 Настройки на паролата - могат да бъдат определени в Startup.cs
 
-```
+```cs
 public void ConfigureServices(IServiceCollection services)
 {
     ...
@@ -68,7 +63,7 @@ public void ConfigureServices(IServiceCollection services)
 
 #### Регистрация на потребител
 
-```
+```cs
 var newUser = new ApplicationUser()
 {
     UserName = "maria",
@@ -81,28 +76,23 @@ else // result.Errors holds the error messages
 ```
 
 #### Потребителски Вход/Изход
-
 Вход
 
-```
+```cs
 bool rememberMe = true;
 bool shouldLockout = false;
 var signInStatus = await signInManager.PasswordSignInAsync( "maria", "S0m3@Pa$$", rememberMe, shouldLockout);
 if (signInStatus.Succeeded) // Sucessfull login
 else // Login failed
 ```
-
 Изход
-
-```
+```cs
 await signInManager.SignOutAsync();
 ```
 
 #### ASP.NET Авторизиране
-
 Използвайте атрибутите \[Authorize] и \[AllowAnonymous], за да конфигурирате разрешен / анонимен достъп за контролер / действие
-
-```
+```cs
 [Authorize]
 public class AccountController : Controller 
 {
@@ -117,8 +107,7 @@ public class AccountController : Controller
 ```
 
 #### Провери настоящият потребител
-
-```
+```cs
 // GET: /Account/Roles (for logged-in users only)
 [Authorize]
 public ActionResult Roles()
@@ -138,8 +127,7 @@ public ActionResult Data()
 ```
 
 #### Добави потребител в роля
-
-```
+```cs
 var roleName = "Administrator";
 var roleExists = await roleManager.RoleExistsAsync(roleName);
 if (roleExists)
@@ -151,24 +139,19 @@ if (roleExists)
 ```
 
 #### Изисква влезлия потребител в определена роля
-
 Достъп само на потребителите в роля **Administrator**:
-
-```
+```cs
 [Authorize(Roles="Administrator")]
 public class AdminController : Controller { ...
 ```
-
 Достъп, ако Ролята на потребителя е **User**, **Student** или **Trainer**:
-
-```
+```cs
 [Authorize(Roles="User, Student, Trainer")]
 public ActionResult Roles(){ ...
 ```
 
 #### Проверете ролята на потребителя, в която сте в момента
-
-```
+```cs
 // GET: /Home/Admin (for logged-in admins only)
 [Authorize]
 public ActionResult Admin()
@@ -183,7 +166,6 @@ public ActionResult Admin()
 ```
 
 #### ASP.NET Core User Manager
-
 UserManager  - API за управление на потребителите в постоянен магазин
 
 | Category             |                       |                                        |
@@ -208,7 +190,7 @@ UserManager  - API за управление на потребителите в 
 * Претенциите са двойки име-стойност
 * Най-простият вид политика за искове проверява само за наличието на рекламация
 
-```
+```cs
 public void ConfigureServices(IServiceCollection services) 
 {
     ...
@@ -222,8 +204,7 @@ public IActionResult VacationBalance()
 ```
 
 ### Пълен контрол идентичността
-
-```
+```cs
 public void ConfigureServices(IServiceCollection services)
 {
     ...
@@ -234,10 +215,8 @@ public void ConfigureServices(IServiceCollection services)
     ...
 }
 ```
-
 Конфигуриране на **LoginPath**, **LogoutPath**, **AccessDeniedPath**
-
-```
+```cs
 public void ConfigureServices(IServiceCollection services)
 {
     ...
@@ -252,7 +231,6 @@ public void ConfigureServices(IServiceCollection services)
 ```
 
 ### Видове за удостоверяване
-
 Видове удостоверяване в ASP.NET Core приложения:
 
 * Удостоверяване и упълномощаване на базата на бисквитки (идентичност)
@@ -261,14 +239,12 @@ public void ConfigureServices(IServiceCollection services)
 * JSON Уеб токени (JWT) удостоверяване и авторизация
 
 #### Удостоверяване и упълномощаване въз основа на бисквитки
-
 * Базираната на бисквитки автентикация е механизмът за удостоверяване на приложението ASP.NET Core
 * Удостоверяването е изцяло на базата на бисквитки
 * Това е основна разлика от ASP.NET MVC
 * Главницата се основава на претенции
 
 #### Удостоверяване и упълномощаване на Windows
-
 Windows auth е по-сложен механизъм за автентификация
 
 * Разчита на операционната система за удостоверяване на потребителите
@@ -277,7 +253,6 @@ Windows auth е по-сложен механизъм за автентифика
 * Клиенти, потребители, сървъри принадлежат към един и същ домейн на Windows (AD)
 
 #### JWT удостоверяване и упълномощаване
-
 JSON Web Tokens е модерен механизъм за авторство, базиран на JavaScript
 
 * Компактен и самостоятелен
@@ -289,14 +264,13 @@ JSON Web Tokens е модерен механизъм за авторство, б
 * Използва се в приложения Angular / React / Blazor
 
 ### Социални Акаунти
-
 Позволяването на потребителите да влизат със съществуващите си идентификационни данни е удобно
 
 * Прехвърля сложността на управлението на процеса на влизане към трета страна
 * Подобрява потребителското изживяване, като свежда до минимум техните авторски дейности
 * ASP.NET Core поддържа вградени външни доставчици за вход&#x20;
 
-```
+```cs
 public void ConfigureServices(IServiceCollection services) 
 {
     ...
@@ -308,7 +282,6 @@ public void ConfigureServices(IServiceCollection services)
     ...
 }
 ```
-
 Всеки доставчик на външно влизане има определен API за разработчици
 
 * Трябва да конфигурирате приложението си там, преди да го използвате
@@ -318,8 +291,7 @@ public void ConfigureServices(IServiceCollection services)
 * Тези идентификационни данни не трябва да се съхраняват публично
 
 **Facebook**
-
-```
+```cs
 public void ConfigureServices(IServiceCollection services)
 {
     ...
@@ -332,20 +304,20 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-## Demo
+### Demo
 
-### 1. Create ASP.NET Core web application
+#### 1. Create ASP.NET Core web application
 
-![9\_1.png](9\_1.png)
+![09. Authentication and Authorization/Pictures/01.png](<09. Authentication and Authorization/Pictures/01.png>)
 
-### 2. Project > Add > New Scaffolded Item...
+#### 2. Project > Add > New Scaffolded Item...
 
-![9\_2.png](9\_2.png)
+![09. Authentication and Authorization/Pictures/02.png](<09. Authentication and Authorization/Pictures/02.png>)
 
-### 3. Identity > Add
+#### 3. Identity > Add
 
-![9\_3.png](9\_3.png)
+![09. Authentication and Authorization/Pictures/03.png](<09. Authentication and Authorization/Pictures/03.png>)
 
-### 4. Override all files > Add
+#### 4. Override all files > Add
 
-![9\_4.png](9\_4.png)
+![09. Authentication and Authorization/Pictures/04.png](<09. Authentication and Authorization/Pictures/04.png>)
