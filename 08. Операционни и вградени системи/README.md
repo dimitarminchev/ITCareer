@@ -36,7 +36,7 @@ man <команда>
 man man
 ```
 
-![man.png](<Linux/man.png>)
+![man.png](<Linux/man (2).png>)
 
 По-важните клавиши, които можете да изполвате при работа в програмата са **PgUp** за прелистване на страница нагоре, **PgDn** за прелистване на страница надолу и клавиша **q** за изход.
 
@@ -77,7 +77,7 @@ man man
 
 Чрез комбинирането на трите нива и трите режима се получават 9 възможни характеристики на файловете, които могат да се представят със следната битова маска (първият флаг показва дали полето описва директория или файл):
 
-![permissions.png](<Linux/permissions.png>)
+![permissions.png](<Linux/permissions (2).png>)
 
 На горния пример, притежателят на файла има пълни права над файла, членовете на групата на файла имат права за четене и изпълнение, а всички останали потребители имат само право за четене.
 
@@ -112,7 +112,7 @@ ls -la
 
 Текстовите файлове са често използвано средство за съхранение и обмен на информация в Линукс. Поради това, почти всяка една дистрибуция предлага средства за работа с тях. В нашата работна среда ще използваме текстовия редактор **Nano**:
 
-![nano.png](<Linux/nano.png>)
+![nano.png](<Linux/nano (2).png>)
 
 Oсновни функции на **Nano**:
 
@@ -146,11 +146,11 @@ https://ryanstutorials.net/bash-scripting-tutorial/.
 
 ### Arduino Uno Board
 
-![Arduino Uno Board](<Arduino/ArduinoUnoBoard.png>)
+![Arduino Uno Board](<Arduino/ArduinoUnoBoard (2).png>)
 
 ### Arduino Uno Pinout
 
-![Arduino Uno Pinout](<Arduino/ArduinoUnoPinout.png>)
+![Arduino Uno Pinout](<Arduino/ArduinoUnoPinout (2).png>)
 
 ### Autodesk IDE
 
