@@ -5,36 +5,41 @@
         // Задача: Представяне на сума
         static void Main(string[] args)
         {
-            // търсената сума на монети
+            // Търсена сума
             int finalSum = 18;
 
-            // текуща сума монети
+            // Налична сума
             int currentSum = 0;
 
-            // множество налични монети
+            // Налични монети
             int[] coins = { 10, 10, 5, 5, 2, 2, 1, 1 };
 
-            // множество монети за търсената сума
-            Queue<int> resultCoins = new Queue<int>(); 
+            // Избрани монети
+            Queue<int> selectedCoins = new Queue<int>();
 
             // Алгоритъм за намиране на минималния брой монети за търсената сума
             for (int i = 0; i < coins.Length; i++)
             {
+                // Наличната сума и текущата монета надхвърлят търсената сума
                 if (currentSum + coins[i] > finalSum) continue;
 
+                // Нарастваме наличната сума с монетата
                 currentSum += coins[i];
-                resultCoins.Enqueue(coins[i]);
+
+                // Добавяме монетата към избраните монети
+                selectedCoins.Enqueue(coins[i]);
+
+                // Дали достигнахме търсената сума
                 if (currentSum == finalSum)
                 {
-                    // Намерили сме търсената сума монети
-                    Console.WriteLine("Coins Count = {0}", resultCoins.Count);
-                    Console.WriteLine("Coins: " + string.Join(", ", resultCoins));
-                    return;
+                    Console.WriteLine("Minimal Coins Count = " + selectedCoins.Count);
+                    Console.WriteLine("Selected Coins: " + string.Join(", ", selectedCoins));
+                    return; // Изход
                 }
             }
 
-            // Не сме успели да намерим търсената сума
-            Console.WriteLine("Sum Not Found");
+            // Не сме намерили търсената сума
+            Console.WriteLine("Sum Not Found!");
         }
     }
 }

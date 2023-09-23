@@ -1,63 +1,50 @@
-﻿namespace Jobs
+﻿using System.IO;
+using System.Xml.Linq;
+
+namespace Jobs
 {
-    public static class Console
-    {
-        public static void WriteLine<T>(T output)
-        {
-            var originalColor = System.Console.ForegroundColor;
-            System.Console.ForegroundColor = ConsoleColor.Green;
-            System.Console.WriteLine(output);
-            System.Console.ForegroundColor = originalColor;
-        }
-
-        public static void Write<T>(T output)
-        {
-            var originalColor = System.Console.ForegroundColor;
-            System.Console.ForegroundColor = ConsoleColor.Green;
-            System.Console.Write(output);
-            System.Console.ForegroundColor = originalColor;
-        }
-
-        public static string ReadLine() => System.Console.ReadLine();
-    }
-
-    public class Job
-    {
-        public int Id { get; set; }
-
-        public int Deadline { get; set; }
-
-        public float Price { get; set; }
-
-        public override string ToString()
-        {
-            return string.Format("j{0}", Id);
-        }
-    }
-
+    /// <summary>
+    /// Програма
+    /// </summary>
     public class Program
     {
         static void Main(string[] args)
         {
-            List<Job> Jobs = new List<Job>();
-            int n = int.Parse(Console.ReadLine());
-            while (n > 0)
+            // Структура за данни
+            List<Job> jobs = new List<Job>();
+
+            // Входни данни: Input.txt
+            using (StreamReader input = new StreamReader("Input.txt"))
             {
-                string[] input = Console.ReadLine().Split();
-                Jobs.Add(new Job()
+                int n = int.Parse(input.ReadLine());
+                System.Console.WriteLine(n);
+
+                for (int i = 0; i < n; i++)
                 {
-                    Id = int.Parse(input[0]),
-                    Deadline = int.Parse(input[1]),
-                    Price = float.Parse(input[2])
-                });
-                n--;
+                    // 0 = Name, 1 = Deadline, 2 = Profit
+                    string line = input.ReadLine(); 
+                    System.Console.WriteLine(line);
+
+                    string[] array = line.Split().ToArray();
+                    jobs.Add(new Job
+                    {
+                        Id = int.Parse(array[0]),
+                        Deadline = int.Parse(array[1]),
+                        Profit = int.Parse(array[2])
+                    });
+                }
             }
 
+            // Сортиране на дейностите
+            List<Job> sortedJobs = jobs.OrderByDescending(job => job.Profit).ThenBy(job => job.Id).ToList();
+            Job selected = sortedJobs.First();
+
+            // ИЗбрани дейности
             Queue<Job> selectedJobs = new Queue<Job>();
-            var sorted = Jobs.OrderByDescending(x => x.Price);
-            var selected = sorted.First();
             selectedJobs.Enqueue(selected);
-            foreach (var job in sorted)
+
+            // Обработка
+            foreach (var job in sortedJobs)
             {
                 if (job.Deadline > selected.Deadline)
                 {
@@ -66,10 +53,9 @@
                 }
             }
 
-            Console.Write("Solution: ");
-            Console.WriteLine(string.Join(", ", selectedJobs));
-            Console.Write("Sum: ");
-            Console.WriteLine(selectedJobs.Sum(x => x.Price));
+            // Отговор
+            Console.WriteLine(string.Join(" ", selectedJobs)); // Selected Jobs
+            Console.WriteLine(selectedJobs.Sum(x => x.Profit)); // Maximum Profit
         }
     }
 }

@@ -32,7 +32,7 @@
         /// </summary>
         /// <param name="number">Числител</param>
         /// <param name="denom">Знаменател</param>
-        public Fraction(int number, int denom)
+        public Fraction(int number = 0, int denom = 1)
         {
             this.number = number;
             this.denom = denom;
@@ -89,8 +89,26 @@
             return false;
         }
 
+        /// <summary>
+        /// Предефиниране на оператор ==
+        /// </summary>
+        public static bool operator ==(Fraction left, Fraction right)
+        {
+            if (left.Number == right.Number && left.Denom == right.Denom) return true;
+            return false;
+        }
 
-        // Печатащ метод
+        /// <summary>
+        /// Предефиниране на оператор !=
+        /// </summary>
+        public static bool operator !=(Fraction left, Fraction right)
+        {
+            return left == right;
+        }
+
+        /// <summary>
+        /// Печатащ метод
+        /// </summary>
         public override string ToString()
         {
             return string.Format("[{0}/{1}]", this.number, this.denom);

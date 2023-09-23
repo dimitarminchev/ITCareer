@@ -1,62 +1,49 @@
 ﻿namespace Activities
 {
-    public static class Console
-    {
-        public static void WriteLine<T>(T output)
-        {
-            var originalColor = System.Console.ForegroundColor;
-            System.Console.ForegroundColor = ConsoleColor.Green;
-            System.Console.WriteLine(output);
-            System.Console.ForegroundColor = originalColor;
-        }
-
-        public static void Write<T>(T output)
-        {
-            var originalColor = System.Console.ForegroundColor;
-            System.Console.ForegroundColor = ConsoleColor.Green;
-            System.Console.Write(output);
-            System.Console.ForegroundColor = originalColor;
-        }
-
-        public static string ReadLine() => System.Console.ReadLine();
-    }
-
-    public class Activity
-    {
-        public string Name { get; set; }
-        public int Start { get; set; }
-        public int End { get; set; }
-
-        public override string ToString()
-        {
-            return Name;
-        }
-    }
-
+    /// <summary>
+    /// Програма
+    /// </summary>
     public class Program
     {
         static void Main(string[] args)
         {
+            // Структура за данни 
             List<Activity> activities = new List<Activity>();
 
-            string[] input = Console.ReadLine().Split();
-            while (input[0] != "END")
+            // Входни данни: Input.txt
+            using (StreamReader input = new StreamReader("Input.txt"))
             {
-                activities.Add(new Activity()
+                string line = input.ReadLine();
+                System.Console.WriteLine(line);
+
+                while (line != "END")
                 {
-                    Name = input[0],
-                    Start = int.Parse(input[1]),
-                    End = int.Parse(input[2])
-                });
-                input = Console.ReadLine().Split();
+                    // 0 = name, 1 = start, 2 = end
+                    string[] array = line.Split().ToArray(); 
+
+                    activities.Add(new Activity
+                    {
+                        Name = array[0],
+                        Start = int.Parse(array[1]),
+                        End = int.Parse(array[2])
+                    });
+
+                    line = input.ReadLine();
+                    System.Console.WriteLine(line);
+                }
             }
 
-            var queueActivities = new Queue<Activity>();
+            // Сортиране
+            List<Activity> sortedActivities = activities.OrderBy(x => x.End).ToList<Activity>();
 
-            var sortedActivities = activities.OrderBy(x => x.End);
-            var selectedActivity = sortedActivities.First();
+            // Избрана дейност
+            Activity selectedActivity = sortedActivities.First();
+
+            // Дейности
+            Queue<Activity> queueActivities = new Queue<Activity>();
             queueActivities.Enqueue(selectedActivity);
 
+            // Обработка
             foreach (var currentActivity in sortedActivities)
             {
                 if (currentActivity.Start >= selectedActivity.End)
@@ -66,8 +53,9 @@
                 }
             }
 
-            Console.Write("Solution: ");
-            Console.WriteLine(string.Join(", ", queueActivities));
+            // Отговор
+            Console.WriteLine(string.Join("\n", queueActivities));
+
         }
     }
 }

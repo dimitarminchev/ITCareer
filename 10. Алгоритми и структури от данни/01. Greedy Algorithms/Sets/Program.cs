@@ -1,75 +1,65 @@
 ﻿namespace Sets
 {
-    public static class Console
-    {
-        public static void WriteLine<T>(T output)
-        {
-            var originalColor = System.Console.ForegroundColor;
-            System.Console.ForegroundColor = ConsoleColor.Green;
-            System.Console.WriteLine(output);
-            System.Console.ForegroundColor = originalColor;
-        }
-
-        public static void Write<T>(T output)
-        {
-            var originalColor = System.Console.ForegroundColor;
-            System.Console.ForegroundColor = ConsoleColor.Green;
-            System.Console.Write(output);
-            System.Console.ForegroundColor = originalColor;
-        }
-
-        public static string ReadLine() => System.Console.ReadLine();
-    }
-
+    /// <summary>
+    /// Програма
+    /// </summary>
     public class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Universe: ");
-            var universe = Console.ReadLine().Split
-            (
-                        new char[] { ',', ' ' },
-                        StringSplitOptions.RemoveEmptyEntries
-            ).Select(int.Parse).ToList();
+            // Вселената
+            List<int> universe = new List<int>();
 
-            Console.Write("Subsets: ");
-            List<List<int>> subsets = new List<List<int>>();
-            var n = int.Parse(Console.ReadLine());
-            while (n > 0)
+            // Подмножества
+            List<List<int>> sets = new List<List<int>>();
+
+            // Входни данни: Input.txt
+            using (StreamReader input = new StreamReader("Input.txt"))
             {
-                subsets.Add
-                (
-                    Console.ReadLine().Split
-                    (
-                        new char[] { ',', ' ' },
-                        StringSplitOptions.RemoveEmptyEntries
-                    ).Select(int.Parse).ToList()
-                );
-                n--;
+                // Вселената
+                string line = input.ReadLine();
+                System.Console.WriteLine(line);
+                universe = line.Split(",").Select(int.Parse).ToList();
+
+                // Брой подмножества
+                line = input.ReadLine();
+                System.Console.WriteLine(line);
+                int n = int.Parse(line);
+
+                // Подмножества
+                for (int i = 0; i < n; i++)
+                {
+                    line = input.ReadLine();
+                    System.Console.WriteLine(line);
+                    sets.Add(line.Split(",").Select(int.Parse).ToList());
+                }
             }
 
+            // Сортирани подмножества
+            var sortedSets = sets.OrderByDescending(x => x.Count());
+
+            // Резултат
             Queue<List<int>> result = new Queue<List<int>>();
 
-            var sortedSubsets = subsets.OrderByDescending(x => x.Count());
-            foreach (var subset in sortedSubsets)
+            // Обхождане
+            foreach (var subSets in sortedSets)
             {
-                foreach (var item in subset)
+                foreach (var sub in subSets)
                 {
-                    if (universe.Contains(item))
+                    if (universe.Contains(sub))
                     {
-                        result.Enqueue(subset);
-                        subset.ForEach(x => universe.Remove(x));
+                        result.Enqueue(subSets);
+                        subSets.ForEach(x => universe.Remove(x));
                         break;
                     }
                 }
             }
 
-            Console.WriteLine("Solution: ");
+            // Печат
+            Console.WriteLine("(" + result.Count() + ")");
             foreach (var item in result)
             {
-                Console.Write("{ ");
-                Console.Write(string.Join(", ", item));
-                Console.WriteLine(" }");
+                Console.WriteLine("{ " + string.Join(", ", item) + " }");
             }
         }
     }

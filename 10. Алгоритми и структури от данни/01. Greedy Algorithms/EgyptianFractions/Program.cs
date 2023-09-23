@@ -5,32 +5,30 @@
         // Задача: Египедски дроби
         static void Main(string[] args)
         {
-            // Примерен вход: p = 7, q = 9
-            Console.Write("p=");
-            int p = int.Parse(Console.ReadLine());
-            Console.Write("q=");
-            int q = int.Parse(Console.ReadLine());
+            Fraction goal = new Fraction(7,9); 
+            Fraction next = new Fraction(1, (goal.Number + goal.Denom) / goal.Number); 
+            Fraction sum = new Fraction();
+            List<Fraction> selected = new List<Fraction>();
 
-            // Обработка
-            Fraction goalFraction = new Fraction(p, q);
-            Fraction currentSum = new Fraction(0, 1);
-            Queue<Fraction> qFraction = new Queue<Fraction>();
-            int part = 2;
-            while (!(currentSum.Number == goalFraction.Number &&
-                     currentSum.Denom == goalFraction.Denom))
+            while(true)
             {
-                var nextFraction = new Fraction(1, part);
-                if (currentSum + nextFraction < goalFraction)
+                // Надхвърля ли търсената дроб?
+                if (sum + next < goal)
                 {
-                    currentSum += nextFraction;
-                    qFraction.Enqueue(nextFraction);
+                    selected.Add(next);
+                    sum += next;
                 }
-                part++;
-            }
 
-            // Изход
-            Console.Write(goalFraction + " = ");
-            Console.WriteLine(string.Join(" + ", qFraction));
+                // Получихме ли търсената дроб?
+                if (sum == goal) 
+                {
+                    Console.WriteLine(goal + " = " + string.Join(" + ", selected ));
+                    return;
+                }
+
+                // Следваща дроб ...
+                next = new Fraction(1, next.Denom + 1);
+            }
         }
     }
 }
