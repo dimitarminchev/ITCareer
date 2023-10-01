@@ -37,6 +37,7 @@
 
             int[] oldSums = new int[] { 0 };
             int[] newSums = new int[] { 0, 0 };
+            
             // Process
             for (int i = 0; i < workingTime; i++)
             {

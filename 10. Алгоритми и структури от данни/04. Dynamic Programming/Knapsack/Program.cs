@@ -12,31 +12,55 @@
         0-1 Knapsack Problem (Dynamic Programming)  Youtube Video:
         https://www.youtube.com/watch?v=xOlhR_2QCXY
         */
-        const int N = 8; // Number of items
-        static int[] V = new int[] { 0, 5, 3, 9, 1, 1, 2, 5, 2 }; // Values
-        static int[] W = new int[] { 0, 3, 7, 6, 1, 2, 4, 5, 5 }; // Weights
-        static int C = 7; // Knapsack Capacity
+        private static int memo = 0; // Памет
+        private static int[] V; // цени
+        private static int[] W; // тегла
 
-        static int result = 0;
-
-        // Knapsack
-        static int Knapsack(int n, int c)
+        /// <summary>
+        /// Раницата
+        /// </summary>
+        private static int Knapsack(int n, int c)
         {
-            if (n == 0 || c == 0) return 0;
-
-            else if (W[n] > c) result = Knapsack(n - 1, C);
+            if (n == 0 || c == 0)
+            {
+                memo = 0;
+            }
+            else if (W[n] > c)
+            {
+                memo = Knapsack(n - 1, c);
+            }
             else
             {
-                var temp1 = Knapsack(n - 1, c);
-                var temp2 = V[n] + Knapsack(n - 1, C - W[n]);
-                result = Math.Max(temp1, temp2);
+                memo = Math.Max
+                (
+                    Knapsack(n - 1, c),
+                    V[n] + Knapsack(n - 1, c - W[n])
+                );
             }
-            return result;
+            return memo;
         }
 
-        // Main Method
-        static void Main(string[] args)
+        /// <summary>
+        /// Главен метод
+        /// </summary>
+        public static void Main(string[] args)
         {
+            // Брой предмети = 8
+            int N = int.Parse(Console.ReadLine());
+
+            // Тегла: 3, 7, 6, 1, 2, 4, 5, 5  
+            W = new int[N + 1];
+            W[0] = 0;
+            Console.ReadLine().Split(",").Select(int.Parse).ToArray().CopyTo(W, 1);
+
+            // Цени: 5, 3, 9, 1, 1, 2, 5, 2
+            V = new int[N + 1];
+            V[0] = 0;
+            Console.ReadLine().Split(",").Select(int.Parse).ToArray().CopyTo(V, 1);
+
+            // Капацитет на раницата = 7
+            int C = int.Parse(Console.ReadLine());
+
             // Output
             Console.WriteLine("Number of items = {0}", N);
             Console.WriteLine("Values: {0}", string.Join(", ", V));

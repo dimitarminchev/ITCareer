@@ -1,11 +1,4 @@
-﻿using System.Numerics;
-
-namespace Alley
-{
-    public class Program
-    {
-/*
-Задача 1. Алеа
+﻿Задача 1. Алеа
 ---
 Алея в градската градина на град X има дължина L и трябва да бъде павирана с правоъгълни плочи. 
 Всяка плоча има ширина, колкото алеята, но дължините на плочите са различни. 
@@ -25,50 +18,3 @@ namespace Alley
 
 Изход:
 13
-*/
-
-        // Брой възможни нареждания
-        static BigInteger counter = 0;
-
-        // Размери на плочките
-        static int[] sizes;
-
-        // Решение
-        static void Solve(int length)
-        {
-            if (length == 0)
-            {
-                counter++;
-                return;
-            }
-            else if (length > 0)
-            {
-                for (int i = 0; i < sizes.Length; i++)
-                {
-                    if (length - sizes[i] >= 0)
-                    {
-                        Solve(length - sizes[i]);
-                    }
-                }
-            }
-        }
-
-        static void Main(string[] args)
-        {
-            // L = 5, N = 3
-            var input = Console.ReadLine().Split().Select(int.Parse).ToArray();
-
-            // Дължина на алеята
-            var length = input[0];
-
-            // Размери на плочките: 2 1 3
-            sizes = Console.ReadLine().Split().Select(int.Parse).ToArray();
-
-            // Решение
-            Solve(length);
-
-            // Печат
-            Console.WriteLine(counter);
-        }
-    }
-}

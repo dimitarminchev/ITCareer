@@ -2,25 +2,38 @@
 {
     public class Program
     {
-        // Памет
-        static long[] memo;
+        /// <summary>
+        /// Памет
+        /// </summary>
+        private static long[] memo;
 
-        // Рекурсивен метод за пресмятане на редицата на Фибоначи
-        static long Fibonacci(int n)
+        /// <summary>
+        /// Рекурсивен метод за пресмятане на редицата на Фибоначи
+        /// </summary>
+        private static long Fibonacci(int n)
         {
             // Използване на предишно получена стойност
             if (memo[n] != 0) return memo[n];
 
             // Получаване на нова стойност и запазване в паметта
-            if (n <= 2) memo[n] = 1;
-            else memo[n] = Fibonacci(n - 2) + Fibonacci(n - 1);
+            if (n <= 2)
+            {
+                memo[n] = 1;
+            }
+            else
+            {
+                memo[n] = Fibonacci(n - 2) + Fibonacci(n - 1);
+            }
+            
             return memo[n];
         }
 
+        /// <summary>
+        /// Главен метод
+        /// </summary>
         static void Main(string[] args)
         {
-            // Вход
-            Console.Write("n=");
+            // Входни данни
             int n = int.Parse(Console.ReadLine());
 
             // Създавне на паметта

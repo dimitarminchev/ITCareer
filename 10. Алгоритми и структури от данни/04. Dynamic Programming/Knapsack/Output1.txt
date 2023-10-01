@@ -1,0 +1,5 @@
+﻿Number of items = 8
+Values: 0, 5, 3, 9, 1, 1, 2, 5, 2
+Weights: 0, 3, 7, 6, 1, 2, 4, 5, 5
+Knapsack Capacity = 7
+Knapsack Sum = 10
