@@ -2,9 +2,9 @@
 {
     public class Program
     {
-        static Dictionary<int, Tree<int>> nodeByValue = new Dictionary<int, Tree<int>>();
+        private static Dictionary<int, Tree<int>> nodeByValue = new Dictionary<int, Tree<int>>();
 
-        static Tree<int> GetTreeNodeByValue(int value)
+        private static Tree<int> GetTreeNodeByValue(int value)
         {
             if (!nodeByValue.ContainsKey(value))
             {
@@ -13,7 +13,7 @@
             return nodeByValue[value];
         }
 
-        static void AddEdge(int parent, int child)
+        private static void AddEdge(int parent, int child)
         {
             Tree<int> parentNode = GetTreeNodeByValue(parent);
             Tree<int> childNode = GetTreeNodeByValue(child);
@@ -21,7 +21,7 @@
             childNode.SetParent(parentNode);
         }
 
-        static void ReadTree()
+        private static void ReadTree()
         {
             int nodeCount = int.Parse(Console.ReadLine());
             for (int i = 1; i < nodeCount; i++)
@@ -31,7 +31,7 @@
             }
         }
 
-        static Tree<int> GetRootNode()
+        private static Tree<int> GetRootNode()
         {
             return nodeByValue.Values.Where(x => x.Parent == null).FirstOrDefault();
         }

@@ -3,7 +3,9 @@
     public class Tree<T>
     {
         public T Value { get; set; }
+
         public Tree<T> Parent { get; private set; }
+        
         public List<Tree<T>> Children { get; private set; }
 
         public Tree(T value, params Tree<T>[] children)

@@ -4,22 +4,28 @@
     {
         static void Main(string[] args)
         {
-            Console.Write("Tree elements: ");
-            int[] elements = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            // Binary Tree
             BinaryTree<int> binaryTree = new BinaryTree<int>();
-            foreach (var element in elements)
+
+            // Tree nodes: 17, 9, 6, 12, 19, 25
+            int[] nodes = new int[] { 17, 9, 6, 12, 19, 25 };
+            foreach (var node in nodes)
             {
-                binaryTree.Add(element);
+                binaryTree.Add(node);
             }
 
-            int elementToFind = int.Parse(Console.ReadLine());
-            Queue<int> pathToElement = binaryTree.Find(elementToFind);
-            Console.WriteLine("Path to element {0}: {1}", elementToFind, pathToElement != null ? string.Join(" -> ", pathToElement) : "Not Found");
-            Console.WriteLine("Tree contains element {0}: {1}", elementToFind, binaryTree.Contains(elementToFind));
+            // Node to Find = 12
+            int nodeToFind = 12;
+            Queue<int> pathToNode = binaryTree.Find(nodeToFind);
+            Console.WriteLine("Path to Node {0}: {1}", nodeToFind, pathToNode != null ? string.Join(" -> ", pathToNode) : "Not Found");
+            Console.WriteLine("Tree contains node {0}: {1}", nodeToFind, binaryTree.Contains(nodeToFind));
 
-            int elementToDelete = int.Parse(Console.ReadLine());
+            // Node to Delete = 19
+            int nodeToDelete = 19;
+            Console.WriteLine("Tree before delete node {0}:", nodeToDelete);
             binaryTree.PrintTree();
-            binaryTree.Delete(elementToDelete);
+            binaryTree.Delete(nodeToDelete);
+            Console.WriteLine("Tree after delete node {0}:", nodeToDelete);
             binaryTree.PrintTree();
         }
     }

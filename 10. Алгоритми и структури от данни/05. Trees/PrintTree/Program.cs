@@ -2,9 +2,9 @@
 {
     public class Program
     {
-        static Dictionary<int, Tree<int>> nodeByValue = new Dictionary<int, Tree<int>>();
+        private static Dictionary<int, Tree<int>> nodeByValue = new Dictionary<int, Tree<int>>();
 
-        static Tree<int> GetTreeNodeByValue(int value)
+        private static Tree<int> GetTreeNodeByValue(int value)
         {
             if (!nodeByValue.ContainsKey(value))
             {
@@ -13,7 +13,7 @@
             return nodeByValue[value];
         }
 
-        static void AddEdge(int parent, int child)
+        private static void AddEdge(int parent, int child)
         {
             Tree<int> parentNode = GetTreeNodeByValue(parent);
             Tree<int> childNode = GetTreeNodeByValue(child);
@@ -21,7 +21,17 @@
             childNode.SetParent(parentNode);
         }
 
-        static Tree<int> GetRoot()
+        private static void ReadTree()
+        {
+            int nodeCount = int.Parse(Console.ReadLine());
+            for (int i = 1; i < nodeCount; i++)
+            {
+                string[] edge = Console.ReadLine().Split().ToArray();
+                AddEdge(int.Parse(edge[0]), int.Parse(edge[1]));
+            }
+        }
+
+        private static Tree<int> GetRoot()
         {
             Tree<int> root = nodeByValue.Values.Where(x => x.Parent == null).FirstOrDefault();
             return root;
@@ -29,15 +39,8 @@
 
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            for (int i = 0; i < n - 1; i++)
-            {
-                int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
-                AddEdge(input[0], input[1]);
-            }
-            Console.WriteLine(new string('-', 10));
+            ReadTree();
             Tree<int>.PrintTree(GetRoot(), 0);
-            Console.WriteLine(new string('-', 10));
         }
     }
 }

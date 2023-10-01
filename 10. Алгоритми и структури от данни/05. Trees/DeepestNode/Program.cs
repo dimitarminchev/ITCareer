@@ -2,11 +2,13 @@
 {
     public class Program
     {
-        static Dictionary<int, Tree<int>> nodeByValue = new Dictionary<int, Tree<int>>();
-        static int maxDepth = 0;
-        static Tree<int> deepestNode;
+        private static Dictionary<int, Tree<int>> nodeByValue = new Dictionary<int, Tree<int>>();
 
-        static Tree<int> GetTreeNodeByValue(int value)
+        private static int maxDepth = 0;
+
+        private static Tree<int> deepestNode;
+
+        private static Tree<int> GetTreeNodeByValue(int value)
         {
             if (!nodeByValue.ContainsKey(value))
             {
@@ -15,7 +17,7 @@
             return nodeByValue[value];
         }
 
-        static void AddEdge(int parent, int child)
+        private static void AddEdge(int parent, int child)
         {
             Tree<int> parentNode = GetTreeNodeByValue(parent);
             Tree<int> childNode = GetTreeNodeByValue(child);
@@ -23,25 +25,23 @@
             childNode.SetParent(parentNode);
         }
 
-        static List<Tree<int>> GetLeaves()
+        private static void ReadTree()
         {
-            List<Tree<int>> leaves = nodeByValue.Values.Where(x => x.Children.Count == 0).ToList();
-            return leaves;
+            int nodeCount = int.Parse(Console.ReadLine());
+            for (int i = 1; i < nodeCount; i++)
+            {
+                string[] edge = Console.ReadLine().Split().ToArray();
+                AddEdge(int.Parse(edge[0]), int.Parse(edge[1]));
+            }
         }
 
-        static Tree<int> GetRoot()
+        private static Tree<int> GetRoot()
         {
             Tree<int> root = nodeByValue.Values.Where(x => x.Parent == null).FirstOrDefault();
             return root;
         }
 
-        static List<Tree<int>> GetMiddleNodes()
-        {
-            List<Tree<int>> middleNodes = nodeByValue.Values.Where(x => x.Children.Count > 0 && x.Parent != null).ToList();
-            return middleNodes;
-        }
-
-        static void FindDeepestNode(Tree<int> node, int currentDepth)
+        private static void FindDeepestNode(Tree<int> node, int currentDepth)
         {
             if (currentDepth > maxDepth)
             {
@@ -56,12 +56,7 @@
 
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            for (int i = 0; i < n - 1; i++)
-            {
-                int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
-                AddEdge(input[0], input[1]);
-            }
+            ReadTree();
             maxDepth = 0;
             deepestNode = GetRoot();
             FindDeepestNode(GetRoot(), 0);

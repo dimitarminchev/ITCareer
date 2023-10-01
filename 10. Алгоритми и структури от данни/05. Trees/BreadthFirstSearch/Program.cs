@@ -28,7 +28,7 @@
             tree.Print();
 
             //  Обхождане на дървовидната структура в широчина
-            Console.WriteLine("Breadth First Search (BFS): {0}", string.Join(" ", tree.BFS()));
+            Console.WriteLine("Breadth First Search (BFS):\n{0}", string.Join(" ", tree.BFS()));
         }
     }
 }

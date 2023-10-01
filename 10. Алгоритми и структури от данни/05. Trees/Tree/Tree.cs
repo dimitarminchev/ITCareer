@@ -7,10 +7,10 @@
     public class Tree<T>
     {
         // Стойност на възела
-        private T value;
+        private T Value;
 
         // Деца на възела
-        private IList<Tree<T>> children;
+        private IList<Tree<T>> Children;
 
         /// <summary>
         /// Конструктор
@@ -19,8 +19,8 @@
         /// <param name="children">Деца на възела</param>
         public Tree(T value, params Tree<T>[] children)
         {
-            this.value = value;
-            this.children = children;
+            this.Value = value;
+            this.Children = children;
         }
 
         /// <summary>
@@ -30,8 +30,8 @@
         public void Print(int indent = 0)
         {
             Console.Write(new string(' ', 2 * indent));
-            Console.WriteLine(this.value);
-            foreach (var child in this.children)
+            Console.WriteLine(this.Value);
+            foreach (var child in this.Children)
             {
                 child.Print(indent + 1);
             }
