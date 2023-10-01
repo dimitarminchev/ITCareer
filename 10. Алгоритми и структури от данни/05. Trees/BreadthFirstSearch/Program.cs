@@ -24,12 +24,11 @@
                 )
             );
 
-            // Отпечатване на вървото
+            // Отпечатване на дървовидната структура
             tree.Print();
 
-            // Ред на посещение на възлите
-            var order = tree.BFS();
-            Console.WriteLine("BFS: {0}", string.Join(" ", order));
+            //  Обхождане на дървовидната структура в широчина
+            Console.WriteLine("Breadth First Search (BFS): {0}", string.Join(" ", tree.BFS()));
         }
     }
 }

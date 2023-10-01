@@ -1,11 +1,19 @@
 ﻿namespace BinaryTree
 {
-    // Единичен възел на двоичното дърво
-    public class BinaryNode
+    /// <summary>
+    /// Единичен възел на двоичното дърво
+    /// </summary>
+    public class BinaryNode<T>
     {
-        public int Item;
-        public BinaryNode Right;
-        public BinaryNode Left;
-        public BinaryNode(int item) { this.Item = item; }
+        public T Item { get; set; }
+
+        public BinaryNode<T> Left { get; set; }
+
+        public BinaryNode<T> Right { get; set; }
+
+        public BinaryNode(T item) 
+        { 
+            this.Item = item; 
+        }
     }
 }

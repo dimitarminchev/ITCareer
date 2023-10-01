@@ -1,7 +1,7 @@
 ﻿namespace Tree
 {
     /// <summary>
-    /// Дървовидна структура
+    /// Дървовидна структура 
     /// </summary>
     /// <typeparam name="T">Тип на данните</typeparam>
     public class Tree<T>
@@ -24,7 +24,7 @@
         }
 
         /// <summary>
-        /// Печат на вървото
+        /// Отпечатване на дървовидната структура 
         /// </summary>
         /// <param name="indent">Отместване</param>
         public void Print(int indent = 0)

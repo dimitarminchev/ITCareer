@@ -6,11 +6,15 @@
     /// <typeparam name="T">Тип на данните</typeparam>
     public class Tree<T>
     {
-        // Стойност на възела
-        private T value;
+        /// <summary>
+        /// Стойност на възела
+        /// </summary>
+        private T Value;
 
-        // Деца на възела
-        private IList<Tree<T>> children;
+        /// <summary>
+        /// Деца на възела
+        /// </summary>
+        private IList<Tree<T>> Children;
 
         /// <summary>
         /// Конструктор
@@ -19,41 +23,48 @@
         /// <param name="children">Деца на възела</param>
         public Tree(T value, params Tree<T>[] children)
         {
-            this.value = value;
-            this.children = children;
+            this.Value = value;
+            this.Children = children;
         }
 
         /// <summary>
-        /// Печат на дървото
+        /// Отпечатване на дървовидната структура
         /// </summary>
-        /// <param name="indent">Отместване</param>
         public void Print(int indent = 0)
         {
+            // Започвайки от корена
             Console.Write(new string(' ', 2 * indent));
-            Console.WriteLine(this.value);
-            foreach (var child in this.children)
+
+            // Отпечатваме стойността му
+            Console.WriteLine(this.Value);
+
+            // Обхождаме всичките му деца
+            foreach (var child in this.Children)
             {
                 child.Print(indent + 1);
             }
         }
 
         /// <summary>
-        /// Ред на посещаване на възлите от дървото
+        /// Обхождане на дървовидната структура в широчина
         /// </summary>
         public IEnumerable<T> BFS()
         {
             List<T> order = new List<T>();
+
             Queue<Tree<T>> visited = new Queue<Tree<T>>();
             visited.Enqueue(this);
+
             while (visited.Count > 0)
             {
                 var next = visited.Dequeue();
-                order.Add(next.value);
-                foreach (var child in next.children)
+                order.Add(next.Value);
+                foreach (var child in next.Children)
                 {
                     visited.Enqueue(child);
                 }
             }
+
             return order;
         }
     }

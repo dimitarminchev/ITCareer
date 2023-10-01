@@ -3,6 +3,7 @@
     public class BinaryTree<T> where T : IComparable
     {
         public TreeNode<T> Root { get; set; }
+
         public class TreeNode<T>
         {
             public T Value { get; set; }
@@ -14,6 +15,7 @@
                 this.Value = value;
             }
         }
+        
         public BinaryTree()
         {
             Root = null;

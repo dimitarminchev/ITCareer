@@ -3,14 +3,18 @@
     /// <summary>
     /// Дървовидна структура
     /// </summary>
-    /// <typeparam name="T">Тип на данните</typeparam>
+    /// <typeparam name="T">Тип данни</typeparam>
     public class Tree<T>
     {
-        // Стойност на възела
-        private T value;
+        /// <summary>
+        /// Стойност на възела
+        /// </summary>
+        private T Value;
 
-        // Деца на възела
-        private IList<Tree<T>> children;
+        /// <summary>
+        /// Списък от дъщерни елементи на възела
+        /// </summary>
+        private IList<Tree<T>> Children;
 
         /// <summary>
         /// Конструктор
@@ -19,42 +23,45 @@
         /// <param name="children">Деца на възела</param>
         public Tree(T value, params Tree<T>[] children)
         {
-            this.value = value;
-            this.children = children;
+            this.Value = value;
+            this.Children = children;
         }
 
         /// <summary>
-        /// Печат на дървото
+        /// Отпечатване на дървовидната структура
         /// </summary>
-        /// <param name="indent">Отместване</param>
         public void Print(int indent = 0)
         {
+            // Започвайки от корена
             Console.Write(new string(' ', 2 * indent));
-            Console.WriteLine(this.value);
-            foreach (var child in this.children)
+
+            // Отпечатваме стойността му
+            Console.WriteLine(this.Value);
+
+            // Обхождаме всичките му деца
+            foreach (var child in this.Children)
             {
                 child.Print(indent + 1);
             }
         }
 
-        // Търсене в дълбочина
-        private void DFS(Tree<T> tree, List<T> order)
-        {
-            foreach (var child in tree.children)
-            {
-                this.DFS(child, order);
-            }
-            order.Add(tree.value);
-        }
-
         /// <summary>
-        /// Ред на посещаване на възлите от дървото
+        ///  Обхождане в дълбочина
         /// </summary>
-        public IEnumerable<T> OrderDFS()
+        public IEnumerable<T> DFS()
         {
             List<T> order = new List<T>();
-            this.DFS(this, order);
+            ProcessChildren(this, order);
             return order;
+        }
+
+        private void ProcessChildren(Tree<T> tree, List<T> order)
+        {
+            foreach (var child in tree.Children)
+            {
+                ProcessChildren(child, order);
+            }
+            order.Add(tree.Value);
         }
     }
 }

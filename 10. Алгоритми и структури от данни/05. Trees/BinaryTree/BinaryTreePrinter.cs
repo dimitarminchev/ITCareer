@@ -1,26 +1,26 @@
 ﻿namespace BinaryTree
 {
+    public class NodeInfo<T>
+    {
+        public BinaryNode<T> Node;
+        public string Text;
+        public int StartPos;
+        public int Size { get { return Text.Length; } }
+        public int EndPos { get { return StartPos + Size; } set { StartPos = value - Size; } }
+        public NodeInfo<T> Parent, Left, Right;
+    }
+
     public static class BinaryTreePrinter
     {
-        class NodeInfo
-        {
-            public BinaryNode Node;
-            public string Text;
-            public int StartPos;
-            public int Size { get { return Text.Length; } }
-            public int EndPos { get { return StartPos + Size; } set { StartPos = value - Size; } }
-            public NodeInfo Parent, Left, Right;
-        }
-
-        public static void Print(this BinaryNode root, int topMargin = 2, int leftMargin = 2)
+        public static void Print<T>(this BinaryNode<T> root, int topMargin = 2, int leftMargin = 2)
         {
             if (root == null) return;
             int rootTop = Console.CursorTop + topMargin;
-            var last = new List<NodeInfo>();
+            var last = new List<NodeInfo<T>>();
             var next = root;
             for (int level = 0; next != null; level++)
             {
-                var item = new NodeInfo { Node = next, Text = next.Item.ToString(" 0 ") };
+                var item = new NodeInfo<T> { Node = next, Text = next.Item.ToString() };
                 if (level < last.Count)
                 {
                     item.StartPos = last[level].EndPos + 1;
@@ -65,7 +65,7 @@
             Console.SetCursorPosition(0, rootTop + 2 * last.Count - 1);
         }
 
-        private static void Print(NodeInfo item, int top)
+        private static void Print<T>(NodeInfo<T> item, int top)
         {
             SwapColors();
             Print(item.Text, top, item.StartPos);

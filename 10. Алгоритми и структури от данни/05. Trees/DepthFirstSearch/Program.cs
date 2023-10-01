@@ -24,12 +24,11 @@
                 )
             );
 
-            // Отпечатване на вървото
+            // Отпечатване на дървовидната структура
             tree.Print();
 
-            // Ред на посещаване на възлите от дървото
-            var ordered = tree.OrderDFS();
-            Console.WriteLine("DFS: {0}", string.Join(" ", ordered));
+            // Обхождане на дървовидната структура в дълбочина
+            Console.WriteLine("Depth First Search (DFS):\n{0}", string.Join(" ", tree.DFS()));
         }
     }
 }
