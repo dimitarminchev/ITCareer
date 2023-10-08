@@ -17,7 +17,7 @@
 
     public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int numberOfEmployees = int.Parse(Console.ReadLine());
             Employee[] employees = new Employee[numberOfEmployees];
@@ -53,7 +53,6 @@
 
                     foreach (var manager in noManager.Managers)
                     {
-
                         employees[manager].Salary += noManager.Salary;
                         employees[manager].Employees.Remove(noManager.Index);
                     }

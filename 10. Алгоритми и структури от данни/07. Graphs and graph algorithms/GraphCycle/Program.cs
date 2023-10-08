@@ -2,10 +2,14 @@
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static Dictionary<char, List<char>> nodes = new Dictionary<char, List<char>>();
+        private static List<char> currentSolution = new List<char>();
+        private static List<char> visited = new List<char>();
+        private static bool flag = false;
+        
+        public static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            nodes = new Dictionary<char, List<char>>();
             for (int i = 0; i < n; i++)
             {
                 var input = Console.ReadLine().Split('-').Select(char.Parse).ToArray();
@@ -24,27 +28,24 @@
             currentSolution.Add(nodes.First().Key);
             visited.Add(nodes.First().Key);
             Solve(nodes.First().Key);
-            var cycled = flag ? "Yes" : "No";
-            Console.WriteLine($"Cycled: {cycled}");
+
+            Console.WriteLine("Cycled: {0}", (flag ? "Yes" : "No"));
         }
 
-        static List<char> currentSolution = new List<char>();
-        static List<char> visited = new List<char>();
-        static bool flag = false;
-        static Dictionary<char, List<char>> nodes;
-
-        static void Solve(char start)
+        private static void Solve(char start)
         {
             if (currentSolution.Count != currentSolution.Distinct().Count())
             {
                 flag = true;
                 return;
             }
+            
             var copy = nodes[start];
             if (currentSolution.Count > 1)
             {
                 copy.Remove(currentSolution[currentSolution.Count - 2]);
             }
+
             var toVisit = copy.ToList();
             foreach (var node in toVisit)
             {

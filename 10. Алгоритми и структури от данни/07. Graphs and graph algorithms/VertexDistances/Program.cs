@@ -2,18 +2,23 @@
 {
     public class Program
     {
-        static Dictionary<int, List<int>> nodes;
+        private static Dictionary<int, List<int>> nodes;
+        private static List<int> currentSolution = new List<int>();
+        private static List<List<int>> allSolutions = new List<List<int>>();
+        private static List<int> visited = new List<int>();
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
             int m = int.Parse(Console.ReadLine());
+
             nodes = new Dictionary<int, List<int>>();
             for (int i = 0; i < n; i++)
             {
                 var line = Console.ReadLine().Split(new[] { ' ', ':' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
                 nodes[line[0]] = line.Skip(1).ToList();
             }
+
             var searchedPaths = new List<(int start, int finish)>();
             for (int i = 0; i < m; i++)
             {
@@ -27,23 +32,21 @@
                 allSolutions = new List<List<int>>();
                 visited = new List<int>();
                 Solve(searchedPaths[i].start, searchedPaths[i].finish);
+
                 var min = (allSolutions.Count > 0) ? allSolutions.Select(x => x.Count).Min() : -1;
                 Console.WriteLine($"{{{searchedPaths[0].start},{searchedPaths[0].finish}}} -> {min}");
             }
 
         }
 
-        static List<int> currentSolution = new List<int>();
-        static List<List<int>> allSolutions = new List<List<int>>();
-        static List<int> visited = new List<int>();
-
-        public static void Solve(int start, int finish)
+        private static void Solve(int start, int finish)
         {
             if (start == finish)
             {
                 allSolutions.Add(currentSolution.ToList());
                 return;
             }
+
             var toVisit = nodes[start].Where(x => !visited.Contains(x));
             foreach (var node in toVisit)
             {

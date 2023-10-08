@@ -2,7 +2,13 @@
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static int n;
+        private static int m;
+        private static char[][] matrix;
+        private static bool[,] visited;
+        private static Dictionary<char, int> regions = new Dictionary<char, int>();
+       
+        public static void Main(string[] args)
         {
             n = int.Parse(Console.ReadLine());
             matrix = new char[n][];
@@ -35,7 +41,7 @@
             }
         }
 
-        static bool IsAllVisited(ref (int x, int y) newCoords)
+        private static bool IsAllVisited(ref (int x, int y) newCoords)
         {
             for (int i = 0; i < n; i++)
             {
@@ -67,11 +73,5 @@
                 return;
             }
         }
-
-        static bool[,] visited;
-        static Dictionary<char, int> regions = new Dictionary<char, int>();
-        static int n;
-        static int m;
-        static char[][] matrix;
     }
 }
