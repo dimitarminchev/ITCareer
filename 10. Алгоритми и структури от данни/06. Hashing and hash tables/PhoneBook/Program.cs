@@ -5,13 +5,10 @@ namespace PhoneBook
 {
     class Program
     {
-        // PhoneBook
         static void Main(string[] args)
         {
-            // Data Structure
             var phoneBook = new HashTable<string, string>();
 
-            // Input contacts
             string inputLine = Console.ReadLine();
             while (inputLine != "search")
             {
@@ -20,18 +17,17 @@ namespace PhoneBook
                 inputLine = Console.ReadLine();
             }
 
-            // Process commands
             inputLine = Console.ReadLine();
             while (inputLine != "end")
             {
                 KeyValue<string, string> pair = phoneBook.Find(inputLine);
                 if (pair == null)
                 {
-                    Console.WriteLine("Contact {0} does not exist.", inputLine);
+                    Console.WriteLine($"Contact {inputLine} does not exist.");
                 }
                 else 
                 {
-                    Console.WriteLine("{0} -> {1}", pair.Key, pair.Value);
+                    Console.WriteLine($"{pair.Key} -> {pair.Value}");
                 }
                 inputLine = Console.ReadLine();
             }

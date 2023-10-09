@@ -1,17 +1,16 @@
 ﻿using System;
+using System.Linq;
 
 namespace CointingSymbols
 {
     class Program
     {
-        // Cointing Symbols
         static void Main(string[] args)
         {
-            // Input
             string symbols = Console.ReadLine();
 
-            // Process
             var symbolCount = new HashTable<char, int>();
+
             foreach (var symbol in symbols)
             {
                 if (!symbolCount.ContainsKey(symbol))
@@ -21,10 +20,11 @@ namespace CointingSymbols
                 symbolCount[symbol]++;
             }
 
-            // Print
-            foreach (var item in symbolCount)
+            var orderedSymbolCount = symbolCount.OrderBy(x => x.Key).ToList();
+
+            foreach (KeyValue<char, int> symbol in orderedSymbolCount)
             {
-                Console.WriteLine("{0}: {1} time/s", item.Key, item.Value);
+                Console.WriteLine($"{symbol.Key}: {symbol.Value} time/s");
             }
         }
     }

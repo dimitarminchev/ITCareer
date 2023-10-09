@@ -1,15 +1,11 @@
 ﻿namespace Point
 {
-    /// <summary>
-    /// Точка в двумерна координатна система
-    /// </summary>
     public class Point : IComparable<Point>
     {
-        // Координати на токката в пространството
         private int X { get; set; }
+
         private int Y { get; set; }
 
-        // Конструктор
         public Point(int x, int y)
         {
             this.X = x;

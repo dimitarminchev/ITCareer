@@ -1,0 +1,23 @@
+﻿ : 9 time/s
+.: 1 time/s
+?: 1 time/s
+D: 1 time/s
+M: 1 time/s
+R: 1 time/s
+a: 2 time/s
+d: 3 time/s
+e: 7 time/s
+g: 1 time/s
+h: 2 time/s
+i: 2 time/s
+k: 1 time/s
+n: 6 time/s
+o: 5 time/s
+r: 3 time/s
+s: 2 time/s
+t: 5 time/s
+u: 1 time/s
+u: 2 time/s
+v: 1 time/s
+w: 1 time/s
+y: 1 time/s

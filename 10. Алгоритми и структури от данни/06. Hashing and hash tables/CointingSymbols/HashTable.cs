@@ -71,10 +71,10 @@ namespace CointingSymbols
             {
                 int slotNumber = this.FindSlotNumber(key);
                 this.Find(key).Value = value;
-                return true; // Replace
+                return true; 
             }
             this.Add(key, value);
-            return false; // Add
+            return false;
         }
 
         public TValue Get(TKey key)
