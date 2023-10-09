@@ -6,7 +6,7 @@
         private static List<char> currentSolution = new List<char>();
         private static List<char> visited = new List<char>();
         private static bool flag = false;
-        
+
         public static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
@@ -29,7 +29,7 @@
             visited.Add(nodes.First().Key);
             Solve(nodes.First().Key);
 
-            Console.WriteLine("Cycled: {0}", (flag ? "Yes" : "No"));
+            Console.WriteLine("Cycled: " + (flag ? "No" : "Yes"));
         }
 
         private static void Solve(char start)

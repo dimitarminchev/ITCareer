@@ -37,7 +37,7 @@
             Console.WriteLine($"Total: {regions.Values.Sum()}");
             foreach (var record in regions.OrderBy(x => x.Key))
             {
-                Console.WriteLine($"{record.Key} - {record.Value}");
+                Console.WriteLine($"{record.Key} -> {record.Value}");
             }
         }
 
