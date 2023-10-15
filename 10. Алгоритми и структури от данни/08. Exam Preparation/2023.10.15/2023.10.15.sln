@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityTrade", "CityTrade\CityTrade.csproj", "{B23B2A5E-626C-44EC-9781-AA5E5E23892A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elements", "Elements\Elements.csproj", "{A8C983E4-4618-4DA8-866B-C2173CDBADB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B23B2A5E-626C-44EC-9781-AA5E5E23892A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B23B2A5E-626C-44EC-9781-AA5E5E23892A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B23B2A5E-626C-44EC-9781-AA5E5E23892A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B23B2A5E-626C-44EC-9781-AA5E5E23892A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C983E4-4618-4DA8-866B-C2173CDBADB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C983E4-4618-4DA8-866B-C2173CDBADB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C983E4-4618-4DA8-866B-C2173CDBADB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C983E4-4618-4DA8-866B-C2173CDBADB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9066D9F-256A-4C50-A9A2-6549D1302281}
+	EndGlobalSection
+EndGlobal
