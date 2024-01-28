@@ -1,0 +1,47 @@
+﻿@model List<DatabaseFirst.Models.Task>
+
+@{
+	ViewBag.Title = "Index";
+}
+
+<div class="container">
+	@Html.ActionLink("Create New Task", "Create", "Task", null, new { @class = "button" })
+</div>
+
+<div class="tasks container">
+	<header>
+		<div class="column header open">Open</div>
+		<div class="column header inProgress">In Progress</div>
+		<div class="column header finished">Finished</div>
+	</header>
+	<ul class="column open">
+		@foreach (var task in Model.Where(t => t.Status == "Open").ToList())
+		{
+        <li>
+            @task.Title
+            @Html.ActionLink(" ", "Edit", "Task", new { id = task.Id }, new { @class = "icon edit" })
+            @Html.ActionLink(" ", "Delete", "Task", new { id = task.Id }, new { @class = "icon delete" })
+        </li>
+		}
+	</ul>
+	<ul class="column inProgress">
+		@foreach (var task in Model.Where(t => t.Status == "In Progress").ToList())
+		{
+        <li>
+            @task.Title
+            @Html.ActionLink(" ", "Edit", "Task", new { id = task.Id }, new { @class = "icon edit" })
+            @Html.ActionLink(" ", "Delete", "Task", new { id = task.Id }, new { @class = "icon delete" })
+        </li>
+		}
+	</ul>
+	<ul class="column finished">
+		@foreach (var task in Model.Where(t => t.Status == "Finished").ToList())
+		{
+        <li>
+            @task.Title
+            @Html.ActionLink(" ", "Edit", "Task", new { id = task.Id }, new { @class = "icon edit" })
+            @Html.ActionLink(" ", "Delete", "Task", new { id = task.Id }, new { @class = "icon delete" })
+        </li>
+		}
+	</ul>
+</div>

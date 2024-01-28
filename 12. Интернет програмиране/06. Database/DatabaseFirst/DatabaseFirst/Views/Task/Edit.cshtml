@@ -1,0 +1,51 @@
+﻿@model DatabaseFirst.Models.Task
+
+@{
+	ViewBag.Title = "Edit Task";
+}
+
+<header>
+	<h3>Edit Task</h3>
+</header>
+
+@using (Html.BeginForm("Edit", "Task", FormMethod.Post))
+{
+	@Html.AntiForgeryToken()
+
+	<div>
+		<label class="desc" for="title">Title</label>
+		<div>
+			<input id="title" name="title" type="text" class="field text fn" value="@Model.Title" size="8" tabindex="1" autofocus>
+		</div>
+	</div>
+
+	<div>
+		<fieldset>
+			<legend id="title5" class="desc">
+				Status
+			</legend>
+
+			<div>
+				<div>
+					<input id="status1" name="status" type="radio" value="Open" tabindex="2" @(Model.Status == "Open" ? "checked" : "")>
+					<label class="choice" for="status1">Open</label>
+				</div>
+				<div>
+					<input id="status2" name="status" type="radio" value="In Progress" tabindex="3" @(Model.Status == "In Progress" ? "checked" : "")>
+					<label class="choice" for="status2">In Progress</label>
+				</div>
+				<div>
+					<input id="status3" name="status" type="radio" value="Finished" tabindex="4" @(Model.Status == "Finished" ? "checked" : "")>
+					<label class="choice" for="status3">Finished</label>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+
+	<div>
+        <div>
+            <input class="button" type="submit" value="Edit">
+            <a class="button cancel" href="/">Cancel</a>
+        </div>
+	</div>
+}

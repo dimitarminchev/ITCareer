@@ -1,0 +1,51 @@
+﻿@model DatabaseFirst.Models.Task
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<header>
+	<h3>Create New Task</h3>
+</header>
+
+@using (Html.BeginForm("Create", "Task", FormMethod.Post))
+{
+	@Html.AntiForgeryToken()
+
+	<div>
+		<label class="desc" for="title">Title</label>
+		<div>
+			<input id="title" name="title" type="text" class="field text fn" value="" size="8" tabindex="1" autofocus>
+		</div>
+	</div>
+
+	<div>
+		<fieldset>
+			<legend id="title5" class="desc">
+				Status
+			</legend>
+
+			<div>
+				<div>
+					<input id="status1" name="status" type="radio" value="Open" tabindex="2" checked>
+					<label class="choice" for="status1">Open</label>
+				</div>
+				<div>
+					<input id="status2" name="status" type="radio" value="In Progress" tabindex="3">
+					<label class="choice" for="status2">In Progress</label>
+				</div>
+				<div>
+					<input id="status3" name="status" type="radio" value="Finished" tabindex="4">
+					<label class="choice" for="status3">Finished</label>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+
+	<div>
+		<div>
+			<input class="btn btn-lg btn-primary" type="submit" value="Create">
+			<a class="btn btn-lg btn-danger" href="/">Cancel</a>
+		</div>
+	</div>
+}
