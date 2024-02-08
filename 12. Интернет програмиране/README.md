@@ -2407,5 +2407,6 @@ public ActionResult PostProduct(ProductBindingModel pm)
 - Не трябва да можем да изпращаме празно съобщение
 
 ## 13. Deployment
+- [Demo deploy ASP.NET Core Web App to Microsoft Azure App Service](https://itkarieramonbg.azurewebsites.net)
 - [Quickstart: Deploy an ASP.NET web app](https://learn.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore)
 - [Publish an ASP.NET Core app to Azure with Visual Studio](https://learn.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
