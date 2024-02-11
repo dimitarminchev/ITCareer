@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", "{BBA4D7FB-39D0-4671-955D-8709F8154737}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventures", "Eventures\Eventures.csproj", "{A1C5236D-518C-49D4-97BA-835ED474DCD3}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BBA4D7FB-39D0-4671-955D-8709F8154737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BBA4D7FB-39D0-4671-955D-8709F8154737}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BBA4D7FB-39D0-4671-955D-8709F8154737}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BBA4D7FB-39D0-4671-955D-8709F8154737}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A1C5236D-518C-49D4-97BA-835ED474DCD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A1C5236D-518C-49D4-97BA-835ED474DCD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1C5236D-518C-49D4-97BA-835ED474DCD3}.Release|Any CPU.ActiveCfg = Release|Any CPU

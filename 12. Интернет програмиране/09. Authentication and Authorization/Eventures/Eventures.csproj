@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <UserSecretsId>aspnet-Eventures-36CFF433-6FBB-4A4F-9C48-A9E9FECCAD58</UserSecretsId>
   </PropertyGroup>
 
