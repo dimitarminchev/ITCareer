@@ -1,4 +1,7 @@
 # Обучение за ИТ умения и кариера
+
+[![.NET](https://github.com/dimitarminchev/ITCareer/actions/workflows/dotnet.yml/badge.svg)](https://github.com/dimitarminchev/ITCareer/actions/workflows/dotnet.yml)
+
 [Електронно хранилище](https://github.com/dimitarminchev/ITCareer/) и [Електронна книга](https://dimitar-minchev.gitbook.io/it-career/) с учебни материали, задачи и решения по националната програма "Обучение за ИТ умения и кариера" на Министерството на образованието и науката (МОН) за придобиване на професия Приложен програмист.
 
 Учебното съдържание се разпространява под свободен лиценз [CC-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/), предназначено e за български учители от училища и университети, като подкрепа при провеждане на обучение в област компютърни науки по професиите: Програмист, Системен програмист, Приложен програмист и други.
