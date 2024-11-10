@@ -1,0 +1,6 @@
+﻿AddCategory I
+AddCategory It
+AddJobOffer It TechSupport MyTech 1500 remote True
+AddJobOffer It OnSiteTechSupport MyTech 1500 onsite Burgas
+AddJobOffer It Tester YourTest 2000 onsite Varna
+End

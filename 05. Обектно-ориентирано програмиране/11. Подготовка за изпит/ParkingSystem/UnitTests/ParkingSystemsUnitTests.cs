@@ -1,14 +1,12 @@
 using NUnit.Framework;
-using NUnit.Framework.Interfaces;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace NUnitTests
+namespace UnitTests
 {
-    public class ParkingSystemsTests
+    public class ParkingSystemsUnitTests
     {
         private string TestParkingController(List<string> input, string output)
         {
@@ -80,7 +78,7 @@ namespace NUnitTests
 
             string answer = TestParkingController(input, output);
 
-            Assert.IsTrue(output == answer.ToString()); 
+            Assert.IsTrue(output == answer.ToString());
         }
 
         [Test]

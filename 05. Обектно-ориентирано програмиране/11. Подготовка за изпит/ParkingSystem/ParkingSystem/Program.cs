@@ -5,7 +5,7 @@ using System.Text;
 
 public class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         ParkingController controller = new ParkingController();
         StringBuilder stringBuilder = new StringBuilder();
@@ -13,8 +13,10 @@ public class Program
 
         while (isRunning)
         {
-            List<string> lineArgs = Console.ReadLine().Split(":").ToList();
+            List<string> lineArgs = Console.ReadLine().Split(":") .ToList();
+
             string command = lineArgs[0];
+
             lineArgs = lineArgs.Skip(1).ToList();
             try
             {
@@ -47,7 +49,9 @@ public class Program
             {
                 stringBuilder.AppendLine(ex.Message);
             }
+
         }
+
         Console.WriteLine(stringBuilder.ToString().Trim());
     }
 }

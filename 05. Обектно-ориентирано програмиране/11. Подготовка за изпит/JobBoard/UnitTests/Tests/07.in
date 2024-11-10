@@ -1,0 +1,10 @@
+﻿AddCategory Restaurants
+AddCategory It
+AddJobOffer Restaurants Waiter Romance 1000 onsite Sofia
+GetAverageSalary It
+AddJobOffer It TechSupport MyTech 0 remote True
+AddJobOffer It OnSiteTechSupport MyTech 1700 onsite Burgas
+AddJobOffer It Tester YourTest 0 onsite Varna
+GetAverageSalary It
+GetOffersWithoutSalary It
+End

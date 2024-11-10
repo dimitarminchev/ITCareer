@@ -1,0 +1,129 @@
+﻿Case=Test_01
+input=AddCategory It
+End
+output="Created Category It!"
+
+Case=Test_02
+input=AddCategory It
+AddJobOffer It BackEndDev CareerSoft 6000 remote True
+End
+output = "Created Category It!
+Created JobOffer BackEndDev in Category It!"
+
+Case=Test_03
+input=AddCategory I
+AddCategory It
+AddJobOffer It TechSupport MyTech 1500 remote True
+AddJobOffer It OnSiteTechSupport MyTech 1500 onsite Burgas
+AddJobOffer It Tester YourTest 2000 onsite Varna
+End
+output="Name should be between 2 and 40 characters!
+Created Category It!
+Created JobOffer TechSupport in Category It!
+Created JobOffer OnSiteTechSupport in Category It!
+Created JobOffer Tester in Category It!"
+
+Case=Test_04
+input=AddCategory I
+AddCategory It
+AddJobOffer It TechSupport MyTech 1500 remote True
+AddJobOffer It OnSiteTechSupport MyTech 1500 onsite Burgas
+AddJobOffer It Tester YourTest 2000 onsite Varna
+GetAverageSalary It
+End
+output="Name should be between 2 and 40 characters!
+Created Category It!
+Created JobOffer TechSupport in Category It!
+Created JobOffer OnSiteTechSupport in Category It!
+Created JobOffer Tester in Category It!
+The average salary is: 1666.67 BGN"
+
+Case=Test_05
+input=AddCategory Restaurants
+AddCategory It
+AddJobOffer Restaurants Waiter Romance 1000 onsite Sofia
+GetAverageSalary It
+End
+output="Created Category Restaurants!
+Created Category It!
+Created JobOffer Waiter in Category Restaurants!
+The average salary is: 0.00 BGN"
+
+Case=Test_06
+input=AddCategory Restaurants
+AddCategory It
+AddJobOffer Restaurants Waiter Romance 1000 onsite Sofia
+GetAverageSalary It
+AddJobOffer It TechSupport MyTech 1500 remote True
+AddJobOffer It OnSiteTechSupport MyTech 1700 onsite Burgas
+AddJobOffer It Tester YourTest 2500 onsite Varna
+GetAverageSalary It
+GetOffersAboveSalary It 1600
+End
+output=Created Category Restaurants!
+Created Category It!
+Created JobOffer Waiter in Category Restaurants!
+The average salary is: 0.00 BGN
+Created JobOffer TechSupport in Category It!
+Created JobOffer OnSiteTechSupport in Category It!
+Created JobOffer Tester in Category It!
+The average salary is: 1900.00 BGN
+Job Title: Tester
+Company: YourTest
+Salary: 2500.00 BGN
+City: Varna
+Job Title: OnSiteTechSupport
+Company: MyTech
+Salary: 1700.00 BGN
+City: Burgas
+
+Case=Test_07
+input=AddCategory Restaurants
+AddCategory It
+AddJobOffer Restaurants Waiter Romance 1000 onsite Sofia
+GetAverageSalary It
+AddJobOffer It TechSupport MyTech 0 remote True
+AddJobOffer It OnSiteTechSupport MyTech 1700 onsite Burgas
+AddJobOffer It Tester YourTest 0 onsite Varna
+GetAverageSalary It
+GetOffersWithoutSalary It
+End
+
+output=Created Category Restaurants!
+Created Category It!
+Created JobOffer Waiter in Category Restaurants!
+The average salary is: 0.00 BGN
+Created JobOffer TechSupport in Category It!
+Created JobOffer OnSiteTechSupport in Category It!
+Created JobOffer Tester in Category It!
+The average salary is: 566.67 BGN
+Job Title: TechSupport
+Company: MyTech
+Salary: 0.00 BGN
+Fully Remote: yes
+Job Title: Tester
+Company: YourTest
+Salary: 0.00 BGN
+City: Varna
+
+
+Case=Test_08
+input=AddCategory Construction
+AddJobOffer Construction j comp 1000 remote True
+End
+output="Created Category Construction!
+JobTitle should be between 3 and 30 characters!"
+
+Case=Test_09
+input=AddCategory Tourism
+AddJobOffer Tourism receptionist hotelio -5 onsite Nessebar
+End
+output="Created Category Tourism!
+Salary should be 0 or positive!"
+
+Case=Test_10
+input=AddCategory Test
+AddJobOffer Test Test n 1000 onsite Test
+End
+output="Created Category Test!
+Company should be between 3 and 30 characters!"

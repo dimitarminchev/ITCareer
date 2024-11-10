@@ -1,0 +1,5 @@
+﻿AddCategory Restaurants
+AddCategory It
+AddJobOffer Restaurants Waiter Romance 1000 onsite Sofia
+GetAverageSalary It
+End
