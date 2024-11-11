@@ -1,0 +1,353 @@
+# Music Streaming Service
+Платформите за стрийминг на музика се превърнаха във важна част от нашето ежедневие. Днес ще разработите модул за управление на стрийминг платформа, в която потребителите могат да слушат музика, да създават плейлисти и да добавят песни. Основната функционалност на приложението включва управление на артисти, албуми и песни, както и създаване на потребителски плейлисти.
+
+Забележка: Премахнете namespace от всеки клас, за да избегнете проблеми със системата.
+
+## Структура
+### Song
+Класът Song е базов клас и не трябва да може да се инстанцира.
+
+#### Данни
+Всяка песен има заглавие, продължителност и изпълнител.
+- **Title** – символен низ
+- **Duration** – цяло число (секунди)
+- **Artist** – символен низ
+- **Genre** - символен низ
+
+Заглавието на песента трябва да бъде между 2 и 100 символа включително.
+```
+Съобщение: "Title should be between 2 and 100 characters!"
+```
+Продължителността трябва да бъде положително число.
+```
+Съобщение: "Duration should be positive!"
+```
+Името на изпълнителя трябва да бъде между 3 и 50 символа включително.
+```
+Съобщение: "Artist name should be between 3 and 50 characters!"
+```
+При подаване на невалидна стойност хвърлете ArgumentException с конкретното съобщение.
+
+#### Конструктор
+Това са параметрите за конструктора:
+```
+string title, int duration, string artist
+```
+#### Методи за класа Song
+**override string ToString()**
+```
+Title: {Title}
+Duration: {Duration} seconds
+Artist: {Artist}
+```
+### Child Classes
+#### Single
+##### Данни
+Всеки сингъл има дата на издаване.
+```
+ReleaseDate – дата (формат "dd/MM/yyyy")
+```
+Забележка: Използвайте подходящ тип за съхранение на дати.
+
+##### Конструктор
+Това са параметрите за конструктора:
+```
+string title, int duration, string artist, string releaseDate
+```
+##### Методи за класа Single
+**override string ToString()**
+```
+Title: {Title}
+Duration: {Duration} seconds
+Artist: {Artist}
+Release Date: {ReleaseDate}
+```
+
+#### AlbumSong
+##### Данни
+Всяка песен от албум има име на албума, от който е част.
+- **AlbumName** – символен низ
+
+Името на албума трябва да бъде между 3 и 100 символа включително.
+```
+Съобщение: "Album name should be between 3 and 100 characters!"
+```
+Забележка: Първо изпълнете валидацията от базовия клас след това текущата.
+
+##### Конструктор
+Това са параметрите за конструктора:
+```
+string title, int duration, string artist, string albumName
+```
+##### Методи за класа AlbumSong
+override string ToString()
+```
+Title: {Title}
+Duration: {Duration} seconds
+Artist: {Artist}
+Album: {AlbumName}
+```
+
+#### Playlist
+##### Данни
+Всеки плейлист има заглавие и списък от песни.
+- **Title** – символен низ
+
+Заглавието трябва да бъде между 3 и 50 символа включително.
+```
+Съобщение: Playlist title should be between 3 and 50 characters!
+```
+При подаване на невалидна стойност хвърлете изключение – ArgumentException с конкретното съобщение.
+
+##### Конструктор
+Това са параметрите за конструктора:
+```
+string title
+```
+##### Методи за класа Playlist
+**void AddSong(Song song)**
+- Добавя нова песен към плейлиста.
+
+**double TotalDuration()**
+- Намира общата продължителност на всички песни в плейлиста.
+
+**List<Song> GetSongsByArtist(string artist)**
+- Връща списък с всички песни на дадения изпълнител в плейлиста, сортирани по заглавие във възходящ ред.
+
+**List<Song> GetSongsByGenre(string genre)**
+- Връща списък с всички песни от дадения жанр в плейлиста, сортирани по заглавие във възходящ ред.
+
+**List<Song> GetSongsAboveDuration(int duration)**
+- Връща песните с продължителност по-голяма или равна на подадената стойност. Подрежда ги по продължителност в низходящ ред.
+
+**override string ToString()**
+```
+Playlist: {Title}
+Total Songs: {Number of songs}
+```
+
+#### User
+##### Данни
+Всеки потребител има потребителско име, възраст и списък от плейлисти.
+- **Username** – символен низ
+
+Името трябва да бъде между 3 и 30 символа включително.
+```
+Съобщение: Username should be between 3 and 30 characters!
+```
+- **Age** - цяло число
+Възрастта трябва да е 13 или по-голямо
+```
+Съобщение: "User must be at least 13 years old!"
+```
+При подаване на невалидна стойност хвърлете изключение – ArgumentException с конкретното съобщение.
+
+##### Конструктор
+Това са параметрите за конструктора:
+```
+string username, int age
+```
+##### Методи за класа User
+**void AddPlaylist(Playlist playlist)**
+- Добавя новия плейлист към потребителя.
+```
+Username: {Username}
+Age: {Age}
+Total Playlists: {Number of playlists}
+```
+Забележка: Уверете се, че за всеки от методите задавате правилен модификатор за достъп.
+
+## Бизнес логика
+Управлението на програмата се случва благодарение на клас, който се казва Controller. Той ще обработва команди, които отговарят на нужната функционалност, представена от тези публични методи:
+
+Controller.cs
+```cs
+public string AddUser(List<string> args)
+{
+//TODO: Add some logic here …
+}
+public string AddPlaylist(List<string> args)
+{
+//TODO: Add some logic here …
+}
+public string AddSongToPlaylist(List<string> args)
+{
+//TODO: Add some logic here …
+}
+public string GetTotalDurationOfPlaylist(List<string> args)
+{
+//TODO: Add some logic here …
+}
+public string GetSongsByArtistFromPlaylist(List<string> args)
+{
+//TODO: Add some logic here …
+}
+public string GetSongsByGenreFromPlaylist(List<string> args)
+{
+//TODO: Add some logic here …
+}
+public string GetSongsAboveDurationFromPlaylist(List<string> args)
+{
+//TODO: Add some logic here …
+}
+```
+ЗАБЕЛЕЖКА: Не трябва да променяте нищо по методите. Трябва да имплементирате логиката на самите методи. Не прихвайщайте никакви изключения!
+
+### Команди
+Има няколко команди, които контролират бизнес логиката на приложението и трябва да ги имплементирате.
+
+Те са посочени по-долу. За всяка от командите връщайте текстов низ в съответствие с указанията в частта „Изход“ на задачата.
+
+#### AddUser Команда
+- Създава потребител (User) и го добавя към системата.
+Не всички данни ще бъдат валидни!!!
+
+Параметри:
+- **username** – символен низ (винаги ще бъде уникално)
+- **age** - цяло число
+
+#### AddPlaylist Команда
+- Създава Playlist и го добавя към потребителя с подаденото име.
+Не всички данни ще бъдат валидни!!!
+
+Параметри:
+- **username** – символен низ, име на потребителия
+- **title** – символен низ, име на плейлиста
+
+#### AddSongToPlaylist Команда
+Добавя песен към даден плейлист на потребител.
+- **username** – символен низ
+- **playlistTitle** – символен низ
+- **songTitle** – символен низ
+- **duration** – цяло число
+- **artist** – символен низ
+- **genre** – символен низ
+- **type** – символен низ
+
+Ако type e “single”, то това е сингъл, тогава ще се приеме още един параметър:
+- **releaseDate** – дата
+
+Ако type e “albumSong”, то това е песен от албум, тогава ще се приеме още един параметър:
+- **albumName** – символен низ
+
+#### GetTotalDurationOfPlaylist Команда
+- Изчислява общата продължителност на плейлиста.
+```
+Total duration of {playlistTitle}: 490 seconds
+```
+Параметри:
+- **username** – символен низ
+- **playlistTitle** – символен низ
+
+#### GetSongsByArtistFromPlaylist Команда
+- Намира плейлист на потребител с подаденото име от системата и извиква GetSongsByArtist() метода.
+
+Параметри:
+- **username** – символен низ
+- **playlistTitle** – символен низ
+- **artist** – символен низ
+
+#### GetSongsByGenreFromPlaylist Команда
+- Намира плейлист на потребител с подаденото име от системата и извиква GetSongsByGenre() метода.
+
+Параметри:
+- **username** – символен низ
+- **playlistTitle** – символен низ
+- **genre** – символен низ
+
+#### GetSongsAboveDurationFromPlaylist Команда
+- Намира плейлист на потребител с подаденото име от системата и извиква GetSongsAboveDuration() метода.
+
+Параметри:
+- **username** – символен низ
+- **playlistTitle** – символен низ
+- **duration** – цяло число
+
+#### End Команда
+- Тази команда прекратява изпълнението на програмата.
+
+# Вход / Изход
+## Вход
+Четете редове с различни команди, докато не получите команда за приключване на програмата.
+По-долу можете да видите формата, в който всяка команда ще бъде дадена във входа:
+```
+AddUser {username} {age}
+AddPlaylist {username} {playlistTitle}
+AddSongToPlaylist {username} {playlistTitle} {songTitle} {duration} {artist} {genre} {type} {releaseDate или albumName} 
+GetTotalDurationOfPlaylist {username} {playlistTitle}
+GetSongsByArtistFromPlaylist {username} {playlistTitle} {artist}
+GetSongsByGenreFromPlaylist {username} {playlistTitle} {genre}
+GetSongsAboveDurationFromPlaylist {username} {playlistTitle} {duration}
+End
+```
+## Изход
+По–долу може да видите кой изход трябва да бъде предоставен от командите.
+
+### AddUser Команда
+При успех върнете съобщение:
+```
+Created User {username}!
+```
+### AddPlaylist Команда
+При успех върнете съобщение:
+```
+Created Playlist {playlistTitle} for User {username}!
+```
+### AddSongToPlaylist Команда
+При успех върнете съобщение:
+```
+Added song {songTitle} to Playlist {playlistTitle}! 
+```
+### GetTotalDurationOfPlaylist Команда
+При успех върнете съобщение:
+```
+Total duration of {playlistTitle}: {duration} seconds
+```
+
+### GetSongsByArtistFromPlaylist Команда
+Изведете информация за всички песни от дадения артист в плейлиста. Използвайте ToString() метода за съответния клас-наследник на Song.
+
+### GetSongsByGenreFromPlaylist Команда
+Изведете информация за всички песни от дадения жанр в плейлиста. Използвайте ToString() метода за съответния клас-наследник на Song.
+
+### GetSongsAboveDurationFromPlaylist Команда
+Изведете информация за всички песни с продължителност по-голяма или равна на дадената в плейлиста. Използвайте ToString() метода за съответния клас-наследник на Song.
+
+### End Команда
+При изпълнение програмата приключва своята работа.
+
+## Ограничения
+- Имената в програмата ще бъдат символни низове, които може да съдържат всеки ASCII символ, с изключение на интервал.
+- Винаги ще получавате команда за приключване на програмата.
+- Входните данни ще бъдат валидни от страна на типове данни.
+- Имената на плейлистите и потребителите винаги ще са уникални
+- В командите в които се търси потребител и плейлист по подадено име, винаги ще се подава съществуващо име.
+
+## Примери
+Input
+```
+AddUser Ivan 20
+AddPlaylist Ivan WorkoutHits
+AddSongToPlaylist Ivan WorkoutHits BeatIt 240 MichaelJackson Pop Single 10/07/1983
+AddSongToPlaylist Ivan WorkoutHits BillieJean 250 MichaelJackson Pop AlbumSong Thriller
+GetTotalDurationOfPlaylist Ivan WorkoutHits
+GetSongsByArtistFromPlaylist Ivan WorkoutHits MichaelJackson
+End
+```
+Output
+```
+Created User Ivan!
+Created Playlist WorkoutHits for User Ivan!
+Added song BeatIt to Playlist WorkoutHits!
+Added song BillieJean to Playlist WorkoutHits!
+Total duration of WorkoutHits: 490 seconds
+Title: BeatIt
+Duration: 240 seconds
+Artist: MichaelJackson
+Release Date: 10/07/1983
+Title: BillieJean
+Duration: 250 seconds
+Artist: MichaelJackson
+Album: Thriller
+```
+_Дата на последна актуализация: 10.11.2024_

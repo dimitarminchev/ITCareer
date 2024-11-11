@@ -1,0 +1,5 @@
+﻿AddUser Ivan 20
+AddPlaylist Ivan WorkoutHits
+AddSongToPlaylist Ivan WorkoutHits BeatIt 240 MichaelJackson Pop Single 10/07/1983
+AddSongToPlaylist Ivan WorkoutHits BillieJean 250 MichaelJackson Pop AlbumSong Thriller
+End

@@ -1,0 +1,9 @@
+﻿AddUser John 30
+AddPlaylist John RockHits
+AddSongToPlaylist John RockHits Thunderstruck 292 ACDC Rock AlbumSong TheRazorsEdge
+AddSongToPlaylist John RockHits EnterSandman 331 Metallica Metal AlbumSong Metallica
+AddSongToPlaylist John RockHits HighwayToHell 208 ACDC Rock AlbumSong HighwayToHell
+GetTotalDurationOfPlaylist John RockHits
+GetSongsByGenreFromPlaylist John RockHits Rock
+GetSongsAboveDurationFromPlaylist John RockHits 300
+End

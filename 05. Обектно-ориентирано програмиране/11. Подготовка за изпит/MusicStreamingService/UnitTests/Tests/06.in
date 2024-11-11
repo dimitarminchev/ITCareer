@@ -1,0 +1,4 @@
+﻿AddUser Alice 20
+AddPlaylist Alice MyFavorites
+AddSongToPlaylist Alice MyFavorites A 200 ArtistName Rock Single 01/01/2021
+End
