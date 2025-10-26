@@ -1,0 +1,3 @@
+AddCategory Books
+AddProductToCategory Books A 9.99 online https://ebooks.com/123
+End

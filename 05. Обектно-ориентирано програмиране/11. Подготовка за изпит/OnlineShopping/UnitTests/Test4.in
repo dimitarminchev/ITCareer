@@ -1,0 +1,6 @@
+AddCategory Electronics
+AddProductToCategory Electronics iPhone 999.99 physical 50
+AddProductToCategory Electronics Laptop 1499.99 physical 20
+AddProductToCategory Electronics eBook 9.99 online https://ebooks.com/123
+GetMinPrice Electronics
+End
