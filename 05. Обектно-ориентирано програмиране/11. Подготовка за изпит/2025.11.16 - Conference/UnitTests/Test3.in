@@ -1,0 +1,6 @@
+AddCategory I
+AddCategory It
+AddEventOffer It TechSupport MyTech 1500 35 virtual True
+AddEventOffer It OnSiteTechSupport MyTech 1500 30 inperson Burgas
+AddEventOffer It Tester YourTest 2000 25 inperson Varna
+End

@@ -1,0 +1,10 @@
+AddCategory Restaurants
+AddCategory It
+AddEventOffer Restaurants Waiter Romance 1000 20 inperson Sofia
+GetAverageTicketPrice It
+AddEventOffer It TechSupport MyTech 0 30 virtual True
+AddEventOffer It OnSiteTechSupport MyTech 1700 20 inperson Burgas
+AddEventOffer It Tester YourTest 0 25 inperson Varna
+GetAverageTicketPrice It
+GetOffersWithTicketPrice It
+End

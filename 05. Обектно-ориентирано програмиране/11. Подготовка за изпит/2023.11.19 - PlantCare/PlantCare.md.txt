@@ -1,0 +1,411 @@
+## PlantCare
+```
+Available from: Sunday, 19 November 2023, 10:00  
+Requested files: Program.cs, Plant.cs, FloweringPlant.cs, TreePlant.cs, CareItem.cs, Controller.cs
+Type of work: Individual work  
+Настройки на оценките: Максимална оценка: 100  
+Run: Не. Evaluate: Да. Evaluate just on submission: Да  
+Automatic grade: Да.
+```
+
+### Стартирали сте работа в нова AI-startup компания. Там вие работите по продукт за автоматизирана грижа за растения. Основните му функционалности са свързани със създаване на записи за растение и следене на задачите по грижата за него.  
+
+**Забележка: Преди да започнете със задачата, за да нямате проблеми със системата премахнете namespaces от всеки клас.**
+
+# **Структура**
+
+## **Plant**
+Класът Plant е базов клас и не трябва да може да се инстанцира.
+
+### **Данни**
+Всяко растение има id (цяло число), име на растението, вид на растението, списък със задачи по грижа за растението.
+
+Id – цяло число
+
+Name – символен низ
+
+-   Името на растението трябва да бъде между 3 и 30 символа включително. Съобщение: **Name should be between 3 and 30 characters!**
+
+Type – символен низ
+
+-   Името на типа трябва да бъде между 3 и 30 символа включително. Съобщение: **Type should be between 3 and 30 characters!**
+
+CareItems – списък от CareItem обекти
+
+HumidityLevel - реално число, представящо процента на влажност на почвата
+
+-   Процентът на влажност на почвата трябва да е реално число между 0 (0%) и 1 (100%). Съобщение: **Humidity Level should be between 0 and 1!**  
+
+FertilityLevel - реално число, представящо натореността на почвата
+
+-   Процентът на натореност на почвата трябва да е реално число между 0 (0%) и 1 (100%). Съобщение: **Fertility Level should be between 0 and 1!**
+    
+-   При подаване на невалидна стойност хвърлете изключение – ArgumentException с конкретното съобщение.
+    
+
+### **Конструктор**
+
+Това са параметрите за конструктора:
+
+int id, string name, string type, double humidityLevel, double fertilityLevel
+
+### **Методи за класа Plant**
+
+****void AddCareItem(CareItem careItem)****
+
+**В метода трябва да добавите новата грижа към растението.**
+
+****int TotalCaresDone()****  
+
+**В метода трябва да намерите броя на вече извършените грижи (Status да има стойност true) и да я върнете.**
+
+****bool Water(double percent)****
+
+**В метода трябва да изчислите нова стойност за влажността на почвата, на база на предоставения процент. Например, ако текущата влажност на почвата е 0.03, а параметъра percent е равен на 0.07, то новата влажност е 0.10. Не допускайте преполиване (т.е. надвишаване на стойността на humidityLevel. Ако поливането е било успешно, то трябва да върнете true, a в противен случай - false.**
+
+**bool Fertilize(double percent)**
+
+****В метода трябва да изчислите нова стойност за натореност на почвата, на база на предоставения процент. Например, ако текущата натореност на почвата е 0.03, а параметъра percent е равен на 0.07, то новата ****натореност**** е 0.10. Не допускайте преполиване (т.е. надвишаване на стойността на humidityLevel. Ако поливането е било успешно, то трябва да върнете true, a в противен случай - false.**  
+**
+```cs
+override string ToString()
+Id: {Id}
+Name: {Name}
+Type: {Type}
+Humidity Level: {HumidityLevel} %
+Fertility Level: {FertilityLevel} %
+```
+Нивата на влажност и плодородност трябва да се извеждат с точност 2 знака след запетаята.
+
+# **Child Classes**
+
+## **FloweringPlant**
+
+### **Данни**
+Клас за цъфтящо растение
+
+Color – символен низ
+
+-   Името на цвета трябва да бъде между 3 и 30 символа включително. Съобщение: **Color should be between 3 and 30 characters!**
+    
+
+-   При подаване на невалидна стойност хвърлете изключение – ArgumentException с конкретното съобщение.
+
+Забележка: Първо изпълнете валидацията от базовия клас след това текущата.
+
+### **Конструктор**
+Това са параметрите за конструктора:
+
+int id, string name, double humidityLevel, double fertilityLevel, string color
+
+**Забележка: Type трябва да се задава автоматично на "flower".**  
+  
+### **Методи за класа FloweringPlant**
+```cs
+override string ToString()
+Id: {Id}
+Name: {Name}
+Type: {Type}
+Humidity Level: {HumidityLevel} %
+Fertility Level: {FertilityLevel} %
+Color: {Color}
+```
+
+## **TreePlant**
+
+Клас за дървета.
+
+## **Данни**  
+Height – цяло число  
+
+-   Височината на дървото трябва да бъде положително число. Съобщение: **Height should be positive!**
+-   При подаване на невалидна стойност хвърлете изключение – ArgumentException с конкретното съобщение.
+    
+Забележка: Първо изпълнете валидацията от базовия клас след това текущата.
+
+**Конструктор**  
+Това са параметрите за конструктора:
+
+int id, string name, double humidityLevel, double fertilityLevel, int height  
+**Забележка: Type трябва да се задава автоматично на "tree".  
+**
+
+### **Методи за класа TreePlant**
+
+```cs
+override string ToString()
+Id: {Id}
+Name: {Name}
+Type: {Type}
+Humidity Level: {HumidityLevel} %
+Fertility Level: {FertilityLevel} %
+Height: {Height}
+```
+
+## **CareItem**  
+
+### **Данни**
+Всяка грижа има име и статус (извършена или не).
+
+Name – символен низ
+-   Името трябва да бъде между 2 и 40 символа включително.
+
+Съобщение: Name should be between 2 and 40 characters!
+
+Status - булева стойност.
+
+-   При подаване на невалидна стойност хвърлете изключение – ArgumentException с конкретното съобщение.
+    
+
+### **Конструктор**
+Това са параметрите за конструктора:
+
+string name, bool status
+
+### **Методи за класа CareItem**
+
+**override string ToString()**
+CareItem {Name}
+
+Status: {Status}
+
+**Бизнес логика**  
+Управлението на програмата се случва благодарение на клас, който се казва Controller. Той ще обработва команди, които отговарят на нужната функционалност, представена от тези публични методи:
+
+Controller.cs
+```cs
+public string AddCareItem(List<string> args)
+{
+//TODO: Add some logic here …
+}
+ 
+public string AddPlant(List<string> args)
+{
+//TODO: Add some logic here …
+}
+
+public string GetTotalCaresByPlantId(List<string> args)
+{
+//TODO: Add some logic here …
+}  
+
+public string WaterPlantById(List<string> args)
+{
+//TODO: Add some logic here …
+}
+
+public string FertilizePlantById(List<string> args)
+{
+//TODO: Add some logic here …
+}
+
+public string GetTallestTree(List<string> args)
+{
+//TODO: Add some logic here …
+}
+```
+
+**ЗАБЕЛЕЖКА: Не трябва да променяте нищо по методите. Трябва да имплементирате логиката на самите методи. Не прихвайщайте никакви изключения!**
+
+# **Команди**
+Има няколко команди, които контролират бизнес логиката на приложението и трябва да ги имплементирате.
+
+Те са посочени по-долу. За всяка от командите връщайте текстов низ в съответствие с указанията в частта „Изход“ на задачата.
+
+## **AddCareItem Команда**
+Създава грижа (CareItem) и я добавя към растението, за което се отнася.
+
+Не всички данни ще бъдат валидни!!!
+
+### **Параметри**
+-   plantId – цяло число
+-   name – символен низ
+-   status – булева стойност 
+
+## **AddPlant Команда**
+Създава растение (Plant).
+
+Не всички данни ще бъдат валидни!!!
+
+### **Параметри**
+-   id  – цяло число
+-   name - символен низ
+-   humidityLevel – реално число
+-   fertilityLevel – реално число
+-   type – символен низ
+-   Ако type e “flower”, то това е цъфтящо цвете и за него се въвежда допълнителен параметър:
+-   color – символен низ
+-   Ако type e “tree”, то това е дърво и за него се въвежда допълнителен параметър:
+-   height – цяло число
+    
+
+## **GetTotalCaresByPlantId Команда**
+
+При нейното извикване се изчислява общия брой **завършени** грижи за дадено растение и се извежда съобщение:
+
+"Total cares for plant {plantId}: {общ брой грижи}"
+
+### **Параметри**
+-   id – цяло число
+Ако няма грижи, да се изведе 0. Ако такова растение не съществува - да се изведе "Plant not found!".
+
+## **WaterPlantById Команда**
+Намира растението с подаденото id и го полива с помощта на Water(double percent) метода му. 
+
+### **Параметри**
+-   id – цяло число
+-   percent – реално число
+
+## **FertilizePlantById Команда**
+Намира растението с подаденото id и го наторява с помощта на Fertilize(double percent) метода му. Да се извежда "Plant {id} was fertilized successfully!" при успех и "Plant {Id} could not be fertilized!", в противен случай.  
+
+### **Параметри**
+-   id – цяло число
+-   percent - реално число
+    
+## **GetTallestTree Команда**
+Намира най-високото дърво. Да се върне ToString() представянето на обекта, който представлява най-високото дърво или "No trees found!", ако няма дървета.  
+
+## **End Команда**
+Тази команда прекратява изпълнението на програмата.
+
+# **Вход / Изход**
+
+## **Вход**
+-   Четете редове с различни команди, докато не получите команда за приключване на програмата.
+
+По-долу можете да видите формата, в който всяка команда ще бъде дадена във входа:
+-   **AddCareItem {plantId} {name} {status}**
+-   **AddPlant {plantId} {name} {humidityLevel} {fertilityLevel} {type - "flower" или "tree"} {color или height}**
+-   **GetTotalCaresByPlantId {plantId}**
+-   **WaterPlantById {plantId} {percent}**
+-   **FertilizePlantById {plantId} {percent}**
+-   **GetTallestTree**  
+-   **End**
+
+## **Изход**
+
+По – долу може да видите кой изход трябва да бъде предоставен от командите.
+
+### **AddCareItem Команда**
+
+При успех върнете:
+
+Съобщение: Created Care {name} for {plantId}!
+
+Ако такова растение не съществува - да се изведе "Plant not found!".  
+
+### **AddPlant Команда**
+
+При успех върнете:
+
+Съобщение: Created Plant {name} with ID {plantId}!
+
+При неуспех върнете:
+
+Съобщение: Plant with ID {plantId} already exists!
+
+### **GetTotalCaresByPlantId Команда**
+Съобщение: Total cares for plant {plantId}: {общ брой грижи}  
+
+### **WaterPlantById Команда**
+Съобщение при успех: Plant {id} was watered successfully!  
+Съобщение при неуспех: Plant {Id} could not be watered!.
+
+### **FertilizePlantById Команда**
+Съобщение при успех: Plant {id} was fertilized successfully!  
+Съобщение при неуспех: Plant {Id} could not be fertilized!.
+
+### **GetTallestTree Команда**
+Изведете информация за най-високото дърво. Използвайте ToString() метода за съответния клас-наследник на Plant. Ако няма дървета, изведете "No trees found!".
+
+### **End Команда**
+При изпълнение програмата приключва своята работа.
+
+ **Ограничения**
+-   Имената в програмата ще бъдат символни низове, които може да съдържат всеки ASCII символ, с изключение на интервал.
+-   Винаги ще получавате команда за приключване на програмата.    
+-   Входните данни ще бъдат валидни от страна на типове данни.
+-   Идентификаторите на растенията винаги ще са уникални.
+
+# **Примери**
+
+Input
+
+Output
+
+AddPlant 1 Rose 0.6 0.9 flower red
+
+AddCareItem 1 water false
+
+AddCareItem 1 fertilize true
+
+AddPlant 2 Apple 0.3 0.6 tree 5
+
+GetTotalCaresByPlantId 2554
+
+GetTotalCaresByPlantId 2
+
+AddCareItem 2 pick true
+
+AddCareItem 2 pickmore false
+
+AddCareItem 2 pickagain true
+
+GetTotalCaresByPlantId 2
+
+WaterPlantById 2 0.8
+
+FertilizePlantById 1 0.01
+
+AddPlant 3 topola 0.1 0.2 tree 25
+
+GetTallestTree
+
+End
+
+Created Plant Rose with ID 1!
+
+Created Care water for 1!
+
+Created Care fertilize for 1!
+
+Created Plant Apple with ID 2!
+
+Plant not found!
+
+Total cares for plant 2: 0
+
+Created Care pick for 2!
+
+Created Care pickmore for 2!
+
+Created Care pickagain for 2!
+
+Total cares for plant 2: 2
+
+Plant 2 could not be watered!
+
+Plant 1 was fertilized successfully!
+
+Created Plant topola with ID 3!
+
+Id: 3
+
+Name: topola
+
+Type: tree
+
+Humidity Level: 0.10 %
+
+Fertility Level: 0.20 %
+
+Height: 25
+
+  
+# **Точкуване**
+Всяка различна задача Ви дава точки:
+-   Структура - 30 точки
+-   За успешната реализация тук трябва да имате работещи команди за създаване на растения и на грижа, като и да реализирате и съответните им ToString() методи
+-   Бизнес логика - 50 точки
+-   Вход/Изход и валидиране - 20 точки 

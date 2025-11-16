@@ -1,0 +1,10 @@
+AddSubject Maths
+AddSubject Drawing
+AddLesson Maths Trigonometry 60 10 2 Georgieva lecture PitagorHall
+AddLesson Drawing Perspective 60 8 1 Petrova lecture Room401
+GetAverageRating Drawing
+RateLesson Maths Trigonometry 5
+RateLesson Maths Trigonometry 4
+GetAverageRating Maths
+GetLessonsBetweenDuration Maths 40 100
+End

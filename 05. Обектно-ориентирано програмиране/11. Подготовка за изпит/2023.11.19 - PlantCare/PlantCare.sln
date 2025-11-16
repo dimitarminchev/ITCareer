@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlantCare", "PlantCare\PlantCare.csproj", "{9ECDCB4D-8310-00B1-B00A-EAC9F094CC52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{04F3BCE2-AF41-40B5-841A-C8AD071073EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9ECDCB4D-8310-00B1-B00A-EAC9F094CC52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ECDCB4D-8310-00B1-B00A-EAC9F094CC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ECDCB4D-8310-00B1-B00A-EAC9F094CC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ECDCB4D-8310-00B1-B00A-EAC9F094CC52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04F3BCE2-AF41-40B5-841A-C8AD071073EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04F3BCE2-AF41-40B5-841A-C8AD071073EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F3BCE2-AF41-40B5-841A-C8AD071073EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04F3BCE2-AF41-40B5-841A-C8AD071073EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7458D7E-31FC-46DD-9E29-25D8459EA38A}
+	EndGlobalSection
+EndGlobal

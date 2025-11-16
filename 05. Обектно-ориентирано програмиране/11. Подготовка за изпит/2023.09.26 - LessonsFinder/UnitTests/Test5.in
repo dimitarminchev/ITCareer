@@ -1,0 +1,12 @@
+AddSubject Restaurants
+AddSubject It
+AddLesson Restaurants CookingSalads 60 10 2 Dimitrova lecture Room43
+RateLesson Restaurants CookingSalads 5
+RateLesson Restaurants CookingSalads 4
+RateLesson Restaurants CookingSalads 5
+RateLesson Restaurants CookingSalads 3
+GetAverageRating It
+GetAverageRating Restaurants
+GetAverageRating It
+GetAverageRating Restaurants
+End

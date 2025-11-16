@@ -1,0 +1,19 @@
+Created Plant Rose with ID 1!
+Created Care water for 1!
+Created Care fertilize for 1!
+Created Plant Apple with ID 2!
+Plant not found!
+Total cares for plant 2: 0
+Created Care pick for 2!
+Created Care pickmore for 2!
+Created Care pickagain for 2!
+Total cares for plant 2: 2
+Plant 2 could not be watered!
+Plant 1 was fertilized successfully!
+Created Plant topola with ID 3!
+Id: 3
+Name: topola
+Type: tree
+Humidity Level: 0.10 %
+Fertility Level: 0.20 %
+Height: 25

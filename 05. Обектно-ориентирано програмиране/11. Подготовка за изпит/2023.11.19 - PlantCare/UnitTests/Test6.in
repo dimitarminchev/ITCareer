@@ -1,0 +1,15 @@
+AddPlant 1 Rose 0.6 0.9 flower red
+AddCareItem 1 water false
+AddCareItem 1 fertilize true
+AddPlant 2 Apple 0.3 0.6 tree 5
+GetTotalCaresByPlantId 2554
+GetTotalCaresByPlantId 2
+AddCareItem 2 pick true
+AddCareItem 2 pickmore false
+AddCareItem 2 pickagain true
+GetTotalCaresByPlantId 2
+WaterPlantById 2 0.8
+FertilizePlantById 1 0.01
+AddPlant 3 topola 0.1 0.2 tree 25
+GetTallestTree
+End

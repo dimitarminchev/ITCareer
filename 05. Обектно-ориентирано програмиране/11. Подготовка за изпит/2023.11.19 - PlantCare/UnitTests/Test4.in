@@ -1,0 +1,6 @@
+AddPlant 1 Ro 0.6 0.9 flower red
+AddPlant 1 Rose 0.6 0.9 flower red
+AddCareItem 1 water false
+AddCareItem 1 fertilize true
+GetTotalCaresByPlantId 1
+End

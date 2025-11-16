@@ -1,0 +1,493 @@
+<div role="main">
+    <h2>LessonsFinder</h2>
+    <div class="box py-3 generalbox"><i class="fa fa-shield"></i> <b>Requested files</b>: Program.cs, Lesson.cs,
+        OnlineLesson.cs, LectureLesson.cs, Subject.cs, Controller.cs<br><b>Type of work</b>: <i class="fa fa-user"></i>
+        Individual work<br><i class="fa fa-check-circle"></i> <b>Настройки на оценките</b>: Максимална оценка: 100<br><i
+            class="fa fa-rocket"></i> <b>Run</b>: Не. <i class="fa fa-check-square-o"></i> <b>Evaluate</b>: Да.
+        <b>Evaluate just on submission</b>: Да<br><b>Automatic grade</b>: Да. <div class="box py-3 generalbox">
+            <div class="no-overflow">
+                <p dir="ltr" style="text-align: left;"><strong></strong></p>
+                <h3><span style="font-size: 0.9375rem; font-weight: 400;">Вашата приятелка Дени върти проспериращ бизнес
+                        за обучения, обаче определено не може да програмира. Днес тя поставя пред вас задачата да
+                        създадете специална система за управление на нейния проспериращ бизнес. Основните му
+                        функционалности са свързани със създаване на видове обучителни курсове и търсене на курсове по
+                        даден критерий.</span><br></h3>
+                <p dir="ltr"><strong>Забележка: Преди да започнете със задачата, за да нямате проблеми със системата
+                        премахнете namespaces от всеки клас.</strong></p>
+                <h1 dir="ltr"><strong>Структура</strong></h1>
+                <h2 dir="ltr"><strong>Lesson</strong></h2>
+                <p dir="ltr"><span>Класът Lesson е базов клас и не трябва да може да се инстанцира.</span></p>
+                <h3 dir="ltr"><strong>Данни</strong></h3>
+                <p dir="ltr"><span>Всеки урок има име, продължителност, клас (цяло число от 1 до 12), степен на трудност
+                        (цяло число от 1 до 3), име на учител и рейтинг.</span></p>
+                <p dir="ltr"><span>Title – символен низ</span></p>
+                <p dir="ltr">Duration – цяло число</p>
+                <p dir="ltr">Grade – цяло число</p>
+                <p dir="ltr">Difficulty – цяло число</p>
+                <p dir="ltr"></p>
+                <p dir="ltr"><span>Teacher – символен низ</span></p>Ratings – списък от цели числа (всяко между 1 и
+                5)<br>
+                <p></p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation">Името на урока трябва да бъде между 3 и 54 символа включително.
+                        </p>
+                    </li>
+                </ul>
+                <p dir="ltr">Съобщение: Title should be between 3 and 54 characters!</p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation">Продължителността трябва да е положително число.</p>
+                    </li>
+                </ul>
+                <p dir="ltr">Съобщение: Duration should be positive!</p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation">Класът трябва да бъде цяло число между 1 и 12.</p>
+                    </li>
+                </ul>
+                <p dir="ltr">Съобщение: Grade should be between 1 and 12!</p>
+                <p dir="ltr"></p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation">Трудността трябва да е между 1 и 3</p>
+                    </li>
+                </ul>
+                <p dir="ltr">Съобщение: Difficulty should be between 1 and 3!</p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation">Името на учител трябва да е между 3 и 54 символа</p>
+                    </li>
+                </ul>
+                <p dir="ltr">Съобщение: Teacher should be between 3 and 54 characters!</p><br>
+                <p></p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation">При подаване на невалидна стойност хвърлете изключение –
+                            ArgumentException с конкретното съобщение.</p>
+                    </li>
+                </ul>
+                <h3 dir="ltr"><strong>Конструктор</strong></h3>
+                <p dir="ltr"><span>Това са параметрите за конструктора:</span></p>
+                <p dir="ltr">string title, int duration, int grade, int difficulty, string teacher</p>
+                <h3 dir="ltr"><strong>Методи и допълнителни свойства за класа Lesson</strong></h3>
+                <p><strong></strong></p>
+                <p dir="ltr"><strong><strong>void AddRating(int rate)</strong></strong></p>
+                <p dir="ltr"><span><span style="">В метода трябва да добавите рейтинга към списъка с оценки за
+                            урока.</span></span></p><span><strong>double Rating</strong><br>Свойство само и единствено с
+                    get-ер, който връща средноаритметичното от списъка с оценки.<br></span>
+                <p></p>
+                <p dir="ltr"><span><strong>override string ToString()</strong></span></p>
+                <p dir="ltr"><span>Title: {Title} for {Grade} grade ({Duration} mins.) - difficulty {Difficulty} by
+                        {Teacher} (Rating: {Rating} / 5)</span></p>
+                <p dir="ltr">Rating трябва да бъде средноаритметичното от всички рейтинги за курса. Ако няма рейтинги,
+                    Rating се счита за 0.</p>
+                <h1 dir="ltr"><strong>Child Classes</strong></h1>
+                <h2 dir="ltr"><strong>OnlineLesson</strong></h2>
+                <h3 dir="ltr"><strong>Данни</strong></h3>
+                <p dir="ltr"><span>Всеки онлайн урок трябва да има обявена платформа</span></p>
+                <p dir="ltr"><span>Platform – символен низ</span></p>
+                <p dir="ltr">Съобщение: Platform should be between 3 and 30 characters!</p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation">Името на платформата трябва да бъде между 3 и 30 символа
+                            включително.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation">При подаване на невалидна стойност хвърлете изключение –
+                            ArgumentException с конкретното съобщение.</p>
+                    </li>
+                </ul>
+                <p dir="ltr">Забележка: Първо изпълнете валидацията от базовия клас след това текущата.</p>
+                <h3 dir="ltr"><strong>Конструктор</strong></h3>
+                <p dir="ltr"><span>Това са параметрите за конструктора:</span></p>
+                <p dir="ltr"><span></span></p>
+                <p dir="ltr">string title, int duration, int grade, int difficulty, string teacher, string platform</p>
+                <br>
+                <h3 dir="ltr"><strong>Методи за класа OnlineLesson</strong></h3>
+                <p dir="ltr"><span>override string ToString()</span></p>
+                <p dir="ltr">Title: {Title} for {Grade} grade ({Duration} mins.) - difficulty {Difficulty} by {Teacher}
+                    (Rating: {Rating} / 5) @ Online: {Platform}</p>
+                <h2 dir="ltr"><strong>LectureLesson</strong></h2>
+                <h3 dir="ltr"><strong>Данни</strong></h3>
+                <p dir="ltr"><span style="font-size: 0.9375rem;">Location – символен низ</span><br></p>
+                <p dir="ltr"><strong>Забележка: Първо изпълнете валидацията от базовия клас след това текущата.</strong>
+                </p>
+                <h3 dir="ltr"><strong>Конструктор</strong></h3>
+                <p dir="ltr"><span>Това са параметрите за конструктора:</span></p>
+                <p dir="ltr"><span></span></p>string title, int duration, int grade, int difficulty, string teacher,
+                string location<br>
+                <h3 dir="ltr"><strong><br></strong></h3>
+                <h3 dir="ltr"><strong>Методи за класа LectureLesson</strong></h3>
+                <p dir="ltr"><span>override string ToString()</span></p>
+                <p dir="ltr"><span></span></p>
+                <p dir="ltr">Title: {Title} for {Grade} grade ({Duration} mins.) - difficulty {Difficulty} by {Teacher}
+                    (Rating: {Rating} / 5) @ Onsite: {Location}</p>
+                <p dir="ltr"><strong style="font-size: 1.875rem;">Subject</strong><br></p>
+                <h3 dir="ltr"><strong>Данни</strong></h3>
+                <p dir="ltr"><span>Всеки предмет има име и списък с уроци в него:</span></p>
+                <p dir="ltr"><span>Name – символен низ</span></p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation">Името трябва да бъде между 2 и 40 символа включително.</p>
+                    </li>
+                </ul>
+                <p dir="ltr">Съобщение: Name should be between 2 and 40 characters!</p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation">При подаване на невалидна стойност хвърлете изключение –
+                            ArgumentException с конкретното съобщение.</p>
+                    </li>
+                </ul>
+                <h3 dir="ltr"><strong>Конструктор</strong></h3>
+                <p dir="ltr"><span>Това са параметрите за конструктора:</span></p>
+                <p dir="ltr"><span>string name</span></p>
+                <h3 dir="ltr"><strong>Методи за класа Subject</strong></h3>
+                <p dir="ltr"><strong>void AddLesson(Lesson lesson)</strong></p>
+                <p dir="ltr"><span>В метода трябва да добавите новия урок към предмета.</span></p>
+                <p dir="ltr"><span><strong>void AddRate(string title, int rate)</strong></span></p>
+                <p dir="ltr">Намира урок с име title в списъка с уроци за този предмет, след което използвайки неговият
+                    AddRating метод добавя оценката rate за урока.</p>
+                <p dir="ltr">Ако такъв урок не съществува, хвърлете изключение с текст "Lesson not found!".</p>
+                <p dir="ltr"><strong>double AverageRating()</strong></p>
+                <p dir="ltr"><span>В метода трябва да намерите средната оценка от индивидуалните оценки на всеки от
+                        уроците и да я върнете.</span></p>
+                <p dir="ltr"><strong>List&lt;Lesson&gt; GetLessonsByTeacher(string teacher)</strong></p>
+                <p dir="ltr"><span>В метода трябва да върнете тези уроци, които се преподават от определен учител.
+                        Сортирайте тези уроци в низходящ ред по тяхната обявена продължителност.</span></p>
+                <p dir="ltr"><strong>List&lt;Lesson&gt; GetLessonsBetweenDuration(int from, int to)</strong></p>
+                <p dir="ltr"><span>В метода трябва да върнете тези уроци, които са с продължителност от <strong>from
+                        </strong>до <strong>to</strong> минути. Подредете уроците по рейтинг в низходящ ред.</span></p>
+                <p dir="ltr"><strong>override string ToString()</strong></p>
+                <p dir="ltr"><span>Subject {Name}</span></p>
+                <p dir="ltr"><span>Total Lessons: {Брой уроци}</span></p>
+                <p dir="ltr"><strong>Забележка: Уверете се, че за всеки от методите задавате правилен модификатор за
+                        достъп.</strong></p>
+                <h1 dir="ltr"><strong>Бизнес логика</strong></h1>
+                <p dir="ltr"><span>Управлението на програмата се случва благодарение на клас, който се казва Controller.
+                        Той ще обработва команди, които отговарят на нужната функционалност, представена от тези
+                        публични методи:</span></p>
+                <div dir="ltr" align="left">
+                    <table border="1">
+                        <colgroup>
+                            <col width="624">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p dir="ltr">Controller.cs</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p dir="ltr">public string AddSubject(List&lt;string&gt; args)</p>
+                                    <p dir="ltr">{</p>
+                                    <p dir="ltr"> //TODO: Add some logic here …</p>
+                                    <p dir="ltr">}</p>
+                                    <p dir="ltr">&nbsp;</p>
+                                    <p dir="ltr">public string AddLesson(List&lt;string&gt; args)</p>
+                                    <p dir="ltr">{</p>
+                                    <p dir="ltr"> //TODO: Add some logic here …</p>
+                                    <p dir="ltr">}</p>
+                                    <p dir="ltr"></p>
+                                    <p dir="ltr">public string RateLesson(List&lt;string&gt; args)</p>
+                                    <p dir="ltr">{</p>
+                                    <p dir="ltr">//TODO: Add some logic here …</p>
+                                    <p dir="ltr">}</p><br>&nbsp;<p></p>
+                                    <p dir="ltr">public string GetAverageRating(List&lt;string&gt; args)</p>
+                                    <p dir="ltr">{</p>
+                                    <p dir="ltr"> //TODO: Add some logic here …</p>
+                                    <p dir="ltr">}</p>
+                                    <p dir="ltr">&nbsp;</p>
+                                    <p dir="ltr">public string GetLessonsByTeacher(List&lt;string&gt; args)</p>
+                                    <p dir="ltr">{</p>
+                                    <p dir="ltr"> //TODO: Add some logic here …</p>
+                                    <p dir="ltr">}</p>
+                                    <p dir="ltr">&nbsp;</p>
+                                    <p dir="ltr">public string GetLessonsBetweenDuration(List&lt;string&gt; args)</p>
+                                    <p dir="ltr">{</p>
+                                    <p dir="ltr"> //TODO: Add some logic here …</p>
+                                    <p dir="ltr">}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p dir="ltr"><strong>ЗАБЕЛЕЖКА: Не трябва да променяте нищо по методите. Трябва да имплементирате
+                        логиката на самите методи. Не прихвайщайте никакви изключения!</strong></p>
+                <h1 dir="ltr"><strong>Команди</strong></h1>
+                <p dir="ltr"><span>Има няколко команди, които контролират бизнес логиката на приложението и трябва да ги
+                        имплементирате.</span></p>
+                <p dir="ltr"><span>Те са посочени по-долу. За всяка от командите връщайте текстов низ в съответствие с
+                        указанията в частта „Изход“ на задачата.</span></p>
+                <h2 dir="ltr"><strong>AddSubject Команда</strong></h2>
+                <p dir="ltr"><span>Създава предмет (Subject) и го добавя към системата.</span></p>
+                <p dir="ltr"><span>Не всички данни ще бъдат валидни!!!</span></p>
+                <h3 dir="ltr"><strong>Параметри</strong></h3>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>name – символен низ (винаги ще бъде уникално)</span></p>
+                    </li>
+                </ul>
+                <h2 dir="ltr"><strong>AddLesson Команда</strong></h2>
+                <p dir="ltr"><span>Създава урок (Lesson) и го добавя към предмета (Subject) с подаденото име.</span></p>
+                <p dir="ltr"><span>Не всички данни ще бъдат валидни!!!</span></p>
+                <h3 dir="ltr"><strong>Параметри</strong></h3>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>name – символен низ, име на предмета</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>title – символен низ, име на урока</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>duration – цяло число</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>grade – цяло число</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>difficulty – цяло число</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>teacher&nbsp;– символен низ</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>type – символен низ</span></p>
+                    </li>
+                    <ul>
+                        <li dir="ltr" aria-level="2">
+                            <p dir="ltr" role="presentation"><span>Ако type e “online”, то това е онлайн урок, тогава ще
+                                    се приеме още един параметър:</span></p>
+                        </li>
+                        <ul>
+                            <li dir="ltr" aria-level="3">
+                                <p dir="ltr" role="presentation"><span>platform – символен низ</span></p>
+                            </li>
+                        </ul>
+                        <li dir="ltr" aria-level="2">
+                            <p dir="ltr" role="presentation"><span>Ако type e “lecture”, то това е присъствена лекция,
+                                    тогава ще се приеме още един параметър:</span></p>
+                        </li>
+                        <ul>
+                            <li dir="ltr" aria-level="3">
+                                <p dir="ltr" role="presentation"><span>location – символен низ</span></p>
+                            </li>
+                        </ul>
+                    </ul>
+                </ul>
+                <h2 dir="ltr">RateLesson Команда</h2>
+                <p>При извикването на тази команда, ще получите име на предмет, име на урок и оценка, която да се добави
+                    към списъка с оценки за предмета.</p>
+                <p>При добавянето на оценката, изведете:</p>
+                <p>"Rated {title} with {rate} rate"</p>
+                <p>където title e името на урока, а rate - оценката, която добавяте.</p>
+                <h2 dir="ltr"><strong>GetAverageRating Команда</strong></h2>
+                <p dir="ltr"><span>При нейното извикване се изчислява средния рейтинг от уроците в даден предмет и се
+                        извежда съобщение:</span></p>
+                <p dir="ltr"><span>"The average rating is: {averageRating:F2}"</span></p>
+                <h3 dir="ltr"><strong>Параметри</strong></h3>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>name – символен низ</span></p>
+                    </li>
+                </ul>
+                <p dir="ltr"><span>Ако няма уроци, да се приеме, че средния рейтинг е 0. В изчислението участват всички
+                        уроци. Ако даден урок няма рейтинги, неговия рейтинг се счита за нула и НЕ участва в
+                        пресмятането на рейтингите за предмета.</span></p>
+                <h3>RateLesson Команда</h3>
+                <p dir="ltr">Задава оценка на урок</p>
+                <h3>Параметри</h3>
+                <p dir="ltr"></p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>subjectName – символен низ</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>title&nbsp;– символен низ</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>rate – цяло число&nbsp;</span></p>
+                    </li>
+                </ul>
+                <h2 dir="ltr"><strong>
+                        <h3 dir="ltr"><strong style="font-size: 1.875rem;">GetLessonsByTeacher Команда</strong><br></h3>
+                    </strong></h2>
+                <p dir="ltr"><span>Намира предмета с подаденото име от системата и извиква GetLessonsByTeacher() метода
+                        му.</span></p>
+                <h3 dir="ltr"><strong>Параметри</strong></h3>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>name – символен низ</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>teacher – символен низ</span></p>
+                    </li>
+                </ul>
+                <h2 dir="ltr"><strong>GetLessonsBetweenDuration Команда</strong></h2>
+                <p dir="ltr"><span>Намира предмета с подаденото име от системата и извиква GetLessonsBetweenDuration()
+                        метода му.&nbsp;</span></p>
+                <h3 dir="ltr"><strong>Параметри</strong></h3>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>from – цяло число</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>to – цяло число</span></p>
+                    </li>
+                </ul>
+                <h2 dir="ltr"><strong>End Команда</strong></h2>
+                <p dir="ltr"><span>Тази команда прекратява изпълнението на програмата.</span></p>
+                <h1 dir="ltr"><strong>Вход / Изход</strong></h1>
+                <h2 dir="ltr"><strong>Вход</strong></h2>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>Четете редове с различни команди, докато не получите
+                                команда за приключване на програмата.</span></p>
+                    </li>
+                </ul>
+                <p dir="ltr"><span>По-долу можете да видите формата, в който всяка команда ще бъде дадена във
+                        входа:</span></p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><strong>AddSubject {subjectName}</strong></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><strong>AddLesson {<strong>subjectName</strong>} {title}
+                                {duration} {grade} {difficulty} {teacher} {type} {platform или location}</strong></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><strong>RateLesson {subjectName} {title} {rate}</strong></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><strong>GetAverageRating
+                                {<strong>subjectName</strong>}</strong></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><strong>GetLessonsByTeacher {<strong>subjectName</strong>}
+                                {teacher}</strong></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><strong>GetLessonsBetweenDuration
+                                {<strong>subjectName</strong>} {from} {to}</strong></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><strong>End</strong></p>
+                    </li>
+                </ul>
+                <h2 dir="ltr"><strong>Изход</strong></h2>
+                <p dir="ltr"><span>По – долу може да видите кой изход трябва да бъде предоставен от командите.</span>
+                </p>
+                <h3 dir="ltr"><strong>AddSubject Команда</strong></h3>
+                <p dir="ltr"><span>При успех върнете:</span></p>
+                <p dir="ltr"><span>Съобщение: Created Subject</span><span
+                        style="font-size: 0.9375rem;">&nbsp;{name}!</span></p>
+                <p dir="ltr">При неуспех: Subject already exists!</p>
+                <h3 dir="ltr"><strong>AddLesson Команда</strong></h3>
+                <p dir="ltr"><span>При успех върнете:</span></p>
+                <p dir="ltr">Съобщение: Created Lesson {title} in Subject {subjectName}!</p>
+                <h3>RateLesson Команда</h3>
+                <p dir="ltr">Съобщение: Rated {title} with {rate} rate.<br></p>
+                <h3 dir="ltr"><strong>GetAverageRating Команда</strong></h3>
+                <p dir="ltr"><span>При успех върнете:</span></p>
+                <p dir="ltr">Съобщение: The average rating is: {averageRating:F2}</p>
+                <h3 dir="ltr"><strong><strong>GetLessonsByTeacher</strong> Команда</strong></h3>
+                <p dir="ltr"><span>Изведете информация за всички уроци, водени от даден учител за съответния предмет.
+                        Използвайте ToString() метода за съответния клас-наследник на Lesson.</span></p>
+                <h3 dir="ltr"><strong><strong>GetLessonsBetweenDuration</strong> Команда</strong></h3>
+                <p dir="ltr"><span>Изведете информация за всички уроци за предмета с продължителност в рамките на
+                        дадената. Използвайте ToString() метода за съответния клас-наследник на Lesson.</span></p>
+                <h3 dir="ltr"><strong>End Команда</strong></h3>
+                <p dir="ltr"><span>При изпълнение програмата приключва своята работа.</span><strong
+                        style="font-size: 0.9375rem;">&nbsp;</strong></p>
+                <p dir="ltr"><strong style="font-size: 2.34375rem;">Ограничения</strong><br></p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>Имената в програмата ще бъдат символни низове, които може
+                                да съдържат всеки ASCII символ, с изключение на интервал.</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>Винаги ще получавате команда за приключване на
+                                програмата.</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>Входните данни ще бъдат валидни от страна на типове
+                                данни.</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>Имената на предметите винаги ще са уникални</span></p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>В командите в които се търси предмет по подадено име,
+                                винаги ще се подава име на съществуващ предмет.</span></p>
+                    </li>
+                </ul>
+                <h1 dir="ltr"><strong>Примери</strong></h1>
+                <div dir="ltr" align="left">
+                    <table border="1">
+                        <colgroup>
+                            <col width="650">
+                            <col width="650">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p dir="ltr">Input</p>
+                                </td>
+                                <td>
+                                    <p dir="ltr">Output</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p dir="ltr">AddSubject Maths<br>AddSubject Drawing<br>AddLesson Maths Trigonometry
+                                        60 10 2 Georgieva onsite PitagorHall<br><span
+                                            style="font-size: 0.9375rem;">AddLesson Drawing Perspective 60 8 1 Petrova
+                                            onsite Room401<br></span><span
+                                            style="font-size: 0.9375rem;">GetAverageRating Drawing<br></span><span
+                                            style="font-size: 0.9375rem;">RateLesson Maths Trigonometry
+                                            5<br></span><span style="font-size: 0.9375rem;">RateLesson Maths
+                                            Trigonometry 4<br></span><span
+                                            style="font-size: 0.9375rem;">GetAverageRating Maths<br></span><span
+                                            style="font-size: 0.9375rem;">GetLessonsBetweenDuration Maths 40
+                                            100<br></span><span style="font-size: 0.9375rem;">End</span></p><br>
+                                </td>
+                                <td>
+                                    <p dir="ltr">Created Subject Maths!<br>Created Subject Drawing!<br>Created Lesson
+                                        Trigonometry in Subject Maths!<br><span style="font-size: 0.9375rem;">Created
+                                            Lesson Perspective in Subject Drawing!<br></span><span
+                                            style="font-size: 0.9375rem;">The average rating is: 0.00<br></span><span
+                                            style="font-size: 0.9375rem;">Rated Trigonometry with 5
+                                            rate.<br></span><span style="font-size: 0.9375rem;">Rated Trigonometry with
+                                            4 rate.<br></span><span style="font-size: 0.9375rem;">The average rating is:
+                                            4.50<br></span><span style="font-size: 0.9375rem;">Title: Trigonometry for
+                                            10 grade (60 mins.) - difficulty 2 by Georgieva (Rating: 4.50 / 5) @ Onsite:
+                                            PitagorHall</span></p><br>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p dir="ltr"><strong>&nbsp;</strong></p>
+                <h1 dir="ltr"><strong>Точкуване</strong></h1>
+                <p dir="ltr"><span>Всяка различна задача Ви дава точки:</span></p>
+                <ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation"><span>Структура - 30 точки</span></p>
+                    </li>
+                    <ul>
+                        <li dir="ltr" aria-level="2">
+                            <p dir="ltr" role="presentation">За успешната реализация тук трябва да имате работещи
+                                команди за създаване на оферта и на категория, като реализирате и съответните им
+                                ToString() методи</p>
+                        </li>
+                    </ul>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation">Бизнес логика - 50 точки</p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                        <p dir="ltr" role="presentation">Вход/Изход и валидиране - 20 точки&nbsp;</p>
+                    </li>
+                </ul>

@@ -1,0 +1,5 @@
+AddCategory Restaurants
+AddCategory It
+AddEventOffer Restaurants Waiter Romance 1000 25 inperson Sofia
+GetAverageTicketPrice It
+End

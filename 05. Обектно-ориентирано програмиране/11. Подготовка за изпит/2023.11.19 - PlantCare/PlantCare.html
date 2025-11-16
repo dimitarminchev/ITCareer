@@ -1,0 +1,514 @@
+<h2 id="yui_3_17_2_1_1763280470121_116">PlantCare</h2>
+<div class="box py-3 generalbox"><i class="fa fa-calendar-plus-o"></i> <b>Available from</b>: Sunday, 19 November 2023,
+    10:00<br><i class="fa fa-shield"></i> <b>Requested files</b>: Program.cs, Plant.cs, FloweringPlant.cs, TreePlant.cs,
+    CareItem.cs, Controller.cs<br><b>Type of work</b>: <i class="fa fa-user"></i> Individual work<br><i
+        class="fa fa-check-circle"></i> <b>Настройки на оценките</b>: Максимална оценка: 100<br><i
+        class="fa fa-rocket"></i> <b>Run</b>: Не. <i class="fa fa-check-square-o"></i> <b>Evaluate</b>: Да. <b>Evaluate
+        just on submission</b>: Да<br><b>Automatic grade</b>: Да. <div class="box py-3 generalbox">
+        <div class="no-overflow">
+            <p dir="ltr" style="text-align: left;"><strong></strong></p>
+            <h3><span style="font-size: 0.9375rem; font-weight: 400;">Стартирали сте работа в нова AI-startup компания.
+                    Там вие работите по продукт за автоматизирана грижа за растения. Основните му функционалности са
+                    свързани със създаване на записи за растение и следене на задачите по грижата за него.</span><br>
+            </h3>
+            <p dir="ltr"><strong>Забележка: Преди да започнете със задачата, за да нямате проблеми със системата
+                    премахнете namespaces от всеки клас.</strong></p>
+            <h1 dir="ltr"><strong>Структура</strong></h1>
+            <h2 dir="ltr"><strong>Plant</strong></h2>
+            <p dir="ltr"><span>Класът Plant е базов клас и не трябва да може да се инстанцира.</span></p>
+            <h3 dir="ltr"><strong>Данни</strong></h3>
+            <p dir="ltr"><span>Всяко растение има id (цяло число), име на растението, вид на растението, списък със
+                    задачи по грижа за растението.</span></p>
+            <p dir="ltr"><span>Id – цяло число</span></p>
+            <p dir="ltr"><span></span></p>
+            <p dir="ltr">Name – символен низ</p>
+            <p dir="ltr"></p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">Името на растението трябва да бъде между 3 и 30 символа
+                        включително. Съобщение:&nbsp;<strong>Name should be between 3 and 30 characters!</strong></p>
+                </li>
+            </ul>
+            <p></p>
+            <p dir="ltr">Type – символен низ</p>
+            <p dir="ltr"></p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">Името на типа трябва да бъде между 3 и 30 символа включително.
+                        Съобщение: <strong>Type should be between 3 and 30 characters!</strong></p>
+                </li>
+            </ul>
+            <p dir="ltr">CareItems – списък от CareItem обекти</p>
+            <p dir="ltr">HumidityLevel - реално число, представящо процента на влажност на почвата</p>
+            <p dir="ltr"></p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">Процентът на влажност на почвата трябва да е реално число между 0
+                        (0%) и 1 (100%). Съобщение: <strong>Humidity Level should be between 0 and 1!</strong></p>
+                </li>
+            </ul>
+            <p><span>FertilityLevel - реално число, представящо натореността на почвата</span></p>
+            <p><span></span></p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">Процентът на натореност на почвата трябва да е реално число между 0
+                        (0%) и 1 (100%). Съобщение:&nbsp;<strong>Fertility Level should be between 0 and 1!</strong></p>
+                </li>
+            </ul>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">При подаване на невалидна стойност хвърлете изключение –
+                        ArgumentException с конкретното съобщение.</p>
+                </li>
+            </ul>
+            <h3 dir="ltr"><strong>Конструктор</strong></h3>
+            <p dir="ltr"><span>Това са параметрите за конструктора:</span></p>
+            <p dir="ltr">int id, string name, string type, double humidityLevel, double fertilityLevel</p>
+            <h3 dir="ltr"><strong>Методи за класа Plant</strong></h3>
+            <p><strong></strong></p>
+            <p dir="ltr"><strong><strong>void AddCareItem(CareItem careItem)</strong></strong></p>
+            <p dir="ltr"><strong>В метода трябва да добавите новата грижа към растението.</strong></p>
+            <p dir="ltr"><strong style="font-size: 0.9375rem;"><strong>int TotalCaresDone()</strong></strong><br></p>
+            <p dir="ltr"><strong>В метода трябва да намерите броя на вече извършените грижи (Status да има стойност
+                    true) и да я върнете.</strong></p>
+            <p dir="ltr"><strong><strong>bool Water(double percent)</strong></strong></p>
+            <p dir="ltr"><strong>В метода трябва да изчислите нова стойност за влажността на почвата, на база на
+                    предоставения процент. Например, ако текущата влажност на почвата е 0.03, а параметъра percent е
+                    равен на 0.07, то новата влажност е 0.10. Не допускайте преполиване (т.е. надвишаване на стойността
+                    на humidityLevel. Ако поливането е било успешно, то трябва да върнете true, a в противен случай -
+                    false.</strong></p>
+            <p dir="ltr"><strong>bool Fertilize(double percent)</strong></p><strong><strong>В метода трябва да изчислите
+                    нова стойност за натореност на почвата, на база на предоставения процент. Например, ако текущата
+                    натореност на почвата е 0.03, а параметъра percent е равен на 0.07, то новата
+                    <strong><strong>натореност</strong></strong> е 0.10. Не допускайте преполиване (т.е. надвишаване на
+                    стойността на humidityLevel. Ако поливането е било успешно, то трябва да върнете true, a в противен
+                    случай - false.</strong><br></strong>
+            <p></p>
+            <p dir="ltr"><span>override string ToString()</span></p>
+            <p dir="ltr"><span>Id: {Id}</span></p>
+            <p dir="ltr">Name: {Name}</p>
+            <p dir="ltr">Type: {Type}</p>
+            <p dir="ltr">Humidity Level: {HumidityLevel} %</p>
+            <p dir="ltr">Fertility Level: {FertilityLevel} %</p>
+            <p dir="ltr">Нивата на влажност и плодородност трябва да се извеждат с точност 2 знака след запетаята.</p>
+            <h1 dir="ltr"><strong>Child Classes</strong></h1>
+            <h2 dir="ltr"><strong>FloweringPlant</strong></h2>
+            <h3 dir="ltr"><strong>Данни</strong></h3>
+            <p dir="ltr"><span style="font-size: 0.9375rem;">Клас за цъфтящо растение</span></p>
+            <p dir="ltr"><span style="font-size: 0.9375rem;">Color – символен низ</span></p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">Името на цвета трябва да бъде между 3 и 30 символа
+                        включително.&nbsp;Съобщение: <strong>Color should be between 3 and 30 characters!</strong></p>
+                </li>
+            </ul>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">При подаване на невалидна стойност хвърлете изключение –
+                        ArgumentException с конкретното съобщение.</p>
+                </li>
+            </ul>
+            <p dir="ltr">Забележка: Първо изпълнете валидацията от базовия клас след това текущата.</p>
+            <h3 dir="ltr"><strong>Конструктор</strong></h3>
+            <p dir="ltr"><span>Това са параметрите за конструктора:</span></p>
+            <p dir="ltr"><span></span></p>
+            <p dir="ltr">int id, string name, double humidityLevel, double fertilityLevel, string color</p>
+            <strong>Забележка: Type трябва да се задава автоматично на "flower".</strong><br><br>
+            <h3 dir="ltr"><strong>Методи за класа FloweringPlant</strong></h3>
+            <p dir="ltr"><span>override string ToString()</span></p>
+            <p dir="ltr"><span></span></p>
+            <p dir="ltr"><span>Id: {Id}</span></p>
+            <p dir="ltr"><span>Name: {Name}</span></p>
+            <p dir="ltr">Type: {Type}</p>
+            <p dir="ltr">Humidity Level: {HumidityLevel} %</p>
+            <p dir="ltr">Fertility Level: {FertilityLevel} %</p>
+            <p dir="ltr"></p>
+            <p dir="ltr">Color: {Color}</p>
+            <h2 dir="ltr"><strong style="">TreePlant</strong></h2>
+            <p><span>Клас за дървета.</span></p>
+            <h2 dir="ltr"><strong style="font-size: 1.64062rem;">Данни</strong><br></h2>
+            <p dir="ltr"><span style="font-size: 0.9375rem;">Height – цяло число</span><br></p>
+            <p dir="ltr"><span style="font-size: 0.9375rem;"></span></p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">Височината на дървото трябва да бъде положително
+                        число.&nbsp;Съобщение:&nbsp;<strong>Height should be positive!</strong></p>
+                </li>
+            </ul>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">При подаване на невалидна стойност хвърлете изключение –
+                        ArgumentException с конкретното съобщение.</p>
+                </li>
+            </ul>
+            <p dir="ltr">Забележка: Първо изпълнете валидацията от базовия клас след това текущата.</p>
+            <p dir="ltr"><strong style="font-size: 1.64062rem;">Конструктор</strong><br></p>
+            <p dir="ltr"><span>Това са параметрите за конструктора:</span></p>
+            <p dir="ltr"><span></span></p>int id, string name, double humidityLevel, double fertilityLevel, int
+            height<br><strong>Забележка: Type трябва да се задава автоматично на "tree".<br></strong>
+            <h3 dir="ltr"><strong>Методи за класа TreePlant</strong></h3>
+            <p dir="ltr"><span>override string ToString()</span></p>
+            <p dir="ltr"><span></span></p>
+            <p dir="ltr"><span>Id: {Id}</span></p>
+            <p dir="ltr"><span>Name: {Name}</span></p>
+            <p dir="ltr">Type: {Type}</p>
+            <p dir="ltr">Humidity Level: {HumidityLevel} %</p>
+            <p dir="ltr">Fertility Level: {FertilityLevel} %</p>
+            <p dir="ltr"></p>
+            <p dir="ltr">Height: {Height}</p>
+            <p dir="ltr"></p>
+            <h2 dir="ltr"><strong style="font-size: 1.875rem;">CareItem</strong><br></h2>
+            <h3 dir="ltr"><strong>Данни</strong></h3>
+            <p dir="ltr"><span>Всяка грижа има име и статус (извършена или не).</span></p>
+            <p dir="ltr"><span>Name – символен низ</span></p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">Името трябва да бъде между 2 и 40 символа включително.</p>
+                </li>
+            </ul>
+            <p dir="ltr">Съобщение: Name should be between 2 and 40 characters!</p>
+            <p dir="ltr">Status - булева стойност.</p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">При подаване на невалидна стойност хвърлете изключение –
+                        ArgumentException с конкретното съобщение.</p>
+                </li>
+            </ul>
+            <h3 dir="ltr"><strong>Конструктор</strong></h3>
+            <p dir="ltr"><span>Това са параметрите за конструктора:</span></p>
+            <p dir="ltr"><span>string name, bool status</span></p>
+            <h3 dir="ltr"><strong>Методи за класа CareItem</strong></h3>
+            <p dir="ltr"><strong>override string ToString()</strong></p>
+            <p dir="ltr"><span>CareItem {Name}</span></p>
+            <p dir="ltr"><span>Status: {Status}</span></p>
+            <p dir="ltr"><strong style="font-size: 2.34375rem;">Бизнес логика</strong><br></p>
+            <p dir="ltr"><span>Управлението на програмата се случва благодарение на клас, който се казва Controller. Той
+                    ще обработва команди, които отговарят на нужната функционалност, представена от тези публични
+                    методи:</span></p>
+            <div dir="ltr" align="left">
+                <table>
+                    <colgroup>
+                        <col width="624">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p dir="ltr">Controller.cs</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p dir="ltr">public string AddCareItem(List&lt;string&gt; args)</p>
+                                <p dir="ltr">{</p>
+                                <p dir="ltr">//TODO: Add some logic here …</p>
+                                <p dir="ltr">}</p>
+                                <p dir="ltr"><br></p>
+                                <p dir="ltr">public string AddPlant(List&lt;string&gt; args)</p>
+                                <p dir="ltr">{</p>
+                                <p dir="ltr">//TODO: Add some logic here …</p>
+                                <p dir="ltr">}</p>
+                                <p dir="ltr">public string GetTotalCaresByPlantId(List&lt;string&gt; args)</p>
+                                <p dir="ltr">{</p>
+                                <p dir="ltr">//TODO: Add some logic here …</p>
+                                <p dir="ltr"><span style="font-size: 0.9375rem;">}</span><br></p>
+                                <p dir="ltr">public string WaterPlantById(List&lt;string&gt; args)</p>
+                                <p dir="ltr">{</p>
+                                <p dir="ltr">//TODO: Add some logic here …</p>
+                                <p dir="ltr">}</p>
+                                <p dir="ltr">public string FertilizePlantById(List&lt;string&gt; args)</p>
+                                <p dir="ltr">{</p>
+                                <p dir="ltr">//TODO: Add some logic here …</p>
+                                <p dir="ltr">}</p>
+                                <p dir="ltr">public string GetTallestTree(List&lt;string&gt; args)</p>
+                                <p dir="ltr">{</p>
+                                <p dir="ltr">//TODO: Add some logic here …</p>
+                                <p dir="ltr">}</p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p dir="ltr"><strong>ЗАБЕЛЕЖКА: Не трябва да променяте нищо по методите. Трябва да имплементирате логиката
+                    на самите методи. Не прихвайщайте никакви изключения!</strong></p>
+            <h1 dir="ltr"><strong>Команди</strong></h1>
+            <p dir="ltr"><span>Има няколко команди, които контролират бизнес логиката на приложението и трябва да ги
+                    имплементирате.</span></p>
+            <p dir="ltr"><span>Те са посочени по-долу. За всяка от командите връщайте текстов низ в съответствие с
+                    указанията в частта „Изход“ на задачата.</span></p>
+            <h2 dir="ltr"><strong>AddCareItem Команда</strong></h2>
+            <p dir="ltr"><span>Създава грижа (CareItem) и я добавя към растението, за което се отнася.</span></p>
+            <p dir="ltr"><span>Не всички данни ще бъдат валидни!!!</span></p>
+            <h3 dir="ltr"><strong>Параметри</strong></h3>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>plantId – цяло число</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>name – символен низ</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>status – булева стойност&nbsp;</span></p>
+                </li>
+            </ul>
+            <h2 dir="ltr"><strong>AddPlant Команда</strong></h2>
+            <p dir="ltr"><span>Създава растение (Plant).</span></p>
+            <p dir="ltr"><span>Не всички данни ще бъдат валидни!!!</span></p>
+            <h3 dir="ltr"><strong>Параметри</strong></h3>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span></span></p>
+                    <p dir="ltr">id &nbsp;– цяло число</p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr">name - символен низ</p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr"><span style="font-size: 0.9375rem;">humidityLevel – реално число</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr"><span style="font-size: 0.9375rem;">fertilityLevel – реално число</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>type – символен низ</span></p>
+                </li>
+                <ul>
+                    <li dir="ltr" aria-level="2">
+                        <p dir="ltr" role="presentation"><span>Ако type e “flower”, то това е цъфтящо цвете и за него се
+                                въвежда допълнителен параметър:</span></p>
+                    </li>
+                    <ul>
+                        <li dir="ltr" aria-level="3">
+                            <p dir="ltr" role="presentation"><span>color – символен низ</span></p>
+                        </li>
+                    </ul>
+                    <li dir="ltr" aria-level="2">
+                        <p dir="ltr" role="presentation"><span>Ако type e “tree”, то това е дърво и за него се въвежда
+                                допълнителен параметър:</span></p>
+                    </li>
+                    <ul>
+                        <li dir="ltr" aria-level="3">
+                            <p dir="ltr" role="presentation"><span>height – цяло число</span></p>
+                        </li>
+                    </ul>
+                </ul>
+            </ul>
+            <h2 dir="ltr"><strong>GetTotalCaresByPlantId Команда</strong></h2>
+            <p dir="ltr"><span>При нейното извикване се изчислява общия брой <strong>завършени</strong> грижи за дадено
+                    растение и се извежда съобщение:</span></p>
+            <p dir="ltr"><span>"Total cares for plant {plantId}: {общ брой грижи}"</span></p>
+            <h3 dir="ltr"><strong>Параметри</strong></h3>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>id – цяло число</span></p>
+                </li>
+            </ul>
+            <p dir="ltr"><span>Ако няма грижи, да се изведе 0. Ако такова растение не съществува - да се изведе "Plant
+                    not found!".</span></p>
+            <h2 dir="ltr"><strong>WaterPlantById Команда</strong></h2>
+            <p dir="ltr"><span>Намира растението с подаденото id и го полива с помощта на Water(double percent) метода
+                    му.&nbsp;</span></p>
+            <h3 dir="ltr"><strong>Параметри</strong></h3>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>id – цяло число</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span style="font-size: 0.9375rem;">percent – реално число</span>
+                    </p>
+                </li>
+            </ul>
+            <h2 dir="ltr"><strong>FertilizePlantById Команда</strong></h2>
+            <p dir="ltr"><span></span></p>
+            <p dir="ltr"><span></span></p>Намира растението с подаденото id и го наторява с помощта на Fertilize(double
+            percent) метода му. Да се извежда "Plant {id} was fertilized successfully!" при успех и "Plant {Id} could
+            not be fertilized!", в противен случай.<br><br>
+            <h3 dir="ltr"><strong>Параметри</strong></h3>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>id – цяло число</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>percent - реално число</span></p>
+                </li>
+            </ul>
+            <p></p>
+            <h2 dir="ltr"><strong>GetTallestTree Команда</strong></h2>Намира най-високото дърво. Да се върне ToString()
+            представянето на обекта, който представлява най-високото дърво или "No trees found!", ако няма дървета.<br>
+            <p></p>
+            <h2 dir="ltr"><strong>End Команда</strong></h2>
+            <p dir="ltr"><span>Тази команда прекратява изпълнението на програмата.</span></p>
+            <h1 dir="ltr"><strong>Вход / Изход</strong></h1>
+            <h2 dir="ltr"><strong>Вход</strong></h2>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>Четете редове с различни команди, докато не получите команда
+                            за приключване на програмата.</span></p>
+                </li>
+            </ul>
+            <p dir="ltr"><span>По-долу можете да видите формата, в който всяка команда ще бъде дадена във входа:</span>
+            </p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>AddCareItem {plantId} {name} {status}</strong></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>AddPlant {plantId} {name} {humidityLevel} {fertilityLevel}
+                            {type - "flower" или "tree"} {color или height}</strong></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>GetTotalCaresByPlantId {plantId}</strong></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>WaterPlantById {plantId} {percent}</strong></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>FertilizePlantById {plantId} {percent}</strong></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span><strong>GetTallestTree</strong><br></span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>End</strong></p>
+                </li>
+            </ul>
+            <h2 dir="ltr"><strong>Изход</strong></h2>
+            <p dir="ltr"><span>По – долу може да видите кой изход трябва да бъде предоставен от командите.</span></p>
+            <h3 dir="ltr"><strong>AddCareItem Команда</strong></h3>
+            <p dir="ltr"><span>При успех върнете:</span></p>
+            <p dir="ltr"><span>Съобщение: Created Care {name} for {plantId}!</span></p>
+            <p dir="ltr">Ако такова растение не съществува - да се изведе "Plant not found!".<br></p>
+            <h3 dir="ltr"><strong>AddPlant Команда</strong></h3>
+            <p dir="ltr"><span>При успех върнете:</span></p>
+            <p dir="ltr">Съобщение: Created Plant {name} with ID {plantId}!</p>
+            <p dir="ltr">При неуспех върнете:</p>
+            <p dir="ltr">Съобщение: Plant with ID {plantId} already exists!</p>
+            <h3 dir="ltr"><strong>GetTotalCaresByPlantId Команда</strong></h3>
+            <p dir="ltr"><span style="font-size: 0.9375rem;">Съобщение: Total cares for plant {plantId}: {общ брой
+                    грижи}</span><br></p>
+            <h3 dir="ltr"></h3>
+            <h3 dir="ltr"><strong>WaterPlantById Команда</strong></h3>
+            <p dir="ltr"><span>Съобщение при успех: Plant {id} was watered successfully!<br>Съобщение при неуспех: Plant
+                    {Id} could not be watered!.</span></p>
+            <h3 dir="ltr"><strong>FertilizePlantById Команда</strong></h3>
+            <p dir="ltr"><span>Съобщение при успех: Plant {id} was fertilized successfully!<br>Съобщение при неуспех:
+                    Plant {Id} could not be fertilized!.</span></p><br>
+            <h3 dir="ltr"><strong>GetTallestTree Команда</strong></h3>
+            <p dir="ltr"><span>Изведете информация за най-високото дърво. Използвайте ToString() метода за съответния
+                    клас-наследник на Plant. Ако няма дървета, изведете "No trees found!".</span></p>
+            <h3 dir="ltr"><strong>End Команда</strong></h3>
+            <p dir="ltr"><span>При изпълнение програмата приключва своята работа.</span></p>
+            <p dir="ltr"><strong>&nbsp;</strong><strong style="font-size: 2.34375rem;">Ограничения</strong></p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>Имената в програмата ще бъдат символни низове, които може да
+                            съдържат всеки ASCII символ, с изключение на интервал.</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>Винаги ще получавате команда за приключване на
+                            програмата.</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>Входните данни ще бъдат валидни от страна на типове
+                            данни.</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>Идентификаторите на растенията винаги ще са
+                            уникални</span><span style="font-size: 0.9375rem;">.</span></p>
+                </li>
+            </ul>
+            <h1 dir="ltr"><strong>Примери</strong></h1>
+            <div dir="ltr" align="left">
+                <table>
+                    <colgroup>
+                        <col width="408">
+                        <col width="216">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p dir="ltr">Input</p>
+                            </td>
+                            <td>
+                                <p dir="ltr">Output</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">AddPlant 1 Rose 0.6 0.9 flower
+                                        red</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">AddCareItem 1 water false</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">AddCareItem 1 fertilize true</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">AddPlant 2 Apple 0.3 0.6 tree 5</span>
+                                </p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">GetTotalCaresByPlantId 2554</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">GetTotalCaresByPlantId 2</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">AddCareItem 2 pick true</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">AddCareItem 2 pickmore false</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">AddCareItem 2 pickagain true</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">GetTotalCaresByPlantId 2</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">WaterPlantById 2 0.8</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">FertilizePlantById 1 0.01</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">AddPlant 3 topola 0.1 0.2 tree
+                                        25</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">GetTallestTree</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">End</span></p>
+                            </td>
+                            <td>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Created Plant Rose with ID 1!</span>
+                                </p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Created Care water for 1!</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Created Care fertilize for 1!</span>
+                                </p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Created Plant Apple with ID 2!</span>
+                                </p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Plant not found!</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Total cares for plant 2: 0</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Created Care pick for 2!</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Created Care pickmore for 2!</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Created Care pickagain for 2!</span>
+                                </p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Total cares for plant 2: 2</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Plant 2 could not be watered!</span>
+                                </p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Plant 1 was fertilized
+                                        successfully!</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Created Plant topola with ID 3!</span>
+                                </p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Id: 3</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Name: topola</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Type: tree</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Humidity Level: 0.10 %</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Fertility Level: 0.20 %</span></p>
+                                <p dir="ltr"><span style="font-size: 14.9035px;">Height: 25</span></p><br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p dir="ltr"><strong>&nbsp;</strong></p>
+            <h1 dir="ltr"><strong>Точкуване</strong></h1>
+            <p dir="ltr"><span>Всяка различна задача Ви дава точки:</span></p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>Структура - 30 точки</span></p>
+                </li>
+                <ul>
+                    <li dir="ltr" aria-level="2">
+                        <p dir="ltr" role="presentation">За успешната реализация тук трябва да имате работещи команди за
+                            създаване на растения и на грижа, като и да реализирате и съответните им ToString() методи
+                        </p>
+                    </li>
+                </ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">Бизнес логика - 50 точки</p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">Вход/Изход и валидиране - 20 точки&nbsp;</p>
+                </li>
+            </ul><strong><br></strong><br>
+            <p></p>
+        </div>
+    </div>

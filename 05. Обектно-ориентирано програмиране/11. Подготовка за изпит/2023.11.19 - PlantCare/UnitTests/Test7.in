@@ -1,0 +1,5 @@
+AddPlant 1 Rose 0.6 0.9 flower red
+WaterPlantById 3 0.05
+WaterPlantById 1 0.4
+GetTallestTree
+End
