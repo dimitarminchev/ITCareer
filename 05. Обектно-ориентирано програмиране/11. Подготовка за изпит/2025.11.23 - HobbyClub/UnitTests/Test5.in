@@ -1,0 +1,12 @@
+AddClub Restaurants
+AddClub It
+AddActivity Restaurants CookingSalads 60 10 2 Dimitrova onsite Room43
+RateActivity Restaurants CookingSalads 5
+RateActivity Restaurants CookingSalads 4
+RateActivity Restaurants CookingSalads 5
+RateActivity Restaurants CookingSalads 3
+GetAverageRating It
+GetAverageRating Restaurants
+GetAverageRating It
+GetAverageRating Restaurants
+End

@@ -1,0 +1,10 @@
+AddClub Maths
+AddClub Drawing
+AddActivity Maths Trigonometry 60 10 2 Georgieva onsite PitagorHall
+AddActivity Drawing Perspective 60 8 1 Petrova onsite Room401
+GetAverageRating Drawing
+RateActivity Maths Trigonometry 5
+RateActivity Maths Trigonometry 4
+GetAverageRating Maths
+GetActivitiesBetweenDuration Maths 40 100
+End

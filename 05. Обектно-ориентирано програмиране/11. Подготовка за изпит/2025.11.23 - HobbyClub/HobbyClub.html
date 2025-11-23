@@ -1,0 +1,536 @@
+<h2>HobbyClub</h2>
+<div class="box py-3 generalbox">
+
+    <div class="box py-3 generalbox">
+        <div class="no-overflow">
+            <h3><span style="font-size: 0.9375rem; font-weight: 400;">Вашата приятелка Дени върти проспериращ бизнес с
+                    хоби клубове и забавни дейности, обаче определено не може да програмира. Днес тя поставя пред вас
+                    задачата да създадете специална система за управление на нейния проспериращ бизнес. Основните ѝ
+                    функционалности са свързани със създаване на видове хоби дейности в клубовете и търсене на дейности
+                    по даден критерий.</span><br></h3>
+            <p dir="ltr"><strong>Забележка: Преди да започнете със задачата, за да нямате проблеми със системата
+                    премахнете namespaces от всеки клас.</strong></p>
+            <h1 dir="ltr"><strong>Структура</strong></h1>
+            <h2 dir="ltr"><strong>Activity</strong></h2>
+            <p dir="ltr"><span>Класът Activity е базов клас и не трябва да може да се инстанцира.</span></p>
+            <h3 dir="ltr"><strong>Данни</strong></h3>
+            <p dir="ltr"><span></span></p>
+            <p data-start="756" data-end="900">Всяка дейност има име, продължителност, ниво (цяло число от 1 до 12),
+                степен на интензитет (цяло число от 1 до 3), име на ръководител и рейтинг.</p>
+            <ul data-start="902" data-end="1093">
+                <li data-start="902" data-end="928">
+                    <p data-start="904" data-end="928"><code data-start="904" data-end="911">Title</code> – символен низ
+                    </p>
+                </li>
+                <li data-start="929" data-end="956">
+                    <p data-start="931" data-end="956"><code data-start="931" data-end="941">Duration</code> – цяло
+                        число</p>
+                </li>
+                <li data-start="957" data-end="981">
+                    <p data-start="959" data-end="981"><code data-start="959" data-end="966">Level</code> – цяло число
+                    </p>
+                </li>
+                <li data-start="982" data-end="1010">
+                    <p data-start="984" data-end="1010"><code data-start="984" data-end="995">Intensity</code> – цяло
+                        число</p>
+                </li>
+                <li data-start="1011" data-end="1038">
+                    <p data-start="1013" data-end="1038"><code data-start="1013" data-end="1021">Leader</code> –
+                        символен низ</p>
+                </li>
+                <li data-start="1039" data-end="1093">
+                    <p data-start="1041" data-end="1093"><code data-start="1041" data-end="1050">Ratings</code> – списък
+                        от цели числа (всяко между 1 и 5)</p>
+                </li>
+            </ul>
+            <p data-start="1095" data-end="1107">Ограничения:</p>
+            <ul data-start="1109" data-end="1815">
+                <li data-start="1109" data-end="1270">
+                    <p data-start="1111" data-end="1178">Името на дейността трябва да бъде между 3 и 54 символа
+                        включително.</p>
+                    <p data-start="1182" data-end="1270">Съобщение при невалидна стойност:<br data-start="1215"
+                            data-end="1218">
+                        <strong data-start="1220" data-end="1270"><code data-start="1222"
+                                data-end="1268">Title should be between 3 and 54 characters!</code></strong>
+                    </p>
+                </li>
+                <li data-start="1272" data-end="1375">
+                    <p data-start="1274" data-end="1322">Продължителността трябва да е положително число.</p>
+                    <p data-start="1326" data-end="1375">Съобщение:<br data-start="1336" data-end="1339">
+                        <strong data-start="1341" data-end="1375"><code data-start="1343"
+                                data-end="1373">Duration should be positive!</code></strong>
+                    </p>
+                </li>
+                <li data-start="1377" data-end="1559">
+                    <p data-start="1379" data-end="1501">Нивото (<code data-start="1387" data-end="1394">Level</code>)
+                        трябва да бъде цяло число между 1 и 12 (например 1 – начинаещи, 12 – много напреднали /
+                        най-високо ниво).</p>
+                    <p data-start="1505" data-end="1559">Съобщение:<br data-start="1515" data-end="1518">
+                        <strong data-start="1520" data-end="1559"><code data-start="1522"
+                                data-end="1557">Level should be between 1 and 12!</code></strong>
+                    </p>
+                </li>
+                <li data-start="1561" data-end="1675">
+                    <p data-start="1563" data-end="1614">Интензитетът (<code data-start="1577"
+                            data-end="1588">Intensity</code>) трябва да е между 1 и 3.</p>
+                    <p data-start="1618" data-end="1675">Съобщение:<br data-start="1628" data-end="1631">
+                        <strong data-start="1633" data-end="1675"><code data-start="1635"
+                                data-end="1673">Intensity should be between 1 and 3!</code></strong>
+                    </p>
+                </li>
+                <li data-start="1677" data-end="1815">
+                    <p data-start="1679" data-end="1745">Името на ръководителя (<code data-start="1702"
+                            data-end="1710">Leader</code>) трябва да е между 3 и 54 символа.</p>
+                    <p data-start="1749" data-end="1815">Съобщение:<br data-start="1759" data-end="1762">
+                        <strong data-start="1764" data-end="1815"><code data-start="1766"
+                                data-end="1813">Leader should be between 3 and 54 characters!</code></strong>
+                    </p>
+                </li>
+            </ul>
+            <p data-start="1817" data-end="1924">При подаване на невалидна стойност хвърлете изключение <code
+                    data-start="1872" data-end="1891">ArgumentException</code> с конкретното съобщение по-горе.</p><br>
+            <h3 dir="ltr"><strong>Конструктор</strong></h3>
+            <p dir="ltr"><span>Това са параметрите за конструктора:</span></p>
+            <p dir="ltr"></p>
+            <h3 dir="ltr">
+                <p dir="ltr" style=""><span style="font-size: 15px; font-weight: 400;">string title, int duration, int
+                        level, int intensity, string leader</span></p>Методи и допълнителни свойства за класа Activity
+            </h3>
+            <p><strong></strong></p>
+            <p dir="ltr"><strong><strong>void AddRating(int rate)</strong></strong></p>
+            <p dir="ltr"><span><span style="">В метода трябва да добавите рейтинга към списъка с оценки за
+                        дейността.</span></span></p><span><strong>double Rating</strong><br>Свойство само и единствено с
+                get-ер, който връща средноаритметичното от списъка с оценки.<br></span>
+            <p></p>
+            <p dir="ltr"><span><strong>override string ToString()</strong></span></p>
+            <p dir="ltr">Title: {Title} for level {Level} ({Duration} mins.) - intensity {Intensity} led by {Leader}
+                (Rating: {Rating} / 5)</p>
+            <p dir="ltr"><span style="font-size: 0.9375rem;">Rating трябва да бъде средноаритметичното от всички
+                    рейтинги за дейността. Ако няма рейтинги, Rating се счита за 0.</span></p>
+            <p dir="ltr"></p>
+            <h1 dir="ltr"><strong>Child Classes</strong></h1>
+            <h2 dir="ltr"><strong>OnlineActivity</strong></h2>
+            <h3 dir="ltr"><strong>Данни</strong></h3>
+            <p dir="ltr"><span>Всеки онлайн дейност трябва да има обявена платформа</span></p>
+            <p dir="ltr"><span>Platform – символен низ</span></p>
+            <p dir="ltr">Съобщение: Platform should be between 3 and 30 characters!</p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">Името на платформата трябва да бъде между 3 и 30 символа
+                        включително.</p>
+                </li>
+            </ul>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation">При подаване на невалидна стойност хвърлете изключение –
+                        ArgumentException с конкретното съобщение.</p>
+                </li>
+            </ul>
+            <p dir="ltr">Забележка: Първо изпълнете валидацията от базовия клас след това текущата.</p>
+            <h3 dir="ltr"><strong>Конструктор</strong></h3>
+            <p dir="ltr"><span>Това са параметрите за конструктора:</span></p>
+            <p dir="ltr"><span></span></p>
+            <p dir="ltr"></p>
+            <p dir="ltr">string title, int duration, int level, int intensity, string leader, string platform</p>
+            <h3 dir="ltr"><strong>Методи за класа OnlineActivity</strong></h3>
+            <p dir="ltr"><span>override string ToString()</span></p>
+            <p dir="ltr">Title: {Title} for level {Level} ({Duration} mins.) - intensity {Intensity} led by {Leader}
+                (Rating: {Rating} / 5) @ Online: {Platform}</p>
+            <p dir="ltr"><strong style="font-size: 1.875rem;">OnsiteActivity</strong></p>
+            <h2 dir="ltr"></h2>
+            <h3 dir="ltr"><strong>Данни</strong></h3>
+            <p dir="ltr"><span style="font-size: 0.9375rem;">Location – символен низ</span><br></p>
+            <p dir="ltr"><strong>Забележка: Първо изпълнете валидацията от базовия клас след това текущата.</strong></p>
+            <h3 dir="ltr"><strong>Конструктор</strong></h3>
+            <p dir="ltr"><span>Това са параметрите за конструктора:</span></p>
+            <p dir="ltr"><span></span></p>
+            <h3 dir="ltr">
+                <p style=""><span style="font-size: 15px; font-weight: 400;">string title, int duration, int level, int
+                        intensity, string leader, string location</span></p>
+            </h3>
+            <h3 dir="ltr"><strong>Методи за класа OnsiteActivity</strong></h3>
+            <p dir="ltr"><span>override string ToString()</span></p>
+            <p dir="ltr"><span></span></p>
+            <p dir="ltr"></p>
+            <p dir="ltr">Title: {Title} for level {Level} ({Duration} mins.) - intensity {Intensity} led by {Leader}
+                (Rating: {Rating} / 5) @ Onsite: {Location}</p>
+            <p dir="ltr"><strong style="font-size: 1.875rem;">Club</strong><br></p>
+            <h3 dir="ltr"><strong>Данни</strong></h3>
+            <p dir="ltr"><span></span></p>
+            <p data-start="4167" data-end="4213">Всеки клуб има име и списък с дейности в него:</p>
+            <ul data-start="4215" data-end="4270">
+                <li data-start="4215" data-end="4240">
+                    <p data-start="4217" data-end="4240"><code data-start="4217" data-end="4223">Name</code> – символен
+                        низ</p>
+                </li>
+                <li data-start="4241" data-end="4270">
+                    <p data-start="4243" data-end="4270">списък от <code data-start="4253"
+                            data-end="4263">Activity</code> обекти</p>
+                </li>
+            </ul>
+            <p data-start="4272" data-end="4326">Името трябва да бъде между 2 и 40 символа включително.</p>
+            <p data-start="4328" data-end="4413">Съобщение при невалидна стойност:<br data-start="4361" data-end="4364">
+                <strong data-start="4364" data-end="4413"><code data-start="4366"
+                        data-end="4411">Name should be between 2 and 40 characters!</code></strong>
+            </p>
+            <p data-start="4415" data-end="4514">При подаване на невалидна стойност хвърлете изключение <code
+                    data-start="4470" data-end="4489">ArgumentException</code> с конкретното съобщение.</p>
+            <h3 dir="ltr"><strong>Конструктор</strong></h3>
+            <p dir="ltr"><span>Това са параметрите за конструктора:</span></p>
+            <p dir="ltr"><span>string name</span></p>
+            <h3 dir="ltr"><strong>Методи за класа Club</strong></h3>
+            <p dir="ltr"><strong>void AddActivity(Activity activity)</strong></p>
+            <p dir="ltr"><span>В метода трябва да добавите новата дейност към клуба.</span></p>
+            <p dir="ltr"><span><strong>void AddRate(string title, int rate)</strong></span></p>Намира дейност с име
+            title в списъка с дейности за този клуб, след което, използвайки нейния AddRating метод, добавя оценката
+            rate за дейността.<br>
+            <p dir="ltr"></p>
+            <p dir="ltr"></p>
+            <p dir="ltr">Ако такава дейност не съществува, хвърлете изключение с текст:&nbsp;<span
+                    style="font-size: 0.9375rem;">Activity not found!</span></p>
+            <p dir="ltr"></p>
+            <p dir="ltr"><strong>double AverageRating()</strong></p>
+            <p dir="ltr"></p>
+            <p dir="ltr">В метода трябва да намерите средната оценка от индивидуалните рейтинги на всяка от дейностите и
+                да я върнете.</p>
+            <p dir="ltr">Ако няма дейности в клуба, средният рейтинг се счита за 0.</p>
+            <p dir="ltr">В изчислението участват всички дейности, но ако дадена дейност няма рейтинги, нейният рейтинг
+                се счита за 0 и НЕ участва в изчисляването на средния рейтинг за клуба.</p>
+            <p dir="ltr"><strong>List&lt;Activity&gt; GetActivitiesByLeader(string leader)</strong></p>
+            <p dir="ltr"></p>
+            <p dir="ltr">В метода трябва да върнете тези дейности, които се водят от определен ръководител
+                (Leader).&nbsp;<span style="font-size: 0.9375rem;">Сортирайте тези дейности в низходящ ред по тяхната
+                    обявена продължителност (Duration).</span></p>
+            <p dir="ltr"></p><b>List&lt;Activity&gt; GetActivitiesBetweenDuration(int from, int to)<br></b>
+            <p dir="ltr">В метода трябва да върнете тези дейности, които са с продължителност от from до to минути
+                (включително).&nbsp;<span style="font-size: 0.9375rem;">Подредете дейностите по рейтинг в низходящ
+                    ред.</span></p>
+            <p dir="ltr"></p>
+            <p dir="ltr"></p>
+            <p dir="ltr"><strong>override string ToString()</strong></p>
+            <p dir="ltr"><span>Club {Name}</span></p>
+            <p dir="ltr"><span>Total Activities: {Брой дейности}</span></p>
+            <p dir="ltr"><strong>Забележка: Уверете се, че за всеки от методите задавате правилен модификатор за
+                    достъп.</strong></p>
+            <h1 dir="ltr"><strong>Бизнес логика</strong></h1>
+            <p dir="ltr"><span>Управлението на програмата се случва благодарение на клас, който се казва Controller. Той
+                    ще обработва команди, които отговарят на нужната функционалност, представена от тези публични
+                    методи:</span></p>
+            <div dir="ltr" align="left">
+                <table border="1">
+                    <colgroup>
+                        <col width="624">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p dir="ltr">Controller.cs</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p dir="ltr"><span style="font-size: 0.9375rem;">&nbsp;</span>public string
+                                    AddClub(List&lt;string&gt; args)</p>
+                                <p dir="ltr"></p>
+                                <p dir="ltr">{</p>
+                                <p dir="ltr">&nbsp; &nbsp; //TODO: Add some logic here …</p>
+                                <p dir="ltr">}</p>
+                                <p dir="ltr"><br></p>
+                                <p dir="ltr">public string AddActivity(List&lt;string&gt; args)</p>
+                                <p dir="ltr">{</p>
+                                <p dir="ltr">&nbsp; &nbsp; //TODO: Add some logic here …</p>
+                                <p dir="ltr">}</p>
+                                <p dir="ltr"><br></p>
+                                <p dir="ltr">public string RateActivity(List&lt;string&gt; args)</p>
+                                <p dir="ltr">{</p>
+                                <p dir="ltr">&nbsp; &nbsp; //TODO: Add some logic here …</p>
+                                <p dir="ltr">}</p>
+                                <p dir="ltr"><br></p>
+                                <p dir="ltr">public string GetAverageRating(List&lt;string&gt; args)</p>
+                                <p dir="ltr">{</p>
+                                <p dir="ltr">&nbsp; &nbsp; //TODO: Add some logic here …</p>
+                                <p dir="ltr">}</p>
+                                <p dir="ltr"><br></p>
+                                <p dir="ltr">public string GetActivitiesByLeader(List&lt;string&gt; args)</p>
+                                <p dir="ltr">{</p>
+                                <p dir="ltr">&nbsp; &nbsp; //TODO: Add some logic here …</p>
+                                <p dir="ltr">}</p>
+                                <p dir="ltr"><br></p>
+                                <p dir="ltr">public string GetActivitiesBetweenDuration(List&lt;string&gt; args)</p>
+                                <p dir="ltr">{</p>
+                                <p dir="ltr">&nbsp; &nbsp; //TODO: Add some logic here …</p>
+                                <p dir="ltr">}</p>
+                                <p><br></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p dir="ltr"><strong>ЗАБЕЛЕЖКА: Не трябва да променяте нищо по методите. Трябва да имплементирате логиката
+                    на самите методи. Не прихвайщайте никакви изключения!</strong></p>
+            <h1 dir="ltr"><strong>Команди</strong></h1>
+            <p dir="ltr"><span>Има няколко команди, които контролират бизнес логиката на приложението и трябва да ги
+                    имплементирате.</span></p>
+            <p dir="ltr"><span>Те са посочени по-долу. За всяка от командите връщайте текстов низ в съответствие с
+                    указанията в частта „Изход“ на задачата.</span></p>
+            <h2 dir="ltr"><strong>AddClub Команда</strong></h2>
+            <p dir="ltr"><span>Създава клуб (Club) и го добавя към системата.</span></p>
+            <p dir="ltr"><span>Не всички данни ще бъдат валидни!!!</span></p>
+            <h3 dir="ltr"><strong>Параметри</strong></h3>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>name – символен низ (винаги ще бъде уникално)</span></p>
+                </li>
+            </ul>
+            <h2 dir="ltr"><strong>AddActivity Команда</strong></h2>
+            <p dir="ltr"><span>Създава дейност (Activity) и я добавя към клуба (Club) с подаденото име.</span></p>
+            <p dir="ltr"><span>Не всички данни ще бъдат валидни!!!</span></p>
+            <h3 dir="ltr"><strong>Параметри</strong></h3>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>name – символен низ, име на клуба</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>title – символен низ, име на дейността</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>duration – цяло число</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>level – цяло число</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>intensity – цяло число</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>leader – символен низ</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>type – символен низ</span></p>
+                </li>
+                <ul>
+                    <li dir="ltr" aria-level="2">
+                        <p dir="ltr" role="presentation"><span>Ако type e “online”, то това е онлайн дейност, тогава ще
+                                се приеме още един параметър:</span></p>
+                    </li>
+                    <ul>
+                        <li dir="ltr" aria-level="3">
+                            <p dir="ltr" role="presentation"><span>platform – символен низ</span></p>
+                        </li>
+                    </ul>
+                    <li dir="ltr" aria-level="2">
+                        <p dir="ltr" role="presentation"><span>Ако type e “lecture”, то това е присъствена дейност,
+                                тогава ще се приеме още един параметър:</span></p>
+                    </li>
+                    <ul>
+                        <li dir="ltr" aria-level="3">
+                            <p dir="ltr" role="presentation"><span>location – символен низ</span></p>
+                        </li>
+                    </ul>
+                </ul>
+            </ul>
+            <h2 dir="ltr">RateActivity Команда</h2>
+            <p>При извикването на тази команда, ще получите име на клуб, име на дейност и оценка, която да се добави към
+                списъка с оценки за дейността в клуба.</p>
+            <p>При добавянето на оценката, изведете:</p>
+            <p>"Rated {title} with {rate} rate"</p>
+            <p>където title e името на дейността, а rate - оценката, която добавяте.</p>
+            <p></p>
+            <h4 data-start="8402" data-end="8416">Параметри</h4>
+            <ul data-start="8418" data-end="8496">
+                <li data-start="8418" data-end="8447">
+                    <p data-start="8420" data-end="8447"><code data-start="8420" data-end="8430">clubName</code> –
+                        символен низ</p>
+                </li>
+                <li data-start="8448" data-end="8474">
+                    <p data-start="8450" data-end="8474"><code data-start="8450" data-end="8457">title</code> – символен
+                        низ</p>
+                </li>
+                <li data-start="8475" data-end="8496">
+                    <p data-start="8477" data-end="8496"><code data-start="8477" data-end="8483">rate</code> – цяло
+                        число</p>
+                </li>
+            </ul>
+            <h2 dir="ltr"><strong>GetAverageRating Команда</strong></h2>
+            <p dir="ltr"><span>При нейното извикване се изчислява средния рейтинг от дейностите в даден клуб и се
+                    извежда съобщение:</span></p>
+            <p dir="ltr"><span>"The average rating is: {averageRating:F2}"</span></p>
+            <h3 dir="ltr"><strong>Параметри</strong></h3>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>name – символен низ</span></p>
+                </li>
+            </ul>
+            <p dir="ltr"><span>Ако няма дейности, да се приеме, че средния рейтинг е 0. В изчислението участват всички
+                    дейности. Ако дадена дейност няма рейтинги, нейния рейтинг се счита за нула и НЕ участва в
+                    пресмятането на рейтингите за клуба.</span></p>
+            <h2 dir="ltr"><strong>
+                    <h3 dir="ltr"><strong style="font-size: 1.875rem;">GetActivitiesByLeader Команда</strong><br></h3>
+                </strong></h2>
+            <p dir="ltr"><span>Намира клуба с подаденото име от системата и извиква GetActivitiesByLeader() метода
+                    му.</span></p>
+            <h3 dir="ltr"><strong>Параметри</strong></h3>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>name – символен низ</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>leader – символен низ</span></p>
+                </li>
+            </ul>
+            <h2 dir="ltr"><strong>GetActivitiesBetweenDuration Команда</strong></h2>
+            <p dir="ltr"><span>Намира клуба с подаденото име от системата и извиква GetActivitiesBetweenDuration()
+                    метода му.&nbsp;</span></p>
+            <h3 dir="ltr"><strong>Параметри</strong></h3>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>name – символен низ</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>from – цяло число</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>to – цяло число</span></p>
+                </li>
+            </ul>
+            <h2 dir="ltr"><strong>End Команда</strong></h2>
+            <p dir="ltr"><span>Тази команда прекратява изпълнението на програмата.</span></p>
+            <h1 dir="ltr"><strong>Вход / Изход</strong></h1>
+            <h2 dir="ltr"><strong>Вход</strong></h2>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>Четете редове с различни команди, докато не получите команда
+                            за приключване на програмата.</span></p>
+                </li>
+            </ul>
+            <p dir="ltr"><span>По-долу можете да видите формата, в който всяка команда ще бъде дадена във входа:</span>
+            </p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>AddClub {clubName}</strong></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>AddActivity {<strong>clubName</strong>} {title} {duration}
+                            {level} {intensity} {leader} {type} {platform или location}</strong></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>RateActivity {clubName} {title} {rate}</strong></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>GetAverageRating {club<strong>Name</strong>}</strong></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>GetActivitiesByLeader {club<strong>Name</strong>}
+                            {leader}</strong></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>GetActivitiesBetweenDuration {club<strong>Name</strong>}
+                            {from} {to}</strong></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><strong>End</strong></p>
+                </li>
+            </ul>
+            <h2 dir="ltr"><strong>Изход</strong></h2>
+            <p dir="ltr"><span>По – долу може да видите кой изход трябва да бъде предоставен от командите.</span></p>
+            <h3 dir="ltr"><strong>AddClub Команда</strong></h3>
+            <p dir="ltr"><span>При успех върнете:</span></p>
+            <p dir="ltr"><span>Съобщение:&nbsp;</span>Created Club {name}!</p>
+            <p dir="ltr">При неуспех: Club already exists!</p>
+            <h3 dir="ltr"><strong>AddActivity Команда</strong></h3>
+            <p dir="ltr"><span>При успех върнете:</span></p>
+            <p dir="ltr">Съобщение: Created Activity {title} in Club {clubName}!</p>
+            <h3>RateActivity Команда</h3>
+            <p dir="ltr">Съобщение: Rated {title} with {rate} rate.<br></p>
+            <h3 dir="ltr"><strong>GetAverageRating Команда</strong></h3>
+            <p dir="ltr"><span>При успех върнете:</span></p>
+            <p dir="ltr">Съобщение: The average rating is: {averageRating:F2}</p>
+            <h3 dir="ltr"><strong><strong>GetActivitiesByLeader</strong> Команда</strong></h3>
+            Изведете информация за всички дейности, водени от даден ръководител за съответния клуб. Използвайте
+            ToString() метода за съответния клас-наследник на Activity.<br><br>
+            <p dir="ltr"><strong style="font-size: 1.64062rem;"><strong>GetActivitiesBetweenDuration</strong>
+                    Команда</strong></p>
+            <h3 dir="ltr"></h3>
+            Изведете информация за всички дейности за клуба с продължителност в рамките на дадената. Използвайте
+            ToString() метода за съответния клас-наследник на Activity.<br><br>
+            <p dir="ltr"><strong style="font-size: 1.64062rem;">End Команда</strong></p>
+            <h3 dir="ltr"></h3>
+            <p dir="ltr"><span>При изпълнение програмата приключва своята работа.</span><strong
+                    style="font-size: 0.9375rem;">&nbsp;</strong></p>
+            <p dir="ltr"><strong style="font-size: 2.34375rem;">Ограничения</strong><br></p>
+            <ul>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>Имената в програмата ще бъдат символни низове, които може да
+                            съдържат всеки ASCII символ, с изключение на интервал.</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>Винаги ще получавате команда за приключване на
+                            програмата.</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>Входните данни ще бъдат валидни от страна на типове
+                            данни.</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>Имената на клубовете винаги ще са уникални</span></p>
+                </li>
+                <li dir="ltr" aria-level="1">
+                    <p dir="ltr" role="presentation"><span>В командите в които се търси клуб по подадено име, винаги ще
+                            се подава име на съществуващ клуб.</span></p>
+                </li>
+            </ul>
+            <h1 dir="ltr"><strong>Примери</strong></h1>
+            <div dir="ltr" align="left">
+                <table border="1">
+                    <colgroup>
+                        <col width="650">
+                        <col width="650">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p dir="ltr">Input</p>
+                            </td>
+                            <td>
+                                <p dir="ltr">Output</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p dir="ltr"></p>
+                                <p dir="ltr">AddClub ArtClub<br><span style="font-size: 0.9375rem;">AddClub
+                                        BoardGamesClub<br></span><span style="font-size: 0.9375rem;">AddActivity ArtClub
+                                        WatercolorBasics 90 1 1 Maria onsite Studio1<br></span><span
+                                        style="font-size: 0.9375rem;">AddActivity BoardGamesClub DnDNight 180 3 2 Ivan
+                                        onsite RoomB<br></span><span style="font-size: 0.9375rem;">GetAverageRating
+                                        BoardGamesClub<br></span><span style="font-size: 0.9375rem;">RateActivity
+                                        ArtClub WatercolorBasics 5<br></span><span
+                                        style="font-size: 0.9375rem;">RateActivity ArtClub WatercolorBasics
+                                        4<br></span><span style="font-size: 0.9375rem;">GetAverageRating
+                                        ArtClub<br></span><span
+                                        style="font-size: 0.9375rem;">GetActivitiesBetweenDuration ArtClub 60
+                                        200<br></span><span style="font-size: 0.9375rem;">End</span></p>
+                                <p dir="ltr"></p>
+                            </td>
+                            <td>
+                                <p dir="ltr">Created Club ArtClub!<br><span style="font-size: 0.9375rem;">Created Club
+                                        BoardGamesClub!<br></span><span style="font-size: 0.9375rem;">Created Activity
+                                        WatercolorBasics in Club ArtClub!<br></span><span
+                                        style="font-size: 0.9375rem;">Created Activity DnDNight in Club
+                                        BoardGamesClub!<br></span><span style="font-size: 0.9375rem;">The average rating
+                                        is: 0.00<br></span><span style="font-size: 0.9375rem;">Rated WatercolorBasics
+                                        with 5 rate.<br></span><span style="font-size: 0.9375rem;">Rated
+                                        WatercolorBasics with 4 rate.<br></span><span style="font-size: 0.9375rem;">The
+                                        average rating is: 4.50<br></span><span style="font-size: 0.9375rem;">Title:
+                                        WatercolorBasics for level 1 (90 mins.) - intensity 1 led by Maria (Rating: 4.50
+                                        / 5) @ Onsite: Studio1</span></p>
+                                <p dir="ltr"></p>
+                                <p dir="ltr"></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
